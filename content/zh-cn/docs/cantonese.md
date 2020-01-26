@@ -17,6 +17,8 @@ hide_feedback: false
 即普通话冇呢个音，得粤语独有，呢类往往都系普通话母语者学粤语嘅重点难点。
 {{< /alert >}}
 
+> 本文讲解发音个阵会用到国际音标（IPA），如果读者唔熟悉国际音标都冇所谓，直接听例字嘅录音就可以感受到个发音嘞。
+
 ## 1. 写法区别
 
 ### 1.1 普拼 y → 粤拼 j
@@ -26,7 +28,7 @@ hide_feedback: false
 {{< /alert >}}
 
 - 一 jat1 ✔️ yat1 ❌ {{< audio src="/audio/jat1.wav"  width="100px" height="30px">}}
-- 而 ji5 ✔️ yi5 ❌ {{< audio src="/audio/ji5.wav"  width="100px" height="30px">}}
+- 以 ji5 ✔️ yi5 ❌ {{< audio src="/audio/ji5.wav"  width="100px" height="30px">}}
 - 夜 je6 ✔️ ye6 ❌ {{< audio src="/audio/je6.wav"  width="100px" height="30px">}}
 
 ### 1.2 普拼 gu-、ku- → 粤拼 gw-、kw-
@@ -75,7 +77,7 @@ hide_feedback: false
 ### 2.1 韵腹 aa 同 a
 
 {{< alert color="success">}}
-普拼嘅 a 等同于粤拼嘅 aa，国际音标系 /a/。而粤拼中嘅 a 音喺普通话入边冇。佢嘅国际音标系 /ɐ/。aa 同 a 系两个不同嘅韵腹，唔好混淆。读者既然识粤语，噉睇下下面几个例字就知道个区别了：
+普拼嘅 a 等同于粤拼嘅 aa，国际音标系 /a/。而粤拼中嘅 a 音喺普通话入边冇。佢嘅国际音标系 /ɐ/。aa 同 a 系两个不同嘅韵腹，唔好捞乱。读者既然识粤语，噉睇下下面几个例字就知道个区别了：
 {{< /alert >}}
 
 | 例字                                                                      |                                                                           |                                                                           |
@@ -95,7 +97,7 @@ hide_feedback: false
 | 削 soek3 {{< audio src="/audio/soek3.wav"  width="100px" height="30px">}} | 让 joeng6 {{< audio src="/audio/joeng6.wav"  width="100px" height="30px">}} |
 
 {{< alert color="danger" title="注意">}}
-大家可能会觉得，点解要将 eo 同 oe 分开？呢两个唔系同一个音来嘅咩？其实唔系。eot6 系「术」字嘅韵母，但系 oet6 字就系另一个音了，呢个音系拟声词，「食完饭 oet6 一啖气出来」，就系呢个韵母 oet6。再例如形容赶快嘅词「zoet4 zoet2 声」，好明显唔系「卒卒声」，所以呢两个系唔同嘅音来㗎。
+大家可能会觉得，点解要将 eo 同 oe 分开？呢两个唔系同一个音来嘅咩？其实唔系。eot6 系「术」字嘅韵母，但系 oet6 字就系另一个音了，呢个音系拟声词，「食完饭 oet6 一啖气出来」，就系呢个韵母 oet6。再例如形容赶快嘅词「coet4 coet2 声」，好明显唔系「出出声」，所以呢两个系唔同嘅音来㗎。
 {{< /alert >}}
 
 ### 2.3 韵母 e

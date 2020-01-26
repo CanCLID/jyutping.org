@@ -26,7 +26,7 @@ hide_feedback: false
 {{< /alert >}}
 
 - 一 jat1 ✔️ yat1 ❌ {{< audio src="/audio/jat1.wav"  width="100px" height="30px">}}
-- 而 ji5 ✔️ yi5 ❌ {{< audio src="/audio/ji5.wav"  width="100px" height="30px">}}
+- 以 ji5 ✔️ yi5 ❌ {{< audio src="/audio/ji5.wav"  width="100px" height="30px">}}
 - 夜 je6 ✔️ ye6 ❌ {{< audio src="/audio/je6.wav"  width="100px" height="30px">}}
 
 ### 1.2 普拼 gu-、ku- → 粵拼 gw-、kw-
@@ -95,7 +95,7 @@ hide_feedback: false
 | 削 soek3 {{< audio src="/audio/soek3.wav"  width="100px" height="30px">}} | 讓 joeng6 {{< audio src="/audio/joeng6.wav"  width="100px" height="30px">}} |
 
 {{< alert color="danger" title="注意">}}
-大家可能會覺得，點解要將 eo 同 oe 分開？呢兩個唔系同一個音來嘅咩？其實唔系。eot6 系「術」字嘅韻母，但系 oet6 字就係另一個音了，呢個音系擬聲詞，「食完飯 oet6 一啖氣出來」，就係呢個韻母 oet6。再例如形容趕快嘅詞「zoet4 zoet2 聲」，好明顯唔系「卒卒聲」，所以呢兩個系唔同嘅音來㗎。
+大家可能會覺得，點解要將 eo 同 oe 分開？呢兩個唔系同一個音來嘅咩？其實唔系。eot6 系「術」字嘅韻母，但系 oet6 字就係另一個音了，呢個音系擬聲詞，「食完飯 oet6 一啖氣出來」，就係呢個韻母 oet6。再例如形容趕快嘅詞「coet4 coet2 聲」，好明顯唔系「出出聲」，所以呢兩個系唔同嘅音來㗎。
 {{< /alert >}}
 
 ### 2.3 韻母 e

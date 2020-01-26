@@ -17,6 +17,8 @@ hide_feedback: false
 即普通話裏不存在這個發音，僅粵語特有，此類往往也是普通話母語者學粵語的重點難點。
 {{< /alert >}}
 
+> 本文在講解發音的時候會用到國際音標（IPA），如果讀者不熟悉國際音標也沒關係，直接聽例字的錄音就能感受到具體的發音了。 
+
 ## 1. 寫法區別
 
 ### 1.1 普拼 y → 粵拼 j
@@ -26,7 +28,7 @@ hide_feedback: false
 {{< /alert >}}
 
 - 一 jat1 ✔️ yat1 ❌ {{< audio src="/audio/jat1.wav"  width="100px" height="30px">}}
-- 而 ji5 ✔️ yi5 ❌ {{< audio src="/audio/ji5.wav"  width="100px" height="30px">}}
+- 以 ji5 ✔️ yi5 ❌ {{< audio src="/audio/ji5.wav"  width="100px" height="30px">}}
 - 夜 je6 ✔️ ye6 ❌ {{< audio src="/audio/je6.wav"  width="100px" height="30px">}}
 
 ### 1.2 普拼 gu-、ku- → 粵拼 gw-、kw-

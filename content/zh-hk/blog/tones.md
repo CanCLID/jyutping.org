@@ -2,7 +2,7 @@
 title: "聲調練習"
 linkTitle: "聲調練習"
 url: "/blog/tones"
-date: 2020-01-25
+weight: 4
 description: >
   爲讀者提供粵語各個聲調嘅錄音對比，幫助讀者掌握粵語聲調。
 ---
