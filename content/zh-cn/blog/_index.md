@@ -1,6 +1,6 @@
 ---
-title: "文章"
-linkTitle: "文章"
+title: "文集"
+linkTitle: "文集"
 url: "/zh-cn/resource"
 menu:
   main:

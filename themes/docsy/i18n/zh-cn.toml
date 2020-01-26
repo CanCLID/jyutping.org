@@ -40,4 +40,4 @@ other = "新建文档 issue"
 [post_create_project_issue]
 other = "新建项目 issue"
 [post_posts_in]
-other = "Posts in"
+other = " "

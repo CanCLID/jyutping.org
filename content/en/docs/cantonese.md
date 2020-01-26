@@ -1,0 +1,225 @@
+---
+title: "我識粵語"
+date: 2020-01-22
+weight: 3
+description: >
+  粵拼嘅設計大部分同普通話拼音（下稱“普拼”）一樣，只需讀完兩者主要區別，就可以掌握粵拼同粵拼打字。
+hide_feedback: false
+---
+
+{{< alert title="寫法區別 & 音系區別">}}
+粵拼和普拼的區別分兩類：寫法區別和音系區別。
+
+**寫法區別**
+即呢個發音喺普通話同粵語入邊都有，只不過喺兩種拼音入邊用不同嘅字母來代表，呢類區別一睇就識。
+
+**音系區別**
+即普通話冇呢個音，得粵語獨有，呢類往往都系普通話母語者學粵語嘅重點難點。
+{{< /alert >}}
+
+## 1. 寫法區別
+
+### 1.1 普拼 y → 粵拼 j
+
+{{< alert color="success">}}
+普拼嘅 y 喺粵拼入邊寫成 j。之所以寫成 j 系因爲呢個音國際音標嘅寫法就係 /j/，而普拼嘅 y 系英文嘅寫法。
+{{< /alert >}}
+
+- 一 jat1 ✔️ yat1 ❌ {{< audio src="/audio/jat1.wav"  width="100px" height="30px">}}
+- 而 ji5 ✔️ yi5 ❌ {{< audio src="/audio/ji5.wav"  width="100px" height="30px">}}
+- 夜 je6 ✔️ ye6 ❌ {{< audio src="/audio/je6.wav"  width="100px" height="30px">}}
+
+### 1.2 普拼 gu-、ku- → 粵拼 gw-、kw-
+
+{{< alert color="success">}}
+普拼嘅 gu-、ku-，喺粵拼入邊用 gw-、kw- 來表示。不過要注意，gu、gun 仲係 gu、gun。
+{{< /alert >}}
+
+- 廣 gwong2 ✔️ guong2 ❌ {{< audio src="/audio/gwong2.wav"  width="100px" height="30px">}}
+- 狂 kwong4 ✔️ kuong4 ❌ {{< audio src="/audio/kwong4.wav"  width="100px" height="30px">}}
+- 昆 kwan1 ✔️ kuan1 ❌ {{< audio src="/audio/kwan1.wav"  width="100px" height="30px">}}
+- 古 gu2 ✔️ gwu2 ❌ gw2 ❌ {{< audio src="/audio/gu2.wav"  width="100px" height="30px">}}
+
+### 1.3 普拼 ü → 粵拼 yu
+
+{{< alert color="success">}}
+呢個音嘅國際音標系 /y/。呢個韻母雖然系單元音，但喺粵拼入邊用咗 yu 兩個字母來表示，噉就可以避免好似普通話嘅 ü 噉要用到附加符號。
+{{< /alert >}}
+
+- 豬 zyu1 ✔️ zü1 ❌ {{< audio src="/audio/zyu1.wav"  width="100px" height="30px">}}
+- 村 cyun1 ✔️ cün1 ❌ {{< audio src="/audio/cyun1.wav"  width="100px" height="30px">}}
+- 如 jyu4 ✔️ jü ❌ yu ❌ {{< audio src="/audio/jyu4.wav"  width="100px" height="30px">}}
+
+### 1.4 普拼 ong → 粵拼 ung
+
+{{< alert color="success">}}
+普拼中嘅 ong 同粵拼嘅 ung 發音系一樣嘅，國際音標都系 /ʊŋ/，而粵拼中嘅 ong 系普通話冇嘅發音，國際音標系 /ɔŋ/。
+{{< /alert >}}
+
+- 鍾 zung1 {{< audio src="/audio/zung1.wav"  width="100px" height="30px">}}
+- 莊 zong1 {{< audio src="/audio/zong1.wav"  width="100px" height="30px">}}
+
+### 1.5 普拼 ao → 粵拼 aau
+
+{{< alert color="success">}}
+粵拼以 u 結尾，呢個都系遵循國際音標嘅寫法。
+{{< /alert >}}
+
+- 考 haau2 ✔️ hao2 ❌ {{< audio src="/audio/haau2.wav"  width="100px" height="30px">}}
+- 包 baau1 ✔️ bao1 ❌ {{< audio src="/audio/baau1.wav"  width="100px" height="30px">}}
+
+> 關於粵拼中 a 同 aa 嘅區別下面會講解。
+
+## 2. 音系區別
+
+### 2.1 韻腹 aa 同 a
+
+{{< alert color="success">}}
+普拼嘅 a 等同於粵拼嘅 aa，國際音標系 /a/。而粵拼中嘅 a 音喺普通話入邊冇。佢嘅國際音標系 /ɐ/。aa 同 a 系兩個不同嘅韻腹，唔好混淆。讀者既然識粵語，噉睇下下面幾個例字就知道個區別了：
+{{< /alert >}}
+
+| 例字                                                                      |                                                                           |                                                                           |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| 三 saam1 {{< audio src="/audio/saam1.wav"  width="100px" height="30px">}} | 山 saan1 {{< audio src="/audio/saan1.wav"  width="100px" height="30px">}} | 稍 saau2 {{< audio src="/audio/saau2.wav"  width="100px" height="30px">}} |
+| 心 sam1 {{< audio src="/audio/sam1.wav"  width="100px" height="30px">}}   | 身 san1 {{< audio src="/audio/san1.wav"  width="100px" height="30px">}}   | 手 sau2 {{< audio src="/audio/sau2.wav"  width="100px" height="30px">}}   |
+
+### 2.2 韻腹 eo、oe
+
+{{< alert color="success">}}
+呢兩個韻母嘅國際音標分別系 /ɵ/、/œ/，普通話入邊都冇呢兩個音。
+{{< /alert >}}
+
+| 例字                                                                      |                                                                             |
+| ------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| 率 seot1 {{< audio src="/audio/seot1.wav"  width="100px" height="30px">}} | 潤 jeon6 {{< audio src="/audio/jeon6.wav"  width="100px" height="30px">}}   |
+| 削 soek3 {{< audio src="/audio/soek3.wav"  width="100px" height="30px">}} | 讓 joeng6 {{< audio src="/audio/joeng6.wav"  width="100px" height="30px">}} |
+
+{{< alert color="danger" title="注意">}}
+大家可能會覺得，點解要將 eo 同 oe 分開？呢兩個唔系同一個音來嘅咩？其實唔系。eot6 系「術」字嘅韻母，但系 oet6 字就係另一個音了，呢個音系擬聲詞，「食完飯 oet6 一啖氣出來」，就係呢個韻母 oet6。再例如形容趕快嘅詞「zoet4 zoet2 聲」，好明顯唔系「卒卒聲」，所以呢兩個系唔同嘅音來㗎。
+{{< /alert >}}
+
+### 2.3 韻母 e
+
+{{< alert color="success">}}
+普拼嘅 e 國際音標係 /ɤ/，即是普通話入邊“餓”字嘅韻母，如果佢前面接 y 或者 i 則表達另一個音 /e/，例如普通話裏“夜”字的韻母。而粵拼入邊 e 永遠淨代表一個發音 /ɛ/，呢個音類似英語單詞“yes”嘅元音。
+{{< /alert >}}
+
+- 寫 se2 {{< audio src="/audio/se2.wav"  width="100px" height="30px">}}
+- 借 ze3 {{< audio src="/audio/ze3.wav"  width="100px" height="30px">}}
+- 鄭 zeng6 {{< audio src="/audio/zeng6.wav"  width="100px" height="30px">}}
+- 石 sek6 {{< audio src="/audio/sek6.wav"  width="100px" height="30px">}}
+
+### 2.4 聲母 ng-
+
+{{< alert color="success">}}
+呢個音嘅國際音標系 /ŋ/。普通話冇呢個聲母，而粵語入邊聲母 ng- 同零聲母 Ø- 系區分嘅。而家好多廣州人都分唔出了，例如將「我」字發成 o5，但系其實個發音系 ngo5。（好彩輸入法可以開模糊音，所以如果實在分唔到就開模糊音啦，冚唪唥打嗮 ng- 開頭就得）。
+{{< /alert >}}
+
+| 例字                                                                        |                                                                         |
+| --------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| 岸 ngon6 {{< audio src="/audio/ngon6.wav"  width="100px" height="30px">}}   | 按 on3 {{< audio src="/audio/on3.wav"  width="100px" height="30px">}}   |
+| 雁 ngaan6 {{< audio src="/audio/ngaan6.wav"  width="100px" height="30px">}} | 晏 aan3 {{< audio src="/audio/aan3.wav"  width="100px" height="30px">}} |
+
+### 2.5 韻尾 -m
+
+{{< alert color="success">}}
+普通話入邊鼻音韻尾淨得 -n 同 -ng（前鼻音同後鼻音），冇 -m。而粵語保留咗 -m、-n、-ng 三種鼻音韻尾。
+{{< /alert >}}
+
+| 例字                                                                        |                                                                          |                                                                           |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| 三 saam1 {{< audio src="/audio/saam1.wav"  width="100px" height="30px">}}   | 含 ham4 {{< audio src="/audio/ham4.wav"  width="100px" height="30px">}}  | 尖 zim1 {{< audio src="/audio/zim1.wav"  width="100px" height="30px">}}   |
+| 山 saan1 {{< audio src="/audio/saan1.wav"  width="100px" height="30px">}}   | 痕 han4 {{< audio src="/audio/han4.wav"  width="100px" height="30px">}}  | 煎 zin1 {{< audio src="/audio/zin1.wav"  width="100px" height="30px">}}   |
+| 生 saang1 {{< audio src="/audio/saang1.wav"  width="100px" height="30px">}} | 行 hang4{{< audio src="/audio/hang4.wav"  width="100px" height="30px">}} | 精 zing1 {{< audio src="/audio/zing1.wav"  width="100px" height="30px">}} |
+
+### 2.6 韻尾 -p、-t、-k
+
+{{< alert color="success">}}
+呢三個韻尾就係傳統意義上嘅「入聲」。普通話冇入聲，但系粵語就保留嗮，所以讀者識粵語，下面幾隻字嘅發音應該都好容易區分得出來。
+{{< /alert >}}
+
+| 例字                                                                    |                                                                         |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| 溼 sap1 {{< audio src="/audio/sap1.wav"  width="100px" height="30px">}} | 接 zip3 {{< audio src="/audio/zip3.wav"  width="100px" height="30px">}} |
+| 失 sat1 {{< audio src="/audio/sat1.wav"  width="100px" height="30px">}} | 節 zit3 {{< audio src="/audio/zit3.wav"  width="100px" height="30px">}} |
+| 塞 sak1 {{< audio src="/audio/sak1.wav"  width="100px" height="30px">}} | 脊 zek3 {{< audio src="/audio/zek3.wav"  width="100px" height="30px">}} |
+
+### 2.7 聲調
+
+> 如果淨係想學識用粵拼打字，可以**直接跳過本節**。粵拼打字唔需要打聲調，不過如果打埋聲調嘅話可以提高輸入速度。
+
+普通話得四個聲調，粵語有六個。我哋先回憶下普通話嘅四個聲調：
+
+![](/img/cmn.png)
+
+總結出來普通話四個聲調嘅調值如下表：
+
+| 第 1 聲      | 第 2 聲      | 第 3 聲       | 第 4 聲      |
+| ------------ | ------------ | ------------- | ------------ |
+| 55（高平調） | 35（高升調） | 214（曲折調） | 51（高降調） |
+
+而粵語嘅 6 個聲調如下圖：
+
+![image](/img/yue.png)
+
+6 個調值如下表：
+
+| 第 1 聲 55（高平）                                                    | 第 2 聲 35（高升調）                                                  | 第 3 聲 33（中平調）                                                  |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| 詩 si1 {{< audio src="/audio/si1.wav"  width="100px" height="30px">}} | 史 si2 {{< audio src="/audio/si2.wav"  width="100px" height="30px">}} | 試 si3 {{< audio src="/audio/si3.wav"  width="100px" height="30px">}} |
+
+| 第 4 聲 21（低降調）                                                  | 第 5 聲 13（低升調）                                                  | 第 6 聲 22（中低平調）                                                |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| 時 si4 {{< audio src="/audio/si4.wav"  width="100px" height="30px">}} | 市 si5 {{< audio src="/audio/si5.wav"  width="100px" height="30px">}} | 事 si6 {{< audio src="/audio/si6.wav"  width="100px" height="30px">}} |
+
+如果實在記唔住呢啲聲調都冇所謂，反正輸入法打字唔使打聲調。
+
+{{< alert color="danger" title="注意">}}
+可能會有人問，點解我覺得廣州話唔止六個聲調嘅？例如「私人」同「詩人」嘅音唔一樣喎，點解都係 si1？呢個係因爲粵語廣州話入邊嘅第一聲的確已經分化咗成兩個聲調，有啲字例如「詩」讀成 高平調 55，有啲字例如「私」讀成高降調 53。但係喺粵拼入邊我哋**唔做區分，全部當成第一聲**。
+{{< /alert >}}
+
+### 2.8 普通話特有、粵語冇嘅音
+
+{{< alert color="success">}}
+粵語唔分平翹舌音，所以粵拼入邊冇 zh ch sh r 呢四個聲母，另外粵語冇普拼中嘅 j q x 音（粵拼嘅 j 等於普拼嘅 y）。
+{{< /alert >}}
+
+## 3. 搞掂！
+
+恭喜你讀到呢度，粵拼同普通話拼音嘅區別就咁多，其他字母代表嘅發音，例如 b p m f、d t n l、g k h、z c s w 喺普拼同粵拼入邊都系一樣嘅。而家先來做幾個小練習，睇下你學識打粵拼未：
+
+### 3.1 練習
+
+寫出下面幾個詞嘅粵語拼音，可以唔理個聲調：
+
+1. 粵語拼音
+2. 廣州話
+3. 稍等
+4. 你哋
+5. 我同佢
+6. 香港
+7. 語言學
+
+#### 答案（可以忽略個聲調）
+
+1. jyut6 jyu3 ping3 jam1
+2. gwong2 zau1 waa2
+3. saau2 dang2
+4. nei5 dei6
+5. ngo5 tung4 keoi5
+6. hoeng1 gong2
+7. jyu5 jin4 hok6
+
+### 3.2 參考
+
+如果你想讀更詳細嘅粵拼教程，睇呢度：
+
+- [Jyutping（粵拼）詳細教程](http://www.cantonese.asia/portal.php?mod=view&aid=229)
+
+最尾推薦一個網上粵拼字典，遇到字唔識佢嘅粵拼，隨時用呢個字典來查：
+
+- [粵音資料集叢](https://jyut.net/)
+
+仲有一個桌面版字典：
+
+- [Jyut Dictionary](https://github.com/aaronhktan/jyut-dict)

@@ -23,7 +23,7 @@ other = "in"
 other = "All Rights Reserved"
 
 [footer_privacy_policy]
-other = "隐私协议"
+other = "私隱協議"
 
 
 # Post (blog, articles etc.)
@@ -34,10 +34,10 @@ other = "Created"
 [post_last_mod]
 other = "最近更新於"
 [post_edit_this]
-other = "编辑本页"
+other = "編輯本頁"
 [post_create_issue]
-other = "新建文档 issue"
+other = "新建文檔 issue"
 [post_create_project_issue]
-other = "新建项目 issue"
+other = "新建項目 issue"
 [post_posts_in]
 other = " "

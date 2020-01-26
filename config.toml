@@ -47,14 +47,14 @@ anchor = "smart"
 [services]
 [services.googleAnalytics]
 # Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
-id = "UA-00000000-0"
+id = "UA-131567469-2"
 
 # Language configuration
 
 [languages]
 [languages.zh-cn]
 title = "粵拼速成"
-description = "A Docsy example site"
+description = "粵拼速成"
 languageName ="简化汉字"
 contentDir = "content/zh-cn"
 time_format_default = "2006.01.02"
@@ -63,11 +63,18 @@ time_format_blog = "2006.01.02"
 weight = 1
 [languages.zh-hk]
 title = "粵拼速成"
-description = "Docsy er operativsystem for skyen"
-languageName ="傳統漢字"
+description = "粵拼速成"
+languageName ="漢字"
 contentDir = "content/zh-hk"
 time_format_default = "2006.01.02"
 time_format_blog = "2006.01.02"
+[languages.en]
+title = "Jyutping"
+description = "Jyutping"
+languageName ="English"
+contentDir = "content/en"
+time_format_default = "01.02.2006"
+time_format_blog = "01.02.2006"
 
 [markup]
   [markup.goldmark]
@@ -88,9 +95,9 @@ copyright = "粵拼速成"
 version_menu = "Releases"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/laubonghaudoi/jyutping"
+github_repo = "https://github.com/laubonghaudoi/jyutping.net"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/laubonghaudoi/jyutping"
+github_project_repo = "https://github.com/laubonghaudoi/jyutping.net"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
@@ -147,7 +154,7 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "GitHub"
-	url = "https://github.com/laubonghaudoi/jyutping"
+	url = "https://github.com/laubonghaudoi/jyutping.net"
 	icon = "fab fa-github"
         desc = "Development takes place here!"
 # [[params.links.developer]]
