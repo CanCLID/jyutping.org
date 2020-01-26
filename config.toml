@@ -136,7 +136,7 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
         desc = "香港語言學學會粵語拼音方案"
 [[params.links.user]]
 	name ="粵語審音配詞字庫"
-	url = "https://example.org/twitter"
+	url = "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/"
 	icon = "fa fa-file-audio"
         desc = "粵語審音配詞字庫"
 # [[params.links.user]]

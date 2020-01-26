@@ -1,6 +1,6 @@
 ---
-title: "資源"
-linkTitle: "資源"
+title: "文章"
+linkTitle: "文章"
 url: "/resource"
 menu:
   main:
