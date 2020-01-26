@@ -1,7 +1,7 @@
 ---
 title: "文集"
 linkTitle: "文集"
-url: "/resource"
+url: "/blog"
 menu:
   main:
     weight: 2

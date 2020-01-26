@@ -48,7 +48,7 @@ hide_feedback: false
 
 - 豬 zyu1 ✔️ zü1 ❌ {{< audio src="/audio/zyu1.wav"  width="100px" height="30px">}}
 - 村 cyun1 ✔️ cün1 ❌ {{< audio src="/audio/cyun1.wav"  width="100px" height="30px">}}
-- 如 jyu4 ✔️ jü ❌ yu ❌ {{< audio src="/audio/jyu4.wav"  width="100px" height="30px">}}
+- 雨jyu5 ✔️ jü ❌ yu ❌ {{< audio src="/audio/jyu5.wav"  width="100px" height="30px">}}
 
 ### 1.4 普拼 ong → 粵拼 ung
 

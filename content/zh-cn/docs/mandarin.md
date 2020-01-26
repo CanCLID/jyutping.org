@@ -48,7 +48,7 @@ hide_feedback: false
 
 - 猪 zyu1 ✔️ zü1 ❌ {{< audio src="/audio/zyu1.wav"  width="100px" height="30px">}}
 - 村 cyun1 ✔️ cün1 ❌ {{< audio src="/audio/cyun1.wav"  width="100px" height="30px">}}
-- 如 jyu4 ✔️ jü ❌ yu ❌ {{< audio src="/audio/jyu4.wav"  width="100px" height="30px">}}
+- 雨 jyu5 ✔️ jü ❌ yu ❌ {{< audio src="/audio/jyu5.wav"  width="100px" height="30px">}}
 
 ### 1.4 普拼 ong → 粤拼 ung
 
@@ -132,7 +132,9 @@ hide_feedback: false
 ### 2.6 韵尾 -p、-t、-k
 
 {{< alert color="success">}}
-这三个韵尾就是传统意义上的「入声」。因为普通话里没有入声，所以对于普通话母语者来说需要花点时间来练习，下面的例字音频可能要反复播放对比才能听出区别。
+这三个韵尾就是传统意义上的「入声」。粤语里的入声韵尾 -p、-t、-k 很像英语单词 cap、put、book 末尾的辅音，但一个最大的区别是，粤语的入声韵尾都是不除阻的，也就是在音节最后不会像英语一样呼出空气。他们的国际音标分别是 [p̚]、[t̚]、[k̚]。
+
+因为普通话里没有入声，所以对于普通话母语者来说需要花点时间来练习，下面的例字音频可能要反复播放对比才能听出区别。
 {{< /alert >}}
 
 | 例字                                        |                                             |

@@ -48,7 +48,7 @@ hide_feedback: false
 
 - 豬 zyu1 ✔️ zü1 ❌ {{< audio src="/audio/zyu1.wav"  width="100px" height="30px">}}
 - 村 cyun1 ✔️ cün1 ❌ {{< audio src="/audio/cyun1.wav"  width="100px" height="30px">}}
-- 如 jyu4 ✔️ jü ❌ yu ❌ {{< audio src="/audio/jyu4.wav"  width="100px" height="30px">}}
+- 雨 jyu5 ✔️ jü ❌ yu ❌ {{< audio src="/audio/jyu5.wav"  width="100px" height="30px">}}
 
 ### 1.4 普拼 ong → 粵拼 ung
 
@@ -133,6 +133,9 @@ hide_feedback: false
 
 {{< alert color="success">}}
 這三個韻尾就是傳統意義上的「入聲」。因爲普通話裏沒有入聲，所以對於普通話母語者來說需要花點時間來練習，下面的例字音頻可能要反覆播放對比才能聽出區別。
+
+粵語裏的入聲韻尾 -p、-t、-k 很像英語單詞 cap、put、book 末尾的輔音，但一個最大的區別是，粵語的入聲韻尾都是不除阻的，也就是在音節最後不會像英語一樣呼出空氣。他們的國際音標分別是 [p̚]、[t̚]、[k̚]。
+
 {{< /alert >}}
 
 | 例字                                        |                                             |

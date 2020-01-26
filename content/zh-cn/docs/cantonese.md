@@ -48,7 +48,7 @@ hide_feedback: false
 
 - 猪 zyu1 ✔️ zü1 ❌ {{< audio src="/audio/zyu1.wav"  width="100px" height="30px">}}
 - 村 cyun1 ✔️ cün1 ❌ {{< audio src="/audio/cyun1.wav"  width="100px" height="30px">}}
-- 如 jyu4 ✔️ jü ❌ yu ❌ {{< audio src="/audio/jyu4.wav"  width="100px" height="30px">}}
+- 雨 jyu5 ✔️ jü ❌ yu ❌ {{< audio src="/audio/jyu5.wav"  width="100px" height="30px">}}
 
 ### 1.4 普拼 ong → 粤拼 ung
 
@@ -135,7 +135,7 @@ hide_feedback: false
 ### 2.6 韵尾 -p、-t、-k
 
 {{< alert color="success">}}
-呢三个韵尾就系传统意义上嘅「入声」。普通话冇入声，但系粤语就保留嗮，所以读者识粤语，下面几只字嘅发音应该都好容易区分得出来。
+呢三个韵尾就系传统意义上嘅「入声」。普通话冇入声，但系粤语就保留嗮，所以既然读者识粤语，下面几只字嘅发音应该都好容易区分得出来。
 {{< /alert >}}
 
 | 例字                                                                    |                                                                         |

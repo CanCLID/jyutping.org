@@ -1,7 +1,7 @@
 ---
 title: "Blog"
 linkTitle: "Blog"
-url: "/en/resource"
+url: "/en/blog"
 menu:
   main:
     weight: 2
