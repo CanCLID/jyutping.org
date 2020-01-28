@@ -7,6 +7,19 @@ description: >
 hide_feedback: false
 ---
 
+{{< audiolist >}}
+
+## 聲母表
+
+## 韻腹
+
+## 韻尾
+
+## 鼻音單獨成韻
+
+## 字調
+
+## 韻母表
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -43,72 +56,72 @@ hide_feedback: false
   </tr>
   <tr>
     <td class="tg-i8xi" rowspan="2"> i</td>
-    <td class="tg-cdar">[iː]</td>
-    <td class="tg-ssw7">i 思{{< audio src="/audio/si1.wav"  width="100px" height="20px">}}</td>
+    <td class="tg-cdar">/iː/</td>
+    <td class="tg-ssw7">i 思 {{< audio id="si1" >}}</td>
     <td class="tg-dgfm"></td>
-    <td class="tg-ssw7">iu 消</td>
-    <td class="tg-ssw7">im 閃</td>
-    <td class="tg-ssw7">in 先</td>
+    <td class="tg-ssw7">iu 消 {{< audio id="siu1" >}}</td>
+    <td class="tg-ssw7">im 閃 {{< audio id="sim2" >}}</td>
+    <td class="tg-ssw7">in 先 {{< audio id="sin1" >}}</td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">ip 攝</td>
-    <td class="tg-ssw7">it 泄</td>
+    <td class="tg-ssw7">ip 攝 {{< audio id="sip3" >}}</td>
+    <td class="tg-ssw7">it 泄 {{< audio id="sit3" >}}</td>
     <td class="tg-ssw7"></td>
   </tr>
   <tr>
-    <td class="tg-cdar">[ɪ̞]</td>
+    <td class="tg-cdar">/ɪ̞/</td>
     <td class="tg-ssw7"></td>
     <td class="tg-dgfm"></td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">ing 升</td>
+    <td class="tg-ssw7">ing 升 {{< audio id="sing1" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">ik 識</td>
+    <td class="tg-ssw7">ik 識 {{< audio id="sik1" >}}</td>
   </tr>
   <tr>
     <td class="tg-i8xi">yu</td>
-    <td class="tg-cdar">[yː]</td>
-    <td class="tg-ssw7">yu 書</td>
+    <td class="tg-cdar">/yː/</td>
+    <td class="tg-ssw7">yu 書 {{< audio id="syu1" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">yun 孫</td>
+    <td class="tg-ssw7">yun 孫 {{< audio id="syun1" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">yut 雪</td>
+    <td class="tg-ssw7">yut 雪 {{< audio id="syut3" >}}</td>
     <td class="tg-ssw7"></td>
   </tr>
   <tr>
     <td class="tg-i8xi" rowspan="2">u</td>
-    <td class="tg-cdar">[uː]</td>
-    <td class="tg-ssw7">u 夫</td>
+    <td class="tg-cdar">/uː/</td>
+    <td class="tg-ssw7">u 夫 {{< audio id="fu1" >}}</td>
     <td class="tg-ssw7">ui 灰</td>
     <td class="tg-dgfm"></td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">un 歡</td>
+    <td class="tg-ssw7">un 歡 {{< audio id="fun1" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">ut 闊</td>
+    <td class="tg-ssw7">ut 闊 {{< audio id="fut1" >}}</td>
     <td class="tg-ssw7"></td>
   </tr>
   <tr>
-    <td class="tg-cdar">[ʊ̞]</td>
+    <td class="tg-cdar">/ʊ̞/</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
     <td class="tg-dgfm"></td>
     <td class="tg-7gzb">um</td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">ung 風</td>
+    <td class="tg-ssw7">ung 風 {{< audio id="fung1" >}}</td>
     <td class="tg-7gzb">up</td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">uk 福</td>
+    <td class="tg-ssw7">uk 福 {{< audio id="fuk1" >}}</td>
   </tr>
   <tr>
     <td class="tg-i8xi" rowspan="2">e</td>
-    <td class="tg-cdar">[e]</td>
+    <td class="tg-cdar">/e/</td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">ei 四</td>
+    <td class="tg-ssw7">ei 四 {{< audio id="sei3" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
@@ -118,49 +131,49 @@ hide_feedback: false
     <td class="tg-ssw7"></td>
   </tr>
   <tr>
-    <td class="tg-cdar">[ɛː]</td>
-    <td class="tg-ssw7">e 些</td>
+    <td class="tg-cdar">/ɛː/</td>
+    <td class="tg-ssw7">e 些 {{< audio id="se1" >}}</td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">eu 掉</td>
-    <td class="tg-ssw7">em 舐</td>
+    <td class="tg-ssw7">eu 掉 {{< audio id="deu3" >}}</td>
+    <td class="tg-ssw7">em 舐 {{< audio id="lem2" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
     <td class="tg-7gzb">ep</td>
-    <td class="tg-ssw7">et 坺</td>
-    <td class="tg-ssw7">ek 石</td>
+    <td class="tg-ssw7">et 坺 {{< audio id="bet6" >}}</td>
+    <td class="tg-ssw7">ek 石 {{< audio id="sek6" >}}</td>
   </tr>
   <tr>
     <td class="tg-i8xi">eo</td>
-    <td class="tg-cdar">[ɵ]</td>
+    <td class="tg-cdar">/ɵ/</td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">eoi 需</td>
-    <td class="tg-ssw7"></td>
-    <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">eon 詢</td>
+    <td class="tg-ssw7">eoi 需 {{< audio id="seoi1" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">eot 摔</td>
+    <td class="tg-ssw7">eon 詢 {{< audio id="seon1" >}}</td>
+    <td class="tg-ssw7"></td>
+    <td class="tg-ssw7"></td>
+    <td class="tg-ssw7">eot 摔 {{< audio id="seot1" >}}</td>
     <td class="tg-ssw7"></td>
   </tr>
   <tr>
     <td class="tg-i8xi">oe</td>
-    <td class="tg-cdar">[œː]</td>
-    <td class="tg-ssw7">oe 鋸</td>
+    <td class="tg-cdar">/œː/</td>
+    <td class="tg-ssw7">oe 鋸 {{< audio id="goe3" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">oeng 疆</td>
+    <td class="tg-ssw7">oeng 疆 {{< audio id="goeng1" >}}</td>
     <td class="tg-ssw7"></td>
-    <td class="tg-m4o3">oet  𠰲</td>
-    <td class="tg-ssw7">oek 腳</td>
+    <td class="tg-m4o3">oet  𠰲 {{< audio id="soet3" >}}</td>
+    <td class="tg-ssw7">oek 腳 {{< audio id="goek3" >}}</td>
   </tr>
   <tr>
     <td class="tg-i8xi" rowspan="2">o</td>
-    <td class="tg-cdar">[o]</td>
+    <td class="tg-cdar">/o/</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">ou 好</td>
+    <td class="tg-ssw7">ou 好 {{< audio id="hou2" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
@@ -169,41 +182,41 @@ hide_feedback: false
     <td class="tg-ssw7"></td>
   </tr>
   <tr>
-    <td class="tg-cdar">[ɔː]</td>
-    <td class="tg-ssw7">o 可</td>
-    <td class="tg-ssw7">oi 開</td>
+    <td class="tg-cdar">/ɔː/</td>
+    <td class="tg-ssw7">o 可 {{< audio id="ho2" >}}</td>
+    <td class="tg-ssw7">oi 開 {{< audio id="hoi1" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">on 看</td>
-    <td class="tg-ssw7">ong 康</td>
+    <td class="tg-ssw7">on 看 {{< audio id="hon3" >}}</td>
+    <td class="tg-ssw7">ong 康 {{< audio id="hong1" >}}</td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">ot 喝</td>
-    <td class="tg-ssw7">ok 學</td>
+    <td class="tg-ssw7">ot 喝 {{< audio id="hot1" >}}</td>
+    <td class="tg-ssw7">ok 學 {{< audio id="hok6" >}}</td>
   </tr>
   <tr>
     <td class="tg-i8xi">a</td>
-    <td class="tg-cdar">[ɐ]</td>
-    <td class="tg-he9r">a  㗎</td>
-    <td class="tg-ssw7">ai 擠</td>
-    <td class="tg-ssw7">au 周</td>
-    <td class="tg-ssw7">am 斟</td>
-    <td class="tg-ssw7">an 珍</td>
-    <td class="tg-ssw7">ang 增</td>
-    <td class="tg-ssw7">ap 汁</td>
-    <td class="tg-ssw7">at 侄</td>
-    <td class="tg-ssw7">ak 則</td>
+    <td class="tg-cdar">/ɐ/</td>
+    <td class="tg-he9r">a  㗎 {{< audio id="ga3" >}}</td>
+    <td class="tg-ssw7">ai 擠 {{< audio id="zai1" >}}</td>
+    <td class="tg-ssw7">au 周 {{< audio id="zau1" >}}</td>
+    <td class="tg-ssw7">am 斟 {{< audio id="zam1" >}}</td>
+    <td class="tg-ssw7">an 珍 {{< audio id="zan1" >}}</td>
+    <td class="tg-ssw7">ang 增 {{< audio id="zang1" >}}</td>
+    <td class="tg-ssw7">ap 汁 {{< audio id="zap1" >}}</td>
+    <td class="tg-ssw7">at 侄 {{< audio id="zat6" >}}</td>
+    <td class="tg-ssw7">ak 則 {{< audio id="zak1" >}}</td>
   </tr>
   <tr>
     <td class="tg-i8xi">aa</td>
-    <td class="tg-cdar">[aː]</td>
-    <td class="tg-ssw7">aa 渣</td>
-    <td class="tg-ssw7">aai 齋</td>
-    <td class="tg-ssw7">aau 嘲</td>
-    <td class="tg-ssw7">aam 站</td>
-    <td class="tg-ssw7">aan 讚</td>
-    <td class="tg-ssw7">aang 掙</td>
-    <td class="tg-ssw7">aap 集</td>
-    <td class="tg-ssw7">aat 扎</td>
-    <td class="tg-ssw7">aak 責</td>
+    <td class="tg-cdar">/aː/</td>
+    <td class="tg-ssw7">aa 渣 {{< audio id="zaa1" >}}</td>
+    <td class="tg-ssw7">aai 齋 {{< audio id="zaai1" >}}</td>
+    <td class="tg-ssw7">aau 嘲 {{< audio id="zaau1" >}}</td>
+    <td class="tg-ssw7">aam 站 {{< audio id="zaam6" >}}</td>
+    <td class="tg-ssw7">aan 讚 {{< audio id="zaan6" >}}</td>
+    <td class="tg-ssw7">aang 掙 {{< audio id="zaang6" >}}</td>
+    <td class="tg-ssw7">aap 集 {{< audio id="zaap6" >}}</td>
+    <td class="tg-ssw7">aat 扎 {{< audio id="zaap3" >}}</td>
+    <td class="tg-ssw7">aak 責 {{< audio id="zaak6" >}}</td>
   </tr>
 </table>
