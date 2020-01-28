@@ -7,6 +7,8 @@ description: >
 hide_feedback: false
 ---
 
+{{< audiolist >}}
+
 {{< alert title="写法区别 & 音系区别">}}
 粤拼和普拼的区别分两类：写法区别和音系区别。
 
@@ -17,9 +19,9 @@ hide_feedback: false
 即普通话冇呢个音，得粤语独有，呢类往往都系普通话母语者学粤语嘅重点难点。
 {{< /alert >}}
 
-> 本文讲解发音个阵会用到国际音标（IPA），如果读者唔熟国际音标都冇所谓，直接听例字嘅录音就可以感受到个发音嘞。
+> 本文讲解发音个阵会用到国际音标（IPA），如果读者唔熟国际音标都冇所谓，直接揿个 {{< audio >}} 掣听例字嘅录音就可以感受到个发音嘞。
 >
-> 每个例字拼音后面嘅数字 1 - 6 系声调，读者可以暂时先忽略，或者直接跳到 2.7 声调一节了解完声调再开始读本文。
+> 每个例字拼音后面嘅数字 1 - 6 系声调，读者可以暂时先忽略，或者直接跳到 [2.7 声调](#2-7-声调)一节了解完声调再开始读本文。
 
 ## 1. 写法区别
 
@@ -29,9 +31,9 @@ hide_feedback: false
 普拼嘅 y 喺粤拼入边写成 j。之所以写成 j 系因为呢个音国际音标嘅写法就系 /j/，而普拼嘅 y 系英文嘅写法。
 {{< /alert >}}
 
-- 一 jat1 ✔️ yat1 ❌ {{< audio src="/audio/jat1.wav"  width="100px" height="30px">}}
-- 以 ji5 ✔️ yi5 ❌ {{< audio src="/audio/ji5.wav"  width="100px" height="30px">}}
-- 夜 je6 ✔️ ye6 ❌ {{< audio src="/audio/je6.wav"  width="100px" height="30px">}}
+- 一 jat1 ✔️ yat1 ❌ {{< audio id="jat1" >}}
+- 以 ji5 ✔️ yi5 ❌ {{< audio id="ji5" >}}
+- 夜 je6 ✔️ ye6 ❌ {{< audio id="je6" >}}
 
 ### 1.2 普拼 gu-、ku- → 粤拼 gw-、kw-
 
@@ -39,10 +41,10 @@ hide_feedback: false
 普拼嘅 gu-、ku-，喺粤拼入边用 gw-、kw- 来表示。不过要注意，gu、gun 仲系 gu、gun。
 {{< /alert >}}
 
-- 广 gwong2 ✔️ guong2 ❌ {{< audio src="/audio/gwong2.wav"  width="100px" height="30px">}}
-- 狂 kwong4 ✔️ kuong4 ❌ {{< audio src="/audio/kwong4.wav"  width="100px" height="30px">}}
-- 昆 kwan1 ✔️ kuan1 ❌ {{< audio src="/audio/kwan1.wav"  width="100px" height="30px">}}
-- 古 gu2 ✔️ gwu2 ❌ gw2 ❌ {{< audio src="/audio/gu2.wav"  width="100px" height="30px">}}
+- 广 gwong2 ✔️ guong2 ❌ {{< audio id="gwong2" >}}
+- 狂 kwong4 ✔️ kuong4 ❌ {{< audio id="kwong4" >}}
+- 昆 kwan1 ✔️ kuan1 ❌ {{< audio id="kwan1" >}}
+- 古 gu2 ✔️ gwu2 ❌ gw2 ❌ {{< audio id="gu2" >}}
 
 ### 1.3 普拼 ü → 粤拼 yu
 
@@ -50,9 +52,9 @@ hide_feedback: false
 呢个音嘅国际音标系 /y/。呢个韵母虽然系单元音，但喺粤拼入边用咗 yu 两个字母来表示，噉就可以避免好似普通话嘅 ü 噉要用到附加符号。
 {{< /alert >}}
 
-- 猪 zyu1 ✔️ zü1 ❌ {{< audio src="/audio/zyu1.wav"  width="100px" height="30px">}}
-- 村 cyun1 ✔️ cün1 ❌ {{< audio src="/audio/cyun1.wav"  width="100px" height="30px">}}
-- 雨 jyu5 ✔️ jü ❌ yu ❌ {{< audio src="/audio/jyu5.wav"  width="100px" height="30px">}}
+- 猪 zyu1 ✔️ zü1 ❌ {{< audio id="zyu1" >}}
+- 村 cyun1 ✔️ cün1 ❌ {{< audio id="cyun1" >}}
+- 雨 jyu5 ✔️ jü ❌ yu ❌ {{< audio id="jyu5" >}}
 
 ### 1.4 普拼 ong → 粤拼 ung
 
@@ -60,8 +62,8 @@ hide_feedback: false
 普拼中嘅 ong 同粤拼嘅 ung 发音系一样嘅，国际音标都系 /ʊŋ/，而粤拼中嘅 ong 系普通话冇嘅发音，国际音标系 /ɔŋ/。
 {{< /alert >}}
 
-- 钟 zung1 {{< audio src="/audio/zung1.wav"  width="100px" height="30px">}}
-- 庄 zong1 {{< audio src="/audio/zong1.wav"  width="100px" height="30px">}}
+- 钟 zung1 {{< audio id="zung1" >}}
+- 庄 zong1 {{< audio id="zong1" >}}
 
 ### 1.5 普拼 ao → 粤拼 aau
 
@@ -69,8 +71,8 @@ hide_feedback: false
 粤拼以 u 结尾，呢个都系遵循国际音标嘅写法。
 {{< /alert >}}
 
-- 考 haau2 ✔️ hao2 ❌ {{< audio src="/audio/haau2.wav"  width="100px" height="30px">}}
-- 包 baau1 ✔️ bao1 ❌ {{< audio src="/audio/baau1.wav"  width="100px" height="30px">}}
+- 考 haau2 ✔️ hao2 ❌ {{< audio id="haau2" >}}
+- 包 baau1 ✔️ bao1 ❌ {{< audio id="baau1" >}}
 
 > 关于粤拼中 a 同 aa 嘅区别下面会讲解。
 
@@ -84,8 +86,8 @@ hide_feedback: false
 
 | 例字                                                                      |                                                                           |                                                                           |
 | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| 三 saam1 {{< audio src="/audio/saam1.wav"  width="100px" height="30px">}} | 山 saan1 {{< audio src="/audio/saan1.wav"  width="100px" height="30px">}} | 稍 saau2 {{< audio src="/audio/saau2.wav"  width="100px" height="30px">}} |
-| 心 sam1 {{< audio src="/audio/sam1.wav"  width="100px" height="30px">}}   | 身 san1 {{< audio src="/audio/san1.wav"  width="100px" height="30px">}}   | 手 sau2 {{< audio src="/audio/sau2.wav"  width="100px" height="30px">}}   |
+| 三 saam1 {{< audio id="saam1" >}} | 山 saan1 {{< audio id="saan1" >}} | 稍 saau2 {{< audio id="saau2" >}} |
+| 心 sam1 {{< audio id="sam1" >}}   | 身 san1 {{< audio id="san1" >}}   | 手 sau2 {{< audio id="sau2" >}}   |
 
 ### 2.2 韵腹 eo、oe
 
@@ -95,8 +97,8 @@ hide_feedback: false
 
 | 例字                                                                      |                                                                             |
 | ------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| 率 seot1 {{< audio src="/audio/seot1.wav"  width="100px" height="30px">}} | 润 jeon6 {{< audio src="/audio/jeon6.wav"  width="100px" height="30px">}}   |
-| 削 soek3 {{< audio src="/audio/soek3.wav"  width="100px" height="30px">}} | 让 joeng6 {{< audio src="/audio/joeng6.wav"  width="100px" height="30px">}} |
+| 率 seot1 {{< audio id="seot1" >}} | 润 jeon6 {{< audio id="jeon6" >}}   |
+| 削 soek3 {{< audio id="soek3" >}} | 让 joeng6 {{< audio id="joeng6" >}} |
 
 {{< alert color="danger" title="注意">}}
 大家可能会觉得，点解要将 eo 同 oe 分开？呢两个唔系同一个音来嘅咩？其实唔系。eot6 系「术」字嘅韵母，但系 oet6 字就系另一个音了，呢个音系拟声词，「食完饭 oet6 一啖气出来」，就系呢个韵母 oet6。再例如形容赶快嘅词「coet4 coet2 声」，好明显唔系「出出声」，所以呢两个系唔同嘅音来㗎。
@@ -108,10 +110,10 @@ hide_feedback: false
 普拼嘅 e 国际音标系 /ɤ/，即是普通话入边“饿”字嘅韵母，如果佢前面接 y 或者 i 则表达另一个音 /e/，例如普通话里“夜”字的韵母。而粤拼入边 e 永远净代表一个发音 /ɛ/，呢个音类似英语单词“yes”嘅元音。
 {{< /alert >}}
 
-- 写 se2 {{< audio src="/audio/se2.wav"  width="100px" height="30px">}}
-- 借 ze3 {{< audio src="/audio/ze3.wav"  width="100px" height="30px">}}
-- 郑 zeng6 {{< audio src="/audio/zeng6.wav"  width="100px" height="30px">}}
-- 石 sek6 {{< audio src="/audio/sek6.wav"  width="100px" height="30px">}}
+- 写 se2 {{< audio id="se2" >}}
+- 借 ze3 {{< audio id="ze3" >}}
+- 郑 zeng6 {{< audio id="zeng6" >}}
+- 石 sek6 {{< audio id="sek6" >}}
 
 ### 2.4 声母 ng-
 
@@ -121,8 +123,8 @@ hide_feedback: false
 
 | 例字                                                                        |                                                                         |
 | --------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| 岸 ngon6 {{< audio src="/audio/ngon6.wav"  width="100px" height="30px">}}   | 按 on3 {{< audio src="/audio/on3.wav"  width="100px" height="30px">}}   |
-| 雁 ngaan6 {{< audio src="/audio/ngaan6.wav"  width="100px" height="30px">}} | 晏 aan3 {{< audio src="/audio/aan3.wav"  width="100px" height="30px">}} |
+| 岸 ngon6 {{< audio id="ngon6" >}}   | 按 on3 {{< audio id="on3" >}}   |
+| 雁 ngaan6 {{< audio id="ngaan6" >}} | 晏 aan3 {{< audio id="aan3" >}} |
 
 ### 2.5 韵尾 -m
 
@@ -132,9 +134,9 @@ hide_feedback: false
 
 | 例字                                                                        |                                                                          |                                                                           |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
-| 三 saam1 {{< audio src="/audio/saam1.wav"  width="100px" height="30px">}}   | 含 ham4 {{< audio src="/audio/ham4.wav"  width="100px" height="30px">}}  | 尖 zim1 {{< audio src="/audio/zim1.wav"  width="100px" height="30px">}}   |
-| 山 saan1 {{< audio src="/audio/saan1.wav"  width="100px" height="30px">}}   | 痕 han4 {{< audio src="/audio/han4.wav"  width="100px" height="30px">}}  | 煎 zin1 {{< audio src="/audio/zin1.wav"  width="100px" height="30px">}}   |
-| 生 saang1 {{< audio src="/audio/saang1.wav"  width="100px" height="30px">}} | 行 hang4{{< audio src="/audio/hang4.wav"  width="100px" height="30px">}} | 精 zing1 {{< audio src="/audio/zing1.wav"  width="100px" height="30px">}} |
+| 三 saam1 {{< audio id="saam1" >}}   | 含 ham4 {{< audio id="ham4" >}}  | 尖 zim1 {{< audio id="zim1" >}}   |
+| 山 saan1 {{< audio id="saan1" >}}   | 痕 han4 {{< audio id="han4" >}}  | 煎 zin1 {{< audio id="zin1" >}}   |
+| 生 saang1 {{< audio id="saang1" >}} | 行 hang4{{< audio id="hang4" >}} | 精 zing1 {{< audio id="zing1" >}} |
 
 ### 2.6 韵尾 -p、-t、-k
 
@@ -144,9 +146,9 @@ hide_feedback: false
 
 | 例字                                                                    |                                                                         |
 | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| 湿 sap1 {{< audio src="/audio/sap1.wav"  width="100px" height="30px">}} | 接 zip3 {{< audio src="/audio/zip3.wav"  width="100px" height="30px">}} |
-| 失 sat1 {{< audio src="/audio/sat1.wav"  width="100px" height="30px">}} | 节 zit3 {{< audio src="/audio/zit3.wav"  width="100px" height="30px">}} |
-| 塞 sak1 {{< audio src="/audio/sak1.wav"  width="100px" height="30px">}} | 脊 zek3 {{< audio src="/audio/zek3.wav"  width="100px" height="30px">}} |
+| 湿 sap1 {{< audio id="sap1" >}} | 接 zip3 {{< audio id="zip3" >}} |
+| 失 sat1 {{< audio id="sat1" >}} | 节 zit3 {{< audio id="zit3" >}} |
+| 塞 sak1 {{< audio id="sak1" >}} | 脊 zek3 {{< audio id="zek3" >}} |
 
 ### 2.7 声调
 
@@ -170,11 +172,11 @@ hide_feedback: false
 
 | 第 1 声 55（高平）                                                    | 第 2 声 35（高升调）                                                  | 第 3 声 33（中平调）                                                  |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| 诗 si1 {{< audio src="/audio/si1.wav"  width="100px" height="30px">}} | 史 si2 {{< audio src="/audio/si2.wav"  width="100px" height="30px">}} | 试 si3 {{< audio src="/audio/si3.wav"  width="100px" height="30px">}} |
+| 诗 si1 {{< audio id="si1" >}} | 史 si2 {{< audio id="si2" >}} | 试 si3 {{< audio id="si3" >}} |
 
 | 第 4 声 21（低降调）                                                  | 第 5 声 13（低升调）                                                  | 第 6 声 22（中低平调）                                                |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| 时 si4 {{< audio src="/audio/si4.wav"  width="100px" height="30px">}} | 市 si5 {{< audio src="/audio/si5.wav"  width="100px" height="30px">}} | 事 si6 {{< audio src="/audio/si6.wav"  width="100px" height="30px">}} |
+| 时 si4 {{< audio id="si4" >}} | 市 si5 {{< audio id="si5" >}} | 事 si6 {{< audio id="si6" >}} |
 
 如果实在记唔住呢啲声调都冇所谓，反正输入法打字唔使打声调。
 

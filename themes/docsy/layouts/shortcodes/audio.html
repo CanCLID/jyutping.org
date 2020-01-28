@@ -1,33 +1,4 @@
-<!--Embeds an HTML5 audio control widget into the webpage
-	See documentation for more details.
-		'docs/shortcodes/audio.md'
--->
-<audio controls=""
-	class="audio_controls {{ .Get "class" }}"
-	{{ with .Get "id" }}id="{{ . }}"{{ end }}
-	{{ with .Get "preload" }}preload="{{ . }}"{{ else }}preload="metadata"{{ end }}
-	
-	style="{{ with .Get "style" }}{{ . | safeCSS }}; {{ end }}
-		{{ with .Get "width" }}width:{{ . }}; {{ end }}
-		{{ with .Get "height" }}height:{{ . }};{{ end }}"
-	{{ with .Get "title" }}data-info-title="{{ . }}"{{ end }}
-	{{ with .Get "attr" }}data-info-attr="{{ . }}"{{ end }}
-	{{ with .Get "attr_link" }}data-info-attr-link="{{ . }}"{{ end }}
-	{{ with .Get "year" }}data-info-year="{{ . }}"{{ end }}
-	{{ with .Get "artist" }}data-info-artist="{{ . }}"{{ end }}
-	{{ with .Get "album_title" }}data-info-album-title="{{ . }}"{{ end }}
-	{{ with .Get "album_art" }}data-info-album-art="{{ . }}"{{ end }}
-	{{ with .Get "label" }}data-info-label="{{ . }}"{{ end }}
->
-	{{ if .Get "src" }}
-	<source {{ with .Get "src" }}src="{{ . }}"{{ end }}
-		{{ with .Get "type" }}type="audio/{{ . }}"{{ end }}>
-	{{ else if .Get "backup_src" }}
-		<source src="{{ .Get "backup_src" }}"
-			{{ with .Get "backup_type" }}type="audio/{{ . }}"{{ end }}
-			{{ with .Get "backup_codec" }}codecs="{{ . }}"{{ end }}
-		>
-	{{ end }}
-	Your browser does not support the audio element
-</audio>
-
+{{ $id := .Get "id" }}
+<a onclick="document.getElementById('{{ $id }}').play()">
+	<i class="fa fa-volume-up" style="color:#0380fc;"></i>
+</a>
