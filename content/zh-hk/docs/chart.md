@@ -35,7 +35,7 @@ hide_feedback: false
   </tr>
   <tr>
     <td class="tg-99yb">爆發音</td>
-    <td class="tg-0o7j">b /p/ 巴 {{< audio id="baa1" >}}<br/>p /pʰ/ 怕 {{< audio id="paa6" >}}</td>
+    <td class="tg-0o7j">b /p/ 巴 {{< audio id="baa1" >}}<br/>p /pʰ/ 怕 {{< audio id="paa3" >}}</td>
     <td class="tg-0o7j"></td>
     <td class="tg-aqzh">d /t/ 打 {{< audio id="daa2" >}}<br/>t /tʰ/ 他 {{< audio id="taa1" >}}</td>
     <td class="tg-aqzh"></td>
@@ -153,20 +153,20 @@ hide_feedback: false
   <tr>
     <th class="tg-ed5u">塞音</th>
     <th class="tg-8oy2">p /p̚/ 溼 {{< audio id="sap1" >}}</th>
-    <th class="tg-gjbb">t /t̚/ 失 {{< audio id="sat1" >}}</th>
-    <th class="tg-gjbb">k /k̚/ 塞 {{< audio id="sak1" >}}</th>
+    <th class="tg-8oy2">t /t̚/ 失 {{< audio id="sat1" >}}</th>
+    <th class="tg-8oy2">k /k̚/ 塞 {{< audio id="sak1" >}}</th>
   </tr>
   <tr>
-    <td class="tg-jmw6">鼻音</td>
-    <td class="tg-gjbb">m /m/ 心 {{< audio id="sam1" >}}</td>
-    <td class="tg-gjbb">n /n/ 身 {{< audio id="san1" >}}</td>
-    <td class="tg-gjbb">ng /ŋ/ 生 {{< audio id="sang1" >}}</td>
+    <td class="tg-ed5u">鼻音</td>
+    <td class="tg-8oy2">m /m/ 心 {{< audio id="sam1" >}}</td>
+    <td class="tg-8oy2">n /n/ 身 {{< audio id="san1" >}}</td>
+    <td class="tg-8oy2">ng /ŋ/ 生 {{< audio id="sang1" >}}</td>
   </tr>
   <tr>
-    <td class="tg-jmw6">元音</td>
-    <td class="tg-gjbb"></td>
-    <td class="tg-gjbb">i /i/ 西 {{< audio id="sai1" >}}</td>
-    <td class="tg-gjbb">u /u/ 收 {{< audio id="sau1" >}}</td>
+    <td class="tg-ed5u">元音</td>
+    <td class="tg-8oy2"></td>
+    <td class="tg-8oy2">i /i/ 西 {{< audio id="sai1" >}}</td>
+    <td class="tg-8oy2">u /u/ 收 {{< audio id="sau1" >}}</td>
   </tr>
 </table>
 
@@ -184,7 +184,6 @@ hide_feedback: false
 .tg .tg-i8xi{font-weight:bold;font-size:12px;background-color:#ffffff;border-color:inherit;text-align:center;vertical-align:top}
 .tg .tg-solh{font-weight:bold;font-size:12px;background-color:#ffffff;color:#00009b;border-color:#000000;text-align:center;vertical-align:top}
 .tg .tg-dgfm{font-size:12px;background-color:#c0c0c0;border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-he9r{font-size:12px;background-color:#ffffff;color:#963400;border-color:#000000;text-align:center;vertical-align:top}
 </style>
 <table class="tg">
   <tr>
@@ -253,7 +252,7 @@ hide_feedback: false
     <td class="tg-ssw7">un 歡 {{< audio id="fun1" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">ut 闊 {{< audio id="fut1" >}}</td>
+    <td class="tg-ssw7">ut 闊 {{< audio id="fut3" >}}</td>
     <td class="tg-ssw7"></td>
   </tr>
   <tr>
@@ -347,7 +346,7 @@ hide_feedback: false
   <tr>
     <td class="tg-i8xi">a</td>
     <td class="tg-cdar">/ɐ/</td>
-    <td class="tg-he9r">a  㗎 {{< audio id="ga3" >}}</td>
+    <td class="tg-m4o3">a  㗎 {{< audio id="ga3" >}}</td>
     <td class="tg-ssw7">ai 擠 {{< audio id="zai1" >}}</td>
     <td class="tg-ssw7">au 周 {{< audio id="zau1" >}}</td>
     <td class="tg-ssw7">am 斟 {{< audio id="zam1" >}}</td>
