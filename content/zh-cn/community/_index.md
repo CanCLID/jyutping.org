@@ -1,20 +1,20 @@
 ---
 title: LSHK 粵拼方案
-url: "/jyutping"
+url: "/zh-cn/jyutping"
 menu:
   main:
     weight: 3
 description: >
-  「香港語言學學會粵語拼音方案」，簡稱「粵拼」。
+  「香港语言学学会粤语拼音方案」，简称「粤拼」。
 ---
 
 {{< chartaudio >}}
 
-{{< alert title="關於 IPA 轉寫">}}
-本頁面所用國際音標轉寫皆係寬式轉寫，錄音數據來源係粵語審音配詞字庫。詳情請見[參考文獻](#參考文獻)一節。 
+{{< alert title="关于 IPA 转写">}}
+本页面所用国际音标转写皆系宽式转写，录音数据来源系粤语审音配词字库。详情请见[参考文献](#参考文献)一节。 
 {{< /alert >}}
 
-## 聲母表
+## 声母表
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -98,7 +98,7 @@ description: >
 零聲母唔字母做標記，例如“呀”只拼作 aa。
 {{< /alert >}}
 
-## 鼻音單獨成韻
+## 鼻音单独成韵
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -113,9 +113,9 @@ description: >
   </tr>
 </table>
 
-## 韻母
+## 韵母
 
-### 韻腹
+### 韵腹
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -147,7 +147,7 @@ description: >
   </tr>
 </table>
 
-### 韻尾
+### 韵尾
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -179,7 +179,7 @@ description: >
   </tr>
 </table>
 
-### 韻母表
+### 韵母表
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -384,7 +384,7 @@ description: >
  **a** 同 **oet** 於 2018 年新增。詳情請睇[呢度](https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf)。
 {{< /alert >}}
 
-## 字調
+## 字调
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -426,7 +426,7 @@ description: >
 fu1 （夫），fu2 （虎）, fu3 （副）, fu4 （扶）, fu5 （婦）, fu6 （父）
 {{< /alert >}}
 
-## 參考文獻
+## 参考文献
 
 Bauer, Robert S., and Paul K. Benedict. 2011. *Modern cantonese phonology*. Vol. 102. Walter de Gruyter
 

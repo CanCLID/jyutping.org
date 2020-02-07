@@ -1,20 +1,20 @@
 ---
-title: LSHK 粵拼方案
-url: "/jyutping"
+title: LSHK Jyutping
+url: "/en/jyutping"
 menu:
   main:
     weight: 3
 description: >
-  「香港語言學學會粵語拼音方案」，簡稱「粵拼」。
+  Linguistics Society of Hong Kong Cantonese Romanization Scheme
 ---
 
 {{< chartaudio >}}
 
-{{< alert title="關於 IPA 轉寫">}}
-本頁面所用國際音標轉寫皆係寬式轉寫，錄音數據來源係粵語審音配詞字庫。詳情請見[參考文獻](#參考文獻)一節。 
+{{< alert title="About IPA transcriptions">}}
+All IPA transcriptions on this page are phonemic transcriptions，source of audio data is 粵語審音配詞字庫. For further details please see [Reference](#reference).
 {{< /alert >}}
 
-## 聲母表
+## Onset
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -25,21 +25,20 @@ description: >
 .tg .tg-ed5u{font-weight:bold;font-size:100%;font-family:serif !important;;background-color:#ffffff;color:#000000;border-color:#000000;text-align:center;vertical-align:top}
 .tg .tg-99yb{font-weight:bold;font-size:100%;font-family:serif !important;;background-color:#ffffff;text-align:center;vertical-align:top}
 .tg .tg-50s5{font-size:100%;font-family:Arial, Helvetica, sans-serif !important;;background-color:#ffffff;color:#000000;border-color:#000000;text-align:center;vertical-align:top}
-.tg .tg-d9jk{font-weight:bold;font-size:100%;font-family:serif !important;;background-color:#ffffff;color:#000000;border-color:#000000;text-align:center;vertical-align:top}
-.tg .tg-43bj{font-weight:bold;font-size:100%;font-family:serif !important;;background-color:#ffffff;text-align:center;vertical-align:top}
+.tg .tg-ed5u{font-weight:bold;font-size:100%;font-family:Arial, Helvetica, sans-serif !important;;background-color:#ffffff;color:#000000;border-color:#000000;text-align:center;vertical-align:top}
 </style>
 <table class="tg">
   <tr>
     <th class="tg-50s5"></th>
-    <th class="tg-ed5u">脣音</th>
-    <th class="tg-ed5u">脣齒音</th>
-    <th class="tg-d9jk">齒齦音</th>
-    <th class="tg-d9jk">硬腭音</th>
-    <th class="tg-d9jk">軟腭音</th>
-    <th class="tg-d9jk">喉音</th>
+    <th class="tg-ed5u">Plosive</th>
+    <th class="tg-ed5u">Labio-dental</th>
+    <th class="tg-ed5u">Alveolar-dental</th>
+    <th class="tg-ed5u">Palatal</th>
+    <th class="tg-ed5u">Velar</th>
+    <th class="tg-ed5u">Glottal</th>
   </tr>
   <tr>
-    <td class="tg-99yb">爆發音</td>
+    <td class="tg-99yb">Plosive</td>
     <td class="tg-0o7j">b /p/ 巴 {{< audio id="baa1" >}}<br/>p /pʰ/ 怕 {{< audio id="paa3" >}}</td>
     <td class="tg-0o7j"></td>
     <td class="tg-aqzh">d /t/ 打 {{< audio id="daa2" >}}<br/>t /tʰ/ 他 {{< audio id="taa1" >}}</td>
@@ -48,16 +47,7 @@ description: >
     <td class="tg-aqzh">' /ʔ/</td>
   </tr>
   <tr>
-    <td class="tg-99yb">塞擦音</td>
-    <td class="tg-0o7j"></td>
-    <td class="tg-0o7j"></td>
-    <td class="tg-aqzh">z /t͡s/ 渣 {{< audio id="zaa1" >}}<br/>c /t͡sʰ/ 叉 {{< audio id="caa1" >}}</td>
-    <td class="tg-aqzh"></td>
-    <td class="tg-aqzh"></td>
-    <td class="tg-aqzh"></td>
-  </tr>
-  <tr>
-    <td class="tg-43bj">鼻音</td>
+    <td class="tg-99yb">Nasal</td>
     <td class="tg-aqzh">m /m/ 媽 {{< audio id="maa1" >}}</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh">n /n/ 那 {{< audio id="naa5" >}}</td>
@@ -66,7 +56,17 @@ description: >
     <td class="tg-aqzh"></td>
   </tr>
   <tr>
-    <td class="tg-43bj">擦音</td>
+    <td class="tg-99yb">Affricate</td>
+    <td class="tg-0o7j"></td>
+    <td class="tg-0o7j"></td>
+    <td class="tg-aqzh">z /t͡s/ 渣 {{< audio id="zaa1" >}}<br/>c /t͡sʰ/ 叉 {{< audio id="caa1" >}}</td>
+    <td class="tg-aqzh"></td>
+    <td class="tg-aqzh"></td>
+    <td class="tg-aqzh"></td>
+  </tr>
+
+  <tr>
+    <td class="tg-99yb">Fricative</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh">f /f/ 花 {{< audio id="faa1" >}}</td>
     <td class="tg-aqzh">s /s/ 沙 {{< audio id="saa1" >}}</td>
@@ -75,7 +75,7 @@ description: >
     <td class="tg-aqzh">h /h/ 蝦 {{< audio id="haa1" >}}</td>
   </tr>
   <tr>
-    <td class="tg-43bj">近音</td>
+    <td class="tg-99yb">Approximant</td>
     <td class="tg-aqzh">w /w/ 蛙 {{< audio id="waa1" >}}</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
@@ -84,7 +84,7 @@ description: >
     <td class="tg-aqzh"></td>
   </tr>
   <tr>
-    <td class="tg-43bj">邊近音</td>
+    <td class="tg-99yb">Lateral Approximant</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh">l /l/ 啦 {{< audio id="laa1" >}}</td>
@@ -95,10 +95,10 @@ description: >
 </table>
 
 {{< alert >}}
-零聲母唔字母做標記，例如“呀”只拼作 aa。
+Null initial is not represented, e.g. "呀" is only spelt as "aa".
 {{< /alert >}}
 
-## 鼻音單獨成韻
+## Syllabic nasal
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -113,9 +113,9 @@ description: >
   </tr>
 </table>
 
-## 韻母
+## Final
 
-### 韻腹
+### Nuclei
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -147,7 +147,7 @@ description: >
   </tr>
 </table>
 
-### 韻尾
+### Coda
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -160,26 +160,26 @@ description: >
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-ed5u">塞音</th>
+    <th class="tg-ed5u">Plosive</th>
     <th class="tg-8oy2">p /p̚/ 溼 {{< audio id="sap1" >}}</th>
     <th class="tg-8oy2">t /t̚/ 失 {{< audio id="sat1" >}}</th>
     <th class="tg-8oy2">k /k̚/ 塞 {{< audio id="sak1" >}}</th>
   </tr>
   <tr>
-    <td class="tg-ed5u">鼻音</td>
+    <td class="tg-ed5u">Nasal</td>
     <td class="tg-8oy2">m /m/ 心 {{< audio id="sam1" >}}</td>
     <td class="tg-8oy2">n /n/ 身 {{< audio id="san1" >}}</td>
     <td class="tg-8oy2">ng /ŋ/ 生 {{< audio id="sang1" >}}</td>
   </tr>
   <tr>
-    <td class="tg-ed5u">元音</td>
+    <td class="tg-ed5u">Vowel</td>
     <td class="tg-8oy2"></td>
     <td class="tg-8oy2">i /i/ 西 {{< audio id="sai1" >}} 需 {{< audio id="seoi1" >}}</td>
     <td class="tg-8oy2">u /u/ 收 {{< audio id="sau1" >}}</td>
   </tr>
 </table>
 
-### 韻母表
+### Finals Chart
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -196,11 +196,11 @@ description: >
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-pmgz" colspan="2" rowspan="2">韻腹</th>
-    <th class="tg-pmgz">單元音</th>
-    <th class="tg-pmgz" colspan="2">複元音</th>
-    <th class="tg-pmgz" colspan="3">鼻音韻尾</th>
-    <th class="tg-pmgz" colspan="3">爆發音韻尾（入聲韻）</th>
+    <th class="tg-pmgz" colspan="2" rowspan="2">Nuclei</th>
+    <th class="tg-pmgz">Monothong</th>
+    <th class="tg-pmgz" colspan="2">Diphthong</th>
+    <th class="tg-pmgz" colspan="3">Nasal coda</th>
+    <th class="tg-pmgz" colspan="3">Plosive coda</th>
   </tr>
   <tr>
     <td class="tg-solh">-</td>
@@ -381,10 +381,10 @@ description: >
 </table>
 
 {{< alert color="secondary">}}
- **a** 同 **oet** 於 2018 年新增。詳情請睇[呢度](https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf)。
+ **a** and **oet** were added in 2018. Please see [here](https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf) for further information.
 {{< /alert >}}
 
-## 字調
+## Tone
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -418,22 +418,22 @@ description: >
   </tr>
 </table>
 
-
 {{< alert >}}
-聲調標喺音節後。 
+Tone marks appear at the end of the syllables. 
 
-**示例：**
-fu1 （夫），fu2 （虎）, fu3 （副）, fu4 （扶）, fu5 （婦）, fu6 （父）
+**Examples:**
+fu1 (夫), fu2 (虎), fu3 (副), fu4 (扶), fu5 (婦), fu6 (父)
 {{< /alert >}}
 
-## 參考文獻
 
-Bauer, Robert S., and Paul K. Benedict. 2011. *Modern cantonese phonology*. Vol. 102. Walter de Gruyter
+## Reference
 
-Mok, Peggy Pik-Ki, and Peggy, Wai-Yi Wong. 2010. Perception of the merging tones in Hong Kong Cantonese: preliminary data on monosyllables. *Speech Prosody 2010-Fifth International Conference*.
+Bauer, Robert S., and Paul K. Benedict. 2011. _Modern cantonese phonology_. Vol. 102. Walter de Gruyter
 
-Zee, Eric. 1991. Chinese (Hong Kong Cantonese). *Journal of the International Phonetic Association* 21.1: 46-48.
+Mok, Peggy Pik-Ki, and Peggy, Wai-Yi Wong. 2010. Perception of the merging tones in Hong Kong Cantonese: preliminary data on monosyllables. _Speech Prosody 2010-Fifth International Conference_.
 
-Stephen, Matthews. 1992. *Jyutping 粵拼 - Cantonese Romanization Scheme*. The Linguistics Society of Hong Kong. https://www.lshk.org/jyutping
+Zee, Eric. 1991. Chinese (Hong Kong Cantonese). _Journal of the International Phonetic Association_ 21.1: 46-48.
 
-關子尹, 鄧偉生, 趙子明, 黃禮彥, 黃載欣, 鍾立. 2003. *粵語審音配詞字庫*. 人文電算研究中心. 香港中文大學 http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/
+Stephen, Matthews. 1992. _Jyutping 粵拼 - Cantonese Romanization Scheme_. The Linguistics Society of Hong Kong. https://www.lshk.org/jyutping
+
+關子尹, 鄧偉生, 趙子明, 黃禮彥, 黃載欣, 鍾立. 2003. _粵語審音配詞字庫_. 人文電算研究中心. 香港中文大學 http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/
