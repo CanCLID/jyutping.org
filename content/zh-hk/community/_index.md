@@ -8,7 +8,11 @@ description: >
   「香港語言學學會粵語拼音方案」，簡稱「粵拼」。
 ---
 
-{{< audiolist >}}
+{{< chartaudio >}}
+
+{{< alert title="關於 IPA 轉寫">}}
+本頁面所用國際音標轉寫皆爲寬式轉寫，
+{{< /alert >}}
 
 ## 聲母表
 
@@ -118,23 +122,23 @@ description: >
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-teg3">i /iː/ 詩 {{< audio id="si1" >}}<br/>i<sub>後接 -ng,-k</sub> /ɪ̞/ 識 {{< audio id="sik1" >}}<br/>yu /y/ 書 {{< audio id="syu1" >}}</th>
+    <th class="tg-teg3">i /iː/ 詩 {{< audio id="si1" >}}<br/>i<sub>後接 -ng,-k</sub> /ɪ̞/ 星 {{< audio id="sing1" >}} 識 {{< audio id="sik1" >}}<br/>yu /y/ 書 {{< audio id="syu1" >}}</th>
     <th class="tg-lnec"></th>
-    <th class="tg-teg3">u /uː/ 夫 {{< audio id="fu1" >}}<br/>u<sub>後接 -ng,-k</sub> /ʊ̞/ 風 {{< audio id="fung1" >}}</th>
+    <th class="tg-teg3">u /uː/ 夫 {{< audio id="fu1" >}}<br/>u<sub>後接 -ng,-k</sub> /ʊ̞/ 風 {{< audio id="fung1" >}} 福 {{< audio id="fuk1" >}}</th>
   </tr>
   <tr>
-    <td class="tg-teg3">e<sub>後接 -i</sub> /e/ 未 {{< audio id="mei6" >}}<br/>eo /ɵ/ 水 {{< audio id="seoi2" >}}</td>
+    <td class="tg-teg3">e<sub>後接 -i</sub> /e/ 四 {{< audio id="sei3" >}}<br/>eo /ɵ/ 詢 {{< audio id="seon1" >}}</td>
     <td class="tg-teg3"></td>
-    <td class="tg-teg3">o<sub>後接 -u</sub> /o/ 高 {{< audio id="gou1" >}}</td>
+    <td class="tg-teg3">o<sub>後接 -u</sub> /o/ 蘇 {{< audio id="sou1" >}}</td>
   </tr>
   <tr>
-    <td class="tg-teg3">e /ɛː/ 姐 {{< audio id="ze1" >}}<br/>oe /œː/ 削 {{< audio id="soek3" >}}</td>
-    <td class="tg-teg3">a /ɐ/ 不 {{< audio id="bat1" >}}</td>
-    <td class="tg-teg3">o /ɔː/ 波 {{< audio id="bo1" >}}</td>
+    <td class="tg-teg3">e /ɛː/ 些 {{< audio id="se1" >}}<br/>oe /œː/ 鋸 {{< audio id="goe3" >}}</td>
+    <td class="tg-teg3">a /ɐ/ 新 {{< audio id="san1" >}}</td>
+    <td class="tg-teg3">o /ɔː/ 疏 {{< audio id="so1" >}}</td>
   </tr>
   <tr>
     <td class="tg-lnec"></td>
-    <td class="tg-teg3">aa /aː/ 花 {{< audio id="faa1" >}}</td>
+    <td class="tg-teg3">aa /aː/ 沙 {{< audio id="saa1" >}}</td>
     <td class="tg-teg3"></td>
   </tr>
 </table>
@@ -166,7 +170,7 @@ description: >
   <tr>
     <td class="tg-ed5u">元音</td>
     <td class="tg-8oy2"></td>
-    <td class="tg-8oy2">i /i/ 西 {{< audio id="sai1" >}}</td>
+    <td class="tg-8oy2">i /i/ 西 {{< audio id="sai1" >}} 需 {{< audio id="seoi1" >}}</td>
     <td class="tg-8oy2">u /u/ 收 {{< audio id="sau1" >}}</td>
   </tr>
 </table>
@@ -341,7 +345,7 @@ description: >
     <td class="tg-ssw7">on 看 {{< audio id="hon3" >}}</td>
     <td class="tg-ssw7">ong 康 {{< audio id="hong1" >}}</td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">ot 喝 {{< audio id="hot1" >}}</td>
+    <td class="tg-ssw7">ot 喝 {{< audio id="hot3" >}}</td>
     <td class="tg-ssw7">ok 學 {{< audio id="hok6" >}}</td>
   </tr>
   <tr>
@@ -364,10 +368,10 @@ description: >
     <td class="tg-ssw7">aai 齋 {{< audio id="zaai1" >}}</td>
     <td class="tg-ssw7">aau 嘲 {{< audio id="zaau1" >}}</td>
     <td class="tg-ssw7">aam 站 {{< audio id="zaam6" >}}</td>
-    <td class="tg-ssw7">aan 讚 {{< audio id="zaan6" >}}</td>
+    <td class="tg-ssw7">aan 讚 {{< audio id="zaan3" >}}</td>
     <td class="tg-ssw7">aang 掙 {{< audio id="zaang6" >}}</td>
     <td class="tg-ssw7">aap 集 {{< audio id="zaap6" >}}</td>
-    <td class="tg-ssw7">aat 扎 {{< audio id="zaap3" >}}</td>
+    <td class="tg-ssw7">aat 扎 {{< audio id="zaat3" >}}</td>
     <td class="tg-ssw7">aak 責 {{< audio id="zaak6" >}}</td>
   </tr>
 </table>

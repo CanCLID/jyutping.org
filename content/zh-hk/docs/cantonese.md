@@ -7,7 +7,7 @@ description: >
 hide_feedback: false
 ---
 
-{{< audiolist >}}
+{{< docaudio >}}
 
 {{< alert title="寫法區別 & 音系區別">}}
 粵拼和普拼的區別分兩類：寫法區別和音系區別。
