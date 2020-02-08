@@ -112,7 +112,16 @@ hide_feedback: false
 - 郑 zeng6 {{< audio id="zeng6" >}}
 - 石 sek6 {{< audio id="sek6" >}}
 
-### 2.4 声母 ng-
+### 2.4 韵母 i
+
+普拼中的 i 根据拼写音节的不同会代表两个不同的音。例如普通话中「资」的拼音是 zi，这里的 i 代表的音是 /z̩/，而在「机」的拼音 ji 里，i 代表的音是 /i/。粤拼中 i 在大多数时候代表发音 /i/，而在后接 -k 或 -ng 时发音是 /ɪ/。
+
+| /i/                           | /ɪ/                             |
+| ----------------------------- | ------------------------------- |
+| 诗 si1 {{< audio id="si1" >}} | 识 sik1 {{< audio id="sik1" >}} |
+| 仙 sin1 {{< audio id="sin1" >}} | 星 sing1 {{< audio id="sing1" >}} |
+
+### 2.5 声母 ng-
 
 {{< alert color="success">}}
 这个音的国际音标是 /ŋ/。普通话里没有这个声母，而粤语里的声母 ng- 和零声母 Ø- 是区分的。普通话母语者初学这个声母会有点困难，因为普通话里的 ng 只存在于韵尾（后鼻音），需要稍加练习在声母位置发这个音。
@@ -123,7 +132,7 @@ hide_feedback: false
 | 岸 ngon6 {{< audio id="ngon6" >}}   | 按 on3 {{< audio id="on3" >}}   |
 | 雁 ngaan6 {{< audio id="ngaan6" >}} | 晏 aan3 {{< audio id="aan3" >}} |
 
-### 2.5 韵尾 -m
+### 2.6 韵尾 -m
 
 {{< alert color="success">}}
 普通话里的鼻音韵尾只有 -n 和 -ng（前鼻音和后鼻音），没有 -m。而粤语保留了 -m、-n、-ng 三种鼻音韵尾。
@@ -135,7 +144,7 @@ hide_feedback: false
 | 山 saan1 {{< audio id="saan1" >}}   | 痕 han4 {{< audio id="han4" >}}  | 煎 zin1 {{< audio id="zin1" >}}   |
 | 生 saang1 {{< audio id="saang1" >}} | 行 hang4{{< audio id="hang4" >}} | 精 zing1 {{< audio id="zing1" >}} |
 
-### 2.6 韵尾 -p、-t、-k
+### 2.7 韵尾 -p、-t、-k
 
 {{< alert color="success">}}
 这三个韵尾就是传统意义上的「入声」。粤语里的入声韵尾 -p、-t、-k 很像英语单词 cap、put、book 末尾的辅音，但一个最大的区别是，粤语的入声韵尾都是不除阻的，也就是在音节最后不会像英语一样呼出空气。他们的国际音标分别是 [p̚]、[t̚]、[k̚]。
@@ -149,7 +158,7 @@ hide_feedback: false
 | 失 sat1 {{< audio id="sat1" >}} | 节 zit3 {{< audio id="zit3" >}} |
 | 塞 sak1 {{< audio id="sak1" >}} | 脊 zek3 {{< audio id="zek3" >}} |
 
-### 2.7 声调
+### 2.8 声调
 
 {{< alert color="danger">}}
 如果只是想学会用粤拼打字，可以**直接跳过本节**。粤语拼音输入法不需要打声调，不过如果加上声调的话能提高输入速度。
@@ -181,7 +190,7 @@ hide_feedback: false
 
 可以看到，普通话和粤语的第 1、2 声是一样的，而粤语的第 4 声与普通话的第 3 声更接近。粤语的第 3、5、6 声不存在于普通话，初学者需要较多的听力训练来增强辨析。
 
-### 2.8 普通话特有、粤语不存在的音
+### 2.9 普通话特有、粤语不存在的音
 
 {{< alert color="success">}}
 粤语不区分平翘舌音，所以粤拼中无 zh ch sh r 四个声母，另外粤语无普拼中的 j q x 音（粤拼的 j 等于普拼的 y）。

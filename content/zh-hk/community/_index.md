@@ -14,7 +14,7 @@ description: >
 本頁面所用國際音標轉寫皆係寬式轉寫，錄音數據來源係粵語審音配詞字庫。詳情請見[參考文獻](#參考文獻)一節。 
 {{< /alert >}}
 
-## 聲母表
+## 1. 聲母表
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -98,7 +98,7 @@ description: >
 零聲母唔字母做標記，例如“呀”只拼作 aa。
 {{< /alert >}}
 
-## 鼻音單獨成韻
+## 2. 鼻音單獨成韻
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -113,9 +113,9 @@ description: >
   </tr>
 </table>
 
-## 韻母
+## 3. 韻母
 
-### 韻腹
+### 3.1 韻腹
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -147,7 +147,7 @@ description: >
   </tr>
 </table>
 
-### 韻尾
+### 3.2 韻尾
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -179,7 +179,7 @@ description: >
   </tr>
 </table>
 
-### 韻母表
+### 3.3 韻母表
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -384,7 +384,7 @@ description: >
  **a** 同 **oet** 於 2018 年新增。詳情請睇[呢度](https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf)。
 {{< /alert >}}
 
-## 字調
+## 4. 字調
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}

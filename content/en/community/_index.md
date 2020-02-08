@@ -14,7 +14,7 @@ description: >
 All IPA transcriptions on this page are phonemic transcriptions，source of audio data is 粵語審音配詞字庫. For further details please see [Reference](#reference).
 {{< /alert >}}
 
-## Onset
+## 1. Onset
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -98,7 +98,7 @@ All IPA transcriptions on this page are phonemic transcriptions，source of audi
 Null initial is not represented, e.g. "呀" is only spelt as "aa".
 {{< /alert >}}
 
-## Syllabic nasal
+## 2. Syllabic nasal
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -113,9 +113,9 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
   </tr>
 </table>
 
-## Final
+## 3. Final
 
-### Nuclei
+### 3.1 Nuclei
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -147,7 +147,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
   </tr>
 </table>
 
-### Coda
+### 3.2 Coda
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -179,7 +179,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
   </tr>
 </table>
 
-### Finals Chart
+### 3.3 Finals Chart
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -384,7 +384,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
  **a** and **oet** were added in 2018. Please see [here](https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf) for further information.
 {{< /alert >}}
 
-## Tone
+## 4. Tone
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
