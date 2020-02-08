@@ -4,5 +4,5 @@ linkTitle: "文集"
 url: "/zh-cn/blog"
 menu:
   main:
-    weight: 2
+    weight: 3
 ---

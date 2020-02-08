@@ -1,9 +1,9 @@
 ---
-title: LSHK Jyutping
+title: Jyutping Scheme
 url: "/en/jyutping"
 menu:
   main:
-    weight: 3
+    weight: 2
 description: >
   Linguistics Society of Hong Kong Cantonese Romanization Scheme
 ---

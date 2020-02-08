@@ -3,7 +3,7 @@ title: LSHK 粵拼方案
 url: "/zh-cn/jyutping"
 menu:
   main:
-    weight: 3
+    weight: 2
 description: >
   「香港语言学学会粤语拼音方案」，简称「粤拼」。
 ---
