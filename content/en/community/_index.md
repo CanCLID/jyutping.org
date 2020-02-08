@@ -39,27 +39,27 @@ All IPA transcriptions on this page are phonemic transcriptions，source of audi
   </tr>
   <tr>
     <td class="tg-99yb">Plosive</td>
-    <td class="tg-0o7j">b /p/ 巴 {{< audio id="baa1" >}}<br/>p /pʰ/ 怕 {{< audio id="paa3" >}}</td>
+    <td class="tg-0o7j">b [p] 巴 {{< audio id="baa1" >}}<br/>p [pʰ] 怕 {{< audio id="paa3" >}}</td>
     <td class="tg-0o7j"></td>
-    <td class="tg-aqzh">d /t/ 打 {{< audio id="daa2" >}}<br/>t /tʰ/ 他 {{< audio id="taa1" >}}</td>
+    <td class="tg-aqzh">d [t] 打 {{< audio id="daa2" >}}<br/>t [tʰ] 他 {{< audio id="taa1" >}}</td>
     <td class="tg-aqzh"></td>
-    <td class="tg-aqzh">g /k/ 家 {{< audio id="gaa1" >}}<br/>k /kʰ/ 卡 {{< audio id="kaa1" >}}<br/>gw /kʷ/ 瓜 {{< audio id="gwaa1" >}}<br/>kw /kʷʰ/ 夸 {{< audio id="kwaa1" >}}</td>
-    <td class="tg-aqzh">' /ʔ/</td>
+    <td class="tg-aqzh">g [k] 家 {{< audio id="gaa1" >}}<br/>k [kʰ] 卡 {{< audio id="kaa1" >}}<br/>gw [kʷ] 瓜 {{< audio id="gwaa1" >}}<br/>kw [kʷʰ] 夸 {{< audio id="kwaa1" >}}</td>
+    <td class="tg-aqzh">' [ʔ]</td>
   </tr>
   <tr>
     <td class="tg-99yb">Nasal</td>
-    <td class="tg-aqzh">m /m/ 媽 {{< audio id="maa1" >}}</td>
+    <td class="tg-aqzh">m [m] 媽 {{< audio id="maa1" >}}</td>
     <td class="tg-aqzh"></td>
-    <td class="tg-aqzh">n /n/ 那 {{< audio id="naa5" >}}</td>
+    <td class="tg-aqzh">n [n] 那 {{< audio id="naa5" >}}</td>
     <td class="tg-aqzh"></td>
-    <td class="tg-aqzh">ng /ŋ/ 牙 {{< audio id="ngaa4" >}}</td>
+    <td class="tg-aqzh">ng [ŋ] 牙 {{< audio id="ngaa4" >}}</td>
     <td class="tg-aqzh"></td>
   </tr>
   <tr>
     <td class="tg-99yb">Affricate</td>
     <td class="tg-0o7j"></td>
     <td class="tg-0o7j"></td>
-    <td class="tg-aqzh">z /t͡s/ 渣 {{< audio id="zaa1" >}}<br/>c /t͡sʰ/ 叉 {{< audio id="caa1" >}}</td>
+    <td class="tg-aqzh">z [t͡s] 渣 {{< audio id="zaa1" >}}<br/>c [t͡sʰ] 叉 {{< audio id="caa1" >}}</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
@@ -68,18 +68,18 @@ All IPA transcriptions on this page are phonemic transcriptions，source of audi
   <tr>
     <td class="tg-99yb">Fricative</td>
     <td class="tg-aqzh"></td>
-    <td class="tg-aqzh">f /f/ 花 {{< audio id="faa1" >}}</td>
-    <td class="tg-aqzh">s /s/ 沙 {{< audio id="saa1" >}}</td>
+    <td class="tg-aqzh">f [f] 花 {{< audio id="faa1" >}}</td>
+    <td class="tg-aqzh">s [s] 沙 {{< audio id="saa1" >}}</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
-    <td class="tg-aqzh">h /h/ 蝦 {{< audio id="haa1" >}}</td>
+    <td class="tg-aqzh">h [h] 蝦 {{< audio id="haa1" >}}</td>
   </tr>
   <tr>
     <td class="tg-99yb">Approximant</td>
-    <td class="tg-aqzh">w /w/ 蛙 {{< audio id="waa1" >}}</td>
+    <td class="tg-aqzh">w [w] 蛙 {{< audio id="waa1" >}}</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
-    <td class="tg-aqzh">j /j/ 也 {{< audio id="jaa5" >}}</td>
+    <td class="tg-aqzh">j [j] 也 {{< audio id="jaa5" >}}</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
   </tr>
@@ -87,7 +87,7 @@ All IPA transcriptions on this page are phonemic transcriptions，source of audi
     <td class="tg-99yb">Lateral Approximant</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
-    <td class="tg-aqzh">l /l/ 啦 {{< audio id="laa1" >}}</td>
+    <td class="tg-aqzh">l [l] 啦 {{< audio id="laa1" >}}</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
@@ -108,8 +108,8 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-8oy2">m /m/ 唔 {{< audio id="m4" >}}</th>
-    <th class="tg-8oy2">ng /ŋ/ 吳 {{< audio id="ng4" >}}</th>
+    <th class="tg-8oy2">m [m] 唔 {{< audio id="m4" >}}</th>
+    <th class="tg-8oy2">ng [ŋ] 吳 {{< audio id="ng4" >}}</th>
   </tr>
 </table>
 
@@ -126,23 +126,23 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-teg3">i /iː/ 詩 {{< audio id="si1" >}}<br/>i<sub>後接 -ng,-k</sub> /ɪ̞/ 星 {{< audio id="sing1" >}} 識 {{< audio id="sik1" >}}<br/>yu /y/ 書 {{< audio id="syu1" >}}</th>
+    <th class="tg-teg3">i [iː] 詩 {{< audio id="si1" >}}<br/>i<sub>後接 -ng, -k</sub> [ɪ̞] 星 {{< audio id="sing1" >}} 識 {{< audio id="sik1" >}}<br/>yu [y] 書 {{< audio id="syu1" >}}</th>
     <th class="tg-lnec"></th>
-    <th class="tg-teg3">u /uː/ 夫 {{< audio id="fu1" >}}<br/>u<sub>後接 -ng,-k</sub> /ʊ̞/ 風 {{< audio id="fung1" >}} 福 {{< audio id="fuk1" >}}</th>
+    <th class="tg-teg3">u [uː] 夫 {{< audio id="fu1" >}}<br/>u<sub>後接 -ng, -k</sub> [ʊ̞] 風 {{< audio id="fung1" >}} 福 {{< audio id="fuk1" >}}</th>
   </tr>
   <tr>
-    <td class="tg-teg3">e<sub>後接 -i</sub> /e/ 四 {{< audio id="sei3" >}}<br/>eo /ɵ/ 詢 {{< audio id="seon1" >}}</td>
+    <td class="tg-teg3">e<sub>後接 -i</sub> [e] 四 {{< audio id="sei3" >}}<br/>eo [ɵ] 詢 {{< audio id="seon1" >}}</td>
     <td class="tg-teg3"></td>
-    <td class="tg-teg3">o<sub>後接 -u</sub> /o/ 蘇 {{< audio id="sou1" >}}</td>
+    <td class="tg-teg3">o<sub>後接 -u</sub> [o] 蘇 {{< audio id="sou1" >}}</td>
   </tr>
   <tr>
-    <td class="tg-teg3">e /ɛː/ 些 {{< audio id="se1" >}}<br/>oe /œː/ 鋸 {{< audio id="goe3" >}}</td>
-    <td class="tg-teg3">a /ɐ/ 新 {{< audio id="san1" >}}</td>
-    <td class="tg-teg3">o /ɔː/ 疏 {{< audio id="so1" >}}</td>
+    <td class="tg-teg3">e [ɛː] 些 {{< audio id="se1" >}}<br/>oe [œː] 鋸 {{< audio id="goe3" >}}</td>
+    <td class="tg-teg3">a [ɐ] 新 {{< audio id="san1" >}}</td>
+    <td class="tg-teg3">o [ɔː] 疏 {{< audio id="so1" >}}</td>
   </tr>
   <tr>
     <td class="tg-lnec"></td>
-    <td class="tg-teg3">aa /aː/ 沙 {{< audio id="saa1" >}}</td>
+    <td class="tg-teg3">aa [aː] 沙 {{< audio id="saa1" >}}</td>
     <td class="tg-teg3"></td>
   </tr>
 </table>
@@ -161,21 +161,21 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
 <table class="tg">
   <tr>
     <th class="tg-ed5u">Plosive</th>
-    <th class="tg-8oy2">p /p̚/ 溼 {{< audio id="sap1" >}}</th>
-    <th class="tg-8oy2">t /t̚/ 失 {{< audio id="sat1" >}}</th>
-    <th class="tg-8oy2">k /k̚/ 塞 {{< audio id="sak1" >}}</th>
+    <th class="tg-8oy2">p [p̚] 溼 {{< audio id="sap1" >}}</th>
+    <th class="tg-8oy2">t [t̚] 失 {{< audio id="sat1" >}}</th>
+    <th class="tg-8oy2">k [k̚] 塞 {{< audio id="sak1" >}}</th>
   </tr>
   <tr>
     <td class="tg-ed5u">Nasal</td>
-    <td class="tg-8oy2">m /m/ 心 {{< audio id="sam1" >}}</td>
-    <td class="tg-8oy2">n /n/ 身 {{< audio id="san1" >}}</td>
-    <td class="tg-8oy2">ng /ŋ/ 生 {{< audio id="sang1" >}}</td>
+    <td class="tg-8oy2">m [m] 心 {{< audio id="sam1" >}}</td>
+    <td class="tg-8oy2">n [n] 身 {{< audio id="san1" >}}</td>
+    <td class="tg-8oy2">ng [ŋ] 生 {{< audio id="sang1" >}}</td>
   </tr>
   <tr>
     <td class="tg-ed5u">Vowel</td>
     <td class="tg-8oy2"></td>
-    <td class="tg-8oy2">i /i/ 西 {{< audio id="sai1" >}} 需 {{< audio id="seoi1" >}}</td>
-    <td class="tg-8oy2">u /u/ 收 {{< audio id="sau1" >}}</td>
+    <td class="tg-8oy2">i [i] 西 {{< audio id="sai1" >}} 需 {{< audio id="seoi1" >}}</td>
+    <td class="tg-8oy2">u [u] 收 {{< audio id="sau1" >}}</td>
   </tr>
 </table>
 
@@ -215,7 +215,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
   </tr>
   <tr>
     <td class="tg-i8xi" rowspan="2"> i</td>
-    <td class="tg-cdar">/iː/</td>
+    <td class="tg-cdar">[iː]</td>
     <td class="tg-ssw7">i 思 {{< audio id="si1" >}}</td>
     <td class="tg-dgfm"></td>
     <td class="tg-ssw7">iu 消 {{< audio id="siu1" >}}</td>
@@ -227,7 +227,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
     <td class="tg-ssw7"></td>
   </tr>
   <tr>
-    <td class="tg-cdar">/ɪ̞/</td>
+    <td class="tg-cdar">[ɪ̞]</td>
     <td class="tg-ssw7"></td>
     <td class="tg-dgfm"></td>
     <td class="tg-ssw7"></td>
@@ -240,7 +240,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
   </tr>
   <tr>
     <td class="tg-i8xi">yu</td>
-    <td class="tg-cdar">/yː/</td>
+    <td class="tg-cdar">[yː]</td>
     <td class="tg-ssw7">yu 書 {{< audio id="syu1" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
@@ -253,7 +253,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
   </tr>
   <tr>
     <td class="tg-i8xi" rowspan="2">u</td>
-    <td class="tg-cdar">/uː/</td>
+    <td class="tg-cdar">[uː]</td>
     <td class="tg-ssw7">u 夫 {{< audio id="fu1" >}}</td>
     <td class="tg-ssw7">ui 灰 {{< audio id="fui1" >}}</td>
     <td class="tg-dgfm"></td>
@@ -265,7 +265,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
     <td class="tg-ssw7"></td>
   </tr>
   <tr>
-    <td class="tg-cdar">/ʊ̞/</td>
+    <td class="tg-cdar">[ʊ̞]</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
     <td class="tg-dgfm"></td>
@@ -278,7 +278,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
   </tr>
   <tr>
     <td class="tg-i8xi" rowspan="2">e</td>
-    <td class="tg-cdar">/e/</td>
+    <td class="tg-cdar">[e]</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7">ei 四 {{< audio id="sei3" >}}</td>
     <td class="tg-ssw7"></td>
@@ -290,7 +290,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
     <td class="tg-ssw7"></td>
   </tr>
   <tr>
-    <td class="tg-cdar">/ɛː/</td>
+    <td class="tg-cdar">[ɛː]</td>
     <td class="tg-ssw7">e 些 {{< audio id="se1" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7">eu 掉 {{< audio id="deu3" >}}</td>
@@ -303,7 +303,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
   </tr>
   <tr>
     <td class="tg-i8xi">eo</td>
-    <td class="tg-cdar">/ɵ/</td>
+    <td class="tg-cdar">[ɵ]</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7">eoi 需 {{< audio id="seoi1" >}}</td>
     <td class="tg-ssw7"></td>
@@ -316,7 +316,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
   </tr>
   <tr>
     <td class="tg-i8xi">oe</td>
-    <td class="tg-cdar">/œː/</td>
+    <td class="tg-cdar">[œː]</td>
     <td class="tg-ssw7">oe 鋸 {{< audio id="goe3" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
@@ -329,7 +329,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
   </tr>
   <tr>
     <td class="tg-i8xi" rowspan="2">o</td>
-    <td class="tg-cdar">/o/</td>
+    <td class="tg-cdar">[o]</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7">ou 好 {{< audio id="hou2" >}}</td>
@@ -341,7 +341,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
     <td class="tg-ssw7"></td>
   </tr>
   <tr>
-    <td class="tg-cdar">/ɔː/</td>
+    <td class="tg-cdar">[ɔː]</td>
     <td class="tg-ssw7">o 可 {{< audio id="ho2" >}}</td>
     <td class="tg-ssw7">oi 開 {{< audio id="hoi1" >}}</td>
     <td class="tg-ssw7"></td>
@@ -354,7 +354,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
   </tr>
   <tr>
     <td class="tg-i8xi">a</td>
-    <td class="tg-cdar">/ɐ/</td>
+    <td class="tg-cdar">[ɐ]</td>
     <td class="tg-m4o3">a  㗎 {{< audio id="ga3" >}}</td>
     <td class="tg-ssw7">ai 擠 {{< audio id="zai1" >}}</td>
     <td class="tg-ssw7">au 周 {{< audio id="zau1" >}}</td>
@@ -367,7 +367,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
   </tr>
   <tr>
     <td class="tg-i8xi">aa</td>
-    <td class="tg-cdar">/aː/</td>
+    <td class="tg-cdar">[aː]</td>
     <td class="tg-ssw7">aa 渣 {{< audio id="zaa1" >}}</td>
     <td class="tg-ssw7">aai 齋 {{< audio id="zaai1" >}}</td>
     <td class="tg-ssw7">aau 嘲 {{< audio id="zaau1" >}}</td>
@@ -404,17 +404,17 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
   </tr>
   <tr>
     <td class="tg-5ye1">陰</td>
-    <td class="tg-gjbb">1 /˥/ 詩 {{< audio id="si1" >}}</td>
-    <td class="tg-gjbb">2 /˧˥/ 史 {{< audio id="si2" >}}</td>
-    <td class="tg-gjbb">3 /˧/ 試 {{< audio id="si3" >}}</td>
-    <td class="tg-gjbb">1 /˥/ 識 {{< audio id="sik1" >}}<br/>3 /˧/ 洩 {{< audio id="sit3" >}}</td>
+    <td class="tg-gjbb">1 [˥] 詩 {{< audio id="si1" >}}</td>
+    <td class="tg-gjbb">2 [˧˥] 史 {{< audio id="si2" >}}</td>
+    <td class="tg-gjbb">3 [˧] 試 {{< audio id="si3" >}}</td>
+    <td class="tg-gjbb">1 [˥] 識 {{< audio id="sik1" >}}<br/>3 [˧] 洩 {{< audio id="sit3" >}}</td>
   </tr>
   <tr>
     <td class="tg-5ye1">陽</td>
-    <td class="tg-gjbb">4 /˨˩/ 時 {{< audio id="si4" >}}</td>
-    <td class="tg-gjbb">5 /˩˧/ 市 {{< audio id="si5" >}}</td>
-    <td class="tg-gjbb">6 /˨/ 事 {{< audio id="si6" >}}</td>
-    <td class="tg-gjbb">6 /˨/ 蝕 {{< audio id="sit6" >}}</td>
+    <td class="tg-gjbb">4 [˨˩] 時 {{< audio id="si4" >}}</td>
+    <td class="tg-gjbb">5 [˩˧] 市 {{< audio id="si5" >}}</td>
+    <td class="tg-gjbb">6 [˨] 事 {{< audio id="si6" >}}</td>
+    <td class="tg-gjbb">6 [˨] 蝕 {{< audio id="sit6" >}}</td>
   </tr>
 </table>
 
@@ -428,12 +428,12 @@ fu1 (夫), fu2 (虎), fu3 (副), fu4 (扶), fu5 (婦), fu6 (父)
 
 ## Reference
 
-Bauer, Robert S., and Paul K. Benedict. 2011. _Modern cantonese phonology_. Vol. 102. Walter de Gruyter
+Bauer, Robert S., and Paul K. Benedict. 2011. *Modern cantonese phonology*. Vol. 102. Walter de Gruyter
 
-Mok, Peggy Pik-Ki, and Peggy, Wai-Yi Wong. 2010. Perception of the merging tones in Hong Kong Cantonese: preliminary data on monosyllables. _Speech Prosody 2010-Fifth International Conference_.
+Mok, Peggy Pik-Ki, and Peggy, Wai-Yi Wong. 2010. Perception of the merging tones in Hong Kong Cantonese: preliminary data on monosyllables. *Speech Prosody 2010-Fifth International Conference*.
 
-Zee, Eric. 1991. Chinese (Hong Kong Cantonese). _Journal of the International Phonetic Association_ 21.1: 46-48.
+Zee, Eric. 1991. Chinese (Hong Kong Cantonese). *Journal of the International Phonetic Association* 21.1: 46-48.
 
-Stephen, Matthews. 1992. _Jyutping 粵拼 - Cantonese Romanization Scheme_. The Linguistics Society of Hong Kong. https://www.lshk.org/jyutping
+Stephen, Matthews. 1992. *Jyutping 粵拼 - Cantonese Romanization Scheme*. The Linguistics Society of Hong Kong. https://www.lshk.org/jyutping
 
-關子尹, 鄧偉生, 趙子明, 黃禮彥, 黃載欣, 鍾立. 2003. _粵語審音配詞字庫_. 人文電算研究中心. 香港中文大學 http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/
+關子尹, 鄧偉生, 趙子明, 黃禮彥, 黃載欣, 鍾立. 2003. *粵語審音配詞字庫*. 人文電算研究中心. 香港中文大學 http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/
