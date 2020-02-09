@@ -52,8 +52,8 @@ id = "UA-131567469-4"
 # Language configuration
 [languages]
 [languages.zh-cn]
-title = "粵拼速成"
-description = "粵拼速成"
+title = "粵拼"
+description = "粵拼"
 languageName ="简化汉字"
 contentDir = "content/zh-cn"
 time_format_default = "2006.01.02"
@@ -61,8 +61,8 @@ time_format_blog = "2006.01.02"
 # Weight used for sorting.
 weight = 1
 [languages.zh-hk]
-title = "粵拼速成"
-description = "粵拼速成"
+title = "粵拼"
+description = "粵拼"
 languageName ="漢字"
 contentDir = "content/zh-hk"
 time_format_default = "2006.01.02"
@@ -83,7 +83,7 @@ time_format_blog = "01.02.2006"
 # Everything below this are Site Params
 
 [params]
-copyright = "粵拼速成"
+copyright = "粵拼"
 # privacy_policy = "https://policies.google.com/privacy"
 
 # First one is picked as the Twitter card image if not set on page.

@@ -1,5 +1,5 @@
 ---
-title: Jyutping Scheme
+title: LSHK Jyutping Scheme
 url: "/en/jyutping"
 menu:
   main:
