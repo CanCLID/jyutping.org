@@ -44,7 +44,7 @@ All IPA transcriptions on this page are phonemic transcriptions，source of audi
     <td class="tg-aqzh">d [t] 打 {{< audio id="daa2" >}}<br/>t [tʰ] 他 {{< audio id="taa1" >}}</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh">g [k] 家 {{< audio id="gaa1" >}}<br/>k [kʰ] 卡 {{< audio id="kaa1" >}}<br/>gw [kʷ] 瓜 {{< audio id="gwaa1" >}}<br/>kw [kʷʰ] 夸 {{< audio id="kwaa1" >}}</td>
-    <td class="tg-aqzh">' [ʔ]</td>
+    <td class="tg-aqzh"></td>
   </tr>
   <tr>
     <td class="tg-99yb">Nasal</td>

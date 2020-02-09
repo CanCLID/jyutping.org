@@ -10,8 +10,8 @@ theme = ["docsy"]
 enableGitInfo = true
 
 # Language settings
-contentDir = "content/zh-cn"
-defaultContentLanguage = "zh-cn"
+contentDir = "content/zh-hk"
+defaultContentLanguage = "zh-hk"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
@@ -50,7 +50,6 @@ anchor = "smart"
 id = "UA-131567469-4"
 
 # Language configuration
-
 [languages]
 [languages.zh-cn]
 title = "粵拼速成"
@@ -154,7 +153,7 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "GitHub"
-	url = "https://github.com/laubonghaudoi/jyutping.net"
+	url = "https://github.com/laubonghaudoi/jyutping.org"
 	icon = "fab fa-github"
         desc = "Development takes place here!"
 # [[params.links.developer]]

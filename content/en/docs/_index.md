@@ -8,6 +8,6 @@ menu:
 hide_feedback: true
 ---
 
-{{< alert >}}
-**目标**：默認讀者已掌握普通話拼音，讀完一篇文章即掌握粤拼（香港语言学学会粤语拼音方案）。
+{{< alert title="Goal">}}
+Assume you only speak English and is learning Cantonese, finish reading our tutorial and you will master Jyutping, the de-facto standard Cantonese romanization scheme.
 {{< /alert >}}

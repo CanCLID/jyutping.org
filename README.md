@@ -1,18 +1,13 @@
-# jyutping.net
+# jyutping.org
 
 ## 開發指南
+
+本網站採用 [Hugo](https://gohugo.io/) 開發，開發前請先安裝 Hugo。
 
 運行以下命令
 
 ```bash
-git clone --recurse-submodules --depth 1 https://github.com/laubonghaudoi/jyutping.net
-cd jyutping.net
+git clone --recurse-submodules --depth 1 https://github.com/laubonghaudoi/jyutping.org
+cd jyutping.org
 hugo server
 ```
-
-## Todo
-
-- [ ] 加入英文版
-- [ ] 文集補全
-- [ ] 文集格式優化
-- [ ] 加入參考文獻
