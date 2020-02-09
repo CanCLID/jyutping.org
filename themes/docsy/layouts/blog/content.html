@@ -1,0 +1,15 @@
+<div class="td-content">
+	<h1>{{ .Title }}</h1>
+	{{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
+	<div class="td-byline mb-4">
+		{{ with .Params.author }}{{ T "post_byline_by" }} <b>{{ . | markdownify }}</b> |{{ end}}
+	</div>
+	{{ .Content }}
+	{{ if (.Site.DisqusShortname) }}
+		<br />
+		{{ partial "disqus-comment.html" . }}
+		<br />
+	{{ end }}
+
+	{{ partial "pager.html" . }}
+</div>

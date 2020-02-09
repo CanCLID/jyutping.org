@@ -1,0 +1,43 @@
+
+
+# UI strings. Buttons and similar.
+
+[ui_pager_prev]
+other = "上一篇"
+
+[ui_pager_next]
+other = "下一篇"
+
+[ui_read_more]
+other = "閱讀全文"
+
+[ui_search]
+other = "搜索本站"
+
+# Used in sentences such as "Posted in News"
+[ui_in]
+other = "in"
+
+# Footer text
+[footer_all_rights_reserved]
+other = "All Rights Reserved"
+
+[footer_privacy_policy]
+other = "私隱協議"
+
+
+# Post (blog, articles etc.)
+[post_byline_by]
+other = "By"
+[post_created]
+other = "Created"
+[post_last_mod]
+other = "最近更新於"
+[post_edit_this]
+other = "編輯本頁"
+[post_create_issue]
+other = "新建文檔 issue"
+[post_create_project_issue]
+other = "新建項目 issue"
+[post_posts_in]
+other = " "
