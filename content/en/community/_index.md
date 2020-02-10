@@ -324,7 +324,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7">oeng 疆 {{< audio id="goeng1" >}}</td>
     <td class="tg-ssw7"></td>
-    <td class="tg-m4o3">oet  𠰲 {{< audio id="soet3" >}}</td>
+    <td class="tg-m4o3">oet  {{< audio id="oet6" >}}</td>
     <td class="tg-ssw7">oek 腳 {{< audio id="goek3" >}}</td>
   </tr>
   <tr>
@@ -355,7 +355,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
   <tr>
     <td class="tg-i8xi">a</td>
     <td class="tg-cdar">[ɐ]</td>
-    <td class="tg-m4o3">a  㗎 {{< audio id="ga3" >}}</td>
+    <td class="tg-m4o3">a  嘞 {{< audio id="la3" >}}</td>
     <td class="tg-ssw7">ai 擠 {{< audio id="zai1" >}}</td>
     <td class="tg-ssw7">au 周 {{< audio id="zau1" >}}</td>
     <td class="tg-ssw7">am 斟 {{< audio id="zam1" >}}</td>

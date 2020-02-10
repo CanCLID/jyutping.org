@@ -160,7 +160,7 @@ description: >
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-ed5u">塞音</th>
+    <th class="tg-ed5u">爆發音</th>
     <th class="tg-8oy2">p [p̚] 溼 {{< audio id="sap1" >}}</th>
     <th class="tg-8oy2">t [t̚] 失 {{< audio id="sat1" >}}</th>
     <th class="tg-8oy2">k [k̚] 塞 {{< audio id="sak1" >}}</th>
@@ -324,7 +324,7 @@ description: >
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7">oeng 疆 {{< audio id="goeng1" >}}</td>
     <td class="tg-ssw7"></td>
-    <td class="tg-m4o3">oet  𠰲 {{< audio id="soet3" >}}</td>
+    <td class="tg-m4o3">oet  {{< audio id="oet6" >}}</td>
     <td class="tg-ssw7">oek 腳 {{< audio id="goek3" >}}</td>
   </tr>
   <tr>
@@ -355,7 +355,7 @@ description: >
   <tr>
     <td class="tg-i8xi">a</td>
     <td class="tg-cdar">[ɐ]</td>
-    <td class="tg-m4o3">a  㗎 {{< audio id="ga3" >}}</td>
+    <td class="tg-m4o3">a  嘞 {{< audio id="la3" >}}</td>
     <td class="tg-ssw7">ai 擠 {{< audio id="zai1" >}}</td>
     <td class="tg-ssw7">au 周 {{< audio id="zau1" >}}</td>
     <td class="tg-ssw7">am 斟 {{< audio id="zam1" >}}</td>
