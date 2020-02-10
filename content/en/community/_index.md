@@ -293,7 +293,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
     <td class="tg-cdar">[ɛː]</td>
     <td class="tg-ssw7">e 些 {{< audio id="se1" >}}</td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7">eu 掉 {{< audio id="deu3" >}}</td>
+    <td class="tg-ssw7">eu 掉 {{< audio id="deu6" >}}</td>
     <td class="tg-ssw7">em 舐 {{< audio id="lem2" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
