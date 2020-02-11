@@ -5,7 +5,7 @@ menu:
   main:
     weight: 2
 description: >
-  Linguistics Society of Hong Kong Cantonese Romanization Scheme
+  The Linguistics Society of Hong Kong Cantonese Romanization Scheme
 ---
 
 {{< chartaudio >}}

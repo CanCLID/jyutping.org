@@ -162,7 +162,7 @@ hide_feedback: false
 
 ### 2.8 聲調
 
-{{< alert color="danger">}}
+{{< alert color="dark">}}
 如果只是想學會用粵拼打字，可以**直接跳過本節**。粵語拼音輸入法不需要打聲調，不過如果加上聲調的話能提高輸入速度。
 {{< /alert >}}
 

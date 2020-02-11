@@ -166,7 +166,7 @@ hide_feedback: false
 
 ### 2.8 聲調
 
-{{< alert color="danger" title="提醒">}}
+{{< alert color="dark" title="提醒">}}
 如果淨係想學識用粵拼打字，可以**直接跳過本節**。粵拼打字唔需要打聲調，不過如果打埋聲調嘅話可以提高輸入速度。
 {{< /alert >}}
 

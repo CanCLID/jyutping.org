@@ -69,7 +69,7 @@ time_format_default = "2006.01.02"
 time_format_blog = "2006.01.02"
 [languages.en]
 title = "Jyutping"
-description = "Jyutping"
+description = "The de-facto standard romanization scheme for Cantonese."
 languageName ="English"
 contentDir = "content/en"
 time_format_default = "01.02.2006"
