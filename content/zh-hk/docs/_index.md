@@ -1,6 +1,6 @@
 ---
 title: "一文掌握粵拼"
-linkTitle: "一文學粵拼"
+linkTitle: "學粵拼"
 weight: 1
 menu:
   main:

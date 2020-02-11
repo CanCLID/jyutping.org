@@ -3,7 +3,7 @@ title: "我只會普通話（國語）"
 date: 2020-01-22
 weight: 2
 description: >
-  粵拼的設計大部分和普通話拼音（下稱“普拼”）相同，只需讀完兩者主要區別，就能快速掌握粵拼。
+  粵拼的設計大部分和普通話拼音（即《漢語拼音》，下稱“普拼”）相同，只需讀完兩者主要區別，就能快速掌握粵拼。
 hide_feedback: false
 ---
 
@@ -200,7 +200,7 @@ hide_feedback: false
 
 ## 3. 學完啦！
 
-恭喜你讀到這裏，粵拼和普通話拼音的區別就這麼多，其他字母代表的發音，例如 b p m f、d t n l、g k h、z c s w 在普拼和粵拼裏都是一樣的。如果你想讀更詳細的粵拼教程，請看這裏：
+恭喜你讀到這裏，粵拼和普通話拼音的區別就這麼多，其他字母代表的發音，例如 b p m f、d t n l、g k h、z c s w 在普拼和粵拼裏都是一樣的。要查看整個粵拼方案的完整聲韻母表，請見本站的[ LSHK 粵拼方案](https://www.jyutping.org/jyutping/)。如果你想讀更詳細的粵拼教程，請看這裏：
 
 - [Jyutping（粵拼）詳細教程](http://www.cantonese.asia/portal.php?mod=view&aid=229)
 

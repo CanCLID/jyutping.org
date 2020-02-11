@@ -200,7 +200,7 @@ hide_feedback: false
 
 ## 3. 学完啦！
 
-恭喜你读到这里，粤拼和普通话拼音的区别就这么多，其他字母代表的发音，例如 b p m f、d t n l、g k h、z c s w 在普拼和粤拼里都是一样的。如果你想读更详细的粤拼教程，请看这里：
+恭喜你读到这里，粤拼和普通话拼音的区别就这么多，其他字母代表的发音，例如 b p m f、d t n l、g k h、z c s w 在普拼和粤拼里都是一样的。要查看整个粤拼方案的完整声韵母表，请见本站的[ LSHK 粤拼方案](https://www.jyutping.org/jyutping/)。如果你想读更详细的粤拼教程，请看这里：
 
 - [Jyutping（粤拼）详细教程](http://www.cantonese.asia/portal.php?mod=view&aid=229)
 

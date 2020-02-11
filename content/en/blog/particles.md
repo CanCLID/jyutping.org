@@ -1,10 +1,10 @@
 ---
-title: "粵語語氣詞"
-linkTitle: "粵語語氣詞"
+title: "Cantonese Particles"
+linkTitle: "Cantonese Particles"
 url: "/en/blog/particles"
-date: 2020-01-25
+weight: 2
 description: >
-  粵語有非常豐富嘅句末語氣詞，喺平時書寫粵文嗰陣好容易撈亂，本文列舉出所有常見嘅粵語句末語氣詞同佢嘅規範寫法，等大家可以規範粵文。
+  Cantonese has an affluent amount of sentences particles. This page provides a list for all of them, helping you to distinguish and master the usage of them.
 ---
 
-頁面建設中
+Page under development.
