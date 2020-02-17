@@ -9,6 +9,10 @@ hide_feedback: false
 
 {{< docaudio >}}
 
+{{< alert title="This page is currently under development, content is incomplete." color="danger">}}
+Please check back later, or check out [LSHK Jyutping Scheme](/en/jyutping), the official reference page of Jyutping.
+{{< /alert >}}
+
 ## What is Jyutping?
 
 Jyutping is a way to spell out Cantonese words using only letters (a-z) and numbers (1-6). If you already speak English (native or not), you only need to remember a handful of symbols to master Cantonese pronunciation.
@@ -129,3 +133,15 @@ There are **six tones** in Cantonese: high level, high rising, mid level, low di
 | 时 si4 {{< audio id="si4" >}} | 市 si5 {{< audio id="si5" >}} | 事 si6 {{< audio id="si6" >}} |
 
 Don’t worry if you cannot distinguish all of them. In real life you can still be well understood even if you don't distinguish all of them.
+
+## All set!
+
+Now you have gone through all the critical parts of Jyutping. For a full reference of the scheme, check out [LSHK Jyutping Scheme](/en/jyutping), our official reference page of Jyutping.
+
+Some tools for learning Jyutping and Cantonese. First comes the dictionary, where you can find the Cantonese pronunciation in Jyutping for almost any Han characters:
+
+- [粵音資料集叢](https://jyut.net/)
+
+Then comes a desktop Cantonese dictionary, if you don't like searching in a web browser:
+
+- [Jyut Dictionary](https://github.com/aaronhktan/jyut-dict)

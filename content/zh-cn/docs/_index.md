@@ -1,6 +1,6 @@
 ---
 title: "一文掌握粤拼"
-linkTitle: "一文学粤拼"
+linkTitle: "学粤拼"
 menu:
   main:
     weight: 1

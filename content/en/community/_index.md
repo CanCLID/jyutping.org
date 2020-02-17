@@ -95,7 +95,8 @@ All IPA transcriptions on this page are phonemic transcriptions，source of audi
 </table>
 
 {{< alert >}}
-Null initial is not represented, e.g. "呀" is only spelt as "aa".
+- Null initial is not represented, e.g. "呀" is only spelt as "aa".
+- Both z and c has a post-alveolar allophone, i.e. z can be realized as [t͡ʃ] and c can be realized as [t͡ʃʰ].
 {{< /alert >}}
 
 ## 2. Syllabic nasal
