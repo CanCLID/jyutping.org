@@ -127,14 +127,14 @@ All IPA transcriptions on this page are phonemic transcriptions，source of audi
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-teg3">i [iː] 詩 {{< audio id="si1" >}}<br/>i<sub>後接 -ng, -k</sub> [ɪ̞] 星 {{< audio id="sing1" >}} 識 {{< audio id="sik1" >}}<br/>yu [y] 書 {{< audio id="syu1" >}}</th>
+    <th class="tg-teg3">i [iː] 詩 {{< audio id="si1" >}}<br/>i<sub>followed by -ng, -k</sub> [ɪ̞] 星 {{< audio id="sing1" >}} 識 {{< audio id="sik1" >}}<br/>yu [y] 書 {{< audio id="syu1" >}}</th>
     <th class="tg-lnec"></th>
-    <th class="tg-teg3">u [uː] 夫 {{< audio id="fu1" >}}<br/>u<sub>後接 -ng, -k</sub> [ʊ̞] 風 {{< audio id="fung1" >}} 福 {{< audio id="fuk1" >}}</th>
+    <th class="tg-teg3">u [uː] 夫 {{< audio id="fu1" >}}<br/>u<sub>followed by -ng, -k</sub> [ʊ̞] 風 {{< audio id="fung1" >}} 福 {{< audio id="fuk1" >}}</th>
   </tr>
   <tr>
-    <td class="tg-teg3">e<sub>後接 -i</sub> [e] 四 {{< audio id="sei3" >}}<br/>eo [ɵ] 詢 {{< audio id="seon1" >}}</td>
+    <td class="tg-teg3">e<sub>followed by -i</sub> [e] 四 {{< audio id="sei3" >}}<br/>eo [ɵ] 詢 {{< audio id="seon1" >}}</td>
     <td class="tg-teg3"></td>
-    <td class="tg-teg3">o<sub>後接 -u</sub> [o] 蘇 {{< audio id="sou1" >}}</td>
+    <td class="tg-teg3">o<sub>followed by -u</sub> [o] 蘇 {{< audio id="sou1" >}}</td>
   </tr>
   <tr>
     <td class="tg-teg3">e [ɛː] 些 {{< audio id="se1" >}}<br/>oe [œː] 鋸 {{< audio id="goe3" >}}</td>

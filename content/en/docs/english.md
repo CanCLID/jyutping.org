@@ -33,15 +33,15 @@ Don’t worry. You have this guide.
 
 Unlike conventional textbooks, I am not going to give you a long sound correspondence table (you can still find it [here](/en/jyutping) if you like). That is counter-productive. I’m going to break down the sounds into the above three different types.
 
-When describing the sounds I will provide the IPA (International Phonetics Alphabet) of them. If you don't know what IPA is, just skip them. Listen to the sample sounds by clicking the {{< audio >}} button and try to imitate the sounds. It might be hard to pronunce for the first time but practice makes perfect.
+> When describing the sounds I will provide the IPA (International Phonetics Alphabet) of them. If you don't know what IPA is, just skip them. All Jyutping spellings are styled in boldfaces. Listen to the sample sounds by clicking the {{< audio >}} button and try to imitate the sounds.
 
 ## Odd Spelling
 
 Let’s take a look at vowels first. Cantonese spellings are quite regular so let’s just go through them one-by-one. They definitely goes to the odd spelling category because they don’t correspond to English spelling.
 
-### aa & a
+### Vowel **aa** & **a**
 
-{{< alert >}}
+{{< alert color="success" >}}
 **aa** is the long aa sound. The interjection “Aaaaaaaaaaah!” will be “aa” in Cantonese. Without the h.
 
 **a** is the short a sound, it sounds similar to the vowel in “sub”. Listen to these examples.
@@ -52,25 +52,57 @@ Let’s take a look at vowels first. Cantonese spellings are quite regular so le
 | 三 saam1 {{< audio id="saam1" >}} | 山 saan1 {{< audio id="saan1" >}} | 稍 saau2 {{< audio id="saau2" >}} |
 | 心 sam1 {{< audio id="sam1" >}}   | 身 san1 {{< audio id="san1" >}}   | 手 sau2 {{< audio id="sau2" >}}   |
 
-### i
+### Vowel **i**
 
-In English usually it is written as “ee”, as in “see”, “been”, “peek”, etc. Exception: -ik sounds like -ick, and -ing sounds like -ing.
+{{< alert color="success" >}}
+In English usually it is written as “ee”, as in “see”, “been”, “peek”, etc. The IPA of it is [i]. However there is an exception when **i** is followed by **-k** or **-ng**: **-ik** sounds like -ick in English, and **-ing** sounds like -ing in English. The IPA turns into [ɪ]. Listen to the following examples.
+{{< /alert>}}
 
-### e
+| [i]                             | [ɪ]                               |
+| ------------------------------- | --------------------------------- |
+| 诗 si1 {{< audio id="si1" >}}   | 识 sik1 {{< audio id="sik1" >}}   |
+| 仙 sin1 {{< audio id="sin1" >}} | 星 sing1 {{< audio id="sing1" >}} |
+| 知 zi1 {{< audio id="zi1" >}}   | 即 zik1 {{< audio id="zik1" >}}   |
 
-This is the e as in pet, bed, etc., but never like the e’s in “be”, or “Pete”
+### Vowel **e**
 
-### o
+{{< alert color="success" >}}
+This is the e as in pet, bed, etc., but never like the e’s in “be”, or “Pete”.
+{{< /alert>}}
 
-This is the o as in -on, and bot, but never like the o’s in “ho”, “one” or “home”.
+- 写 se2 {{< audio id="se2" >}}
+- 借 ze3 {{< audio id="ze3" >}}
+- 郑 zeng6 {{< audio id="zeng6" >}}
+- 石 sek6 {{< audio id="sek6" >}}
 
-### u
+### Vowel **o**
 
-It sounds like -oo- in English (In fact there are two -oo- sounds in English. Compare your vowel in foot [ʊ] and food [u] . Most of the time it sounds like -oo- as in food, except in -uk or -ung.
+{{< alert color="success" >}}
+This is the o as in -on, and bot, but never like the o’s in “ho”, “one” or “home”. Examples below:
+{{< /alert>}}
 
-### j
+- 歌 go1 {{< audio id="go1" >}}
+- 可 ho2 {{< audio id="ho2" >}}
+- 過 gwo3 {{< audio id="gwo3" >}}
+- 博 bok3 {{< audio id="bok3" >}}
+- 裝 zong1 {{< audio id="zong1" >}}
 
+### Vowel **u**
+
+{{< alert color="success" >}}
+It sounds like -oo- in English (In fact there are two -oo- sounds in English. Compare your vowel in foot [ʊ] and food [u] . Most of the time the **u** in Jyutping sounds like -oo- as in food, except in **-uk** or **-ung**.
+{{< /alert >}}
+
+| [u]                           | [ʊ]                               |
+| ----------------------------- | --------------------------------- |
+| 夫 fu1 {{< audio id="fu1" >}} | 识 fuk1 {{< audio id="fuk1" >}}   |
+| 姑 gu1 {{< audio id="gu1" >}} | 工 gung1 {{< audio id="gung1" >}} |
+
+### Consonant **j**
+
+{{< alert color="success" >}}
 This is the “y” sound in English. See more examples:
+{{< /alert >}}
 
 - 一 jat1 {{< audio id="jat1" >}}
 - 以 ji5 {{< audio id="ji5" >}}
@@ -80,23 +112,33 @@ This is the “y” sound in English. See more examples:
 
 Cantonese lacks “voiced plosives”, so these sounds are a bit softer than their English counterparts: b, d, g. Technically b, d, g, are unaspirated sounds, identical to p, t, k in spy, stay and sky. But don’t worry about the details, just think of it as English b, d, g for now. You will definitely be understood.
 
-Finals -p, -t, -k are unrealised. Native speakers “swallow” the release and stop right there. Listen to these examples, and bear in mind that it will be okay if you can’t mimic the “unrealised” version. You will be understood perfectly.
+Finals **-p**, **-t**, **-k** are unrealised, their IPAs are [p̚], [t̚], [k̚]. Native speakers “swallow” the release and stop right there. Listen to these examples, and bear in mind that it will be okay if you can’t mimic the “unrealised” version. You will be understood perfectly.
+
+| -p                                | -t                              | -k                              |
+| --------------------------------- | ------------------------------- | ------------------------------- |
+| 湿 sap1 {{< audio id="sap1" >}}   | 失 sat1 {{< audio id="sat1" >}} | 塞 sak1 {{< audio id="sak1" >}} |
+| 接 zip3 {{< audio id="zip3" >}}   | 节 zit3 {{< audio id="zit3" >}} | 脊 zek3 {{< audio id="zek3" >}} |
+| 集 zaap6 {{< audio id="zaap6" >}} | 活 wut6 {{< audio id="wut6" >}} | 六 luk6 {{< audio id="luk6" >}} |
 
 ## New sounds
 
-### yu
+### Vowel **yu**
 
+{{< alert color="success" >}}
 Try pronouncing “i” and simultaneously rounding your lips. This is the same sound as “ü” in German, the IPA of it is [y]. Listen to the examples below:
+{{< /alert >}}
 
 - 豬 zyu1 {{< audio id="zyu1" >}}
 - 村 cyun1 {{< audio id="cyun1" >}}
 - 雨 jyu5 {{< audio id="jyu5" >}}
 
-### eo & oe
+### Vowel **eo** & **oe**
 
-oe is the rounded version of e, the IPA is [œ]. Many speakers says it sounds like ir as in bird, or ur as in fur.
+{{< alert color="success" >}}
+**oe** is the rounded version of **e**, the IPA is [œ]. Many speakers says it sounds like ir as in bird, or ur as in fur.
 
-eo is a short version of oe, the mouth opens smaller than eo, the IPA is [ø]. Listen to these examples.
+**eo** is **a** short version of **oe**, the mouth opens smaller than **eo**, the IPA is [ø]. Listen to these examples.
+{{< /alert >}}
 
 - 率 seot1 {{< audio id="seot1" >}}
 - 润 jeon6 {{< audio id="jeon6" >}}
@@ -104,15 +146,29 @@ eo is a short version of oe, the mouth opens smaller than eo, the IPA is [ø]. L
 - 削 soek3 {{< audio id="soek3" >}}
 - 让 joeng6 {{< audio id="joeng6" >}}
 
-If you can't tell the difference between eo and oe, that's fine. Even many native speakers can't distinguish them. You will still be perfectly understood if you mix these two sounds.
+If you can't tell the difference between **eo** and **oe**, that's fine. Even many native speakers can't distinguish them. You will still be perfectly understood if you mix these two sounds.
 
-### z
+### Consonant **z**
 
-This is like the "j" in "jiggle", the IPA is [t͡s].
+{{< alert color="success" >}}
+This is like the "j" in "jack", the IPA is [t͡s]. Listen to the examples below:
+{{< /alert >}}
 
-### c
+- 知 zi1 {{< audio id="zi1" >}}
+- 借 ze3 {{< audio id="ze3" >}}
+- 左 zo2 {{< audio id="zo2" >}}
+- 炸 zaa3 {{< audio id="zaa3" >}}
 
-This is the aspirated version of **z**, it is like the "ch" in "chick". The IPA is [t͡sʰ].
+### Consonant **c**
+
+{{< alert color="success" >}}
+This is like the "ch" in "chick", the aspirated version of **z**. The IPA is [t͡sʰ].
+{{< /alert >}}
+
+- 詞 ci4 {{< audio id="ci4" >}}
+- 車 ce1 {{< audio id="ce1" >}}
+- 坐 co5 {{< audio id="co5" >}}
+- 查 caa4 {{< audio id="caa4" >}}
 
 ## Tones
 
@@ -132,7 +188,7 @@ There are **six tones** in Cantonese: high level, high rising, mid level, low di
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | 时 si4 {{< audio id="si4" >}} | 市 si5 {{< audio id="si5" >}} | 事 si6 {{< audio id="si6" >}} |
 
-Don’t worry if you cannot distinguish all of them. In real life you can still be well understood even if you don't distinguish all of them.
+Don’t worry if you cannot distinguish all of them. In real life you can still be well understood.
 
 ## All set!
 

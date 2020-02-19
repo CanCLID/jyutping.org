@@ -114,13 +114,16 @@ hide_feedback: false
 ### 2.4 韻母 i
 
 {{< alert color="success">}}
-普拼中的 i 根據拼寫音節的不同會代表兩個不同的音。例如普通話中「資」的拼音是 zi，這裏的 i 代表的音是 [z̩]，而在「機」的拼音 ji 裏，i 代表的音是 [i]。粵拼中 i 在大多數時候代表發音 [i]，而在後接 -k 或 -ng 時發音是 [ɪ]。
+普拼中的 i 根據拼寫音節的不同會代表兩個不同的音。例如普通話中「資」的拼音是 zi，這裏的 i 代表的音是 [z̩]，而在「機」的拼音 ji 裏，i 代表的音是 [i]。
+
+粵拼中 i 在大多數時候代表發音 [i]，而在後接 -k 或 -ng 時發音是 [ɪ]。
 {{< /alert >}}
 
 | [i]                             | [ɪ]                               |
 | ------------------------------- | --------------------------------- |
 | 詩 si1 {{< audio id="si1" >}}   | 識 sik1 {{< audio id="sik1" >}}   |
 | 仙 sin1 {{< audio id="sin1" >}} | 星 sing1 {{< audio id="sing1" >}} |
+| 知 zi1 {{< audio id="zi1" >}}   | 即 zik1 {{< audio id="zik1" >}}   |
 
 ### 2.5 聲母 ng-
 
@@ -154,11 +157,11 @@ hide_feedback: false
 
 {{< /alert >}}
 
-| 例字                            |                                 |
-| ------------------------------- | ------------------------------- |
-| 溼 sap1 {{< audio id="sap1" >}} | 接 zip3 {{< audio id="zip3" >}} |
-| 失 sat1 {{< audio id="sat1" >}} | 節 zit3 {{< audio id="zit3" >}} |
-| 塞 sak1 {{< audio id="sak1" >}} | 脊 zek3 {{< audio id="zek3" >}} |
+| -p                                | -t                              | -k                              |
+| --------------------------------- | ------------------------------- | ------------------------------- |
+| 湿 sap1 {{< audio id="sap1" >}}   | 失 sat1 {{< audio id="sat1" >}} | 塞 sak1 {{< audio id="sak1" >}} |
+| 接 zip3 {{< audio id="zip3" >}}   | 节 zit3 {{< audio id="zit3" >}} | 脊 zek3 {{< audio id="zek3" >}} |
+| 集 zaap6 {{< audio id="zaap6" >}} | 活 wut6 {{< audio id="wut6" >}} | 六 luk6 {{< audio id="luk6" >}} |
 
 ### 2.8 聲調
 
