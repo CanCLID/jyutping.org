@@ -9,10 +9,6 @@ hide_feedback: false
 
 {{< docaudio >}}
 
-{{< alert title="This page is currently under development, content is incomplete." color="danger">}}
-Please check back later, or check out [LSHK Jyutping Scheme](/en/jyutping), the official reference page of Jyutping.
-{{< /alert >}}
-
 ## What is Jyutping?
 
 Jyutping is a way to spell out Cantonese words using only letters (a-z) and numbers (1-6). If you already speak English (native or not), you only need to remember a handful of symbols to master Cantonese pronunciation.
@@ -110,9 +106,25 @@ This is the “y” sound in English. See more examples:
 
 ## Slight deviation
 
-Cantonese lacks “voiced plosives”, so these sounds are a bit softer than their English counterparts: b, d, g. Technically b, d, g, are unaspirated sounds, identical to p, t, k in spy, stay and sky. But don’t worry about the details, just think of it as English b, d, g for now. You will definitely be understood.
+### Voicing and aspiration
 
+{{< alert color="success" >}}
+Cantonese lacks “voiced plosives”, so these sounds are a bit softer than their English counterparts: b, d, g. Technically **b-**, **d-**, **g-** in Jyutping, are unaspirated sounds (IPAs are [p], [t], [k]), identical to p, t, k in _spy_, _stay_ and _sky_. But don’t worry about the details, just think of it as English b, d, g for now. You will definitely be understood.
+
+On the flip side, Cantonese has aspirated plosives: **p-**, **t-**, **k-**, whose IPAs are [pʰ], [tʰ], [kʰ]. They are identical to the initial p, t, k in _pea_, _tea_ and _key_. Listen to the examples below:
+{{< /alert>}}
+
+| Unaspirated                     | Aspirated                       |
+| ------------------------------- | ------------------------------- |
+| 巴 baa1 {{< audio id="baa1" >}} | 趴 paa1 {{< audio id="paa1" >}} |
+| 打 daa1 {{< audio id="daa1" >}} | 他 taa1 {{< audio id="taa1" >}} |
+| 家 gaa1 {{< audio id="gaa1" >}} | 卡 kaa1 {{< audio id="kaa1" >}} |
+
+### Unreleased final plosives
+
+{{< alert color="success" >}}
 Finals **-p**, **-t**, **-k** are unrealised, their IPAs are [p̚], [t̚], [k̚]. Native speakers “swallow” the release and stop right there. Listen to these examples, and bear in mind that it will be okay if you can’t mimic the “unrealised” version. You will be understood perfectly.
+{{< /alert >}}
 
 | -p                                | -t                              | -k                              |
 | --------------------------------- | ------------------------------- | ------------------------------- |
@@ -174,7 +186,7 @@ This is like the "ch" in "chick", the aspirated version of **z**. The IPA is [t�
 
 This will be a completely new territory for you. Cantonese is a tonal language, so the pitch of the word matters. Using the wrong pitch can change the meaning of a word.
 
-First and foremost, let's take a look at all Cantonese tones in a chart:
+First, let's take a look at all Cantonese tones in a chart:
 
 ![image](/img/yue.png)
 
@@ -188,7 +200,7 @@ There are **six tones** in Cantonese: high level, high rising, mid level, low di
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | 时 si4 {{< audio id="si4" >}} | 市 si5 {{< audio id="si5" >}} | 事 si6 {{< audio id="si6" >}} |
 
-Don’t worry if you cannot distinguish all of them. In real life you can still be well understood.
+Don’t worry if you cannot distinguish all of them. In real life you can still be well understood. To get practice, check out our page of [Tone Exercise](/en/blog/tones), where you can get a comprehensive drill of all Cantonese tones.
 
 ## All set!
 
