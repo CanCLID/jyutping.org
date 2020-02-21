@@ -31,9 +31,11 @@ hide_feedback: false
 普拼嘅 y 喺粵拼入邊寫成 j。之所以寫成 j 系因爲呢個音國際音標嘅寫法就係 [j]，而普拼嘅 y 系英文嘅寫法。
 {{< /alert >}}
 
-- 一 jat1 ✔️ yat1 ❌ {{< audio id="jat1" >}}
-- 以 ji5 ✔️ yi5 ❌ {{< audio id="ji5" >}}
-- 夜 je6 ✔️ ye6 ❌ {{< audio id="je6" >}}
+| 例字                       | ✔️ 正確寫法 | ❌ 錯誤寫法 |
+| -------------------------- | ----------- | ----------- |
+| 一 {{< audio id="jat1" >}} | jat1        | yat1        |
+| 以 {{< audio id="ji5" >}}  | ji5         | yi5         |
+| 夜 {{< audio id="je6" >}}  | je6         | ye6         |
 
 ### 1.2 普拼 gu-、ku- → 粵拼 gw-、kw-
 
@@ -41,10 +43,12 @@ hide_feedback: false
 普拼嘅 gu-、ku-，喺粵拼入邊用 gw-、kw- 來表示。不過要注意，gu、gun 仲係 gu、gun。
 {{< /alert >}}
 
-- 廣 gwong2 ✔️ guong2 ❌ {{< audio id="gwong2" >}}
-- 狂 kwong4 ✔️ kuong4 ❌ {{< audio id="kwong4" >}}
-- 昆 kwan1 ✔️ kuan1 ❌ {{< audio id="kwan1" >}}
-- 古 gu2 ✔️ gwu2 ❌ gw2 ❌ {{< audio id="gu2" >}}
+| 例字                         | ✔️ 正確寫法 | ❌ 錯誤寫法 |
+| ---------------------------- | ----------- | ----------- |
+| 廣 {{< audio id="gwong2" >}} | gwong2      | guong2      |
+| 狂 {{< audio id="kwong4" >}} | kwong4      | kuong4      |
+| 昆 {{< audio id="kwan1" >}}  | kwan1       | kuan1       |
+| 古 {{< audio id="gu2" >}}    | gu2         | gwu2 / gw2  |
 
 ### 1.3 普拼 ü → 粵拼 yu
 
@@ -52,9 +56,11 @@ hide_feedback: false
 呢個音嘅國際音標系 [y]。呢個韻母雖然系單元音，但喺粵拼入邊用咗 yu 兩個字母來表示，噉就可以避免好似普通話嘅 ü 噉要用到附加符號。
 {{< /alert >}}
 
-- 豬 zyu1 ✔️ zü1 ❌ {{< audio id="zyu1" >}}
-- 村 cyun1 ✔️ cün1 ❌ {{< audio id="cyun1" >}}
-- 雨 jyu5 ✔️ jü5 ❌ yu5 ❌ {{< audio id="jyu5" >}}
+| 例字                        | ✔️ 正確寫法 | ❌ 錯誤寫法 |
+| --------------------------- | ----------- | ----------- |
+| 豬 {{< audio id="zyu1" >}}  | zyu1        | zü1         |
+| 村 {{< audio id="cyun1" >}} | cyun1       | cün1        |
+| 雨{{< audio id="jyu5" >}}   | jyu5        | jü5 / yu5   |
 
 ### 1.4 普拼 ong → 粵拼 ung
 
@@ -62,8 +68,10 @@ hide_feedback: false
 普拼中嘅 ong 同粵拼嘅 ung 發音系一樣嘅，國際音標都系 [ʊŋ]，而粵拼中嘅 ong 系普通話冇嘅發音，國際音標系 [ɔŋ]。
 {{< /alert >}}
 
-- 鍾 zung1 {{< audio id="zung1" >}}
-- 莊 zong1 {{< audio id="zong1" >}}
+| ung                               | ong                               |
+| --------------------------------- | --------------------------------- |
+| 鍾 zung1 {{< audio id="zung1" >}} | 莊 zong1 {{< audio id="zong1" >}} |
+| 公 gung1 {{< audio id="gung1" >}} | 江 gong1 {{< audio id="gong1" >}} |
 
 ### 1.5 普拼 ao → 粵拼 aau
 
@@ -71,8 +79,10 @@ hide_feedback: false
 粵拼以 u 結尾，呢個都系遵循國際音標嘅寫法。
 {{< /alert >}}
 
-- 考 haau2 ✔️ hao2 ❌ {{< audio id="haau2" >}}
-- 包 baau1 ✔️ bao1 ❌ {{< audio id="baau1" >}}
+| 例字                        | ✔️ 正確寫法 | ❌ 錯誤寫法  |
+| --------------------------- | ----------- | ------------ |
+| 考 {{< audio id="haau2" >}} | haau2       | hao2 / haao2 |
+| 包 {{< audio id="baau1" >}} | baau1       | bao1 / baao1 |
 
 > 關於粵拼中 a 同 aa 嘅區別下面會講解。
 
