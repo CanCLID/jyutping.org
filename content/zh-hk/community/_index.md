@@ -51,7 +51,7 @@ description: >
     <td class="tg-99yb">塞擦音</td>
     <td class="tg-0o7j"></td>
     <td class="tg-0o7j"></td>
-    <td class="tg-aqzh">z [t͡s] 渣 {{< audio id="zaa1" >}}<br/>c [t͡sʰ] 叉 {{< audio id="caa1" >}}</td>
+    <td class="tg-aqzh">z [t͡s~t͡ʃ] 渣 {{< audio id="zaa1" >}}<br/>c [t͡sʰ~t͡ʃʰ] 叉 {{< audio id="caa1" >}}</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
@@ -95,8 +95,7 @@ description: >
 </table>
 
 {{< alert >}}
-- 零聲母唔字母做標記，例如“呀”只拼作 aa。
-- z 和 c 均有一個齦腭音自由變體，即 z 可讀作 [t͡ʃ]，c 可讀作 [t͡ʃʰ]。
+零聲母唔字母做標記，例如“呀”只拼作 aa。
 {{< /alert >}}
 
 ## 2. 鼻音單獨成韻

@@ -59,7 +59,7 @@ All IPA transcriptions on this page are phonemic transcriptions，source of audi
     <td class="tg-99yb">Affricate</td>
     <td class="tg-0o7j"></td>
     <td class="tg-0o7j"></td>
-    <td class="tg-aqzh">z [t͡s] 渣 {{< audio id="zaa1" >}}<br/>c [t͡sʰ] 叉 {{< audio id="caa1" >}}</td>
+    <td class="tg-aqzh">z [t͡s~t͡ʃ] 渣 {{< audio id="zaa1" >}}<br/>c [t͡sʰ~t͡ʃʰ] 叉 {{< audio id="caa1" >}}</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
@@ -95,8 +95,7 @@ All IPA transcriptions on this page are phonemic transcriptions，source of audi
 </table>
 
 {{< alert >}}
-- Null initial is not represented, e.g. "呀" is only spelt as "aa".
-- Both z and c has a post-alveolar allophone, i.e. z can be realized as [t͡ʃ] and c can be realized as [t͡ʃʰ].
+Null initial is not represented, e.g. "呀" is only spelt as "aa".
 {{< /alert >}}
 
 ## 2. Syllabic nasal
