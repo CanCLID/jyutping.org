@@ -160,27 +160,33 @@ Try pronouncing “i” and simultaneously rounding your lips. This is the same 
 
 If you can't tell the difference between **eo** and **oe**, that's fine. Even many native speakers can't distinguish them. You will still be perfectly understood if you mix these two sounds.
 
-### Consonant **z**
+### Consonant **z** & **c**
 
 {{< alert color="success" >}}
-This is like the "j" in "jack", the IPA is [t͡s]. Listen to the examples below:
+**z** is like the "j" in "jack", the IPA is [t͡s] (plus an allophonic [t͡ʃ]).
+
+**c** is like the "ch" in "chick", the aspirated version of **z**. The IPA is [t͡sʰ] (plus an allophonic [t͡ʃʰ]).
 {{< /alert >}}
 
-- 知 zi1 {{< audio id="zi1" >}}
-- 借 ze3 {{< audio id="ze3" >}}
-- 左 zo2 {{< audio id="zo2" >}}
-- 炸 zaa3 {{< audio id="zaa3" >}}
+| **z**                           | **c**                           |
+| ------------------------------- | ------------------------------- |
+| 知 zi1 {{< audio id="zi1" >}}   | 詞 ci4 {{< audio id="ci4" >}}   |
+| 借 ze3 {{< audio id="ze3" >}}   | 車 ce1 {{< audio id="ce1" >}}   |
+| 左 zo2 {{< audio id="zo2" >}}   | 坐 co5 {{< audio id="co5" >}}   |
+| 炸 zaa3 {{< audio id="zaa3" >}} | 查 caa4 {{< audio id="caa4" >}} |
 
-### Consonant **c**
+### Consonant **ng**
 
 {{< alert color="success" >}}
-This is like the "ch" in "chick", the aspirated version of **z**. The IPA is [t͡sʰ].
+In English, the sound ng (IPA [ŋ]) only occurs in syllable-final positions, such as *sing*, *wing*, *ping* etc. But in Cantonese it can appear in both syllable-initial and final positions. Listen to the examples below where the **ng-** serves as a syllable-inital consonant.
 {{< /alert >}}
 
-- 詞 ci4 {{< audio id="ci4" >}}
-- 車 ce1 {{< audio id="ce1" >}}
-- 坐 co5 {{< audio id="co5" >}}
-- 查 caa4 {{< audio id="caa4" >}}
+- ngaa4 牙 {{< audio id="ngaa4" >}}
+- ngaang6 硬 {{< audio id="ngaang6" >}}
+- ngo5 我 {{< audio id="ngo5" >}}
+- ngoi6 外 {{< audio id="ngoi6" >}}
+
+You might find difficult to pronounce **ng-**, but don't worry. Many people fail to pronounce it as well while still can perfectly be understood.
 
 ## Tones
 
@@ -213,3 +219,5 @@ Some tools for learning Jyutping and Cantonese. First comes the dictionary, wher
 Then comes a desktop Cantonese dictionary, if you don't like searching in a web browser:
 
 - [Jyut Dictionary](https://github.com/aaronhktan/jyut-dict)
+
+A good way to practice Jyutping/Cantonese is to type Cantonese in Jyutping. Since Jyutping is a phonemic transcription of Cantonese, every time you type in Jyutping, you are essentially practicing speaking Cantonese. Check out our [Cantonese Keyboard page](/en/keyboard) to get the keyboards.
