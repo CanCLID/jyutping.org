@@ -436,4 +436,4 @@ Zee, Eric. 1991. Chinese (Hong Kong Cantonese). *Journal of the International Ph
 
 Stephen, Matthews. 1992. *Jyutping 粵拼 - Cantonese Romanization Scheme*. The Linguistics Society of Hong Kong. https://www.lshk.org/jyutping
 
-關子尹, 鄧偉生, 趙子明, 黃禮彥, 黃載欣, 鍾立. 2003. *粵語審音配詞字庫*. 人文電算研究中心. 香港中文大學 http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/
+人文電算硏究中心　2003：「粵語審音配詞字庫」，關子尹 主持，“兩文三語敎育網上支援計劃”之工作項目之一，二零零三年一月十二日推出，香港優質敎育基金，存取於二零零七年十一月二十日，<http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/>。
