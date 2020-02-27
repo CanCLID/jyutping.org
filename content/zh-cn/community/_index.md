@@ -384,7 +384,7 @@ description: >
  **a** 同 **oet** 於 2018 年新增。詳情請睇[呢度](https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf)。
 {{< /alert >}}
 
-## 4. 字调
+## 4. 字調
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
