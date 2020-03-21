@@ -10,8 +10,8 @@ theme = ["docsy"]
 enableGitInfo = true
 
 # Language settings
-contentDir = "content/zh-hk"
-defaultContentLanguage = "zh-hk"
+contentDir = "content/zh-yue-hant"
+defaultContentLanguage = "zh-yue-hant"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
@@ -51,20 +51,20 @@ id = "UA-131567469-4"
 
 # Language configuration
 [languages]
-[languages.zh-cn]
+[languages.zh-yue-hant]
 title = "粵拼"
 description = "粵拼"
-languageName ="简化汉字"
-contentDir = "content/zh-cn"
+languageName ="粵語"
+contentDir = "content/zh-yue-hant"
 time_format_default = "2006.01.02"
 time_format_blog = "2006.01.02"
 # Weight used for sorting.
 weight = 1
-[languages.zh-hk]
+[languages.zh-cmn-hant]
 title = "粵拼"
 description = "粵拼"
-languageName ="漢字"
-contentDir = "content/zh-hk"
+languageName ="普通話/國語"
+contentDir = "content/zh-cmn-hant"
 time_format_default = "2006.01.02"
 time_format_blog = "2006.01.02"
 [languages.en]
