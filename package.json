@@ -18,7 +18,8 @@
   "homepage": "https://github.com/bep/tech-doc-hugo#readme",
   "dependencies": {
     "mem": ">=4.0.0",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "minimist": ">=1.2.2"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.6",
