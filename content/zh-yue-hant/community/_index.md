@@ -126,9 +126,9 @@ description: >
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-teg3">i [iː] 詩 {{< audio id="si1" >}}<br/>i<sub>後接 -ng, -k</sub> [ɪ̞] 星 {{< audio id="sing1" >}} 識 {{< audio id="sik1" >}}<br/>yu [y] 書 {{< audio id="syu1" >}}</th>
+    <th class="tg-teg3">i [iː] 詩 {{< audio id="si1" >}}<br/>i<sub>後接 -ng, -k</sub> [e] 星 {{< audio id="sing1" >}} 識 {{< audio id="sik1" >}}<br/>yu [y] 書 {{< audio id="syu1" >}}</th>
     <th class="tg-lnec"></th>
-    <th class="tg-teg3">u [uː] 夫 {{< audio id="fu1" >}}<br/>u<sub>後接 -ng, -k</sub> [ʊ̞] 風 {{< audio id="fung1" >}} 福 {{< audio id="fuk1" >}}</th>
+    <th class="tg-teg3">u [uː] 夫 {{< audio id="fu1" >}}<br/>u<sub>後接 -ng, -k</sub> [o] 風 {{< audio id="fung1" >}} 福 {{< audio id="fuk1" >}}</th>
   </tr>
   <tr>
     <td class="tg-teg3">e<sub>後接 -i</sub> [e] 四 {{< audio id="sei3" >}}<br/>eo [ɵ] 詢 {{< audio id="seon1" >}}</td>
@@ -227,7 +227,7 @@ description: >
     <td class="tg-ssw7"></td>
   </tr>
   <tr>
-    <td class="tg-cdar">[ɪ̞]</td>
+    <td class="tg-cdar">[e]</td>
     <td class="tg-ssw7"></td>
     <td class="tg-dgfm"></td>
     <td class="tg-ssw7"></td>
@@ -265,7 +265,7 @@ description: >
     <td class="tg-ssw7"></td>
   </tr>
   <tr>
-    <td class="tg-cdar">[ʊ̞]</td>
+    <td class="tg-cdar">[o]</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
     <td class="tg-dgfm"></td>
