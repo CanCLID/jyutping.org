@@ -19,7 +19,8 @@
   "dependencies": {
     "mem": ">=4.0.0",
     "normalize.css": "^8.0.1",
-    "minimist": ">=1.2.2"
+    "minimist": ">=1.2.2",
+    "kind-of": ">=6.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.6",
