@@ -10,7 +10,7 @@ description: >
 {{< alert title="本頁面建設中" color="danger">}}
 {{< /alert >}}
 
-粵文一般使用傳統漢字爲文字作爲書寫系統，以避免簡化字中多字合併嘅問題。關於大陸簡化字嘅歸併問題，請參見[現代漢語常用簡繁一對多字義辨析表 ](http://ytenx.org/byohlyuk/KienxPyan)。
+粵文一般使用傳統漢字爲文字作爲書寫系統，以避免簡化字中多字合併嘅問題。關於大陸簡化字嘅歸併問題，請參見[簡化字辯義表](http://www.guguolin.com/tool_jianhuazibianyibiao.php)或[現代漢語常用簡繁一對多字義辨析表](http://ytenx.org/byohlyuk/KienxPyan)。
 
 ## 常見錯別字表及推薦寫法
 
