@@ -9,7 +9,7 @@ hide_feedback: false
 
 {{< docaudio >}}
 
-## What is Jyutping?
+## 1 What is Jyutping?
 
 Jyutping is a way to spell out Cantonese words using only letters (a-z) and numbers (1-6). If you already speak English (native or not), you only need to remember a handful of symbols to master Cantonese pronunciation.
 
@@ -31,11 +31,11 @@ Unlike conventional textbooks, I am not going to give you a long sound correspon
 
 > When describing the sounds I will provide the IPA (International Phonetics Alphabet) of them. If you don't know what IPA is, just skip them. All Jyutping spellings are styled in boldfaces. Listen to the sample sounds by clicking the {{< audio >}} button and try to imitate the sounds.
 
-## Odd Spelling
+## 2 Odd Spelling
 
 Let’s take a look at vowels first. Cantonese spellings are quite regular so let’s just go through them one-by-one. They definitely goes to the odd spelling category because they don’t correspond to English spelling.
 
-### Vowel **aa** & **a**
+### 2.1 Vowel **aa** & **a**
 
 {{< alert color="success" >}}
 **aa** is the long aa sound. The interjection “Aaaaaaaaaaah!” will be “aa” in Cantonese. Without the h.
@@ -48,7 +48,7 @@ Let’s take a look at vowels first. Cantonese spellings are quite regular so le
 | 三 saam1 {{< audio id="saam1" >}} | 山 saan1 {{< audio id="saan1" >}} | 稍 saau2 {{< audio id="saau2" >}} |
 | 心 sam1 {{< audio id="sam1" >}}   | 身 san1 {{< audio id="san1" >}}   | 手 sau2 {{< audio id="sau2" >}}   |
 
-### Vowel **i**
+### 2.2 Vowel **i**
 
 {{< alert color="success" >}}
 In English usually it is written as “ee”, as in “see”, “been”, “peek”, etc. The IPA of it is [i]. However there is an exception when **i** is followed by **-k** or **-ng**: **-ik** sounds like -ick in English, and **-ing** sounds like -ing in English. The IPA turns into [ɪ]. Listen to the following examples.
@@ -60,7 +60,7 @@ In English usually it is written as “ee”, as in “see”, “been”, “pe
 | 仙 sin1 {{< audio id="sin1" >}} | 星 sing1 {{< audio id="sing1" >}} |
 | 知 zi1 {{< audio id="zi1" >}}   | 即 zik1 {{< audio id="zik1" >}}   |
 
-### Vowel **e**
+### 2.3 Vowel **e**
 
 {{< alert color="success" >}}
 This is the e as in pet, bed, etc., but never like the e’s in “be”, or “Pete”.
@@ -71,7 +71,7 @@ This is the e as in pet, bed, etc., but never like the e’s in “be”, or “
 - 郑 zeng6 {{< audio id="zeng6" >}}
 - 石 sek6 {{< audio id="sek6" >}}
 
-### Vowel **o**
+### 2.4 Vowel **o**
 
 {{< alert color="success" >}}
 This is the o as in -on, and bot, but never like the o’s in “ho”, “one” or “home”. Examples below:
@@ -83,7 +83,7 @@ This is the o as in -on, and bot, but never like the o’s in “ho”, “one�
 - 博 bok3 {{< audio id="bok3" >}}
 - 裝 zong1 {{< audio id="zong1" >}}
 
-### Vowel **u**
+### 2.5 Vowel **u**
 
 {{< alert color="success" >}}
 It sounds like -oo- in English (In fact there are two -oo- sounds in English. Compare your vowel in foot [ʊ] and food [u] . Most of the time the **u** in Jyutping sounds like -oo- as in food, except in **-uk** or **-ung**.
@@ -94,7 +94,7 @@ It sounds like -oo- in English (In fact there are two -oo- sounds in English. Co
 | 夫 fu1 {{< audio id="fu1" >}} | 识 fuk1 {{< audio id="fuk1" >}}   |
 | 姑 gu1 {{< audio id="gu1" >}} | 工 gung1 {{< audio id="gung1" >}} |
 
-### Consonant **j**
+### 2.6 Consonant **j**
 
 {{< alert color="success" >}}
 This is the “y” sound in English. See more examples:
@@ -104,9 +104,9 @@ This is the “y” sound in English. See more examples:
 - 以 ji5 {{< audio id="ji5" >}}
 - 夜 je6 {{< audio id="je6" >}}
 
-## Slight deviation
+## 3 Slight deviation
 
-### Voicing and aspiration
+### 3.1 Voicing and aspiration
 
 {{< alert color="success" >}}
 Cantonese lacks “voiced plosives”, so these sounds are a bit softer than their English counterparts: b, d, g. Technically **b-**, **d-**, **g-** in Jyutping, are unaspirated sounds (IPAs are [p], [t], [k]), identical to p, t, k in _spy_, _stay_ and _sky_. But don’t worry about the details, just think of it as English b, d, g for now. You will definitely be understood.
@@ -120,7 +120,7 @@ On the flip side, Cantonese has aspirated plosives: **p-**, **t-**, **k-**, whos
 | 打 daa1 {{< audio id="daa1" >}} | 他 taa1 {{< audio id="taa1" >}} |
 | 家 gaa1 {{< audio id="gaa1" >}} | 卡 kaa1 {{< audio id="kaa1" >}} |
 
-### Unreleased final plosives
+### 3.2 Unreleased final plosives
 
 {{< alert color="success" >}}
 Finals **-p**, **-t**, **-k** are unrealised, their IPAs are [p̚], [t̚], [k̚]. Native speakers “swallow” the release and stop right there. Listen to these examples, and bear in mind that it will be okay if you can’t mimic the “unrealised” version. You will be understood perfectly.
@@ -132,9 +132,9 @@ Finals **-p**, **-t**, **-k** are unrealised, their IPAs are [p̚], [t̚], [k̚]
 | 接 zip3 {{< audio id="zip3" >}}   | 节 zit3 {{< audio id="zit3" >}} | 脊 zek3 {{< audio id="zek3" >}} |
 | 集 zaap6 {{< audio id="zaap6" >}} | 活 wut6 {{< audio id="wut6" >}} | 六 luk6 {{< audio id="luk6" >}} |
 
-## New sounds
+## 4 New sounds
 
-### Vowel **yu**
+### 4.1 Vowel **yu**
 
 {{< alert color="success" >}}
 Try pronouncing “i” and simultaneously rounding your lips. This is the same sound as “ü” in German, the IPA of it is [y]. Listen to the examples below:
@@ -144,7 +144,7 @@ Try pronouncing “i” and simultaneously rounding your lips. This is the same 
 - 村 cyun1 {{< audio id="cyun1" >}}
 - 雨 jyu5 {{< audio id="jyu5" >}}
 
-### Vowel **eo** & **oe**
+### 4.2 Vowel **eo** & **oe**
 
 {{< alert color="success" >}}
 **oe** is the rounded version of **e**, the IPA is [œ]. Many speakers says it sounds like ir as in bird, or ur as in fur.
@@ -160,7 +160,7 @@ Try pronouncing “i” and simultaneously rounding your lips. This is the same 
 
 If you can't tell the difference between **eo** and **oe**, that's fine. Even many native speakers can't distinguish them. You will still be perfectly understood if you mix these two sounds.
 
-### Consonant **z** & **c**
+### 4.3 Consonant **z** & **c**
 
 {{< alert color="success" >}}
 **z** is like the "j" in "jack", the IPA is [t͡s] (plus an allophonic [t͡ʃ]).
@@ -175,7 +175,7 @@ If you can't tell the difference between **eo** and **oe**, that's fine. Even ma
 | 左 zo2 {{< audio id="zo2" >}}   | 坐 co5 {{< audio id="co5" >}}   |
 | 炸 zaa3 {{< audio id="zaa3" >}} | 查 caa4 {{< audio id="caa4" >}} |
 
-### Consonant **ng**
+### 4.4 Consonant **ng**
 
 {{< alert color="success" >}}
 In English, the sound ng (IPA [ŋ]) only occurs in syllable-final positions, such as *sing*, *wing*, *ping* etc. But in Cantonese it can appear in both syllable-initial and final positions. Listen to the examples below where the **ng-** serves as a syllable-inital consonant.
@@ -188,7 +188,7 @@ In English, the sound ng (IPA [ŋ]) only occurs in syllable-final positions, suc
 
 You might find difficult to pronounce **ng-**, but don't worry. Many people fail to pronounce it as well while still can perfectly be understood.
 
-## Tones
+## 5 Tones
 
 This will be a completely new territory for you. Cantonese is a tonal language, so the pitch of the word matters. Using the wrong pitch can change the meaning of a word.
 
@@ -208,7 +208,7 @@ There are **six tones** in Cantonese: high level, high rising, mid level, low di
 
 Don’t worry if you cannot distinguish all of them. In real life you can still be well understood. To get practice, check out our page of [Tone Exercise](/en/blog/tones), where you can get a comprehensive drill of all Cantonese tones.
 
-## All set!
+## 6 All set!
 
 Now you have gone through all the critical parts of Jyutping. For a full reference of the scheme, check out [LSHK Jyutping Scheme](/en/jyutping), our official reference page of Jyutping.
 
@@ -221,3 +221,7 @@ Then comes a desktop Cantonese dictionary, if you don't like searching in a web 
 - [Jyut Dictionary](https://github.com/aaronhktan/jyut-dict)
 
 A good way to practice Jyutping/Cantonese is to type Cantonese in Jyutping. Since Jyutping is a phonemic transcription of Cantonese, every time you type in Jyutping, you are essentially practicing speaking Cantonese. Check out our [Cantonese Keyboard page](/en/keyboard) to get the keyboards.
+
+### Appendix: Example annotated text *North wind and the sun*
+
+<ruby>有<rt>jau5</rt></ruby>  <ruby>一<rt>jat1</rt></ruby>  <ruby>次<rt>ci3</rt></ruby>  ，<ruby>北<rt>bak1</rt></ruby>  <ruby>風<rt>fung1</rt></ruby>  <ruby>同<rt>tung4</rt></ruby>  <ruby>太<rt>taai3</rt></ruby>  <ruby>陽<rt>joeng4</rt></ruby>  <ruby>喺<rt>hai2</rt></ruby>  <ruby>度<rt>dou6</rt></ruby>  <ruby>拗<rt>aau3</rt></ruby>  <ruby>緊<rt>gan2</rt></ruby>  <ruby>邊<rt>bin1</rt></ruby>  <ruby>個<rt>go3</rt></ruby>  <ruby>叻<rt>lek1</rt></ruby>  <ruby>啲<rt>di1</rt></ruby>  。<ruby>佢<rt>keoi5</rt></ruby> <ruby>哋<rt>dei6</rt></ruby> <ruby>啱<rt>ngaam1</rt></ruby> <ruby>啱<rt>ngaam1</rt></ruby> <ruby>睇<rt>tai2</rt></ruby> <ruby>到<rt>dou2</rt></ruby> <ruby>有<rt>jau5</rt></ruby> <ruby>個<rt>go3</rt></ruby> <ruby>人<rt>jan4</rt></ruby> <ruby>行<rt>haang4</rt></ruby> <ruby>過<rt>gwo3</rt></ruby> ，<ruby>哩<rt>li1</rt></ruby> <ruby>個<rt>go3</rt></ruby> <ruby>人<rt>jan4</rt></ruby> <ruby>着<rt>zoek3</rt></ruby> <ruby>住<rt>zyu6</rt></ruby> <ruby>件<rt>gin6</rt></ruby> <ruby>大<rt>daai6</rt></ruby> <ruby>褸<rt>lau1</rt></ruby> 。<ruby>佢<rt>keoi5</rt></ruby> <ruby>哋<rt>dei6</rt></ruby> <ruby>就<rt>zau6</rt></ruby> <ruby>話<rt>waa6</rt></ruby> <ruby>嘞<rt>laak3</rt></ruby> ，<ruby>邊<rt>bin1</rt></ruby> <ruby>個<rt>go3</rt></ruby> <ruby>可<rt>ho2</rt></ruby> <ruby>以<rt>ji5</rt></ruby> <ruby>整<rt>zing2</rt></ruby> <ruby>到<rt>dou3</rt></ruby> <ruby>哩<rt>li1</rt></ruby> <ruby>個<rt>go3</rt></ruby> <ruby>人<rt>jan4</rt></ruby> <ruby>除<rt>ceoi4</rt></ruby> <ruby>咗<rt>zo2</rt></ruby> <ruby>件<rt>gin6</rt></ruby> <ruby>褸<rt>lau1</rt></ruby> <ruby>呢<rt>ne1</rt></ruby> ，<ruby>就<rt>zau6</rt></ruby> <ruby>算<rt>syun3</rt></ruby> <ruby>邊<rt>bin1</rt></ruby> <ruby>個<rt>go3</rt></ruby> <ruby>叻<rt>lek1</rt></ruby> <ruby>啲<rt>di1</rt></ruby> <ruby>嘞<rt>laak3</rt></ruby> 。<ruby>於<rt>jyu1</rt></ruby> <ruby>是<rt>si6</rt></ruby> ，<ruby>北<rt>bak1</rt></ruby> <ruby>風<rt>fung1</rt></ruby> <ruby>就<rt>zau6</rt></ruby> <ruby>搏<rt>bok3</rt></ruby> <ruby>命<rt>meng6</rt></ruby> <ruby>噉<rt>gam2</rt></ruby> <ruby>吹<rt>ceoi1</rt></ruby> 。<ruby>點<rt>dim1</rt></ruby> <ruby>知<rt>zi1</rt></ruby> ，<ruby>佢<rt>keoi5</rt></ruby> <ruby>越<rt>jyut6</rt></ruby> <ruby>吹<rt>ceoi1</rt></ruby> <ruby>得<rt>dak1</rt></ruby> <ruby>犀<rt>sai1</rt></ruby> <ruby>利<rt>lei6</rt></ruby> ，<ruby>嗰<rt>go2</rt></ruby> <ruby>個<rt>go3</rt></ruby> <ruby>人<rt>jan4</rt></ruby> <ruby>就<rt>zau6</rt></ruby> <ruby>越<rt>jyut6</rt></ruby> <ruby>係<rt>hai6</rt></ruby> <ruby>揦<rt>laa2</rt></ruby> <ruby>實<rt>sat6</rt></ruby> <ruby>件<rt>gin6</rt></ruby> <ruby>褸<rt>lau1</rt></ruby> 。<ruby>最<rt>zeoi3</rt></ruby> <ruby>後<rt>hau6</rt></ruby> ，<ruby>北<rt>bak1</rt></ruby> <ruby>風<rt>fung1</rt></ruby> <ruby>冇<rt>mou5</rt></ruby> <ruby>晒<rt>sai3</rt></ruby> <ruby>符<rt>fu4</rt></ruby> ，<ruby>唯<rt>wai4</rt></ruby> <ruby>有<rt>jau5</rt></ruby> <ruby>放<rt>fong3</rt></ruby> <ruby>棄<rt>hei3</rt></ruby> 。<ruby>跟<rt>gan1</rt></ruby> <ruby>住<rt>zyu6</rt></ruby> ，<ruby>太<rt>taai3</rt></ruby> <ruby>陽<rt>joeng4</rt></ruby> <ruby>出<rt>ceot1</rt></ruby> <ruby>嚟<rt>lai4</rt></ruby> <ruby>曬<rt>saai3</rt></ruby> <ruby>咗<rt>zo2</rt></ruby> <ruby>一<rt>jat1</rt></ruby> <ruby>陣<rt>zan6</rt></ruby> ，<ruby>嗰<rt>go2</rt></ruby> <ruby>個<rt>go3</rt></ruby> <ruby>人<rt>jan4</rt></ruby> <ruby>就<rt>zau6</rt></ruby> <ruby>即<rt>zik1</rt></ruby> <ruby>刻<rt>hak1</rt></ruby> <ruby>除<rt>ceoi4</rt></ruby> <ruby>咗<rt>zo2</rt></ruby> <ruby>件<rt>gin6</rt></ruby> <ruby>褸<rt>lau1</rt></ruby> <ruby>嘞<rt>laak3</rt></ruby> 。<ruby>於<rt>jyu1</rt></ruby> <ruby>是<rt>si6</rt></ruby> ，<ruby>北<rt>bak1</rt></ruby> <ruby>風<rt>fung1</rt></ruby> <ruby>唯<rt>wai4</rt></ruby> <ruby>有<rt>jau5</rt></ruby> <ruby>認<rt>jing6</rt></ruby> <ruby>輸<rt>syu1</rt></ruby> <ruby>啦<rt>laa1</rt></ruby> 。
