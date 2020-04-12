@@ -1,11 +1,12 @@
 ---
-title: "聲調練習"
-linkTitle: "聲調練習"
-url: "/blog/tones"
-weight: 4
+title: "聲調辨別練習"
+weight: 2
 description: >
-  爲讀者提供粵語各個聲調嘅錄音對比，幫助讀者掌握粵語聲調。
+  粵拼嘅設計大部分同普通話拼音（即《漢語拼音》，下稱“普拼”）一樣，只需讀完兩者主要區別，就可以掌握粵拼同粵拼打字。
+hide_feedback: false
 ---
+
+{{< toneaudio >}}
 
 ## 聲調辨別表
 
@@ -42,7 +43,7 @@ description: >
     <td class="tg-bhd9">21{{< audio id="21" >}}</td>
     <td class="tg-bhd9">22{{< audio id="22" >}}</td>
     <td class="tg-bhd9">23{{< audio id="23" >}}</td>
-    <td class="tg-bhd9">34{{< audio id="34" >}}</td>
+    <td class="tg-bhd9">24{{< audio id="24" >}}</td>
     <td class="tg-bhd9">25{{< audio id="25" >}}</td>
     <td class="tg-bhd9">26{{< audio id="26" >}}</td>
   </tr>
@@ -83,27 +84,3 @@ description: >
     <td class="tg-bhd9">66{{< audio id="66" >}}</td>
   </tr>
 </table>
-
-## 例文《施氏食獅史》
-
-<ruby>石<rt>sek6</rt></ruby> <ruby>室<rt>sat1</rt></ruby> <ruby>詩<rt>si1</rt></ruby> <ruby>士<rt>si6</rt></ruby> <ruby>施<rt>si1</rt></ruby> <ruby>氏<rt>si6</rt></ruby>， <ruby>嗜<rt>si3</rt></ruby> <ruby>獅<rt>si1</rt></ruby>， <ruby>誓<rt>sai6</rt></ruby> <ruby>食<rt>sik6</rt></ruby> <ruby>十<rt>sap6</rt></ruby> <ruby>獅<rt>si1</rt></ruby>。
-
-<ruby>氏<rt>si6</rt></ruby> <ruby>時<rt>si4</rt></ruby> <ruby>時<rt>si4</rt></ruby> <ruby>適<rt>sik1</rt></ruby> <ruby>市<rt>si5</rt></ruby> <ruby>視<rt>si6</rt></ruby> <ruby>獅<rt>si1</rt></ruby>。
-
-<ruby>十<rt>sap6</rt></ruby> <ruby>時<rt>si4</rt></ruby>， <ruby>適<rt>sik1</rt></ruby> <ruby>十<rt>sap6</rt></ruby> <ruby>獅<rt>si1</rt></ruby> <ruby>適<rt>sik1</rt></ruby> <ruby>市<rt>si5</rt></ruby>。
-
-<ruby>是<rt>si6</rt></ruby> <ruby>時<rt>si4</rt></ruby>， <ruby>適<rt>sik1</rt></ruby> <ruby>施<rt>si1</rt></ruby> <ruby>氏<rt>si6</rt></ruby> <ruby>適<rt>sik1</rt></ruby> <ruby>市<rt>si5</rt></ruby>。
-
-<ruby>氏<rt>si6</rt></ruby> <ruby>視<rt>si6</rt></ruby> <ruby>十<rt>sap6</rt></ruby> <ruby>獅<rt>si1</rt></ruby>， <ruby>恃<rt>ci5</rt></ruby> <ruby>矢<rt>ci2</rt></ruby> <ruby>勢<rt>sai3</rt></ruby>。
-
-<ruby>使<rt>sai2</rt></ruby> <ruby>是<rt>si6</rt></ruby> <ruby>十<rt>sap6</rt></ruby> <ruby>獅<rt>si1</rt></ruby> <ruby>逝<rt>sai6</rt></ruby> <ruby>世<rt>sai3</rt></ruby>。
-
-<ruby>氏<rt>si6</rt></ruby> <ruby>拾<rt>sap6</rt></ruby> <ruby>是<rt>si6</rt></ruby> <ruby>十<rt>sap6</rt></ruby> <ruby>獅<rt>si1</rt></ruby> <ruby>屍<rt>si1</rt></ruby>。
-
-<ruby>適<rt>sik</rt></ruby> <ruby>石<rt>sek6</rt></ruby> <ruby>室<rt>sat1</rt></ruby>， <ruby>石<rt>sek6</rt></ruby> <ruby>室<rt>sat1</rt></ruby> <ruby>濕<rt>sap1</rt></ruby>， <ruby>氏<rt>si6</rt></ruby> <ruby>拭<rt>sik1</rt></ruby> <ruby>室<rt>sat1</rt></ruby>。
-
-<ruby>氏<rt>si6</rt></ruby> <ruby>始<rt>ci2</rt></ruby> <ruby>試<rt>si3</rt></ruby> <ruby>食<rt>sik6</rt></ruby> <ruby>十<rt>sap6</rt></ruby> <ruby>獅<rt>si1</rt></ruby> <ruby>屍<rt>si1</rt></ruby>。
-
-<ruby>食<rt>sik6</rt></ruby> <ruby>時<rt>si4</rt></ruby>， <ruby>始<rt>ci2</rt></ruby> <ruby>識<rt>sik1</rt></ruby> <ruby>是<rt>si6</rt></ruby> <ruby>十<rt>sap6</rt></ruby> <ruby>獅<rt>si1</rt></ruby> <ruby>屍<rt>si1</rt></ruby>，<ruby>實<rt>sat6</rt></ruby> <ruby>十<rt>sap6</rt></ruby> <ruby>石<rt>sek6</rt></ruby> <ruby>獅<rt>si1</rt></ruby> <ruby>屍<rt>si1</rt></ruby>。
-
-<ruby>試<rt>si3</rt></ruby> <ruby>釋<rt>sik1</rt></ruby> <ruby>是<rt>si6</rt></ruby> <ruby>事<rt>si6</rt></ruby>。

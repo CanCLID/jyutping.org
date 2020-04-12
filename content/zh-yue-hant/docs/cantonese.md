@@ -1,7 +1,6 @@
 ---
-title: "我識粵語"
-date: 2020-01-22
-weight: 3
+title: "識普拼，學粵拼"
+weight: 1
 description: >
   粵拼嘅設計大部分同普通話拼音（即《漢語拼音》，下稱“普拼”）一樣，只需讀完兩者主要區別，就可以掌握粵拼同粵拼打字。
 hide_feedback: false
