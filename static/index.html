@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="yue-Hant-HK"><!-- Language code explicitly blessed by http://www.rfc-editor.org/rfc/bcp/bcp47.txt as referenced in http://www.w3.org/TR/html5/dom.html#the-lang-and-xml:lang-attributes <3 -->
+ <head>
+  <meta charset="utf-8">
+  <title>粵拼</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript">
+   /**
+    * Find the previous element that has class "z-pronunciation"
+    */
+   function jyutping(e) {
+    while (e && ! $(e).hasClass("zi-pronunciation")) {
+     e = e.previousSibling;
+    }
+    var s = e.innerHTML.replace(/<[^>]+>/g, "");
+    return s;
+   }
+
+   function audio_url(jp, a) {
+     var ext;
+     var a = a || (new Audio());
+     if (a.canPlayType('audio/mpeg')) {
+      ext = ".mp3";
+     } else {
+      ext = ".ogg";
+     }
+     var url = "/static/jyutping/" + jp + ext;
+     return url;
+   }
+
+   var audio_cache = {};
+   var real_audio = null;
+
+   var is_safari = navigator.userAgent.match(/safari/i);
+   var is_mobile = navigator.userAgent.match(/mobile/i);
+
+   function view_pronounce(e) {
+     var jp = e;
+     if (!audio_cache[jp]) {
+       audio_cache[jp] = [];
+     }
+     if (audio_cache[jp].length === 0) {
+       // TODO: Deal with audio-with-the-whole-phrase later.
+       var syllables = jp.split(" ");
+       for (var i = 0; i < syllables.length; i++) {
+         var audio = new Audio(audio_url(syllables[i]));
+         audio_cache[jp].push(audio);
+       }
+     }
+
+     if (real_audio == null) {
+       real_audio = new Audio();
+       real_audio.is_playing = false;
+       // This is a horrible mess to work around mobile Safari limitations.  See eg. http://www.ibm.com/developerworks/library/wa-ioshtml5/
+       real_audio.addEventListener('ended', function () {
+         var obj = this;
+         window.setTimeout(function () {
+           if (obj.current_idx < audio_cache[jp].length - 1) {
+             obj.current_idx++;
+             obj.src = audio_cache[jp][obj.current_idx].src;
+             obj.play();
+           } else {
+             obj.current_idx = 0;
+             real_audio = null;
+             audio_cache = {};
+           }
+         }, (is_safari && is_mobile) ? 0 : 300);  // Mobile safari doesn't seem to cache this, and doesn't support multiple audio objects, so there is an inherent delay when downloading the audio.
+       });
+     }
+
+     if (!real_audio.is_playing) {
+       real_audio.current_idx = 0;
+       real_audio.src = audio_cache[jp][0].src;
+       real_audio.play();
+       real_audio.is_playing = true;
+     }
+
+     return false;
+   }
+
+  </script>
+ </head>
+ <body>
+ <form onsubmit="view_pronounce(this.elements['ping'].value); return false;">
+  <input type="text" name="ping" value="caak1 si3" /><input type="submit">
+ </form>
+ </body>
+</html>
