@@ -141,10 +141,10 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 	icon = "fa fa-book-open"
         desc = "香港語言學學會粵語拼音方案"
 [[params.links.user]]
-	name ="粵語審音配詞字庫"
-	url = "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/"
+	name ="粵典"
+	url = "https://words.hk/"
 	icon = "fa fa-file-audio"
-        desc = "粵語審音配詞字庫"
+        desc = "粵典"
 # [[params.links.user]]
 # 	name = "Stack Overflow"
 # 	url = "https://example.org/stack"

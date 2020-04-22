@@ -11,7 +11,7 @@ description: >
 {{< chartaudio >}}
 
 {{< alert title="About IPA transcriptions">}}
-All IPA transcriptions on this page are phonemic transcriptions，source of audio data is 粵語審音配詞字庫. For further details please see [Reference](#reference).
+All IPA transcriptions on this page are phonemic transcriptions，source of audio data is 粵典. For further details please see [Reference](#reference).
 {{< /alert >}}
 
 ## 1. Onset
