@@ -1,7 +1,7 @@
 ---
 title: "I am a Cantonese learner and I speak English."
 date: 2020-01-22
-weight: 3
+weight: 1
 description: >
   Cantonese is usually written in Han characters. You will need about 3000 characters to be functional in Cantonese. Sounds like a lot? Yes, that is a lot. That’s why we need a phonetic system while you catch up with the characters.
 hide_feedback: false
@@ -216,9 +216,7 @@ Some tools for learning Jyutping and Cantonese. First comes the dictionary, wher
 
 - [粵音資料集叢](https://jyut.net/)
 
-Then comes a desktop Cantonese dictionary, if you don't like searching in a web browser:
-
-- [Jyut Dictionary](https://github.com/aaronhktan/jyut-dict)
+For more Cantonese learning resources, please see [Cantonese Learning Resources](/en/blog/resource).
 
 A good way to practice Jyutping/Cantonese is to type Cantonese in Jyutping. Since Jyutping is a phonemic transcription of Cantonese, every time you type in Jyutping, you are essentially practicing speaking Cantonese. Check out our [Cantonese Keyboard page](/en/keyboard) to get the keyboards.
 

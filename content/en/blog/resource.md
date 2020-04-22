@@ -7,4 +7,8 @@ description: >
   A list of resources for learning Cantonese.
 ---
 
-Page under development.
+### Tools
+
+- Pronunciation dictionary：[粵音資料集叢 jyut.net](https://jyut.net/)
+- Word dictionary：[粵典 words.hk](https://words.hk/)
+- Cantonese lyrics with Jyutping：[粵拼歌詞網 jyut6.com](https://jyut6.com/)

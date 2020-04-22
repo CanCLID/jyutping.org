@@ -253,9 +253,7 @@ hide_feedback: false
 
 - [粵音資料集叢](https://jyut.net/)
 
-仲有一個桌面版字典：
-
-- [Jyut Dictionary](https://github.com/aaronhktan/jyut-dict)
+想要更多粵語學習資源，請見[粵語學習資源](/blog/resource)。
 
 ### 附錄：粵拼注音文本示例《北風同太陽》
 

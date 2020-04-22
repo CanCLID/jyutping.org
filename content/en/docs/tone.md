@@ -1,16 +1,16 @@
 ---
-title: "聲調辨別練習"
+title: "Tone practice"
 weight: 2
 description: >
-  粵語有六個聲調，本文提供呢六個聲調嘅對比聽音練習，幫助大家熟練區分粵語聲調。
+  Cantonese has six tones which could be difficult to master. We provide an excercise to help you distinguish them. 
 hide_feedback: false
 ---
 
 {{< toneaudio >}}
 
-## 聲調辨別表
+## Tone contrast table
 
-下表以 si 爲示範音節，提供粵語中 6 個聲調所有兩兩組合嘅發音，幫助讀者區分各個聲調。六個音節嘅例字分別係「<ruby>詩<rt>si1</rt></ruby> <ruby>史<rt>si2</rt></ruby> <ruby>試<rt>si3</rt></ruby> <ruby>時<rt>si4</rt></ruby> <ruby>市<rt>si5</rt></ruby> <ruby>事<rt>si6</rt></ruby>」。
+In the table below, we use **si** as a syllable example to provide all combinations of the six tones. Listen to them and try to distinguish the contrast. Here are the example characters for these six syllables「<ruby>詩<rt>si1</rt></ruby> <ruby>史<rt>si2</rt></ruby> <ruby>試<rt>si3</rt></ruby> <ruby>時<rt>si4</rt></ruby> <ruby>市<rt>si5</rt></ruby> <ruby>事<rt>si6</rt></ruby>」。
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -21,7 +21,7 @@ hide_feedback: false
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-ihg3">聲調</th>
+    <th class="tg-ihg3">Tones</th>
     <th class="tg-ihg3">1</th>
     <th class="tg-ihg3">2</th>
     <th class="tg-ihg3">3</th>

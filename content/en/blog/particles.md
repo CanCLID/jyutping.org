@@ -1,6 +1,6 @@
 ---
-title: "Cantonese Particles"
-linkTitle: "Cantonese Particles"
+title: "Cantonese Sentence Particles"
+linkTitle: "Cantonese Sentence Particles"
 url: "/en/blog/particles"
 weight: 2
 description: >

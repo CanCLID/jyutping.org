@@ -11,6 +11,8 @@ description: >
 
 所以我們可以利用這一點來練習自己的粵語聲調，下面列出了三首經典粵語歌《漫步人生路》《財神到》《富士山下》的粵拼注音歌詞。大家可以按{{< audio >}}按鈕來聽單字音，連起來就是整首歌的旋律。
 
+想要更多標註粵拼的粵語歌詞，可以前往[粵拼歌詞網](https://jyut6.com/)。
+
 {{< songaudio >}}
 
 ## 漫步人生路
@@ -43,7 +45,7 @@ description: >
 
 <ruby>讓<rt>joeng6{{< audio id="joeng6" >}}</rt></ruby> <ruby>疾<rt>zat6{{< audio id="zat6" >}}</rt></ruby> <ruby>風<rt>fung1{{< audio id="fung1" >}}</rt></ruby> <ruby>吹<rt>ceoi1{{< audio id="ceoi1" >}}</rt></ruby> <ruby>啊<rt>aa3{{< audio id="aa3" >}}</rt></ruby> <ruby>吹<rt>ceoi1{{< audio id="ceoi1" >}}</rt></ruby> ，<ruby>儘<rt>zeon2{{< audio id="zeon2" >}}</rt></ruby> <ruby>管<rt>gun2{{< audio id="gun2" >}}</rt></ruby> <ruby>給<rt>kap1{{< audio id="kap1" >}}</rt></ruby> <ruby>我<rt>ngo5{{< audio id="ngo5" >}}</rt></ruby> <ruby>倆<rt>loeng5{{< audio id="loeng5" >}}</rt></ruby> <ruby>考<rt>haau2{{< audio id="haau2" >}}</rt></ruby> <ruby>驗<rt>jim6{{< audio id="jim6" >}}</rt></ruby>
 
-<ruby>小<rt>siu2{{< audio id="siu2" >}}</rt></ruby> <ruby>雨<rt>jyu5{{< audio id="jyu5" >}}</rt></ruby> <ruby>點<rt>dim2{{< audio id="dim2" >}}</rt></ruby> ，<ruby>放<rt>fong3{{< audio id="fong3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>灑<rt>saa2{{< audio id="saa2" >}}</rt></ruby> ，<ruby>早<rt>zou2{{< audio id="zou2" >}}</rt></ruby> <ruby>已<rt>ji5{{< audio id="ji5" >}}</rt></ruby> <ruby>決<rt>kyut3{{< audio id="kyut3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>向<rt>hoeng3{{< audio id="hoeng3" >}}</rt></ruby> <ruby>着<rt>zoek3{{< audio id="zoek3" >}}</rt></ruby> <ruby>前<rt>cin4{{< audio id="cin4" >}}</rt></ruby>
+<ruby>小<rt>siu2{{< audio id="siu2" >}}</rt></ruby> <ruby>雨<rt>jyu5{{< audio id="jyu5" >}}</rt></ruby> <ruby>點<rt>dim2{{< audio id="dim2" >}}</rt></ruby> ，<ruby>放<rt>fong3{{< audio id="fong3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>灑<rt>saa2{{< audio id="saa2" >}}</rt></ruby> ，<ruby>早<rt>zou2{{< audio id="zou2" >}}</rt></ruby> <ruby>已<rt>ji5{{< audio id="ji5" >}}</rt></ruby> <ruby>決<rt>kyut3{{< audio id="kyut3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>向<rt>hoeng3{{< audio id="hoeng3" >}}</rt></ruby> <ruby>着<rt>zoek6{{< audio id="zoek6" >}}</rt></ruby> <ruby>前<rt>cin4{{< audio id="cin4" >}}</rt></ruby>
 
 <ruby>路<rt>lou6{{< audio id="lou6" >}}</rt></ruby> <ruby>縱<rt>zung3{{< audio id="zung3" >}}</rt></ruby> <ruby>崎<rt>kei1{{< audio id="kei1" >}}</rt></ruby> <ruby>嶇<rt>keoi1{{< audio id="keoi1" >}}</rt></ruby> <ruby>亦<rt>jik6{{< audio id="jik6" >}}</rt></ruby> <ruby>不<rt>bat1{{< audio id="bat1" >}}</rt></ruby> <ruby>怕<rt>paa3{{< audio id="paa3" >}}</rt></ruby> <ruby>受<rt>sau6{{< audio id="sau6" >}}</rt></ruby> <ruby>磨<rt>mo4{{< audio id="mo4" >}}</rt></ruby> <ruby>練<rt>lin6{{< audio id="lin6" >}}</rt></ruby>
 
@@ -63,7 +65,7 @@ description: >
 
 <ruby>讓<rt>joeng6{{< audio id="joeng6" >}}</rt></ruby> <ruby>疾<rt>zat6{{< audio id="zat6" >}}</rt></ruby> <ruby>風<rt>fung1{{< audio id="fung1" >}}</rt></ruby> <ruby>吹<rt>ceoi1{{< audio id="ceoi1" >}}</rt></ruby> <ruby>啊<rt>aa3{{< audio id="aa3" >}}</rt></ruby> <ruby>吹<rt>ceoi1{{< audio id="ceoi1" >}}</rt></ruby> ，<ruby>儘<rt>zeon2{{< audio id="zeon2" >}}</rt></ruby> <ruby>管<rt>gun2{{< audio id="gun2" >}}</rt></ruby> <ruby>給<rt>kap1{{< audio id="kap1" >}}</rt></ruby> <ruby>我<rt>ngo5{{< audio id="ngo5" >}}</rt></ruby> <ruby>倆<rt>loeng5{{< audio id="loeng5" >}}</rt></ruby> <ruby>考<rt>haau2{{< audio id="haau2" >}}</rt></ruby> <ruby>驗<rt>jim6{{< audio id="jim6" >}}</rt></ruby>
 
-<ruby>小<rt>siu2{{< audio id="siu2" >}}</rt></ruby> <ruby>雨<rt>jyu5{{< audio id="jyu5" >}}</rt></ruby> <ruby>點<rt>dim2{{< audio id="dim2" >}}</rt></ruby> ，<ruby>放<rt>fong3{{< audio id="fong3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>灑<rt>saa2{{< audio id="saa2" >}}</rt></ruby> ，<ruby>早<rt>zou2{{< audio id="zou2" >}}</rt></ruby> <ruby>已<rt>ji5{{< audio id="ji5" >}}</rt></ruby> <ruby>決<rt>kyut3{{< audio id="kyut3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>向<rt>hoeng3{{< audio id="hoeng3" >}}</rt></ruby> <ruby>着<rt>zoek3{{< audio id="zoek3" >}}</rt></ruby> <ruby>前<rt>cin4{{< audio id="cin4" >}}</rt></ruby>
+<ruby>小<rt>siu2{{< audio id="siu2" >}}</rt></ruby> <ruby>雨<rt>jyu5{{< audio id="jyu5" >}}</rt></ruby> <ruby>點<rt>dim2{{< audio id="dim2" >}}</rt></ruby> ，<ruby>放<rt>fong3{{< audio id="fong3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>灑<rt>saa2{{< audio id="saa2" >}}</rt></ruby> ，<ruby>早<rt>zou2{{< audio id="zou2" >}}</rt></ruby> <ruby>已<rt>ji5{{< audio id="ji5" >}}</rt></ruby> <ruby>決<rt>kyut3{{< audio id="kyut3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>向<rt>hoeng3{{< audio id="hoeng3" >}}</rt></ruby> <ruby>着<rt>zoek6{{< audio id="zoek6" >}}</rt></ruby> <ruby>前<rt>cin4{{< audio id="cin4" >}}</rt></ruby>
 
 ## 財神到
 
