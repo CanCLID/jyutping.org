@@ -9,6 +9,7 @@ description: >
 
 ### Tools
 
+- Video tutorials of Jyutping: [Learn Jyutping](https://www.youtube.com/channel/UCcmAegX-cgcOOconZIwqynw)
 - Pronunciation dictionary：[粵音資料集叢 jyut.net](https://jyut.net/)
 - Word dictionary：[粵典 words.hk](https://words.hk/)
 - Cantonese lyrics with Jyutping：[粵拼歌詞網 jyut6.com](https://jyut6.com/)

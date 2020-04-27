@@ -56,7 +56,7 @@ In English usually it is written as “ee”, as in “see”, “been”, “pe
 
 | [i]                             | [ɪ]                               |
 | ------------------------------- | --------------------------------- |
-| 诗 si1 {{< audio id="si1" >}}   | 识 sik1 {{< audio id="sik1" >}}   |
+| 詩 si1 {{< audio id="si1" >}}   | 識 sik1 {{< audio id="sik1" >}}   |
 | 仙 sin1 {{< audio id="sin1" >}} | 星 sing1 {{< audio id="sing1" >}} |
 | 知 zi1 {{< audio id="zi1" >}}   | 即 zik1 {{< audio id="zik1" >}}   |
 
@@ -66,9 +66,9 @@ In English usually it is written as “ee”, as in “see”, “been”, “pe
 This is the e as in pet, bed, etc., but never like the e’s in “be”, or “Pete”.
 {{< /alert>}}
 
-- 写 se2 {{< audio id="se2" >}}
+- 寫 se2 {{< audio id="se2" >}}
 - 借 ze3 {{< audio id="ze3" >}}
-- 郑 zeng6 {{< audio id="zeng6" >}}
+- 鄭 zeng6 {{< audio id="zeng6" >}}
 - 石 sek6 {{< audio id="sek6" >}}
 
 ### 2.4 Vowel **o**
@@ -91,7 +91,7 @@ It sounds like -oo- in English (In fact there are two -oo- sounds in English. Co
 
 | [u]                           | [ʊ]                               |
 | ----------------------------- | --------------------------------- |
-| 夫 fu1 {{< audio id="fu1" >}} | 识 fuk1 {{< audio id="fuk1" >}}   |
+| 夫 fu1 {{< audio id="fu1" >}} | 覆 fuk1 {{< audio id="fuk1" >}}   |
 | 姑 gu1 {{< audio id="gu1" >}} | 工 gung1 {{< audio id="gung1" >}} |
 
 ### 2.6 Consonant **j**
@@ -128,8 +128,8 @@ Finals **-p**, **-t**, **-k** are unrealised, their IPAs are [p̚], [t̚], [k̚]
 
 | -p                                | -t                              | -k                              |
 | --------------------------------- | ------------------------------- | ------------------------------- |
-| 湿 sap1 {{< audio id="sap1" >}}   | 失 sat1 {{< audio id="sat1" >}} | 塞 sak1 {{< audio id="sak1" >}} |
-| 接 zip3 {{< audio id="zip3" >}}   | 节 zit3 {{< audio id="zit3" >}} | 脊 zek3 {{< audio id="zek3" >}} |
+| 濕 sap1 {{< audio id="sap1" >}}   | 失 sat1 {{< audio id="sat1" >}} | 塞 sak1 {{< audio id="sak1" >}} |
+| 接 zip3 {{< audio id="zip3" >}}   | 節 zit3 {{< audio id="zit3" >}} | 脊 zek3 {{< audio id="zek3" >}} |
 | 集 zaap6 {{< audio id="zaap6" >}} | 活 wut6 {{< audio id="wut6" >}} | 六 luk6 {{< audio id="luk6" >}} |
 
 ## 4 New sounds
@@ -153,10 +153,10 @@ Try pronouncing “i” and simultaneously rounding your lips. This is the same 
 {{< /alert >}}
 
 - 率 seot1 {{< audio id="seot1" >}}
-- 润 jeon6 {{< audio id="jeon6" >}}
+- 潤 jeon6 {{< audio id="jeon6" >}}
 - 鋸 goe3 {{< audio id="goe3" >}}
 - 削 soek3 {{< audio id="soek3" >}}
-- 让 joeng6 {{< audio id="joeng6" >}}
+- 讓 joeng6 {{< audio id="joeng6" >}}
 
 If you can't tell the difference between **eo** and **oe**, that's fine. Even many native speakers can't distinguish them. You will still be perfectly understood if you mix these two sounds.
 
@@ -200,11 +200,11 @@ There are **six tones** in Cantonese: high level, high rising, mid level, low di
 
 | Tone 1 (High level)           | Tone 2 (High rising)          | Tone 3 (Mid level)            |
 | ----------------------------- | ----------------------------- | ----------------------------- |
-| 诗 si1 {{< audio id="si1" >}} | 史 si2 {{< audio id="si2" >}} | 试 si3 {{< audio id="si3" >}} |
+| 詩 si1 {{< audio id="si1" >}} | 史 si2 {{< audio id="si2" >}} | 試 si3 {{< audio id="si3" >}} |
 
 | Tone 4 (Low dipping)          | Tone 5 (Low rising)           | Tone 6 (Mid-low level)        |
 | ----------------------------- | ----------------------------- | ----------------------------- |
-| 时 si4 {{< audio id="si4" >}} | 市 si5 {{< audio id="si5" >}} | 事 si6 {{< audio id="si6" >}} |
+| 時 si4 {{< audio id="si4" >}} | 市 si5 {{< audio id="si5" >}} | 事 si6 {{< audio id="si6" >}} |
 
 Don’t worry if you cannot distinguish all of them. In real life you can still be well understood. To get practice, check out our page of [Tone Exercise](/en/blog/tones), where you can get a comprehensive drill of all Cantonese tones.
 

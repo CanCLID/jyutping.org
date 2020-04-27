@@ -7,7 +7,7 @@ description: >
   粵語歌係練習粵語聲調嘅第一大利器
 ---
 
-一般來講，粵語歌同國語歌有一個好重要嘅區別，就係國語歌曲喺填詞個陣都唔考慮原字嘅聲調，而粵語歌則保留咗漢語填詞嘅傳統，填詞需要考慮字本身嘅聲調。所以同國語歌曲唔一樣，粵語歌嘅歌詞往往唔需要音樂伴奏，**直接用原字調朗讀歌詞，讀出嚟嘅音律變化就係歌曲嘅旋律**。
+一般嚟講，粵語歌同國語歌有一個好重要嘅區別，就係國語歌曲喺填詞個陣都唔考慮原字嘅聲調，而粵語歌則保留咗漢語填詞嘅傳統，填詞需要考慮字本身嘅聲調。所以同國語歌曲唔一樣，粵語歌嘅歌詞往往唔需要音樂伴奏，**直接用原字調朗讀歌詞，讀出嚟嘅音律變化同歌曲嘅旋律走向一致**。
 
 所以我哋可以利用呢一點嚟練習自己嘅粵語聲調，下面列出咗三首經典粵語歌《漫步人生路》《財神到》《富士山下》嘅粵拼注音歌詞。大家可以撳粒{{< audio >}}掣嚟聽單字音，連起身就係成首歌嘅旋律。
 
@@ -103,9 +103,9 @@ description: >
 
 <ruby>得<rt>dak1{{< audio id="dak1" >}}</rt></ruby> <ruby>到<rt>dou2{{< audio id="dou2" >}}</rt></ruby> <ruby>佢<rt>keoi5{{< audio id="keoi5" >}}</rt></ruby> <ruby>睇<rt>tai2{{< audio id="tai2" >}}</rt></ruby> <ruby>起<rt>hei2{{< audio id="hei2" >}}</rt></ruby> <ruby>你<rt>nei5{{< audio id="nei5" >}}</rt></ruby>  <ruby>你<rt>nei5{{< audio id="nei5" >}}</rt></ruby> <ruby>有<rt>jau5{{< audio id="jau5" >}}</rt></ruby> <ruby>前<rt>cin4{{< audio id="cin4" >}}</rt></ruby> <ruby>途<rt>tou4{{< audio id="tou4" >}}</rt></ruby>
 
-<ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>  <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>  <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>
+<ruby>啦</ruby> ……
 
-<ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>  <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>  <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>
+<ruby>啦</ruby> ……
 
 <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>  <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>  <ruby>好<rt>hou2{{< audio id="hou2" >}}</rt></ruby> <ruby>走<rt>zau2{{< audio id="zau2" >}}</rt></ruby> <ruby>快<rt>faai3{{< audio id="faai3" >}}</rt></ruby> <ruby>兩<rt>loeng5{{< audio id="loeng5" >}}</rt></ruby> <ruby>步<rt>bou6{{< audio id="bou6" >}}</rt></ruby>
 
@@ -127,17 +127,9 @@ description: >
 
 <ruby>得<rt>dak1{{< audio id="dak1" >}}</rt></ruby> <ruby>到<rt>dou2{{< audio id="dou2" >}}</rt></ruby> <ruby>佢<rt>keoi5{{< audio id="keoi5" >}}</rt></ruby> <ruby>睇<rt>tai2{{< audio id="tai2" >}}</rt></ruby> <ruby>起<rt>hei2{{< audio id="hei2" >}}</rt></ruby> <ruby>你<rt>nei5{{< audio id="nei5" >}}</rt></ruby>  <ruby>你<rt>nei5{{< audio id="nei5" >}}</rt></ruby> <ruby>有<rt>jau5{{< audio id="jau5" >}}</rt></ruby> <ruby>前<rt>cin4{{< audio id="cin4" >}}</rt></ruby> <ruby>途<rt>tou4{{< audio id="tou4" >}}</rt></ruby>
 
-<ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>  <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>  <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>
+<ruby>啦</ruby> ……
 
-<ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>  <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>  <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>
-
-<ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>  <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>  <ruby>好<rt>hou2{{< audio id="hou2" >}}</rt></ruby> <ruby>走<rt>zau2{{< audio id="zau2" >}}</rt></ruby> <ruby>快<rt>faai3{{< audio id="faai3" >}}</rt></ruby> <ruby>兩<rt>loeng5{{< audio id="loeng5" >}}</rt></ruby> <ruby>步<rt>bou6{{< audio id="bou6" >}}</rt></ruby>
-
-<ruby>得<rt>dak1{{< audio id="dak1" >}}</rt></ruby> <ruby>到<rt>dou2{{< audio id="dou2" >}}</rt></ruby> <ruby>佢<rt>keoi5{{< audio id="keoi5" >}}</rt></ruby> <ruby>睇<rt>tai2{{< audio id="tai2" >}}</rt></ruby> <ruby>起<rt>hei2{{< audio id="hei2" >}}</rt></ruby> <ruby>你<rt>nei5{{< audio id="nei5" >}}</rt></ruby>  <ruby>你<rt>nei5{{< audio id="nei5" >}}</rt></ruby> <ruby>有<rt>jau5{{< audio id="jau5" >}}</rt></ruby> <ruby>前<rt>cin4{{< audio id="cin4" >}}</rt></ruby> <ruby>途<rt>tou4{{< audio id="tou4" >}}</rt></ruby>
-
-<ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>  <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>  <ruby>好<rt>hou2{{< audio id="hou2" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>得<rt>dak1{{< audio id="dak1" >}}</rt></ruby> <ruby>好<rt>hou2{{< audio id="hou2" >}}</rt></ruby> <ruby>報<rt>bou3{{< audio id="bou3" >}}</rt></ruby>
-
-<ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>話<rt>waa6{{< audio id="waa6" >}}</rt></ruby>  <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>話<rt>waa6{{< audio id="waa6" >}}</rt></ruby>  <ruby>搵<rt>wan2{{< audio id="wan2" >}}</rt></ruby> <ruby>錢<rt>cin2{{< audio id="cin2" >}}</rt></ruby> <ruby>依<rt>ji1{{< audio id="ji1" >}}</rt></ruby> <ruby>正<rt>zing3{{< audio id="zing3" >}}</rt></ruby> <ruby>路<rt>lou6{{< audio id="lou6" >}}</rt></ruby>
+<ruby>啦</ruby> ……
 
 <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>  <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>  <ruby>好<rt>hou2{{< audio id="hou2" >}}</rt></ruby> <ruby>走<rt>zau2{{< audio id="zau2" >}}</rt></ruby> <ruby>快<rt>faai3{{< audio id="faai3" >}}</rt></ruby> <ruby>兩<rt>loeng5{{< audio id="loeng5" >}}</rt></ruby> <ruby>步<rt>bou6{{< audio id="bou6" >}}</rt></ruby>
 
@@ -151,9 +143,17 @@ description: >
 
 <ruby>得<rt>dak1{{< audio id="dak1" >}}</rt></ruby> <ruby>到<rt>dou2{{< audio id="dou2" >}}</rt></ruby> <ruby>佢<rt>keoi5{{< audio id="keoi5" >}}</rt></ruby> <ruby>睇<rt>tai2{{< audio id="tai2" >}}</rt></ruby> <ruby>起<rt>hei2{{< audio id="hei2" >}}</rt></ruby> <ruby>你<rt>nei5{{< audio id="nei5" >}}</rt></ruby>  <ruby>你<rt>nei5{{< audio id="nei5" >}}</rt></ruby> <ruby>有<rt>jau5{{< audio id="jau5" >}}</rt></ruby> <ruby>前<rt>cin4{{< audio id="cin4" >}}</rt></ruby> <ruby>途<rt>tou4{{< audio id="tou4" >}}</rt></ruby>
 
-<ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>  <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>  <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>
+<ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>  <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>  <ruby>好<rt>hou2{{< audio id="hou2" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>得<rt>dak1{{< audio id="dak1" >}}</rt></ruby> <ruby>好<rt>hou2{{< audio id="hou2" >}}</rt></ruby> <ruby>報<rt>bou3{{< audio id="bou3" >}}</rt></ruby>
 
-<ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>  <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>  <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby> <ruby>啦<rt>laa1{{< audio id="laa1" >}}</rt></ruby>
+<ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>話<rt>waa6{{< audio id="waa6" >}}</rt></ruby>  <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>話<rt>waa6{{< audio id="waa6" >}}</rt></ruby>  <ruby>搵<rt>wan2{{< audio id="wan2" >}}</rt></ruby> <ruby>錢<rt>cin2{{< audio id="cin2" >}}</rt></ruby> <ruby>依<rt>ji1{{< audio id="ji1" >}}</rt></ruby> <ruby>正<rt>zing3{{< audio id="zing3" >}}</rt></ruby> <ruby>路<rt>lou6{{< audio id="lou6" >}}</rt></ruby>
+
+<ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>  <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>  <ruby>好<rt>hou2{{< audio id="hou2" >}}</rt></ruby> <ruby>走<rt>zau2{{< audio id="zau2" >}}</rt></ruby> <ruby>快<rt>faai3{{< audio id="faai3" >}}</rt></ruby> <ruby>兩<rt>loeng5{{< audio id="loeng5" >}}</rt></ruby> <ruby>步<rt>bou6{{< audio id="bou6" >}}</rt></ruby>
+
+<ruby>得<rt>dak1{{< audio id="dak1" >}}</rt></ruby> <ruby>到<rt>dou2{{< audio id="dou2" >}}</rt></ruby> <ruby>佢<rt>keoi5{{< audio id="keoi5" >}}</rt></ruby> <ruby>睇<rt>tai2{{< audio id="tai2" >}}</rt></ruby> <ruby>起<rt>hei2{{< audio id="hei2" >}}</rt></ruby> <ruby>你<rt>nei5{{< audio id="nei5" >}}</rt></ruby>  <ruby>你<rt>nei5{{< audio id="nei5" >}}</rt></ruby> <ruby>有<rt>jau5{{< audio id="jau5" >}}</rt></ruby> <ruby>前<rt>cin4{{< audio id="cin4" >}}</rt></ruby> <ruby>途<rt>tou4{{< audio id="tou4" >}}</rt></ruby>
+
+<ruby>啦</ruby> ……
+
+<ruby>啦</ruby> ……
 
 <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>  <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>  <ruby>好<rt>hou2{{< audio id="hou2" >}}</rt></ruby> <ruby>走<rt>zau2{{< audio id="zau2" >}}</rt></ruby> <ruby>快<rt>faai3{{< audio id="faai3" >}}</rt></ruby> <ruby>兩<rt>loeng5{{< audio id="loeng5" >}}</rt></ruby> <ruby>步<rt>bou6{{< audio id="bou6" >}}</rt></ruby>
 
