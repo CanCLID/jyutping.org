@@ -208,6 +208,8 @@ There are **six tones** in Cantonese: high level, high rising, mid level, low di
 
 Don’t worry if you cannot distinguish all of them. In real life you can still be well understood. To get practice, check out our page of [Tone Exercise](/en/blog/tones), where you can get a comprehensive drill of all Cantonese tones.
 
+Another fun yet effective way to practice Cantonese tones is through the Cantonese songs. Check out our [Practice Cantonese tones with Cantonese songs](/en/blog/song/) for details.
+
 ## 6 All set!
 
 Now you have gone through all the critical parts of Jyutping. For a full reference of the scheme, check out [LSHK Jyutping Scheme](/en/jyutping), our official reference page of Jyutping.

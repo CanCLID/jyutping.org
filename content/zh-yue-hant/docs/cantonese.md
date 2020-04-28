@@ -211,6 +211,8 @@ hide_feedback: false
 >
 > 詳細嘅解釋可以參考[粵拼答問](https://www.lshk.org/faq-on-jyutping)第 I 問。
 
+練習粵語聲調仲有一個好好玩又有效嘅方法，就係利用粵語歌，詳見本站嘅[用粵語歌練習聲調](/blog/song/)。
+
 ### 2.9 普通話特有、粵語冇嘅音
 
 {{< alert color="success">}}
