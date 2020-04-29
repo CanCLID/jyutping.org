@@ -15,25 +15,25 @@ Jyutping is a way to spell out Cantonese words using only letters (a-z) and numb
 
 In English, the same letter could be pronounced in multiple ways. Look at the most extreme case: -ough. This four letters sound totally different in cough, though, through, thought, borough … You get the idea. **English spelling is highly irregular or inconsistent**.
 
-Jyutping, unlike English, is a system that is designed to be regular. There should only be ONE way to spell out each sound (phoneme is the technical term), and there should only be ONE possible sound for each letter. In other words, Jyutping provides an set of **one-to-one mapping rules** from Cantonese sounds to latin letters.
+Jyutping, unlike English, is a system that is designed to be regular. There should only be ONE way to spell out each sound (phoneme is the technical term), and there should only be ONE possible sound for each letter. In other words, Jyutping provides a set of **one-to-one mapping rules** from Cantonese sounds to latin letters.
 
-This is a system that helps learners master the language, but bear in mind that Cantonese and English are very different languages. Cantonese is not too difficult pronunciation-wise (contrary to what you might have heard elsewhere), but there are things that you need to work on. Fair enough. Jyutping isn’t that hard, but you need to tackle these three things:
+This is a system that helps learners master the language. Bear in mind that Cantonese and English are very different languages. Cantonese is not too difficult pronunciation-wise (contrary to what you might have heard elsewhere), but there are things that you need to work on. Fair enough. Jyutping isn’t that hard, but you need to tackle these three things:
 
-1. **Odd Spelling**: Some letters or spelling convention may look unfamiliar to you.
+1. **Odd Spelling**: Some letters or spelling conventions may look unfamiliar to you.
 2. **Slight deviation**: Sometimes the pronunciation seems straightforward, but you need to fine tune it a bit to sound more native-like.
-3. **New sounds**: I wouldn’t say everything is easy. There are sounds that are entire new to you: weird sounds that you have never heard before (at least not exist in English), distinctions that are completely new to your ears.
+3. **New sounds**: I wouldn’t say everything is easy. There are sounds that are entirely new to you: weird sounds that you have never heard before (at least not exist in English), distinctions that are completely new to your ears.
 
 Don’t worry. You have this guide.
 
 ---
 
-Unlike conventional textbooks, I am not going to give you a long sound correspondence table (you can still find it [here](/en/jyutping) if you like). That is counter-productive. I’m going to break down the sounds into the above three different types.
+Unlike conventional textbooks, I am not going to give you a long sound correspondence table (you can still find it [here](/en/jyutping) if you like). That is counter-productive. I’m going to break down what you need to learn into the above three different types.
 
 > When describing the sounds I will provide the IPA (International Phonetics Alphabet) of them. If you don't know what IPA is, just skip them. All Jyutping spellings are styled in boldfaces. Listen to the sample sounds by clicking the {{< audio >}} button and try to imitate the sounds.
 
 ## 2 Odd Spelling
 
-Let’s take a look at vowels first. Cantonese spellings are quite regular so let’s just go through them one-by-one. They definitely goes to the odd spelling category because they don’t correspond to English spelling.
+Let’s take a look at vowels first. Cantonese spelling for vowels is quite regular so let’s just go through them one-by-one. They definitely goes to the odd spelling category because they don’t correspond to English spelling.
 
 ### 2.1 Vowel **aa** & **a**
 
@@ -147,9 +147,9 @@ Try pronouncing “i” and simultaneously rounding your lips. This is the same 
 ### 4.2 Vowel **eo** & **oe**
 
 {{< alert color="success" >}}
-**oe** is the rounded version of **e**, the IPA is [œ]. Many speakers says it sounds like ir as in bird, or ur as in fur.
+**oe** is the rounded version of **e**, the IPA is [œ]. Many speakers say it sounds like ir as in bird, or ur as in fur.
 
-**eo** is **a** short version of **oe**, the mouth opens smaller than **eo**, the IPA is [ø]. Listen to these examples.
+**eo** is the short version of **oe**, the mouth opens smaller than **oe**, the IPA is [ɵ]. Listen to these examples.
 {{< /alert >}}
 
 - 率 seot1 {{< audio id="seot1" >}}
@@ -163,7 +163,7 @@ If you can't tell the difference between **eo** and **oe**, that's fine. Even ma
 ### 4.3 Consonant **z** & **c**
 
 {{< alert color="success" >}}
-**z** is like the "j" in "jack", the IPA is [t͡s] (plus an allophonic [t͡ʃ]).
+**z** is like the "z" in "zip" or j" in "joe", the IPA is [t͡s] (plus an allophonic [t͡ʃ]).
 
 **c** is like the "ch" in "chick", the aspirated version of **z**. The IPA is [t͡sʰ] (plus an allophonic [t͡ʃʰ]).
 {{< /alert >}}
@@ -186,9 +186,9 @@ In English, the sound ng (IPA [ŋ]) only occurs in syllable-final positions, suc
 - ngo5 我 {{< audio id="ngo5" >}}
 - ngoi6 外 {{< audio id="ngoi6" >}}
 
-You might find difficult to pronounce **ng-**, but don't worry. Many people fail to pronounce it as well while still can perfectly be understood.
+You might find difficult to pronounce **ng-**, but don't worry. Many native speakers fail to pronounce it as well while still can perfectly be understood.
 
-## 5 Tones
+## 5 The Tones
 
 This will be a completely new territory for you. Cantonese is a tonal language, so the pitch of the word matters. Using the wrong pitch can change the meaning of a word.
 
@@ -196,13 +196,13 @@ First, let's take a look at all Cantonese tones in a chart:
 
 ![image](/img/yue.png)
 
-There are **six tones** in Cantonese: high level, high rising, mid level, low dipping, low rising and mid-low level. Listen to the examples below:
+There are **six tones** in Cantonese: high level, high rising, mid level, low falling, low rising and mid-low level. Listen to the examples below:
 
 | Tone 1 (High level)           | Tone 2 (High rising)          | Tone 3 (Mid level)            |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | 詩 si1 {{< audio id="si1" >}} | 史 si2 {{< audio id="si2" >}} | 試 si3 {{< audio id="si3" >}} |
 
-| Tone 4 (Low dipping)          | Tone 5 (Low rising)           | Tone 6 (Mid-low level)        |
+| Tone 4 (Low falling)          | Tone 5 (Low rising)           | Tone 6 (Mid-low level)        |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | 時 si4 {{< audio id="si4" >}} | 市 si5 {{< audio id="si5" >}} | 事 si6 {{< audio id="si6" >}} |
 
