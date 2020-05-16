@@ -11,7 +11,7 @@ description: >
 {{< chartaudio >}}
 
 {{< alert title="關於 IPA 轉寫">}}
-本頁面所用國際音標轉寫皆係寬式轉寫，錄音數據來源係粵典。詳情請見[參考文獻](#參考文獻)一節。 
+本頁面所用的國際音標轉寫攏是寬式轉寫，錄音數據來源是粵典。詳情請看[參考文獻](#參考文獻)遐。 
 {{< /alert >}}
 
 ## 1. 聲母表
@@ -95,7 +95,7 @@ description: >
 </table>
 
 {{< alert >}}
-零聲母唔用字母做標記，例如「呀」只拼作 aa。
+零聲母無用字母做標記，譬如講「呀」干焦拼做 aa。
 {{< /alert >}}
 
 ## 2. 鼻音單獨成韻
@@ -381,7 +381,7 @@ description: >
 </table>
 
 {{< alert color="secondary">}}
- **a** 同 **oet** 於 2018 年新增。詳情請睇[呢度](https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf)。
+ **a** 佮 **oet** 佇 2018 年新增。詳情請看[遮](https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf)。
 {{< /alert >}}
 
 ## 4. 字調
@@ -420,9 +420,9 @@ description: >
 
 
 {{< alert >}}
-聲調標喺音節後面。
+聲調標佇音節後壁。
 
-**示例：**
+**舉例：**
 fu1 （夫），fu2 （虎）, fu3 （副）, fu4 （扶）, fu5 （婦）, fu6 （父）
 {{< /alert >}}
 
