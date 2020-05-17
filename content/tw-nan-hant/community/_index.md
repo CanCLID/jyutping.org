@@ -1,6 +1,6 @@
 ---
 title: LSHK 粵拼方案
-url: "/jyutping"
+url: "/tw-nan-hant/jyutping"
 menu:
   main:
     weight: 2
