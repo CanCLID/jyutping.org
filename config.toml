@@ -53,7 +53,7 @@ id = "UA-131567469-4"
 [languages]
 [languages.zh-yue-hant]
 title = "粵拼"
-description = "粵拼"
+description = "香港語言學學會粵語拼音方案"
 languageName ="🌏 粵語"
 contentDir = "content/zh-yue-hant"
 time_format_default = "2006.01.02"
@@ -62,16 +62,23 @@ time_format_blog = "2006.01.02"
 weight = 1
 [languages.zh-cmn-hant]
 title = "粵拼"
-description = "粵拼"
+description = "香港語言學學會粵語拼音方案"
 languageName ="🌏 普通話/國語"
 contentDir = "content/zh-cmn-hant"
 time_format_default = "2006.01.02"
 time_format_blog = "2006.01.02"
 [languages.tw-nan-hant]
 title = "粵拼"
-description = "粵拼"
+description = "香港語言學學會粵語拼音方案"
 languageName ="🌏 臺灣閩南語"
 contentDir = "content/tw-nan-hant"
+time_format_default = "2006.01.02"
+time_format_blog = "2006.01.02"
+[languages.zh-wuu-hant]
+title = "粵拼"
+description = "香港語言學學會粵語拼音方案"
+languageName ="🌏 吳語"
+contentDir = "content/zh-wuu-hant"
 time_format_default = "2006.01.02"
 time_format_blog = "2006.01.02"
 [languages.en]
