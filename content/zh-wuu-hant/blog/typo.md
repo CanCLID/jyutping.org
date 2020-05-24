@@ -1,7 +1,7 @@
 ---
 title: "粵文常見錯別字"
 linkTitle: "粵文常見錯別字"
-url: "/zh-cmn-hant/blog/typo"
+url: "/zh-wuu-hant/blog/typo"
 weight: 3
 description: >
   本頁列出粵文中常見嘅錯別字，幫助大家寫規範粵文。
