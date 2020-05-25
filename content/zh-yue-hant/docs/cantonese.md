@@ -93,10 +93,11 @@ hide_feedback: false
 普拼嘅 a 等同於粵拼嘅 **aa**，國際音標係 [a]。而粵拼中嘅 **a** 音喺普通話入邊冇。佢嘅國際音標係 [ɐ]。**aa** 同 **a** 係兩個不同嘅韻腹，唔好撈亂。讀者既然識粵語，噉睇下下面幾個例字就知道個區別嘞：
 {{< /alert >}}
 
-| 例字                              |                                   |                                   |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| 三 saam1 {{< audio id="saam1" >}} | 山 saan1 {{< audio id="saan1" >}} | 稍 saau2 {{< audio id="saau2" >}} |
-| 心 sam1 {{< audio id="sam1" >}}   | 身 san1 {{< audio id="san1" >}}   | 手 sau2 {{< audio id="sau2" >}}   |
+| aa                                | a                               |
+| --------------------------------- | ------------------------------- |
+| 三 saam1 {{< audio id="saam1" >}} | 心 sam1 {{< audio id="sam1" >}} |
+| 山 saan1 {{< audio id="saan1" >}} | 身 san1 {{< audio id="san1" >}} |
+| 稍 saau2 {{< audio id="saau2" >}} | 手 sau2 {{< audio id="sau2" >}} |
 
 ### 2.2 韻腹 eo、oe
 
@@ -104,10 +105,10 @@ hide_feedback: false
 呢兩個韻母嘅國際音標分別係 [ɵ]、[œ]，普通話入邊都冇呢兩個音。
 {{< /alert >}}
 
-| 例字                              |                                     |
+| eo                                | oe                                  |
 | --------------------------------- | ----------------------------------- |
-| 率 seot1 {{< audio id="seot1" >}} | 潤 jeon6 {{< audio id="jeon6" >}}   |
-| 削 soek3 {{< audio id="soek3" >}} | 讓 joeng6 {{< audio id="joeng6" >}} |
+| 率 seot1 {{< audio id="seot1" >}} | 削 soek3 {{< audio id="soek3" >}}   |
+| 潤 jeon6 {{< audio id="jeon6" >}} | 讓 joeng6 {{< audio id="joeng6" >}} |
 
 > 大家可能會覺得，點解要將 **eo** 同 **oe** 分開？呢兩個唔係同一個音來嘅咩？其實唔係。**eot6** 係「術」字嘅韻母，但係 **oet6** {{< audio id="oet6" >}} 字就係另一個音嘞。「食完飯 **oet6** {{< audio id="oet6" >}} 一啖氣出來」，就係呢個韻母 oet6。
 >
@@ -146,7 +147,7 @@ hide_feedback: false
 呢個音嘅國際音標係 [ŋ]。普通話冇呢個聲母，而粵語入邊聲母 **ng-** 同零聲母 Ø- 係區分嘅。而家好多廣州人都分唔出嘞，例如將「我」字發成 **o5**，但係其實個發音係 **ngo5**。（好彩輸入法可以開模糊音，所以如果實在分唔到就開模糊音啦，冚唪唥打晒 **ng-** 開頭就得）。
 {{< /alert >}}
 
-| 例字                                |                                 |
+| ng-                                 | Ø-                              |
 | ----------------------------------- | ------------------------------- |
 | 岸 ngon6 {{< audio id="ngon6" >}}   | 按 on3 {{< audio id="on3" >}}   |
 | 雁 ngaan6 {{< audio id="ngaan6" >}} | 晏 aan3 {{< audio id="aan3" >}} |
@@ -157,11 +158,11 @@ hide_feedback: false
 普通話入邊鼻音韻尾淨得 -n 同 -ng（前鼻音同後鼻音），冇 -m。而粵語保留咗 **-m**、**-n**、**-ng** 三種鼻音韻尾。
 {{< /alert >}}
 
-| 例字                                |                                  |                                   |
-| ----------------------------------- | -------------------------------- | --------------------------------- |
-| 三 saam1 {{< audio id="saam1" >}}   | 含 ham4 {{< audio id="ham4" >}}  | 尖 zim1 {{< audio id="zim1" >}}   |
-| 山 saan1 {{< audio id="saan1" >}}   | 痕 han4 {{< audio id="han4" >}}  | 煎 zin1 {{< audio id="zin1" >}}   |
-| 生 saang1 {{< audio id="saang1" >}} | 行 hang4{{< audio id="hang4" >}} | 精 zing1 {{< audio id="zing1" >}} |
+| -m                                | -n                                | -ng                                 |
+| --------------------------------- | --------------------------------- | ----------------------------------- |
+| 三 saam1 {{< audio id="saam1" >}} | 山 saan1 {{< audio id="saan1" >}} | 生 saang1 {{< audio id="saang1" >}} |
+| 含 ham4 {{< audio id="ham4" >}}   | 痕 han4 {{< audio id="han4" >}}   | 行 hang4{{< audio id="hang4" >}}    |
+| 尖 zim1 {{< audio id="zim1" >}}   | 煎 zin1 {{< audio id="zin1" >}}   | 精 zing1 {{< audio id="zing1" >}}   |
 
 ### 2.7 韻尾 -p、-t、-k
 

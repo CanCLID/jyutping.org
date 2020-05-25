@@ -109,10 +109,10 @@ hide_feedback: false
 連下來再看看看粵拼 **eo** 个讀法：在發吳語「安」韻母基礎上，嘴巴張開大小弗變，舌頭擺平一眼，就是粵拼 **eo** 个讀音哉。另外，**eo** 發音比 **oe** 短。
 {{< /alert >}}
 
-| 例字                              |                                     |
+| eo                                | oe                                  |
 | --------------------------------- | ----------------------------------- |
-| 率 seot1 {{< audio id="seot1" >}} | 潤 jeon6 {{< audio id="jeon6" >}}   |
-| 削 soek3 {{< audio id="soek3" >}} | 讓 joeng6 {{< audio id="joeng6" >}} |
+| 率 seot1 {{< audio id="seot1" >}} | 削 soek3 {{< audio id="soek3" >}}   |
+| 潤 jeon6 {{< audio id="jeon6" >}} | 讓 joeng6 {{< audio id="joeng6" >}} |
 
 ### 2.1.3 元音 a 搭 aa
 
@@ -121,10 +121,11 @@ hide_feedback: false
 粵拼 **a** 个國際音標是 [ɐ]，吳語無麼一色一樣个讀音，但有得一隻接近个音 [ə]，即「僧」「色」兩字韻母；嘴巴張來再大一眼，就好發得出 **a** 哉。
 {{< /alert >}}
 
-| 例字                              |                                   |                                   |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| 三 saam1 {{< audio id="saam1" >}} | 山 saan1 {{< audio id="saan1" >}} | 稍 saau2 {{< audio id="saau2" >}} |
-| 心 sam1 {{< audio id="sam1" >}}   | 身 san1 {{< audio id="san1" >}}   | 手 sau2 {{< audio id="sau2" >}}   |
+| aa                                | a                               |
+| --------------------------------- | ------------------------------- |
+| 三 saam1 {{< audio id="saam1" >}} | 心 sam1 {{< audio id="sam1" >}} |
+| 山 saan1 {{< audio id="saan1" >}} | 身 san1 {{< audio id="san1" >}} |
+| 稍 saau2 {{< audio id="saau2" >}} | 手 sau2 {{< audio id="sau2" >}} |
 
 ### 2.2 韻尾
 
@@ -146,11 +147,11 @@ hide_feedback: false
 個咾，只要拿韻腹个元音搭迭眼鼻音組合在一淘就好發得出粵語个讀音哉。
 {{< /alert >}}
 
-| 例字                                |                                  |                                   |
-| ----------------------------------- | -------------------------------- | --------------------------------- |
-| 三 saam1 {{< audio id="saam1" >}}   | 含 ham4 {{< audio id="ham4" >}}  | 尖 zim1 {{< audio id="zim1" >}}   |
-| 山 saan1 {{< audio id="saan1" >}}   | 痕 han4 {{< audio id="han4" >}}  | 煎 zin1 {{< audio id="zin1" >}}   |
-| 生 saang1 {{< audio id="saang1" >}} | 行 hang4{{< audio id="hang4" >}} | 精 zing1 {{< audio id="zing1" >}} |
+| -m                                | -n                                | -ng                                 |
+| --------------------------------- | --------------------------------- | ----------------------------------- |
+| 三 saam1 {{< audio id="saam1" >}} | 山 saan1 {{< audio id="saan1" >}} | 生 saang1 {{< audio id="saang1" >}} |
+| 含 ham4 {{< audio id="ham4" >}}   | 痕 han4 {{< audio id="han4" >}}   | 行 hang4{{< audio id="hang4" >}}    |
+| 尖 zim1 {{< audio id="zim1" >}}   | 煎 zin1 {{< audio id="zin1" >}}   | 精 zing1 {{< audio id="zing1" >}}   |
 
 ### 2.2.2 韻尾 -p、-t、-k
 

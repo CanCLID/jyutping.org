@@ -94,10 +94,11 @@ hide_feedback: false
 這是普通話母語者學習粵語的最大難點之一。普拼的 a 等同於粵拼的 **aa**，國際音標是 [a]。而粵拼裏的 **a** 是個普通話沒有的音，它的國際音標是 [ɐ]。**aa** 和 **a** 是兩個不同的韻腹，不能混淆。
 {{< /alert >}}
 
-| 例字                              |                                   |                                   |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| 三 saam1 {{< audio id="saam1" >}} | 山 saan1 {{< audio id="saan1" >}} | 稍 saau2 {{< audio id="saau2" >}} |
-| 心 sam1 {{< audio id="sam1" >}}   | 身 san1 {{< audio id="san1" >}}   | 手 sau2 {{< audio id="sau2" >}}   |
+| aa                                | a                               |
+| --------------------------------- | ------------------------------- |
+| 三 saam1 {{< audio id="saam1" >}} | 心 sam1 {{< audio id="sam1" >}} |
+| 山 saan1 {{< audio id="saan1" >}} | 身 san1 {{< audio id="san1" >}} |
+| 稍 saau2 {{< audio id="saau2" >}} | 手 sau2 {{< audio id="sau2" >}} |
 
 ### 2.2 韻腹 eo、oe
 
@@ -105,10 +106,10 @@ hide_feedback: false
 這兩個韻母的國際音標分別是 [ɵ]、[œ]，普通話裏都沒有這兩個音，需要另加練習。
 {{< /alert >}}
 
-| 例字                              |                                     |
+| eo                                | oe                                  |
 | --------------------------------- | ----------------------------------- |
-| 率 seot1 {{< audio id="seot1" >}} | 潤 jeon6 {{< audio id="jeon6" >}}   |
-| 削 soek3 {{< audio id="soek3" >}} | 讓 joeng6 {{< audio id="joeng6" >}} |
+| 率 seot1 {{< audio id="seot1" >}} | 削 soek3 {{< audio id="soek3" >}}   |
+| 潤 jeon6 {{< audio id="jeon6" >}} | 讓 joeng6 {{< audio id="joeng6" >}} |
 
 ### 2.3 韻母 e
 
@@ -141,7 +142,7 @@ hide_feedback: false
 這個音的國際音標是 [ŋ]。普通話裏沒有這個聲母，而粵語裏的聲母 **ng-** 和零聲母 Ø- 是區分的。普通話母語者初學這個聲母會有點困難，因爲普通話裏的 ng 只存在於韻尾（後鼻音），需要稍加練習在聲母位置發這個音。
 {{< /alert >}}
 
-| 例字                                |                                 |
+| ng-                                 | Ø-                              |
 | ----------------------------------- | ------------------------------- |
 | 岸 ngon6 {{< audio id="ngon6" >}}   | 按 on3 {{< audio id="on3" >}}   |
 | 雁 ngaan6 {{< audio id="ngaan6" >}} | 晏 aan3 {{< audio id="aan3" >}} |
@@ -152,11 +153,11 @@ hide_feedback: false
 普通話裏的鼻音韻尾只有 -n 和 -ng（前鼻音和後鼻音），沒有 -m。而粵語保留了 **-m**、**-n**、**-ng** 三種鼻音韻尾。
 {{< /alert >}}
 
-| 例字                                |                                  |                                   |
-| ----------------------------------- | -------------------------------- | --------------------------------- |
-| 三 saam1 {{< audio id="saam1" >}}   | 含 ham4 {{< audio id="ham4" >}}  | 尖 zim1 {{< audio id="zim1" >}}   |
-| 山 saan1 {{< audio id="saan1" >}}   | 痕 han4 {{< audio id="han4" >}}  | 煎 zin1 {{< audio id="zin1" >}}   |
-| 生 saang1 {{< audio id="saang1" >}} | 行 hang4{{< audio id="hang4" >}} | 精 zing1 {{< audio id="zing1" >}} |
+| -m                                | -n                                | -ng                                 |
+| --------------------------------- | --------------------------------- | ----------------------------------- |
+| 三 saam1 {{< audio id="saam1" >}} | 山 saan1 {{< audio id="saan1" >}} | 生 saang1 {{< audio id="saang1" >}} |
+| 含 ham4 {{< audio id="ham4" >}}   | 痕 han4 {{< audio id="han4" >}}   | 行 hang4{{< audio id="hang4" >}}    |
+| 尖 zim1 {{< audio id="zim1" >}}   | 煎 zin1 {{< audio id="zin1" >}}   | 精 zing1 {{< audio id="zing1" >}}   |
 
 ### 2.7 韻尾 -p、-t、-k
 
