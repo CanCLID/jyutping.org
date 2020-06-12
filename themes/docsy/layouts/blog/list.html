@@ -19,7 +19,7 @@
 					<p class="mb-2 mb-md-3"><strong class="text-muted">{{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}</strong></p>
 					{{ partial "featured-image.html" (dict "p" . "w" 250 "h" 125 "class" "float-left mr-3 pt-1 d-none d-md-block") }}
 					<p class="pt-0 mt-0"></p>
-					<a class="btn btn-outline-success mr-3 mb-4" href="{{ .RelPermalink }}">
+					<a class="btn btn-outline-primary mr-3 mb-4" href="{{ .RelPermalink }}">
 						{{ T "ui_read_more"}} <i class="fas fa-arrow-alt-circle-right ml-2"></i>
 					</a>
 				</div>
