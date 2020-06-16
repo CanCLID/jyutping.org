@@ -71,10 +71,11 @@ odd spelling category because they don’t correspond to English spelling.
 **a** is the short a sound, it sounds similar to the vowel in “sub”. Listen to
 these examples. {{< /alert>}}
 
-| Examples                          |                                   |                                   |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| 三 saam1 {{< audio id="saam1" >}} | 山 saan1 {{< audio id="saan1" >}} | 稍 saau2 {{< audio id="saau2" >}} |
-| 心 sam1 {{< audio id="sam1" >}}   | 身 san1 {{< audio id="san1" >}}   | 手 sau2 {{< audio id="sau2" >}}   |
+| aa                                | a                               |
+| --------------------------------- | ------------------------------- |
+| 三 saam1 {{< audio id="saam1" >}} | 心 sam1 {{< audio id="sam1" >}} |
+| 山 saan1 {{< audio id="saan1" >}} | 身 san1 {{< audio id="san1" >}} |
+| 稍 saau2 {{< audio id="saau2" >}} | 手 sau2 {{< audio id="sau2" >}} |
 
 ### 2.2 Vowel **i**
 
@@ -131,6 +132,8 @@ examples: {{< /alert >}}
 - 一 jat1 {{< audio id="jat1" >}}
 - 以 ji5 {{< audio id="ji5" >}}
 - 夜 je6 {{< audio id="je6" >}}
+
+> Why does Jyutping uses **j** instead of **y** to represent this sound [j], making it so unintuitive? That is because if we use letter y to stand for [j], there will be no letter left to represent the sound [y]. See [vowel **yu**](#41-vowel-yu) for description of this sound.
 
 ## 3 Slight deviation
 
@@ -193,7 +196,7 @@ IPA is [ɵ]. Listen to these examples. {{< /alert >}}
 - 削 soek3 {{< audio id="soek3" >}}
 - 讓 joeng6 {{< audio id="joeng6" >}}
 
-If you can't tell the difference between **eo** and **oe**, that's fine. Even
+If you can't tell the difference between **eo** and **oe**, that's totally fine. Even
 many native speakers can't distinguish them. You will still be perfectly
 understood if you mix these two sounds.
 

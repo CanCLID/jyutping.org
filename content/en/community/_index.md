@@ -11,7 +11,7 @@ description: >
 {{< chartaudio >}}
 
 {{< alert title="About IPA transcriptions">}}
-All IPA transcriptions on this page are phonemic transcriptions，source of audio data is 粵典. For further details please see [Reference](#reference).
+All IPA transcriptions on this page are phonemic transcriptions，source of the audio data is [粵典 works.hk](https://words.hk/). For further details please see [Reference](#reference).
 {{< /alert >}}
 
 ## 1. Onset
@@ -108,8 +108,8 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-8oy2">m [m] 唔 {{< audio id="m4" >}}</th>
-    <th class="tg-8oy2">ng [ŋ] 吳 {{< audio id="ng4" >}}</th>
+    <th class="tg-8oy2">m [m̩] 唔 {{< audio id="m4" >}}</th>
+    <th class="tg-8oy2">ng [ŋ̩] 吳 {{< audio id="ng4" >}}</th>
   </tr>
 </table>
 

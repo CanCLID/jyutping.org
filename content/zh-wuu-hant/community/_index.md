@@ -108,8 +108,8 @@ description: >
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-8oy2">m [m] 唔 {{< audio id="m4" >}}</th>
-    <th class="tg-8oy2">ng [ŋ] 吳 {{< audio id="ng4" >}}</th>
+    <th class="tg-8oy2">m [m̩] 唔 {{< audio id="m4" >}}</th>
+    <th class="tg-8oy2">ng [ŋ̩] 吳 {{< audio id="ng4" >}}</th>
   </tr>
 </table>
 
