@@ -266,10 +266,10 @@ description: >
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
     <td class="tg-dgfm"></td>
-    <td class="tg-7gzb">um</td>
+    <td class="tg-ssw7">um</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7">ung 風 {{< audio id="fung1" >}}</td>
-    <td class="tg-7gzb">up</td>
+    <td class="tg-ssw7">up</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7">uk 福 {{< audio id="fuk1" >}}</td>
   </tr>
@@ -280,7 +280,7 @@ description: >
     <td class="tg-ssw7">ei 四 {{< audio id="sei3" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7"></td>
+    <td class="tg-ssw7">en </td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7"></td>
@@ -293,9 +293,9 @@ description: >
     <td class="tg-ssw7">eu 掉 {{< audio id="deu6" >}}</td>
     <td class="tg-ssw7">em 舐 {{< audio id="lem2" >}}</td>
     <td class="tg-ssw7"></td>
-    <td class="tg-ssw7"></td>
-    <td class="tg-7gzb">ep</td>
-    <td class="tg-ssw7">et 坺 {{< audio id="bet6" >}}</td>
+    <td class="tg-ssw7">eng 鄭 {{< audio id="zeng6" >}}</td>
+    <td class="tg-ssw7">ep 夾</td>
+    <td class="tg-ssw7">et 坺 </td>
     <td class="tg-ssw7">ek 石 {{< audio id="sek6" >}}</td>
   </tr>
   <tr>
@@ -321,7 +321,7 @@ description: >
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7">oeng 疆 {{< audio id="goeng1" >}}</td>
     <td class="tg-ssw7"></td>
-    <td class="tg-m4o3">oet  {{< audio id="oet6" >}}</td>
+    <td class="tg-7gzb">oet  {{< audio id="oet6" >}}</td>
     <td class="tg-ssw7">oek 腳 {{< audio id="goek3" >}}</td>
   </tr>
   <tr>
@@ -352,7 +352,7 @@ description: >
   <tr>
     <td class="tg-i8xi">a</td>
     <td class="tg-cdar">[ɐ]</td>
-    <td class="tg-m4o3">a  嘞 {{< audio id="la3" >}}</td>
+    <td class="tg-7gzb">a  嘞 {{< audio id="la3" >}}</td>
     <td class="tg-ssw7">ai 擠 {{< audio id="zai1" >}}</td>
     <td class="tg-ssw7">au 周 {{< audio id="zau1" >}}</td>
     <td class="tg-ssw7">am 斟 {{< audio id="zam1" >}}</td>
