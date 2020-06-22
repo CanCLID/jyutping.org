@@ -114,7 +114,7 @@ hide_feedback: false
 ### 2.3 韻母 e
 
 {{< alert color="success">}}
-普拼的 e 的國際音標是 [ɤ]，也就是普通話裏「餓」字的韻母，當它跟在 y 或者 i 後面時表達的則是另一個音 [e]，例如普通話裏「夜」字的韻母。而粵拼裏的 **e** 永遠只代表一個發音 [ɛ]，這個音類似於英語單詞 「yes」 的元音。
+普拼的 e 根據所在音節的不同，所代表的發音也完全不同。例如普通話裏「餓」字的韻母，國際音標是 [ɤ]。當它跟在 y 或者 i 後面時表達的則是另一個音 [e]，例如普通話裏「夜」和「些」字的韻母。而粵拼裏的 **e** 永遠只代表一個發音 [ɛ~e]，這個音類似於英語單詞 「yes」 的元音。
 {{< /alert >}}
 
 - 寫 se2 {{< audio id="se2" >}}
@@ -136,7 +136,21 @@ hide_feedback: false
 | 仙 sin1 {{< audio id="sin1" >}} | 星 sing1 {{< audio id="sing1" >}} |
 | 知 zi1 {{< audio id="zi1" >}}   | 即 zik1 {{< audio id="zik1" >}}   |
 
-### 2.5 聲母 ng-
+### 2.5 韻母 ui、o
+
+{{< alert color="success">}}
+普通話拼音中有兩個韻母縮寫，分別是 ui 和 o。我們知道普拼的 ui 其實並不是真的 ui 音，而是 uei 的縮寫，例如「會」字的拼音其實是 huei，只不過縮寫成了 hui。同樣地，韻母 uo 在搭配聲母 b p m f 時會縮寫成 o。 例如「波」字的普通話發音其實是 buo，但縮寫成 bo。
+
+粵拼中沒有縮寫，也沒有 uei 和 uo 這兩個韻母。粵拼中的 **ui** 和 **o** 一致表示 [u͡i] 和 [ɔː] 的發音。
+{{< /alert >}}
+
+| ui                              | o                             |
+| ------------------------------- | ----------------------------- |
+| 會 wui3 {{< audio id="wui3" >}} | 和 wo4 {{< audio id="wo4" >}} |
+| 杯 bui1 {{< audio id="bui1" >}} | 波 bo1 {{< audio id="bo1" >}} |
+| 癐 gui6 {{< audio id="gui6" >}} | 歌 go1 {{< audio id="go1" >}} |
+
+### 2.6 聲母 ng-
 
 {{< alert color="success">}}
 這個音的國際音標是 [ŋ]。普通話裏沒有這個聲母，而粵語裏的聲母 **ng-** 和零聲母 Ø- 是區分的。普通話母語者初學這個聲母會有點困難，因爲普通話裏的 ng 只存在於韻尾（後鼻音），需要稍加練習在聲母位置發這個音。
@@ -147,7 +161,7 @@ hide_feedback: false
 | 岸 ngon6 {{< audio id="ngon6" >}}   | 按 on3 {{< audio id="on3" >}}   |
 | 雁 ngaan6 {{< audio id="ngaan6" >}} | 晏 aan3 {{< audio id="aan3" >}} |
 
-### 2.6 韻尾 -m
+### 2.7 韻尾 -m
 
 {{< alert color="success">}}
 普通話裏的鼻音韻尾只有 -n 和 -ng（前鼻音和後鼻音），沒有 -m。而粵語保留了 **-m**、**-n**、**-ng** 三種鼻音韻尾。
@@ -159,7 +173,7 @@ hide_feedback: false
 | 含 ham4 {{< audio id="ham4" >}}   | 痕 han4 {{< audio id="han4" >}}   | 行 hang4{{< audio id="hang4" >}}    |
 | 尖 zim1 {{< audio id="zim1" >}}   | 煎 zin1 {{< audio id="zin1" >}}   | 精 zing1 {{< audio id="zing1" >}}   |
 
-### 2.7 韻尾 -p、-t、-k
+### 2.8 韻尾 -p、-t、-k
 
 {{< alert color="success">}}
 這三個韻尾就是傳統意義上的「入聲」。因爲普通話裏沒有入聲，所以對於普通話母語者來說需要花點時間來練習，下面的例字音頻可能要反覆播放對比才能聽出區別。
@@ -174,7 +188,7 @@ hide_feedback: false
 | 接 zip3 {{< audio id="zip3" >}}   | 节 zit3 {{< audio id="zit3" >}} | 脊 zek3 {{< audio id="zek3" >}} |
 | 集 zaap6 {{< audio id="zaap6" >}} | 活 wut6 {{< audio id="wut6" >}} | 六 luk6 {{< audio id="luk6" >}} |
 
-### 2.8 聲調
+### 2.9 聲調
 
 {{< alert color="dark">}}
 如果只是想學會用粵拼打字，可以**直接跳過本節**。粵語拼音輸入法不需要打聲調，不過如果加上聲調的話能提高輸入速度。
@@ -208,7 +222,7 @@ hide_feedback: false
 
 練習粵語聲調還有一個很好玩又有效的方法，就是利用粵語歌，詳見本站的[用粵語歌練習聲調](/zh-cmn-hant/blog/song/)。
 
-### 2.9 普通話特有、粵語不存在的音
+### 2.10 普通話特有、粵語不存在的音
 
 {{< alert color="success">}}
 粵語不區分平翹舌音，所以粵拼中無 zh ch sh r 四個聲母，另外粵語無普拼中的 j q x 音（粵拼的 j 等於普拼的 y）。
