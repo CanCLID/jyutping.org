@@ -1,5 +1,7 @@
 # jyutping.org
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/47ead146-726b-46e7-9917-601c8d883d3c/deploy-status)](https://app.netlify.com/sites/jyutping/deploys)
+
 For the English version, please go to [jyutping.org/en](https://www.jyutping.org/en/)
 
 ## 開發指南
