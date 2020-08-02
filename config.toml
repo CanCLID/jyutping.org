@@ -52,7 +52,7 @@ id = "UA-131567469-4"
 # Language configuration
 [languages]
 [languages.zh-yue-hant]
-title = "粵拼"
+title = "粵拼 Jyutping"
 description = "香港語言學學會粵語拼音方案"
 languageName ="🌏 粵語"
 contentDir = "content/zh-yue-hant"
