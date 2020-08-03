@@ -177,7 +177,7 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 #         desc = "Chat with other project developers"
 [[params.links.developer]]
 	name = "Email"
-	url = "mailto:laubonghaudoi@icloud.com"
+	url = "mailto:support@jyutping.org"
 	icon = "fa fa-envelope"
         desc = "Discuss development issues around the project"
 
