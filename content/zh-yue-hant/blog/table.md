@@ -1,7 +1,7 @@
 ---
 title: "粵拼與其他粵語拼音方案對照表"
 linkTitle: "粵拼與其他粵語拼音方案對照表"
-url: "/blog/particles"
+url: "/blog/table"
 weight: 2
 description: >
   本文列出粵拼與目前公共領域中常見嘅廣拼、教院、耶魯呢三種粵語拼音方案嘅對比，幫助讀者釐清佢哋嘅分別，方便更好噉學習同使用粵拼。
