@@ -1,6 +1,6 @@
 ---
 title: "點解要用粵拼，唔用其他粵語拼音方案？"
-linkTitle: "點解要用粵拼"
+linkTitle: "點解要用粵拼，唔用其他粵語拼音方案？"
 url: "/blog/scheme"
 weight: 2
 description: >
