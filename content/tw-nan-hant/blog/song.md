@@ -1,7 +1,7 @@
 ---
 title: "用粵語歌練習聲調"
 linkTitle: "用粵語歌練習聲調"
-url: "/blog/song"
+url: "/tw-nan-hant/blog/song"
 weight: 4
 description: >
   粵語歌係練習粵語聲調嘅第一大利器
@@ -16,6 +16,11 @@ description: >
 {{< songaudio >}}
 
 ## 漫步人生路
+
+<audio controls>
+  <source src="/song/maanboujansanglou.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
 
 作詞：鄭國江
 
@@ -68,6 +73,11 @@ description: >
 <ruby>小<rt>siu2{{< audio id="siu2" >}}</rt></ruby> <ruby>雨<rt>jyu5{{< audio id="jyu5" >}}</rt></ruby> <ruby>點<rt>dim2{{< audio id="dim2" >}}</rt></ruby> ，<ruby>放<rt>fong3{{< audio id="fong3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>灑<rt>saa2{{< audio id="saa2" >}}</rt></ruby> ，<ruby>早<rt>zou2{{< audio id="zou2" >}}</rt></ruby> <ruby>已<rt>ji5{{< audio id="ji5" >}}</rt></ruby> <ruby>決<rt>kyut3{{< audio id="kyut3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>向<rt>hoeng3{{< audio id="hoeng3" >}}</rt></ruby> <ruby>着<rt>zoek6{{< audio id="zoek6" >}}</rt></ruby> <ruby>前<rt>cin4{{< audio id="cin4" >}}</rt></ruby>
 
 ## 財神到
+
+<audio controls>
+  <source src="/song/coisandou.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
 
 作詞：許冠傑
 
@@ -162,6 +172,11 @@ description: >
 <ruby>大<rt>daai6{{< audio id="daai6" >}}</rt></ruby> <ruby>眾<rt>zung3{{< audio id="zung3" >}}</rt></ruby> <ruby>慶<rt>hing3{{< audio id="hing3" >}}</rt></ruby> <ruby>新<rt>san1{{< audio id="san1" >}}</rt></ruby> <ruby>春<rt>ceon1{{< audio id="ceon1" >}}</rt></ruby>  <ruby>望<rt>mong6{{< audio id="mong6" >}}</rt></ruby> <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby> 
 
 ## 富士山下
+
+<audio controls>
+  <source src="/song/fusisaanhaa.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
 
 填詞：林夕
 
