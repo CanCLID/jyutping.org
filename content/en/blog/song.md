@@ -238,7 +238,7 @@ For more Cantonese songs annotated with Jyutping, go to [粵拼歌詞網](https:
 
 <ruby>只<rt>zi2{{< audio id="zi2" >}}</rt></ruby> <ruby>敢<rt>gam2{{< audio id="gam2" >}}</rt></ruby> <ruby>撫<rt>fu2{{< audio id="fu2" >}}</rt></ruby> <ruby>你<rt>nei5{{< audio id="nei5" >}}</rt></ruby> <ruby>髮<rt>faat3{{< audio id="faat3" >}}</rt></ruby> <ruby>端<rt>dyun1{{< audio id="dyun1" >}}</rt></ruby>
 
-<ruby>這<rt>ze5{{< audio id="ze5" >}}</rt></ruby> <ruby>種<rt>zung2{{< audio id="zung2" >}}</rt></ruby> <ruby>姿<rt>zi1{{< audio id="zi1" >}}</rt></ruby> <ruby>態<rt>taai3{{< audio id="taai3" >}}</rt></ruby> <ruby>可<rt>ho2{{< audio id="ho2" >}}</rt></ruby> <ruby>會<rt>wui5{{< audio id="wui5" >}}</rt></ruby> <ruby>令<rt>ling6{{< audio id="ling6" >}}</rt></ruby> <ruby>你<rt>nei5{{< audio id="nei5" >}}</rt></ruby> <ruby>更<rt>gang1{{< audio id="gang1" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>酸<rt>syun1{{< audio id="syun1" >}}</rt></ruby>
+<ruby>這<rt>ze5{{< audio id="ze5" >}}</rt></ruby> <ruby>種<rt>zung2{{< audio id="zung2" >}}</rt></ruby> <ruby>姿<rt>zi1{{< audio id="zi1" >}}</rt></ruby> <ruby>態<rt>taai3{{< audio id="taai3" >}}</rt></ruby> <ruby>可<rt>ho2{{< audio id="ho2" >}}</rt></ruby> <ruby>會<rt>wui5{{< audio id="wui5" >}}</rt></ruby> <ruby>令<rt>ling6{{< audio id="ling6" >}}</rt></ruby> <ruby>你<rt>nei5{{< audio id="nei5" >}}</rt></ruby> <ruby>更<rt>gang3{{< audio id="gang3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>酸<rt>syun1{{< audio id="syun1" >}}</rt></ruby>
 
 <ruby>留<rt>lau4{{< audio id="lau4" >}}</rt></ruby> <ruby>在<rt>zoi6{{< audio id="zoi6" >}}</rt></ruby> <ruby>汽<rt>hei3{{< audio id="hei3" >}}</rt></ruby> <ruby>車<rt>ce1{{< audio id="ce1" >}}</rt></ruby> <ruby>裡<rt>leoi5{{< audio id="leoi5" >}}</rt></ruby> <ruby>取<rt>ceoi2{{< audio id="ceoi2" >}}</rt></ruby> <ruby>暖<rt>nyun5{{< audio id="nyun5" >}}</rt></ruby>
 
@@ -248,7 +248,7 @@ For more Cantonese songs annotated with Jyutping, go to [粵拼歌詞網](https:
 
 <ruby>人<rt>jan4{{< audio id="jan4" >}}</rt></ruby> <ruby>活<rt>wut6{{< audio id="wut6" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby> <ruby>幾<rt>gei2{{< audio id="gei2" >}}</rt></ruby> <ruby>歲<rt>seoi3{{< audio id="seoi3" >}}</rt></ruby> <ruby>算<rt>syun3{{< audio id="syun3" >}}</rt></ruby> <ruby>短<rt>dyun2{{< audio id="dyun2" >}}</rt></ruby>
 
-<ruby>失<rt>sat1{{< audio id="sat1" >}}</rt></ruby> <ruby>戀<rt>lyun2{{< audio id="lyun2" >}}</rt></ruby> <ruby>只<rt>zi2{{< audio id="zi2" >}}</rt></ruby> <ruby>有<rt>jau5{{< audio id="jau5" >}}</rt></ruby> <ruby>更<rt>gang1{{< audio id="gang1" >}}</rt></ruby> <ruby>短<rt>dyun2{{< audio id="dyun2" >}}</rt></ruby>
+<ruby>失<rt>sat1{{< audio id="sat1" >}}</rt></ruby> <ruby>戀<rt>lyun2{{< audio id="lyun2" >}}</rt></ruby> <ruby>只<rt>zi2{{< audio id="zi2" >}}</rt></ruby> <ruby>有<rt>jau5{{< audio id="jau5" >}}</rt></ruby> <ruby>更<rt>gang3{{< audio id="gang3" >}}</rt></ruby> <ruby>短<rt>dyun2{{< audio id="dyun2" >}}</rt></ruby>
 
 <ruby>歸<rt>gwai1{{< audio id="gwai1" >}}</rt></ruby> <ruby>家<rt>gaa1{{< audio id="gaa1" >}}</rt></ruby> <ruby>需<rt>seoi1{{< audio id="seoi1" >}}</rt></ruby> <ruby>要<rt>jiu3{{< audio id="jiu3" >}}</rt></ruby> <ruby>幾<rt>gei2{{< audio id="gei2" >}}</rt></ruby> <ruby>里<rt>lei5{{< audio id="lei5" >}}</rt></ruby> <ruby>路<rt>lou6{{< audio id="lou6" >}}</rt></ruby> <ruby>誰<rt>seoi4{{< audio id="seoi4" >}}</rt></ruby> <ruby>能<rt>nang4{{< audio id="nang4" >}}</rt></ruby> <ruby>預<rt>jyu6{{< audio id="jyu6" >}}</rt></ruby> <ruby>算<rt>syun3{{< audio id="syun3" >}}</rt></ruby>
 
