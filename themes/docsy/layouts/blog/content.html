@@ -5,11 +5,9 @@
 		{{ with .Params.author }}{{ T "post_byline_by" }} <b>{{ . | markdownify }}</b> |{{ end}}
 	</div>
 	{{ .Content }}
-	{{ if (.Site.DisqusShortname) }}
-		<br />
-		{{ partial "disqus-comment.html" . }}
-		<br />
-	{{ end }}
+	<br />
+	{{ partial "utterances" .}}
+	<br />
 
 	{{ partial "pager.html" . }}
 </div>

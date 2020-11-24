@@ -159,6 +159,10 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 	url = "https://words.hk/"
 	icon = "fa fa-file-audio"
         desc = "粵典"
+
+[params.utterances]
+	repo = "eatradish/jyutping.org"
+	
 # [[params.links.user]]
 # 	name = "Stack Overflow"
 # 	url = "https://example.org/stack"
@@ -180,4 +184,3 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 	url = "mailto:support@jyutping.org"
 	icon = "fa fa-envelope"
         desc = "Discuss development issues around the project"
-
