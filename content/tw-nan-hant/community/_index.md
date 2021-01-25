@@ -294,7 +294,7 @@ description: >
     <td class="tg-ssw7">em 舐 {{< audio id="lem2" >}}</td>
     <td class="tg-ssw7"></td>
     <td class="tg-ssw7">eng 鄭 {{< audio id="zeng6" >}}</td>
-    <td class="tg-ssw7">ep 夾</td>
+    <td class="tg-ssw7">ep 夾 {{< audio id="gep6" >}}</td>
     <td class="tg-ssw7">et 坺 </td>
     <td class="tg-ssw7">ek 石 {{< audio id="sek6" >}}</td>
   </tr>
