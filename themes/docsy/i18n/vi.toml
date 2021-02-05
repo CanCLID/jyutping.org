@@ -1,0 +1,43 @@
+
+
+# UI strings. Buttons and similar.
+
+[ui_pager_prev]
+other = "Bài trước"
+
+[ui_pager_next]
+other = "Bài tiếp theo"
+
+[ui_read_more]
+other = "Đọc toàn bộ"
+
+[ui_search]
+other = "Tìm kiếm ở trang web này."
+
+# Used in sentences such as "Posted in News"
+[ui_in]
+other = "ở"
+
+# Footer text
+[footer_all_rights_reserved]
+other = "Nội dung của trang web tuân theo thỏa thuận cấp phép CC0-1.0"
+
+[footer_privacy_policy]
+other = "Thỏa thuận quyền riêng tư"
+
+
+# Post (blog, articles etc.)
+[post_byline_by]
+other = "By"
+[post_created]
+other = "Created"
+[post_last_mod]
+other = "Cập nhật lần cuối vào"
+[post_edit_this]
+other = "Chỉnh sửa trang này"
+[post_create_issue]
+other = "Tạo issue mới"
+[post_create_project_issue]
+other = "Tạo issue dự án mới"
+[post_posts_in]
+other = " "

@@ -88,6 +88,13 @@ languageName ="🌍 English"
 contentDir = "content/en"
 time_format_default = "01.02.2006"
 time_format_blog = "01.02.2006"
+[languages.vi]
+title = "Việt bính Jyutping"
+description = "Một phương pháp phổ quát để phiên âm tiếng Quảng Đông"
+languageName ="🌍 Tiếng Việt"
+contentDir = "content/vi"
+time_format_default = "02.01.2006"
+time_format_blog = "02.01.2006"
 
 [markup]
   [markup.goldmark]
