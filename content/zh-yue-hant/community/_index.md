@@ -31,7 +31,7 @@ description: >
 <table class="tg">
   <tr>
     <th class="tg-50s5"></th>
-    <th class="tg-ed5u">脣音</th>
+    <th class="tg-ed5u">雙脣音</th>
     <th class="tg-ed5u">脣齒音</th>
     <th class="tg-d9jk">齒齦音</th>
     <th class="tg-d9jk">硬腭音</th>
