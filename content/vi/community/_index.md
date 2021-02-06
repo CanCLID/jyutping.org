@@ -31,15 +31,15 @@ Tất cả các phiên âm IPA trên trang này đều là chuyển tả âm v�
 <table class="tg">
   <tr>
     <th class="tg-50s5"></th>
-    <th class="tg-ed5u">脣音</th>
-    <th class="tg-ed5u">脣齒音</th>
-    <th class="tg-d9jk">齒齦音</th>
-    <th class="tg-d9jk">硬腭音</th>
-    <th class="tg-d9jk">軟腭音</th>
-    <th class="tg-d9jk">喉音</th>
+    <th class="tg-ed5u">Âm đôi môi</th>
+    <th class="tg-ed5u">Âm môi răng</th>
+    <th class="tg-d9jk">Âm răng</th>
+    <th class="tg-d9jk">Âm vòm</th>
+    <th class="tg-d9jk">Âm vòm mềm</th>
+    <th class="tg-d9jk">Âm hầu</th>
   </tr>
   <tr>
-    <td class="tg-99yb">爆發音</td>
+    <td class="tg-99yb">Âm bật</td>
     <td class="tg-0o7j">b [p] 巴 {{< audio id="baa1" >}}<br/>p [pʰ] 怕 {{< audio id="paa3" >}}</td>
     <td class="tg-0o7j"></td>
     <td class="tg-aqzh">d [t] 打 {{< audio id="daa2" >}}<br/>t [tʰ] 他 {{< audio id="taa1" >}}</td>
@@ -48,7 +48,7 @@ Tất cả các phiên âm IPA trên trang này đều là chuyển tả âm v�
     <td class="tg-aqzh"></td>
   </tr>
   <tr>
-    <td class="tg-99yb">塞擦音</td>
+    <td class="tg-99yb">Âm tắc xát</td>
     <td class="tg-0o7j"></td>
     <td class="tg-0o7j"></td>
     <td class="tg-aqzh">z [t͡s~t͡ʃ] 渣 {{< audio id="zaa1" >}}<br/>c [t͡sʰ~t͡ʃʰ] 叉 {{< audio id="caa1" >}}</td>
@@ -57,7 +57,7 @@ Tất cả các phiên âm IPA trên trang này đều là chuyển tả âm v�
     <td class="tg-aqzh"></td>
   </tr>
   <tr>
-    <td class="tg-43bj">鼻音</td>
+    <td class="tg-43bj">Âm mũi</td>
     <td class="tg-aqzh">m [m] 媽 {{< audio id="maa1" >}}</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh">n [n] 那 {{< audio id="naa5" >}}</td>
@@ -66,7 +66,7 @@ Tất cả các phiên âm IPA trên trang này đều là chuyển tả âm v�
     <td class="tg-aqzh"></td>
   </tr>
   <tr>
-    <td class="tg-43bj">擦音</td>
+    <td class="tg-43bj">Âm xát</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh">f [f] 花 {{< audio id="faa1" >}}</td>
     <td class="tg-aqzh">s [s] 沙 {{< audio id="saa1" >}}</td>
@@ -75,7 +75,7 @@ Tất cả các phiên âm IPA trên trang này đều là chuyển tả âm v�
     <td class="tg-aqzh">h [h] 蝦 {{< audio id="haa1" >}}</td>
   </tr>
   <tr>
-    <td class="tg-43bj">近音</td>
+    <td class="tg-43bj">Âm tiếp cận</td>
     <td class="tg-aqzh">w [w] 蛙 {{< audio id="waa1" >}}</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
@@ -84,7 +84,7 @@ Tất cả các phiên âm IPA trên trang này đều là chuyển tả âm v�
     <td class="tg-aqzh"></td>
   </tr>
   <tr>
-    <td class="tg-43bj">邊近音</td>
+    <td class="tg-43bj">Âm tiếp cận cạnh lưỡi</td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh"></td>
     <td class="tg-aqzh">l [l] 啦 {{< audio id="laa1" >}}</td>
@@ -126,14 +126,14 @@ Không thanh mẫu không cầu dấu chữ cái, ví dụ: "呀" chỉ được
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-teg3">i [iː] 詩 {{< audio id="si1" >}}<br/>i<sub>後接 -ng, -k</sub> [e] 星 {{< audio id="sing1" >}} 識 {{< audio id="sik1" >}}<br/>yu [y] 書 {{< audio id="syu1" >}}</th>
+    <th class="tg-teg3">i [iː] 詩 {{< audio id="si1" >}}<br/>i<sub>Tiếp theo là -ng, -k</sub> [e] 星 {{< audio id="sing1" >}} 識 {{< audio id="sik1" >}}<br/>yu [y] 書 {{< audio id="syu1" >}}</th>
     <th class="tg-lnec"></th>
-    <th class="tg-teg3">u [uː] 夫 {{< audio id="fu1" >}}<br/>u<sub>後接 -ng, -k</sub> [o] 風 {{< audio id="fung1" >}} 福 {{< audio id="fuk1" >}}</th>
+    <th class="tg-teg3">u [uː] 夫 {{< audio id="fu1" >}}<br/>u<sub>Tiếp theo là -ng, -k</sub> [o] 風 {{< audio id="fung1" >}} 福 {{< audio id="fuk1" >}}</th>
   </tr>
   <tr>
-    <td class="tg-teg3">e<sub>後接 -i</sub> [e] 四 {{< audio id="sei3" >}}<br/>eo [ɵ] 詢 {{< audio id="seon1" >}}</td>
+    <td class="tg-teg3">e<sub>Tiếp theo là -i</sub> [e] 四 {{< audio id="sei3" >}}<br/>eo [ɵ] 詢 {{< audio id="seon1" >}}</td>
     <td class="tg-teg3"></td>
-    <td class="tg-teg3">o<sub>後接 -u</sub> [o] 蘇 {{< audio id="sou1" >}}</td>
+    <td class="tg-teg3">o<sub>Tiếp theo là -u</sub> [o] 蘇 {{< audio id="sou1" >}}</td>
   </tr>
   <tr>
     <td class="tg-teg3">e [ɛː] 些 {{< audio id="se1" >}}<br/>oe [œː] 鋸 {{< audio id="goe3" >}}</td>
@@ -147,7 +147,7 @@ Không thanh mẫu không cầu dấu chữ cái, ví dụ: "呀" chỉ được
   </tr>
 </table>
 
-### 3.2 Phụ âm cuối vần
+### 3.2 Cuối vần
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -160,19 +160,19 @@ Không thanh mẫu không cầu dấu chữ cái, ví dụ: "呀" chỉ được
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-ed5u">爆發音</th>
+    <th class="tg-ed5u">Âm bật</th>
     <th class="tg-8oy2">p [p̚] 溼 {{< audio id="sap1" >}}</th>
     <th class="tg-8oy2">t [t̚] 失 {{< audio id="sat1" >}}</th>
     <th class="tg-8oy2">k [k̚] 塞 {{< audio id="sak1" >}}</th>
   </tr>
   <tr>
-    <td class="tg-ed5u">鼻音</td>
+    <td class="tg-ed5u">Âm mũi</td>
     <td class="tg-8oy2">m [m] 心 {{< audio id="sam1" >}}</td>
     <td class="tg-8oy2">n [n] 身 {{< audio id="san1" >}}</td>
     <td class="tg-8oy2">ng [ŋ] 生 {{< audio id="sang1" >}}</td>
   </tr>
   <tr>
-    <td class="tg-ed5u">元音</td>
+    <td class="tg-ed5u">Nguyên âm</td>
     <td class="tg-8oy2"></td>
     <td class="tg-8oy2">i [i] 西 {{< audio id="sai1" >}} 需 {{< audio id="seoi1" >}}</td>
     <td class="tg-8oy2">u [u] 收 {{< audio id="sau1" >}}</td>
@@ -196,11 +196,11 @@ Không thanh mẫu không cầu dấu chữ cái, ví dụ: "呀" chỉ được
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-pmgz" colspan="2" rowspan="2">韻腹</th>
-    <th class="tg-pmgz">單元音</th>
-    <th class="tg-pmgz" colspan="2">複元音</th>
-    <th class="tg-pmgz" colspan="3">鼻音韻尾</th>
-    <th class="tg-pmgz" colspan="3">爆發音韻尾（入聲韻）</th>
+    <th class="tg-pmgz" colspan="2" rowspan="2">Nguyên âm trong vần</th>
+    <th class="tg-pmgz">Nguyên âm đơn</th>
+    <th class="tg-pmgz" colspan="2">Nguyên âm kép</th>
+    <th class="tg-pmgz" colspan="3">Cuối vần âm mũi</th>
+    <th class="tg-pmgz" colspan="3">Cuối vần âm bật (Thanh nhập)</th>
   </tr>
   <tr>
     <td class="tg-solh">-</td>
@@ -397,20 +397,20 @@ Không thanh mẫu không cầu dấu chữ cái, ví dụ: "呀" chỉ được
 <table class="tg">
   <tr>
     <th class="tg-ed5u"></th>
-    <th class="tg-ed5u">平</th>
-    <th class="tg-5ye1">上</th>
-    <th class="tg-5ye1">去</th>
-    <th class="tg-5ye1">入</th>
+    <th class="tg-ed5u">Bằng</th>
+    <th class="tg-5ye1">Thượng</th>
+    <th class="tg-5ye1">Khứ</th>
+    <th class="tg-5ye1">Nhập</th>
   </tr>
   <tr>
-    <td class="tg-5ye1">陰</td>
+    <td class="tg-5ye1">Âm</td>
     <td class="tg-gjbb">1 [˥] 詩 {{< audio id="si1" >}}</td>
     <td class="tg-gjbb">2 [˧˥] 史 {{< audio id="si2" >}}</td>
     <td class="tg-gjbb">3 [˧] 試 {{< audio id="si3" >}}</td>
     <td class="tg-gjbb">1 [˥] 識 {{< audio id="sik1" >}}<br/>3 [˧] 洩 {{< audio id="sit3" >}}</td>
   </tr>
   <tr>
-    <td class="tg-5ye1">陽</td>
+    <td class="tg-5ye1">Dương</td>
     <td class="tg-gjbb">4 [˨˩] 時 {{< audio id="si4" >}}</td>
     <td class="tg-gjbb">5 [˩˧] 市 {{< audio id="si5" >}}</td>
     <td class="tg-gjbb">6 [˨] 事 {{< audio id="si6" >}}</td>
