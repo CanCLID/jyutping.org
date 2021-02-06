@@ -419,7 +419,7 @@ Null initial is not represented, e.g. "呀" is only spelt as "aa".
 </table>
 
 {{< alert >}}
-Tone marks appear at the end of the syllables. 
+Tone marks appear at the end of the syllables.
 
 **Examples:**
 fu1 (夫), fu2 (虎), fu3 (副), fu4 (扶), fu5 (婦), fu6 (父)

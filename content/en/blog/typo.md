@@ -12,7 +12,7 @@ The writing system of Cantonese uses traditional Chinese characters. For typos c
 ## Common typos and recommended orthography
 
 {{< alert title="說明">}}
-Some morphomes have more than one recommended characters, which means either character is fine. This is out of the considereation of regional differences in writing traditions. 
+Some morphemes have more than one recommended characters, which means either character is fine. This is out of the considereation of regional differences in writing traditions.
 {{< /alert >}}
 
 | 粵拼                  | 常見混用寫法 | 釋義 & 判別標準                                                                                                                                                                                                                                                                                               |
