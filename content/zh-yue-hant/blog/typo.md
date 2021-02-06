@@ -7,7 +7,7 @@ description: >
   本頁列出粵文中常見嘅錯別字，幫助大家寫規範粵文。
 ---
 
-粵文一般使用傳統漢字做書寫系統，因此冇簡化字中多字合併嘅問題。關於大陸簡化字嘅歸併問題，請參見[簡化合併字表](http://www.guguolin.com/tool_jianhua_hbz.php)同[簡化同形字表](http://www.guguolin.com/tool_jianhua_txz.php)。
+粵文一般使用傳統漢字做書寫系統，因此冇簡化字中多字合併嘅問題。關於大陸簡化字嘅歸併問題，請參見[簡化合併字表](http://www.kaom.net/font_jianhua_hbz.php)同[簡化同形字表](http://www.kaom.net/font_jianhua_txz.php)。
 
 ## 常見錯別字表同推薦用字方案
 

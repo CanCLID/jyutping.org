@@ -7,7 +7,7 @@ description: >
   Danh sách các lỗi chính tả phổ biến trong tiếng Quảng Đông.
 ---
 
-Hệ thống chữ viết của tiếng Quảng Đông sử dụng các chữ Hán phồn thể. Đối với lỗi chính tả do [các chữ Hán được hợp nhất vì giản hóa](https://en.wikipedia.org/wiki/Ambiguities_in_Chinese_character_simplification), vui lòng tham khảo [簡化合併字表](http://www.guguolin.com/tool_jianhua_hbz.php) và [簡化同形字表](http://www.guguolin.com/tool_jianhua_txz.php)。
+Hệ thống chữ viết của tiếng Quảng Đông sử dụng các chữ Hán phồn thể. Đối với lỗi chính tả do [các chữ Hán được hợp nhất vì giản hóa](https://en.wikipedia.org/wiki/Ambiguities_in_Chinese_character_simplification), vui lòng tham khảo [簡化合併字表](http://www.kaom.net/font_jianhua_hbz.php) và [簡化同形字表](http://www.kaom.net/font_jianhua_txz.php)。
 
 ## Danh sách lỗi chính tả phổ biến và các chữ được đề xuất
 
