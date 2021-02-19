@@ -30,7 +30,7 @@ All IPA transcriptions on this page are phonemic transcriptions，source of the 
 <table class="tg">
   <tr>
     <th class="tg-50s5"></th>
-    <th class="tg-ed5u">Plosive</th>
+<th class="tg-ed5u">Bilabial</th>
     <th class="tg-ed5u">Labio-dental</th>
     <th class="tg-ed5u">Alveolar-dental</th>
     <th class="tg-ed5u">Palatal</th>
