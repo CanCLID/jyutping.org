@@ -161,7 +161,7 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
         desc = "粵典"
 
 [params.utterances]
-	repo = "CanCLID/jyutping.org-comment"
+	repo = "eatradish/jyutping.org"
 	
 # [[params.links.user]]
 # 	name = "Stack Overflow"
