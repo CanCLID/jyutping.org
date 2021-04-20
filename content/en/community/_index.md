@@ -14,7 +14,7 @@ description: >
 All IPA transcriptions on this page are phonemic transcriptions，source of the audio data is [粵典 works.hk](https://words.hk/). For further details please see [Reference](#reference).
 {{< /alert >}}
 
-## 1. Initial
+## 1. Onset
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -30,7 +30,7 @@ All IPA transcriptions on this page are phonemic transcriptions，source of the 
 <table class="tg">
   <tr>
     <th class="tg-50s5"></th>
-    <th class="tg-ed5u">Bilabial</th>
+<th class="tg-ed5u">Bilabial</th>
     <th class="tg-ed5u">Labio-dental</th>
     <th class="tg-ed5u">Alveolar-dental</th>
     <th class="tg-ed5u">Palatal</th>
