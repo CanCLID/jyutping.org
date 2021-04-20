@@ -1,18 +1,18 @@
 ---
-title: "粵文常見錯別字"
-linkTitle: "粵文常見錯別字"
-url: "/blog/typo"
+title: "Lỗi chính tả phổ biến trong tiếng Quảng Đông"
+linkTitle: "Lỗi chính tả phổ biến trong tiếng Quảng Đông"
+url: "/vi/blog/typo"
 weight: 3
 description: >
-  本頁列出粵文中常見嘅錯別字，幫助大家寫規範粵文。
+  Danh sách các lỗi chính tả phổ biến trong tiếng Quảng Đông.
 ---
 
-粵文一般使用傳統漢字做書寫系統，因此冇簡化字中多字合併嘅問題。關於大陸簡化字嘅歸併問題，請參見[簡化合併字表](http://www.kaom.net/font_jianhua_hbz.php)同[簡化同形字表](http://www.kaom.net/font_jianhua_txz.php)。
+Hệ thống chữ viết của tiếng Quảng Đông sử dụng các chữ Hán phồn thể. Với lỗi chính tả do [các chữ Hán được hợp nhất vì giản hóa](https://en.wikipedia.org/wiki/Ambiguities_in_Chinese_character_simplification), vui lòng tham khảo [簡化合併字表](http://www.kaom.net/font_jianhua_hbz.php) và [簡化同形字表](http://www.kaom.net/font_jianhua_txz.php)。
 
-## 常見錯別字表同推薦用字方案
+## Danh sách những lỗi chính tả phổ biến và gợi ý dùng chữ
 
-{{< alert title="說明">}}
-表中部分字有唔止一個建議用字，主要考慮到粵語區唔同地域用字習慣，表示呢幾種用字皆可。
+{{< alert title="Lời giải thích">}}
+Một số từ có thể viết bằng nhiều chữ, tức là dùng một trong hai chữ đều đúng. Đó là vì giữa các vùng sử dụng những cách viết khác nhau.
 {{< /alert >}}
 
 | 粵拼                  | 常見混用寫法 | 釋義 & 判別標準                                                                                                                                                                                                                                                                                               |

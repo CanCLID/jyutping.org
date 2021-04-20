@@ -8,7 +8,7 @@ description: >
 ---
 
 {{< alert title="Principles of Choosing Characters">}}
-The principle of this scheme is **one character corresponds to one morpheme**. For characters that share a same syllable, normally we define those with tone 1, 3 and 4 as separate morphemes, and those with tone 2, 5 and 6 as derivations, which are recommended to be denoted using punctuations. For example, we recommend writing "㗎？"instead of "𠿪" to represent the morpheme **gaa2**.
+The principle of this scheme is **one character corresponds to one morpheme**. For characters that share a same syllable, normally we define those with tone 1, 3 and 4 as separate morphemes, and those with tone 2, 5 and 6 as derivations, which are recommended to be denoted using punctuations. For example, we recommend writing "㗎？" instead of "𠿪" to represent the morpheme **gaa2**.
 
 For most open syllable particles with **aa**, we recommend not contrasting **aa** and **a**, e.g. **laa3** and **la3** are regarded as the same morpheme.
 {{< /alert >}}

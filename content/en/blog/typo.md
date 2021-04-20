@@ -7,12 +7,12 @@ description: >
   A list of common typos in written Cantonese.
 ---
 
-The writing system of Cantonese uses traditional Chinese characters. For typos caused by [merged simplified characters](https://en.wikipedia.org/wiki/Ambiguities_in_Chinese_character_simplification), please refer to [簡化合併字表](http://www.guguolin.com/tool_jianhua_hbz.php) and [簡化同形字表](http://www.guguolin.com/tool_jianhua_txz.php).
+The writing system of Cantonese uses traditional Chinese characters. For typos caused by [merged simplified characters](https://en.wikipedia.org/wiki/Ambiguities_in_Chinese_character_simplification), please refer to [簡化合併字表](http://www.kaom.net/font_jianhua_hbz.php) and [簡化同形字表](http://www.kaom.net/font_jianhua_txz.php).
 
 ## Common typos and recommended orthography
 
-{{< alert title="說明">}}
-Some morphomes have more than one recommended characters, which means either character is fine. This is out of the considereation of regional differences in writing traditions. 
+{{< alert title="Note">}}
+Some morphemes have more than one recommended characters, which means either character is fine. This is out of the considereation of regional differences in writing traditions.
 {{< /alert >}}
 
 | 粵拼                  | 常見混用寫法 | 釋義 & 判別標準                                                                                                                                                                                                                                                                                               |
