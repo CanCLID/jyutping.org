@@ -5,7 +5,7 @@ menu:
   main:
     weight: 2
 description: >
-  Việt bính: Phương pháp phiên âm tiếng Quảng Đông của Hội học thuật ngôn ngữ Hồng Kông
+  Việt bính: Phương pháp phiên âm tiếng Quảng Đông của Hội học thuật ngôn ngữ học Hồng Kông
 ---
 
 {{< chartaudio >}}
@@ -113,9 +113,9 @@ Không thanh mẫu không cầu dấu chữ cái, ví dụ: "呀" chỉ được
   </tr>
 </table>
 
-## 3. Vần
+## 3. Vận mẫu
 
-### 3.1 Nguyên âm trong vần
+### 3.1 Nguyên âm trong vận mẫu
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -147,7 +147,7 @@ Không thanh mẫu không cầu dấu chữ cái, ví dụ: "呀" chỉ được
   </tr>
 </table>
 
-### 3.2 Cuối vần
+### 3.2 Âm cuối vận mẫu
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -179,7 +179,7 @@ Không thanh mẫu không cầu dấu chữ cái, ví dụ: "呀" chỉ được
   </tr>
 </table>
 
-### 3.3 Tất cả vần
+### 3.3 Tất cả vận mẫu
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -196,11 +196,11 @@ Không thanh mẫu không cầu dấu chữ cái, ví dụ: "呀" chỉ được
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-pmgz" colspan="2" rowspan="2">Nguyên âm trong vần</th>
+    <th class="tg-pmgz" colspan="2" rowspan="2">Nguyên âm trong vận mẫu</th>
     <th class="tg-pmgz">Nguyên âm đơn</th>
     <th class="tg-pmgz" colspan="2">Nguyên âm kép</th>
-    <th class="tg-pmgz" colspan="3">Cuối vần âm mũi</th>
-    <th class="tg-pmgz" colspan="3">Cuối vần âm bật (Thanh nhập)</th>
+    <th class="tg-pmgz" colspan="3">Âm mũi cuối vận mẫu</th>
+    <th class="tg-pmgz" colspan="3">Âm bật cuối vận mẫu (Thanh nhập)</th>
   </tr>
   <tr>
     <td class="tg-solh">-</td>

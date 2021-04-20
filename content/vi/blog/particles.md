@@ -1,26 +1,26 @@
 ---
-title: "Từ ngữ khí tiếng Quảng Đông"
-linkTitle: "Từ ngữ khí tiếng Quảng Đông"
+title: "Trợ từ ngữ khí trong tiếng Quảng Đông"
+linkTitle: "Trợ từ ngữ khí trong tiếng Quảng Đông"
 url: "/vi/blog/particles"
 weight: 2
 description: >
-  Tiếng Quảng Đông có rất nhiều từ ngữ khí như tiếng Việt. Trang này cung cấp danh sách cho tất cả chúng, giúp bạn phân biệt và nắm vững cách sử dụng chúng.
+  Cũng như tiếng Việt, tiếng Quảng Đông có rất nhiều trợ từ ngữ khí. Chúng tôi sẽ liệt kê danh sách các trợ từ ngữ khí để giúp bạn phân biệt và nắm được cách sử dụng.
 ---
 
 {{< alert title="Nguyên tắc chọn chữ">}}
 
-Nguyên tắc của phương án này là **một chữ đối ứng với một hình vị**. Đối với các chữ chia sẻ cùng một âm tiết, thông thường chúng tôi xác định những chữ có thanh 1, 3 và 4 là các hình vị độc lập, và những chữ có thanh 2, 5 và 6 là các biến thể, được khuyến nghị biểu thị bằng cách sử dụng dấu câu. Ví dụ: chúng tôi khuyên bạn nên viết "㗎？" thay vì "𠿪" để đại diện cho cái hình vị **gaa2**.
+Nguyên tắc của phương án này là **một chữ tương ứng với một hình vị**. Đối với các chữ có cùng một âm tiết, thông thường chúng tôi xác định những chữ có thanh 1, 3 và 4 là các hình vị độc lập, và những chữ có thanh 2, 5 và 6 là các biến thể, được khuyến nghị biểu thị bằng cách sử dụng dấu câu. Ví dụ: chúng tôi khuyên bạn nên viết "㗎？" thay vì "𠿪" để đại diện cho cái hình vị **gaa2**.
 
-Đối với các từ ngữ khí có âm tiết mở với **aa**, chúng tôi khuyên bạn không nên tương phản **aa** và **a**, ví dụ: **laa3** và **la3** được coi là cùng một hình vị.
+Đối với các trợ từ ngữ khí có âm tiết mở với **aa**, chúng tôi khuyên bạn không nên tương phản **aa** và **a**, ví dụ: **laa3** và **la3** được coi là cùng một hình vị.
 {{< /alert >}}
 
-## Bảng các chữ được đề xuất cho các từ ngữ khí cuối câu trong tiếng Quảng Đông
+## Bảng các gợi ý dùng chữ cho các trợ từ ngữ khí cuối câu trong tiếng Quảng Đông
 
 {{< alert title="Lời giải thích">}}
 
-- Con chữ "了", phát âm là **liu5**, không được khuyến khích làm từ ngữ khí cuối câu.
+- Con chữ "了", phát âm là **liu5**, không được khuyến khích làm trợ từ ngữ khí cuối câu.
 - Không có "吧" trong tiếng Quảng Đông. "吧" chỉ tồn tại trong tiếng Phổ Thông.
-- "嗱" **naa4** là một từ ngữ khí đầu câu và cũng được bao gồm trong bảng này, để tương phản với từ ngữ khí cuối câu "喇" **laa4**.
+- "嗱" **naa4** là một trợ từ ngữ khí đầu câu và cũng được bao gồm trong bảng này, để tương phản với trợ từ ngữ khí cuối câu "喇" **laa4**.
   {{< /alert >}}
 
 | 推薦用字 | 拼音           | 例句                                   | 備註                                                                             |
@@ -63,11 +63,11 @@ Nguyên tắc của phương án này là **một chữ đối ứng với một
 | 啫       | ze1            | 無非都係噉嘅～。                       |                                                                                  |
 | 唧       | zek1           | 究竟發生咗咩～？                       |                                                                                  |
 
-## Ví dụ về các từ ngữ khí kết hợp
+## Ví dụ về các trợ từ ngữ khí kết hợp
 
 {{< alert title="Lời giải thích">}}
 
-Dưới đây là một số ví dụ về các từ ngữ khí cuối câu trong tiếng Quảng Đông. Lưu ý rằng một số chữ có thể có nguyên âm ngắn hơn bình thường, ví dụ: 吖 trong 吖嘛 có thể là **aa1** hoặc **a1**.
+Dưới đây là một số ví dụ về các trợ từ ngữ khí cuối câu trong tiếng Quảng Đông. Lưu ý rằng một số chữ có thể có nguyên âm ngắn hơn bình thường, ví dụ: 吖 trong 吖嘛 có thể là **aa1** hoặc **a1**.
 {{< /alert >}}
 
 | 漢字        | 拼音                   | 例句                                                    | 備註                             |

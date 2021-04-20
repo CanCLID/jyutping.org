@@ -2,261 +2,257 @@
 title: "Tôi đang học tiếng Quảng Đông và nói tiếng Việt"
 weight: 1
 description: >
-  Tiếng Quảng Đông thường được viết bằng chữ Hán. Bạn có lẽ cần khoảng 3000 chữ Hán để thoải mái sử dụng tiếng Quảng Đông. Nghe có vẻ nhiều? Đó thật là rất nhiều. Thế là tại sao chúng ta cần một hệ thống phiên âm trong khi đang học các chữ Hán. 
+  Tiếng Quảng Đông thường được viết bằng chữ Hán. Bạn cần khoảng 3000 chữ Hán để sử dụng thành thạo tiếng Quảng Đông. Nghe có vẻ nhiều? Đúng là rất nhiều. Đó là tại sao chúng ta cần một hệ thống phiên âm trong khi đang học các chữ Hán. 
 hide_feedback: false
 ---
 
 {{< docaudio >}}
 
-{{< alert title="寫法區別 & 音系區別">}}
-粵拼同普拼嘅區別分兩類：寫法區別同音系區別。
+## 1. Giới thiệu
 
-**寫法區別**
-即呢個發音喺普通話同粵語入邊都有，只不過喺兩種拼音入邊用唔同嘅字母來代表，呢類區別一睇就識。
+Không giống với tiếng Việt cần sử dụng các kí hiệu dấu và những kí hiệu khác để đánh vần, Việt bính chỉ cần sử dụng 26 chữ Latinh và 6 chữ số.
 
-**音系區別**
-即普通話冇呢個音，得粵語獨有，呢類往往都係普通話母語者學粵語嘅重點難點。
-{{< /alert >}}
+Người Việt Nam học tiếng Quảng Đông thường cũng có kiến thức căn bản về tiếng Anh và tiếng Phổ Thông, vì vậy ở những phần sau, khi giải thích về Việt bính, chúng ta sẽ đưa ra những phát âm tương tự trong tiếng Anh hoặc tiếng Phổ Thông (Hanyu Pinyin) làm ví dụ để tiện học tập hơn.
 
-> 本文講解發音個陣會用到國際音標（IPA），如果讀者唔熟國際音標都冇所謂，直接撳個 {{< audio >}} 掣聽例字嘅錄音就可以感受到個發音嘞。
+Ngoài ra còn một điều cần lưu ý nữa là cách viết và cách phát âm của Việt bính gần như có thể tương ứng với nhau, thường không có ngoại lệ.
+
+Dưới đây là 4 khái niệm: đồng âm cùng cách viết, đồng âm khác cách viết, âm dễ nhầm lẫn, âm mới cần luyện tập
+
+1. **Đồng âm cùng cách viết**: là Việt bính có những âm với cách viết và cách phát âm hoàn toàn giống với tiếng Việt.
+2. **Đồng âm khác cách viết**: là những âm mà có cách viết giống với chữ Quốc ngữ nhưng cách phát âm khác nhau.
+3. **Âm dễ nhầm lẫn**: là những âm có cách viết giống với tiếng Việt nhưng cách đọc có sự khác biệt nhỏ, cần chú ý phân biệt.
+4. **Âm mới cần luyện tập**: là những âm không có trong tiếng Việt, mà chỉ có trong tiếng Quảng Đông, cần luyện tập nhiều hơn.
+
+Bài viết này sẽ giải thích về Việt bính và cách phát âm của nó theo thứ tự trên, hy vọng sẽ hữu ích cho việc học tiếng Quảng Đông của bạn.
+
+> Bảng mẫu tự ngữ âm quốc tế (IPA) sẽ được sử dụng để giải thích cách phát âm, nếu bạn không quen với IPA thì có thể bỏ qua. Bạn có thể nhấp vào nút nghe trong ví dụ để nghe cách phát âm tương ứng. Trong phần ví dụ  có bạn có thể nghe cách phát âm tương ứng bằng cách nhấp vào nút {{< audio >}}.
 >
-> 本文所有粵拼都用粗體顯示，每隻例字拼音後面嘅數字 1 - 6 係聲調，讀者可以暫時先忽略，或者直接跳到 [2.7 聲調](#2-7-聲調)一節瞭解完聲調再開始讀本文。
+> Tất cả các Việt bính trong bài viết này đều sẽ được **in đậm**, các số 1-6 trong Việt bính là số của thanh điệu, người mới bắt đầu chưa quen với thanh điệu cũng có thể tạm thời bỏ qua.
 
-## 1. 寫法區別
+## 2. Đồng âm cùng cách viết
 
-### 1.1 普拼 y → 粵拼 j
+Tình huống phát âm và cách viết hoàn toàn giống nhau chỉ xuất hiện ở một vài thanh mẫu và vận mẫu bắt đầu bằng i hoặc u, còn những phần khác thì sẽ hơi khác một chút. Đó có thể là sự khác biệt về cách viết (xem phần 3), hoặc là một sự khác biệt nhỏ trong cách phát âm (xem phần 4).
 
-{{< alert color="success">}}
-普拼嘅 y 喺粵拼入邊寫成 **j**。之所以寫成 **j** 係出於兩個考慮：一係呢個音國際音標入邊就係寫成 [j]（普拼嘅 y 係英文嘅寫法）；二係如果寫成 y，會同韻母 **yu** 撈亂（詳細解釋可見本站嘅[ 關於 j 同 y](/blog/scheme/#關於-j-同-y)）。
-{{< /alert >}}
+### 2.1 Thanh mẫu hoàn toàn đồng nhất
 
-| 例字                       | ✔️ 正確寫法 | ❌ 錯誤寫法 |
-| -------------------------- | ----------- | ----------- |
-| 一 {{< audio id="jat1" >}} | jat1        | yat1        |
-| 以 {{< audio id="ji5" >}}  | ji5         | yi5         |
-| 夜 {{< audio id="je6" >}}  | je6         | ye6         |
+Trong cách viết của chữ Quốc ngữ và Việt bính, các thanh mẫu hoàn toàn đồng nhất như sau: **m**, **n**, **l**, **h**, **ng**. Những âm này tương đối đơn giản, vì vậy không lấy ví dụ.
 
-### 1.2 普拼 ü → 粵拼 yu
+### 2.2 Vận mẫu hoàn toàn đồng nhất
 
-{{< alert color="success">}}
-呢個音嘅國際音標係 [y]。呢個韻母雖然係單元音，但喺粵拼入邊用咗 **yu** 兩個字母來表示，噉係爲咗避免好似普通話嘅 ü 噉要用到附加符號，另一方面都係前文提到嘅，防止同 **j** 撈亂。
-{{< /alert >}}
+Trong cách viết chữ Quốc ngữ và Việt bính, các vận mẫu hoàn toàn đồng nhất chủ yếu là một số vận mẫu bắt đầu bằng **i** hoặc **u**.
 
-| 例字                        | ✔️ 正確寫法 | ❌ 錯誤寫法 |
-| --------------------------- | ----------- | ----------- |
-| 豬 {{< audio id="zyu1" >}}  | zyu1        | zü1         |
-| 村 {{< audio id="cyun1" >}} | cyun1       | cün1        |
-| 雨{{< audio id="jyu5" >}}   | jyu5        | jü5 / yu5   |
+#### 2.2.1 Một số vận mẫu bắt đầu bằng "i"
 
-### 1.3 普拼 gu-、ku- → 粵拼 gw-、kw-
+| Vận mẫu | Ví dụ | Việt bính |
+| ------- | -- | ----------- |
+| i       | 知 | zi1 {{< audio id="zi1" >}} |
+| iu      | 少 | siu2 {{< audio id="siu2" >}}|
+| im      | 点 | dim2 {{< audio id="dim2" >}}|
+| in (giọng Bắc) | 面 | min6 {{< audio id="min6" >}} |
+| ip      | 碟 | dip6 {{< audio id="dip6" >}} |
+| it (giọng Bắc) | 熱 | jit6  {{< audio id="jit6" >}} |
 
-{{< alert color="success">}}
-普拼嘅 gu-、ku-，喺粵拼入邊用 **gw-**、**kw-** 來表示。不過要注意，gu、gun 仲係 gu、gun。
-{{< /alert >}}
+#### 2.2.2 Một số vận mẫu bắt đầu bằng "u"
 
-| 例字                         | ✔️ 正確寫法 | ❌ 錯誤寫法 |
-| ---------------------------- | ----------- | ----------- |
-| 廣 {{< audio id="gwong2" >}} | gwong2      | guong2      |
-| 狂 {{< audio id="kwong4" >}} | kwong4      | kuong4      |
-| 昆 {{< audio id="kwan1" >}}  | kwan1       | kuan1       |
-| 古 {{< audio id="gu2" >}}    | gu2         | gwu2 / gw2  |
+| Vận mẫu | Ví dụ | Việt bính |
+| ------- | -- | ----------- |
+| u | 苦 | fu2 {{< audio id="fu2" >}} |
+| ui | 杯 | bui1 {{< audio id="bui1" >}} |
+| un (giọng Bắc) | 門 | mun4 {{< audio id="mun4" >}} |
+| ut (giọng Bắc) | 活 | wut6 {{< audio id="wut6" >}} |
 
-### 1.4 普拼 ong → 粵拼 ung
+## 3. Đồng âm khác cách viết
 
-{{< alert color="success">}}
-普拼中嘅 ong 同粵拼嘅 **ung** 發音係一樣嘅，國際音標都係 [ʊŋ]，而粵拼中嘅 **ong** 係普通話冇嘅發音，國際音標係 [ɔŋ]。
-{{< /alert >}}
+Có những Việt bính có cách viết khác với chữ Quốc ngữ nhưng cách đọc lại gần giống nhau. Trường hợp này gồm 10 thanh mẫu và một số vận mẫu bắt đầu bằng **a**, **aa** và **o**.
 
-| ung                               | ong                               |
-| --------------------------------- | --------------------------------- |
-| 鍾 zung1 {{< audio id="zung1" >}} | 莊 zong1 {{< audio id="zong1" >}} |
-| 公 gung1 {{< audio id="gung1" >}} | 江 gong1 {{< audio id="gong1" >}} |
+### 3.1 Thanh mẫu đồng âm khác cách viết
 
-### 1.5 普拼 ao → 粵拼 aau
+Mặc dù những thanh mẫu dưới đây có cách viết khác nhau, nhưng phát âm của chúng về cơ bản là đồng nhất, có thể coi là một.
 
-{{< alert color="success">}}
-粵拼以 u 而非 o 結尾，呢個都係遵循國際音標嘅寫法。
-{{< /alert >}}
+| Thanh mẫu  | Chữ Quốc ngữ | Ví dụ | Việt bính |
+| ------- | -- | ----------- | ------- |
+| b     | p     | 爸 | baa1 {{< audio id="baa1" >}} |
+| f     | ph     | 飯 | faan6 {{< audio id="faam6" >}} |
+| d     | t     | 打 | daa2 {{< audio id="daa2" >}} |
+| t     | th    | 睇 | tai2 {{< audio id="tai2" >}} |
+| g     | c      | 九 | gau2 {{< audio id="gau2" >}} |
+| k     | kh (giọng Nam) | 佢 | keoi5 {{< audio id="keoi5" >}} |
+| s | x | 三 | saam1 {{< audio id="saam1" >}} |
+| gw | qu (giọng Bắc) | 瓜 | gwaa1 {{< audio id="gwaa1" >}} |
+| j | d (giọng Nam) | 有 | jau5 {{< audio id="jau5" >}} |
+| w | qu (giọng Nam) | 話 | waa6 {{< audio id="waa6" >}} |
 
-| 例字                        | ✔️ 正確寫法 | ❌ 錯誤寫法  |
-| --------------------------- | ----------- | ------------ |
-| 考 {{< audio id="haau2" >}} | haau2       | hao2 / haao2 |
-| 包 {{< audio id="baau1" >}} | baau1       | bao1 / baao1 |
+### 3.2 Vận mẫu đồng âm khác cách viết
 
-> 關於粵拼中 a 同 aa 嘅區別下面會講解。
+Những vận mẫu dưới đây tuy có cách viết khác nhau nhưng sự khác biệt trong cách đọc của chúng là có thể bỏ qua. Ví dụ như các vận mẫu bắt đầu bằng **a** và **aa**.
 
-## 2. 音系區別
+#### 3.2.1 Vận mẫu bắt đầu bằng "a"
 
-### 2.1 韻腹 aa 同 a
+Trong chữ Quốc ngữ, vần "ay" là dạng viết tắt của "ăi", còn vần "au" là dạng viết tắt của "ău". Chúng được thiết kế để phân biệt "ai" với "ay", "au" với "ao" trên cơ sở hạn chế sử dụng ký hiệu "ă". Do đó, cách phát âm của nguyên âm "a" trong "ay" và "au" hoàn toàn giống với nguyên âm "ă" trong "ăm". Trong Việt bính, nguyên âm này được viết thống nhất là "**a**".
 
-{{< alert color="success">}}
-普拼嘅 a 等同於粵拼嘅 **aa**，國際音標係 [a]。而粵拼中嘅 **a** 音喺普通話入邊冇。佢嘅國際音標係 [ɐ]。**aa** 同 **a** 係兩個不同嘅韻腹，唔好撈亂。讀者既然識粵語，噉睇下下面幾個例字就知道個區別嘞：
-{{< /alert >}}
+| Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính |
+| ------- | -- | ----------- | ------- |
+| ai   | ay   | 睇 | tai2 {{< audio id="tai2" >}} |
+| au   | au | 口 | hau2 {{< audio id="hau2" >}} |
+| am   | ăm  | 心 | sam1 {{< audio id="sam1" >}} |
+| an   | ăn | 新 | san1 {{< audio id="san1" >}} |
+| ang  | ăng  | 等 | dang2 {{< audio id="dang2" >}} |
+| ap   | ăp | 十 | sap6 {{< audio id="sap6" >}} |
+| at | ăt | 一 | jat1 {{< audio id="jat1" >}} |
+| ak | ăc | 北 | bak1 {{< audio id="bak1" >}} |
 
-| aa                                | a                               |
-| --------------------------------- | ------------------------------- |
-| 三 saam1 {{< audio id="saam1" >}} | 心 sam1 {{< audio id="sam1" >}} |
-| 山 saan1 {{< audio id="saan1" >}} | 身 san1 {{< audio id="san1" >}} |
-| 稍 saau2 {{< audio id="saau2" >}} | 手 sau2 {{< audio id="sau2" >}} |
+#### 3.2.2 Vận mẫu bắt đầu bằng "aa"
 
-### 2.2 韻腹 eo、oe
+Trong tiếng Việt, để hạn chế sử dụng ký hiệu "ă", người ta sử dụng "ai" để phân biệt với vần "ay", sử dụng "au" để phân biệt với vần "ao". Vì vậy, nguyên âm "a" trong vần "ai" và "ao" có cách đọc giống với "a" trong vần "am". Trong Việt bính, nguyên âm này được viết thống nhất là "**aa**".
 
-{{< alert color="success">}}
-呢兩個韻母嘅國際音標分別係 [ɵ]、[œ]，普通話入邊都冇呢兩個音。
-{{< /alert >}}
+| Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính |
+| ------- | -- | ----------- | ------- |
+| aa | a | 爸 | baa1 {{< audio id="baa1" >}} |
+| aai | ai  | 大 | daai6 {{< audio id="daai6" >}} |
+| aau  | ao | 跑 | paau2 {{< audio id="paau2" >}} |
+| aam  | am | 男 | naam4 {{< audio id="naam4" >}} |
+| aan  | an (giọng Bắc) | 眼 | ngaan5 {{< audio id="ngaan5" >}} |
+| aang | ang | 硬 | ngaang6 {{< audio id="ngaang6" >}} |
+| aap  | ap | 集 | saap6 {{< audio id="saap6" >}} |
+| aat | at | 辣 | laat6 {{< audio id="laat6" >}} |
+| aak | ac | 白 | baak6 {{< audio id="baak6" >}} |
 
-| eo                                | oe                                  |
-| --------------------------------- | ----------------------------------- |
-| 率 seot1 {{< audio id="seot1" >}} | 削 soek3 {{< audio id="soek3" >}}   |
-| 潤 jeon6 {{< audio id="jeon6" >}} | 讓 joeng6 {{< audio id="joeng6" >}} |
+#### 3.2.3 Một số vận mẫu bắt đầu bằng "o"
 
-> 大家可能會覺得，點解要將 **eo** 同 **oe** 分開？呢兩個唔係同一個音來嘅咩？其實唔係。**eot6** 係「術」字嘅韻母，但係 **oet6** {{< audio id="oet6" >}} 字就係另一個音嘞。「食完飯 **oet6** {{< audio id="oet6" >}} 一啖氣出來」，就係呢個韻母 oet6。
->
-> 再例如形容趕快嘅詞「**coet4** **coet2** 聲」，好明顯唔係「出出聲」，所以呢兩個係唔同嘅音來㗎。
->
-> 詳細嘅解釋可以參考[粵拼答問](https://www.lshk.org/faq-on-jyutping)第 F 問。
+Trong chữ Quốc ngữ, sự khác biệt chính giữa "ong" và "oong" là ở phần sau của cách phát âm, phát âm xong có đóng miệng hay không. Đối với vận mẫu "**ong**" trong Việt bính, khẩu hình cuối là miệng không đóng, nên tương ứng với âm "oong" trong chữ Quốc ngữ. Tương tự với vận mẫu "**ok**".
 
-### 2.3 韻母 e
+| Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính |
+| ------- | -- | ----------- | ------- |
+| ong | oong | 江 | gong1 {{< audio id="gong1" >}} |
+| ok | ooc | 角 | gok3 {{< audio id="gok3" >}} |
 
-{{< alert color="success">}}
-普拼嘅 e 國際音標係 [ɤ]，即係普通話入邊「餓」字嘅韻母，如果佢前面接 y 或者 i 則表達另一個音 [e]，例如普通話裏「夜」字的韻母。而粵拼入邊 **e** 永遠淨代表一個發音 [ɛ]，呢個音類似英語單詞 「yes」 嘅元音。
-{{< /alert >}}
+## 4. Âm dễ nhầm lẫn
 
-- 寫 se2 {{< audio id="se2" >}}
-- 借 ze3 {{< audio id="ze3" >}}
-- 鄭 zeng6 {{< audio id="zeng6" >}}
-- 石 sek6 {{< audio id="sek6" >}}
+Có những âm trong Việt Bính và tiếng Việt tưởng chừng như giống nhau nhưng trên thực tế giữa chúng vẫn có khác biệt nhỏ. Ví dụ như một số vận mẫu bắt đầu bằng **e** và **o**.
 
-### 2.4 韻母 i
+### 4.1 Một phần vận mẫu bắt đầu bằng "e"
 
-{{< alert color="success">}}
-普拼入邊 i 會根據拼寫音節嘅唔同會代表兩個唔同嘅音。例如普通話入邊「資」嘅拼音係 zi，呢度 i 代表嘅音係 [z̩]，而喺「機」嘅拼音 ji 度，i 代表嘅音係 [i]。換句話講，普拼中 zi ci si 入邊嘅 i，同 ji qi xi 入邊嘅 i 係兩個唔同嘅 i。
+Trong giọng Quảng Châu, vận mẫu bắt đầu bằng **e** giống cách phát âm giữa "ê" và "e" trong tiếng Việt. Nhưng giọng Hồng Kông thì sẽ mở miệng lớn hơn, vậy nên những âm có vận mẫu bắt đầu bằng e sẽ giống "**e**" trong tiếng Việt hơn.
 
-粵拼嘅 **i** 情況類似， 喺大多數時候都代表發音 [i]，而拼寫成 **ik** 或 **ing** 個陣發音就變成 [ɪ]。
-{{< /alert >}}
+| Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính |
+| ------- | -- | ----------- | ------- |
+| e | e | 車 | ce1 {{< audio id="ce1" >}} |
+| eu  | eo | 掉 | deu6 {{< audio id="deu6" >}} |
+| em  | em | 舐 | lem2 {{< audio id="lem2" >}} |
+| eng | eng | 餅 | beng2 {{< audio id="beng2" >}} |
+| ep | ep | 夾 | gep6 {{< audio id="gep6" >}} |
+| ek | ec | 石 | sek6 {{< audio id="sek6" >}} |
 
-| [i]                             | [ɪ]                               |
-| ------------------------------- | --------------------------------- |
-| 詩 si1 {{< audio id="si1" >}}   | 識 sik1 {{< audio id="sik1" >}}   |
-| 仙 sin1 {{< audio id="sin1" >}} | 星 sing1 {{< audio id="sing1" >}} |
-| 知 zi1 {{< audio id="zi1" >}}   | 即 zik1 {{< audio id="zik1" >}}   |
+### 4.2 Một số vận mẫu bắt đầu bằng "o"
 
-### 2.5 聲母 ng-
+Trong giọng Quảng Châu, vận mẫu bắt đầu bằng **o** có cách phát âm như âm giữa "ô" và "o" trong tiếng Việt. Nhưng giọng Hồng Kông sẽ mở miệng lớn hơn, vận mẫu bắt đầu bằng "**o**" sẽ gần giống "o" trong tiếng Việt hơn.
 
-{{< alert color="success">}}
-呢個音嘅國際音標係 [ŋ]。普通話冇呢個聲母，而粵語入邊聲母 **ng-** 同零聲母 Ø- 係區分嘅。而家好多廣州人都分唔出嘞，例如將「我」字發成 **o5**，但係其實個發音係 **ngo5**。（好彩輸入法可以開模糊音，所以如果實在分唔到就開模糊音啦，冚唪唥打晒 **ng-** 開頭就得）。
-{{< /alert >}}
+| Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính |
+| ------- | -- | ----------- | ------- |
+| o | o | 坐 | co5 {{< audio id="co5" >}} |
+| oi | oi | 開 | hoi1 {{< audio id="hoi1" >}} |
+| on | on (giọng Bắc) | 汗 | hon6 {{< audio id="hon6" >}} |
+| ot | ot (giọng Bắc) | 割 | got3 {{< audio id="got3" >}} |
 
-| ng-                                 | Ø-                              |
-| ----------------------------------- | ------------------------------- |
-| 岸 ngon6 {{< audio id="ngon6" >}}   | 按 on3 {{< audio id="on3" >}}   |
-| 雁 ngaan6 {{< audio id="ngaan6" >}} | 晏 aan3 {{< audio id="aan3" >}} |
+## 5. Âm mới cần luyện tập
 
-### 2.6 韻尾 -m
+Những cách phát âm còn lại chưa nhắc đến là những âm không tồn tại trong tiếng Việt mà chỉ có trong tiếng Quảng Đông. Vì vậy chúng ta cần phải luyện tập nhiều hơn. Phần sau cũng sẽ sử dụng phiên âm tiếng Anh và Pinyin để làm ví dụ, vậy nên các bạn học có kiến thức căn bản sẽ dễ hiểu hơn.
 
-{{< alert color="success">}}
-普通話入邊鼻音韻尾淨得 -n 同 -ng（前鼻音同後鼻音），冇 -m。而粵語保留咗 **-m**、**-n**、**-ng** 三種鼻音韻尾。
-{{< /alert >}}
+### 5.1 Những thanh mẫu cần luyện nhiều hơn
 
-| -m                                | -n                                | -ng                                 |
-| --------------------------------- | --------------------------------- | ----------------------------------- |
-| 三 saam1 {{< audio id="saam1" >}} | 山 saan1 {{< audio id="saan1" >}} | 生 saang1 {{< audio id="saang1" >}} |
-| 含 ham4 {{< audio id="ham4" >}}   | 痕 han4 {{< audio id="han4" >}}   | 行 hang4{{< audio id="hang4" >}}    |
-| 尖 zim1 {{< audio id="zim1" >}}   | 煎 zin1 {{< audio id="zin1" >}}   | 精 zing1 {{< audio id="zing1" >}}   |
+4 thanh mẫu còn lại cần chú ý luyện tập nhiều hơn.
 
-### 2.7 韻尾 -p、-t、-k
+| Thanh mẫu | Giải thích | Ví dụ | Việt bính |
+| ------- | -- | ----------- | ------- |
+| p | "p" trong tiếng Anh / Pinyin, bật hơi | 爬 | paa4 {{< audio id="paa4" >}} |
+| z | "z" trong Pinyin, không bật hơi | 遮 | ze1 {{< audio id="ze1" >}} |
+| c | "c" trong Pinyin, bật hơi | 車 | ce1 {{< audio id="ce1" >}} |
+| kw | "Qu" trong chữ Queen tiếng Anh, bật hơi | 夸 | kwaa1 {{< audio id="kwaa1" >}} |
 
-{{< alert color="success">}}
-呢三個韻尾就係傳統意義上嘅「入聲」。普通話冇入聲，但係粵語就保留嗮，所以既然讀者識粵語，下面幾隻字嘅發音應該都好容易區分得出來。
-{{< /alert >}}
+### 5.2 Những vận mẫu cần luyện nhiều hơn
 
-| -p                                | -t                              | -k                              |
-| --------------------------------- | ------------------------------- | ------------------------------- |
-| 湿 sap1 {{< audio id="sap1" >}}   | 失 sat1 {{< audio id="sat1" >}} | 塞 sak1 {{< audio id="sak1" >}} |
-| 接 zip3 {{< audio id="zip3" >}}   | 节 zit3 {{< audio id="zit3" >}} | 脊 zek3 {{< audio id="zek3" >}} |
-| 集 zaap6 {{< audio id="zaap6" >}} | 活 wut6 {{< audio id="wut6" >}} | 六 luk6 {{< audio id="luk6" >}} |
+#### 5.2.1 Vận mẫu "ei" và "ou"
 
-### 2.8 聲調
+Hai vận mẫu này chưa xuất hiện ở 4.1 và 4.2, do "e" và "o" trong tiếng Việt không ghép thành vần "ei" và "ou". Chúng ta cần sử dụng Pinyin hoặc tiếng Anh để giải thích cho âm này.
 
-{{< alert color="dark" title="提醒">}}
-如果淨係想學識用粵拼打字，可以**直接跳過本節**。粵拼打字唔需要打聲調，不過如果打埋聲調嘅話可以提高輸入速度。
-{{< /alert >}}
+| Vận mẫu | Giải thích | Ví dụ | Việt bính |
+| ------- | -- | ----------- | ------- |
+| ei | "ay" trong chữ "say" tiếng Anh, "ei" trong Pinyin | 四 | sei3 {{< audio id="sei3" >}} |
+| ou | "o" trong chữ "go" tiếng Anh, "ou" trong Pinyin | 高 | gou1 {{< audio id="gou1" >}} |
 
-普通話得四個聲調，粵語有六個。我哋先回憶下普通話嘅四個聲調：
+#### 5.2.2 Vận mẫu bắt đầu bằng "eo"
 
-![](/img/cmn.png)
+Tiếng Việt, tiếng Anh hay tiếng Phổ Thông đều không có cách phát âm chính xác của âm "**eo**" trong tiếng Quảng Đông, vì vậy bạn cần tách riêng những âm này để luyện tập. Trong đó, "**eoi**" có thể được phát âm như "ây" khi tròn môi, "**eon**" có thể được phát âm như "ân" khi tròn môi, "**eot**" có thể được phát âm như "ât" khi tròn môi.
 
-總結出來普通話四個聲調嘅調值如下表：
+| Vận mẫu | Ví dụ | Việt bính |
+| ------- | ----------- | ------- |
+| eoi | 去 | heoi3 {{< audio id="heoi3" >}} |
+| eon | 信 | seon3 {{< audio id="seon3" >}} |
+| eot | 出 | ceot1 {{< audio id="ceot1" >}} |
 
-| 第 1 聲      | 第 2 聲      | 第 3 聲       | 第 4 聲      |
-| ------------ | ------------ | ------------- | ------------ |
-| 55（高平調） | 35（高升調） | 214（曲折調） | 51（高降調） |
+#### 5.2.3 Vận mẫu bắt đầu bằng "oe"
 
-而粵語嘅 6 個聲調如下圖：
+Cũng giống như "**eo**", âm "**oe**" trong tiếng Quảng Đông cũng không có cách phát âm tương ứng trong tiếng Việt, tiếng Anh hay tiếng Phổ Thông. Vì vậy bạn cần chú ý luyện tập nhiều hơn. Bạn có thể luyện tập nguyên âm đơn "**oe**" trước, âm này có thể phát âm như "e" khi tròn môi. Khi phát âm tự nhiên hơn, hãy kết nối với **-ng** và **-k** để luyện tập.
+
+| Vận mẫu | Ví dụ | Việt bính |
+| ------- | ----------- | ------- |
+| oe | 靴 | hoe1 {{< audio id="hoe1" >}} |
+| oeng | 向 | hoeng3 {{< audio id="hoeng3" >}} |
+| oek | 腳 | goek3 {{< audio id="goek3" >}} |
+
+#### 5.2.4 Vận mẫu bắt đầu bằng "yu"
+
+"**yu**" trong tiếng Quảng Đông giống với âm "ü" trong tiếng Phổ Thông, nhưng có sự khác biệt đáng kể so với "uy" trong tiếng Việt. Nếu bạn chưa thành thạo "ü" trong tiếng Phổ Thông, bạn nên luyện tập thêm. Bạn cũng nên luyện tập nguyên âm đơn "**yu**" trước, cho đến khi phát âm tự nhiên hơn thì hãy luyện tập nối âm "**yu**" với **-n** và **-t**.
+
+| Vận mẫu | Ví dụ | Việt bính |
+| ------- | ----------- | ------- |
+| yu | 于 | jyu1 {{< audio id="jyu1" >}} |
+| yun | 短 | dyun2 {{< audio id="dyun2" >}} |
+| yut | 越 | jyut6 {{< audio id="jyut6" >}} |
+
+#### 5.2.5 Âm tiết mũi "m" và "ng"
+
+Âm tiết mũi "**m**" và "**ng**" là vận mẫu đặc biệt trong tiếng Quảng Đông, chúng tạo thành các âm tiết độc lập. Nếu chú ý nghe cách phát âm của những âm này, bạn sẽ thấy chúng không khó.
+
+| Vận mẫu | Ví dụ | Việt bính |
+| ------- | ----------- | ------- |
+| m | 唔 | m4 {{< audio id="m4" >}} |
+| ng | 五 | ng5 {{< audio id="ng5" >}} |
+
+## 6. Thanh điệu
+
+Tiếng Quảng Đông cũng có 6 thanh điệu như tiếng Việt, nhưng không hoàn toàn giống tiếng Việt. 6 thanh điệu trong tiếng Quảng Đông cụ thể như sau:
+
+- Thanh thứ 1 (âm bình/thượng âm nhập): giống như thanh thứ 1 trong tiếng Phổ Thông, nó cao và ngang, cao hơn thanh ngang trong tiếng Việt. Nếu là vận mẫu kết thúc bằng **-p**, **-t** và **-k** thì sẽ thanh này nghe giống như thanh sắc trong các âm kết thúc bằng "-p", "-t", "-c" và "-ch" trong tiếng Việt.
+- Thanh thứ 2 (âm thượng): giống như thanh thứ 2 trong tiếng Phổ Thông, từ giữa lên cao.
+- Thanh thứ 3 (âm khứ/hạ âm nhập): giống như thanh ngang trong tiếng Việt, ở giữa và ngang, nhưng thấp hơn thanh thứ 1. Nếu vận mẫu kết thúc bằng **-p**, **-t** và **-k** thì sẽ nghe ngắn như thanh sắc kết thúc bằng "-p", "-t", "-c" và "-ch" trong tiếng Việt, nhưng thấp hơn thanh thứ 1.
+- Thanh thứ 4 (dương bình): giống như nửa đầu của thanh thứ 3 trong tiếng Phổ Thông, hạ từ thấp vừa đến thấp nhất.
+- Thanh thứ 5 (dương thượng): giống như thanh sắc trong các âm với âm cuối khác "-p", "-t", "-c" và "-ch" trong tiếng Việt, và như thanh điệu trong của "nếu". Thanh này từ dưới lên giữa.
+- Thanh thứ 6 (dương khứ/dương nhập): giống như cao độ của thanh nặng trong tiếng Việt, nhưng cần chú ý rằng nếu vận mẫu kết thúc bằng **-p**, **-t** và **-k** thì thanh này mới ngắn, còn nếu không thì sẽ phẳng và dài.
+
+Nếu 6 thanh điệu của tiếng Quảng Đông được thể hiện như cao độ trên khuông nhạc, chúng sẽ giống như hình dưới đây:
 
 ![image](/img/yue.png)
 
-6 個調值如下表：
+Hãy nghe các thanh điệu qua những ví dụ sau:
 
-| 第 1 聲 55（高平調）          | 第 2 聲 35（高升調）          | 第 3 聲 33（中平調）          |
+| Thanh thứ 1 (55)              | Thanh thứ 2 (35)                    | Thanh thứ 3 (33)                    |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | 詩 si1 {{< audio id="si1" >}} | 史 si2 {{< audio id="si2" >}} | 試 si3 {{< audio id="si3" >}} |
 
-| 第 4 聲 21（低降調）          | 第 5 聲 13（低升調）          | 第 6 聲 22（中低平調）        |
+| Thanh thứ 4 (21)                    | Thanh thứ 5 (13)                    | Thanh thứ 6 (22)                    |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | 時 si4 {{< audio id="si4" >}} | 市 si5 {{< audio id="si5" >}} | 事 si6 {{< audio id="si6" >}} |
 
-如果實在記唔住呢啲聲調都冇所謂，反正輸入法打字唔使打聲調。
+Ngoài ra còn có một phương pháp luyện thanh đơn giản và thú vị khác, đó là [luyện thanh điệu với các bài hát tiếng Quảng Đông](/vi/blog/tones).
 
-> 可能會有人問，點解我覺得廣州話唔止六個聲調嘅？例如「私人」同「詩人」嘅音唔一樣喎，點解都係 si1？呢個係因爲粵語廣州話入邊嘅第一聲的確已經分化咗成兩個聲調，有啲字例如「詩」讀成 高平調 55，有啲字例如「私」讀成高降調 53。但係喺粵拼入邊我哋**唔做區分，全部當成第一聲**。
->
-> 詳細嘅解釋可以參考[粵拼答問](https://www.lshk.org/faq-on-jyutping)第 I 問。
+## 7. Kết thúc
 
-練習粵語聲調仲有一個好好玩又有效嘅方法，就係利用粵語歌，詳見本站嘅[用粵語歌練習聲調](/blog/song/)。
+Để biết thêm tài liệu học tiếng Quảng Đông, vui lòng xem [Tài liệu học tiếng Quảng Đông](vi/blog/resource).
 
-### 2.9 普通話特有、粵語冇嘅音
+Một phương pháp tốt để luyện Việt bính hoặc Cantonese là gõ tiếng Quảng Đông bằng Việt bính. Vì Việt bính là phiên âm của tiếng Quảng Đông, mỗi khi bạn gõ Việt bính, thì cũng giống như bạn đang luyện nói tiếng Quảng Đông vậy. Hãy xem trang [Bàn phím tiếng Quảng Đông](/vi/keyboard) của chúng tôi để tải xuống các bộ gõ.
 
-{{< alert color="success">}}
-粵語唔分平翹舌音，所以粵拼入邊冇 zh ch sh r 呢四個聲母，另外粵語冇普拼中嘅 j q x 音（粵拼嘅 j 等於普拼嘅 y）。
-{{< /alert >}}
-
-## 3. 搞掂！
-
-恭喜你讀到呢度，粵拼同普通話拼音嘅區別就咁多，其他字母代表嘅發音，例如 b p m f、d t n l、g k h、z c s w 喺普拼同粵拼入邊都係一樣嘅。要查睇成個粵拼方案嘅完整聲韻母表，請見本站嘅[ LSHK 粵拼方案](/jyutping)。而家先來做幾個小練習，睇下你學識打粵拼未：
-
-### 3.1 練習
-
-寫出下面幾個詞嘅粵語拼音，可以唔理個聲調：
-
-1. 粵語拼音
-2. 廣州話
-3. 稍等
-4. 你哋
-5. 我同佢
-6. 香港
-7. 語言學
-
-#### 答案（可以忽略個聲調）
-
-1. jyut6 jyu3 ping3 jam1
-2. gwong2 zau1 waa2
-3. saau2 dang2
-4. nei5 dei6
-5. ngo5 tung4 keoi5
-6. hoeng1 gong2
-7. jyu5 jin4 hok6
-
-### 3.2 工具資源
-
-我哋已經講解晒粵拼同普通話拼音嘅區別，如果你想對成個粵拼方案有個全面嘅認識，噉務必睇下本站嘅 [LSHK 粵拼方案](/jyutping) 頁面。入邊有晒成個粵拼方案嘅所有聲母韻母，仲有埋發音示例。每個聲韻母都撳下粒 {{< audio >}} 掣聽下聲，就可以好快熟悉成個粵拼方案。
-
-啱開始用粵拼嗰陣，往往都會有啲字唔識點拼，呢個時候就一定要查字典。我哋推薦一個網上粵拼字典：
-
-- [粵音資料集叢](https://jyut.net/)
-
-如果遇到字唔識佢嘅粵拼，隨時用呢個字典來查。如果想要更多粵語學習資源，請見[粵語學習資源](/blog/resource)。
-
-### 附錄：粵拼注音文本示例《北風同太陽》
+### 7.1 Phụ lục: Ví dụ về văn bản phiên âm Việt bính "北風同太陽 (Gió bắc và mặt trời)"
 
 {{< bakfungaudio >}}
 

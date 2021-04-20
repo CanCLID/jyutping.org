@@ -4,14 +4,14 @@ linkTitle: "Luyện thanh điệu bằng các bài hát tiếng Quảng Đông"
 url: "/vi/blog/song"
 weight: 4
 description: >
-  Các bài hát tiếng Quảng Đông là công cụ tốt nhất để luyện tập với các thanh điệu
+  Học tiếng Quảng Đông qua bài hát là một cách thú vị để luyện thanh điệu.
 ---
 
-Nói chung, các bài hát tiếng Quảng Đông có sự khác biệt cơ bản với các bài hát tiếng Phổ Thông. Khi các nhà soạn nhạc viết lời cho các bài hát tiếng Phổ Thông, họ thường không xem xét thanh điệu của các chữ Hán. Nhưng tiếng Quảng Đông bảo tồn phương pháp sáng tác truyền thống của Trung Quốc, có nghĩa là thanh điệu của các chữ Hán được đưa vào lời bài hát. Do đó, không giống như tiếng Phổ Thông, **lời bài hát tiếng Quảng Đông không cần nhạc đệm để thể hiện giai điệu của nó, chỉ cần đọc to lời bài hát bằng thanh điệu, chính biến thanh điệu sẽ thể hiện giai điệu của bài hát.**
+Nói chung, các bài hát tiếng Quảng Đông khác với các bài hát tiếng Phổ Thông. Khi các nhà soạn nhạc viết lời cho các bài hát tiếng Phổ Thông, họ thường không xem xét đến thanh điệu của các chữ Hán. Nhưng tiếng Quảng Đông giữ nguyên cách sáng tác truyền thống của Trung Quốc, có nghĩa là thanh điệu của các chữ Hán được đưa vào lời bài hát. Do đó, không giống như tiếng Phổ Thông, **lời bài hát tiếng Quảng Đông không cần nhạc đệm cũng có thể thể hiện được giai điệu của nó, chỉ cần đọc đúng thanh điệu, bạn sẽ nghe ra được nhịp điệu của bài hát.**
 
-Chúng ta có thể tận dụng điều này và luyện tập thanh điệu với các bài hát tiếng Quảng Đông. Dưới đây là lời bài hát được chú thích bằng Việt bính của ba bài hát tiếng Quảng Đông nổi tiếng: 漫步人生路, 財神到 và 富士山下. Chỉ cần nhấp vào nút {{< audio >}} để nghe cách phát âm của mỗi chữ Hán, liên kết chúng lại với nhau và chúng sẽ chuyển thành giai điệu của bài hát.
+Chúng ta có thể tận dụng điều này và luyện tập thanh điệu qua các bài hát tiếng Quảng Đông. Dưới đây là lời bài hát được chú thích bằng Việt bính của ba bài hát tiếng Quảng Đông nổi tiếng: 漫步人生路(Bước chậm trên đường đời), 財神到(Thần tàu đến) và 富士山下(Dưới chân núi Phú Sĩ). Nhấp vào nút  để nghe cách phát âm của mỗi chữ Hán, liên kết chúng lại với nhau và đó cũng chính là giai điệu của bài hát.
 
-Để biết thêm các bài hát tiếng Quảng Đông được chú thích bằng Việt bính, hãy truy cập [粵拼歌詞網](https://jyut6.com/)。
+Để tìm hiểu các bài hát tiếng Quảng Đông được chú thích bằng Việt bính, hãy truy cập [粵拼歌詞網](https://jyut6.com/)。
 
 {{< songaudio >}}
 

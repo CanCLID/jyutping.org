@@ -1,8 +1,8 @@
 ---
-title: "Bài tập thanh điệu"
+title: "Luyện tập thanh điệu"
 weight: 2
 description: >
-  Tiếng Quảng Đông cũng có sáu thanh điệu nhưng rất khác với tiếng Việt. Chúng tôi cung cấp một bài tập để giúp bạn phân biệt chúng.
+  Tiếng Quảng Đông cũng có sáu thanh điệu nhưng rất khác với tiếng Việt. Chúng tôi có một bài tập nhở để giúp bạn phân biệt chúng.
 hide_feedback: false
 ---
 
@@ -10,7 +10,7 @@ hide_feedback: false
 
 ## Bảng phân biệt thanh điệu
 
-Trong bảng dưới đây, chúng tôi sử dụng **si** làm ví dụ về âm tiết để cung cấp tất cả các kết hợp của sáu thanh điệu. Lắng nghe chúng và cố gắng phân biệt sự tương phản. Đây là các chữ Hán ví dụ cho sáu âm tiết này「<ruby>詩<rt>si1</rt></ruby> <ruby>史<rt>si2</rt></ruby> <ruby>試<rt>si3</rt></ruby> <ruby>時<rt>si4</rt></ruby> <ruby>市<rt>si5</rt></ruby> <ruby>事<rt>si6</rt></ruby>」。
+Trong bảng dưới đây, chúng tôi sử dụng âm **si** làm ví dụ cho sự kết hợp giữa 6 thanh điệu. Hãy lắng nghe và cố gắng phân biệt sự khác biệt. Đây là các chữ Hán ví dụ cho sáu âm tiết này「<ruby>詩<rt>si1</rt></ruby> <ruby>史<rt>si2</rt></ruby> <ruby>試<rt>si3</rt></ruby> <ruby>時<rt>si4</rt></ruby> <ruby>市<rt>si5</rt></ruby> <ruby>事<rt>si6</rt></ruby>」。
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}

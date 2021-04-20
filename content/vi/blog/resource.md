@@ -1,6 +1,6 @@
 ---
-title: "Tài nguyên học tiếng Quảng Đông"
-linkTitle: "Tài nguyên học tiếng Quảng Đông"
+title: "Tài liệu học tiếng Quảng Đông"
+linkTitle: "Tài liệu học tiếng Quảng Đông"
 url: "/vi/blog/resource"
 weight: 1
 description: >
