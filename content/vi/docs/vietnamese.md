@@ -2,7 +2,7 @@
 title: "Tôi đang học tiếng Quảng Đông và nói tiếng Việt"
 weight: 1
 description: >
-  Tiếng Quảng Đông thường được viết bằng chữ Hán. Bạn cần khoảng 3000 chữ Hán để sử dụng thành thạo tiếng Quảng Đông. Nghe có vẻ nhiều? Đúng là rất nhiều. Đó là tại sao chúng ta cần một hệ thống phiên âm trong khi đang học các chữ Hán. 
+  Tiếng Quảng Đông thường được viết bằng chữ Hán. Bạn cần khoảng 3000 chữ Hán để sử dụng thành thạo tiếng Quảng Đông. Nghe có vẻ nhiều? Đúng là rất nhiều. Đó là tại sao chúng ta cần một hệ thống phiên âm trong khi đang học các chữ Hán.
 hide_feedback: false
 ---
 
@@ -25,7 +25,7 @@ Dưới đây là 4 khái niệm: đồng âm cùng cách viết, đồng âm kh
 
 Bài viết này sẽ giải thích về Việt bính và cách phát âm của nó theo thứ tự trên, hy vọng sẽ hữu ích cho việc học tiếng Quảng Đông của bạn.
 
-> Bảng mẫu tự ngữ âm quốc tế (IPA) sẽ được sử dụng để giải thích cách phát âm, nếu bạn không quen với IPA thì có thể bỏ qua. Bạn có thể nhấp vào nút nghe trong ví dụ để nghe cách phát âm tương ứng. Trong phần ví dụ  có bạn có thể nghe cách phát âm tương ứng bằng cách nhấp vào nút {{< audio >}}.
+> Bảng mẫu tự ngữ âm quốc tế (IPA) sẽ được sử dụng để giải thích cách phát âm, nếu bạn không quen với IPA thì có thể bỏ qua. Bạn có thể nhấp vào nút nghe trong ví dụ để nghe cách phát âm tương ứng. Trong phần ví dụ có bạn có thể nghe cách phát âm tương ứng bằng cách nhấp vào nút {{< audio >}}.
 >
 > Tất cả các Việt bính trong bài viết này đều sẽ được **in đậm**, các số 1-6 trong Việt bính là số của thanh điệu, người mới bắt đầu chưa quen với thanh điệu cũng có thể tạm thời bỏ qua.
 
@@ -43,23 +43,23 @@ Trong cách viết chữ Quốc ngữ và Việt bính, các vận mẫu hoàn t
 
 #### 2.2.1 Một số vận mẫu bắt đầu bằng "i"
 
-| Vận mẫu | Ví dụ | Việt bính |
-| ------- | -- | ----------- |
-| i       | 知 | zi1 {{< audio id="zi1" >}} |
-| iu      | 少 | siu2 {{< audio id="siu2" >}}|
-| im      | 点 | dim2 {{< audio id="dim2" >}}|
-| in (giọng Bắc) | 面 | min6 {{< audio id="min6" >}} |
-| ip      | 碟 | dip6 {{< audio id="dip6" >}} |
-| it (giọng Bắc) | 熱 | jit6  {{< audio id="jit6" >}} |
+| Vận mẫu        | Ví dụ | Việt bính                    |
+| -------------- | ----- | ---------------------------- |
+| i              | 知    | zi1 {{< audio id="zi1" >}}   |
+| iu             | 少    | siu2 {{< audio id="siu2" >}} |
+| im             | 点    | dim2 {{< audio id="dim2" >}} |
+| in (giọng Bắc) | 面    | min6 {{< audio id="min6" >}} |
+| ip             | 碟    | dip6 {{< audio id="dip6" >}} |
+| it (giọng Bắc) | 熱    | jit6 {{< audio id="jit6" >}} |
 
 #### 2.2.2 Một số vận mẫu bắt đầu bằng "u"
 
-| Vận mẫu | Ví dụ | Việt bính |
-| ------- | -- | ----------- |
-| u | 苦 | fu2 {{< audio id="fu2" >}} |
-| ui | 杯 | bui1 {{< audio id="bui1" >}} |
-| un (giọng Bắc) | 門 | mun4 {{< audio id="mun4" >}} |
-| ut (giọng Bắc) | 活 | wut6 {{< audio id="wut6" >}} |
+| Vận mẫu        | Ví dụ | Việt bính                    |
+| -------------- | ----- | ---------------------------- |
+| u              | 苦    | fu2 {{< audio id="fu2" >}}   |
+| ui             | 杯    | bui1 {{< audio id="bui1" >}} |
+| un (giọng Bắc) | 門    | mun4 {{< audio id="mun4" >}} |
+| ut (giọng Bắc) | 活    | wut6 {{< audio id="wut6" >}} |
 
 ## 3. Đồng âm khác cách viết
 
@@ -69,18 +69,18 @@ Có những Việt bính có cách viết khác với chữ Quốc ngữ nhưng 
 
 Mặc dù những thanh mẫu dưới đây có cách viết khác nhau, nhưng phát âm của chúng về cơ bản là đồng nhất, có thể coi là một.
 
-| Thanh mẫu  | Chữ Quốc ngữ | Ví dụ | Việt bính |
-| ------- | -- | ----------- | ------- |
-| b     | p     | 爸 | baa1 {{< audio id="baa1" >}} |
-| f     | ph     | 飯 | faan6 {{< audio id="faam6" >}} |
-| d     | t     | 打 | daa2 {{< audio id="daa2" >}} |
-| t     | th    | 睇 | tai2 {{< audio id="tai2" >}} |
-| g     | c      | 九 | gau2 {{< audio id="gau2" >}} |
-| k     | kh (giọng Nam) | 佢 | keoi5 {{< audio id="keoi5" >}} |
-| s | x | 三 | saam1 {{< audio id="saam1" >}} |
-| gw | qu (giọng Bắc) | 瓜 | gwaa1 {{< audio id="gwaa1" >}} |
-| j | d (giọng Nam) | 有 | jau5 {{< audio id="jau5" >}} |
-| w | qu (giọng Nam) | 話 | waa6 {{< audio id="waa6" >}} |
+| Thanh mẫu | Chữ Quốc ngữ   | Ví dụ | Việt bính                      |
+| --------- | -------------- | ----- | ------------------------------ |
+| b         | p              | 爸    | baa1 {{< audio id="baa1" >}}   |
+| f         | ph             | 飯    | faan6 {{< audio id="faam6" >}} |
+| d         | t              | 打    | daa2 {{< audio id="daa2" >}}   |
+| t         | th             | 睇    | tai2 {{< audio id="tai2" >}}   |
+| g         | c              | 九    | gau2 {{< audio id="gau2" >}}   |
+| k         | kh (giọng Nam) | 佢    | keoi5 {{< audio id="keoi5" >}} |
+| s         | x              | 三    | saam1 {{< audio id="saam1" >}} |
+| gw        | qu (giọng Bắc) | 瓜    | gwaa1 {{< audio id="gwaa1" >}} |
+| j         | d (giọng Nam)  | 有    | jau5 {{< audio id="jau5" >}}   |
+| w         | qu (giọng Nam) | 話    | waa6 {{< audio id="waa6" >}}   |
 
 ### 3.2 Vận mẫu đồng âm khác cách viết
 
@@ -90,41 +90,41 @@ Những vận mẫu dưới đây tuy có cách viết khác nhau nhưng sự kh
 
 Trong chữ Quốc ngữ, vần "ay" là dạng viết tắt của "ăi", còn vần "au" là dạng viết tắt của "ău". Chúng được thiết kế để phân biệt "ai" với "ay", "au" với "ao" trên cơ sở hạn chế sử dụng ký hiệu "ă". Do đó, cách phát âm của nguyên âm "a" trong "ay" và "au" hoàn toàn giống với nguyên âm "ă" trong "ăm". Trong Việt bính, nguyên âm này được viết thống nhất là "**a**".
 
-| Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính |
-| ------- | -- | ----------- | ------- |
-| ai   | ay   | 睇 | tai2 {{< audio id="tai2" >}} |
-| au   | au | 口 | hau2 {{< audio id="hau2" >}} |
-| am   | ăm  | 心 | sam1 {{< audio id="sam1" >}} |
-| an   | ăn | 新 | san1 {{< audio id="san1" >}} |
-| ang  | ăng  | 等 | dang2 {{< audio id="dang2" >}} |
-| ap   | ăp | 十 | sap6 {{< audio id="sap6" >}} |
-| at | ăt | 一 | jat1 {{< audio id="jat1" >}} |
-| ak | ăc | 北 | bak1 {{< audio id="bak1" >}} |
+| Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính                      |
+| ------- | ------------ | ----- | ------------------------------ |
+| ai      | ay           | 睇    | tai2 {{< audio id="tai2" >}}   |
+| au      | au           | 口    | hau2 {{< audio id="hau2" >}}   |
+| am      | ăm           | 心    | sam1 {{< audio id="sam1" >}}   |
+| an      | ăn           | 新    | san1 {{< audio id="san1" >}}   |
+| ang     | ăng          | 等    | dang2 {{< audio id="dang2" >}} |
+| ap      | ăp           | 十    | sap6 {{< audio id="sap6" >}}   |
+| at      | ăt           | 一    | jat1 {{< audio id="jat1" >}}   |
+| ak      | ăc           | 北    | bak1 {{< audio id="bak1" >}}   |
 
 #### 3.2.2 Vận mẫu bắt đầu bằng "aa"
 
 Trong tiếng Việt, để hạn chế sử dụng ký hiệu "ă", người ta sử dụng "ai" để phân biệt với vần "ay", sử dụng "au" để phân biệt với vần "ao". Vì vậy, nguyên âm "a" trong vần "ai" và "ao" có cách đọc giống với "a" trong vần "am". Trong Việt bính, nguyên âm này được viết thống nhất là "**aa**".
 
-| Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính |
-| ------- | -- | ----------- | ------- |
-| aa | a | 爸 | baa1 {{< audio id="baa1" >}} |
-| aai | ai  | 大 | daai6 {{< audio id="daai6" >}} |
-| aau  | ao | 跑 | paau2 {{< audio id="paau2" >}} |
-| aam  | am | 男 | naam4 {{< audio id="naam4" >}} |
-| aan  | an (giọng Bắc) | 眼 | ngaan5 {{< audio id="ngaan5" >}} |
-| aang | ang | 硬 | ngaang6 {{< audio id="ngaang6" >}} |
-| aap  | ap | 集 | saap6 {{< audio id="saap6" >}} |
-| aat | at | 辣 | laat6 {{< audio id="laat6" >}} |
-| aak | ac | 白 | baak6 {{< audio id="baak6" >}} |
+| Vận mẫu | Chữ Quốc ngữ   | Ví dụ | Việt bính                          |
+| ------- | -------------- | ----- | ---------------------------------- |
+| aa      | a              | 爸    | baa1 {{< audio id="baa1" >}}       |
+| aai     | ai             | 大    | daai6 {{< audio id="daai6" >}}     |
+| aau     | ao             | 跑    | paau2 {{< audio id="paau2" >}}     |
+| aam     | am             | 男    | naam4 {{< audio id="naam4" >}}     |
+| aan     | an (giọng Bắc) | 眼    | ngaan5 {{< audio id="ngaan5" >}}   |
+| aang    | ang            | 硬    | ngaang6 {{< audio id="ngaang6" >}} |
+| aap     | ap             | 集    | saap6 {{< audio id="saap6" >}}     |
+| aat     | at             | 辣    | laat6 {{< audio id="laat6" >}}     |
+| aak     | ac             | 白    | baak6 {{< audio id="baak6" >}}     |
 
 #### 3.2.3 Một số vận mẫu bắt đầu bằng "o"
 
 Trong chữ Quốc ngữ, sự khác biệt chính giữa "ong" và "oong" là ở phần sau của cách phát âm, phát âm xong có đóng miệng hay không. Đối với vận mẫu "**ong**" trong Việt bính, khẩu hình cuối là miệng không đóng, nên tương ứng với âm "oong" trong chữ Quốc ngữ. Tương tự với vận mẫu "**ok**".
 
-| Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính |
-| ------- | -- | ----------- | ------- |
-| ong | oong | 江 | gong1 {{< audio id="gong1" >}} |
-| ok | ooc | 角 | gok3 {{< audio id="gok3" >}} |
+| Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính                      |
+| ------- | ------------ | ----- | ------------------------------ |
+| ong     | oong         | 江    | gong1 {{< audio id="gong1" >}} |
+| ok      | ooc          | 角    | gok3 {{< audio id="gok3" >}}   |
 
 ## 4. Âm dễ nhầm lẫn
 
@@ -134,25 +134,25 @@ Có những âm trong Việt Bính và tiếng Việt tưởng chừng như gi�
 
 Trong giọng Quảng Châu, vận mẫu bắt đầu bằng **e** giống cách phát âm giữa "ê" và "e" trong tiếng Việt. Nhưng giọng Hồng Kông thì sẽ mở miệng lớn hơn, vậy nên những âm có vận mẫu bắt đầu bằng e sẽ giống "**e**" trong tiếng Việt hơn.
 
-| Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính |
-| ------- | -- | ----------- | ------- |
-| e | e | 車 | ce1 {{< audio id="ce1" >}} |
-| eu  | eo | 掉 | deu6 {{< audio id="deu6" >}} |
-| em  | em | 舐 | lem2 {{< audio id="lem2" >}} |
-| eng | eng | 餅 | beng2 {{< audio id="beng2" >}} |
-| ep | ep | 夾 | gep6 {{< audio id="gep6" >}} |
-| ek | ec | 石 | sek6 {{< audio id="sek6" >}} |
+| Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính                      |
+| ------- | ------------ | ----- | ------------------------------ |
+| e       | e            | 車    | ce1 {{< audio id="ce1" >}}     |
+| eu      | eo           | 掉    | deu6 {{< audio id="deu6" >}}   |
+| em      | em           | 舐    | lem2 {{< audio id="lem2" >}}   |
+| eng     | eng          | 餅    | beng2 {{< audio id="beng2" >}} |
+| ep      | ep           | 夾    | gep6 {{< audio id="gep6" >}}   |
+| ek      | ec           | 石    | sek6 {{< audio id="sek6" >}}   |
 
 ### 4.2 Một số vận mẫu bắt đầu bằng "o"
 
 Trong giọng Quảng Châu, vận mẫu bắt đầu bằng **o** có cách phát âm như âm giữa "ô" và "o" trong tiếng Việt. Nhưng giọng Hồng Kông sẽ mở miệng lớn hơn, vận mẫu bắt đầu bằng "**o**" sẽ gần giống "o" trong tiếng Việt hơn.
 
-| Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính |
-| ------- | -- | ----------- | ------- |
-| o | o | 坐 | co5 {{< audio id="co5" >}} |
-| oi | oi | 開 | hoi1 {{< audio id="hoi1" >}} |
-| on | on (giọng Bắc) | 汗 | hon6 {{< audio id="hon6" >}} |
-| ot | ot (giọng Bắc) | 割 | got3 {{< audio id="got3" >}} |
+| Vận mẫu | Chữ Quốc ngữ   | Ví dụ | Việt bính                    |
+| ------- | -------------- | ----- | ---------------------------- |
+| o       | o              | 坐    | co5 {{< audio id="co5" >}}   |
+| oi      | oi             | 開    | hoi1 {{< audio id="hoi1" >}} |
+| on      | on (giọng Bắc) | 汗    | hon6 {{< audio id="hon6" >}} |
+| ot      | ot (giọng Bắc) | 割    | got3 {{< audio id="got3" >}} |
 
 ## 5. Âm mới cần luyện tập
 
@@ -162,12 +162,12 @@ Những cách phát âm còn lại chưa nhắc đến là những âm không t�
 
 4 thanh mẫu còn lại cần chú ý luyện tập nhiều hơn.
 
-| Thanh mẫu | Giải thích | Ví dụ | Việt bính |
-| ------- | -- | ----------- | ------- |
-| p | "p" trong tiếng Anh / Pinyin, bật hơi | 爬 | paa4 {{< audio id="paa4" >}} |
-| z | "z" trong Pinyin, không bật hơi | 遮 | ze1 {{< audio id="ze1" >}} |
-| c | "c" trong Pinyin, bật hơi | 車 | ce1 {{< audio id="ce1" >}} |
-| kw | "Qu" trong chữ Queen tiếng Anh, bật hơi | 夸 | kwaa1 {{< audio id="kwaa1" >}} |
+| Thanh mẫu | Giải thích                              | Ví dụ | Việt bính                      |
+| --------- | --------------------------------------- | ----- | ------------------------------ |
+| p         | "p" trong tiếng Anh / Pinyin, bật hơi   | 爬    | paa4 {{< audio id="paa4" >}}   |
+| z         | "z" trong Pinyin, không bật hơi         | 遮    | ze1 {{< audio id="ze1" >}}     |
+| c         | "c" trong Pinyin, bật hơi               | 車    | ce1 {{< audio id="ce1" >}}     |
+| kw        | "Qu" trong chữ Queen tiếng Anh, bật hơi | 夸    | kwaa1 {{< audio id="kwaa1" >}} |
 
 ### 5.2 Những vận mẫu cần luyện nhiều hơn
 
@@ -175,49 +175,49 @@ Những cách phát âm còn lại chưa nhắc đến là những âm không t�
 
 Hai vận mẫu này chưa xuất hiện ở 4.1 và 4.2, do "e" và "o" trong tiếng Việt không ghép thành vần "ei" và "ou". Chúng ta cần sử dụng Pinyin hoặc tiếng Anh để giải thích cho âm này.
 
-| Vận mẫu | Giải thích | Ví dụ | Việt bính |
-| ------- | -- | ----------- | ------- |
-| ei | "ay" trong chữ "say" tiếng Anh, "ei" trong Pinyin | 四 | sei3 {{< audio id="sei3" >}} |
-| ou | "o" trong chữ "go" tiếng Anh, "ou" trong Pinyin | 高 | gou1 {{< audio id="gou1" >}} |
+| Vận mẫu | Giải thích                                        | Ví dụ | Việt bính                    |
+| ------- | ------------------------------------------------- | ----- | ---------------------------- |
+| ei      | "ay" trong chữ "say" tiếng Anh, "ei" trong Pinyin | 四    | sei3 {{< audio id="sei3" >}} |
+| ou      | "o" trong chữ "go" tiếng Anh, "ou" trong Pinyin   | 高    | gou1 {{< audio id="gou1" >}} |
 
 #### 5.2.2 Vận mẫu bắt đầu bằng "eo"
 
 Tiếng Việt, tiếng Anh hay tiếng Phổ Thông đều không có cách phát âm chính xác của âm "**eo**" trong tiếng Quảng Đông, vì vậy bạn cần tách riêng những âm này để luyện tập. Trong đó, "**eoi**" có thể được phát âm như "ây" khi tròn môi, "**eon**" có thể được phát âm như "ân" khi tròn môi, "**eot**" có thể được phát âm như "ât" khi tròn môi.
 
-| Vận mẫu | Ví dụ | Việt bính |
-| ------- | ----------- | ------- |
-| eoi | 去 | heoi3 {{< audio id="heoi3" >}} |
-| eon | 信 | seon3 {{< audio id="seon3" >}} |
-| eot | 出 | ceot1 {{< audio id="ceot1" >}} |
+| Vận mẫu | Ví dụ | Việt bính                      |
+| ------- | ----- | ------------------------------ |
+| eoi     | 去    | heoi3 {{< audio id="heoi3" >}} |
+| eon     | 信    | seon3 {{< audio id="seon3" >}} |
+| eot     | 出    | ceot1 {{< audio id="ceot1" >}} |
 
 #### 5.2.3 Vận mẫu bắt đầu bằng "oe"
 
 Cũng giống như "**eo**", âm "**oe**" trong tiếng Quảng Đông cũng không có cách phát âm tương ứng trong tiếng Việt, tiếng Anh hay tiếng Phổ Thông. Vì vậy bạn cần chú ý luyện tập nhiều hơn. Bạn có thể luyện tập nguyên âm đơn "**oe**" trước, âm này có thể phát âm như "e" khi tròn môi. Khi phát âm tự nhiên hơn, hãy kết nối với **-ng** và **-k** để luyện tập.
 
-| Vận mẫu | Ví dụ | Việt bính |
-| ------- | ----------- | ------- |
-| oe | 靴 | hoe1 {{< audio id="hoe1" >}} |
-| oeng | 向 | hoeng3 {{< audio id="hoeng3" >}} |
-| oek | 腳 | goek3 {{< audio id="goek3" >}} |
+| Vận mẫu | Ví dụ | Việt bính                        |
+| ------- | ----- | -------------------------------- |
+| oe      | 靴    | hoe1 {{< audio id="hoe1" >}}     |
+| oeng    | 向    | hoeng3 {{< audio id="hoeng3" >}} |
+| oek     | 腳    | goek3 {{< audio id="goek3" >}}   |
 
 #### 5.2.4 Vận mẫu bắt đầu bằng "yu"
 
 "**yu**" trong tiếng Quảng Đông giống với âm "ü" trong tiếng Phổ Thông, nhưng có sự khác biệt đáng kể so với "uy" trong tiếng Việt. Nếu bạn chưa thành thạo "ü" trong tiếng Phổ Thông, bạn nên luyện tập thêm. Bạn cũng nên luyện tập nguyên âm đơn "**yu**" trước, cho đến khi phát âm tự nhiên hơn thì hãy luyện tập nối âm "**yu**" với **-n** và **-t**.
 
-| Vận mẫu | Ví dụ | Việt bính |
-| ------- | ----------- | ------- |
-| yu | 于 | jyu1 {{< audio id="jyu1" >}} |
-| yun | 短 | dyun2 {{< audio id="dyun2" >}} |
-| yut | 越 | jyut6 {{< audio id="jyut6" >}} |
+| Vận mẫu | Ví dụ | Việt bính                      |
+| ------- | ----- | ------------------------------ |
+| yu      | 于    | jyu1 {{< audio id="jyu1" >}}   |
+| yun     | 短    | dyun2 {{< audio id="dyun2" >}} |
+| yut     | 越    | jyut6 {{< audio id="jyut6" >}} |
 
 #### 5.2.5 Âm tiết mũi "m" và "ng"
 
 Âm tiết mũi "**m**" và "**ng**" là vận mẫu đặc biệt trong tiếng Quảng Đông, chúng tạo thành các âm tiết độc lập. Nếu chú ý nghe cách phát âm của những âm này, bạn sẽ thấy chúng không khó.
 
-| Vận mẫu | Ví dụ | Việt bính |
-| ------- | ----------- | ------- |
-| m | 唔 | m4 {{< audio id="m4" >}} |
-| ng | 五 | ng5 {{< audio id="ng5" >}} |
+| Vận mẫu | Ví dụ | Việt bính                  |
+| ------- | ----- | -------------------------- |
+| m       | 唔    | m4 {{< audio id="m4" >}}   |
+| ng      | 五    | ng5 {{< audio id="ng5" >}} |
 
 ## 6. Thanh điệu
 
@@ -236,11 +236,11 @@ Nếu 6 thanh điệu của tiếng Quảng Đông được thể hiện như ca
 
 Hãy nghe các thanh điệu qua những ví dụ sau:
 
-| Thanh thứ 1 (55)              | Thanh thứ 2 (35)                    | Thanh thứ 3 (33)                    |
+| Thanh thứ 1 (55)              | Thanh thứ 2 (35)              | Thanh thứ 3 (33)              |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | 詩 si1 {{< audio id="si1" >}} | 史 si2 {{< audio id="si2" >}} | 試 si3 {{< audio id="si3" >}} |
 
-| Thanh thứ 4 (21)                    | Thanh thứ 5 (13)                    | Thanh thứ 6 (22)                    |
+| Thanh thứ 4 (21)              | Thanh thứ 5 (13)              | Thanh thứ 6 (22)              |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | 時 si4 {{< audio id="si4" >}} | 市 si5 {{< audio id="si5" >}} | 事 si6 {{< audio id="si6" >}} |
 
