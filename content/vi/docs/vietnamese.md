@@ -10,6 +10,8 @@ hide_feedback: false
 
 ## 1. Giới thiệu
 
+Việt bính là một phương pháp sử dụng chữ Latinh để phiên âm tiếng Quảng Đông, mà cũng là một từ viết tắt của "Phương pháp phiên âm tiếng Quảng Đông của Hội học thuật ngôn ngữ học Hồng Kông". Đây là một phương pháp được lập bởi [Hội học thuật ngôn ngữ học Hồng Kông (LSHK)](https://www.lshk.org/).
+
 Không giống với tiếng Việt cần sử dụng các kí hiệu dấu và những kí hiệu khác để đánh vần, Việt bính chỉ cần sử dụng 26 chữ Latinh và 6 chữ số.
 
 Người Việt Nam học tiếng Quảng Đông thường cũng có kiến thức căn bản về tiếng Anh và tiếng Phổ Thông, vì vậy ở những phần sau, khi giải thích về Việt bính, chúng ta sẽ đưa ra những phát âm tương tự trong tiếng Anh hoặc tiếng Phổ Thông (Hanyu Pinyin) làm ví dụ để tiện học tập hơn.
@@ -47,7 +49,7 @@ Trong cách viết chữ Quốc ngữ và Việt bính, các vận mẫu hoàn t
 | -------------- | ----- | ---------------------------- |
 | i              | 知    | zi1 {{< audio id="zi1" >}}   |
 | iu             | 少    | siu2 {{< audio id="siu2" >}} |
-| im             | 点    | dim2 {{< audio id="dim2" >}} |
+| im             | 點    | dim2 {{< audio id="dim2" >}} |
 | in (giọng Bắc) | 面    | min6 {{< audio id="min6" >}} |
 | ip             | 碟    | dip6 {{< audio id="dip6" >}} |
 | it (giọng Bắc) | 熱    | jit6 {{< audio id="jit6" >}} |
@@ -130,7 +132,7 @@ Trong chữ Quốc ngữ, sự khác biệt chính giữa "ong" và "oong" là �
 
 Có những âm trong Việt Bính và tiếng Việt tưởng chừng như giống nhau nhưng trên thực tế giữa chúng vẫn có khác biệt nhỏ. Ví dụ như một số vận mẫu bắt đầu bằng **e** và **o**.
 
-### 4.1 Một phần vận mẫu bắt đầu bằng "e"
+### 4.1 Một số vận mẫu bắt đầu bằng "e"
 
 Trong giọng Quảng Châu, vận mẫu bắt đầu bằng **e** giống cách phát âm giữa "ê" và "e" trong tiếng Việt. Nhưng giọng Hồng Kông thì sẽ mở miệng lớn hơn, vậy nên những âm có vận mẫu bắt đầu bằng **e** sẽ giống "e" trong tiếng Việt hơn.
 
@@ -244,11 +246,11 @@ Hãy nghe các thanh điệu qua những ví dụ sau:
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | 時 si4 {{< audio id="si4" >}} | 市 si5 {{< audio id="si5" >}} | 事 si6 {{< audio id="si6" >}} |
 
-Ngoài ra còn có một phương pháp luyện thanh đơn giản và thú vị khác, đó là [luyện thanh điệu với các bài hát tiếng Quảng Đông](/vi/blog/tones).
+Ngoài ra còn có một phương pháp luyện thanh đơn giản và thú vị khác, đó là [luyện thanh điệu với các bài hát tiếng Quảng Đông](/vi/blog/song).
 
 ## 7. Kết thúc
 
-Để biết thêm tài liệu học tiếng Quảng Đông, vui lòng xem [Tài liệu học tiếng Quảng Đông](vi/blog/resource).
+Để biết thêm tài liệu học tiếng Quảng Đông, vui lòng xem [Tài liệu học tiếng Quảng Đông](/vi/blog/resource).
 
 Một phương pháp tốt để luyện Việt bính hoặc tiếng Quảng Đông là gõ tiếng Quảng Đông bằng Việt bính. Vì Việt bính là phiên âm của tiếng Quảng Đông, mỗi khi bạn gõ Việt bính, thì cũng giống như bạn đang luyện nói tiếng Quảng Đông vậy. Hãy xem trang [Bàn phím tiếng Quảng Đông](/vi/keyboard) của chúng tôi để tải xuống các bộ gõ.
 
