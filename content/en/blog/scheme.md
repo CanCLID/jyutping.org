@@ -13,19 +13,13 @@ description: >
 
 Cantonese uses Chinese characters (a.k.a. Han characters, or Sinogram) as its writing system. However, Chinese characters are logographic, not phonographic. So we need a phonographic transcription system to represent the sounds of Cantonese. Such a system is called a romanization system. Therefore, the first priority of a romanization system is to accurately transcribe the phonology, or the sound system of a language. Additionally, in our 21th century Internet era, romanization systems are also useful in making input methods(IME) and other digitization tools. Starting from these utility concerns, we can summarize a set of principles and criteria for designing a romanization system. We will dive into these principles, examine some extant Cantonese romanization systems accordingly, and explain why Jyutping should be our choice.
 
-### Principle #1："One symbol to one phoneme" correspondence
+### Principle #1："One symbol to one phoneme mapping"
 
-To accurately represent the phonology of a language, a Romanization system should strictly follow the **one symbol maps to one phoneme** rule. If one symbol can map to multiple phonemes, or one phoneme can be represented by multiple symbols in a romanization system, then we can say that this system is inconsistent, unable to represent the phonology both accurately and concisely.
+To accurately represent the phonology of a language, a Romanization system should strictly follow the rule: **one symbol always maps to only one phoneme and vice versa**. If one symbol can map to multiple phonemes, or one phoneme can be represented by multiple symbols in a romanization system, we can say that this system is inconsistent, unable to represent the phonology both accurately and concisely.
 
-One familiar example is the Mandarin Pinyin. In Pinyin, letter e is a phonemic transcription. It is pronounced /ɤ/ when preceded by initials g, k, h, while pronounced /e/ in the final ie, However, in Pinyin, initials j q x are phonetic transcriptions. They share the same phonemes with g k h, which means, Pinyin transcribes sounds both phonemically and phonetically. This introduces inconsistency and violates our first principle.
+One familiar example is the Mandarin Pinyin. In Pinyin, letter e is a phonemic transcription. It is pronounced /ɤ/ when preceded by initials g, k, h, and pronounced /e/ in the final ie, However, in Pinyin, initials j q x are phonetic transcriptions. They share the same phonemes with g k h, which means, the same phonemes can be represented by either g k h or j q x. Pinyin transcribes sounds both phonemically and phonetically. This introduces inconsistency and violates our first principle.
 
-Principle #1 also implies another rule of thumb: the sound that a symbol represents **should not depend on that symbol's environment** (the symbols that precede and follow it). One good example is the Yale romanization for Cantonese. In Yale, the letter a can represent two vowel phonemes, /a/ and /ɐ/. The table below shows the Yale romanizations for three characters 花 翻 分. We can see that in open syllable (syllables that don't end with consonants) characters, which is the character 花 in this case, letter a represents the vowel /a/. While in closed syllable characters, it stands for another vowel phoneme /ɐ/ (分 in the table). This is what we call "one symbol a maps to two phonemes /a/ and /ɐ/". Similarly, 花 and 翻 share a same vowel /a/, but in 花 it is transcribed as fa while in 翻 it is faan, which is "one phoneme /a/ can be represented by two symbols aa and a".
-
-拼音方案要清晰準確兼簡潔噉表示音位系統，就需要遵循「一個符號對應一個音位」原則。即係話，如果出現咗「一個符號可以代表多個音位」或者「一個音位可以用唔同符號轉寫」，噉我哋就可以話呢個拼音方案係混亂唔一致嘅，無法準確簡潔噉表達呢門語言嘅音位系統。
-
-一個最熟悉嘅反例就係我哋嘅普通話拼音（《漢語拼音方案》）。例如佢嘅字母 e 係一個音位轉寫，當跟喺 g k h 後面例如「哥」「科」「呵」個陣佢嘅發音係 /ɤ/，而喺韻母 ie 入邊例如「些」字佢嘅發音係 /e/。但係普拼方案嘅聲母 j q x 又係音值寫，因爲佢哋同 g k h 係同一個音位。即係話普通話拼音方案一時用音值轉寫一時用音位轉寫，而唔係一致轉寫音位，呢個就違背咗我哋嘅原則。
-
-呢條原則仲有另一層意思，就係一個符號具體表示咩發音，**唔應該依賴佢嘅環境**（即係左右兩邊嘅符號）嚟確定。就例如耶魯拼音入邊，字母 a 既可以表示長 a，又可以表示短 a。下邊嘅表格係耶魯拼音對三隻字「花」「翻」「分」嘅拼法。我哋可以睇到佢喺開音節（冇鼻音或者入聲韻尾）個陣 a 代表 /a/，閉音節（有鼻音或者入聲韻尾）個陣代表 /ɐ/，呢個就係「一個符號 a 代表 /a/ 同 /ɐ/兩個音位」嘞。同樣嘅，「花」同「翻」嘅元音都係 /a/，但係佢一個拼成 fa 一個拼成 faan，即係「一個 /a/ 音位用 a 同 aa 兩個符號嚟表示」。
+Principle #1 also implies another rule of thumb: the sound that a symbol represents **should not depend on that symbol's environment** (the symbol that precedes it and the one that follows it). One good example is the Yale romanization for Cantonese. In Yale, the letter _a_ can represent two vowel phonemes, /a/ and /ɐ/. The table below shows the Yale romanizations for three characters 花 翻 分. We can see that in open syllable (syllables that don't end with consonants) characters, which is the character 花 in this case, letter a represents the vowel /a/. While in closed syllable characters, it represents another vowel phoneme /ɐ/ (分 in the table). This is what we call "one symbol _a_ maps to two phonemes /a/ and /ɐ/". Similarly, 花 and 翻 share the same vowel /a/, but in 花 it is transcribed as _fa_ while in 翻 it is _faan_, which is "one phoneme /a/ can be represented by two symbols _aa_ and _a_".
 
 | 花 /a/ {{< audio id="faa1" >}} | 翻 /a/ {{< audio id="faan1" >}} | 分 /ɐ/ {{< audio id="fan1" >}} |
 | ------------------------------ | ------------------------------- | ------------------------------ |
@@ -33,16 +27,15 @@ Principle #1 also implies another rule of thumb: the sound that a symbol represe
 
 所以耶魯呢度就係「依賴環境嚟確定一個符號實際代表咩音」，符號 a 究竟代表 /a/ 定係 /ɐ/ 要靠係開音節定閉音節嚟判斷（後邊有跟個 n 嘅話就係 /ɐ/，乜都冇就喺 /a/）。呢個就係耶魯嘅設計缺陷之一。粵拼統一規定 aa 就係 /a/，a 就係 /ɐ/ ，唔使睇環境直接就可以確定係咩音。
 
-Therefore, Yale romanization is a perfect example of "the sound of a symbol depends on its environment". Whether the letter a means /a/ or /ɐ/ always depends on whether the syllable is a open or closed one. This creates a lot of ambiguities and inconsistencies and it is also one of the critical flaws of Yale. In Jyutping, /a/ is always aa and a always means /ɐ/, regardless of the environment.
+Hence, Yale romanization is a perfect example of "the sound of a symbol depends on its environment". Whether the letter _a_ means /a/ or /ɐ/ depends on whether the syllable is a open or closed one. This creates a lot of ambiguities and inconsistencies and it is also one of the critical flaws of the Yale Romanization system. In Jyutping, /a/ is always transcribed as **aa** and **a** always represents /ɐ/, regardless of the environment.
 
-### 原則二：避免使用附加符號同非 ASCII 字符
+### Principle #2: Avoid using non-ASCII characters.
 
-### Principle #2: Avoid using non-ASCII symbols.
+A romanization system should try to limit its symbol usage to [ASCII codes](https://en.wikipedia.org/wiki/ASCII) (American Standard Code for Information Interchange) only. In other words, the system should try to use the 26 English letters and Arabic numbers only, and avoid using diacritics like ´ˋˇ˘˜.
 
-A romanization system should try to limit its symbol usage to [ASCII codes](https://en.wikipedia.org/wiki/ASCII) (American Standard Code for Information Interchange) only. In other words, the system should try to use the 26 English letters and Arabic numbers only, and avoid using diacritics like ´ˋˇ˘˜. 
+A perfect example is the ü in Mandarin Pinyin. We all know how troublesome it is to type the letter *ü* with American keyboards. Most people have to look for a special character input app to type it. Aside from being troublesome, *ü* does not belong to the ASCII code set, which means it can't be encoded in the simplest form (unless you transcode it into *v*). This increases both the memory usage and the risk of bugs. Pinyin also uses diacritics like ˉˊˇˋ to mark the tones, which are like the *ü*, not supported by the ASCII encoding.
 
-A perfect example is the ü in Mandarin Pinyin.
-
+We know that romanization systems have another important use case, which is making input method software. 
 
 我哋要儘量令一套拼音方案凈使用 [ASCII 字符集](https://zh-yue.wikipedia.org/wiki/ASCII)（美國資訊交換標準代碼）入邊嘅字符，即係要儘量齋用廿六個英文字母加數字就表達晒成個方案，唔好用 ´ˋˇ˘˜ 呢啲符號。呢個係出於信息時代方便信息處理考慮嘅，因爲噉樣可以避免好多潛在問題同 bug。
 
