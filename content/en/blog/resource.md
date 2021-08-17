@@ -13,3 +13,5 @@ description: >
 - Pronunciation dictionary：[粵音資料集叢 jyut.net](https://jyut.net/)
 - Word dictionary：[粵典 words.hk](https://words.hk/)
 - Cantonese lyrics with Jyutping：[粵拼歌詞網 jyut6.com](https://jyut6.com/)
+- Cantonese reading materials：[冚唪唥粵文](https://hambaanglaang.hk/)
+- Cantonese magazine：[迴響](http://resonate.hk/)
