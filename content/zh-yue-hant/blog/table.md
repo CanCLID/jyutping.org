@@ -114,7 +114,7 @@ description: >
 |冤|[yːn]|**yun**|ün|yn|yun|uen|
 |月|[yːt]|**yut**|üd|yt|yut|uet|
 |唔|[m̩]|**m**|m|m|m|m|
-|吳|[ŋ̍]|**ng**|ng|ng|ng|ng|
+|吳|[ŋ̩]|**ng**|ng|ng|ng|ng|
 
 > - 上表例字只取其韻母。
 > - 帶 `*` 號嘅爲只在口語中出現嘅韻。其中：
