@@ -23,14 +23,14 @@
 }
 </style>
 {{ end }}
-<section id="{{ $blockID }}" class="row td-cover-block td-cover-block--height-{{ $height }} js-td-cover td-overlay td-overlay--dark -bg-{{ $col_id }}">
-  <div class="container td-overlay__inner">
+<section id="{{ $blockID }}" class="row td-cover-block td-cover-block--height-{{ $height }} js-td-cover td-overlay td-overlay--dark -bg-{{ $col_id }}" style="background-color:#1678d3;">
+  <div class="container td-overlay__inner" style="display:flex;flex-direction:column;justify-content:space-around">
     <div class="row">
       <div class="col-12">
         <div class="text-center">
-          {{ with .Get "title" }}<h1 class="display-1 mt-0 mt-md-5 pt-3">{{ $title := . }}{{ with $logo_image }}{{ $logo_image_resized := (.Fit (printf "70x70 %s" $logo_anchor)) }}<img class="td-cover-logo" src="{{ $logo_image_resized.RelPermalink }}" alt="{{ $title | html }} Logo">{{ end }}{{ $title | html }}</h1>{{ end }}
+          {{ with .Get "title" }}<h1 class="display-1" style="margin:4rem 0;font-size:4rem">{{ $title := . }}{{ with $logo_image }}{{ $logo_image_resized := (.Fit (printf "70x70 %s" $logo_anchor)) }}<img class="td-cover-logo" src="{{ $logo_image_resized.RelPermalink }}" alt="{{ $title | html }} Logo">{{ end }}{{ $title | html }}</h1>{{ end }}
           {{ with .Get "subtitle" }}<p class="display-2 text-uppercase mb-0">{{ . | html }}</p>{{ end }}
-          <div class="pt-3 lead">
+          <div class="lead">
             {{ .Inner | markdownify}}
           </div>
         </div>
