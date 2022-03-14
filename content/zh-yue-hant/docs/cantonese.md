@@ -238,7 +238,7 @@ hide_feedback: false
 
 #### 答案（可以忽略個聲調）
 
-1. jyut6 jyu3 ping3 jam1
+1. jyut6 jyu5 ping3 jam1
 2. gwong2 zau1 waa2
 3. saau2 dang2
 4. nei5 dei6
