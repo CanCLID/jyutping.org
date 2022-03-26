@@ -19,7 +19,7 @@
   "dependencies": {
     "mem": ">=4.0.0",
     "normalize.css": "^8.0.1",
-    "minimist": ">=1.2.3",
+    "minimist": ">=1.2.6",
     "kind-of": ">=6.0.3"
   },
   "devDependencies": {
