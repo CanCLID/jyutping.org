@@ -9,5 +9,5 @@ hide_feedback: true
 ---
 
 {{< alert title="Goal">}}
-Assume you only speak English and is learning Cantonese, with only one article and you will master Jyutping.
+Mastering pinyin is the prevailing practice of Chinese readers; to that end, so too can Jyutping be mastered based on the reading of “The Linguistic Society of Hong Kong Cantonese Romanization Scheme”.
 {{< /alert >}}
