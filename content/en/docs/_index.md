@@ -9,5 +9,5 @@ hide_feedback: true
 ---
 
 {{< alert title="Goal">}}
-Mastering pinyin is the prevailing practice of Chinese readers; to that end, so too can Jyutping be mastered, after reading “The Linguistic Society of Hong Kong Cantonese Romanization Scheme”.
+Mastering pinyin is the prevailing practice of Chinese readers; to that end, so too can Jyutping be mastered, after understanding “The Linguistic Society of Hong Kong Cantonese Romanization Scheme”.
 {{< /alert >}}
