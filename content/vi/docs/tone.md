@@ -2,7 +2,7 @@
 title: "Luyện tập thanh điệu"
 weight: 2
 description: >
-  Tiếng Quảng Đông cũng có sáu thanh điệu nhưng rất khác với tiếng Việt. Chúng tôi có một bài tập nhở để giúp bạn phân biệt chúng.
+  Tiếng Quảng Đông cũng có sáu thanh điệu nhưng rất khác với tiếng Việt. Chúng tôi có một bài tập nhỏ để giúp bạn phân biệt chúng.
 hide_feedback: false
 ---
 
