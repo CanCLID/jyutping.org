@@ -14,11 +14,11 @@ Việt bính là một phương pháp sử dụng chữ Latinh để phiên âm 
 
 Không giống với tiếng Việt mà cần các dấu phụ để gõ văn, Việt bính chỉ cần 26 chữ Latinh và 6 chữ số.
 
-Người Việt Nam học tiếng Quảng Đông thường cũng có kiến thức căn bản về tiếng Anh và tiếng Phổ Thông. Vì vậy ở những phần sau, khi giải thích về Việt bính, chúng ta sẽ đưa ra những phát âm tương tự trong tiếng Anh hoặc tiếng Phổ Thông (Hanyu Pinyin) làm ví dụ để tiện học tập hơn.
+Người Việt Nam học tiếng Quảng Đông thường cũng có kiến thức cơ bản về tiếng Anh và tiếng Phổ Thông. Vì vậy, phần sau khi giải thích Việt bính, chúng ta sẽ đưa ra những phát âm tương tự trong tiếng Anh hoặc tiếng Phổ Thông (Hanyu Pinyin) làm ví dụ để tiện học tập hơn.
 
 Ngoài ra còn một điều cần lưu ý nữa là cách viết và cách phát âm của Việt bính gần như có thể tương ứng với nhau, thường không có ngoại lệ.
 
-Dưới đây là 4 khái niệm: đồng âm cùng cách viết, đồng âm khác cách viết, âm dễ nhầm lẫn, âm mới cần luyện tập
+Dưới đây là thứ tự giải thích của bài này, từ đơn giản đến khó khăn, tổng cộng chia thành 4 phần: đồng âm cùng cách viết, đồng âm khác cách viết, âm dễ nhầm lẫn, âm mới cần luyện tập
 
 1. **Đồng âm cùng cách viết**: là Việt bính có những âm với cách viết và cách phát âm hoàn toàn giống với tiếng Việt.
 2. **Đồng âm khác cách viết**: là những âm mà có cách viết giống với chữ Quốc ngữ nhưng cách phát âm khác nhau.
