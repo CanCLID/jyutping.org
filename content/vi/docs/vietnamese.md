@@ -90,7 +90,7 @@ Những vận mẫu dưới đây tuy có cách viết khác nhau nhưng sự kh
 
 #### 3.2.1 Vận mẫu bắt đầu bằng "a"
 
-Trong chữ Quốc ngữ, vần "ay" là viết tắt của "ăi", còn vần "au" là dạng viết tắt của "ău". Chúng được thiết kế để phân biệt "ai" với "ay", "au" với "ao" trên cơ sở hạn chế sử dụng ký hiệu "ă". Do đó, cách phát âm của nguyên âm "a" trong "ay" và "au" thực ra đều sẽ đọc như nguyên âm "ă" trong "ăm". Trong Việt bính, nguyên âm này được viết thống nhất là **a**.
+Trong chữ Quốc ngữ, vần "ay" là viết tắt của "ăi", còn vần "au" là viết tắt của "ău". Chúng được thiết kế để phân biệt "ai~ay" và "ao~au" trên cơ sở hạn chế sử dụng ký hiệu "ă". Do đó, cách phát âm của nguyên âm "a" trong "ay" và "au" thực ra đều giống như nguyên âm "ă" trong "ăm". Trong Việt bính, nguyên âm này được viết thống nhất là **a**.
 
 | Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính                      |
 | ------- | ------------ | ----- | ------------------------------ |
@@ -134,7 +134,7 @@ Có những âm trong Việt Bính và tiếng Việt tưởng chừng như gi�
 
 ### 4.1 Một số vận mẫu bắt đầu bằng "e"
 
-Trong giọng Quảng Châu, vận mẫu bắt đầu bằng **e** giống cách phát âm giữa "ê" và "e" trong tiếng Việt. Nhưng giọng Hồng Kông thì sẽ mở miệng lớn hơn, vậy nên những âm có vận mẫu bắt đầu bằng **e** sẽ giống "e" trong tiếng Việt hơn.
+Trong giọng Quảng Châu, vận mẫu bắt đầu bằng **e** giống cách phát âm giữa "ê" và "e" trong tiếng Việt. Nhưng trong giọng Hồng Kông, âm này sẽ mở miệng lớn hơn, cho nên những vận mẫu bắt đầu bằng **e** sẽ giống những vần "e" trong tiếng Việt hơn.
 
 | Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính                      |
 | ------- | ------------ | ----- | ------------------------------ |
@@ -147,7 +147,7 @@ Trong giọng Quảng Châu, vận mẫu bắt đầu bằng **e** giống cách
 
 ### 4.2 Một số vận mẫu bắt đầu bằng "o"
 
-Trong giọng Quảng Châu, vận mẫu bắt đầu bằng **o** có cách phát âm như âm giữa "ô" và "o" trong tiếng Việt. Nhưng giọng Hồng Kông sẽ mở miệng lớn hơn, vận mẫu bắt đầu bằng **o** sẽ gần giống "o" trong tiếng Việt hơn.
+Trong giọng Quảng Châu, vận mẫu bắt đầu bằng **o** có cách phát âm như âm giữa "ô" và "o" trong tiếng Việt. Nhưng trong giọng Hồng Kông, âm này sẽ mở miệng lớn hơn, cho nên những vận mẫu bắt đầu bằng **o** sẽ giống những vần "o" trong tiếng Việt hơn.
 
 | Vận mẫu | Chữ Quốc ngữ   | Ví dụ | Việt bính                    |
 | ------- | -------------- | ----- | ---------------------------- |
@@ -158,7 +158,7 @@ Trong giọng Quảng Châu, vận mẫu bắt đầu bằng **o** có cách ph�
 
 ## 5. Âm mới cần luyện tập
 
-Những cách phát âm còn lại chưa nhắc đến là những âm không tồn tại trong tiếng Việt mà chỉ có trong tiếng Quảng Đông. Vì vậy chúng ta cần phải luyện tập nhiều hơn. Phần sau cũng sẽ sử dụng phiên âm tiếng Anh và Pinyin để làm ví dụ, vậy nên các bạn học có kiến thức căn bản sẽ dễ hiểu hơn.
+Những cách phát âm còn lại chưa nhắc đến là những âm không tồn tại trong tiếng Việt mà chỉ có trong tiếng Quảng Đông. Vì vậy chúng ta cần phải luyện tập nhiều hơn. Phần sau cũng sẽ sử dụng phiên âm tiếng Anh và Pinyin để làm ví dụ, để những người bạn có kiến thức cơ bản này có thể hiểu rõ hơn.
 
 ### 5.1 Những thanh mẫu cần luyện nhiều hơn
 
@@ -184,7 +184,7 @@ Hai vận mẫu này chưa xuất hiện ở 4.1 và 4.2, do "e" và "o" trong t
 
 #### 5.2.2 Vận mẫu bắt đầu bằng "eo"
 
-Tiếng Việt, tiếng Anh hay tiếng Phổ Thông đều không có cách phát âm chính xác của âm **eo** trong tiếng Quảng Đông, vì vậy bạn cần tách riêng những âm này để luyện tập. Trong đó, **eoi** có thể được phát âm như "ây" khi tròn môi, **eon** có thể được phát âm như "ân" khi tròn môi, **eot** có thể được phát âm như "ât" khi tròn môi.
+Tiếng Việt, tiếng Anh hay tiếng Phổ Thông đều không có cách phát âm giống âm **eo** trong tiếng Quảng Đông, vì vậy bạn cần tách riêng những âm này để luyện tập. Trong đó, **eoi** có thể được phát âm như "ây" khi tròn môi, **eon** có thể được phát âm như "ân" khi tròn môi, **eot** có thể được phát âm như "ât" khi tròn môi.
 
 | Vận mẫu | Ví dụ | Việt bính                      |
 | ------- | ----- | ------------------------------ |
@@ -194,7 +194,7 @@ Tiếng Việt, tiếng Anh hay tiếng Phổ Thông đều không có cách ph�
 
 #### 5.2.3 Vận mẫu bắt đầu bằng "oe"
 
-Cũng giống như **eo**, âm **oe** trong tiếng Quảng Đông cũng không có cách phát âm tương ứng trong tiếng Việt, tiếng Anh hay tiếng Phổ Thông. Vì vậy bạn cần chú ý luyện tập nhiều hơn. Bạn có thể luyện tập nguyên âm đơn **oe** trước, âm này có thể phát âm như "e" khi tròn môi. Khi phát âm tự nhiên hơn, hãy kết nối với **-ng** và **-k** để luyện tập.
+Giống như **eo**, âm **oe** trong tiếng Quảng Đông cũng không có cách phát âm tương ứng trong tiếng Việt, tiếng Anh hay tiếng Phổ Thông. Vì vậy bạn cần chú ý luyện tập nhiều hơn. Bạn có thể luyện tập nguyên âm đơn **oe** trước, âm này có thể phát âm như "e" khi tròn môi. Khi phát âm tự nhiên hơn, hãy kết nối với **-ng** và **-k** để luyện tập.
 
 | Vận mẫu | Ví dụ | Việt bính                        |
 | ------- | ----- | -------------------------------- |
