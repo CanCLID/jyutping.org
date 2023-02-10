@@ -2,7 +2,7 @@
 title: "Tôi đang học tiếng Quảng Đông và nói tiếng Việt"
 weight: 1
 description: >
-  Tiếng Quảng Đông thường được viết bằng chữ Hán. Bạn cần khoảng 3000 chữ Hán để sử dụng thành thạo tiếng Quảng Đông. Nghe có vẻ nhiều? Đúng là rất nhiều. Đó là tại sao chúng ta cần một hệ thống phiên âm trong khi đang học các chữ Hán.
+  Tiếng Quảng Đông thường được viết bằng chữ Hán. Bạn cần khoảng 3000 chữ Hán để sử dụng thành thạo tiếng Quảng Đông. Nghe có vẻ nhiều? Nó thật là nhiều. Nên chúng ta cần một hệ thống phiên âm trong khi đang học các chữ Hán.
 hide_feedback: false
 ---
 
@@ -10,11 +10,11 @@ hide_feedback: false
 
 ## 1. Giới thiệu
 
-Việt bính là một phương pháp sử dụng chữ Latinh để phiên âm tiếng Quảng Đông, mà cũng là một từ viết tắt của "Phương pháp phiên âm tiếng Quảng Đông của Hội học thuật ngôn ngữ học Hồng Kông". Đây là một phương pháp được lập bởi [Hội học thuật ngôn ngữ học Hồng Kông (LSHK)](https://www.lshk.org/).
+Việt bính là một phương pháp sử dụng chữ Latinh để phiên âm tiếng Quảng Đông, mà cũng là viết tắt của "Phương pháp phiên âm tiếng Quảng Đông của Hội học thuật ngôn ngữ học Hồng Kông". Đây là một phương pháp được lập bởi [Hội học thuật ngôn ngữ học Hồng Kông (LSHK)](https://www.lshk.org/).
 
-Không giống với tiếng Việt cần sử dụng các kí hiệu dấu và những kí hiệu khác để đánh vần, Việt bính chỉ cần sử dụng 26 chữ Latinh và 6 chữ số.
+Không giống với tiếng Việt mà cần các dấu phụ để gõ văn, Việt bính chỉ cần 26 chữ Latinh và 6 chữ số.
 
-Người Việt Nam học tiếng Quảng Đông thường cũng có kiến thức căn bản về tiếng Anh và tiếng Phổ Thông, vì vậy ở những phần sau, khi giải thích về Việt bính, chúng ta sẽ đưa ra những phát âm tương tự trong tiếng Anh hoặc tiếng Phổ Thông (Hanyu Pinyin) làm ví dụ để tiện học tập hơn.
+Người Việt Nam học tiếng Quảng Đông thường cũng có kiến thức căn bản về tiếng Anh và tiếng Phổ Thông. Vì vậy ở những phần sau, khi giải thích về Việt bính, chúng ta sẽ đưa ra những phát âm tương tự trong tiếng Anh hoặc tiếng Phổ Thông (Hanyu Pinyin) làm ví dụ để tiện học tập hơn.
 
 Ngoài ra còn một điều cần lưu ý nữa là cách viết và cách phát âm của Việt bính gần như có thể tương ứng với nhau, thường không có ngoại lệ.
 
@@ -25,23 +25,23 @@ Dưới đây là 4 khái niệm: đồng âm cùng cách viết, đồng âm kh
 3. **Âm dễ nhầm lẫn**: là những âm có cách viết giống với tiếng Việt nhưng cách đọc có sự khác biệt nhỏ, cần chú ý phân biệt.
 4. **Âm mới cần luyện tập**: là những âm không có trong tiếng Việt, mà chỉ có trong tiếng Quảng Đông, cần luyện tập nhiều hơn.
 
-Bài viết này sẽ giải thích về Việt bính và cách phát âm của nó theo thứ tự trên, hy vọng sẽ hữu ích cho việc học tiếng Quảng Đông của bạn.
+Bài này sẽ giải thích về Việt bính và cách phát âm của nó theo thứ tự trên, hy vọng sẽ hữu ích cho việc học tiếng Quảng Đông của bạn.
 
-> Bảng mẫu tự ngữ âm quốc tế (IPA) sẽ được sử dụng để giải thích cách phát âm, nếu bạn không quen với IPA thì có thể bỏ qua. Bạn có thể nhấp vào nút nghe trong ví dụ để nghe cách phát âm tương ứng. Trong phần ví dụ có bạn có thể nghe cách phát âm tương ứng bằng cách nhấp vào nút {{< audio >}}.
+> Bảng mẫu tự ngữ âm quốc tế (IPA) sẽ được sử dụng để giải thích cách phát âm, nếu bạn không quen thuộc với IPA thì có thể tạm thời bỏ qua. Bạn có thể nhấp vào nút {{< audio >}} để nghe cách phát âm tương ứng trong các ví dụ.
 >
-> Tất cả các Việt bính trong bài viết này đều sẽ được **in đậm**, các số 1-6 trong Việt bính là số của thanh điệu, người mới bắt đầu chưa quen với thanh điệu cũng có thể tạm thời bỏ qua.
+> Tất cả các Việt bính trong bài này đều sẽ được **in đậm**, các số 1-6 trong Việt bính là số của thanh điệu, người mới bắt đầu chưa quen với thanh điệu cũng có thể tạm thời bỏ qua.
 
 ## 2. Đồng âm cùng cách viết
 
-Tình huống phát âm và cách viết hoàn toàn giống nhau chỉ xuất hiện ở một vài thanh mẫu và vận mẫu bắt đầu bằng **i** hoặc **u**, còn những phần khác thì sẽ hơi khác một chút. Đó có thể là sự khác biệt về cách viết (xem phần 3), hoặc là một sự khác biệt nhỏ trong cách phát âm (xem phần 4).
+Tình huống phát âm và cách viết hoàn toàn giống nhau chỉ xuất hiện ở một vài thanh mẫu và vận mẫu bắt đầu bằng **i** hoặc **u**, còn những phần khác thì sẽ hơi khác một chút. Đó có thể là sự khác biệt về cách viết (xem phần thứ 3), hoặc là một sự khác biệt nhỏ trong cách phát âm (xem phần thứ 4).
 
-### 2.1 Thanh mẫu hoàn toàn đồng nhất
+### 2.1 Thanh mẫu hoàn toàn giống nhau
 
-Trong cách viết của chữ Quốc ngữ và Việt bính, các thanh mẫu hoàn toàn đồng nhất như sau: **m**, **n**, **l**, **h**, **ng**. Những âm này tương đối đơn giản, vì vậy không lấy ví dụ.
+Trong cách viết của chữ Quốc ngữ và Việt bính, các thanh mẫu hoàn toàn giống nhau như sau: **m**, **n**, **l**, **h**, **ng**. Những âm này tương đối đơn giản, vậy ở đây sẽ không đưa ra ví dụ.
 
-### 2.2 Vận mẫu hoàn toàn đồng nhất
+### 2.2 Vận mẫu hoàn toàn giống nhau
 
-Trong cách viết chữ Quốc ngữ và Việt bính, các vận mẫu hoàn toàn đồng nhất chủ yếu là một số vận mẫu bắt đầu bằng **i** hoặc **u**.
+Trong cách viết chữ Quốc ngữ và Việt bính, các vận mẫu hoàn toàn giống nhau chủ yếu là một số vận mẫu bắt đầu bằng **i** hoặc **u**.
 
 #### 2.2.1 Một số vận mẫu bắt đầu bằng "i"
 
@@ -69,7 +69,7 @@ Có những Việt bính có cách viết khác với chữ Quốc ngữ nhưng 
 
 ### 3.1 Thanh mẫu đồng âm khác cách viết
 
-Mặc dù những thanh mẫu dưới đây có cách viết khác nhau, nhưng phát âm của chúng về cơ bản là đồng nhất, có thể coi là một.
+Mặc dù những thanh mẫu dưới đây có cách viết khác nhau, nhưng phát âm của chúng về cơ bản là giống nhau.
 
 | Thanh mẫu | Chữ Quốc ngữ   | Ví dụ | Việt bính                      |
 | --------- | -------------- | ----- | ------------------------------ |
@@ -90,7 +90,7 @@ Những vận mẫu dưới đây tuy có cách viết khác nhau nhưng sự kh
 
 #### 3.2.1 Vận mẫu bắt đầu bằng "a"
 
-Trong chữ Quốc ngữ, vần "ay" là dạng viết tắt của "ăi", còn vần "au" là dạng viết tắt của "ău". Chúng được thiết kế để phân biệt "ai" với "ay", "au" với "ao" trên cơ sở hạn chế sử dụng ký hiệu "ă". Do đó, cách phát âm của nguyên âm "a" trong "ay" và "au" hoàn toàn giống với nguyên âm "ă" trong "ăm". Trong Việt bính, nguyên âm này được viết thống nhất là **a**.
+Trong chữ Quốc ngữ, vần "ay" là viết tắt của "ăi", còn vần "au" là dạng viết tắt của "ău". Chúng được thiết kế để phân biệt "ai" với "ay", "au" với "ao" trên cơ sở hạn chế sử dụng ký hiệu "ă". Do đó, cách phát âm của nguyên âm "a" trong "ay" và "au" thực ra đều sẽ đọc như nguyên âm "ă" trong "ăm". Trong Việt bính, nguyên âm này được viết thống nhất là **a**.
 
 | Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính                      |
 | ------- | ------------ | ----- | ------------------------------ |
@@ -105,7 +105,7 @@ Trong chữ Quốc ngữ, vần "ay" là dạng viết tắt của "ăi", còn v
 
 #### 3.2.2 Vận mẫu bắt đầu bằng "aa"
 
-Trong tiếng Việt, để hạn chế sử dụng ký hiệu "ă", người ta sử dụng "ai" để phân biệt với vần "ay", sử dụng "au" để phân biệt với vần "ao". Vì vậy, nguyên âm "a" trong vần "ai" và "ao" có cách đọc giống với "a" trong vần "am". Trong Việt bính, nguyên âm này được viết thống nhất là **aa**.
+Giống như những giải thích trong phần thứ 3.2.1. Trong chữ Quốc ngữ, để hạn chế sử dụng ký hiệu "ă" (vì thêm dấu phụ sẽ rắc rối hơn), người ta sẽ dùng "ai~ay" nhưng không phải là "ai~ăi" để phân biệt 2 vần này. Còn sẽ dùng "ao~au" nhưng không phải là "au~ău" để phân biệt 2 vần này. Vì vậy, nguyên âm "a" trong vần "ai" và "ao" thực ra đều là "a" trong vần "am". Trong Việt bính, nguyên âm này được viết thống nhất là **aa**.
 
 | Vận mẫu | Chữ Quốc ngữ   | Ví dụ | Việt bính                          |
 | ------- | -------------- | ----- | ---------------------------------- |
@@ -121,7 +121,7 @@ Trong tiếng Việt, để hạn chế sử dụng ký hiệu "ă", người ta
 
 #### 3.2.3 Một số vận mẫu bắt đầu bằng "o"
 
-Trong chữ Quốc ngữ, sự khác biệt chính giữa "ong" và "oong" là ở phần sau của cách phát âm, phát âm xong có đóng miệng hay không. Đối với vận mẫu **ong** trong Việt bính, khẩu hình cuối là miệng không đóng, nên tương ứng với âm "oong" trong chữ Quốc ngữ. Tương tự với vận mẫu **ok**.
+Trong chữ Quốc ngữ, sự khác biệt chính giữa "ong" và "oong" là ở phần sau của cách phát âm, phát âm xong có đóng miệng hay không. Đối với vận mẫu **ong** trong Việt bính, khẩu hình cuối là kiểu không đóng miệng, nên tương ứng với âm "oong" trong chữ Quốc ngữ. Tương tự với vận mẫu **ok**.
 
 | Vận mẫu | Chữ Quốc ngữ | Ví dụ | Việt bính                      |
 | ------- | ------------ | ----- | ------------------------------ |
@@ -169,7 +169,7 @@ Những cách phát âm còn lại chưa nhắc đến là những âm không t�
 | p         | "p" trong tiếng Anh / Pinyin, bật hơi   | 爬    | paa4 {{< audio id="paa4" >}}   |
 | z         | "z" trong Pinyin, không bật hơi         | 遮    | ze1 {{< audio id="ze1" >}}     |
 | c         | "c" trong Pinyin, bật hơi               | 車    | ce1 {{< audio id="ce1" >}}     |
-| kw        | "qu" trong chữ "queen" tiếng Anh, bật hơi | 夸    | kwaa1 {{< audio id="kwaa1" >}} |
+| kw        | "qu" trong từ "queen" tiếng Anh, bật hơi | 夸    | kwaa1 {{< audio id="kwaa1" >}} |
 
 ### 5.2 Những vận mẫu cần luyện nhiều hơn
 
@@ -179,8 +179,8 @@ Hai vận mẫu này chưa xuất hiện ở 4.1 và 4.2, do "e" và "o" trong t
 
 | Vận mẫu | Giải thích                                        | Ví dụ | Việt bính                    |
 | ------- | ------------------------------------------------- | ----- | ---------------------------- |
-| ei      | "ay" trong chữ "say" tiếng Anh, "ei" trong Pinyin | 四    | sei3 {{< audio id="sei3" >}} |
-| ou      | "o" trong chữ "go" tiếng Anh, "ou" trong Pinyin   | 高    | gou1 {{< audio id="gou1" >}} |
+| ei      | "ay" trong từ "say" tiếng Anh, "ei" trong Pinyin | 四    | sei3 {{< audio id="sei3" >}} |
+| ou      | "o" trong từ "go" tiếng Anh, "ou" trong Pinyin   | 高    | gou1 {{< audio id="gou1" >}} |
 
 #### 5.2.2 Vận mẫu bắt đầu bằng "eo"
 
@@ -204,7 +204,7 @@ Cũng giống như **eo**, âm **oe** trong tiếng Quảng Đông cũng không 
 
 #### 5.2.4 Vận mẫu bắt đầu bằng "yu"
 
-**yu** trong tiếng Quảng Đông giống với âm "ü" trong tiếng Phổ Thông, nhưng có sự khác biệt đáng kể so với "uy" trong tiếng Việt. Nếu bạn chưa thành thạo "ü" trong tiếng Phổ Thông, bạn nên luyện tập thêm. Bạn cũng nên luyện tập nguyên âm đơn **yu** trước, cho đến khi phát âm tự nhiên hơn thì hãy luyện tập nối âm **yu** với **-n** và **-t**.
+**yu** trong tiếng Quảng Đông giống với âm "ü" trong tiếng Phổ Thông, nhưng có sự khác biệt đáng kể so với "uy" trong tiếng Việt. Nếu bạn chưa thành thạo âm "ü" của tiếng Phổ Thông, bạn nên luyện tập thêm. Bạn cũng nên luyện tập nguyên âm đơn **yu** trước, cho đến khi phát âm tự nhiên hơn thì hãy luyện tập nối âm **yu** với **-n** và **-t**.
 
 | Vận mẫu | Ví dụ | Việt bính                      |
 | ------- | ----- | ------------------------------ |
