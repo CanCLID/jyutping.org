@@ -114,7 +114,7 @@ hide_feedback: false
 >
 > 再例如形容趕快嘅詞「**coet4** **coet2** 聲」，好明顯唔係「出出聲」，所以呢兩個係唔同嘅音來㗎。
 >
-> 詳細嘅解釋可以參考[粵拼答問](https://www.lshk.org/faq-on-jyutping)第 F 問。
+> 詳細嘅解釋可以參考[粵拼答問](https://lshk.org/jyutping-faq)第 F 問。
 
 ### 2.3 韻母 e
 
