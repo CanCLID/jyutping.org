@@ -433,7 +433,7 @@ Zee, Eric. 1991. Chinese (Hong Kong Cantonese). _Journal of the International
 Phonetic Association_ 21.1: 46-48.
 
 Stephen, Matthews. 1992. _Jyutping 粵拼 - Cantonese Romanization Scheme_. The
-Linguistics Society of Hong Kong. https://www.lshk.org/jyutping
+Linguistics Society of Hong Kong. https://lshk.org/jyutping-scheme/
 
 人文電算硏究中心　 2003：「粵語審音配詞字庫」，關子尹 主持，“兩文三語敎育網上支
 援計劃”之工作項目之一，二零零三年一月十二日推出，香港優質敎育基金，存取於二零零

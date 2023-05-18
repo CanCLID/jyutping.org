@@ -381,7 +381,7 @@ Không thanh mẫu không cầu dấu chữ cái, ví dụ: "呀" chỉ được
 </table>
 
 {{< alert color="secondary">}}
- **a** và **oet** đã được thêm vào năm 2018. Chi tiết vui lòng xem tại [đây](https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf).
+**a** và **oet** đã được thêm vào năm 2018. Chi tiết vui lòng xem tại [đây](https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf).
 {{< /alert >}}
 
 ## 4. Thanh điệu
@@ -418,7 +418,6 @@ Không thanh mẫu không cầu dấu chữ cái, ví dụ: "呀" chỉ được
   </tr>
 </table>
 
-
 {{< alert >}}
 Thanh điệu được đánh dấu sau âm tiết.
 
@@ -427,12 +426,12 @@ Thanh điệu được đánh dấu sau âm tiết.
 
 ## Tham khảo
 
-Bauer, Robert S., and Paul K. Benedict. 2011. *Modern cantonese phonology*. Vol. 102. Walter de Gruyter
+Bauer, Robert S., and Paul K. Benedict. 2011. _Modern cantonese phonology_. Vol. 102. Walter de Gruyter
 
-Mok, Peggy Pik-Ki, and Peggy, Wai-Yi Wong. 2010. Perception of the merging tones in Hong Kong Cantonese: preliminary data on monosyllables. *Speech Prosody 2010-Fifth International Conference*.
+Mok, Peggy Pik-Ki, and Peggy, Wai-Yi Wong. 2010. Perception of the merging tones in Hong Kong Cantonese: preliminary data on monosyllables. _Speech Prosody 2010-Fifth International Conference_.
 
-Zee, Eric. 1991. Chinese (Hong Kong Cantonese). *Journal of the International Phonetic Association* 21.1: 46-48.
+Zee, Eric. 1991. Chinese (Hong Kong Cantonese). _Journal of the International Phonetic Association_ 21.1: 46-48.
 
-Stephen, Matthews. 1992. *Jyutping 粵拼 - Cantonese Romanization Scheme*. The Linguistic Society of Hong Kong. https://www.lshk.org/jyutping
+Stephen, Matthews. 1992. _Jyutping 粵拼 - Cantonese Romanization Scheme_. The Linguistic Society of Hong Kong. https://lshk.org/jyutping-scheme/
 
-人文電算硏究中心　2003：「粵語審音配詞字庫」，關子尹 主持，“兩文三語敎育網上支援計劃”之工作項目之一，二零零三年一月十二日推出，香港優質敎育基金，存取於二零零七年十一月二十日，<http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/>。
+人文電算硏究中心　 2003：「粵語審音配詞字庫」，關子尹 主持，“兩文三語敎育網上支援計劃”之工作項目之一，二零零三年一月十二日推出，香港優質敎育基金，存取於二零零七年十一月二十日，<http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/>。

@@ -158,7 +158,7 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
 	name = "LSHK 粵拼"
-	url = "https://www.lshk.org/jyutping"
+	url = "https://lshk.org/jyutping-scheme/"
 	icon = "fa fa-book-open"
         desc = "香港語言學學會粵語拼音方案"
 [[params.links.user]]
