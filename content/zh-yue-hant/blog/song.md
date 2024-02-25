@@ -17,11 +17,6 @@ description: >
 
 ## 漫步人生路
 
-<audio controls>
-  <source src="/song/maanboujansanglou.mp3" type="audio/mpeg">
-  Your browser does not support the audio tag.
-</audio>
-
 作詞：鄭國江
 
 <ruby>在<rt>zoi6{{< audio id="zoi6" >}}</rt></ruby> <ruby>你<rt>nei5{{< audio id="nei5" >}}</rt></ruby> <ruby>身<rt>san1{{< audio id="san1" >}}</rt></ruby> <ruby>邊<rt>bin1{{< audio id="bin1" >}}</rt></ruby> <ruby>路<rt>lou6{{< audio id="lou6" >}}</rt></ruby> <ruby>雖<rt>seoi1{{< audio id="seoi1" >}}</rt></ruby> <ruby>遠<rt>jyun5{{< audio id="jyun5" >}}</rt></ruby> <ruby>未<rt>mei6{{< audio id="mei6" >}}</rt></ruby> <ruby>疲<rt>pei4{{< audio id="pei4" >}}</rt></ruby> <ruby>倦<rt>gyun6{{< audio id="gyun6" >}}</rt></ruby>
@@ -73,11 +68,6 @@ description: >
 <ruby>小<rt>siu2{{< audio id="siu2" >}}</rt></ruby> <ruby>雨<rt>jyu5{{< audio id="jyu5" >}}</rt></ruby> <ruby>點<rt>dim2{{< audio id="dim2" >}}</rt></ruby> ，<ruby>放<rt>fong3{{< audio id="fong3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>灑<rt>saa2{{< audio id="saa2" >}}</rt></ruby> ，<ruby>早<rt>zou2{{< audio id="zou2" >}}</rt></ruby> <ruby>已<rt>ji5{{< audio id="ji5" >}}</rt></ruby> <ruby>決<rt>kyut3{{< audio id="kyut3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>向<rt>hoeng3{{< audio id="hoeng3" >}}</rt></ruby> <ruby>着<rt>zoek6{{< audio id="zoek6" >}}</rt></ruby> <ruby>前<rt>cin4{{< audio id="cin4" >}}</rt></ruby>
 
 ## 財神到
-
-<audio controls>
-  <source src="/song/coisandou.mp3" type="audio/mpeg">
-  Your browser does not support the audio tag.
-</audio>
 
 作詞：許冠傑
 
@@ -172,11 +162,6 @@ description: >
 <ruby>大<rt>daai6{{< audio id="daai6" >}}</rt></ruby> <ruby>眾<rt>zung3{{< audio id="zung3" >}}</rt></ruby> <ruby>慶<rt>hing3{{< audio id="hing3" >}}</rt></ruby> <ruby>新<rt>san1{{< audio id="san1" >}}</rt></ruby> <ruby>春<rt>ceon1{{< audio id="ceon1" >}}</rt></ruby> <ruby>望<rt>mong6{{< audio id="mong6" >}}</rt></ruby> <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>
 
 ## 富士山下
-
-<audio controls>
-  <source src="/song/fusisaanhaa.mp3" type="audio/mpeg">
-  Your browser does not support the audio tag.
-</audio>
 
 填詞：林夕
 

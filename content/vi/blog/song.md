@@ -9,18 +9,13 @@ description: >
 
 Nói chung, các bài hát tiếng Quảng Đông khác với các bài hát tiếng Phổ Thông. Khi các nhà soạn nhạc viết lời cho các bài hát tiếng Phổ Thông, họ thường không xem xét đến thanh điệu của các chữ Hán. Nhưng tiếng Quảng Đông giữ nguyên cách sáng tác truyền thống của Trung Quốc, có nghĩa là thanh điệu của các chữ Hán được đưa vào lời bài hát. Do đó, không giống như tiếng Phổ Thông, **lời bài hát tiếng Quảng Đông không cần nhạc đệm cũng có thể thể hiện được giai điệu của nó, chỉ cần đọc đúng thanh điệu, bạn sẽ nghe ra được nhịp điệu của bài hát.**
 
-Chúng ta có thể tận dụng điều này và luyện tập thanh điệu qua các bài hát tiếng Quảng Đông. Dưới đây là lời bài hát được chú thích bằng Việt bính của ba bài hát tiếng Quảng Đông nổi tiếng: 漫步人生路(Bước chậm trên đường đời), 財神到(Thần tàu đến) và 富士山下(Dưới chân núi Phú Sĩ). Nhấp vào nút  để nghe cách phát âm của mỗi chữ Hán, liên kết chúng lại với nhau và đó cũng chính là giai điệu của bài hát.
+Chúng ta có thể tận dụng điều này và luyện tập thanh điệu qua các bài hát tiếng Quảng Đông. Dưới đây là lời bài hát được chú thích bằng Việt bính của ba bài hát tiếng Quảng Đông nổi tiếng: 漫步人生路(Bước chậm trên đường đời), 財神到(Thần tàu đến) và 富士山下(Dưới chân núi Phú Sĩ). Nhấp vào nút để nghe cách phát âm của mỗi chữ Hán, liên kết chúng lại với nhau và đó cũng chính là giai điệu của bài hát.
 
 Để tìm hiểu các bài hát tiếng Quảng Đông được chú thích bằng Việt bính, hãy truy cập [粵拼歌詞網](https://jyut6.com/)。
 
 {{< songaudio >}}
 
 ## 漫步人生路
-
-<audio controls>
-  <source src="/song/maanboujansanglou.mp3" type="audio/mpeg">
-  Your browser does not support the audio tag.
-</audio>
 
 作詞：鄭國江
 
@@ -73,11 +68,6 @@ Chúng ta có thể tận dụng điều này và luyện tập thanh điệu qu
 <ruby>小<rt>siu2{{< audio id="siu2" >}}</rt></ruby> <ruby>雨<rt>jyu5{{< audio id="jyu5" >}}</rt></ruby> <ruby>點<rt>dim2{{< audio id="dim2" >}}</rt></ruby> ，<ruby>放<rt>fong3{{< audio id="fong3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>灑<rt>saa2{{< audio id="saa2" >}}</rt></ruby> ，<ruby>早<rt>zou2{{< audio id="zou2" >}}</rt></ruby> <ruby>已<rt>ji5{{< audio id="ji5" >}}</rt></ruby> <ruby>決<rt>kyut3{{< audio id="kyut3" >}}</rt></ruby> <ruby>心<rt>sam1{{< audio id="sam1" >}}</rt></ruby> <ruby>向<rt>hoeng3{{< audio id="hoeng3" >}}</rt></ruby> <ruby>着<rt>zoek6{{< audio id="zoek6" >}}</rt></ruby> <ruby>前<rt>cin4{{< audio id="cin4" >}}</rt></ruby>
 
 ## 財神到
-
-<audio controls>
-  <source src="/song/coisandou.mp3" type="audio/mpeg">
-  Your browser does not support the audio tag.
-</audio>
 
 作詞：許冠傑
 
@@ -172,11 +162,6 @@ Chúng ta có thể tận dụng điều này và luyện tập thanh điệu qu
 <ruby>大<rt>daai6{{< audio id="daai6" >}}</rt></ruby> <ruby>眾<rt>zung3{{< audio id="zung3" >}}</rt></ruby> <ruby>慶<rt>hing3{{< audio id="hing3" >}}</rt></ruby> <ruby>新<rt>san1{{< audio id="san1" >}}</rt></ruby> <ruby>春<rt>ceon1{{< audio id="ceon1" >}}</rt></ruby> <ruby>望<rt>mong6{{< audio id="mong6" >}}</rt></ruby> <ruby>財<rt>coi4{{< audio id="coi4" >}}</rt></ruby> <ruby>神<rt>san4{{< audio id="san4" >}}</rt></ruby> <ruby>到<rt>dou3{{< audio id="dou3" >}}</rt></ruby>
 
 ## 富士山下
-
-<audio controls>
-  <source src="/song/fusisaanhaa.mp3" type="audio/mpeg">
-  Your browser does not support the audio tag.
-</audio>
 
 填詞：林夕
 
