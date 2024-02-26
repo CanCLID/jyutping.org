@@ -16,7 +16,7 @@ defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
 
-disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
+disableKinds = ["taxonomy", "RSS"]
 
 # Highlighting config
 pygmentsCodeFences = true
@@ -51,50 +51,61 @@ id = "UA-131567469-4"
 
 # Language configuration
 [languages]
-[languages.zh-yue-hant]
-title = "粵拼 Jyutping"
-description = "香港語言學學會粵語拼音方案"
-languageName ="🌏 粵語"
-contentDir = "content/zh-yue-hant"
-time_format_default = "2006.01.02"
-time_format_blog = "2006.01.02"
-# Weight used for sorting.
-weight = 1
-[languages.zh-cmn-hant]
-title = "粵拼 Jyutping"
-description = "香港語言學學會粵語拼音方案"
-languageName ="🌏 普通話/國語"
-contentDir = "content/zh-cmn-hant"
-time_format_default = "2006.01.02"
-time_format_blog = "2006.01.02"
-[languages.tw-nan-hant]
-title = "粵拼 Jyutping"
-description = "香港語言學學會粵語拼音方案"
-languageName ="🌏 臺灣閩南語"
-contentDir = "content/tw-nan-hant"
-time_format_default = "2006.01.02"
-time_format_blog = "2006.01.02"
-[languages.zh-wuu-hant]
-title = "粵拼 Jyutping"
-description = "香港語言學學會粵語拼音方案"
-languageName ="🌏 吳語"
-contentDir = "content/zh-wuu-hant"
-time_format_default = "2006.01.02"
-time_format_blog = "2006.01.02"
-[languages.en]
-title = "粵拼 Jyutping"
-description = "The de-facto standard romanization scheme for Cantonese."
-languageName ="🌍 English"
-contentDir = "content/en"
-time_format_default = "01.02.2006"
-time_format_blog = "01.02.2006"
-[languages.vi]
-title = "Việt bính Jyutping"
-description = "Một phương pháp để phiên âm tiếng Quảng Đông"
-languageName ="🌍 Tiếng Việt"
-contentDir = "content/vi"
-time_format_default = "02.01.2006"
-time_format_blog = "02.01.2006"
+  [languages.zh-yue-hant]
+  title = "粵拼 Jyutping"
+  languageName ="🌏 粵語"
+  contentDir = "content/zh-yue-hant"
+  # Weight used for sorting.
+  weight = 1
+    [languages.zh-yue-hant.params]
+      description = "香港語言學學會粵語拼音方案"
+      time_format_default = "2006.01.02"
+      time_format_blog = "2006.01.02"
+
+  [languages.zh-cmn-hant]
+  title = "粵拼 Jyutping"
+  languageName ="🌏 普通話/國語"
+  contentDir = "content/zh-cmn-hant"
+    [languages.zh-cmn-hant.params]
+      description = "香港語言學學會粵語拼音方案"
+      time_format_default = "2006.01.02"
+      time_format_blog = "2006.01.02"
+
+  [languages.tw-nan-hant]
+  title = "粵拼 Jyutping"
+  languageName ="🌏 臺灣閩南語"
+  contentDir = "content/tw-nan-hant"
+    [languages.tw-nan-hant.params]
+      description = "香港語言學學會粵語拼音方案"
+      time_format_default = "2006.01.02"
+      time_format_blog = "2006.01.02"
+
+  [languages.zh-wuu-hant]
+  title = "粵拼 Jyutping"
+  languageName ="🌏 吳語"
+  contentDir = "content/zh-wuu-hant"
+    [languages.zh-wuu-hant.params]
+      description = "香港語言學學會粵語拼音方案"
+      time_format_default = "2006.01.02"
+      time_format_blog = "2006.01.02"
+
+  [languages.en]
+  title = "粵拼 Jyutping"
+  languageName ="🌍 English"
+  contentDir = "content/en"
+    [languages.en.params]
+      description = "The de-facto standard romanization scheme for Cantonese."
+      time_format_default = "01.02.2006"
+      time_format_blog = "01.02.2006"
+
+  [languages.vi]
+  title = "Việt bính Jyutping"
+  languageName ="🌍 Tiếng Việt"
+  contentDir = "content/vi"
+    [languages.vi.params]
+      description = "Một phương pháp để phiên âm tiếng Quảng Đông"
+      time_format_default = "02.01.2006"
+      time_format_blog = "02.01.2006"
 
 [markup]
   [markup.goldmark]
@@ -126,7 +137,7 @@ github_project_repo = "https://github.com/laubonghaudoi/jyutping.net"
 # gcs_engine_id = "011737558837375720776:fsdu1nryfng"
 
 # Enable Algolia DocSearch
-algolia_docsearch = false
+algolia = false
 
 # Enable Lunr.js offline search
 offlineSearch = false
@@ -142,7 +153,7 @@ sidebar_search_disable = true
 #  Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top nav bar
 navbar_logo = false
 # Set to true to disable the About link in the site footer
-footer_about_disable = true
+footer_about_enable = false
 
 # Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
 # This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
