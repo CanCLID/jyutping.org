@@ -1,14 +1,3 @@
-<style type="text/css">
-.myButton:hover {
-	background:linear-gradient(to bottom, #e9e9e9 5%, #e9e9e9 100%);
-	background-color:#e9e9e9;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
-</style>
-
 {{ $id := .Get "id" }}
 <a onclick="document.getElementById('{{ $id }}').play()" class="myButton">
 	<i class="fas fa-volume-up" style="color:#0380fc;"></i>
