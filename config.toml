@@ -126,9 +126,9 @@ copyright = "粵拼"
 version_menu = "Releases"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/laubonghaudoi/jyutping.net"
+github_repo = "https://github.com/laubonghaudoi/jyutping.org"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/laubonghaudoi/jyutping.net"
+github_project_repo = "https://github.com/laubonghaudoi/jyutping.org"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
