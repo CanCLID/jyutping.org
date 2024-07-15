@@ -42,7 +42,7 @@ description: >
 |哈|[h]|**h**|h|h|h|h|
 |渣|[ts]|**z**|z / j|dz|j|j|
 |差|[tsʰ]|**c**|c / q|ts|ch|ch|
-|沙|[s]|**s**|c / x|s|s|s|
+|沙|[s]|**s**|s / x|s|s|s|
 |瓜|[kʷ]|**gw**|gu|gw|gw|gw|
 |夸|[kʷʰ]|**kw**|ku|kw|kw|kw|
 |也|[j]|**j**|y|j|y|y|
