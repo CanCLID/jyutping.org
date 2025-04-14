@@ -1,0 +1,48 @@
+---
+// src/pages/[locale]/index.astro
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { I18n } from "@/i18n/utils";
+
+// Import all possible index page components
+import CmnIndexPage from "@/components/index-pages/CmnIndexPage.tsx";
+import EnIndexPage from "@/components/index-pages/EnIndexPage.tsx";
+import NanIndexPage from "@/components/index-pages/NanIndexPage.tsx";
+import ViIndexPage from "@/components/index-pages/ViIndexPage.tsx";
+import WuuIndexPage from "@/components/index-pages/WuuIndexPage.tsx";
+// YueIndexPage is handled by src/pages/index.astro
+// Removed localeComponentMap
+
+export function getStaticPaths() {
+  return I18n.locales
+    .filter((locale) => locale !== I18n.defaultLocale) // Exclude default locale
+    .map((locale) => ({
+      params: { locale },
+    }));
+}
+
+const { locale } = Astro.params;
+
+// Validate locale for safety, though getStaticPaths should handle it
+const validLocale = I18n.locales.includes(locale as string)
+  ? locale
+  : I18n.defaultLocale;
+
+// Define titles for locale index pages
+const pageTitles: Record<string, string> = {
+  en: "Jyutping - Cantonese Romanization",
+  cmn: "粤拼 - 粤语拼音方案",
+  nan: "粵拼 - 粵語拼音方案",
+  vi: "Việt bính - Phiên âm tiếng Quảng Đông",
+  wuu: "粤拼 - 粤语拼音方案",
+};
+const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English title
+---
+
+<BaseLayout lang={validLocale} title={title}>
+  {/* Conditionally render the correct component */}
+  {validLocale === "en" && <EnIndexPage client:load />}
+  {validLocale === "cmn" && <CmnIndexPage client:load />}
+  {validLocale === "nan" && <NanIndexPage client:load />}
+  {validLocale === "vi" && <ViIndexPage client:load />}
+  {validLocale === "wuu" && <WuuIndexPage client:load />}
+</BaseLayout>

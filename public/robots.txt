@@ -1,0 +1,6 @@
+# Allow all crawlers access to all content
+User-agent: *
+Allow: /
+
+# Sitemap (Optional - Add your sitemap URL if you have one)
+# Sitemap: https://jyutping.org/sitemap-index.xml

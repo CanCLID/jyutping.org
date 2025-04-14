@@ -1,0 +1,53 @@
+---
+// src/components/Footer.astro
+import { IconBrandGithub, IconBrandX, IconMail } from "@tabler/icons-react";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="p-8 bg-gray-600 text-center text-white">
+  {/* Copyright text */}
+  <div class="my-2">
+    <span>&copy; {currentYear} jyutping.org</span>
+  </div>
+
+  {/* Social Icons */}
+  <div class="my-2 inline-flex items-center justify-center space-x-4">
+    <a
+      href="https://github.com/CanCLID/jyutping.org"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-white hover:opacity-80"
+      aria-label="GitHub Repository"
+    >
+      <IconBrandGithub size={20} />
+    </a>
+    <a
+      href="mailto:support@jyutping.org"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-white hover:opacity-80"
+      aria-label="Email Support"
+    >
+      <IconMail size={20} />
+    </a>
+    <a
+      href="https://huggingface.co/CanCLID"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-white hover:opacity-80"
+      aria-label="Hugging Face Profile"
+    >
+      🤗 {/* Using emoji as in original */}
+    </a>
+    <a
+      href="https://x.com/Can_CLID"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-white hover:opacity-80"
+      aria-label="X (formerly Twitter) Profile"
+    >
+      <IconBrandX size={20} />
+    </a>
+  </div>
+</footer>

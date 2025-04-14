@@ -1,0 +1,161 @@
+---
+// src/layouts/BaseLayout.astro
+import { ClientRouter } from "astro:transitions"; // Re-added import for ViewTransitions
+import Header from "@/components/Header.astro"; // Placeholder import
+import Footer from "@/components/Footer.astro"; // Placeholder import
+import "@/styles/global.css"; // Assuming global styles will be here
+
+// Define props for the layout, including title, description, and lang
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: string; // Language code for the html tag
+}
+
+// Set default values for props
+const {
+  title = "粵拼 Jyutping",
+  description = "標準粵語拼音方案 Standard Cantonese Romanization Scheme",
+  lang = "yue", // Default to 'yue' as per original root layout
+} = Astro.props;
+
+const umamiWebsiteId = "188fdd26-8e55-42b6-ba73-7d2f58adca11"; // From original layout
+const umamiScriptSrc = "https://cloud.umami.is/script.js";
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    {/* Use logo.svg as favicon */}
+    <meta name="generator" content={Astro.generator} />
+
+    {/* Basic Meta Tags */}
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="Jyutping, 粵拼, Cantonese, Romanization, language, learning, transcription, input method, cantonese keyboard, jyutping input method, jyutping keyboard"
+    />
+
+    {/* Open Graph / Facebook */}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.origin} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {
+      /* <meta property="og:image" content={new URL('/og-image.png', Astro.url.origin).toString()} /> */
+    }
+    {/* Add OG image later */}
+
+    {/* Twitter */}
+    {/* <meta property="twitter:card" content="summary_large_image" /> */}
+    {/* <meta property="twitter:url" content={Astro.url.origin} /> */}
+    {/* <meta property="twitter:title" content={title} /> */}
+    {/* <meta property="twitter:description" content={description} /> */}
+    {
+      /* <meta property="twitter:image" content={new URL('/og-image.png', Astro.url.origin).toString()} /> */
+    }
+    {/* Add Twitter image later */}
+
+    {/* Preload fonts if needed - assuming fonts are in public/ */}
+    <link
+      rel="preload"
+      href="/ChironHeiHK-lshk.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/ChironSungHK-Noto-lshk.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+
+    {/* Umami Analytics */}
+    <script defer src={umamiScriptSrc} data-website-id={umamiWebsiteId}
+    ></script>
+
+    {/* Add Font Awesome or other icon libraries if needed */}
+
+    {/* Enable Astro View Transitions */}
+    <ClientRouter />
+  </head>
+  <body
+    class="antialiased bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col min-h-screen"
+  >
+    <Header />
+    {/* Include Header component */}
+    <main class="flex-grow">
+      <slot />
+      {/* Page content will be injected here */}
+    </main>
+    <Footer />
+    {/* Include Footer component */}
+  </body>
+</html>
+
+<style is:global>
+  @import url("/public/chiron-hei-hk/css/vf.css");
+  /* Define font faces */
+  @font-face {
+    font-family: "Chiron Hei HK Jyutping";
+    /* Prioritize WOFF2, fallback to WOFF */
+    src:
+      url("/ChironHeiHK-lshk.woff2") format("woff2"),
+      url("/ChironHeiHK-lshk.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Apply Chiron Hei HK as a primary font, similar to original */
+  body {
+    font-family:
+      "Chiron Hei HK WS",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
+  }
+
+  /* Specific class for Chiron Sung HK if needed */
+  .font-chiron-sung {
+    font-family: "Chiron Sung HK Jyutping", serif;
+  }
+  /* Specific class for Chiron Hei HK if needed */
+  .font-chiron-hei {
+    font-family: "Chiron Hei HK Jyutping", sans-serif;
+  }
+
+  /* Basic dark mode setup (can be enhanced) */
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: "Chiron Hei HK WS", system-ui, sans-serif;
+    background-size: 224px;
+    color-scheme: light dark; /* Enable light/dark mode based on OS */
+  }
+
+  /* Add other global styles from globals.css here if necessary */
+</style>
