@@ -1262,7 +1262,7 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
         >
           {headingsT.referenceHeading}
         </h2>
-        <div className="prose dark:prose-invert max-w-none text-sm space-y-2">
+        <div className="prose dark:prose-invert max-w-none text-sm space-y-2 mb-8">
           <p>
             Bauer, Robert S., and Paul K. Benedict. 2011.
             <em>Modern cantonese phonology</em>. Vol. 102. Walter de Gruyter
