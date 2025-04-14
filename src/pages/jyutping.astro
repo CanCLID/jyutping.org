@@ -55,11 +55,11 @@ const headings = [
     </h1>
   </div>
   <div class="flex justify-center gap-8 max-w-5xl mx-auto">
-    <JyutpingPage locale={lang} client:load />
+    <JyutpingPage locale={lang} client:visible />
     <aside class="hidden lg:block w-32 flex-shrink-0">
       <div class="sticky top-32">
         {/* Adjust top offset as needed */}
-        <TableOfContents client:load headings={headings} />
+        <TableOfContents client:visible headings={headings} />
       </div>
     </aside>
   </div>

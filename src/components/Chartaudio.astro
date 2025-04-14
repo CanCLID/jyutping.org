@@ -1,52 +1,21 @@
 ---
 // src/components/Chartaudio.astro
-// Use Astro.glob to find all .mp3 files in the public/audio directory at build time.
-// Use import.meta.glob to find all .mp3 files in the public/audio directory at build time.
-// This returns an object where keys are file paths relative to the current file,
-// and values are functions to dynamically import the module (or just the path if not importing).
-// We want the paths relative to the /public directory for the src attribute.
-const audioFiles = import.meta.glob("/public/audio/*.mp3", {
-  eager: false,
-  import: "default",
-});
-
-// Function to extract filename without extension (for ID)
-function getAudioId(filePath: string): string {
-  const parts = filePath.split("/");
-  const filename = parts[parts.length - 1];
-  return filename.replace(".mp3", "");
-}
+// This component now only renders a hidden container.
+// The creation and management of <audio> elements will be handled
+// dynamically by the Audio.tsx component.
 ---
 
 {
   /*
-  This component renders hidden <audio> elements for all .mp3 files
-  found in the public/audio directory. These can then be controlled
-  by other components (like Audio.tsx) using their ID.
+  This container will hold dynamically created <audio> elements.
+  It's hidden from users and assistive technologies.
 */
 }
-<div class="chartaudio-container" style="display: none;" aria-hidden="true">
-  {/* Removed the script tag that logged a warning if no files were found */}
-  {
-    Object.keys(audioFiles).map((audioPath) => {
-      // The key is the path relative to the project root, e.g., /public/audio/aa1.mp3
-      // We need the path relative to the domain root for the src attribute
-      const audioSrc = audioPath.replace("/public", ""); // Remove /public prefix
-      if (!audioSrc) {
-        console.error(
-          "Could not determine audio source path for path:",
-          audioPath
-        );
-        return null; // Skip if src is invalid
-      }
-      const audioId = getAudioId(audioSrc); // Extract ID from the src path
-
-      return (
-        <audio id={audioId} src={audioSrc} preload="none">
-          {/* Add an empty track element for accessibility compliance */}
-          <track kind="captions" />
-        </audio>
-      );
-    })
-  }
+<div
+  id="dynamic-audio-container"
+  style="display: none;"
+  aria-hidden="true"
+  data-audio-base-path="/audio/"
+>
+  {/* Audio elements will be added here by Audio.tsx */}
 </div>

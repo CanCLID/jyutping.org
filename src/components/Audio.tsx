@@ -28,15 +28,44 @@ const VolumeUpIcon = () => (
 
 const Audio: React.FC<AudioProps> = ({ id }) => {
   const handleClick = () => {
-    const audioElement = document.getElementById(id) as HTMLAudioElement | null;
-    if (audioElement) {
-      audioElement.play().catch((error) => {
-        // Handle potential errors like user interaction required
-        console.error(`Error playing audio [${id}]:`, error);
-      });
-    } else {
-      console.warn(`Audio element with id "${id}" not found.`);
+    const container = document.getElementById("dynamic-audio-container");
+    if (!container) {
+      console.error("Dynamic audio container not found.");
+      return;
     }
+
+    const basePath = container.dataset.audioBasePath || "/audio/"; // Default path if attribute is missing
+    const audioSrc = `${basePath}${id}.mp3`;
+
+    let audioElement = document.getElementById(id) as HTMLAudioElement | null;
+
+    // If audio element doesn't exist, create it
+    if (!audioElement) {
+      audioElement = document.createElement("audio");
+      audioElement.id = id;
+      audioElement.src = audioSrc;
+      audioElement.preload = "auto"; // Preload the audio when created
+
+      // Add an empty track for accessibility compliance (though less critical for dynamically added elements)
+      const track = document.createElement("track");
+      track.kind = "captions";
+      audioElement.appendChild(track);
+
+      container.appendChild(audioElement);
+
+      // Optional: Add error handling for audio loading itself
+      audioElement.onerror = () => {
+        console.error(`Error loading audio source: ${audioSrc}`);
+        // Maybe remove the element or display feedback
+        audioElement?.remove();
+      };
+    }
+
+    // Play the audio element (either existing or newly created)
+    audioElement.play().catch((error) => {
+      console.error(`Error playing audio [${id}] (${audioSrc}):`, error);
+      // Handle potential errors like user interaction required or file not found after creation attempt
+    });
   };
 
   return (
