@@ -68,13 +68,6 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
       type="font/woff2"
       crossorigin="anonymous"
     />
-    <link
-      rel="preload"
-      href="/ChironSungHK-Noto-lshk.woff"
-      as="font"
-      type="font/woff"
-      crossorigin="anonymous"
-    />
 
     {/* Umami Analytics */}
     <script defer src={umamiScriptSrc} data-website-id={umamiWebsiteId}
@@ -105,9 +98,7 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
   @font-face {
     font-family: "Chiron Hei HK Jyutping";
     /* Prioritize WOFF2, fallback to WOFF */
-    src:
-      url("/ChironHeiHK-lshk.woff2") format("woff2"),
-      url("/ChironHeiHK-lshk.woff") format("woff");
+    src: url("/ChironHeiHK-lshk.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -130,10 +121,6 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
       sans-serif;
   }
 
-  /* Specific class for Chiron Sung HK if needed */
-  .font-chiron-sung {
-    font-family: "Chiron Sung HK Jyutping", serif;
-  }
   /* Specific class for Chiron Hei HK if needed */
   .font-chiron-hei {
     font-family: "Chiron Hei HK Jyutping", sans-serif;
