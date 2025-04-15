@@ -531,21 +531,14 @@ const AboutPage: React.FC<AboutPageProps> = ({ locale }) => {
 
   return (
     // Added container and dark mode text colors
-    <div className="container mx-auto px-4 py-8 text-gray-800 dark:text-gray-200">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-8">
-        {" "}
-        {/* Increased gap */}
-        {/* Acknowledgements Column */}
+    <div className="container mx-auto px-4 py-4 text-gray-800 dark:text-gray-200">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-4">
         <div className="prose dark:prose-invert max-w-none">
-          {" "}
-          {/* Use prose for better text styling */}
           <h2 className="text-3xl font-semibold mb-4 border-b pb-2 dark:border-gray-600">
             {t.acknowledgementsTitle}
           </h2>
           <p className="mb-4">{t.acknowledgementsP1}</p>
           <ul className="list-disc pl-5 space-y-2 text-sm">
-            {" "}
-            {/* Use list for better structure */}
             <li>{t.acknowledgementsP2}</li>
             <li>{t.acknowledgementsP3}</li>
             <li>{t.acknowledgementsP4}</li>

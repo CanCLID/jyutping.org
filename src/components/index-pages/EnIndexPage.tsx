@@ -102,33 +102,33 @@ const EnIndexPage: React.FC = () => {
       <div className="flex flex-col md:flex-row md:flex-wrap md:justify-around items-center gap-4 my-12 mx-auto max-w-5xl">
         <a
           href="/cmn" // Use standard <a> tag
-          className="bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150" // Adjusted styles
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-100  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150" // Adjusted styles
         >
           切到普通話 / 國語版
         </a>
 
         <a
           href="/wuu" // Use standard <a> tag
-          className="bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-100  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           換到吳語版
         </a>
         <a
           href="/" // Use standard <a> tag
-          className="bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-100  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           返去粵語版
         </a>
         <a
           href="/nan" // Use standard <a> tag
-          className="bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-100  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           換到台灣閩南語版
         </a>
 
         <a
           href="/vi" // Use standard <a> tag
-          className="bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-100  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           Chuyển sang tiếng Việt
         </a>
