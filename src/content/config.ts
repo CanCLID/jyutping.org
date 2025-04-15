@@ -6,6 +6,7 @@ const blogCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(), // Optional description
+    weight: z.number().optional(), // Add weight property
     // Add other common frontmatter fields as needed, e.g.:
     // date: z.date().optional(),
     // tags: z.array(z.string()).optional(),

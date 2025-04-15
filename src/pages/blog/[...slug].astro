@@ -32,6 +32,9 @@ const allBlogEntries = await getCollection("blog", ({ id }) =>
   id.startsWith("yue/")
 );
 
+// Sort entries by weight
+allBlogEntries.sort((a, b) => (a.data.weight || 0) - (b.data.weight || 0));
+
 // Determine language for the layout
 const lang = entry.id.split("/")[0] || "yue"; // Extract lang from collection id
 ---

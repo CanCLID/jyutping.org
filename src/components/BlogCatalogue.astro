@@ -25,23 +25,29 @@ interface Props {
 
 const { posts, currentSlug } = Astro.props;
 
-// Sort posts, perhaps by date or title? Let's sort by title for now.
-const sortedPosts = posts.sort((a, b) =>
-  a.data.title.localeCompare(b.data.title)
-);
+// Posts are pre-sorted by weight in the parent page
 ---
 
 <nav aria-label="Blog Catalogue">
   <h2 class="text-2xl px-4 font-bold mb-4">{title}</h2>
   <ul class="space-y-2 px-4">
     {
-      sortedPosts.map((post) => {
-        const postSlug = post.slug.substring(4); // Remove 'yue/' prefix
-        const isActive = postSlug === currentSlug;
+      posts.map((post) => {
+        // Determine the correct slug based on whether the locale is present
+        const postSlug = post.slug.includes("/")
+          ? post.slug.substring(post.slug.indexOf("/") + 1)
+          : post.slug;
+        const localePrefix = post.slug.includes("/")
+          ? `/${post.slug.split("/")[0]}`
+          : "";
+        const postLink = `${localePrefix}/blog/${postSlug}/`;
+        const isActive =
+          postSlug === currentSlug &&
+          (localePrefix === "" || localePrefix === `/${locale}`);
         return (
           <li>
             <a
-              href={`/blog/${postSlug}/`}
+              href={postLink}
               class:list={[
                 "block text-lg hover:text-blue-500",
                 { "font-bold": isActive }, // Highlight active link
