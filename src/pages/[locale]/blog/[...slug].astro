@@ -1,0 +1,95 @@
+---
+// src/pages/[locale]/blog/[...slug].astro
+import type { CollectionEntry } from "astro:content"; // Use import type
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import TableOfContents from "@/components/TableOfContents"; // Import the TOC component
+import BlogCatalogue from "@/components/BlogCatalogue.astro"; // Import the new Catalogue component
+// import BlogPostLayout from '@/layouts/BlogPostLayout.astro'; // Optional: Use a specific layout for blog posts
+import { I18n } from "@/i18n/utils"; // Import the I18n object containing locales
+
+// 1. Generate paths for all non-default locale blog posts
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("blog", ({ id }) => {
+    // Filter for entries NOT in the default locale ('yue')
+    return !id.startsWith("yue/");
+  });
+
+  return blogEntries
+    .map((entry) => {
+      const [locale, ...slugParts] = entry.slug.split("/");
+      // Validate locale if necessary using your i18n setup
+      if (!I18n.locales.includes(locale)) {
+        // Access locales from the imported I18n object
+        console.warn(
+          `Invalid locale "${locale}" found in blog entry slug: ${entry.slug}. Skipping.`
+        );
+        return null; // Skip generating path for invalid locale
+      }
+      return {
+        params: { locale: locale, slug: slugParts.join("/") || undefined }, // Handle slugs like /en/blog/
+        props: { entry },
+      };
+    })
+    .filter((path) => path !== null); // Filter out skipped entries
+}
+
+// 2. Get the entry for the current page
+interface Props {
+  entry: CollectionEntry<"blog">;
+}
+const { entry } = Astro.props;
+const { Content, headings } = await entry.render(); // Extract headings
+
+// Fetch all blog posts for the current locale
+const locale = Astro.params.locale; // Get current locale
+const allBlogEntries = await getCollection("blog", ({ id }) =>
+  id.startsWith(`${locale}/`)
+);
+
+// Sort entries by weight
+allBlogEntries.sort((a, b) => (a.data.weight || 0) - (b.data.weight || 0));
+
+// Determine language for the layout
+const lang = entry.id.split("/")[0] || "yue"; // Extract lang from collection id
+---
+
+<BaseLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  lang={lang}
+>
+  <div class="flex justify-center mx-auto max-w-6xl">
+    {/* Header */}
+    {/* Blog Catalogue - sticky on the left, hidden on small screens */}
+    <aside class="hidden w-48 lg:block flex-shrink-0 float-end">
+      <div class="sticky top-32">
+        {/* Adjust top offset as needed */}
+        <BlogCatalogue
+          posts={allBlogEntries}
+          currentSlug={entry.slug.substring(entry.slug.indexOf("/") + 1)}
+        />
+      </div>
+    </aside>
+
+    <div class="flex justify-center gap-4 px-4 py-8 mx-auto">
+      {/* Main content area */}
+      <article class="prose flex-grow">
+        {/* Basic prose styling */}
+        <h1>{entry.data.title}</h1>
+        {entry.data.description && <p class="lead">{entry.data.description}</p>}
+        <hr class="my-4" />
+        <Content />
+        {/* Render the MDX content */}
+      </article>
+
+      {/* Table of Contents - sticky on the right, hidden on small screens */}
+      <aside class="hidden lg:block w-64 flex-shrink-0">
+        <div class="sticky top-32">
+          {/* Adjust top offset as needed */}
+          <TableOfContents client:load headings={headings} />
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

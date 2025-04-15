@@ -1,19 +1,26 @@
 # jyutping.org
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/47ead146-726b-46e7-9917-601c8d883d3c/deploy-status)](https://app.netlify.com/sites/jyutping/deploys)
+本站使用 [Astro](https://astro.build/) 、React、TailwindCSS 開發，所有頁面內容都喺下面幾個路經中：
 
-For the English version, please go to [jyutping.org/en](https://www.jyutping.org/en/)
-
-## 開發指南
-
-本網站採用 [Hugo](https://gohugo.io/) 開發，開發前請先安裝 Hugo。<br/>
-This site is powered by [Hugo](https://gohugo.io/). Please install Hugo to get ready for development.
-
-運行以下命令來準備開發：<br/>
-Run the following commands to build this site:
-
-```bash
-git clone --recurse-submodules --depth 1 https://github.com/laubonghaudoi/jyutping.org
-cd jyutping.org
-hugo server
+```text
+src/components
+src/content
+src/pages
 ```
+
+目前有`yue`、`cmn`、`wuu`、`nan`、`vi`、`en`六個語言版本，歡迎提交 PR 貢獻內容翻譯。
+
+網站部署喺 Cloudflare Pages，用 Astro preset。
+
+## 開發
+
+用下面嘅指令開發本站：
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |

@@ -1,0 +1,57 @@
+---
+// src/pages/[locale]/blog/index.astro
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlogIndexList from "@/components/BlogIndexList.tsx";
+import { I18n } from "@/i18n/utils";
+
+// Define translations for this page (can be moved to i18n utils later)
+const translations: Record<
+  string,
+  { title: string; readMore: string; noPosts: string }
+> = {
+  en: { title: "Blog", readMore: "Read more", noPosts: "No posts found yet." },
+  yue: { title: "文章", readMore: "閱讀全文", noPosts: "暫時冇文章。" }, // Should not be needed here
+  cmn: { title: "文章", readMore: "閲讀全文", noPosts: "暂無文章。" },
+  nan: { title: "文章", readMore: "讀全文", noPosts: "猶未有文。" },
+  wuu: { title: "博客", readMore: "阅读全文", noPosts: "暂无博文。" },
+  vi: { title: "Blog", readMore: "Đọc thêm", noPosts: "Chưa có bài viết nào." },
+};
+
+export function getStaticPaths() {
+  return I18n.locales
+    .filter((locale) => locale !== I18n.defaultLocale) // Exclude default locale
+    .map((locale) => ({
+      params: { locale },
+    }));
+}
+
+const { locale } = Astro.params;
+
+// Validate locale
+const validLocale = I18n.locales.includes(locale as string)
+  ? locale
+  : I18n.defaultLocale;
+
+// Fetch blog posts for the current locale
+const postsData = await getCollection("blog", ({ id }) =>
+  id.startsWith(`${validLocale}/`)
+);
+
+// Prepare posts prop for the component
+const posts = postsData.map((post) => ({
+  title: post.data.title,
+  // Construct URL relative to locale root (e.g., /en/blog/post-slug)
+  slug: `/${validLocale}/blog/${post.slug.substring(validLocale.length + 1)}`,
+  description: post.data.description,
+}));
+
+// Get translations for the current locale
+const t = translations[validLocale] || translations.en; // Fallback to English
+const pageTitle = `${t.title} - Jyutping`; // Simplified title for non-default locales
+---
+
+<BaseLayout lang={validLocale} title={pageTitle}>
+  <BlogIndexList posts={posts} translations={t} client:load />
+  {/* Hydrate if needed */}
+</BaseLayout>

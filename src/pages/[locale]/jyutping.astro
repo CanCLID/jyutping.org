@@ -1,0 +1,92 @@
+---
+// src/pages/[locale]/jyutping.astro
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import JyutpingPage from "@/components/JyutpingPage.tsx";
+import Chartaudio from "@/components/Chartaudio.astro";
+import { I18n } from "@/i18n/utils";
+import TableOfContents from "@/components/TableOfContents";
+import {
+  jyutpingHeadingsTranslations,
+  generateSlug,
+} from "@/i18n/jyutpingHeadings"; // Import translations and slug generator
+
+// Define translations for the page title (can be expanded)
+const pageTitles: Record<string, string> = {
+  en: "Jyutping Scheme",
+  yue: "粵拼方案", // Should technically not be needed here
+  cmn: "粤拼方案",
+  nan: "粵拼方案",
+  vi: "Việt bính",
+  wuu: "粤拼方案",
+};
+
+export function getStaticPaths() {
+  return I18n.locales
+    .filter((locale) => locale !== I18n.defaultLocale) // Exclude default locale
+    .map((locale) => ({
+      params: { locale },
+    }));
+}
+
+const { locale } = Astro.params;
+
+// Validate locale and get title
+const validLocale = I18n.locales.includes(locale as string)
+  ? locale
+  : I18n.defaultLocale;
+const title = pageTitles[validLocale] || pageTitles.yue;
+
+// Get the correct heading translations for the current locale
+const t =
+  jyutpingHeadingsTranslations[validLocale] || jyutpingHeadingsTranslations.en;
+const tEn = jyutpingHeadingsTranslations.en; // English for consistent slugs
+
+// Dynamically generate headings for TableOfContents based on locale
+const headings = [
+  { text: t.onsetHeading, slug: generateSlug(tEn.onsetHeading), depth: 2 },
+  {
+    text: t.syllabicNasalHeading,
+    slug: generateSlug(tEn.syllabicNasalHeading),
+    depth: 2,
+  },
+  { text: t.finalHeading, slug: generateSlug(tEn.finalHeading), depth: 2 },
+  { text: t.nucleiHeading, slug: generateSlug(tEn.nucleiHeading), depth: 3 },
+  { text: t.codaHeading, slug: generateSlug(tEn.codaHeading), depth: 3 },
+  {
+    text: t.finalsChartHeading,
+    slug: generateSlug(tEn.finalsChartHeading),
+    depth: 3,
+  },
+  { text: t.toneHeading, slug: generateSlug(tEn.toneHeading), depth: 2 },
+  { text: t.referenceHeading, slug: t.referenceId, depth: 2 }, // Use locale-specific ID for reference slug
+];
+---
+
+<BaseLayout lang={validLocale} title={title}>
+  <Chartaudio />
+  <div class="bg-[#1678d3] text-white px-4 py-6 mb-8">
+    {/* Responsive H1 with increased line spacing */}
+    <h1
+      class="font-chiron-hei my-4 text-5xl md:text-6xl leading-relaxed text-center container max-w-8xl mx-auto"
+    >
+      粵拼：香港語言學學會粵語拼音方案
+    </h1>
+    {/* Responsive H1 with increased line spacing */}
+    <h1
+      class="chiron-font my-8 text-3xl md:text-4xl text-center container max-w-8xl mx-auto"
+    >
+      Jyutping: The Linguistic Society of Hong Kong <br /> Cantonese Romanization
+      Scheme
+    </h1>
+  </div>
+  <div class="flex justify-center gap-8 max-w-5xl mx-auto">
+    <JyutpingPage locale={validLocale} client:visible />
+    {/* Pass locale, hydrate if needed */}
+    <aside class="hidden lg:block w-32 flex-shrink-0">
+      <div class="sticky top-32">
+        {/* Adjust top offset as needed */}
+        <TableOfContents client:visible headings={headings} />
+      </div>
+    </aside>
+  </div>
+</BaseLayout>

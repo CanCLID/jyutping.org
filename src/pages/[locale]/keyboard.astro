@@ -1,0 +1,37 @@
+---
+// src/pages/[locale]/keyboard.astro
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import KeyboardPage from "@/components/KeyboardPage.tsx";
+import { I18n } from "@/i18n/utils";
+
+// Define translations for the page title (can be expanded)
+const pageTitles: Record<string, string> = {
+  en: "Keyboard Tools - Jyutping",
+  yue: "輸入法工具 - 粵拼 Jyutping", // Should technically not be needed here
+  cmn: "输入法工具 - 粤拼",
+  nan: "輸入法工具 - 粵拼",
+  vi: "Bàn phím - Việt bính",
+  wuu: "输入法工具 - 粤拼",
+};
+
+export function getStaticPaths() {
+  return I18n.locales
+    .filter((locale) => locale !== I18n.defaultLocale) // Exclude default locale
+    .map((locale) => ({
+      params: { locale },
+    }));
+}
+
+const { locale } = Astro.params;
+
+// Validate locale and get title
+const validLocale = I18n.locales.includes(locale as string)
+  ? locale
+  : I18n.defaultLocale;
+const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English title
+---
+
+<BaseLayout lang={validLocale} title={title}>
+  <KeyboardPage locale={validLocale} client:load />
+  {/* Pass locale, hydrate if needed */}
+</BaseLayout>

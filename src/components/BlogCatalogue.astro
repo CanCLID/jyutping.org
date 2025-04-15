@@ -1,0 +1,64 @@
+---
+// src/components/BlogCatalogue.astro
+import type { CollectionEntry } from "astro:content";
+
+// Get current locale from Astro's global
+const { currentLocale } = Astro;
+const locale = currentLocale || "yue"; // Fallback to default if undefined
+
+// --- Title Translations ---
+const titleTranslations: Record<string, string> = {
+  yue: "文章", // Article List
+  en: "Blog",
+  vi: "Tập văn", // Article List
+  nan: "文章",
+  wuu: "文章",
+  cmn: "文章",
+};
+
+const title = titleTranslations[locale] || titleTranslations.yue;
+
+interface Props {
+  posts: CollectionEntry<"blog">[];
+  currentSlug: string; // To highlight the current post
+}
+
+const { posts, currentSlug } = Astro.props;
+
+// Posts are pre-sorted by weight in the parent page
+---
+
+<nav aria-label="Blog Catalogue">
+  <h2 class="text-2xl px-4 font-bold mb-4">{title}</h2>
+  <ul class="space-y-2 px-4">
+    {
+      posts.map((post) => {
+        // Determine the correct slug based on whether the locale is present
+        const postSlug = post.slug.includes("/")
+          ? post.slug.substring(post.slug.indexOf("/") + 1)
+          : post.slug;
+        const localePrefix = post.slug.includes("/")
+          ? `/${post.slug.split("/")[0]}`
+          : "";
+        const postLink = `${localePrefix}/blog/${postSlug}/`;
+        const isActive =
+          postSlug === currentSlug &&
+          (localePrefix === "" || localePrefix === `/${locale}`);
+        return (
+          <li>
+            <a
+              href={postLink}
+              class:list={[
+                "block text-lg hover:text-blue-500",
+                { "font-bold": isActive }, // Highlight active link
+              ]}
+              aria-current={isActive ? "page" : false}
+            >
+              {post.data.title}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>
