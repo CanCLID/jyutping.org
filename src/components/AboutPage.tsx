@@ -28,7 +28,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/orgs/CanCLID"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           Cantonese Computational Linguistics Infrastructure Development
           Workgroup (CanCLID)
@@ -38,7 +38,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://www.lshk.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           The Linguistic Society of Hong Kong (LSHK)
         </a>
@@ -47,7 +47,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/CanCLID/jyutping.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           GitHub
         </a>
@@ -70,7 +70,7 @@ const translations: Record<string, AboutPageTranslation> = {
         Email to{" "}
         <a
           href="mailto:support@jyutping.org"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           support@jyutping.org
         </a>{" "}
@@ -84,7 +84,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/CanCLID/jyutping.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           GitHub
         </a>{" "}
@@ -96,7 +96,7 @@ const translations: Record<string, AboutPageTranslation> = {
         Install and type with
         <a
           href="/keyboard" // Keep relative link for internal navigation
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           Jyutping keyboards
         </a>
@@ -114,7 +114,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/orgs/CanCLID"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           粵語計算語言學基礎建設組
         </a>
@@ -123,7 +123,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://www.lshk.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           香港語言學學會 (LSHK)
         </a>
@@ -132,7 +132,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/CanCLID/jyutping.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           GitHub
         </a>
@@ -151,7 +151,7 @@ const translations: Record<string, AboutPageTranslation> = {
         傳送電郵至{" "}
         <a
           href="mailto:support@jyutping.org"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           support@jyutping.org
         </a>{" "}
@@ -165,7 +165,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/CanCLID/jyutping.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           GitHub
         </a>{" "}
@@ -177,7 +177,7 @@ const translations: Record<string, AboutPageTranslation> = {
         安裝同使用
         <a
           href="/keyboard" // Keep relative link
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           粵拼輸入法
         </a>
@@ -196,7 +196,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/orgs/CanCLID"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           粵語計算語言學基礎建設組
         </a>
@@ -205,7 +205,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://www.lshk.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           香港語言學學會 (LSHK)
         </a>
@@ -214,7 +214,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/CanCLID/jyutping.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           GitHub
         </a>
@@ -233,7 +233,7 @@ const translations: Record<string, AboutPageTranslation> = {
         發郵件到
         <a
           href="mailto:support@jyutping.org"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           support@jyutping.org
         </a>
@@ -247,7 +247,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/CanCLID/jyutping.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           GitHub
         </a>
@@ -259,7 +259,7 @@ const translations: Record<string, AboutPageTranslation> = {
         安裝使用
         <a
           href="/keyboard" // Keep relative link
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           粵拼輸入法
         </a>
@@ -278,7 +278,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/orgs/CanCLID"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           粵語計算語言學基礎建設組
         </a>
@@ -287,7 +287,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://www.lshk.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           香港語言學學會 (LSHK)
         </a>
@@ -296,7 +296,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/CanCLID/jyutping.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           GitHub
         </a>
@@ -315,7 +315,7 @@ const translations: Record<string, AboutPageTranslation> = {
         寄批
         <a
           href="mailto:support@jyutping.org"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           support@jyutping.org
         </a>
@@ -329,7 +329,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/CanCLID/jyutping.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           GitHub
         </a>{" "}
@@ -341,7 +341,7 @@ const translations: Record<string, AboutPageTranslation> = {
         安裝使用
         <a
           href="/keyboard" // Keep relative link
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           粵拼輸入法
         </a>
@@ -360,7 +360,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/orgs/CanCLID"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           Tổ phát triển cơ sở hạ tầng ngôn ngữ học tính toán tiếng Quảng Đông
           (CanCLID)
@@ -370,7 +370,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://www.lshk.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           Hội học thuật ngôn ngữ học Hồng Kông (LSHK)
         </a>
@@ -379,7 +379,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/CanCLID/jyutping.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           GitHub
         </a>
@@ -402,7 +402,7 @@ const translations: Record<string, AboutPageTranslation> = {
         Gửi email tới{" "}
         <a
           href="mailto:support@jyutping.org"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           support@jyutping.org
         </a>{" "}
@@ -416,7 +416,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/CanCLID/jyutping.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           GitHub
         </a>{" "}
@@ -428,7 +428,7 @@ const translations: Record<string, AboutPageTranslation> = {
         Cài đặt và sử dụng{" "}
         <a
           href="/keyboard" // Keep relative link
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           Bàn phím Việt bính
         </a>{" "}
@@ -447,7 +447,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/orgs/CanCLID"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           粵語計算語言學基礎建設組
         </a>
@@ -456,7 +456,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://www.lshk.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           香港語言學學會 (LSHK)
         </a>
@@ -465,7 +465,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/CanCLID/jyutping.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           GitHub
         </a>
@@ -484,7 +484,7 @@ const translations: Record<string, AboutPageTranslation> = {
         發郵件到
         <a
           href="mailto:support@jyutping.org"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           support@jyutping.org
         </a>
@@ -498,7 +498,7 @@ const translations: Record<string, AboutPageTranslation> = {
           href="https://github.com/CanCLID/jyutping.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           GitHub
         </a>{" "}
@@ -510,7 +510,7 @@ const translations: Record<string, AboutPageTranslation> = {
         安裝搭使用
         <a
           href="/keyboard" // Keep relative link
-          className="text-blue-600 hover:underline dark:text-blue-400 mx-1"
+          className="text-blue-600 hover:underline mx-1"
         >
           粵拼輸入法
         </a>
@@ -531,10 +531,10 @@ const AboutPage: React.FC<AboutPageProps> = ({ locale }) => {
 
   return (
     // Added container and dark mode text colors
-    <div className="container mx-auto px-4 py-4 text-gray-800 dark:text-gray-200">
+    <div className="container mx-auto px-4 py-4 text-gray-800">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-4">
-        <div className="prose dark:prose-invert max-w-none">
-          <h2 className="text-3xl font-semibold mb-4 border-b pb-2 dark:border-gray-600">
+        <div className="prose max-w-none">
+          <h2 className="text-3xl font-semibold mb-4 border-b pb-2">
             {t.acknowledgementsTitle}
           </h2>
           <p className="mb-4">{t.acknowledgementsP1}</p>
@@ -546,26 +546,26 @@ const AboutPage: React.FC<AboutPageProps> = ({ locale }) => {
           </ul>
         </div>
         {/* Develop & Contribute Column */}
-        <div className="prose dark:prose-invert max-w-none">
-          <h2 className="text-3xl font-semibold mb-4 border-b pb-2 dark:border-gray-600">
+        <div className="prose max-w-none">
+          <h2 className="text-3xl font-semibold mb-4 border-b pb-2">
             {t.developContributeTitle}
           </h2>
           <p className="mb-4">{t.developContributeP1}</p>
           <ul className="list-none space-y-3">
             <li className="flex items-start">
-              <IconMail className="mr-3 mt-1 flex-shrink-0 h-5 w-5 text-gray-500 dark:text-gray-400" />{" "}
+              <IconMail className="mr-3 mt-1 flex-shrink-0 h-5 w-5 text-gray-500" />{" "}
               {/* Adjusted icon style */}
               <span>{t.emailText}</span>
             </li>
             <li className="flex items-start">
-              <IconBrandGithub className="mr-3 mt-1 flex-shrink-0 h-5 w-5 text-gray-500 dark:text-gray-400" />{" "}
+              <IconBrandGithub className="mr-3 mt-1 flex-shrink-0 h-5 w-5 text-gray-500" />{" "}
               {/* Adjusted icon style */}
               <span>{t.githubText}</span>
             </li>
             {/* Conditionally render keyboard link if text exists for the locale */}
             {t.keyboardText && (
               <li className="flex items-start">
-                <IconKeyboard className="mr-3 mt-1 flex-shrink-0 h-5 w-5 text-gray-500 dark:text-gray-400" />{" "}
+                <IconKeyboard className="mr-3 mt-1 flex-shrink-0 h-5 w-5 text-gray-500" />{" "}
                 {/* Adjusted icon style */}
                 <span>{t.keyboardText}</span>
               </li>

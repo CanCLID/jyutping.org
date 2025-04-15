@@ -4,6 +4,7 @@ import type { CollectionEntry } from "astro:content"; // Use import type
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import TableOfContents from "@/components/TableOfContents"; // Import the TOC component
+import BlogCatalogue from "@/components/BlogCatalogue.astro"; // Import the new Catalogue component
 // import BlogPostLayout from '@/layouts/BlogPostLayout.astro'; // Optional: Use a specific layout for blog posts
 
 // 1. Generate paths for all 'yue' blog posts
@@ -26,6 +27,11 @@ interface Props {
 const { entry } = Astro.props;
 const { Content, headings } = await entry.render(); // Extract headings
 
+// Fetch all 'yue' blog posts for the catalogue
+const allBlogEntries = await getCollection("blog", ({ id }) =>
+  id.startsWith("yue/")
+);
+
 // Determine language for the layout
 const lang = entry.id.split("/")[0] || "yue"; // Extract lang from collection id
 ---
@@ -35,23 +41,37 @@ const lang = entry.id.split("/")[0] || "yue"; // Extract lang from collection id
   description={entry.data.description}
   lang={lang}
 >
-  <div class="flex justify-center gap-8 px-4 py-8 max-w-5xl mx-auto">
-    {/* Main content area */}
-    <article class="prose dark:prose-invert flex-grow">
-      {/* Basic prose styling */}
-      <h1>{entry.data.title}</h1>
-      {entry.data.description && <p class="lead">{entry.data.description}</p>}
-      <hr class="my-4" />
-      <Content />
-      {/* Render the MDX content */}
-    </article>
-
-    {/* Table of Contents - sticky on the right, hidden on small screens */}
-    <aside class="hidden lg:block w-32 flex-shrink-0">
+  <div class="flex justify-center mx-auto max-w-6xl">
+    {/* Header */}
+    {/* Blog Catalogue - sticky on the left, hidden on small screens */}
+    <aside class="hidden w-48 lg:block flex-shrink-0 float-end">
       <div class="sticky top-32">
         {/* Adjust top offset as needed */}
-        <TableOfContents client:load headings={headings} />
+        <BlogCatalogue
+          posts={allBlogEntries}
+          currentSlug={entry.slug.substring(4)}
+        />
       </div>
     </aside>
+
+    <div class="flex justify-center gap-4 px-4 py-8 mx-auto">
+      {/* Main content area */}
+      <article class="prose flex-grow">
+        {/* Basic prose styling */}
+        <h1>{entry.data.title}</h1>
+        {entry.data.description && <p class="lead">{entry.data.description}</p>}
+        <hr class="my-4" />
+        <Content />
+        {/* Render the MDX content */}
+      </article>
+
+      {/* Table of Contents - sticky on the right, hidden on small screens */}
+      <aside class="hidden lg:block w-64 flex-shrink-0">
+        <div class="sticky top-32">
+          {/* Adjust top offset as needed */}
+          <TableOfContents client:load headings={headings} />
+        </div>
+      </aside>
+    </div>
   </div>
 </BaseLayout>

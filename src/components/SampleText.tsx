@@ -212,7 +212,7 @@ const SampleText: React.FC<SampleTextProps> = ({
   // Removed dynamic audio tag generation - relies on Chartaudio.astro in parent
 
   return (
-    <div className="my-6 p-4 border border-neutral-800 dark:border-gray-600 rounded-md">
+    <div className="my-6 p-4 border border-neutral-800 rounded-md">
       {/* Display text with audio buttons */}
       <div className="flex flex-wrap items-end leading-loose">
         {parsedItems.map((item, index) => (
@@ -228,9 +228,7 @@ const SampleText: React.FC<SampleTextProps> = ({
               <span className="h-[28px] w-6 inline-block" /> // Placeholder for alignment (adjust height if needed)
             )}
             {/* Character */}
-            <span className="text-4xl font-chiron-hei my-1 dark:text-gray-100">
-              {item.char}
-            </span>
+            <span className="text-4xl font-chiron-hei my-1">{item.char}</span>
             {/* Added dark mode text color */}
           </div>
         ))}

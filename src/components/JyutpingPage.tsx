@@ -38,15 +38,12 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
           href="https://words.hk/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           粵典 works.hk
         </a>
         . For further details please see{" "}
-        <a
-          href="#reference"
-          className="text-blue-600 hover:underline dark:text-blue-400"
-        >
+        <a href="#reference" className="text-blue-600 hover:underline">
           Reference
         </a>
         .
@@ -104,7 +101,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
           href="https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           here
         </a>{" "}
@@ -132,10 +129,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     alertIpaContent: (
       <p>
         本頁面所用國際音標轉寫皆係寬式轉寫，錄音數據來源係粵典。詳情請見{" "}
-        <a
-          href="#references-yue"
-          className="text-blue-600 hover:underline dark:text-blue-400"
-        >
+        <a href="#references-yue" className="text-blue-600 hover:underline">
           參考文獻
         </a>{" "}
         一節。
@@ -183,7 +177,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
           href="https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           呢度
         </a>
@@ -211,10 +205,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     alertIpaContent: (
       <p>
         本頁面所用國際音標轉寫皆爲寬式轉寫，錄音數據來源爲粵典。詳情請見{" "}
-        <a
-          href="#references-cmn"
-          className="text-blue-600 hover:underline dark:text-blue-400"
-        >
+        <a href="#references-cmn" className="text-blue-600 hover:underline">
           參考文獻
         </a>{" "}
         一節。
@@ -263,7 +254,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
           href="https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           這裏
         </a>
@@ -291,10 +282,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     alertIpaContent: (
       <p>
         本頁面所用的國際音標轉寫攏是寬式轉寫，錄音數 據來源是粵典。詳情請看{" "}
-        <a
-          href="#references-nan"
-          className="text-blue-600 hover:underline dark:text-blue-400"
-        >
+        <a href="#references-nan" className="text-blue-600 hover:underline">
           參考文獻
         </a>{" "}
         遐。
@@ -342,7 +330,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
           href="https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           遮
         </a>
@@ -376,15 +364,12 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
           href="https://words.hk/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           粵典 works.hk
         </a>
         . Để biết thêm chi tiết vui lòng xem{" "}
-        <a
-          href="#references-vi"
-          className="text-blue-600 hover:underline dark:text-blue-400"
-        >
+        <a href="#references-vi" className="text-blue-600 hover:underline">
           Tham khảo
         </a>
         .
@@ -445,7 +430,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
           href="https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           đây
         </a>
@@ -473,10 +458,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     alertIpaContent: (
       <p>
         本葉面用个國際音標轉寫全是寬式轉寫，錄音數據來自粵典。具體請參{" "}
-        <a
-          href="#references-wuu"
-          className="text-blue-600 hover:underline dark:text-blue-400"
-        >
+        <a href="#references-wuu" className="text-blue-600 hover:underline">
           參考文獻
         </a>{" "}
         一節。
@@ -524,7 +506,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
           href="https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-blue-600 hover:underline"
         >
           此地
         </a>
@@ -553,13 +535,11 @@ interface JyutpingPageProps {
 }
 
 // Add dark mode classes to tables and text
-const tableBaseClass =
-  "my-4 border border-collapse border-gray-300 dark:border-gray-600";
-const thClass = "border p-2 dark:border-gray-600 bg-gray-100 dark:bg-gray-700";
-const tdClass = "border p-2 dark:border-gray-600";
-const tdHighlightClass =
-  "border p-1 bg-yellow-100 dark:bg-yellow-800 dark:text-yellow-100"; // Highlight for new finals
-const tdMutedClass = "border p-1 bg-gray-300 dark:bg-gray-600";
+const tableBaseClass = "my-4 border border-collapse border-gray-300";
+const thClass = "border p-2 bg-gray-100";
+const tdClass = "border p-2";
+const tdHighlightClass = "border p-1 bg-yellow-100"; // Highlight for new finals
+const tdMutedClass = "border p-1 bg-gray-300";
 
 const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
   // Get translations for headings and content, falling back to English
@@ -1262,7 +1242,7 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
         >
           {headingsT.referenceHeading}
         </h2>
-        <div className="prose dark:prose-invert max-w-none text-sm space-y-2 mb-8">
+        <div className="prose max-w-none text-sm space-y-2 mb-8">
           <p>
             Bauer, Robert S., and Paul K. Benedict. 2011.
             <em>Modern cantonese phonology</em>. Vol. 102. Walter de Gruyter
@@ -1286,7 +1266,7 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
               href="https://lshk.org/jyutping-scheme/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline dark:text-blue-400"
+              className="text-blue-600 hover:underline"
             >
               https://lshk.org/jyutping-scheme/
             </a>
@@ -1298,7 +1278,7 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
               href="http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline dark:text-blue-400"
+              className="text-blue-600 hover:underline"
             >
               http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/
             </a>

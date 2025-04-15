@@ -69,7 +69,7 @@ const CmnIndexPage: React.FC = () => {
         {/* Added gap */}
         <a
           href="/cmn/learn" // Use standard <a> tag, keep locale prefix
-          className="text-2xl text-center bg-yellow-300 text-neutral-800 hover:bg-yellow-400 dark:hover:bg-yellow-500 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Added transition
+          className="text-2xl text-center bg-yellow-300 text-neutral-800 hover:bg-yellow-400 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Added transition
         >
           一文掌握粵拼
           <IconVocabulary className="ml-2 flex-shrink-0" />

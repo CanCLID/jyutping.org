@@ -36,27 +36,27 @@ const DownloadButton: React.FC<{
   switch (variant) {
     case "googleplay":
       variantClasses =
-        "border border-[#01875f] text-[#01875f] bg-transparent hover:bg-[#01875f] hover:text-white dark:border-green-400 dark:text-green-400 dark:hover:bg-green-400 dark:hover:text-gray-900";
+        "border border-[#01875f] text-[#01875f] bg-transparent hover:bg-[#01875f] hover:text-white";
       break;
     case "android":
       variantClasses =
-        "border border-[#34a853] text-[#34a853] bg-transparent hover:bg-[#34a853] hover:text-white dark:border-green-500 dark:text-green-500 dark:hover:bg-green-500 dark:hover:text-white";
+        "border border-[#34a853] text-[#34a853] bg-transparent hover:bg-[#34a853] hover:text-white";
       break;
     case "apple":
       variantClasses =
-        "border border-black text-black bg-transparent hover:bg-black hover:text-white dark:border-gray-400 dark:text-gray-300 dark:hover:bg-gray-200 dark:hover:text-black";
+        "border border-black text-black bg-transparent hover:bg-black hover:text-white";
       break;
     case "web":
       variantClasses =
-        "border border-blue-600 text-blue-600 bg-transparent hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-white";
+        "border border-blue-600 text-blue-600 bg-transparent hover:bg-blue-600 hover:text-white";
       break;
     case "typeduck":
       variantClasses =
-        "border border-amber-500 text-amber-500 bg-transparent hover:bg-amber-500 hover:text-white dark:border-amber-400 dark:text-amber-400 dark:hover:bg-amber-400 dark:hover:text-gray-900";
+        "border border-amber-500 text-amber-500 bg-transparent hover:bg-amber-500 hover:text-white";
       break;
     case "chrome":
       variantClasses =
-        "border border-[#1967d2] text-[#1967d2] bg-transparent hover:bg-[#1967d2] hover:text-[#e8f0fe] dark:border-blue-500 dark:text-blue-400 dark:hover:bg-blue-500 dark:hover:text-white";
+        "border border-[#1967d2] text-[#1967d2] bg-transparent hover:bg-[#1967d2] hover:text-[#e8f0fe]";
       break;
     case "firefox":
       variantClasses =
@@ -64,7 +64,7 @@ const DownloadButton: React.FC<{
       break;
     default: // dark variant
       variantClasses =
-        "border border-gray-700 text-gray-700 bg-transparent hover:bg-gray-700 hover:text-white dark:border-gray-500 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-gray-100";
+        "border border-gray-700 text-gray-700 bg-transparent hover:bg-gray-700 hover:text-white";
       break;
   }
 
@@ -249,7 +249,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-5xl">
-      <div className="border border-gray-300 dark:border-gray-700 border-dashed rounded-md mx-auto p-8 mb-8">
+      <div className="border border-gray-300 border-dashed rounded-md mx-auto p-8 mb-8">
         <h1 className="text-center text-4xl mx-auto">
           <span className="inline-flex items-center font-semibold">
             <IconKeyboard className="mr-2" /> {t.introLinks}
@@ -270,7 +270,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
                 text={t.sogouAppStoreButton}
                 variant="apple"
               />
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+              <p className="text-sm text-gray-600 mt-1">
                 {/* Added margin */}
                 {t.sogouAppStoreNote}
               </p>
@@ -284,14 +284,12 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
                 text={t.sogouApkButton}
                 variant="android"
               />
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+              <p className="text-sm text-gray-600 mt-1">
                 {/* Added margin */}
                 {t.sogouApkNote}
               </p>
             </div>
-            <p className="text-sm text-gray-700 dark:text-gray-300">
-              {t.sogouInstructions}
-            </p>
+            <p className="text-sm text-gray-700">{t.sogouInstructions}</p>
           </div>
           {/* TypeDuck */}
           <div className="p-4 ">
@@ -320,13 +318,13 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
           {/* YuetYam */}
           <div className="p-4 ">
             <h2 className="text-2xl font-semibold my-4">{t.yuetyamTitle}</h2>
-            <p className="text-sm text-gray-700 dark:text-gray-300 mb-4">
+            <p className="text-sm text-gray-700 mb-4">
               {/* Added margin */}
               <a
                 href="https://jyutping.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline dark:text-blue-400"
+                className="text-blue-600 hover:underline"
               >
                 jyutping.app
               </a>
@@ -400,7 +398,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
         </div>
       </div>
       {/* Dictionary tools section */}
-      <div className="my-8 p-8 border border-gray-300 dark:border-gray-700 border-dashed rounded-md mx-auto">
+      <div className="my-8 p-8 border border-gray-300 border-dashed rounded-md mx-auto">
         <h2 className="my-4 text-4xl font-semibold mx-auto text-center">
           <span className="inline-flex items-center font-semibold">
             <IconBook2 className="mr-2" /> {t.toolsTitle}
@@ -532,7 +530,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
         </div>
       </div>
       {/* Learning resources section */}
-      <div className="my-8 p-8 border border-gray-300 dark:border-gray-700 border-dashed rounded-md mx-auto">
+      <div className="my-8 p-8 border border-gray-300 border-dashed rounded-md mx-auto">
         <h2 className="my-4 text-center text-4xl mx-auto">
           <span className="inline-flex items-center font-semibold">
             <IconBooks className="mr-2" /> {t.resourceTitle}

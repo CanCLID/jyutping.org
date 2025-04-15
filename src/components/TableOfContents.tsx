@@ -124,10 +124,10 @@ const TableOfContents: React.FC<Props> = ({ headings }) => {
               <a
                 href={`#${heading.slug}`} // Use slug for href
                 onClick={handleScrollTo(heading.slug)} // Use slug for scroll handler
-                className={`block text-sm transition-colors duration-150 ease-in-out border-l-2 border-transparent hover:border-gray-400 dark:hover:border-gray-500 ${
+                className={`block text-sm transition-colors duration-150 ease-in-out border-l-2 border-transparent hover:border-gray-400 ${
                   activeId === heading.slug // Use slug for active check
-                    ? "font-medium text-sky-600 dark:text-sky-400 border-sky-600 dark:border-sky-400" // Style for active link
-                    : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100" // Style for inactive links
+                    ? "font-medium text-sky-600 border-sky-600" // Style for active link
+                    : "text-gray-600 hover:text-gray-900" // Style for inactive links
                 } pl-2`} // Add padding for indentation and border visibility
               >
                 {heading.text}

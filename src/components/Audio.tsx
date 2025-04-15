@@ -72,7 +72,7 @@ const Audio: React.FC<AudioProps> = ({ id }) => {
     <button
       type="button"
       onClick={handleClick}
-      className="inline-flex items-center justify-center p-1 rounded-md text-blue-600 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 mx-1 align-middle dark:text-blue-400 dark:hover:bg-blue-900 dark:focus:ring-blue-600" // Added dark mode styles
+      className="inline-flex items-center justify-center p-1 rounded-md text-blue-600 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 mx-1 align-middle" // Added dark mode styles
       aria-label={`Play audio ${id}`}
     >
       <VolumeUpIcon />
