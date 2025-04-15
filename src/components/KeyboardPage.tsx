@@ -625,6 +625,25 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
+          <div className="flex flex-col items-center p-4">
+            <h3 className="my-4 text-2xl font-semibold">Wing Font</h3>
+            <a
+              href="https://wing-fonts.chunlaw.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
+            >
+              {/* Use standard img tag */}
+              <img
+                src="/img/wing.png"
+                alt="Wing Font"
+                width={1920}
+                height={1080}
+                className="rounded-lg shadow-sm max-w-full h-auto hover:shadow-md"
+                loading="lazy"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
