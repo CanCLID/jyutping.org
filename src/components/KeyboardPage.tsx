@@ -18,7 +18,6 @@ const DownloadButton: React.FC<{
   icon: React.ElementType;
   text: string;
   variant?:
-    | "dark"
     | "googleplay"
     | "android"
     | "apple"
@@ -26,7 +25,8 @@ const DownloadButton: React.FC<{
     | "typeduck"
     | "firefox"
     | "chrome";
-}> = ({ href, icon: Icon, text, variant = "dark" }) => {
+}> = ({ href, icon: Icon, text, variant = "web" }) => {
+  // Changed default variant to "web"
   // Base classes common to all variants
   const baseClasses =
     "inline-flex items-center px-6 py-3 border text-base font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-150 ease-in-out group"; // Added transition and group for potential icon styling
@@ -61,10 +61,6 @@ const DownloadButton: React.FC<{
     case "firefox":
       variantClasses =
         "border-purple-500 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 hover:bg-gradient-to-r hover:from-purple-500 hover:via-pink-500 hover:to-orange-500 hover:text-white hover:border-transparent hover:bg-clip-padding"; // Added firefox variant styles
-      break;
-    default: // dark variant
-      variantClasses =
-        "border border-gray-700 text-gray-700 bg-transparent hover:bg-gray-700 hover:text-white";
       break;
   }
 

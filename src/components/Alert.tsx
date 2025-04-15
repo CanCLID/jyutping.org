@@ -9,8 +9,7 @@ interface AlertProps {
     | "danger"
     | "warning"
     | "info"
-    | "light"
-    | "dark";
+    | "light";
   children: React.ReactNode;
 }
 
@@ -29,7 +28,6 @@ const Alert: React.FC<AlertProps> = ({
     warning: "bg-yellow-100 border-yellow-500 text-yellow-700", // Added dark mode classes
     info: "bg-cyan-100 border-cyan-500 text-cyan-700", // Added dark mode classes
     light: "bg-gray-50 border-gray-300 text-gray-600", // Added dark mode classes
-    dark: "bg-gray-700 border-gray-900 text-gray-100", // Adjusted dark mode classes
   };
 
   const alertClasses = `border-l-4 px-4 py-2 my-4 ${
