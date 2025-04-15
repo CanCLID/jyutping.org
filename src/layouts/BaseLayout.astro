@@ -52,9 +52,9 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
 
     {/* Twitter */}
     {/* <meta property="twitter:card" content="summary_large_image" /> */}
-    {/* <meta property="twitter:url" content={Astro.url.origin} /> */}
-    {/* <meta property="twitter:title" content={title} /> */}
-    {/* <meta property="twitter:description" content={description} /> */}
+    <meta property="twitter:url" content={Astro.url.origin} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
     {
       /* <meta property="twitter:image" content={new URL('/og-image.png', Astro.url.origin).toString()} /> */
     }
@@ -73,9 +73,6 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     <script defer src={umamiScriptSrc} data-website-id={umamiWebsiteId}
     ></script>
 
-    {/* Add Font Awesome or other icon libraries if needed */}
-
-    {/* Enable Astro View Transitions */}
     <ClientRouter />
   </head>
   <body

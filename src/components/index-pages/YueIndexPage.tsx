@@ -80,14 +80,14 @@ const YueIndexPage: React.FC = () => {
       <div className="flex flex-wrap flex-col items-center justify-center my-8 gap-6">
         <a
           href="/jyutping" // Use standard <a> tag
-          className="w-fit text-2xl text-center bg-white hover:bg-neutral-100 text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
+          className="w-fit text-2xl text-center bg-cyan-200 hover:bg-cyan-100 text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
         >
           睇粵拼方案表
           <IconTable className="ml-2 flex-shrink-0" />
         </a>
         <a
           href="/keyboard" // Use standard <a> tag
-          className="w-fit text-2xl text-center bg-white hover:bg-neutral-100 text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
+          className="w-fit text-2xl text-center bg-sky-200 hover:bg-sky-100 text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
         >
           粵拼資源輸入法
           <IconKeyboard className="ml-2 flex-shrink-0" />

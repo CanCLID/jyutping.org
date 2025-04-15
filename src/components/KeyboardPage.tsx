@@ -97,7 +97,9 @@ interface KeyboardPageTranslation {
   sogouApkButton: string;
   sogouApkNote: string;
   sogouInstructions: string;
-  yuetyamTitle: string; // Optional section
+  typeduckWeb: string;
+  typeduckDownload: string;
+  yuetyamTitle: string;
   yuetyamiOSButton: string;
   yuetyamMacOSButton: string;
   yuetyamAndroidButton: string;
@@ -119,6 +121,8 @@ const translations: Record<string, KeyboardPageTranslation> = {
     sogouApkNote: "Versions above v10.10 support Jyutping",
     sogouInstructions:
       'After downloading, go to "Language Settings", select "Chinese - Cantonese", choose T9 or Full Keyboard, then you can type with Jyutping.',
+    typeduckWeb: "Type in browser now",
+    typeduckDownload: "All platforms download",
     yuetyamTitle: "Jyutping - Cantonese Keyboard",
     yuetyamiOSButton: "AppStore Download",
     yuetyamMacOSButton: "Download .pkg",
@@ -138,6 +142,8 @@ const translations: Record<string, KeyboardPageTranslation> = {
     sogouApkNote: "v10.10 以上版本皆支持粵拼",
     sogouInstructions:
       "下載後入設置界面嘅「語言設置」，揀「中文-粵語」選擇九宮格或者全鍵盤，就可以用粵拼打字。",
+    typeduckWeb: "網頁版無需安裝直接打字",
+    typeduckDownload: "全平台下載",
     yuetyamTitle: "YuetYam 粵拼輸入法",
     yuetyamiOSButton: "AppStore 下載",
     yuetyamMacOSButton: "下載 .pkg",
@@ -156,7 +162,9 @@ const translations: Record<string, KeyboardPageTranslation> = {
     sogouApkButton: "官网下载 APK",
     sogouApkNote: "v10.10 以上版本皆支持粤拼",
     sogouInstructions:
-      "下载后入设置界面嘅「语言设置」，拣「中文-粤语」选择九宫格或者全键盘，就可以用粤拼打字。", // Note: Instructions seem to be in Cantonese, might need Cmn version
+      "下載後去設置界面的「语言设置」，選「中文-粤语」選擇九宮格或全鍵盤，即可用粵拼打字。",
+    typeduckWeb: "網頁版無需安裝直接打字",
+    typeduckDownload: "全平台下載",
     yuetyamTitle: "YuetYam 粵拼輸入法",
     yuetyamiOSButton: "AppStore 下载",
     yuetyamMacOSButton: "下载 .pkg",
@@ -175,7 +183,9 @@ const translations: Record<string, KeyboardPageTranslation> = {
     sogouApkButton: "官網下載 APK",
     sogouApkNote: "v10.10 以上版本皆支持粵拼",
     sogouInstructions:
-      "下載後入設置界面嘅「語言設置」，揀「中文-粵語」選擇九宮格或者全鍵盤，就可以用粵拼打字。", // Note: Instructions seem to be in Cantonese
+      "下載後入設置界面嘅「語言設置」，揀「中文-粵語」選擇九宮格或者全鍵盤，就可以用粵拼打字。",
+    typeduckWeb: "網頁版無需安裝直接打字",
+    typeduckDownload: "全平台下載",
     yuetyamTitle: "YuetYam 粵拼輸入法",
     yuetyamiOSButton: "AppStore 下載",
     yuetyamMacOSButton: "下載 .pkg",
@@ -195,6 +205,8 @@ const translations: Record<string, KeyboardPageTranslation> = {
     sogouApkNote: "Các phiên bản trên v10.10 đều hỗ trợ Việt bính",
     sogouInstructions:
       'Vào phần "Language Settings" trong cài đặt, chọn "Chinese-Cantonese" để gõ bằng Việt bính.',
+    typeduckWeb: "Gõ ngay trên trình duyệt",
+    typeduckDownload: "Tải cho tất cả các nền tảng",
     yuetyamTitle: "YuetYam 粵拼輸入法",
     yuetyamiOSButton: "Tải trên AppStore",
     yuetyamMacOSButton: "Tải .pkg",
@@ -213,7 +225,9 @@ const translations: Record<string, KeyboardPageTranslation> = {
     sogouApkButton: "官網下載 APK",
     sogouApkNote: "v10.10 以上版本皆支持粵拼",
     sogouInstructions:
-      "下載後入設置界面嘅「語言設置」，揀「中文-粵語」選擇九宮格或者全鍵盤，就可以用粵拼打字。", // Note: Instructions seem to be in Cantonese
+      "下載後入設置界面嘅「語言設置」，揀「中文-粵語」選擇九宮格或者全鍵盤，就可以用粵拼打字。",
+    typeduckWeb: "網頁版無需安裝直接打字",
+    typeduckDownload: "全平台下載",
     yuetyamTitle: "YuetYam 粵拼輸入法",
     yuetyamiOSButton: "AppStore 下載",
     yuetyamMacOSButton: "下載 .pkg",
@@ -289,7 +303,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               <DownloadButton
                 href="https://www.typeduck.hk/web/"
                 icon={IconWorld}
-                text="網頁版毋須安裝直接打字"
+                text={t.typeduckWeb}
                 variant="web"
               />
             </div>
@@ -298,7 +312,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               <DownloadButton
                 href="https://www.typeduck.hk/"
                 icon={IconDownload}
-                text="前往 TypeDuck 官網下載"
+                text={t.typeduckDownload}
                 variant="typeduck"
               />
             </div>

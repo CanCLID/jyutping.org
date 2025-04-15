@@ -3,7 +3,7 @@
 
 /* Custom styles for MDX content rendered within <article> tags */
 article table {
-  @apply border-collapse border border-gray-300 dark:border-gray-600 my-4 w-full; /* Adjusted border color, added w-full */
+  @apply border-collapse border border-gray-300 dark:border-gray-600 my-4; /* Adjusted border color, removed w-full */
 }
 
 article th,
