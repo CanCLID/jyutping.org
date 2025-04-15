@@ -13,7 +13,7 @@ const languageNames: Record<string, string> = {
   en: "English",
   vi: "Tiếng Việt",
   yue: "粵語",
-  cmn: "普通話/國語",
+  cmn: "普通话/國語",
   nan: "臺灣閩南語",
   wuu: "吳語",
 };

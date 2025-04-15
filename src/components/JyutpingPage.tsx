@@ -200,40 +200,40 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     // referenceId removed
   },
   cmn: {
-    intro: "「香港語言學學會粵語拼音方案」，簡稱「粵拼」。",
-    alertIpaTitle: "關於 IPA 轉寫",
+    intro: "「香港语言学学会粤语拼音方案」，简称「粤拼」。",
+    alertIpaTitle: "关于 IPA 转写",
     alertIpaContent: (
       <p>
-        本頁面所用國際音標轉寫皆爲寬式轉寫，錄音數據來源爲粵典。詳情請見{" "}
+        本页面所用国际音标转写皆为宽式转写，录音数据来源为粤典。详情请见{" "}
         <a href="#references-cmn" className="text-blue-600 hover:underline">
-          參考文獻
+          参考文献
         </a>{" "}
-        一節。
+        一节。
       </p>
     ),
     // onsetHeading removed
     onsetTableHeaders: [
-      "雙脣音",
-      "脣齒音",
-      "齒齦音",
+      "双唇音",
+      "唇齿音",
+      "齿龈音",
       "硬腭音",
-      "軟腭音",
+      "软腭音",
       "喉音",
     ],
-    onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
+    onsetRowHeaders: ["爆发音", "塞擦音", "鼻音", "擦音", "近音", "边近音"],
     // Note: Same as Yue, might need specific Cmn phrasing if available
-    alertNullInitial: <p>零聲母唔用字母做標記，例如「呀」只拼作 aa。</p>,
+    alertNullInitial: <p>零声母唔用字母做标记，例如「呀」只拼作 aa。</p>,
     // syllabicNasalHeading removed
     // finalHeading removed
     // nucleiHeading removed
     // codaHeading removed
-    codaRowHeaders: ["爆發音", "鼻音", "元音"],
+    codaRowHeaders: ["爆发音", "鼻音", "元音"],
     // finalsChartHeading removed
     finalsChartColHeaders1: [
-      "單元音",
-      "複元音",
-      "鼻音韻尾",
-      "爆發音韻尾（入聲韻）",
+      "单元音",
+      "复元音",
+      "鼻音韵尾",
+      "爆发音韵尾（入声韵）",
     ],
     finalsChartColHeaders2: [
       "-",
@@ -246,30 +246,30 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
       "-t",
       "-k",
     ],
-    finalsChartRowHeader: "韻腹",
+    finalsChartRowHeader: "韵腹",
     alertAddedFinals: (
       <p>
-        <strong>a</strong> 和 <strong>oet</strong> 於 2018 年新增。詳情請看{" "}
+        <strong>a</strong> 和 <strong>oet</strong> 于 2018 年新增。详情请看{" "}
         <a
           href="https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline"
         >
-          這裏
+          这里
         </a>
         。
       </p>
     ),
     // toneHeading removed
     toneTableHeaders: ["平", "上", "去", "入"],
-    toneRowHeaders: ["陰", "陽"],
+    toneRowHeaders: ["阴", "阳"],
     alertToneMarks: (
       <>
-        <p>聲調標在音節後。</p>
+        <p>声调标在音节后。</p>
         <p>
           <strong>示例：</strong>
-          fu1 （夫），fu2 （虎）, fu3 （副）, fu4 （扶）, fu5 （婦）, fu6 （父）
+          fu1 （夫），fu2 （虎）, fu3 （副）, fu4 （扶）, fu5 （妇）, fu6 （父）
         </p>
       </>
     ),

@@ -198,7 +198,7 @@ const translations: Record<string, AboutPageTranslation> = {
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline mx-1"
         >
-          粵語計算語言學基礎建設組
+          粤语计算语言学基础建设组
         </a>
         建成，并得到
         <a
@@ -207,9 +207,9 @@ const translations: Record<string, AboutPageTranslation> = {
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline mx-1"
         >
-          香港語言學學會 (LSHK)
+          香港语言学学会 (LSHK)
         </a>
-        的協助。網站源碼全部開源在
+        的协助。网站源码全部开源在
         <a
           href="https://github.com/CanCLID/jyutping.org"
           target="_blank"
@@ -218,26 +218,26 @@ const translations: Record<string, AboutPageTranslation> = {
         >
           GitHub
         </a>
-        ，歡迎外界貢獻。
+        ，欢迎外界贡献。
       </>
     ),
     acknowledgementsP2:
-      "感謝 LSHK 粵拼小組和粵典對本站的支持。特別鳴謝 Chaak-ming Lau 博士，Kwan-hin Cheung 博士，Andy Chin 博士，Raymond Tze 先生和 Zungman Ceoi 先生爲建設本站提供的幫助。",
-    acknowledgementsP3: "感谢 Lim Hian-tong 先生提供本站臺灣闽南语版本。",
+      "感谢 LSHK 粤拼小组和粤典对本站的支持。特别鸣谢 Chaak-ming Lau 博士，Kwan-hin Cheung 博士，Andy Chin 博士，Raymond Tze 先生和 Zungman Ceoi 先生为建设本站提供的帮助。",
+    acknowledgementsP3: "感谢 Lim Hian-tong 先生提供本站台湾闽南语版本。",
     acknowledgementsP4: "感谢具区句鱼先生提供本站吴语版本。",
-    acknowledgementsP5: "感謝以成提供本站越南語版本。",
-    developContributeTitle: "開發及貢獻",
-    developContributeP1: "如果你想支持粵拼或參與到我們的事務中，你可以：",
+    acknowledgementsP5: "感谢以成提供本站越南语版本。",
+    developContributeTitle: "开发及贡献",
+    developContributeP1: "如果你想支持粤拼或参与到我们的事务中，你可以：",
     emailText: (
       <>
-        發郵件到
+        发邮件到
         <a
           href="mailto:support@jyutping.org"
           className="text-blue-600 hover:underline mx-1"
         >
           support@jyutping.org
         </a>
-        告訴我們你的想法或者反饋意見。
+        告诉我们你的想法或者反馈意见。
       </>
     ),
     githubText: (
@@ -251,23 +251,23 @@ const translations: Record<string, AboutPageTranslation> = {
         >
           GitHub
         </a>
-        上面新開一個 issue 討論或者代碼 pull request。
+        上面新开一个 issue 讨论或者代码 pull request。
       </>
     ),
     keyboardText: (
       <>
-        安裝使用
+        安装使用
         <a
           href="/keyboard" // Keep relative link
           className="text-blue-600 hover:underline mx-1"
         >
-          粵拼輸入法
+          粤拼输入法
         </a>
-        打字，以及同人分享本網站。
+        打字，以及同人分享本网站。
       </>
     ),
     finalParagraph:
-      "如果你熟習粵語和其他語言，并願意把本網站翻譯成其他語言，請務必郵件聯繫我們，我們非常歡迎你的幫助和貢獻。",
+      "如果你熟习粤语和其他语言，并愿意把本网站翻译成其他语言，请务必邮件联系我们，我们非常欢迎你的帮助和贡献。",
   },
   nan: {
     acknowledgementsTitle: "鳴謝",
