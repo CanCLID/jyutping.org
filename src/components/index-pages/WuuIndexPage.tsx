@@ -25,7 +25,7 @@ const WuuIndexPage: React.FC = () => {
         {/* Use font class, added margin */}
         通行粵語拼音方案
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-16 items-center p-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-16 items-center p-6 mx-auto max-w-5xl">
         {/* Added background and padding */}
         <p className="text-center text-3xl md:text-right font-semibold">
           为啥要學粤拼？
@@ -33,7 +33,7 @@ const WuuIndexPage: React.FC = () => {
         <ul className="text-lg mx-auto md:col-span-2 space-y-3">
           {/* Increased spacing */}
           <li className="flex items-start">
-            <IconEar className="mr-3 mt-1 flex-shrink-0 text-blue-500 dark:text-blue-400" />
+            <IconEar className="mr-3 mt-1 flex-shrink-0" />
             {/* Adjusted icon style */}
             <span>掌握粵拼好相幫糾正差誤讀音，規範自家个粵語發音。</span>
           </li>
@@ -81,14 +81,14 @@ const WuuIndexPage: React.FC = () => {
         {/* Added gap */}
         <a
           href="/wuu/jyutping" // Use standard <a> tag, keep locale prefix
-          className="w-fit text-2xl text-center bg-white hover:bg-neutral-100 text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
+          className="w-fit text-2xl text-center hover:bg-[#CBF2AE] bg-[#B5E26F] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
         >
           看粵拼方案表
           <IconTable className="ml-2 flex-shrink-0" />
         </a>
         <a
           href="/wuu/keyboard" // Changed link to keyboard page, keep locale prefix
-          className="w-fit text-2xl text-center bg-white hover:bg-neutral-100 text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
+          className="w-fit text-2xl text-center bg-[#e3edb8] hover:bg-[#e9f1c8] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
         >
           粵拼資源輸入法
           <IconKeyboard className="ml-2 flex-shrink-0" />

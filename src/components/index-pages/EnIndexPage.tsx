@@ -82,14 +82,14 @@ const EnIndexPage: React.FC = () => {
         {/* Added gap */}
         <a
           href="/en/jyutping" // Use standard <a> tag, keep locale prefix
-          className="w-fit text-2xl text-center bg-white hover:bg-neutral-100 text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
+          className="w-fit text-2xl text-center hover:bg-[#CBF2AE] bg-[#B5E26F] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
         >
           View the Scheme
           <IconTable className="ml-2 flex-shrink-0" />
         </a>
         <a
           href="/en/keyboard" // Changed link to keyboard page
-          className="w-fit text-2xl text-center bg-white hover:bg-neutral-100 text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
+          className="w-fit text-2xl text-center bg-[#e3edb8] hover:bg-[#e9f1c8] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
         >
           Jyutping Resources
           <IconKeyboard className="ml-2 flex-shrink-0" />

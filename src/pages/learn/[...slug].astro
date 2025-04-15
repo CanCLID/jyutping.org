@@ -13,10 +13,13 @@ export async function getStaticPaths() {
     return id.startsWith("yue/");
   });
 
-  return learnEntries.map((entry) => ({
-    params: { slug: entry.slug.substring(4) }, // Remove 'yue/' prefix for the slug param
-    props: { entry },
-  }));
+  return learnEntries.map((entry) => {
+    const slugParam = entry.slug.substring(4); // Remove 'yue/' prefix
+    return {
+      params: { slug: slugParam === "" ? undefined : slugParam }, // Map "" to undefined
+      props: { entry },
+    };
+  });
 }
 
 // 2. Get the entry for the current page
