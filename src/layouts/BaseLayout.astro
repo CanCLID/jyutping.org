@@ -73,7 +73,8 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     <script defer src={umamiScriptSrc} data-website-id={umamiWebsiteId}
     ></script>
 
-    <ClientRouter />
+    {/* <ClientRouter /> */}
+    {/* Temporarily disabled for debugging Firefox/Brave issues */}
   </head>
   <body class="antialiased bg-white text-gray-800 flex flex-col min-h-screen">
     <Header />
@@ -139,35 +140,6 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
   /* Add other global styles from globals.css here if necessary */
 
   /* --- Custom Horizontal Slide View Transitions --- */
-  @keyframes slide-left-out {
-    from {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    to {
-      transform: translateX(-30px); /* Slide left */
-      opacity: 0;
-    }
-  }
-
-  @keyframes slide-right-in {
-    from {
-      transform: translateX(30px); /* Start from right */
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  /* Apply the custom animations */
-  ::view-transition-old(root) {
-    animation: slide-left-out 0.2s cubic-bezier(0, 0, 0.2, 1) forwards;
-  }
-
-  ::view-transition-new(root) {
-    animation: slide-right-in 0.2s cubic-bezier(0, 0, 0.2, 1) forwards;
-  }
+  /* Temporarily disabled for debugging Firefox/Brave issues */
   /* --- End Custom Horizontal Slide View Transitions --- */
 </style>
