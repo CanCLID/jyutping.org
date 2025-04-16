@@ -444,6 +444,26 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
+          {/* 羊羊粵語.hk */}
+          <div className="flex flex-col items-center p-4 ">
+            <h3 className="my-4 text-2xl font-semibold">羊羊粵語 shyyp.net</h3>
+            <a
+              href="https://shyyp.net/hant"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
+            >
+              {/* Use standard img tag */}
+              <img
+                src="/img/shyyp.svg"
+                alt="羊羊粵語"
+                width={256}
+                height={256}
+                className="rounded-lg shadow-sm hover:shadow-md max-w-full h-auto mx-auto"
+                loading="lazy"
+              />
+            </a>
+          </div>
           {/* Google Translate */}
           <div className="flex flex-col items-center p-4 ">
             <h3 className="text-2xl my-4 font-semibold">{t.googleTranslate}</h3>
