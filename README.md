@@ -27,7 +27,7 @@ src/pages
 
 ### 字體取樣
 
-因為個粵拼字體體積太大，本站用咗 font subsetting 嚟縮細個昭源黑體粵拼字體。如果網站有內容更新，可能瀡要重新跑下面嘅命令嚟重新生成個`ChironHeiHK-lshk-subset.woff2`：
+因為個粵拼字體體積太大，本站用咗 font subsetting 嚟縮細個昭源黑體粵拼字體。如果網站有內容更新，可能需要重新跑下面嘅命令嚟重新生成個`ChironHeiHK-lshk-subset.woff2`：
 
 ```bash
 glyphhanger ./dist/**/*.html --unicodes > unicodes.txt
