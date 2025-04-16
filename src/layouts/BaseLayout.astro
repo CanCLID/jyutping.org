@@ -60,18 +60,14 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     }
     {/* Add Twitter image later */}
 
-    {
-      /* Font is loaded via @font-face in CSS with font-display: swap; Preload removed to test Firefox/Brave blocking issue. */
-    }
-    {
-      /* <link
+    {/* Preload the Jyutping font */}
+    <link
       rel="preload"
-      href="/ChironHeiHK-lshk.woff2"
+      href="/ChironHeiHK-lshk-subset.woff2"
       as="font"
       type="font/woff2"
       crossorigin="anonymous"
-    /> */
-    }
+    />
 
     {/* Umami Analytics */}
     <script defer src={umamiScriptSrc} data-website-id={umamiWebsiteId}
@@ -98,10 +94,10 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
   @font-face {
     font-family: "Chiron Hei HK Jyutping";
     /* Prioritize WOFF2, fallback to WOFF */
-    src: url("/ChironHeiHK-lshk.woff2") format("woff2");
+    src: url("/ChironHeiHK-lshk-subset.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
-    font-display: fallback; /* Changed from swap to fallback */
+    font-display: swap; /* Use swap to prevent blocking */
   }
 
   html {

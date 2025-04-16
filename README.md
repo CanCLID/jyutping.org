@@ -24,3 +24,17 @@ src/pages
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+### 字體取樣
+
+因為個粵拼字體體積太大，本站用咗 font subsetting 嚟縮細個昭源黑體粵拼字體。如果網站有內容更新，可能瀡要重新跑下面嘅命令嚟重新生成個`ChironHeiHK-lshk-subset.woff2`：
+
+```bash
+glyphhanger ./dist/**/*.html --unicodes > unicodes.txt
+pyftsubset ./public/ChironHeiHK-lshk.woff \
+           --output-file=./public/ChironHeiHK-lshk-subset.woff2 \
+           --unicodes-file=unicodes.txt \
+           --layout-features='*,!liga,!dlig,!rlig' \
+           --flavor=woff2 \
+           --ignore-missing-unicodes
+```
