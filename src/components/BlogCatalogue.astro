@@ -1,5 +1,6 @@
 ---
 // src/components/BlogCatalogue.astro
+import { I18n } from "@/i18n/utils";
 import type { CollectionEntry } from "astro:content";
 
 // Get current locale from Astro's global
@@ -37,9 +38,14 @@ const { posts, currentSlug } = Astro.props;
         const postSlug = post.slug.includes("/")
           ? post.slug.substring(post.slug.indexOf("/") + 1)
           : post.slug;
-        const localePrefix = post.slug.includes("/")
+
+        let localePrefix = post.slug.includes("/")
           ? `/${post.slug.split("/")[0]}`
           : "";
+        if (I18n.defaultLocale === localePrefix.replace(/\//g, "")) {
+          // defaultLocale is not included in getStaticPaths
+          localePrefix = "";
+        }
         const postLink = `${localePrefix}/blog/${postSlug}/`;
         const isActive =
           postSlug === currentSlug &&
