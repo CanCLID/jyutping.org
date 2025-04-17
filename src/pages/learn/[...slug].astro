@@ -4,7 +4,6 @@ import type { CollectionEntry } from "astro:content"; // Use import type
 import { getCollection } from "astro:content";
 import TableOfContents from "@/components/TableOfContents"; // Import the TOC component
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Chartaudio from "@/components/Chartaudio.astro";
 // import LearnPageLayout from '@/layouts/LearnPageLayout.astro'; // Optional: Use a specific layout for learn pages
 
 // 1. Generate paths for all 'yue' learn posts
@@ -39,7 +38,6 @@ const lang = entry.id.split("/")[0] || "yue"; // Extract lang from collection id
   description={entry.data.description}
   lang={lang}
 >
-  <Chartaudio />
   <div class="flex justify-center gap-8 px-4 py-8 max-w-5xl mx-auto">
     {/* Main content area */}
     <article class="prose flex-grow">
