@@ -19,11 +19,12 @@ const translations: Record<
 };
 
 export function getStaticPaths() {
-  return I18n.locales
+  const result = I18n.locales
     .filter((locale) => locale !== I18n.defaultLocale) // Exclude default locale
     .map((locale) => ({
       params: { locale },
     }));
+  return result;
 }
 
 const { locale } = Astro.params;
