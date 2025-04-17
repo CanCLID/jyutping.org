@@ -4,6 +4,7 @@ import { ClientRouter } from "astro:transitions"; // Re-added import for ViewTra
 import Header from "@/components/Header.astro"; // Placeholder import
 import Footer from "@/components/Footer.astro"; // Placeholder import
 import "@/styles/global.css"; // Assuming global styles will be here
+import Chartaudio from "@/components/Chartaudio.astro";
 
 // Define props for the layout, including title, description, and lang
 interface Props {
@@ -89,6 +90,8 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     <main class="flex-grow">
       <slot />
       {/* Page content will be injected here */}
+      {/* Include Chartaudio component */}
+      <Chartaudio />
     </main>
     <Footer />
     {/* Include Footer component */}

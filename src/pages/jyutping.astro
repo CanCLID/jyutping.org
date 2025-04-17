@@ -2,7 +2,6 @@
 // src/pages/jyutping.astro
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import JyutpingPage from "@/components/JyutpingPage.tsx";
-import Chartaudio from "@/components/Chartaudio.astro"; // Include Chartaudio for audio elements
 import TableOfContents from "@/components/TableOfContents";
 import {
   jyutpingHeadingsTranslations,
@@ -38,7 +37,6 @@ const headings = [
 ---
 
 <BaseLayout lang={lang} title={title}>
-  <Chartaudio />
   <div class="bg-[#1678d3] text-white px-4 py-6 mb-8">
     {/* Responsive H1 with increased line spacing */}
     <h1
