@@ -189,6 +189,10 @@ const parseText = (
   return result;
 };
 
+const isSafari =
+  typeof navigator !== "undefined" &&
+  /Version\/[\d\.]+.*Safari/.test(navigator.userAgent);
+
 // Define props for the component
 interface SampleTextProps {
   sample?: "bakfung" | "maanboujansanglou" | "coisandou" | "fusisaanhaa"; // Use specific sample names
@@ -232,7 +236,9 @@ const SampleText: React.FC<SampleTextProps> = ({
             {item.char.length === 2 && /^\d$/.test(item.char[1]) ? (
               <span className="text-4xl font-chiron-hei my-1">
                 <span>{item.char[0]}</span>
-                <span className="select-none">{item.char[1]}</span>
+                {!isSafari && (
+                  <span className="select-none">{item.char[1]}</span>
+                )}
               </span>
             ) : (
               <span className="text-4xl font-chiron-hei my-1">{item.char}</span>
