@@ -114,28 +114,28 @@ const fusisaanhaa =
   這ze5  風fung1  褸lau1  我ngo5  給kap1  你nei5  磨mo4  到dou3  有jau5  襟kam1  花faa1 ，\
   連lin4  調diu6  了liu5  職zik1  也jaa5  不bat1  怕paa3 ，\
   怎zam2  麼mo1  始ci2  終zung1  牽hin1  掛gwaa3 ，\
-  苦fu2  心sam1  選syun2  中zung1  今gam1  天tin1  想soeng2  車ce1  你nei5  回wui4  家gaa1 ，\
+  苦fu2  心sam1  選syun2  中zung3  今gam1  天tin1  想soeng2  車ce1  你nei5  回wui4  家gaa1 ，\
   原jyun4  諒loeng6  我ngo5  不bat1  再zoi3  送sung3  花faa1 ，\
   傷soeng1  口hau2  應jing1  要jiu3  結git3  疤baa1 ，\
   花faa1  瓣faan2  鋪pou1  滿mun5  心sam1  裡leoi5  墳fan4  場coeng4  才coi4  害hoi6  怕paa3 ，\
   如jyu4  若joek6  你nei5  非fei1  我ngo5  不bat1  嫁gaa3 ，\
   彼bei2  此ci2  終zung1  必bit1  火fo2  化faa3 ，\
-  一jat1  生sang1  一jat1  世sai3  等dang1  一jat1  天tin1  需seoi1  要jiu3  代doi6  價gaa3 ，\
+  一jat1  生sang1  一jat1  世sai3  等dang2  一jat1  天tin1  需seoi1  要jiu3  代doi6  價gaa3 ，\
   誰seoi4  都dou1  只zi2  得dak1  那naa5  雙soeng1  手sau2 ，\
   靠kaau3  擁jung2  抱pou5  亦jik6  難naan4  任jam6  你nei5  擁jung2  有jau5 ，\
   要jiu3  擁jung2  有jau5  必bit1  先sin1  懂dung2  失sat1  去heoi3  怎zam2  接zip3  受sau6 ，\
   曾cang4  沿jyun4  著zoek3  雪syut3  路lou6  浪long6  遊jau4 ，\
-  為wai4  何ho4  為wai4  好hou2  事si6  淚leoi5  流lau4 ，\
+  為wai4  何ho4  為wai6  好hou2  事si6  淚leoi6  流lau4 ，\
   誰seoi4  能nang4  憑pang4  愛oi3  意ji3  要jiu3  富fu3  士si6  山saan1  私si1  有jau5 ，\
   何ho4  不bat1  把baa2  悲bei1  哀oi1  感gam2  覺gok3 ，\
   假gaa2  設cit3  是si6  來loi4  自zi6  你nei5  虛heoi1  構kau3 ，\
-  試si2  管gun2  裡leoi5  找zaau2  不bat1  到dou3  它taa1  染jim5  污wu1  眼ngaan5  眸mau4 ，\
+  試si3  管gun2  裡leoi5  找zaau2  不bat1  到dou3  它taa1  染jim5  污wu1  眼ngaan5  眸mau4 ，\
   前cin4  塵can4  硬ngaang6  化faa6  像zoeng6  石sek6  頭tau4 ，\
   隨ceoi4  緣jyun4  地dei6  拋paau1  下haa6  便bin6  逃tou4  走zau2 ，\
-  我ngo5  絕zyut1  不bat1  罕hon2  有jau5 ，\
+  我ngo5  絕zyut6  不bat1  罕hon2  有jau5 ，\
   往wong5  街gaai1  裡leoi5  繞jiu2  過gwo3  一jat1  周zau1 ，\
   我ngo5  便bin6  化faa6  烏wu1  有jau5 ，\
-  情cing4  人jan4  節zit1  不bat1  要jiu3  說syut3  穿cyun1 ，\
+  情cing4  人jan4  節zit3  不bat1  要jiu3  說syut3  穿cyun1 ，\
   只zi2  敢gam2  撫fu2  你nei5  髮faat3  端dyun1 ，\
   這ze5  種zung2  姿zi1  態taai3  可ho2  會wui5  令ling6  你nei5  更gang3  心sam1  酸syun1 ，\
   留lau4  在zoi6  汽hei3  車ce1  裡leoi5  取ceoi2  暖nyun5 ，\
