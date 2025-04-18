@@ -114,7 +114,7 @@ const fusisaanhaa =
   這ze5  風fung1  褸lau1  我ngo5  給kap1  你nei5  磨mo4  到dou3  有jau5  襟kam1  花faa1 ，\
   連lin4  調diu6  了liu5  職zik1  也jaa5  不bat1  怕paa3 ，\
   怎zam2  麼mo1  始ci2  終zung1  牽hin1  掛gwaa3 ，\
-  苦fu2  心sam1  選syun2  中zung3  今gam1  天tin1  想soeng2  車ce1  你nei5  回wui4  家gaa1 ，\
+  苦fu2  心sam1  選syun2  中1zung3  今gam1  天tin1  想soeng2  車ce1  你nei5  回wui4  家gaa1 ，\
   原jyun4  諒loeng6  我ngo5  不bat1  再zoi3  送sung3  花faa1 ，\
   傷soeng1  口hau2  應jing1  要jiu3  結git3  疤baa1 ，\
   花faa1  瓣faan2  鋪pou1  滿mun5  心sam1  裡leoi5  墳fan4  場coeng4  才coi4  害hoi6  怕paa3 ，\
@@ -125,7 +125,7 @@ const fusisaanhaa =
   靠kaau3  擁jung2  抱pou5  亦jik6  難naan4  任jam6  你nei5  擁jung2  有jau5 ，\
   要jiu3  擁jung2  有jau5  必bit1  先sin1  懂dung2  失sat1  去heoi3  怎zam2  接zip3  受sau6 ，\
   曾cang4  沿jyun4  著zoek3  雪syut3  路lou6  浪long6  遊jau4 ，\
-  為wai4  何ho4  為wai6  好hou2  事si6  淚leoi6  流lau4 ，\
+  為wai4  何ho4  為1wai6  好hou2  事si6  淚leoi6  流lau4 ，\
   誰seoi4  能nang4  憑pang4  愛oi3  意ji3  要jiu3  富fu3  士si6  山saan1  私si1  有jau5 ，\
   何ho4  不bat1  把baa2  悲bei1  哀oi1  感gam2  覺gok3 ，\
   假gaa2  設cit3  是si6  來loi4  自zi6  你nei5  虛heoi1  構kau3 ，\
@@ -164,12 +164,13 @@ const parseText = (
     let jyutping: string | null = null;
 
     // Check if the last part looks like Jyutping (letters followed by a digit)
-    const match = pair.match(/^(.+?)([a-z]+\d)$/);
+    // Also handle font variations. 使2si2（2 after 使 means pick another jyutping font） 使sai2
+    const match = pair.match(/^(.+?)([\d]{0,1}?)([a-z]+\d)$/); // Assuming one character has not more than ten variations
     if (match) {
       // Check if the first part is a single character (common case)
       if (match[1].length === 1) {
-        char = match[1];
-        jyutping = match[2];
+        char = match[1] + match[2];
+        jyutping = match[3];
       } else {
         // If the first part is multiple characters, treat the whole thing as a single unit without jyutping for now
         // This might need refinement depending on expected input variations
@@ -228,7 +229,14 @@ const SampleText: React.FC<SampleTextProps> = ({
               <span className="h-[28px] w-6 inline-block" /> // Placeholder for alignment (adjust height if needed)
             )}
             {/* Character */}
-            <span className="text-4xl font-chiron-hei my-1">{item.char}</span>
+            {item.char.length === 2 && /^\d$/.test(item.char[1]) ? (
+              <span className="text-4xl font-chiron-hei my-1">
+                <span>{item.char[0]}</span>
+                <span className="select-none">{item.char[1]}</span>
+              </span>
+            ) : (
+              <span className="text-4xl font-chiron-hei my-1">{item.char}</span>
+            )}
             {/* Added dark mode text color */}
           </div>
         ))}
