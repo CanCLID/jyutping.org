@@ -10,6 +10,7 @@ description: >
 import Alert from "@/components/Alert.tsx";
 import Audio from "@/components/Audio.tsx";
 import SampleText from "@/components/SampleText.tsx";
+import ToneTable from "@/components/ToneTable.tsx";
 
 ## 1 What is Jyutping?
 
@@ -72,8 +73,8 @@ odd spelling category because they don’t correspond to English spelling.
 **a** is the short a sound, it sounds similar to the vowel in “sub”. Listen to
 these examples.
 
-| aa                            | a                           |
-| ----------------------------- | --------------------------- |
+| aa                                        | a                                       |
+| ----------------------------------------- | --------------------------------------- |
 | 三 saam1 <Audio client:load id="saam1" /> | 心 sam1 <Audio client:load id="sam1" /> |
 | 山 saan1 <Audio client:load id="saan1" /> | 身 san1 <Audio client:load id="san1" /> |
 | 稍 saau2 <Audio client:load id="saau2" /> | 手 sau2 <Audio client:load id="sau2" /> |
@@ -88,8 +89,8 @@ these examples.
   examples.
 </Alert>
 
-| [i]                         | [ɪ]                           |
-| --------------------------- | ----------------------------- |
+| [i]                                     | [ɪ]                                       |
+| --------------------------------------- | ----------------------------------------- |
 | 詩 si1 <Audio client:load id="si1" />   | 識 sik1 <Audio client:load id="sik1" />   |
 | 仙 sin1 <Audio client:load id="sin1" /> | 星 sing1 <Audio client:load id="sing1" /> |
 | 知 zi1 <Audio client:load id="zi1" />   | 即 zik1 <Audio client:load id="zik1" />   |
@@ -126,8 +127,8 @@ these examples.
   Jyutping sounds like -oo- as in food, except in **-uk** or **-ung**.
 </Alert>
 
-| [u]                       | [ʊ]                           |
-| ------------------------- | ----------------------------- |
+| [u]                                   | [ʊ]                                       |
+| ------------------------------------- | ----------------------------------------- |
 | 夫 fu1 <Audio client:load id="fu1" /> | 覆 fuk1 <Audio client:load id="fuk1" />   |
 | 姑 gu1 <Audio client:load id="gu1" /> | 工 gung1 <Audio client:load id="gung1" /> |
 
@@ -159,8 +160,8 @@ On the flip side, Cantonese has aspirated plosives: **p-**, **t-**, **k-**,
 whose IPAs are [pʰ], [tʰ], [kʰ]. They are identical to the initial p, t, k in
 _pea_, _tea_ and _key_. Listen to the examples below:
 
-| Unaspirated                 | Aspirated                   |
-| --------------------------- | --------------------------- |
+| Unaspirated                             | Aspirated                               |
+| --------------------------------------- | --------------------------------------- |
 | 巴 baa1 <Audio client:load id="baa1" /> | 趴 paa1 <Audio client:load id="paa1" /> |
 | 打 daa1 <Audio client:load id="daa1" /> | 他 taa1 <Audio client:load id="taa1" /> |
 | 家 gaa1 <Audio client:load id="gaa1" /> | 卡 kaa1 <Audio client:load id="kaa1" /> |
@@ -174,8 +175,8 @@ _pea_, _tea_ and _key_. Listen to the examples below:
   “unrealised” version. You will be understood perfectly.
 </Alert>
 
-| -p                            | -t                          | -k                          |
-| ----------------------------- | --------------------------- | --------------------------- |
+| -p                                        | -t                                      | -k                                      |
+| ----------------------------------------- | --------------------------------------- | --------------------------------------- |
 | 濕 sap1 <Audio client:load id="sap1" />   | 失 sat1 <Audio client:load id="sat1" /> | 塞 sak1 <Audio client:load id="sak1" /> |
 | 接 zip3 <Audio client:load id="zip3" />   | 節 zit3 <Audio client:load id="zit3" /> | 脊 zek3 <Audio client:load id="zek3" /> |
 | 集 zaap6 <Audio client:load id="zaap6" /> | 活 wut6 <Audio client:load id="wut6" /> | 六 luk6 <Audio client:load id="luk6" /> |
@@ -223,8 +224,8 @@ understood if you mix these two sounds.
 **c** is like the "ch" in "chick", the aspirated version of **z**. The IPA is
 [t͡sʰ] (plus an allophonic [t͡ʃʰ]).
 
-| **z**                       | **c**                       |
-| --------------------------- | --------------------------- |
+| **z**                                   | **c**                                   |
+| --------------------------------------- | --------------------------------------- |
 | 知 zi1 <Audio client:load id="zi1" />   | 詞 ci4 <Audio client:load id="ci4" />   |
 | 借 ze3 <Audio client:load id="ze3" />   | 車 ce1 <Audio client:load id="ce1" />   |
 | 左 zo2 <Audio client:load id="zo2" />   | 坐 co5 <Audio client:load id="co5" />   |
@@ -266,12 +267,12 @@ First, let's take a look at all Cantonese tones in a chart:
 There are **six tones** in Cantonese: high level, high rising, mid level, low
 falling, low rising and mid-low level. Listen to the examples below:
 
-| Tone 1 (High level)       | Tone 2 (High rising)      | Tone 3 (Mid level)        |
-| ------------------------- | ------------------------- | ------------------------- |
+| Tone 1 (High level)                   | Tone 2 (High rising)                  | Tone 3 (Mid level)                    |
+| ------------------------------------- | ------------------------------------- | ------------------------------------- |
 | 詩 si1 <Audio client:load id="si1" /> | 史 si2 <Audio client:load id="si2" /> | 試 si3 <Audio client:load id="si3" /> |
 
-| Tone 4 (Low falling)      | Tone 5 (Low rising)       | Tone 6 (Mid-low level)    |
-| ------------------------- | ------------------------- | ------------------------- |
+| Tone 4 (Low falling)                  | Tone 5 (Low rising)                   | Tone 6 (Mid-low level)                |
+| ------------------------------------- | ------------------------------------- | ------------------------------------- |
 | 時 si4 <Audio client:load id="si4" /> | 市 si5 <Audio client:load id="si5" /> | 事 si6 <Audio client:load id="si6" /> |
 
 Don’t worry if you cannot distinguish all of them. In real life you can still be
@@ -303,6 +304,13 @@ Since Jyutping is a phonemic transcription of Cantonese, every time you type in
 Jyutping, you are essentially practicing speaking Cantonese. Check out our
 [Cantonese Keyboard page](/en/keyboard) to get the keyboards.
 
-### Appendix: Example annotated text _North wind and the sun_
+## Appendix A: Example annotated text _North wind and the sun_
 
 <SampleText client:idle />
+
+## Appendix B: Tone practice
+
+The table below uses **si** as a syllable example to provide all combinations of the six tones.
+Listen to them and try to distinguish the contrast. Here are the example characters for these six syllables<span className="font-chiron-hei text-2xl">詩史試時市事</span>。
+
+<ToneTable client:idle />

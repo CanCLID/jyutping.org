@@ -6,6 +6,7 @@ description: 識普通話拼音，一文掌握粵拼
 import Alert from "@/components/Alert.tsx";
 import Audio from "@/components/Audio.tsx";
 import SampleText from "@/components/SampleText.tsx";
+import ToneTable from "@/components/ToneTable.tsx";
 
 <Alert color="danger" title="本文未翻譯完成，目前顯示粵文版。" />
 
@@ -34,8 +35,8 @@ import SampleText from "@/components/SampleText.tsx";
 
 </Alert>
 
-| 例字                   | ✔️ 正確寫法 | ❌ 錯誤寫法 |
-| ---------------------- | ----------- | ----------- |
+| 例字                               | ✔️ 正確寫法 | ❌ 錯誤寫法 |
+| ---------------------------------- | ----------- | ----------- |
 | 一 <Audio client:load id="jat1" /> | jat1        | yat1        |
 | 以 <Audio client:load id="ji5" />  | ji5         | yi5         |
 | 夜 <Audio client:load id="je6" />  | je6         | ye6         |
@@ -48,8 +49,8 @@ import SampleText from "@/components/SampleText.tsx";
 
 </Alert>
 
-| 例字                    | ✔️ 正確寫法 | ❌ 錯誤寫法 |
-| ----------------------- | ----------- | ----------- |
+| 例字                                | ✔️ 正確寫法 | ❌ 錯誤寫法 |
+| ----------------------------------- | ----------- | ----------- |
 | 豬 <Audio client:load id="zyu1" />  | zyu1        | zü1         |
 | 村 <Audio client:load id="cyun1" /> | cyun1       | cün1        |
 | 雨<Audio client:load id="jyu5" />   | jyu5        | jü5 / yu5   |
@@ -62,8 +63,8 @@ import SampleText from "@/components/SampleText.tsx";
 
 </Alert>
 
-| 例字                     | ✔️ 正確寫法 | ❌ 錯誤寫法 |
-| ------------------------ | ----------- | ----------- |
+| 例字                                 | ✔️ 正確寫法 | ❌ 錯誤寫法 |
+| ------------------------------------ | ----------- | ----------- |
 | 廣 <Audio client:load id="gwong2" /> | gwong2      | guong2      |
 | 狂 <Audio client:load id="kwong4" /> | kwong4      | kuong4      |
 | 昆 <Audio client:load id="kwan1" />  | kwan1       | kuan1       |
@@ -77,8 +78,8 @@ import SampleText from "@/components/SampleText.tsx";
 
 </Alert>
 
-| ung                           | ong                           |
-| ----------------------------- | ----------------------------- |
+| ung                                       | ong                                       |
+| ----------------------------------------- | ----------------------------------------- |
 | 鍾 zung1 <Audio client:load id="zung1" /> | 莊 zong1 <Audio client:load id="zong1" /> |
 | 公 gung1 <Audio client:load id="gung1" /> | 江 gong1 <Audio client:load id="gong1" /> |
 
@@ -90,8 +91,8 @@ import SampleText from "@/components/SampleText.tsx";
 
 </Alert>
 
-| 例字                    | ✔️ 正確寫法 | ❌ 錯誤寫法  |
-| ----------------------- | ----------- | ------------ |
+| 例字                                | ✔️ 正確寫法 | ❌ 錯誤寫法  |
+| ----------------------------------- | ----------- | ------------ |
 | 考 <Audio client:load id="haau2" /> | haau2       | hao2 / haao2 |
 | 包 <Audio client:load id="baau1" /> | baau1       | bao1 / baao1 |
 
@@ -107,8 +108,8 @@ import SampleText from "@/components/SampleText.tsx";
 
 </Alert>
 
-| aa                            | a                           |
-| ----------------------------- | --------------------------- |
+| aa                                        | a                                       |
+| ----------------------------------------- | --------------------------------------- |
 | 三 saam1 <Audio client:load id="saam1" /> | 心 sam1 <Audio client:load id="sam1" /> |
 | 山 saan1 <Audio client:load id="saan1" /> | 身 san1 <Audio client:load id="san1" /> |
 | 稍 saau2 <Audio client:load id="saau2" /> | 手 sau2 <Audio client:load id="sau2" /> |
@@ -121,8 +122,8 @@ import SampleText from "@/components/SampleText.tsx";
 
 </Alert>
 
-| eo                            | oe                              |
-| ----------------------------- | ------------------------------- |
+| eo                                        | oe                                          |
+| ----------------------------------------- | ------------------------------------------- |
 | 率 seot1 <Audio client:load id="seot1" /> | 削 soek3 <Audio client:load id="soek3" />   |
 | 潤 jeon6 <Audio client:load id="jeon6" /> | 讓 joeng6 <Audio client:load id="joeng6" /> |
 
@@ -155,8 +156,8 @@ import SampleText from "@/components/SampleText.tsx";
 
 </Alert>
 
-| [i]                         | [ɪ]                           |
-| --------------------------- | ----------------------------- |
+| [i]                                     | [ɪ]                                       |
+| --------------------------------------- | ----------------------------------------- |
 | 詩 si1 <Audio client:load id="si1" />   | 識 sik1 <Audio client:load id="sik1" />   |
 | 仙 sin1 <Audio client:load id="sin1" /> | 星 sing1 <Audio client:load id="sing1" /> |
 | 知 zi1 <Audio client:load id="zi1" />   | 即 zik1 <Audio client:load id="zik1" />   |
@@ -169,8 +170,8 @@ import SampleText from "@/components/SampleText.tsx";
 
 </Alert>
 
-| ng-                             | Ø-                          |
-| ------------------------------- | --------------------------- |
+| ng-                                         | Ø-                                      |
+| ------------------------------------------- | --------------------------------------- |
 | 岸 ngon6 <Audio client:load id="ngon6" />   | 按 on3 <Audio client:load id="on3" />   |
 | 雁 ngaan6 <Audio client:load id="ngaan6" /> | 晏 aan3 <Audio client:load id="aan3" /> |
 
@@ -182,8 +183,8 @@ import SampleText from "@/components/SampleText.tsx";
 
 </Alert>
 
-| -m                            | -n                            | -ng                             |
-| ----------------------------- | ----------------------------- | ------------------------------- |
+| -m                                        | -n                                        | -ng                                         |
+| ----------------------------------------- | ----------------------------------------- | ------------------------------------------- |
 | 三 saam1 <Audio client:load id="saam1" /> | 山 saan1 <Audio client:load id="saan1" /> | 生 saang1 <Audio client:load id="saang1" /> |
 | 含 ham4 <Audio client:load id="ham4" />   | 痕 han4 <Audio client:load id="han4" />   | 行 hang4<Audio client:load id="hang4" />    |
 | 尖 zim1 <Audio client:load id="zim1" />   | 煎 zin1 <Audio client:load id="zin1" />   | 精 zing1 <Audio client:load id="zing1" />   |
@@ -196,8 +197,8 @@ import SampleText from "@/components/SampleText.tsx";
 
 </Alert>
 
-| -p                            | -t                          | -k                          |
-| ----------------------------- | --------------------------- | --------------------------- |
+| -p                                        | -t                                      | -k                                      |
+| ----------------------------------------- | --------------------------------------- | --------------------------------------- |
 | 湿 sap1 <Audio client:load id="sap1" />   | 失 sat1 <Audio client:load id="sat1" /> | 塞 sak1 <Audio client:load id="sak1" /> |
 | 接 zip3 <Audio client:load id="zip3" />   | 节 zit3 <Audio client:load id="zit3" /> | 脊 zek3 <Audio client:load id="zek3" /> |
 | 集 zaap6 <Audio client:load id="zaap6" /> | 活 wut6 <Audio client:load id="wut6" /> | 六 luk6 <Audio client:load id="luk6" /> |
@@ -238,12 +239,12 @@ import SampleText from "@/components/SampleText.tsx";
 
 6 個調值如下表：
 
-| 第 1 聲 55（高平調）      | 第 2 聲 35（高升調）      | 第 3 聲 33（中平調）      |
-| ------------------------- | ------------------------- | ------------------------- |
+| 第 1 聲 55（高平調）                  | 第 2 聲 35（高升調）                  | 第 3 聲 33（中平調）                  |
+| ------------------------------------- | ------------------------------------- | ------------------------------------- |
 | 詩 si1 <Audio client:load id="si1" /> | 史 si2 <Audio client:load id="si2" /> | 試 si3 <Audio client:load id="si3" /> |
 
-| 第 4 聲 21（低降調）      | 第 5 聲 13（低升調）      | 第 6 聲 22（中低平調）    |
-| ------------------------- | ------------------------- | ------------------------- |
+| 第 4 聲 21（低降調）                  | 第 5 聲 13（低升調）                  | 第 6 聲 22（中低平調）                |
+| ------------------------------------- | ------------------------------------- | ------------------------------------- |
 | 時 si4 <Audio client:load id="si4" /> | 市 si5 <Audio client:load id="si5" /> | 事 si6 <Audio client:load id="si6" /> |
 
 如果實在記唔住呢啲聲調都冇所謂，反正輸入法打字唔使打聲調。
@@ -301,3 +302,9 @@ import SampleText from "@/components/SampleText.tsx";
 ## 附錄：粵拼注音文本示例《北風同太陽》
 
 <SampleText client:idle />
+
+## 附錄二：聲調練習表
+
+下表以 si 爲示範音節，提供粵語中 6 個聲調所有兩兩組合嘅發音，幫助讀者區分各個聲調。六個音節的例字分別是<span className="font-chiron-hei text-2xl">詩史試時市事</span>。
+
+<ToneTable client:idle />
