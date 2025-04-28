@@ -8,7 +8,7 @@ article table {
 
 article th,
 article td {
-  @apply border border-gray-300 px-4 py-2 text-left; /* Adjusted border color */
+  @apply border border-gray-300 px-0 sm:px-1 md:px-2 xl:px-4 py-2 text-center md:text-left; /* Adjusted border color */
 }
 
 article th {
@@ -45,9 +45,17 @@ article h5,
 article h6 {
   @apply mt-6 mb-3 font-semibold;
 }
-article h1 { @apply text-4xl; }
-article h2 { @apply text-3xl border-b pb-1 } /* Added border */
-article h3 { @apply text-2xl; }
-article h4 { @apply text-xl; }
+article h1 {
+  @apply text-4xl;
+}
+article h2 {
+  @apply text-3xl border-b pb-1;
+} /* Added border */
+article h3 {
+  @apply text-2xl;
+}
+article h4 {
+  @apply text-xl;
+}
 
 /* Add other global base styles if needed */
