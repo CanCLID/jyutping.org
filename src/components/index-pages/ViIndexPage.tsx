@@ -101,7 +101,7 @@ const ViIndexPage: React.FC = () => {
         </a>
       </div>
       <span className="text-2xl text-center mt-32 mb-12 mx-auto block">
-        Không biết tiếng Quảng Đông?
+        Không hiểu tiếng Việt?
       </span>
       {/* Links to other locales */}
       <div className="flex flex-col md:flex-row md:flex-wrap md:justify-around items-center gap-4 my-12 mx-auto max-w-5xl">

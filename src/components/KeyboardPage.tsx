@@ -207,7 +207,7 @@ const translations: Record<string, KeyboardPageTranslation> = {
     yuetyamiOSButton: "Tải trên AppStore",
     yuetyamMacOSButton: "Tải .pkg",
     yuetyamAndroidButton: "Tải .apk",
-    gboardTitle: "Việt bính Gboard",
+    gboardTitle: "Gboard Việt bính",
     toolsTitle: "Công cụ từ điển",
     resourceTitle: "Tài nguyên học tập",
     googleTranslate: "Google Dịch tiếng Quảng Đông",
