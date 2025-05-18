@@ -123,82 +123,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     // referenceHeading removed
     // referenceId removed
   },
-  yue: {
-    intro: "「香港語言學學會粵語拼音方案」，簡稱「粵拼」。",
-    alertIpaTitle: "關於 IPA 轉寫",
-    alertIpaContent: (
-      <p>
-        本頁面所用國際音標轉寫皆係寬式轉寫，錄音數據來源係粵典。詳情請見{" "}
-        <a href="#references-yue" className="text-blue-600 hover:underline">
-          參考文獻
-        </a>{" "}
-        一節。
-      </p>
-    ),
-    // onsetHeading removed
-    onsetTableHeaders: [
-      "雙脣音",
-      "脣齒音",
-      "齒齦音",
-      "硬腭音",
-      "軟腭音",
-      "喉音",
-    ],
-    onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
-    alertNullInitial: <p>零聲母唔用字母做標記，例如「呀」只拼作 aa。</p>,
-    // syllabicNasalHeading removed
-    // finalHeading removed
-    // nucleiHeading removed
-    // codaHeading removed
-    codaRowHeaders: ["爆發音", "鼻音", "元音"],
-    // finalsChartHeading removed
-    finalsChartColHeaders1: [
-      "單元音",
-      "複元音",
-      "鼻音韻尾",
-      "爆發音韻尾（入聲韻）",
-    ],
-    finalsChartColHeaders2: [
-      "-",
-      "-i",
-      "-u",
-      "-m",
-      "-n",
-      "-ng",
-      "-p",
-      "-t",
-      "-k",
-    ],
-    finalsChartRowHeader: "韻腹",
-    alertAddedFinals: (
-      <p>
-        <strong>a</strong> 同 <strong>oet</strong> 於 2018 年新增。詳情請睇{" "}
-        <a
-          href="https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
-        >
-          呢度
-        </a>
-        。
-      </p>
-    ),
-    // toneHeading removed
-    toneTableHeaders: ["平", "上", "去", "入"],
-    toneRowHeaders: ["陰", "陽"],
-    alertToneMarks: (
-      <>
-        <p>聲調標喺音節後面。</p>
-        <p>
-          <strong>示例：</strong>
-          fu1 （夫），fu2 （虎）, fu3 （副）, fu4 （扶）, fu5 （婦）, fu6 （父）
-        </p>
-      </>
-    ),
-    // referenceHeading removed
-    // referenceId removed
-  },
+
   cmn: {
     intro: "「香港語言學學會粵語拼音方案」，簡稱「粵拼」。",
     alertIpaTitle: "關於 IPA 轉寫",
@@ -522,6 +447,158 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         <p>
           <strong>示例：</strong>
           fu1 （夫），fu2 （虎）, fu3 （副）, fu4 （扶）, fu5 （婦）, fu6 （父）
+        </p>
+      </>
+    ),
+    // referenceHeading removed
+    // referenceId removed
+  },
+  yue: {
+    intro: "「香港語言學學會粵語拼音方案」，簡稱「粵拼」。",
+    alertIpaTitle: "關於 IPA 轉寫",
+    alertIpaContent: (
+      <p>
+        本頁面所用國際音標轉寫皆係寬式轉寫，錄音數據來源係粵典。詳情請見{" "}
+        <a href="#references-yue" className="text-blue-600 hover:underline">
+          參考文獻
+        </a>{" "}
+        一節。
+      </p>
+    ),
+    // onsetHeading removed
+    onsetTableHeaders: [
+      "雙脣音",
+      "脣齒音",
+      "齒齦音",
+      "硬腭音",
+      "軟腭音",
+      "喉音",
+    ],
+    onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
+    alertNullInitial: <p>零聲母唔用字母做標記，例如「呀」只拼作 aa。</p>,
+    // syllabicNasalHeading removed
+    // finalHeading removed
+    // nucleiHeading removed
+    // codaHeading removed
+    codaRowHeaders: ["爆發音", "鼻音", "元音"],
+    // finalsChartHeading removed
+    finalsChartColHeaders1: [
+      "單元音",
+      "複元音",
+      "鼻音韻尾",
+      "爆發音韻尾（入聲韻）",
+    ],
+    finalsChartColHeaders2: [
+      "-",
+      "-i",
+      "-u",
+      "-m",
+      "-n",
+      "-ng",
+      "-p",
+      "-t",
+      "-k",
+    ],
+    finalsChartRowHeader: "韻腹",
+    alertAddedFinals: (
+      <p>
+        <strong>a</strong> 同 <strong>oet</strong> 於 2018 年新增。詳情請睇{" "}
+        <a
+          href="https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          呢度
+        </a>
+        。
+      </p>
+    ),
+    // toneHeading removed
+    toneTableHeaders: ["平", "上", "去", "入"],
+    toneRowHeaders: ["陰", "陽"],
+    alertToneMarks: (
+      <>
+        <p>聲調標喺音節後面。</p>
+        <p>
+          <strong>示例：</strong>
+          fu1 （夫），fu2 （虎）, fu3 （副）, fu4 （扶）, fu5 （婦）, fu6 （父）
+        </p>
+      </>
+    ),
+    // referenceHeading removed
+    // referenceId removed
+  },
+  yue_hans: {
+    intro: "「香港语言学学会粤语拼音方案」，简称「粤拼」。",
+    alertIpaTitle: "关于 IPA 转写",
+    alertIpaContent: (
+      <p>
+        本页面所用国际音标转写皆系宽式转写，录音数据来源系粤典。详情请见{" "}
+        <a href="#references-yue" className="text-blue-600 hover:underline">
+          参考文献
+        </a>{" "}
+        一节。
+      </p>
+    ),
+    // onsetHeading removed
+    onsetTableHeaders: [
+      "双唇音",
+      "唇齿音",
+      "齿龈音",
+      "硬腭音",
+      "软腭音",
+      "喉音",
+    ],
+    onsetRowHeaders: ["爆发音", "塞擦音", "鼻音", "擦音", "近音", "边近音"],
+    alertNullInitial: <p>零声母唔用字母做标记，例如「呀」只拼作 aa。</p>,
+    // syllabicNasalHeading removed
+    // finalHeading removed
+    // nucleiHeading removed
+    // codaHeading removed
+    codaRowHeaders: ["爆发音", "鼻音", "元音"],
+    // finalsChartHeading removed
+    finalsChartColHeaders1: [
+      "单元音",
+      "复元音",
+      "鼻音韵尾",
+      "爆发音韵尾（入声韵）",
+    ],
+    finalsChartColHeaders2: [
+      "-",
+      "-i",
+      "-u",
+      "-m",
+      "-n",
+      "-ng",
+      "-p",
+      "-t",
+      "-k",
+    ],
+    finalsChartRowHeader: "韵腹",
+    alertAddedFinals: (
+      <p>
+        <strong>a</strong> 同 <strong>oet</strong> 于 2018 年新增。详情请睇{" "}
+        <a
+          href="https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          呢度
+        </a>
+        。
+      </p>
+    ),
+    // toneHeading removed
+    toneTableHeaders: ["平", "上", "去", "入"],
+    toneRowHeaders: ["阴", "阳"],
+    alertToneMarks: (
+      <>
+        <p>声调标喺音节后面。</p>
+        <p>
+          <strong>示例：</strong>
+          fu1 （夫），fu2 （虎）, fu3 （副）, fu4 （扶）, fu5 （妇）, fu6 （父）
         </p>
       </>
     ),

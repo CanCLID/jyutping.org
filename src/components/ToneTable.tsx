@@ -1,4 +1,3 @@
-import type React from "react";
 import Audio from "./Audio.tsx"; // Import the existing Audio component
 
 const ToneTable = () => {

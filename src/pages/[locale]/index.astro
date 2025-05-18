@@ -9,6 +9,7 @@ import EnIndexPage from "@/components/index-pages/EnIndexPage.tsx";
 import NanIndexPage from "@/components/index-pages/NanIndexPage.tsx";
 import ViIndexPage from "@/components/index-pages/ViIndexPage.tsx";
 import WuuIndexPage from "@/components/index-pages/WuuIndexPage.tsx";
+import YueHansIndexPage from "@/components/index-pages/YueHansIndexPage.tsx";
 // YueIndexPage is handled by src/pages/index.astro
 // Removed localeComponentMap
 
@@ -30,10 +31,11 @@ const validLocale = I18n.locales.includes(locale as string)
 // Define titles for locale index pages
 const pageTitles: Record<string, string> = {
   en: "Jyutping - Cantonese Romanization",
-  cmn: "粤拼 - 粤语拼音方案",
+  cmn: "粵拼 - 粵語拼音方案",
   nan: "粵拼 - 粵語拼音方案",
   vi: "Việt bính - Phiên âm tiếng Quảng Đông",
   wuu: "粤拼 - 粤语拼音方案",
+  yue_hans: "粤拼 - 粤语拼音方案",
 };
 const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English title
 ---
@@ -45,4 +47,5 @@ const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English t
   {validLocale === "nan" && <NanIndexPage client:load />}
   {validLocale === "vi" && <ViIndexPage client:load />}
   {validLocale === "wuu" && <WuuIndexPage client:load />}
+  {validLocale === "yue_hans" && <YueHansIndexPage client:load />}
 </BaseLayout>

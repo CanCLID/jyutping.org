@@ -10,9 +10,10 @@ interface LanguageSwitcherProps {
 
 // Define language names (copied from original)
 const languageNames: Record<string, string> = {
+  yue: "粵語",
+  yue_hans: "粤语简体",
   en: "English",
   vi: "Tiếng Việt",
-  yue: "粵語",
   cmn: "普通话/國語",
   nan: "臺灣閩南語",
   wuu: "吳語",

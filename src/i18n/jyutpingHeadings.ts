@@ -41,6 +41,17 @@ export const jyutpingHeadingsTranslations: Record<
     referenceHeading: "參考文獻",
     referenceId: "references-yue",
   },
+  yue_hans: {
+    onsetHeading: "1. 声母表",
+    syllabicNasalHeading: "2. 鼻音单独成韵",
+    finalHeading: "3. 韵母",
+    nucleiHeading: "3.1 韵腹",
+    codaHeading: "3.2 韵尾",
+    finalsChartHeading: "3.3 韵母表",
+    toneHeading: "4. 字调",
+    referenceHeading: "参考文献",
+    referenceId: "references-yue",
+  },
   cmn: {
     onsetHeading: "1. 聲母表",
     syllabicNasalHeading: "2. 鼻音單獨成韻",
