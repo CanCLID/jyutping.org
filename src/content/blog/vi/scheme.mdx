@@ -1,0 +1,133 @@
+---
+title: Tại sao nên dùng Việt bính, không dùng các phương án phiên âm tiếng Quảng Đông khác?
+linkTitle: Tại sao nên dùng Việt bính, không dùng các phương án phiên âm tiếng Quảng Đông khác?
+url: /blog/scheme
+weight: 3
+description: >
+  Thường có người hỏi, tại sao tôi chọn phương án phiên âm Việt bính của LSHK,
+  mà không dùng Phiên âm Yale, Hệ thống phiên âm Học viện Giáo dục, Hệ thống phiên âm Quảng Châu (phương án Nhiêu Bỉnh Tài), Hệ thống phiên âm tiếng Quảng Đông của chính phủ Hồng Kông, v.v.? Bài viết này giải thích chi tiết tại sao chúng tôi chọn Việt bính, thay vì các phương án phiên âm tiếng Quảng Đông khác.
+---
+
+import Audio from "@/components/Audio.tsx";
+
+## Nguyên tắc thiết kế phương án phiên âm
+
+Phương án phiên âm còn gọi là phương án La-tinh hóa. Vì chữ Hán không phải là văn tự biểu âm, nên các ngôn ngữ dùng chữ Hán đều cần một phương án phiên âm để biểu thị cách phát âm. Vì vậy, đối với một phương án phiên âm, mục đích quan trọng nhất là biểu thị rõ ràng và chính xác hệ thống âm vị của ngôn ngữ đó. Và trong thời đại internet thế kỷ 21, phương án phiên âm còn có một mục đích quan trọng khác là hỗ trợ xử lý thông tin máy tính, đặc biệt là làm phương pháp nhập liệu phiên âm. Dựa vào hai điểm này, chúng ta có thể tổng kết một bộ nguyên tắc để đánh giá ưu, khuyết điểm của phương án phiên âm. Tiếp theo, chúng tôi sẽ giải thích từng nguyên tắc một, kèm theo các ví dụ minh họa, để giải thích lý do chúng tôi chọn Việt bính thay vì các phương án khác.
+
+### Nguyên tắc 1: "Một ký hiệu tương ứng với một âm vị"
+
+Để phương án phiên âm biểu thị hệ thống âm vị một cách rõ ràng, chính xác và đơn giản, cần phải tuân theo nguyên tắc "một ký hiệu tương ứng với một âm vị". Điều đó có nghĩa là, nếu xuất hiện tình trạng "một ký hiệu có thể đại diện cho nhiều âm vị" hoặc "một âm vị có thể được phiên âm bằng nhiều ký hiệu khác nhau", thì chúng ta có thể nói rằng phương án phiên âm đó là lộn xộn, không nhất quán, và không thể biểu đạt chính xác và đơn giản hệ thống âm vị của ngôn ngữ đó.
+
+Một ví dụ phản diện quen thuộc nhất là phiên âm tiếng Phổ thông (Phương án Pinyin Hán ngữ) của chúng ta. Ví dụ, chữ cái e là một ký hiệu phiên âm, khi đi sau g, k, h như trong "哥" (gē), "科" (kē), "呵" (hē) thì phát âm là /ɤ/, nhưng trong vần ie như trong chữ "些" (xiē) thì phát âm là /e/. Nhưng các phụ âm đầu j, q, x trong phương án Pinyin lại là cách viết theo âm giá, vì chúng cùng một âm vị với g, k, h. Điều này có nghĩa là phiên âm tiếng Phổ thông lúc thì dùng cách viết theo âm giá, lúc thì dùng cách viết theo âm vị, chứ không nhất quán phiên âm theo âm vị, điều này vi phạm nguyên tắc của chúng ta.
+
+Nguyên tắc này còn có một ý nghĩa khác, đó là một ký hiệu biểu thị âm thanh cụ thể nào, **không nên phụ thuộc vào môi trường** (tức là các ký hiệu bên trái và bên phải) để xác định. Ví dụ trong phiên âm Yale, chữ cái a vừa có thể biểu thị nguyên âm dài a, vừa có thể biểu thị nguyên âm ngắn a. Bảng dưới đây là cách phiên âm của Yale đối với ba chữ "花", "翻", "分" Chúng ta có thể thấy trong âm tiết mở (không có âm cuối mũi hoặc âm cuối tắc) thì a đại diện cho /a/, trong âm tiết đóng (có âm cuối mũi hoặc âm cuối tắc) thì đại diện cho /ɐ/, điều này chính là "một ký hiệu a đại diện cho hai âm vị /a/ và /ɐ/". Tương tự, nguyên âm của "花" và "翻" đều là /a/, nhưng một cái được phiên âm thành fa, một cái được phiên âm thành faan, tức là "một âm vị /a/ được biểu thị bằng hai ký hiệu a và aa".
+
+| 花 /a/ <Audio client:load id="faa1" /> | 翻 /a/ <Audio client:load id="faan1" /> | 分 /ɐ/ <Audio client:load id="fan1" /> |
+| -------------------------- | --------------------------- | -------------------------- |
+| fa                         | faan                        | fan                        |
+
+Vì vậy, phiên âm Yale ở đây "dựa vào môi trường để xác định một ký hiệu thực sự đại diện cho âm thanh nào", ký hiệu a thực sự đại diện cho /a/ hay /ɐ/ phải dựa vào việc nó ở trong âm tiết mở hay âm tiết đóng để phán đoán (nếu phía sau có n thì là /ɐ/, nếu không có gì thì là /a/). Đây chính là một trong những thiếu sót trong thiết kế của Yale. Việt bính thống nhất quy định aa là /a/, a là /ɐ/, không cần nhìn môi trường mà có thể trực tiếp xác định đó là âm nào.
+
+### Nguyên tắc 2: Tránh sử dụng ký hiệu phụ và ký tự ngoài ASCII
+
+Chúng ta nên cố gắng làm cho một phương án phiên âm chỉ sử dụng các ký tự trong [bộ ký tự ASCII](https://vi.wikipedia.org/wiki/ASCII) (Mã chuẩn trao đổi thông tin Hoa Kỳ), nghĩa là chỉ nên sử dụng 26 chữ cái tiếng Anh cộng với các chữ số để biểu thị toàn bộ phương án, không nên dùng các ký hiệu như ´ˋˇ˘˜. Điều này xuất phát từ việc cân nhắc về thuận tiện cho xử lý thông tin trong thời đại thông tin, vì làm như vậy có thể tránh được nhiều vấn đề tiềm ẩn và lỗi.
+
+Một ví dụ quen thuộc nhất là chữ ü trong phiên âm tiếng Phổ thông. Tin rằng mọi người đều biết rõ việc gõ chữ ü này phiền phức thế nào, ước tính hầu hết mọi người khi gõ ký hiệu này đều là sao chép dán từ trên mạng xuống. Ngoài việc nhập liệu phiền phức, việc sử dụng ký hiệu ü còn có một vấn đề là nó không nằm trong bộ ký tự ASCII, nên không thể mã hóa theo cách đơn giản nhất (chuyển thành v là chuyện khác), như vậy một mặt sử dụng mã hóa không phải ASCII sẽ làm tăng việc chiếm dụng bộ nhớ, mặt khác khi chuyển đổi mã có thể xuất hiện các loại lỗi. Tương tự, phiên âm tiếng Phổ thông dùng bốn ký hiệu ˉˊˇˋ để đánh dấu thanh điệu, việc nhập không thuận tiện và cũng dễ gây lỗi. Tất nhiên, điều này là do phương án Pinyin được thiết kế vào những năm 50 của thế kỷ trước, khi đó máy tính chưa phổ biến, nên thiếu sót này cũng là bình thường.
+
+Mặt khác, chúng ta biết rằng phương án phiên âm còn có một mục đích khác là làm phương pháp nhập liệu phiên âm. Nếu một phương án phiên âm đầy rẫy ˉˊˇˋ, mọi người làm sao gõ chữ được? May mắn là trong phiên âm tiếng Phổ thông, những ký hiệu này chỉ dùng để biểu thị thanh điệu, và phương pháp nhập liệu phiên âm tiếng Phổ thông không đánh thanh điệu vẫn không có vấn đề gì. Nếu nói những ký hiệu này không chỉ dùng để biểu thị thanh điệu, mà còn dùng để phân biệt phụ âm nguyên âm, giống như â ä ô ö û ü thì sẽ rất rắc rối, phương pháp nhập liệu phiên âm có thể sẽ phiền phức đến mức mọi người đều không muốn dùng.
+
+### Nguyên tắc 3: Lựa chọn ký hiệu nên phù hợp với thói quen đại chúng
+
+Ý nghĩa của nguyên tắc này là, khi chọn chữ cái để tương ứng với âm thanh, nên cố gắng phù hợp với nhận thức hiện có của mọi người, ví dụ như các chữ cái a o e thường được dùng để biểu thị nguyên âm, b p m f biểu thị âm môi, v.v. Một ví dụ phản diện nổi tiếng là hệ thống viết của tiếng Cherokee, nó dùng chữ cái Ꭰ để biểu thị âm /a/, chữ cái Ꮃ để biểu thị âm /la/, điều này rất phản trực giác. Hoặc chẳng hạn như q trong phiên âm tiếng Phổ thông đại diện cho âm /t͡ɕʰ/, điều này không phù hợp với thói quen của người nói tiếng Anh. Vì trong tiếng Anh, q thường biểu thị /k/, nên người phương Tây khi học phiên âm tiếng Phổ thông, lần đầu tiên nhìn thấy q dễ vô thức phát âm thành /k/, phải mất một thời gian mới có thể thích ứng được.
+
+Việt bính thường bị phê bình vì dùng chữ cái j để biểu thị âm /j/ <Audio client:load id="jaa1" />, chính là vì vi phạm nguyên tắc này, bởi vì mọi người đã quen với việc dùng chữ cái y để đại diện cho âm /j/, dùng j để biểu thị thì rất không quen. Về điểm này, [phía dưới](#về-j-và-y) sẽ giải thích chi tiết.
+
+### Nguyên tắc 4: Phản ánh chính xác hệ thống âm vị của ngôn ngữ
+
+Đây có thể nói là nguyên tắc thiết kế quan trọng nhất, nhưng cũng là nguyên tắc phiền phức và dễ gây vấn đề nhất. Bởi vì phân tích âm vị có tính chủ quan nhất định, đôi khi không thể xác định hoàn toàn hệ thống âm vị của một ngôn ngữ. Ví dụ quen thuộc nhất là tiếng Phổ thông, hiện tại giới học thuật vẫn chưa có sự đồng thuận về số lượng âm vị nguyên âm trong tiếng Phổ thông (ví dụ như việc có xem xét cả âm hóa nhi hay không cũng sẽ ảnh hưởng đến kết quả phân tích). Vì vậy, những khác biệt này sẽ trực tiếp ảnh hưởng đến thiết kế của phương án phiên âm, đôi khi thậm chí sẽ ảnh hưởng đến khả năng biểu đạt của phương án phiên âm, trường hợp nghiêm trọng sẽ dẫn đến việc phương án không có cách nào biểu thị một số âm.
+
+Cần lưu ý rằng, nguyên tắc này đôi khi mâu thuẫn với nguyên tắc thứ nhất. Chẳng hạn như âm h và ng trong tiếng Anh bổ sung cho nhau, có thể cố gắng gộp thành cùng một âm vị rồi dùng cùng một chữ cái để biểu thị, nhưng như vậy sẽ rất phản trực giác và không phù hợp với việc sử dụng của đại chúng. Vấn đề về sự đánh đổi giữa nguyên tắc một và nguyên tắc ba này, chúng ta sẽ gặp trong các ví dụ dưới đây.
+
+## Các nhược điểm của các phương án phiên âm tiếng Quảng Đông
+
+Hiểu được nguyên tắc thiết kế của phương án phiên âm, chúng ta có thể xem xét các phương án phiên âm tiếng Quảng Đông nổi tiếng nhất: Phiên âm Yale, Hệ thống phiên âm Học viện Giáo dục (Phiên âm kiểu Giáo Viện), Hệ thống phiên âm Quảng Châu (phương án Nhiêu Bỉnh Tài), v.v., phân tích xem chúng có vấn đề gì, để chứng minh tại sao chúng ta nên chọn Việt bính.
+
+### Phiên âm Yale
+
+Yale có thể được coi là phương án phiên âm tiếng Quảng Đông khác ngoại tuyến nhất. Khác với Việt bính, có các điểm khác biệt sau:
+
+1. Trong Yale, /a/ ở âm tiết mở dùng a để biểu thị, ở âm tiết đóng dùng aa. /ɐ/ ở âm tiết đóng dùng a, không thể biểu thị âm tiết mở /ɐ/.
+2. Yale dùng j ch y để đại diện cho /ts/、/tsʰ/、/j/ ba âm. Do đó, âm /yː/ cần được biểu thị bằng yu.
+3. Yale không phân biệt /ɵ/ và /œ/, cả hai đều được biểu thị bằng eu. Điều này cũng là vì vậy mà Yale không thể biểu thị âm /ɛːu/.
+4. Yale dùng các ký hiệu phụ thêm ˉˊ và chữ h để biểu thị dấu thanh (phương án mới đã thêm phương án sử dụng số để ghi dấu thanh). 
+
+Đầu tiên, điểm đầu tiên đã được giải thích ở[trên](#Nguyên-tắc-1-Một-ký-hiệu-tương-ứng-với-một-âm-vị). Yale thiết kế như vậy, là vì năm ấy, phân tích âm vị cho rằng âm tiết mở /ɐ/ không tồn tại, vì vậy đã đơn giản hóa aa thành a. Điều này đã gây ra vấn đề, đầu tiên là vi phạm nguyên tắc đầu tiên "một ký hiệu chặt chẽ đại diện cho một âm vị", khiến người học khó khăn khi nắm bắt và tăng chi phí nắm bắt, sau đó là không thể biểu thị âm tiết mở /ɐ/, ví dụ như từ "嘞", vi phạm nguyên tắc thứ tư. Vì vậy, điều này là một khiếm khuyết lớn.
+
+Điểm thứ hai, Yale dùng yu để biểu thị /yː/, điều này cũng vi phạm nguyên tắc đầu tiên "một ký hiệu đại diện cho một âm vị", vì nó cần phụ thuộc vào môi trường để xác định âm thực phát ra gì. Đầu tiên, Yale đã dùng y để đại diện cho /j/、u để đại diện cho /u/, bây giờ lại quy định yu kết hợp lại thành /yː/, tức là "một chữ cái đại diện cho một âm đơn, hai chữ cái kết hợp lại thành một âm đơn khác", vì vậy một là khiến người học khó khăn, hai là không thuận tiện cho xử lý thông tin máy tính (khó xử lý để nhập liệu, viết biểu thức chính quy cũng cần thêm môi trường để xác định). Trong khi đó, Việt bính đã xử lý vấn đề này, chúng ta sẽ đề cập ở cuối phần [Nhược điểm của Việt bính](#Nhược-điểm-của-Việt-bính). 
+
+Điểm thứ ba, Yale dùng eu để đại diện cho /ɵ/ và /œ/, điều này chính là vấn đề phân tích âm vị ở trên. Điều này trực tiếp dẫn đến việc Yale không thể biểu thị /œ/ và /ɛːu/, ảnh hưởng đến khả năng biểu thị của phương án phiên âm, như bảng dưới đây: 
+
+|          | 睡 /sɵi˨/ <Audio client:load id="seoi6" /> | 掉 /tɛːu˨/ <Audio client:load id="deu6" /> | 𠰲 /œt˨/ <Audio client:load id="oet6" /> |
+| -------- | ------------------------------ | ------------------------------ | ---------------------------- |
+| Yale     | seuih                          | Không thể biểu thị                       | Không thể biểu thị                     |
+| Việt bính | seoi6                          | deu6                           | oet6                         |
+
+Điểm thứ tư dùng dấu phụ và chữ h để biểu thị thanh điệu, ví dụ "蛇" phát âm thành sèh, vừa vi phạm nguyên tắc 2, vừa vi phạm nguyên tắc 1, vì h đã được dùng để biểu thị phụ âm đầu /h/. Rất may là Yale phiên âm phiên bản mới đã thêm phương án dùng số để biểu thị thanh điệu, điều này là một sự hỗ trợ lớn cho việc xử lý thông tin.
+
+Vì vậy, tổng hợp lại, Yale vi phạm ba nguyên tắc đầu tiên (nguyên tắc thứ ba chưa thể xác định), các khiếm khuyết này đã khiến chúng ta phải bỏ Yale và chọn Việt bính. 
+
+### Hệ thống phiên âm Quảng Châu (phương án Nhiêu Bỉnh Tài)
+
+Hệ thống phiên âm Quảng Châu được công bố vào năm 1960, và có phiên bản sửa đổi vào năm 1980, vì được sửa đổi bởi giáo sư Nhiêu Bỉnh Tài, vì vậy còn được gọi là phương án Nhiêu Bỉnh Tài. Chúng ta sẽ đề cập đến phiên bản đã được sửa đổi vào năm 1980, giải thích phiên âm này có gì vấn đề. Ngoài dấu thanh, Hệ thống phiên âm Quảng Châu khác với Việt bính chính là các điểm sau:
+
+1. Dùng e ê é ü để đại diện cho âm /ɐ/、/œː/、/ɛː/、/yː/
+2. Dùng y để đại diện cho âm /j/, gu、ku đại diện cho /kʷ/、/kʷʰ/
+3. Đồng thời dùng z c s và j q x để đại diện cho /ts/、/tsʰ/、/s/, hai nhóm này thực chất không có khác biệt, đều đại diện cho cùng một nhóm âm vị
+4. Dùng -b -d -g để đại diện cho âm cuối đệm
+5. Không phân biệt /ɵ/ và /œ/, không thể biểu thị âm oet trong Việt bính
+
+Rõ ràng, điểm đầu tiên đã vi phạm nguyên tắc thứ hai, dùng nhiều ký hiệu phụ thêm để biểu thị các âm vần, điều này đã cản trở xử lý thông tin, và không thể dùng để làm phương pháp nhập liệu. Điểm thứ ba vi phạm nguyên tắc đầu tiên, âm vị cùng một âm vị được biểu thị bằng các ký hiệu khác nhau. Điều thiết kế này ban đầu là để tương thích với phiên âm tiếng Phổ thông, nhưng thực sự không cần thiết, thậm chí còn tăng sự nhầm lẫn. 
+
+Điểm thứ hai và điểm thứ tư đều là vấn đề lựa chọn ký hiệu chủ quan, không thể coi là nhược điểm. Điểm thứ năm giống như phiên âm Yale, không thể biểu thị âm oet eu trong Việt bính. Vì vậy, tổng hợp lại, điểm đầu tiên và điểm thứ ba là những nhược điểm nghiêm trọng nhất, hai điểm này trực tiếp quyết định việc phiên âm của chính quyền tỉnh Quảng Đông không thể lan rộng và phát triển trong thời đại thông tin. 
+
+### Hệ thống phiên âm Học viện Giáo dục (Phiên âm kiểu Giáo Viện)
+
+Hệ thống phiên âm Học viện Giáo dục cũng là một phương án phiên âm tiếng Quảng Đông được nhiều người dùng, ngoài dấu thanh, nó khác với Việt bính chính là các điểm sau:
+
+1. Dùng dz và ts để đại diện cho /ts/ và /tsʰ/
+2. Dùng y để đại diện cho /y/
+3. Không phân biệt /ɵ/ và /œ/, đều được biểu thị bằng oe
+4. Dùng oey để đại diện cho âm eoi trong Việt bính
+
+Tổng hợp lại, phiên âm của Học viện Giáo dục khá gần với Việt bính, thiết kế cũng khoa học hơn. Điểm thứ hai và điểm thứ tư đều là vấn đề lựa chọn ký hiệu chủ quan, không thể coi là nhược điểm. Điểm thứ ba đã được giải thích ở trên. Điểm đầu tiên là một nhược điểm nhỏ. Bởi vì dùng dz và ts không chỉ làm cho hai chữ cái dài không cần thiết, mà còn ảnh hưởng đến việc xử lý mã hóa đầu vào. Ví dụ như nhiều phương pháp nhập liệu có chức năng nhập liệu đơn giản, nếu tôi nhập `ts`, điều đó nên được nhận dạng là âm đầu của từ "此" hay "聽寫" của từ "聽寫", điều này làm tăng mã hóa, tăng chi phí xử lý và làm cho phương pháp nhập liệu khó sử dụng hơn. 
+
+### Hệ thống phiên âm tiếng Quảng Đông của chính phủ Hồng Kông / Phiên âm tiếng Quảng Đông kiểu Bưu Chính
+
+Hệ thống phiên âm tiếng Quảng Đông của chính phủ Hồng Kông (Phiên âm tiếng Quảng Đông kiểu Bưu Chính kế thừa hệ thống phiên âm của chính phủ Hồng Kông) là sự chỉ định của chính phủ Hồng Kông để phiên âm tên đường và tên người của họ. Bởi vì nó được hình thành từ thói quen sử dụng chữ Latinh để phiên âm tiếng Quảng Đông của người phương Tây sớm muộn, vì vậy nó đã sử dụng nhiều ký hiệu phụ thêm, ví dụ như ' để đại diện cho đầu hàm, ò để đại diện cho /ou/, ü để đại diện cho /y/, v.v. Nhưng vì tiếng Anh không sử dụng các ký hiệu phụ thêm, vì vậy chính phủ Hồng Kông phải xóa bỏ tất cả các ký hiệu phụ thêm này, điều này đã dẫn đến nhiều nhầm lẫn. Ngoài ra, chính phủ không quy định phải phiên âm theo âm của Quảng Đông, người nào cũng có thể sử dụng âm của mình, vì vậy thường có "cùng một chữ có nhiều cách phiên âm", "một cách viết có thể đại diện cho nhiều âm khác nhau", ví dụ:
+
+- "蔡" có ba cách phiên âm là Choi、Choy、Tsoi
+- "葉" có hai cách phiên âm là yip、ip
+- chun có thể đại diện cho "俊", có thể đại diện cho "珍"
+- chai có thể đại diện cho "柴", có thể đại diện cho "仔"
+
+Vì vậy, chặt chẽ hơn, Hệ thống phiên âm tiếng Quảng Đông của chính phủ Hồng Kông không thể coi là hệ thống phiên âm, vì nó không thể làm được chức năng cơ bản nhất của hệ thống phiên âm, tức là không thể chính xác và nhất quán đại diện cho hệ thống phát âm của một ngôn ngữ, tức là vi phạm tất cả ba nguyên tắc đầu tiên. Vì vậy, hệ thống phiên âm này không thể làm được từ điển, và chúng ta không có lý do gì để sử dụng hệ thống phiên âm này.
+
+## Nhược điểm của Việt bính
+
+### Về j và y
+
+Việt bính thường bị khiếu nại nhiều nhất, đó là chữ j. Nhiều người hỏi tại sao không dùng y để đại diện cho /j/, vì điều này hoàn toàn phù hợp với thói quen của người dùng, không phân biệt là trong phiên âm tiếng Phổ thông hay tiếng Anh đều dùng y để đại diện cho /j/. Vậy tại sao Việt bính lại vi phạm nguyên tắc thứ ba dùng j để đại diện cho /j/, thay vì dùng y? Bởi vì nếu chúng ta dùng y để đại diện cho /j/, điều đó sẽ đưa ra một vấn đề: 26 chữ cái Latinh chỉ có vậy, bây giờ chúng ta đã dùng y để đại diện cho /j/, thì dùng gì để đại diện cho /y/?
+
+Đối với vấn đề này, câu trả lời của Yale là: dùng y để đại diện cho /j/, sau đó dựa vào môi trường để xác định khi nào đại diện cho /y/. Nếu chữ cái y theo sau là u, thì hai chữ cái yu kết hợp lại sẽ đại diện cho /y/. Đây chính là "một chữ cái đại diện cho một âm đơn, hai chữ cái kết hợp lại thành một âm đơn khác". Tức là, **Yale đã đánh đổi nguyên tắc đầu tiên để đổi lấy nguyên tắc thứ ba**, vì vậy đây là vấn đề cân nhắc đánh đổi. Vậy nguyên tắc nào quan trọng hơn? Tất nhiên là nguyên tắc đầu tiên, "một ký hiệu đại diện cho một âm vị" là quan trọng nhất. Bởi vì mục đích cơ bản của hệ thống phiên âm là biểu thị chính xác hệ thống âm vị của ngôn ngữ, và nếu mối quan hệ một-một này bị phá vỡ, sẽ đưa ra nhiều khó khăn, ví dụ như tăng chi phí học tập và chi phí xử lý thông tin, dễ gây nhầm lẫn, v.v.. 
+
+Mặt khác, dùng j để đại diện cho /j/ không phải là một lựa chọn không phù hợp với nguyên tắc thứ ba, vì dùng y để đại diện cho /j/ chỉ là thói quen viết chữ của tiếng Phổ thông và tiếng Anh. Có nhiều hệ thống viết chữ khác của ngôn ngữ, ví dụ như tiếng Đức cũng dùng j để đại diện cho /j/. Vì vậy, thực ra chỉ có người sử dụng tiếng Phổ thông và tiếng Anh không quen với thiết kế này, nếu thay thế bằng người sử dụng tiếng Đức, họ sẽ thấy tự nhiên hơn. Hơn nữa, chúng ta có thể thấy rằng, ký hiệu âm của quốc tế này của âm này (âm gần đầu mũi cứng) là /j/, vì vậy viết Việt bính như vậy cũng là theo quy tắc viết của quốc tế. 
+
+### Âm vần yu
+
+Nếu nói rằng Việt bính có vấn đề thực sự gì, thực sự có một, đó là dùng hai chữ cái yu để biểu thị nguyên âm /y/, trông có vẻ dài dòng và không cần thiết, hoàn toàn có thể dùng một chữ y là đủ mà không có tác dụng phụ. LSHK đã thiết kế như vậy vì cần đến thói quen và vấn đề di sản lưu hành (nguyên tắc thứ ba). Tuy nhiên, tin tốt là hiện nay trên thị trường các phương pháp nhập liệu tiếng Quảng Đông đều hỗ trợ y = yu, vì vậy nếu bạn không muốn gõ hai chữ cái yu, chỉ cần gõ một chữ y là hoàn toàn không có vấn đề. 
+
+Về phiên âm của Việt bính, trang web của LSHK có [FAQ](https://lshk.org/jyutping-faq/), bạn có thể tham khảo để hiểu các vấn đề đã được xem xét khi thiết kế. 
+
+## Vậy thì
+
+Còn gì nữa? Hãy dùng Việt bính! 
