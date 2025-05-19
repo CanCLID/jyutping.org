@@ -68,7 +68,7 @@ const YueIndexPage: React.FC = () => {
       <div className="flex flex-wrap justify-center my-8 gap-4">
         {/* Added gap */}
         <a
-          href="/learn" // Use standard <a> tag
+          href="/yue_hans/learn" // Use standard <a> tag
           className="text-2xl text-center bg-yellow-300 text-neutral-800 hover:bg-yellow-400 active:bg-yellow-400 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Added transition and active state
         >
           一文掌握粤拼
@@ -79,14 +79,14 @@ const YueIndexPage: React.FC = () => {
       {/* Added margin */}
       <div className="flex flex-wrap flex-col items-center justify-center my-8 gap-6">
         <a
-          href="/jyutping" // Use standard <a> tag
+          href="/yue_hans/jyutping" // Use standard <a> tag
           className="w-fit text-2xl text-center hover:bg-[#CBF2AE] active:bg-[#CBF2AE] bg-[#6CAF59] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors and added active state
         >
           睇粤拼方案表
           <IconTable className="ml-2 flex-shrink-0" />
         </a>
         <a
-          href="/keyboard" // Use standard <a> tag
+          href="/yue_hans/keyboard" // Use standard <a> tag
           className="w-fit text-2xl text-center bg-[#cadd7a] hover:bg-[#e9f1c8] active:bg-[#e9f1c8] active:bg-[#e9f1c8] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors and added active state
         >
           粤拼资源输入法
