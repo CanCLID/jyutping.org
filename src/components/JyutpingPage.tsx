@@ -279,7 +279,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
   },
   vi: {
     intro:
-      "Việt bính: Phương pháp phiên âm tiếng Quảng Đông của Hội học thuật ngôn ngữ học Hồng Kông",
+      "Việt bính: Phương án phiên âm tiếng Quảng Đông của Hội học Ngôn ngữ học Hồng Kông",
     alertIpaTitle: "Về phiên âm IPA",
     alertIpaContent: (
       <p>

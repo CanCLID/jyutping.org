@@ -22,7 +22,7 @@ const ViIndexPage: React.FC = () => {
       </p>
       <p className="font-chiron-hei leading-relaxed text-4xl mx-auto text-center mb-16">
         {/* Use font class, added margin */}
-        Phương pháp phiên âm tiếng Quảng Đông phổ biến
+        Phương án phiên âm tiếng Quảng Đông phổ biến
       </p>
       <div className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8 my-16 items-center p-6">
         {/* Added background and padding */}
