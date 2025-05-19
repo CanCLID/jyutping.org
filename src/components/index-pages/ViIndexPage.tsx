@@ -96,7 +96,7 @@ const ViIndexPage: React.FC = () => {
           href="/vi/keyboard" // Changed link to keyboard page, keep locale prefix
           className="w-fit text-2xl text-center bg-[#cadd7a] hover:bg-[#e9f1c8] active:bg-[#e9f1c8] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
         >
-          Tài nguyên & Bàn phím
+          Tài liệu và Bàn phím
           <IconKeyboard className="ml-2 flex-shrink-0" />
         </a>
       </div>

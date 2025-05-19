@@ -193,7 +193,7 @@ const translations: Record<string, KeyboardPageTranslation> = {
     yuetyamAndroidButton: "Tải .apk",
     gboardTitle: "Gboard Việt bính",
     toolsTitle: "Công cụ từ điển",
-    resourceTitle: "Tài nguyên học tập",
+    resourceTitle: "Tài liệu học tập",
     googleTranslate: "Google Dịch tiếng Quảng Đông",
     converter: "Bộ chuyển đổi Việt bính",
   },
