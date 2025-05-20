@@ -291,7 +291,7 @@ const translations: Record<string, AboutPageTranslation> = {
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline mx-1"
         >
-          Hội học thuật ngôn ngữ học Hồng Kông (LSHK)
+          Hội học Ngôn ngữ học Hồng Kông (LSHK)
         </a>
         . Tất cả các mã đều có nguồn mở trên{" "}
         <a
