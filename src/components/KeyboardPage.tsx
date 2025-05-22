@@ -228,6 +228,7 @@ const translations: Record<string, KeyboardPageTranslation> = {
     sogouApkNote: "v10.10 以上版本皆支持粵拼",
     sogouInstructions:
       "下載後入設置界面嘅「語言設置」，揀「中文-粵語」選擇九宮格或者全鍵盤，就可以用粵拼打字。",
+    typeduckTitle: "TypeDuck 打得粵拼輸入法",
     typeduckWeb: "網頁版無需安裝直接打字",
     typeduckDownload: "全平台下載",
     yuetyamTitle: "YuetYam 粵拼輸入法",
@@ -249,6 +250,7 @@ const translations: Record<string, KeyboardPageTranslation> = {
     sogouApkNote: "v10.10 以上版本皆支持粤拼",
     sogouInstructions:
       "下载后入设置界面嘅「语言设置」，拣「中文-粤语」选择九宫格或者全键盘，就可以用粤拼打字。",
+    typeduckTitle: "TypeDuck 打得粤拼输入法",
     typeduckWeb: "网页版无需安装直接打字",
     typeduckDownload: "全平台下载",
     yuetyamTitle: "YuetYam 粤拼输入法",
@@ -620,23 +622,23 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
-          {/* Visual Fonts */}
+          {/* 翻轉粵語教室 */}
           <div className="flex flex-col items-center p-4">
             <h3 className="my-4 text-2xl font-semibold">
-              粵拼字體 visual-fonts.com
+              香港理工大学 翻轉粵語教室
             </h3>
             <a
-              href="https://visual-fonts.com/"
+              href="https://www.polyu.edu.hk/clc/cantonese/home/"
               target="_blank"
               rel="noopener noreferrer"
               className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
             >
               {/* Use standard img tag */}
               <img
-                src="/img/visualfont.svg"
-                alt="Visual Fonts Jyutping"
-                width={1920}
-                height={1080}
+                src="/img/flipped.png"
+                alt="翻轉粵語教室 Flipped Classroom"
+                width={640}
+                height={640}
                 className="rounded-lg shadow-sm max-w-full h-auto hover:shadow-md"
                 loading="lazy"
               />
@@ -664,6 +666,29 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
+          {/* Visual Fonts */}
+          <div className="flex flex-col items-center p-4">
+            <h3 className="my-4 text-2xl font-semibold">
+              粵拼字體 visual-fonts.com
+            </h3>
+            <a
+              href="https://visual-fonts.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
+            >
+              {/* Use standard img tag */}
+              <img
+                src="/img/visualfont.svg"
+                alt="Visual Fonts Jyutping"
+                width={1920}
+                height={1080}
+                className="rounded-lg shadow-sm max-w-full h-auto hover:shadow-md"
+                loading="lazy"
+              />
+            </a>
+          </div>
+
           <div className="flex flex-col items-center p-4">
             <h3 className="my-4 text-2xl font-semibold">Wing Font</h3>
             <a
