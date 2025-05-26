@@ -102,11 +102,12 @@ export const jyutpingHeadingsTranslations: Record<
 // Ensures consistency across languages for linking within the page structure
 export const generateSlug = (englishText: string): string => {
   // Use English text as the base for consistent slugs
-  // Keep dots for subheadings like 3.1, 3.2, 3.3
+  // Keep dots for subheadings like 3.1 but drop trailing dots such as "1." in
+  // headings like "1. Onset" to avoid generating slugs like "1.-onset".
   return (
     englishText
       .toLowerCase()
-      // .replace(/\./g, "") // Keep the dots
+      .replace(/\.(?=\s|$)/g, "") // Remove dots not followed by a digit
       .replace(/\s+/g, "-") // Replace spaces with hyphens
       .replace(/[^\w.-]+/g, "")
   ); // Allow word characters, dots, and hyphens
