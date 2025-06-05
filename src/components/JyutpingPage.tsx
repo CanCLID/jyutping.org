@@ -1094,7 +1094,7 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
                   eu 掉 <Audio id="deu6" />
                 </td>
                 <td className={tdClass}>
-                  em 舐 <Audio id="lem2" />
+                  em 𦧷 <Audio id="lem2" />
                 </td>
                 <td className={tdClass} />
                 <td className={tdClass}>
