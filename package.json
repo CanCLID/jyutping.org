@@ -9,19 +9,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.2",
-    "@astrojs/mdx": "^4.3.3",
+    "@astrojs/cloudflare": "^12.6.5",
+    "@astrojs/mdx": "^4.3.4",
     "@astrojs/partytown": "^2.1.4",
     "@astrojs/react": "^4.3.0",
-    "@astrojs/sitemap": "^3.4.2",
+    "@astrojs/sitemap": "^3.5.1",
     "@tabler/icons-react": "^3.34.1",
     "@tailwindcss/vite": "^4.1.11",
-    "@types/react": "^19.1.9",
-    "@types/react-dom": "^19.1.7",
-    "astro": "^5.13.2",
+    "@types/react": "^19.1.11",
+    "@types/react-dom": "^19.1.8",
+    "astro": "^5.13.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "remark-gfm": "^4.0.1",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.12"
   }
 }
