@@ -96,11 +96,13 @@ interface KeyboardPageTranslation {
   typeduckTitle: string;
   typeduckWeb: string;
   typeduckDownload: string;
-  yuetyamTitle: string;
-  yuetyamiOSButton: string;
-  yuetyamMacOSButton: string;
-  yuetyamAndroidButton: string;
+  appJyutpingTitle: string;
+  appJyutpingAppStoreButton: string;
+  appJyutpingGooglePlayButton: string;
+  appJyutpingWebsiteDownload: string;
   gboardTitle: string;
+  gboardAppStoreButton: string;
+  gboardGooglePlayButton: string;
   toolsTitle?: string;
   resourceTitle: string;
   googleTranslate: string;
@@ -112,7 +114,7 @@ const translations: Record<string, KeyboardPageTranslation> = {
   en: {
     introLinks: "Jyutping Keyboards",
     sogouTitle: "Sogou IME",
-    sogouAppStoreButton: "AppStore Download",
+    sogouAppStoreButton: "App Store",
     sogouAppStoreNote: "Versions above v10.11 support Jyutping",
     sogouApkButton: "Download APK",
     sogouApkNote: "Versions above v10.10 support Jyutping",
@@ -121,11 +123,13 @@ const translations: Record<string, KeyboardPageTranslation> = {
     typeduckTitle: "TypeDuck IME",
     typeduckWeb: "Type in browser now",
     typeduckDownload: "All platforms download",
-    yuetyamTitle: "Jyutping - Cantonese Keyboard",
-    yuetyamiOSButton: "AppStore Download",
-    yuetyamMacOSButton: "Download .pkg",
-    yuetyamAndroidButton: "Download .apk",
+    appJyutpingTitle: "Jyutping App",
+    appJyutpingAppStoreButton: "App Store",
+    appJyutpingGooglePlayButton: "Google Play",
+    appJyutpingWebsiteDownload: "jyutping.app",
     gboardTitle: "Gboard Jyutping",
+    gboardAppStoreButton: "App Store",
+    gboardGooglePlayButton: "Google Play",
     toolsTitle: "Dictionaries and Tools",
     resourceTitle: "Learning Resources",
     googleTranslate: "Google Translate Cantonese",
@@ -134,7 +138,7 @@ const translations: Record<string, KeyboardPageTranslation> = {
   cmn: {
     introLinks: "粵拼輸入法",
     sogouTitle: "搜狗輸入法",
-    sogouAppStoreButton: "AppStore 下載",
+    sogouAppStoreButton: "App Store 下載",
     sogouAppStoreNote: "v10.11 以上版本皆支持粵拼",
     sogouApkButton: "官網下載 APK",
     sogouApkNote: "v10.10 以上版本皆支持粵拼",
@@ -143,11 +147,13 @@ const translations: Record<string, KeyboardPageTranslation> = {
     typeduckTitle: "TypeDuck 打得粵拼輸入法",
     typeduckWeb: "網頁版無需安裝直接打字",
     typeduckDownload: "全平臺下載",
-    yuetyamTitle: "YuetYam 粵拼輸入法",
-    yuetyamiOSButton: "AppStore 下載",
-    yuetyamMacOSButton: "下載 .pkg",
-    yuetyamAndroidButton: "下載 .apk",
+    appJyutpingTitle: "粵拼輸入法 App",
+    appJyutpingAppStoreButton: "App Store 下載",
+    appJyutpingGooglePlayButton: "Google Play 下載",
+    appJyutpingWebsiteDownload: "官網下載",
     gboardTitle: "Gboard 粵拼",
+    gboardAppStoreButton: "App Store 下載",
+    gboardGooglePlayButton: "Google Play 下載",
     toolsTitle: "辭典工具",
     resourceTitle: "學習資源",
     googleTranslate: "谷歌翻譯粵語",
@@ -156,7 +162,7 @@ const translations: Record<string, KeyboardPageTranslation> = {
   nan: {
     introLinks: "粵拼輸入法",
     sogouTitle: "搜狗輸入法",
-    sogouAppStoreButton: "AppStore 下載",
+    sogouAppStoreButton: "App Store 下載",
     sogouAppStoreNote: "v10.11 以上版本皆支持粵拼",
     sogouApkButton: "官網下載 APK",
     sogouApkNote: "v10.10 以上版本皆支持粵拼",
@@ -165,11 +171,13 @@ const translations: Record<string, KeyboardPageTranslation> = {
     typeduckTitle: "TypeDuck 打得粵拼輸入法",
     typeduckWeb: "網頁版無需安裝直接打字",
     typeduckDownload: "全平台下載",
-    yuetyamTitle: "YuetYam 粵拼輸入法",
-    yuetyamiOSButton: "AppStore 下載",
-    yuetyamMacOSButton: "下載 .pkg",
-    yuetyamAndroidButton: "下載 .apk",
+    appJyutpingTitle: "粵拼輸入法 App",
+    appJyutpingAppStoreButton: "App Store 下載",
+    appJyutpingGooglePlayButton: "Google Play 下載",
+    appJyutpingWebsiteDownload: "官網下載",
     gboardTitle: "Gboard 粵拼",
+    gboardAppStoreButton: "App Store 下載",
+    gboardGooglePlayButton: "Google Play 下載",
     toolsTitle: "辭典工具",
     resourceTitle: "學習資源",
     googleTranslate: "Google 翻譯粵語",
@@ -178,7 +186,7 @@ const translations: Record<string, KeyboardPageTranslation> = {
   vi: {
     introLinks: "Bàn phím Việt bính",
     sogouTitle: "Bàn phím Sogou",
-    sogouAppStoreButton: "Tải trên AppStore",
+    sogouAppStoreButton: "Tải trên App Store",
     sogouAppStoreNote: "Các phiên bản trên v10.11 đều hỗ trợ Việt bính",
     sogouApkButton: "Tải APK trên web chính thức",
     sogouApkNote: "Các phiên bản trên v10.10 đều hỗ trợ Việt bính",
@@ -187,11 +195,13 @@ const translations: Record<string, KeyboardPageTranslation> = {
     typeduckTitle: "Bàn phím TypeDuck",
     typeduckWeb: "Gõ ngay trên trình duyệt",
     typeduckDownload: "Tải cho tất cả các nền tảng",
-    yuetyamTitle: "Bàn phím YuetYam",
-    yuetyamiOSButton: "Tải trên AppStore",
-    yuetyamMacOSButton: "Tải .pkg",
-    yuetyamAndroidButton: "Tải .apk",
+    appJyutpingTitle: "Ứng dụng Jyutping",
+    appJyutpingAppStoreButton: "Tải trên App Store",
+    appJyutpingGooglePlayButton: "Tải trên Google Play",
+    appJyutpingWebsiteDownload: "jyutping.app",
     gboardTitle: "Gboard Việt bính",
+    gboardAppStoreButton: "Tải trên App Store",
+    gboardGooglePlayButton: "Tải trên Google Play",
     toolsTitle: "Công cụ từ điển",
     resourceTitle: "Tài liệu học tập",
     googleTranslate: "Google Dịch tiếng Quảng Đông",
@@ -200,7 +210,7 @@ const translations: Record<string, KeyboardPageTranslation> = {
   wuu: {
     introLinks: "粵拼輸入法",
     sogouTitle: "搜狗輸入法",
-    sogouAppStoreButton: "AppStore 下載",
+    sogouAppStoreButton: "App Store 下載",
     sogouAppStoreNote: "v10.11 以上版本皆支持粵拼",
     sogouApkButton: "官網下載 APK",
     sogouApkNote: "v10.10 以上版本皆支持粵拼",
@@ -209,11 +219,13 @@ const translations: Record<string, KeyboardPageTranslation> = {
     typeduckTitle: "TypeDuck 打得粵拼輸入法",
     typeduckWeb: "網頁版無需安裝直接打字",
     typeduckDownload: "全平台下載",
-    yuetyamTitle: "YuetYam 粵拼輸入法",
-    yuetyamiOSButton: "AppStore 下載",
-    yuetyamMacOSButton: "下載 .pkg",
-    yuetyamAndroidButton: "下載 .apk",
+    appJyutpingTitle: "粵拼輸入法 App",
+    appJyutpingAppStoreButton: "App Store 下載",
+    appJyutpingGooglePlayButton: "Google Play 下載",
+    appJyutpingWebsiteDownload: "官網下載",
     gboardTitle: "Gboard 粵拼",
+    gboardAppStoreButton: "App Store 下載",
+    gboardGooglePlayButton: "Google Play 下載",
     toolsTitle: "辭典工具",
     resourceTitle: "學習資源",
     googleTranslate: "谷歌翻譯粵語",
@@ -222,7 +234,7 @@ const translations: Record<string, KeyboardPageTranslation> = {
   yue: {
     introLinks: "粵拼輸入法",
     sogouTitle: "搜狗輸入法",
-    sogouAppStoreButton: "AppStore 下載",
+    sogouAppStoreButton: "App Store 下載",
     sogouAppStoreNote: "v10.11 以上版本皆支持粵拼",
     sogouApkButton: "官網下載 APK",
     sogouApkNote: "v10.10 以上版本皆支持粵拼",
@@ -231,11 +243,13 @@ const translations: Record<string, KeyboardPageTranslation> = {
     typeduckTitle: "TypeDuck 打得粵拼輸入法",
     typeduckWeb: "網頁版無需安裝直接打字",
     typeduckDownload: "全平台下載",
-    yuetyamTitle: "YuetYam 粵拼輸入法",
-    yuetyamiOSButton: "AppStore 下載",
-    yuetyamMacOSButton: "下載 .pkg",
-    yuetyamAndroidButton: "下載 .apk",
+    appJyutpingTitle: "粵拼輸入法 App",
+    appJyutpingAppStoreButton: "App Store 下載",
+    appJyutpingGooglePlayButton: "Google Play 下載",
+    appJyutpingWebsiteDownload: "官網下載",
     gboardTitle: "Gboard 粵拼",
+    gboardAppStoreButton: "App Store 下載",
+    gboardGooglePlayButton: "Google Play 下載",
     toolsTitle: "辭典工具",
     resourceTitle: "學習資源",
     googleTranslate: "Google 翻譯粵語",
@@ -244,7 +258,7 @@ const translations: Record<string, KeyboardPageTranslation> = {
   yue_hans: {
     introLinks: "粤拼输入法",
     sogouTitle: "搜狗输入法",
-    sogouAppStoreButton: "AppStore 下载",
+    sogouAppStoreButton: "App Store 下载",
     sogouAppStoreNote: "v10.11 以上版本皆支持粤拼",
     sogouApkButton: "官网下载 APK",
     sogouApkNote: "v10.10 以上版本皆支持粤拼",
@@ -253,11 +267,13 @@ const translations: Record<string, KeyboardPageTranslation> = {
     typeduckTitle: "TypeDuck 打得粤拼输入法",
     typeduckWeb: "网页版无需安装直接打字",
     typeduckDownload: "全平台下载",
-    yuetyamTitle: "YuetYam 粤拼输入法",
-    yuetyamiOSButton: "AppStore 下载",
-    yuetyamMacOSButton: "下载 .pkg",
-    yuetyamAndroidButton: "下载 .apk",
+    appJyutpingTitle: "粤拼输入法 App",
+    appJyutpingAppStoreButton: "App Store 下载",
+    appJyutpingGooglePlayButton: "Google Play 下载",
+    appJyutpingWebsiteDownload: "官网下载",
     gboardTitle: "Gboard 粤拼",
+    gboardAppStoreButton: "App Store 下载",
+    gboardGooglePlayButton: "Google Play 下载",
     toolsTitle: "辞典工具",
     resourceTitle: "学习资源",
     googleTranslate: "Google 翻译粤语",
@@ -290,7 +306,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
             <div className="mb-4">
               {/* Added margin */}
               <DownloadButton
-                href="https://apps.apple.com/cn/app/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95-%E8%AF%AD%E9%9F%B3%E5%8F%98%E5%A3%B0%E6%96%97%E5%9B%BE%E8%A1%A8%E6%83%85/id917670924"
+                href="https://apps.apple.com/cn/app/id917670924"
                 icon={IconBrandApple}
                 text={t.sogouAppStoreButton}
                 variant="apple"
@@ -338,46 +354,34 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </div>
           </div>
-          {/* YuetYam */}
+          {/* YuetYam Jyutping App */}
           <div className="p-4 ">
-            <h2 className="text-2xl font-semibold my-4">{t.yuetyamTitle}</h2>
-            <p className="text-sm text-gray-700 mb-4">
-              {/* Added margin */}
-              <a
-                href="https://jyutping.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                jyutping.app
-              </a>
-            </p>
+            <h2 className="text-2xl font-semibold my-4">{t.appJyutpingTitle}</h2>
+            <h3 className="font-semibold my-2">iOS</h3>
             <div className="mb-4">
-              <h3 className="font-semibold my-2">iOS</h3>
               <DownloadButton
-                href="https://apps.apple.com/app/id1509367629"
+                href="https://apps.apple.com/hk/app/id1509367629"
                 icon={IconBrandApple}
-                text={t.yuetyamiOSButton || ""}
+                text={t.appJyutpingAppStoreButton || ""}
                 variant="apple"
               />
             </div>
+            <h3 className="font-semibold my-2">Android</h3>
             <div className="mb-4">
-              {/* Added margin */}
-              <h3 className="font-semibold my-2">macOS</h3>
               <DownloadButton
-                href="https://jyutping.app/mac/"
-                icon={IconBrandApple}
-                text={t.yuetyamMacOSButton || ""}
-                variant="apple"
+                href="https://play.google.com/store/apps/details?id=org.jyutping.jyutping&hl=zh-HK&gl=HK"
+                icon={IconBrandGooglePlay}
+                text={t.appJyutpingGooglePlayButton || ""}
+                variant="googleplay"
               />
             </div>
-            <div>
-              <h3 className="font-semibold my-2">Android</h3>
+            <h3 className="font-semibold my-2">macOS, Android</h3>
+            <div className="mb-4">
               <DownloadButton
-                href="https://jyutping.app/android/"
-                icon={IconBrandAndroid}
-                text={t.yuetyamAndroidButton || ""}
-                variant="android"
+                href="https://jyutping.app"
+                icon={IconDownload}
+                text={t.appJyutpingWebsiteDownload || ""}
+                variant="web"
               />
             </div>
           </div>
@@ -400,20 +404,20 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
           <div className="p-4 ">
             <h2 className="text-2xl font-semibold my-4">{t.gboardTitle}</h2>
             <h3 className="font-semibold my-2">iOS</h3>
-            <div className="my-4">
+            <div className="mb-4">
               <DownloadButton
                 href="https://apps.apple.com/app/id1091700242"
                 icon={IconBrandApple}
-                text="AppStore"
+                text={t.gboardAppStoreButton || ""}
                 variant="apple"
               />
             </div>
             <h3 className="font-semibold my-2">Android</h3>
-            <div className="my-4">
+            <div className="mb-4">
               <DownloadButton
                 href="https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin&hl=en_US"
                 icon={IconBrandGooglePlay}
-                text="Google Play"
+                text={t.gboardGooglePlayButton || ""}
                 variant="googleplay"
               />
             </div>
