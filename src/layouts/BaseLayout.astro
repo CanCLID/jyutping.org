@@ -78,7 +78,7 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     />
 
     {/* Umami Analytics */}
-    <script defer src={umamiScriptSrc} data-website-id={umamiWebsiteId}
+    <script is:inline defer src={umamiScriptSrc} data-website-id={umamiWebsiteId}
     ></script>
 
     <ClientRouter />
