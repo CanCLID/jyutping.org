@@ -1,0 +1,59 @@
+---
+title: 點解簡化字唔適合用嚟寫粵語？
+linkTitle: 點解簡化字唔適合用嚟寫粵語？
+url: /blog/simplified
+weight: 4
+description: |
+  簡化字方案（簡體中文）係一個專為普通話設計嘅漢字書寫方案，用嚟寫粵語會有好多問題。
+---
+
+import Alert from "@/components/Alert.tsx";
+
+當前中國大陸地區通行嘅[漢字簡化方案](https://zh.wikipedia.org/zh-hant/%E6%B1%89%E5%AD%97%E7%AE%80%E5%8C%96%E6%96%B9%E6%A1%88)，係 1950 年代中國文字改革研究委員會制訂嘅漢字簡化方案，其設計沿襲咗[國語統一籌備會](https://zh.wikipedia.org/wiki/%E6%95%99%E8%82%B2%E9%83%A8%E5%9C%8B%E8%AA%9E%E6%8E%A8%E8%A1%8C%E5%A7%94%E5%93%A1%E6%9C%83)嘅簡體字表。而呢一批簡化字之中，有一部分漢字係以[同音字合併](https://zh.wikipedia.org/wiki/%E5%90%8C%E9%9F%B3%E6%B1%89%E5%AD%97%E4%B9%A6%E5%86%99%E8%A7%84%E5%88%99)嘅原則嚟簡化，作為[漢字拉丁化](https://zh.wikipedia.org/wiki/%E6%B1%89%E5%AD%97%E6%8B%89%E4%B8%81%E5%8C%96%E8%BF%90%E5%8A%A8)最終目標嘅過渡。
+
+呢種簡化方法有兩種問題，第一係**同音字合併係以國語/普通話嘅發音為準，並冇考慮到非普通話語言**。所以如果用簡化字寫粵語，就會有好多粵語中唔同音唔同義嘅字合成一個寫法，增加歧義，徒增溝通同學習成本。**最常見嘅例子有「松鼠」讀成「鬆鼠」、「鬍鬚」讀成「鬍須」等**。下面嘅表 1 收錄咗所有此類字，
+
+第二個問題係，簡化字方案中仲有一類字係改換聲旁簡化，而聲旁嘅改換往往以普通話發音爲基礎。噉樣就導致咗**簡化後嘅漢字聲旁同粵語實際發音衝突，例如「軍艦」簡化成「军舰」後容易被初學者誤讀爲「軍見」**。下面嘅表 2 總結咗部分此類字，因爲數量龐雜，僅作不完全收錄，歡迎社羣補充。
+
+## 表 1： 簡化字方案中因為普通話同音合併但粵語發音唔同嘅字
+
+| 簡化字及普通話拼音 | 傳統漢字及粵拼               | 粵語詞區分示例                                                                                                                 |
+| ------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| 卜 bǔ / bó         | 蔔 baak6 卜 buk1             | 蘿<ruby>蔔<rt>baak6</rt></ruby>；占<ruby>卜<rt>buk1</rt></ruby>                                                                |
+| 斗 dǒu / dòu       | 鬥 dau3 斗 dau2              | 戰<ruby>鬥<rt>dau3</rt></ruby>；<ruby>斗<rt>dau2</rt></ruby>笠                                                                 |
+| 复 fù              | 複 fuk1 復 fuk6              | <ruby>複<rt>fuk1</rt></ruby>印；恢<ruby>復<rt>fuk6</rt></ruby>                                                                 |
+| 里 lǐ              | 里 lei5 裏 leoi5             | 公<ruby>里<rt>lei5</rt></ruby>；<ruby>裏<rt>leoi5</rt></ruby>面                                                                |
+| 表 biǎo            | 表 biu2 錶 biu1              | <ruby>表<rt>biu2</rt></ruby>演；手<ruby>錶<rt>biu1</rt></ruby>                                                                 |
+| 干 gān / gàn       | 干 gon1 乾 gon1/kin4 幹 gon3 | 比<ruby>干<rt>gon1</rt></ruby>；主<ruby>幹<rt>gon3</rt></ruby>；<ruby>乾<rt>gon1</rt></ruby>燥                                 |
+| 仆 pū / pú         | 仆 puk1 僕 buk6              | <ruby>仆<rt>puk1</rt></ruby>街；<ruby>僕<rt>buk6</rt></ruby>人                                                                 |
+| 松 sōng            | 鬆 sung1 松 cung4            | <ruby>鬆<rt>sung1</rt></ruby>散；<ruby>松<rt>cung4</rt></ruby>鼠                                                               |
+| 系 xì              | 係繫系 hai6 喺 hai2          | 即<ruby>係<rt>hai6</rt></ruby>；聯<ruby>繫<rt>hai6</rt></ruby>；<ruby>系<rt>hai6</rt></ruby>統；<ruby>喺<rt>hai2</rt></ruby>度 |
+| 吓 xià             | 嚇 haak3 吓 haa2/haa5        | 驚<ruby>嚇<rt>haak3</rt></ruby>；啊<ruby>吓<rt>haa2</rt></ruby>                                                                |
+| 須 xū              | 須 seoi1 鬚 sou1             | 必<ruby>須<rt>seoi1</rt></ruby>；鬍<ruby>鬚<rt>sou1</rt></ruby>                                                                |
+| 涌 yǒng / chōng    | 涌 cung1 湧 jung2            | 河<ruby>涌<rt>cung1</rt></ruby>；<ruby>湧<rt>jung2</rt></ruby>現                                                               |
+| 郁 yù              | 鬱 wat1 郁 juk1              | 憂<ruby>鬱<rt>wat1</rt></ruby>；<ruby>郁<rt>juk1</rt></ruby><ruby>郁<rt>juk1</rt></ruby>青青                                   |
+| 脏 zāng / zàng     | 髒 zong1 臟 zong6            | 骯<ruby>髒<rt>zong1</rt></ruby>；內<ruby>臟<rt>zong6</rt></ruby>                                                               |
+| 折 zhé             | 折 zit3 摺 zip3              | 曲<ruby>折<rt>zit3</rt></ruby>；<ruby>摺<rt>zip3</rt></ruby>紙                                                                 |
+| 症 zhēng / zhèng   | 癥 zing1 症 zing3            | <ruby>癥<rt>zing1</rt></ruby>結；<ruby>症<rt>zing3</rt></ruby>狀                                                               |
+| 只 zhī / zhǐ       | 只 zi2 隻 zek3               | <ruby>只<rt>zi2</rt></ruby>有；一<ruby>隻<rt>zek3</rt></ruby>                                                                  |
+
+## 表 2： 簡化字方案中按照普通話發音簡化部件，導致與粵語聲韻衝突嘅字
+
+下表係不完全收錄，歡迎補充。
+
+| 傳統漢字及粵拼     | 簡化字及普通話拼音      | 解釋                                                   |
+| ------------------ | ----------------------- | ------------------------------------------------------ |
+| 壩 baa3            | 坝 bà                   | 聲旁「霸」簡化爲「贝」，韻母由 aa 變成 ui              |
+| 補 bou2            | 补 bǔ                   | 聲旁「甫」簡化爲「卜」 韻母 ou 變成 uk                 |
+| 殲纖 cim1 懺 caam3 | 纤 xiān 歼 jiān 忏 chàn | 聲旁「韱」按普通话发音簡化爲「千」，韻尾由 m 變成 n    |
+| 擔 daam1 膽 daam2  | 担 dān 胆 dǎn           | 聲旁「詹」簡化爲「旦」，韻尾由 m 變成 n                |
+| 燈 dang1           | 灯 dēng                 | 聲旁「登」簡化爲「丁」，韻母由 ang 變成 ing            |
+| 櫃 gwai6           | 柜 guì                  | 聲旁「貴」簡化爲「巨」，韻母由 wai 變成 eoi            |
+| 嚇 haak3           | 吓 xià                  | 聲旁「赫」簡化爲「下」，韻母由 aak 變成 aa             |
+| 艦 laam6           | 舰 jiàn                 | 聲旁「監」按普通話發音簡化爲「见」，韻母由 aam 變成 in |
+| 撲樸 pok3          | 扑 pū 朴 pǔ             | 聲旁「菐」簡化爲「卜」，韻母由 ok 變成 uk              |
+| 燭觸 zuk1 獨 duk6  | 烛 zhú 触 chù 独 dú     | 聲旁「蜀」簡化爲「虫」，韻母由 uk 變成 ung             |
+
+<Alert title="本站簡體字版">
+  本站雖然有提供[簡化字粵文版](/yue_hans)，但僅作初學者過渡適應用。使用傳統漢字可以更容易習得粵語發音規律，學習者應該以用傳統漢字書寫粵文爲最終目標。
+</Alert>
