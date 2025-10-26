@@ -103,6 +103,8 @@ interface KeyboardPageTranslation {
   gboardTitle: string;
   gboardAppStoreButton: string;
   gboardGooglePlayButton: string;
+  cantoboardTitle: string;
+  cantoboardAppStoreButton: string;
   toolsTitle?: string;
   resourceTitle: string;
   googleTranslate: string;
@@ -130,6 +132,8 @@ const translations: Record<string, KeyboardPageTranslation> = {
     gboardTitle: "Gboard Jyutping",
     gboardAppStoreButton: "App Store",
     gboardGooglePlayButton: "Google Play",
+    cantoboardTitle: "Cantoboard",
+    cantoboardAppStoreButton: "App Store",
     toolsTitle: "Dictionaries and Tools",
     resourceTitle: "Learning Resources",
     googleTranslate: "Google Translate Cantonese",
@@ -154,6 +158,8 @@ const translations: Record<string, KeyboardPageTranslation> = {
     gboardTitle: "Gboard 粵拼",
     gboardAppStoreButton: "App Store 下載",
     gboardGooglePlayButton: "Google Play 下載",
+    cantoboardTitle: "Cantoboard",
+    cantoboardAppStoreButton: "App Store 下載",
     toolsTitle: "辭典工具",
     resourceTitle: "學習資源",
     googleTranslate: "谷歌翻譯粵語",
@@ -178,6 +184,8 @@ const translations: Record<string, KeyboardPageTranslation> = {
     gboardTitle: "Gboard 粵拼",
     gboardAppStoreButton: "App Store 下載",
     gboardGooglePlayButton: "Google Play 下載",
+    cantoboardTitle: "Cantoboard",
+    cantoboardAppStoreButton: "App Store 下載",
     toolsTitle: "辭典工具",
     resourceTitle: "學習資源",
     googleTranslate: "Google 翻譯粵語",
@@ -202,6 +210,8 @@ const translations: Record<string, KeyboardPageTranslation> = {
     gboardTitle: "Gboard Việt bính",
     gboardAppStoreButton: "Tải trên App Store",
     gboardGooglePlayButton: "Tải trên Google Play",
+    cantoboardTitle: "Cantoboard",
+    cantoboardAppStoreButton: "Tải trên App Store",
     toolsTitle: "Công cụ từ điển",
     resourceTitle: "Tài liệu học tập",
     googleTranslate: "Google Dịch tiếng Quảng Đông",
@@ -226,6 +236,8 @@ const translations: Record<string, KeyboardPageTranslation> = {
     gboardTitle: "Gboard 粵拼",
     gboardAppStoreButton: "App Store 下載",
     gboardGooglePlayButton: "Google Play 下載",
+    cantoboardTitle: "Cantoboard",
+    cantoboardAppStoreButton: "App Store 下載",
     toolsTitle: "辭典工具",
     resourceTitle: "學習資源",
     googleTranslate: "谷歌翻譯粵語",
@@ -250,6 +262,8 @@ const translations: Record<string, KeyboardPageTranslation> = {
     gboardTitle: "Gboard 粵拼",
     gboardAppStoreButton: "App Store 下載",
     gboardGooglePlayButton: "Google Play 下載",
+    cantoboardTitle: "Cantoboard",
+    cantoboardAppStoreButton: "App Store 下載",
     toolsTitle: "辭典工具",
     resourceTitle: "學習資源",
     googleTranslate: "Google 翻譯粵語",
@@ -274,6 +288,8 @@ const translations: Record<string, KeyboardPageTranslation> = {
     gboardTitle: "Gboard 粤拼",
     gboardAppStoreButton: "App Store 下载",
     gboardGooglePlayButton: "Google Play 下载",
+    cantoboardTitle: "Cantoboard",
+    cantoboardAppStoreButton: "App Store 下载",
     toolsTitle: "辞典工具",
     resourceTitle: "学习资源",
     googleTranslate: "Google 翻译粤语",
@@ -306,7 +322,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
             <div className="mb-4">
               {/* Added margin */}
               <DownloadButton
-                href="https://apps.apple.com/cn/app/id917670924"
+                href="https://apps.apple.com/app/id917670924"
                 icon={IconBrandApple}
                 text={t.sogouAppStoreButton}
                 variant="apple"
@@ -360,7 +376,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
             <h3 className="font-semibold my-2">iOS</h3>
             <div className="mb-4">
               <DownloadButton
-                href="https://apps.apple.com/hk/app/id1509367629"
+                href="https://apps.apple.com/app/id1509367629"
                 icon={IconBrandApple}
                 text={t.appJyutpingAppStoreButton || ""}
                 variant="apple"
@@ -419,6 +435,19 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
                 icon={IconBrandGooglePlay}
                 text={t.gboardGooglePlayButton || ""}
                 variant="googleplay"
+              />
+            </div>
+          </div>
+          {/* Cantoboard */}
+          <div className="p-4 ">
+            <h2 className="text-2xl font-semibold my-4">{t.cantoboardTitle}</h2>
+            <h3 className="font-semibold my-2">iOS</h3>
+            <div className="mb-4">
+              <DownloadButton
+                href="https://apps.apple.com/app/id6752963850"
+                icon={IconBrandApple}
+                text={t.cantoboardAppStoreButton || ""}
+                variant="apple"
               />
             </div>
           </div>
