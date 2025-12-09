@@ -96,6 +96,17 @@ export const jyutpingHeadingsTranslations: Record<
     referenceHeading: "參考文獻",
     referenceId: "references-wuu",
   },
+  jp: {
+    onsetHeading: "1. 声母",
+    syllabicNasalHeading: "2. 成節鼻音",
+    finalHeading: "3. 韻母",
+    nucleiHeading: "3.1 韻腹（母音）",
+    codaHeading: "3.2 韻尾",
+    finalsChartHeading: "3.3 韻母表",
+    toneHeading: "4. 声調",
+    referenceHeading: "参考文献",
+    referenceId: "references-jp",
+  },
 };
 
 // Helper function to generate slugs for non-reference headings

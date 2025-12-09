@@ -2,7 +2,7 @@
 
 // Define supported locales based on astro.config.mjs
 export const I18n = {
-  locales: ["en", "vi", "yue", "cmn", "nan", "wuu", "yue_hans"],
+  locales: ["en", "vi", "yue", "cmn", "nan", "wuu", "yue_hans", "jp"],
   defaultLocale: "yue",
 };
 
