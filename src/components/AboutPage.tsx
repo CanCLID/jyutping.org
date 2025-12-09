@@ -603,6 +603,84 @@ const translations: Record<string, AboutPageTranslation> = {
     finalParagraph:
       "若果阁下识得粤语，并且愿意将本网站翻译成其他语言，请务必以电邮联络我哋，我哋非常欢迎你嘅帮助同贡献。",
   },
+  jp: {
+    acknowledgementsTitle: "謝辞",
+    acknowledgementsP1: (
+      <>
+        このウェブサイトは
+        <a
+          href="https://github.com/orgs/CanCLID"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline mx-1"
+        >
+          広東語計算言語学基盤開発グループ (CanCLID)
+        </a>
+        によって開発され、
+        <a
+          href="https://www.lshk.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline mx-1"
+        >
+          香港言語学会 (LSHK)
+        </a>
+        の協力を得ています。すべてのコードは
+        <a
+          href="https://github.com/CanCLID/jyutping.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline mx-1"
+        >
+          GitHub
+        </a>
+        でオープンソースとして公開されており、貢献を歓迎しています。
+      </>
+    ),
+    acknowledgementsP2:
+      "LSHK 粤拼ワーキンググループと粤典のご支援に感謝いたします。特に Chaak-ming Lau 博士、Andy Chin 博士、Kwan-hin Cheung 博士、Raymond Tze 氏、Zungman Ceoi 氏のご協力に感謝いたします。",
+    acknowledgementsP3:
+      "Lim Hian-tong 氏には台湾閩南語版のご提供に感謝いたします。",
+    acknowledgementsP4: "具區句魚氏には呉語版のご提供に感謝いたします。",
+    acknowledgementsP5: "以成氏にはベトナム語版のご提供に感謝いたします。",
+    developContributeTitle: "開発と貢献",
+    developContributeP1:
+      "粤拼をサポートしたい、または私たちの活動に参加したい場合は、以下の方法があります：",
+    emailText: (
+      <>
+        <a
+          href="mailto:support@jyutping.org"
+          className="text-blue-600 hover:underline"
+        >
+          support@jyutping.org
+        </a>{" "}
+        にメールを送って、ご意見やフィードバックをお聞かせください。
+      </>
+    ),
+    githubText: (
+      <>
+        <a
+          href="https://github.com/CanCLID/jyutping.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          GitHub
+        </a>{" "}
+        で新しい issue を作成するか、プルリクエストを送信してください。
+      </>
+    ),
+    keyboardText: (
+      <>
+        <a href="/keyboard" className="text-blue-600 hover:underline mr-1">
+          粤拼キーボード
+        </a>
+        をインストールして使用し、このサイトを他の人と共有してください。
+      </>
+    ),
+    finalParagraph:
+      "広東語と他の言語に精通しており、このウェブサイトを他の言語に翻訳していただける方は、ぜひメールでご連絡ください。皆様のご協力と貢献を心よりお待ちしております。",
+  },
 };
 
 interface AboutPageProps {

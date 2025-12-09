@@ -16,6 +16,7 @@ const navTranslations: Record<string, Record<string, string>> = {
     nan: "學粵拼",
     wuu: "學粵拼",
     cmn: "學粵拼",
+    jp: "粤拼を学ぶ",
   },
   jyutping: {
     yue: "粵拼方案",
@@ -25,6 +26,7 @@ const navTranslations: Record<string, Record<string, string>> = {
     nan: "粵拼方案",
     wuu: "粵拼方案",
     cmn: "粵拼方案",
+    jp: "粤拼方案",
   },
   blog: {
     yue: "文章",
@@ -34,6 +36,7 @@ const navTranslations: Record<string, Record<string, string>> = {
     nan: "文章",
     wuu: "文章",
     cmn: "文章",
+    jp: "ブログ",
   },
   keyboard: {
     yue: "資源",
@@ -43,6 +46,7 @@ const navTranslations: Record<string, Record<string, string>> = {
     nan: "資源",
     wuu: "資源",
     cmn: "資源",
+    jp: "リソース",
   },
   about: {
     yue: "關於",
@@ -52,6 +56,7 @@ const navTranslations: Record<string, Record<string, string>> = {
     nan: "關於",
     wuu: "關於",
     cmn: "關於",
+    jp: "概要",
   },
 };
 
@@ -67,7 +72,7 @@ const navLinks = navLinkKeys.map((key) => {
 
 const logoHref = locale === "yue" ? "/" : `/${locale}`;
 
-const locales = ["en", "vi", "yue", "cmn", "nan", "wuu", "yue_hans"];
+const locales = ["en", "vi", "yue", "cmn", "nan", "wuu", "yue_hans", "jp"];
 const defaultLocale = "yue";
 ---
 
