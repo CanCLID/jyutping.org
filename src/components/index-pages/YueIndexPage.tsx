@@ -16,35 +16,35 @@ const YueIndexPage: React.FC = () => {
       <h1 className="font-chiron-hei text-8xl my-16 mx-auto text-center">
         粵拼
       </h1>
-      {/* Use font class */}
+      
       <p className="font-chiron-hei leading-relaxed text-4xl mx-auto text-center">
-        {/* Use font class */}
+        
         簡單合理 易學易用
       </p>
       <p className="font-chiron-hei leading-relaxed text-4xl mx-auto text-center mb-16">
-        {/* Use font class, added margin */}
+        
         通行粵語拼音方案
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-16 items-center p-6 max-w-5xl mx-auto">
-        {/* Added background and padding */}
+        
         <p className="text-center text-3xl md:text-right font-semibold">
           點解要學粵拼？
         </p>
         <ul className="text-lg mx-auto md:col-span-2 space-y-3">
-          {/* Increased spacing */}
+          
           <li className="flex items-start">
             <IconEar className="mr-3 mt-1 flex-shrink-0" />
-            {/* Adjusted icon style */}
+            
             <span>學識粵拼可以幫助糾正懶音錯音，規範自己嘅粵語發音。</span>
           </li>
           <li className="flex items-start">
             <IconLanguage className="mr-3 mt-1 flex-shrink-0" />
-            {/* Adjusted icon style */}
+            
             <span>漢字非拼音文字， 需要一個拼音方案嚟準確表示粵語嘅發音。</span>
           </li>
           <li className="flex items-start">
             <IconKeyboard className="mr-3 mt-1 flex-shrink-0" />
-            {/* Adjusted icon style */}
+            
             <span>
               學識粵拼，可以用粵拼輸入法嚟打粵語，作爲最自然簡單嘅打字方式。
             </span>
@@ -52,21 +52,21 @@ const YueIndexPage: React.FC = () => {
         </ul>
       </div>
       <div className="mx-auto text-center text-3xl block my-12">
-        {/* Added margin */}
+        
         <span className="inline-flex items-center font-semibold">
           <IconBulb className="mr-2" />
-          {/* Adjusted icon style */}
+          
           <span>識粵語就要學粵拼</span>
         </span>
       </div>
       <div className="mx-auto text-center text-3xl my-16 block">
         <span className="inline-flex items-center font-semibold animate-bounce">
-          {/* Added bounce animation */}
-          <IconArrowDown className="mr-2 h-8 w-8" /> {/* Increased size */}
+          
+          <IconArrowDown className="mr-2 h-8 w-8" /> 
         </span>
       </div>
       <div className="flex flex-wrap justify-center my-8 gap-4">
-        {/* Added gap */}
+        
         <a
           href="/learn"
           className="text-2xl text-center bg-yellow-300 text-neutral-800 hover:bg-yellow-400 active:bg-yellow-400 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
@@ -76,7 +76,7 @@ const YueIndexPage: React.FC = () => {
         </a>
       </div>
       <span className="text-2xl text-center mx-auto block my-4">或</span>
-      {/* Added margin */}
+      
       <div className="flex flex-wrap flex-col items-center justify-center my-8 gap-6">
         <a
           href="/jyutping"

@@ -16,37 +16,37 @@ const NanIndexPage: React.FC = () => {
       <h1 className="font-chiron-hei text-8xl my-16 mx-auto text-center">
         粵拼
       </h1>
-      {/* Use font class */}
+      
       <p className="font-chiron-hei leading-relaxed text-4xl mx-auto text-center">
-        {/* Use font class */}
+        
         簡單合理 易學易用
       </p>
       <p className="font-chiron-hei leading-relaxed text-4xl mx-auto text-center mb-16">
-        {/* Use font class, added margin */}
+        
         通行粵語拼音方案
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-16 items-center p-6 max-w-5xl mx-auto">
-        {/* Added background and padding */}
+        
         <p className="text-center text-3xl md:text-right font-semibold">
           按怎欲學粵拼？
         </p>
         <ul className="text-lg mx-auto md:col-span-2 space-y-3">
-          {/* Increased spacing */}
+          
           <li className="flex items-start">
             <IconEar className="mr-3 mt-1 flex-shrink-0" />
-            {/* Adjusted icon style */}
+            
             <span>學會曉粵拼會當幫助糾正懶音錯音，規範家己的粵語口音。</span>
           </li>
           <li className="flex items-start">
             <IconLanguage className="mr-3 mt-1 flex-shrink-0" />
-            {/* Adjusted icon style */}
+            
             <span>
               漢字毋是拼音文字，需要一个拼音方案來準確表達粵語的發音。
             </span>
           </li>
           <li className="flex items-start">
             <IconKeyboard className="mr-3 mt-1 flex-shrink-0" />
-            {/* Adjusted icon style */}
+            
             <span>
               學會曉粵拼，會當用粵拼輸入法來拍粵語，按呢拍字上蓋自然簡單。
             </span>
@@ -54,42 +54,42 @@ const NanIndexPage: React.FC = () => {
         </ul>
       </div>
       <p className="mx-auto text-center text-3xl my-12 font-semibold">
-        {/* Added font-semibold */}
+        
         <span className="inline-flex items-center">
           <IconBulb className="mr-2" />
-          {/* Adjusted icon style */}
+          
           <span>學粵語就要學粵拼</span>
         </span>
       </p>
       <div className="mx-auto text-center text-3xl my-16 block">
         <span className="inline-flex items-center font-semibold animate-bounce">
-          {/* Added bounce animation */}
-          <IconArrowDown className="mr-2 h-8 w-8" /> {/* Increased size */}
+          
+          <IconArrowDown className="mr-2 h-8 w-8" /> 
         </span>
       </div>
       <div className="flex flex-wrap justify-center my-8 gap-4">
-        {/* Added gap */}
+        
         <a
-          href="/nan/learn", keep locale prefix
-          className="text-2xl text-center bg-yellow-300 text-neutral-800 hover:bg-yellow-400 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Added transition
+          href="/nan/learn"
+          className="text-2xl text-center bg-yellow-300 text-neutral-800 hover:bg-yellow-400 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
         >
           一文掌握粵拼
           <IconVocabulary className="ml-2 flex-shrink-0" />
         </a>
       </div>
       <span className="text-2xl text-center mx-auto block my-4">或者</span>
-      {/* Added margin */}
+      
       <div className="flex flex-wrap flex-col items-center justify-center my-8 gap-6">
-        {/* Added gap */}
+        
         <a
-          href="/nan/jyutping", keep locale prefix
+          href="/nan/jyutping"
           className="w-fit text-2xl text-center bg-[#6CAF59] hover:bg-[#CBF2AE] active:bg-[#CBF2AE] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
         >
           看粵拼方案表
           <IconTable className="ml-2 flex-shrink-0" />
         </a>
         <a
-          href="/nan/keyboard" // Changed link to keyboard page, keep locale prefix
+          href="/nan/keyboard" // Changed link to keyboard page
           className="w-fit text-2xl text-center bg-[#cadd7a] hover:bg-[#e9f1c8] active:bg-[#e9f1c8] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
         >
           粵拼資源輸入法
