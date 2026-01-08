@@ -70,7 +70,7 @@ const NanIndexPage: React.FC = () => {
       <div className="flex flex-wrap justify-center my-8 gap-4">
         {/* Added gap */}
         <a
-          href="/nan/learn" // Use standard <a> tag, keep locale prefix
+          href="/nan/learn", keep locale prefix
           className="text-2xl text-center bg-yellow-300 text-neutral-800 hover:bg-yellow-400 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Added transition
         >
           一文掌握粵拼
@@ -82,7 +82,7 @@ const NanIndexPage: React.FC = () => {
       <div className="flex flex-wrap flex-col items-center justify-center my-8 gap-6">
         {/* Added gap */}
         <a
-          href="/nan/jyutping" // Use standard <a> tag, keep locale prefix
+          href="/nan/jyutping", keep locale prefix
           className="w-fit text-2xl text-center bg-[#6CAF59] hover:bg-[#CBF2AE] active:bg-[#CBF2AE] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors
         >
           看粵拼方案表
@@ -102,35 +102,35 @@ const NanIndexPage: React.FC = () => {
       {/* Links to other locales */}
       <div className="flex flex-col md:flex-row md:flex-wrap md:justify-around items-center gap-4 my-12 mx-auto max-w-5xl">
         <a
-          href="/cmn" // Use standard <a> tag
+          href="/cmn"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150" // Adjusted styles
         >
           切到普通話 / 國語版
         </a>
 
         <a
-          href="/wuu" // Use standard <a> tag
+          href="/wuu"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           換到吳語版
         </a>
 
         <a
-          href="/" // Use standard <a> tag
+          href="/"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           返去粵語版
         </a>
 
         <a
-          href="/vi" // Use standard <a> tag
+          href="/vi"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           Chuyển sang tiếng Việt
         </a>
 
         <a
-          href="/en" // Use standard <a> tag
+          href="/en"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           Switch to English

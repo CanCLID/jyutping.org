@@ -1,7 +1,7 @@
 import type React from "react";
 import { IconBrandGithub, IconMail, IconKeyboard } from "@tabler/icons-react";
 
-// Define an interface for the translation structure
+
 interface AboutPageTranslation {
   acknowledgementsTitle: string;
   acknowledgementsP1: React.ReactNode;
@@ -17,7 +17,7 @@ interface AboutPageTranslation {
   finalParagraph: string;
 }
 
-// Define translations for static text (using <a> tags now)
+
 const translations: Record<string, AboutPageTranslation> = {
   en: {
     acknowledgementsTitle: "Acknowledgements",
@@ -613,7 +613,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ locale }) => {
   const t = translations[locale] || translations.yue;
 
   return (
-    // Added container and dark mode text colors
+   
     <div className="container mx-auto px-4 py-4 text-gray-800">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-4">
         <div className="prose max-w-none">

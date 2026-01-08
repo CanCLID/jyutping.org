@@ -1,6 +1,6 @@
 // src/i18n/jyutpingHeadings.ts
 
-// Define an interface for the translation structure (simplified for headings)
+
 interface JyutpingHeadingTranslation {
   onsetHeading: string;
   syllabicNasalHeading: string;
@@ -13,7 +13,7 @@ interface JyutpingHeadingTranslation {
   referenceId: string; // Keep the ID for slug generation
 }
 
-// Define translations (only heading-related parts)
+
 // Extracted from src/components/JyutpingPage.tsx
 export const jyutpingHeadingsTranslations: Record<
   string,
@@ -101,7 +101,7 @@ export const jyutpingHeadingsTranslations: Record<
 // Helper function to generate slugs for non-reference headings
 // Ensures consistency across languages for linking within the page structure
 export const generateSlug = (englishText: string): string => {
-  // Use English text as the base for consistent slugs
+
   // Keep dots for subheadings like 3.1 but drop trailing dots such as "1." in
   // headings like "1. Onset" to avoid generating slugs like "1.-onset".
   return (

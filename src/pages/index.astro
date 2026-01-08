@@ -1,12 +1,10 @@
 ---
-// src/pages/index.astro
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import YueIndexPage from "@/components/index-pages/YueIndexPage.tsx";
 
-const lang = "yue"; // Default locale
+const lang = "yue";
 ---
 
 <BaseLayout lang={lang}>
   <YueIndexPage client:load />
-  {/* Use client:load if interactivity is needed, otherwise remove */}
 </BaseLayout>

@@ -3,10 +3,9 @@ import Alert from "@/components/Alert.tsx";
 import Audio from "@/components/Audio.tsx";
 import {
   jyutpingHeadingsTranslations,
-  generateSlug, // Import the slug generator
+  generateSlug,
 } from "@/i18n/jyutpingHeadings";
 
-// Define an interface for the *rest* of the translation structure (non-heading parts)
 interface JyutpingPageContentTranslation {
   intro: string; // Optional intro paragraph
   alertIpaTitle: string;
@@ -24,7 +23,6 @@ interface JyutpingPageContentTranslation {
   alertToneMarks: React.ReactNode;
 }
 
-// Define translations for content *other* than headings
 const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
   en: {
     intro:
@@ -70,9 +68,9 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
       <p>Null initial is not represented, e.g. "呀" is only spelt as "aa".</p>
     ),
     // syllabicNasalHeading removed
-    // finalHeading removed
-    // nucleiHeading removed
-    // codaHeading removed
+
+
+
     codaRowHeaders: ["Plosive", "Nasal", "Vowel"],
     // finalsChartHeading removed
     finalsChartColHeaders1: [
@@ -120,7 +118,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         </p>
       </>
     ),
-    // referenceHeading removed
+
     // referenceId removed
   },
 
@@ -149,9 +147,9 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     // Note: Same as Yue, might need specific Cmn phrasing if available
     alertNullInitial: <p>零聲母唔用字母做標記，例如「呀」只拼作 aa。</p>,
     // syllabicNasalHeading removed
-    // finalHeading removed
-    // nucleiHeading removed
-    // codaHeading removed
+
+
+
     codaRowHeaders: ["爆發音", "鼻音", "元音"],
     // finalsChartHeading removed
     finalsChartColHeaders1: [
@@ -198,7 +196,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         </p>
       </>
     ),
-    // referenceHeading removed
+
     // referenceId removed
   },
   nan: {
@@ -225,9 +223,9 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
     alertNullInitial: <p>零聲母無用字母做標記，譬如講「呀」干焦拼做 aa。</p>,
     // syllabicNasalHeading removed
-    // finalHeading removed
-    // nucleiHeading removed
-    // codaHeading removed
+
+
+
     codaRowHeaders: ["爆發音", "鼻音", "元音"],
     // finalsChartHeading removed
     finalsChartColHeaders1: [
@@ -274,7 +272,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         </p>
       </>
     ),
-    // referenceHeading removed
+
     // referenceId removed
   },
   vi: {
@@ -324,9 +322,9 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
       </p>
     ),
     // syllabicNasalHeading removed
-    // finalHeading removed
-    // nucleiHeading removed
-    // codaHeading removed
+
+
+
     codaRowHeaders: ["Âm bật", "Âm mũi", "Nguyên âm"],
     // finalsChartHeading removed
     finalsChartColHeaders1: [
@@ -374,7 +372,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         </p>
       </>
     ),
-    // referenceHeading removed
+
     // referenceId removed
   },
   wuu: {
@@ -401,9 +399,9 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
     alertNullInitial: <p>零聲母弗用字母做標記，譬方「呀」單單是 aa。</p>,
     // syllabicNasalHeading removed
-    // finalHeading removed
-    // nucleiHeading removed
-    // codaHeading removed
+
+
+
     codaRowHeaders: ["爆發音", "鼻音", "元音"],
     // finalsChartHeading removed
     finalsChartColHeaders1: [
@@ -450,7 +448,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         </p>
       </>
     ),
-    // referenceHeading removed
+
     // referenceId removed
   },
   yue: {
@@ -477,9 +475,9 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
     alertNullInitial: <p>零聲母唔用字母做標記，例如「呀」只拼作 aa。</p>,
     // syllabicNasalHeading removed
-    // finalHeading removed
-    // nucleiHeading removed
-    // codaHeading removed
+
+
+
     codaRowHeaders: ["爆發音", "鼻音", "元音"],
     // finalsChartHeading removed
     finalsChartColHeaders1: [
@@ -526,7 +524,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         </p>
       </>
     ),
-    // referenceHeading removed
+
     // referenceId removed
   },
   yue_hans: {
@@ -553,9 +551,9 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     onsetRowHeaders: ["爆发音", "塞擦音", "鼻音", "擦音", "近音", "边近音"],
     alertNullInitial: <p>零声母唔用字母做标记，例如「呀」只拼作 aa。</p>,
     // syllabicNasalHeading removed
-    // finalHeading removed
-    // nucleiHeading removed
-    // codaHeading removed
+
+
+
     codaRowHeaders: ["爆发音", "鼻音", "元音"],
     // finalsChartHeading removed
     finalsChartColHeaders1: [
@@ -602,7 +600,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         </p>
       </>
     ),
-    // referenceHeading removed
+
     // referenceId removed
   },
 };

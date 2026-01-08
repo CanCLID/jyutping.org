@@ -3,7 +3,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { I18n } from "@/i18n/utils";
 
-// Import all possible index page components
+
 import CmnIndexPage from "@/components/index-pages/CmnIndexPage.tsx";
 import EnIndexPage from "@/components/index-pages/EnIndexPage.tsx";
 import NanIndexPage from "@/components/index-pages/NanIndexPage.tsx";
@@ -28,7 +28,7 @@ const validLocale = I18n.locales.includes(locale as string)
   ? locale
   : I18n.defaultLocale;
 
-// Define titles for locale index pages
+
 const pageTitles: Record<string, string> = {
   en: "Jyutping - Cantonese Romanization",
   cmn: "粵拼 - 粵語拼音方案",

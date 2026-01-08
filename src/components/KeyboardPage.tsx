@@ -10,9 +10,8 @@ import {
   IconKeyboard,
   IconWorld,
 } from "@tabler/icons-react";
-import type React from "react"; // Import type React for FC
+import type React from "react";
 
-// Reusable Button Component (using <a> tag)
 const DownloadButton: React.FC<{
   href: string;
   icon: React.ElementType;
@@ -26,10 +25,8 @@ const DownloadButton: React.FC<{
     | "firefox"
     | "chrome";
 }> = ({ href, icon: Icon, text, variant = "web" }) => {
-  // Changed default variant to "web"
-  // Base classes common to all variants
   const baseClasses =
-    "inline-flex items-center px-6 py-3 border text-base font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-150 ease-in-out group"; // Added transition and group for potential icon styling
+    "inline-flex items-center px-6 py-3 border text-base font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-150 ease-in-out group";
 
   // Styles for other variants
   let variantClasses = "";
@@ -60,11 +57,10 @@ const DownloadButton: React.FC<{
       break;
     case "firefox":
       variantClasses =
-        "border-purple-500 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 hover:bg-gradient-to-r hover:from-purple-500 hover:via-pink-500 hover:to-orange-500 hover:text-white hover:border-transparent hover:bg-clip-padding"; // Added firefox variant styles
+        "border-purple-500 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 hover:bg-gradient-to-r hover:from-purple-500 hover:via-pink-500 hover:to-orange-500 hover:text-white hover:border-transparent hover:bg-clip-padding";
       break;
   }
 
-  // Default structure for other variants
   return (
     <a
       href={href}
@@ -75,7 +71,7 @@ const DownloadButton: React.FC<{
       <Icon
         className={`mr-2 h-5 w-5 ${
           variant === "firefox"
-            ? "text-purple-500 group-hover:text-white" // Use a base gradient color, keep hover white
+            ? "text-purple-500 group-hover:text-white"
             : ""
         }`}
       />
@@ -84,7 +80,6 @@ const DownloadButton: React.FC<{
   );
 };
 
-// Define an interface for the translation structure
 interface KeyboardPageTranslation {
   introLinks: React.ReactNode;
   sogouTitle: string;
@@ -111,7 +106,7 @@ interface KeyboardPageTranslation {
   converter: string;
 }
 
-// Define translations (copied from original)
+
 const translations: Record<string, KeyboardPageTranslation> = {
   en: {
     introLinks: "Jyutping Keyboards",
@@ -302,7 +297,7 @@ interface KeyboardPageProps {
 }
 
 const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
-  const t = translations[locale] || translations.en; // Fallback to English
+  const t = translations[locale] || translations.en;
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-5xl">
@@ -312,15 +307,11 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
             <IconKeyboard className="mr-2" /> {t.introLinks}
           </span>
         </h1>
-        {/* Responsive grid: 1 column on small screens, 3 columns on medium+ */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Increased gap */}
-          {/* Sogou */}
           <div className="p-4 ">
             <h2 className="text-2xl font-semibold my-4">{t.sogouTitle}</h2>
             <h3 className="font-semibold my-2">iOS</h3>
             <div className="mb-4">
-              {/* Added margin */}
               <DownloadButton
                 href="https://apps.apple.com/app/id917670924"
                 icon={IconBrandApple}
@@ -328,13 +319,11 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
                 variant="apple"
               />
               <p className="text-sm text-gray-600 mt-1">
-                {/* Added margin */}
                 {t.sogouAppStoreNote}
               </p>
             </div>
             <h3 className="font-semibold my-2">Android</h3>
             <div className="mb-4">
-              {/* Added margin */}
               <DownloadButton
                 href="https://shouji.sogou.com/interface/multilingual.php?language=3"
                 icon={IconBrandAndroid}
@@ -342,13 +331,11 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
                 variant="android"
               />
               <p className="text-sm text-gray-600 mt-1">
-                {/* Added margin */}
                 {t.sogouApkNote}
               </p>
             </div>
             <p className="text-sm text-gray-700">{t.sogouInstructions}</p>
           </div>
-          {/* TypeDuck */}
           <div className="p-4 ">
             <h2 className="text-2xl font-semibold my-4">{t.typeduckTitle}</h2>
             <h3 className="font-semibold my-2">Web</h3>
@@ -370,7 +357,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </div>
           </div>
-          {/* YuetYam Jyutping App */}
           <div className="p-4 ">
             <h2 className="text-2xl font-semibold my-4">{t.appJyutpingTitle}</h2>
             <h3 className="font-semibold my-2">iOS</h3>
@@ -438,7 +424,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </div>
           </div>
-          {/* Cantoboard */}
           <div className="p-4 ">
             <h2 className="text-2xl font-semibold my-4">{t.cantoboardTitle}</h2>
             <h3 className="font-semibold my-2">iOS</h3>
@@ -453,7 +438,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
           </div>
         </div>
       </div>
-      {/* Dictionary tools section */}
       <div className="my-8 p-8 border border-gray-300 border-dashed rounded-md mx-auto">
         <h2 className="my-4 text-4xl font-semibold mx-auto text-center">
           <span className="inline-flex items-center font-semibold">
@@ -461,8 +445,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
           </span>
         </h2>
         <div className="my-4 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Increased gap */}
-          {/* Jyut.net */}
           <div className="flex flex-col items-center p-4 ">
             <h3 className="my-4 text-2xl font-semibold">
               粵音資料集叢 jyut.net
@@ -484,7 +466,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
-          {/* Words.hk */}
           <div className="flex flex-col items-center p-4 ">
             <h3 className="my-4 text-2xl font-semibold">粵典 words.hk</h3>
             <a
@@ -504,7 +485,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
-          {/* 羊羊粵語.hk */}
           <div className="flex flex-col items-center p-4 ">
             <h3 className="my-4 text-2xl font-semibold">羊羊粵語 shyyp.net</h3>
             <a
@@ -513,7 +493,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               rel="noopener noreferrer"
               className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
             >
-              {/* Use standard img tag */}
               <img
                 src="/img/shyyp.svg"
                 alt="羊羊粵語"
@@ -524,7 +503,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
-          {/* Google Translate */}
           <div className="flex flex-col items-center p-4 ">
             <h3 className="text-2xl my-4 font-semibold">{t.googleTranslate}</h3>
             <a
@@ -533,7 +511,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               rel="noopener noreferrer"
               className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
             >
-              {/* Use standard img tag */}
               <img
                 src="/img/translate.png"
                 alt="Google Translate Cantonese"
@@ -544,7 +521,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
-          {/* Converter */}
           <div className="flex flex-col items-center p-4 ">
             <h3 className="text-2xl my-4 font-semibold">{t.converter}</h3>
             <a
@@ -553,7 +529,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               rel="noopener noreferrer"
               className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
             >
-              {/* Use standard img tag */}
               <img
                 src="/img/converter.png"
                 alt="Jyutping Converter"
@@ -564,27 +539,24 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
-          {/* Inject Jyutping */}
           <div className="p-4 ">
             <h3 className="text-2xl my-4 text-center font-semibold">
               注入粵拼 inject-jyutping
             </h3>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-              {/* Adjusted layout */}
               <a
                 href="https://github.com/CanCLID/inject-jyutping"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:opacity-80 transition-opacity duration-200 flex-shrink-0" // Added flex-shrink-0
+                className="hover:opacity-80 transition-opacity duration-200 flex-shrink-0"
               >
-                {/* Use standard img tag */}
                 <img
                   src="/img/inject.png"
                   alt="Inject Jyutping Logo"
                   width={64}
                   height={64}
                   className="max-w-full h-auto mx-auto"
-                  loading="lazy" // Add lazy loading
+                  loading="lazy"
                 />
               </a>
               <div className="flex flex-col gap-4 my-4">
@@ -627,13 +599,10 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-            loading="lazy" // Add lazy loading
+            loading="lazy"
           />
-          {/* Made iframe self-closing */}
         </div>
         <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Changed to 3 columns, increased gap */}
-          {/* Hambaanglaang */}
           <div className="flex flex-col items-center p-4 ">
             <h3 className="my-4 text-2xl font-semibold">
               冚唪唥粵文 hambaanglaang.hk
@@ -644,7 +613,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               rel="noopener noreferrer"
               className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
             >
-              {/* Use standard img tag */}
               <img
                 src="/img/hambaanglaang.png"
                 alt="冚唪唥粵文 Hambaanglaang"
@@ -655,7 +623,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
-          {/* 翻轉粵語教室 */}
           <div className="flex flex-col items-center p-4">
             <h3 className="my-4 text-2xl font-semibold">
               香港理工大学 翻轉粵語教室
@@ -666,7 +633,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               rel="noopener noreferrer"
               className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
             >
-              {/* Use standard img tag */}
               <img
                 src="/img/flipped.png"
                 alt="翻轉粵語教室 Flipped Classroom"
@@ -688,7 +654,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               rel="noopener noreferrer"
               className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
             >
-              {/* Use standard img tag */}
               <img
                 src="/img/learnduck.png"
                 alt="LearnDuck 粵拼打字入門"
@@ -699,7 +664,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
-          {/* Visual Fonts */}
           <div className="flex flex-col items-center p-4">
             <h3 className="my-4 text-2xl font-semibold">
               粵拼字體 visual-fonts.com
@@ -710,7 +674,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               rel="noopener noreferrer"
               className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
             >
-              {/* Use standard img tag */}
               <img
                 src="/img/visualfont.svg"
                 alt="Visual Fonts Jyutping"
@@ -730,7 +693,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               rel="noopener noreferrer"
               className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
             >
-              {/* Use standard img tag */}
               <img
                 src="/img/wing.png"
                 alt="Wing Font"

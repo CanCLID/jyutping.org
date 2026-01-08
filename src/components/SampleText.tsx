@@ -1,5 +1,5 @@
 import type React from "react";
-import Audio from "./Audio.tsx"; // Import the existing Audio component
+import Audio from "./Audio.tsx";
 import fusisaanhaa from "../texts/fusisaanhaa.txt?raw";
 import bakfung from "../texts/bakfung.txt?raw";
 import maanboujansanglou from "../texts/maanboujansanglou.txt?raw";
@@ -47,13 +47,12 @@ const isSafari =
   typeof navigator !== "undefined" &&
   /Version\/[\d\.]+.*Safari/.test(navigator.userAgent);
 
-// Define props for the component
 interface SampleTextProps {
-  sample?: "bakfung" | "maanboujansanglou" | "coisandou" | "fusisaanhaa"; // Use specific sample names
+  sample?: "bakfung" | "maanboujansanglou" | "coisandou" | "fusisaanhaa";
 }
 
 const SampleText: React.FC<SampleTextProps> = ({
-  sample = "bakfung", // Default to bakfung
+  sample = "bakfung",
 }) => {
   let inputText = bakfung; // Default text
 
@@ -79,7 +78,6 @@ function TextWithAudioAndJyutPing({ children }: { children: string }) {
       <div className="flex flex-wrap items-end leading-loose">
         {parsedItems.map((item, index) => (
           <div
-            // Use a more robust key if possible, index is fallback
             key={`${item.char}-${item.jyutping || "no-jp"}-${index}`}
             className="inline-flex flex-col items-center mx-1"
           >
@@ -100,7 +98,6 @@ function TextWithAudioAndJyutPing({ children }: { children: string }) {
             ) : (
               <span className="text-4xl font-chiron-hei my-1">{item.char}</span>
             )}
-            {/* Added dark mode text color */}
           </div>
         ))}
       </div>

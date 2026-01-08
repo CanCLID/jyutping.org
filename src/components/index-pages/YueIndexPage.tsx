@@ -1,4 +1,4 @@
-import type React from "react"; // Use import type
+import type React from "react";
 import {
   IconEar,
   IconLanguage,
@@ -68,8 +68,8 @@ const YueIndexPage: React.FC = () => {
       <div className="flex flex-wrap justify-center my-8 gap-4">
         {/* Added gap */}
         <a
-          href="/learn" // Use standard <a> tag
-          className="text-2xl text-center bg-yellow-300 text-neutral-800 hover:bg-yellow-400 active:bg-yellow-400 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Added transition and active state
+          href="/learn"
+          className="text-2xl text-center bg-yellow-300 text-neutral-800 hover:bg-yellow-400 active:bg-yellow-400 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
         >
           一文掌握粵拼
           <IconVocabulary className="ml-2 flex-shrink-0" />
@@ -79,15 +79,15 @@ const YueIndexPage: React.FC = () => {
       {/* Added margin */}
       <div className="flex flex-wrap flex-col items-center justify-center my-8 gap-6">
         <a
-          href="/jyutping" // Use standard <a> tag
-          className="w-fit text-2xl text-center hover:bg-[#CBF2AE] active:bg-[#CBF2AE] bg-[#6CAF59] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors and added active state
+          href="/jyutping"
+          className="w-fit text-2xl text-center hover:bg-[#CBF2AE] active:bg-[#CBF2AE] bg-[#6CAF59] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
         >
           睇粵拼方案表
           <IconTable className="ml-2 flex-shrink-0" />
         </a>
         <a
-          href="/keyboard" // Use standard <a> tag
-          className="w-fit text-2xl text-center bg-[#cadd7a] hover:bg-[#e9f1c8] active:bg-[#e9f1c8] active:bg-[#e9f1c8] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150" // Adjusted colors and added active state
+          href="/keyboard"
+          className="w-fit text-2xl text-center bg-[#cadd7a] hover:bg-[#e9f1c8] active:bg-[#e9f1c8] active:bg-[#e9f1c8] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
         >
           粵拼資源輸入法
           <IconKeyboard className="ml-2 flex-shrink-0" />
@@ -99,36 +99,36 @@ const YueIndexPage: React.FC = () => {
       {/* Links to other locales */}
       <div className="flex flex-col md:flex-row md:flex-wrap md:justify-around items-center gap-4 my-12 max-w-5xl mx-auto">
         <a
-          href="/cmn" // Use standard <a> tag
-          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150" // Adjusted styles and added active state
+          href="/cmn"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           切到普通話 / 國語版
         </a>
 
         <a
-          href="/wuu" // Use standard <a> tag
-          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150" // Added active state
+          href="/wuu"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           換到吳語版
         </a>
 
         <a
-          href="/nan" // Use standard <a> tag
-          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150" // Added active state
+          href="/nan"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           換到台灣閩南語版
         </a>
 
         <a
-          href="/vi" // Use standard <a> tag
-          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150" // Added active state
+          href="/vi"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           Chuyển sang tiếng Việt
         </a>
 
         <a
-          href="/en" // Use standard <a> tag
-          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150" // Added active state
+          href="/en"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           Switch to English
         </a>

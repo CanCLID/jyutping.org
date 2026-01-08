@@ -1,5 +1,4 @@
 ---
-// src/pages/jyutping.astro
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import JyutpingPage from "@/components/JyutpingPage.tsx";
 import TableOfContents from "@/components/TableOfContents";
@@ -8,14 +7,12 @@ import {
   generateSlug,
 } from "@/i18n/jyutpingHeadings";
 
-const lang = "yue"; // Set locale to Cantonese (Yue)
-const title = "粵拼方案 - Jyutping"; // Cantonese title
+const lang = "yue";
+const title = "粵拼方案 - Jyutping";
 
-// Get the correct heading translations for the Cantonese locale ('yue')
 const t = jyutpingHeadingsTranslations[lang];
-const tEn = jyutpingHeadingsTranslations.en; // Still use English for consistent slugs
+const tEn = jyutpingHeadingsTranslations.en;
 
-// Dynamically generate headings for TableOfContents based on locale ('yue')
 const headings = [
   { text: t.onsetHeading, slug: generateSlug(tEn.onsetHeading), depth: 2 },
   {
@@ -32,19 +29,17 @@ const headings = [
     depth: 3,
   },
   { text: t.toneHeading, slug: generateSlug(tEn.toneHeading), depth: 2 },
-  { text: t.referenceHeading, slug: t.referenceId, depth: 2 }, // Use locale-specific ID for reference slug
+  { text: t.referenceHeading, slug: t.referenceId, depth: 2 },
 ];
 ---
 
 <BaseLayout lang={lang} title={title}>
   <div class="bg-[#1678d3] text-white px-4 py-6 mb-8">
-    {/* Responsive H1 with increased line spacing */}
     <h1
       class="font-chiron-hei my-4 text-5xl md:text-6xl leading-relaxed text-center container max-w-8xl mx-auto"
     >
       粵拼：香港語言學學會粵語拼音方案
     </h1>
-    {/* Responsive H1 with increased line spacing */}
     <h1
       class="chiron-font my-8 text-3xl md:text-4xl text-center container max-w-8xl mx-auto"
     >
@@ -56,7 +51,6 @@ const headings = [
     <JyutpingPage locale={lang} client:visible />
     <aside class="hidden lg:block w-32 flex-shrink-0">
       <div class="sticky top-32">
-        {/* Adjust top offset as needed */}
         <TableOfContents client:visible headings={headings} />
       </div>
     </aside>

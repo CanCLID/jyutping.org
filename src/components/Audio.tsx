@@ -1,9 +1,9 @@
-"use client"; // This component needs browser interaction
+"use client";
 
-import type React from "react"; // Use import type
+import type React from "react";
 
 interface AudioProps {
-  id: string; // The ID of the <audio> element to play
+  id: string;
 }
 
 // Simple SVG Volume Up icon
@@ -12,12 +12,12 @@ const VolumeUpIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
-    role="img" // Add role for accessibility
+    role="img"
     strokeWidth={1.5}
     stroke="currentColor"
-    className="w-4 h-4" // Adjust size as needed
+    className="w-4 h-4"
   >
-    <title>Play audio</title> {/* Add title for accessibility */}
+    <title>Play audio</title>
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -72,7 +72,7 @@ const Audio: React.FC<AudioProps> = ({ id }) => {
     <button
       type="button"
       onClick={handleClick}
-      className="inline-flex items-center justify-center p-1 rounded-md text-blue-600 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 mx-1 align-middle" // Added dark mode styles
+      className="inline-flex items-center justify-center p-1 rounded-md text-blue-600 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 mx-1 align-middle"
       aria-label={`Play audio ${id}`}
     >
       <VolumeUpIcon />
