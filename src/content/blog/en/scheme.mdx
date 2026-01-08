@@ -27,7 +27,7 @@ Principle #1 also implies another rule of thumb: the sound that a symbol represe
 | -------------------------- | --------------------------- | -------------------------- |
 | fa                         | faan                        | fan                        |
 
-So in Yale romanization, "the sound of a symbol depends on its environment". Whether the letter _a_ represents /a/ or /ɐ/ depends on whether the syllable is open or closed (if followed by _n_, it is /ɐ/; if followed by nothing, it is /a/). This creates a lot of ambiguities and inconsistencies, and is one of Yale's critical design flaws. In Jyutping, **aa** consistently represents /a/ and **a** consistently represents /ɐ/, so you can determine the sound directly without considering the environment.
+So in Yale romanization, **the sound of a symbol depends on its environment**. Whether the letter _a_ represents /a/ or /ɐ/ depends on whether the syllable is open or closed (if followed by _n_, it is /ɐ/; if followed by nothing, it is /a/). This creates a lot of ambiguities and inconsistencies, and is one of Yale's critical design flaws. In Jyutping, _aa_ consistently represents /a/ and _a_ consistently represents /ɐ/, so you can determine the sound directly without considering the environment.
 
 ### Principle #2: Avoid using non-ASCII characters.
 
@@ -51,7 +51,7 @@ It should be noted that this principle sometimes conflicts with Principle #1. Fo
 
 ## Flaws in other Cantonese romanization systems
 
-Having understood the design principles of romanization systems, we can now examine the most prominent Cantonese romanization systems: Yale romanization, the Education Institute romanization scheme (Educomp), and the Guangzhou romanization scheme (Rao Bingcai scheme). We'll analyze their design issues and demonstrate why we should choose Jyutping.
+Having understood the design principles of romanization systems, we can now examine the most prominent Cantonese romanization systems: Yale romanization, the Institute of Language in Education romanization scheme (Cantonese Pinyin), and the Guangzhou romanization scheme (Rao Bingcai scheme). We'll analyze their design issues and demonstrate why we should choose Jyutping.
 
 ### Yale romanization
 
@@ -62,9 +62,9 @@ Yale romanization is probably the most common Cantonese romanization system besi
 3. Yale does not distinguish between /ɵ/ and /œ/, representing both with _eu_. As a result, Yale cannot represent the sound /ɛːu/.
 4. Yale uses diacritics ˉˊ and the letter _h_ to mark tones (the new version added numerical tone marking).
 
-First, point #1 was already discussed [above](#principle-1-one-symbol-to-one-phoneme-mapping). Yale was designed this way because the phonemic analysis at the time believed that open syllable /ɐ/ did not exist, so they simply abbreviated open syllable _aa_ to _a_. This abbreviation creates problems: first, it violates our Principle #1 "one symbol strictly corresponds to one phoneme," confusing learners and increasing learning costs. Second, it makes it impossible to represent open syllable /ɐ/ characters, such as the sentence-final particle "la," violating Principle #4. This is a major design flaw.
+First, point #1 was already discussed [above](#principle-1-one-symbol-to-one-phoneme-mapping). Yale was designed this way because the phonemic analysis at the time believed that open syllable /ɐ/ did not exist, so they simply abbreviated open syllable _aa_ to _a_. This abbreviation creates problems: first, it violates our Principle #1 **one symbol strictly corresponds to one phoneme**, confusing learners and increasing learning costs. Second, it makes it impossible to represent open syllable /ɐ/ characters, such as the sentence-final particle 嘞 (la3), violating Principle #4. This is a major design flaw.
 
-Regarding point #2, Yale's use of _yu_ to represent /yː/ also violates Principle #1 "one symbol corresponds to one phoneme," because it requires context to determine what sound is actually represented. Yale already uses _y_ to represent /j/ and _u_ to represent /u/, but now stipulates that _yu_ combined represents /yː/—in other words, "one letter represents one monophthong, and two letters combined represent another monophthong." This confuses learners and is inconvenient for computer information processing (input methods have difficulty handling abbreviations, and regular expressions require environmental context). We will further explain how Jyutping handles this issue in the final section on [Jyutping's flaws](#jyutpings-flaws).
+Regarding point #2, Yale's use of _yu_ to represent /yː/ also violates Principle #1 **one symbol corresponds to one phoneme**, because it requires context to determine what sound is actually represented. Yale already uses _y_ to represent /j/ and _u_ to represent /u/, but now stipulates that _yu_ combined represents /yː/—in other words, **one letter represents one monophthong, and two letters combined represent another monophthong**. This confuses learners and is inconvenient for computer information processing (input methods have difficulty handling abbreviations, and regular expressions require environmental context). We will further explain how Jyutping handles this issue in the final section on [Jyutping's flaws](#jyutpings-flaws).
 
 Point #3: Yale uses _eu_ to represent both /ɵ/ and /œ/, which is the phonemic analysis problem mentioned in Principle #4. This directly prevents Yale from representing sounds like /œ/ and /ɛːu/, limiting the system's expressive capacity, as shown in the table below:
 
@@ -73,7 +73,7 @@ Point #3: Yale uses _eu_ to represent both /ɵ/ and /œ/, which is the phonemic 
 | Yale           | seuih                          | Cannot represent               | Cannot represent             |
 | Jyutping       | seoi6                          | deu6                           | oet6                         |
 
-Point #4: Using diacritics and _h_ to mark tones—for example, spelling the pronunciation of "snake" as _sèh_—violates both Principle #2 and Principle #1, since _h_ is already used to represent the initial consonant /h/. Fortunately, the new version of Yale has added numerical tone marking, which greatly helps information processing.
+Point #4: Using diacritics and _h_ to mark tones—for example, spelling the pronunciation of 蛇 (snake) as _sèh_—violates both Principle #2 and Principle #1, since _h_ is already used to represent the initial consonant /h/. Fortunately, the new version of Yale has added numerical tone marking, which greatly helps information processing.
 
 In summary, Yale's design violates Principles #1, #2, and #4 (Principle #3 is subjective and cannot be definitively judged). These design flaws are sufficient reason to abandon Yale and adopt Jyutping instead.
 
@@ -93,7 +93,7 @@ Points #2 and #4 are more subjective symbol choices and can't be considered flaw
 
 ### Institute of Language in Education Romanization (Cantonese Pinyin)
 
-The Institute of Language in Education (ILE) romanization, commonly known as Cantonese Pinyin, is another commonly used Cantonese romanization system besides Yale and Jyutping. The ILE's Language Institute published the "List of Cantonese Pronunciation of Commonly-used Chinese Characters" in 1990, using numbers for tone marking. Apart from tones, its main differences from Jyutping are:
+The Institute of Language in Education (ILE) romanization, commonly known as Cantonese Pinyin, is another commonly used Cantonese romanization system besides Yale and Jyutping. The ILE's Language Institute published the _List of Cantonese Pronunciation of Commonly-used Chinese Characters_ in 1990, using numbers for tone marking. Apart from tones, its main differences from Jyutping are:
 
 1. It uses _dz_ and _ts_ to represent /ts/ and /tsʰ/
 2. It uses _y_ to represent /y/
@@ -104,7 +104,7 @@ Overall, Cantonese Pinyin is quite close to Jyutping, with a relatively scientif
 
 ### Hong Kong Government Cantonese Romanization / Postal Romanization
 
-The Hong Kong Government Cantonese Romanization (with Postal Romanization inheriting from the Hong Kong Government system) refers generally to the romanization used by the Hong Kong Government for spelling street names and personal names. Because it originated from early Westerners' practices of spelling Cantonese with Latin letters, it uses many diacritics, such as ' for aspiration, ò for /ou/, ü for /y/, etc. However, diacritics cannot be used in English, so Hong Kong Government documents remove all these diacritics, leading to much confusion. Additionally, the government doesn't mandate spelling in standard Guangzhou pronunciation—different people can spell using their own dialectal pronunciations, resulting in "one character having multiple spellings" and "one spelling representing different sounds," for example:
+The Hong Kong Government Cantonese Romanization (with Postal Romanization inheriting from the Hong Kong Government system) refers generally to the romanization used by the Hong Kong Government for spelling street names and personal names. Because it originated from early Westerners' practices of spelling Cantonese with Latin letters, it uses many diacritics, such as _'_ for aspiration, _ò_ for /ou/, _ü_ for /y/, etc. However, diacritics cannot be used in English, so Hong Kong Government documents remove all these diacritics, leading to much confusion. Additionally, the government doesn't mandate spelling in standard Guangzhou pronunciation—different people can spell using their own dialectal pronunciations, resulting in one character having multiple spellings and one spelling representing different sounds, for example:
 
 - "蔡" (coi3) has three spellings: _Choi_, _Choy_, _Tsoi_
 - "葉" (jip6) has two spellings: _Yip_, _Ip_
@@ -119,7 +119,7 @@ Strictly speaking, the Hong Kong Government romanization cannot be considered a 
 
 The most common complaint about Jyutping is the letter _j_. Many people ask why we don't use _y_ to represent /j/, since this would align with common conventions—both Mandarin Pinyin and English use _y_ for /j/. So why does Jyutping violate Principle #3 by using _j_ instead of _y_? Because if we used _y_ to represent /j/, it would raise a question: there are only 26 letters in the English alphabet, and if we use _y_ for /j/, what do we use to represent /y/?
 
-For this question, Yale's answer is: use _y_ for /j/, then use context to determine when it represents /y/. If the letter _y_ is followed by _u_, then the two letters _yu_ together represent /y/. This is what we mentioned earlier as "one letter represents one monophthong, and two combined represent another monophthong." In other words, **Yale sacrifices Principle #1 to achieve Principle #3**, so this is a trade-off. Which principle is more important? Definitely the first one—"one symbol corresponds to one phoneme" is the most important. Because the fundamental purpose of a romanization system is to accurately represent a language's phonemic system, and breaking this one-to-one correspondence brings many problems, such as the increased learning and information processing costs, and susceptibility to confusion, as discussed above.
+For this question, Yale's answer is: use _y_ for /j/, then use context to determine when it represents /y/. If the letter _y_ is followed by _u_, then the two letters _yu_ together represent /y/. This is what we mentioned earlier as **one letter represents one monophthong, and two combined represent another monophthong**. In other words, **Yale sacrifices Principle #1 to achieve Principle #3**, so this is a trade-off. Principle #1 is clearly the more important one—**one symbol corresponds to one phoneme**. The fundamental purpose of a romanization system is to accurately represent a language's phonemic system, and breaking this one-to-one correspondence brings many problems, such as the increased learning and information processing costs, and susceptibility to confusion, as discussed above.
 
 On the other hand, using _j_ to represent /j/ isn't such a violation of Principle #3, because using _y_ for /j/ is merely a convention in Mandarin Pinyin and English. There are many other writing systems in the world—for example, German also uses _j_ to represent /j/. So actually, only Mandarin Pinyin and English users find this design unfamiliar; German speakers would find it quite natural. Moreover, everyone can see that in the International Phonetic Alphabet (IPA), the symbol for this sound (palatal approximant) is /j/, so Jyutping follows the IPA notation.
 
