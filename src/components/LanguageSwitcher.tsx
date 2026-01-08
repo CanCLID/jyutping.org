@@ -1,14 +1,12 @@
 import type React from "react";
 import { useState, useEffect } from "react";
 
-// Define props interface, adding currentPathname
 interface LanguageSwitcherProps {
   locales: readonly string[];
   defaultLocale: string;
   currentPathname: string; // Passed from Astro component
 }
 
-// Define language names (copied from original)
 const languageNames: Record<string, string> = {
   yue: "粵語",
   yue_hans: "粤语简体",

@@ -4,7 +4,6 @@ import type { MarkdownHeading } from "astro";
 import type React from "react";
 import { useEffect, useState } from "react";
 
-// Define props interface to accept headings from Astro
 interface Props {
   headings: MarkdownHeading[];
 }

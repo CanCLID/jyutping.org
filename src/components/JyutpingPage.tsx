@@ -47,7 +47,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         .
       </p>
     ),
-    // onsetHeading removed
     onsetTableHeaders: [
       "Bilabial",
       "Labio-dental",
@@ -67,12 +66,10 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     alertNullInitial: (
       <p>Null initial is not represented, e.g. "呀" is only spelt as "aa".</p>
     ),
-    // syllabicNasalHeading removed
 
 
 
     codaRowHeaders: ["Plosive", "Nasal", "Vowel"],
-    // finalsChartHeading removed
     finalsChartColHeaders1: [
       "Monothong",
       "Diphthong",
@@ -106,7 +103,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         for further information.
       </p>
     ),
-    // toneHeading removed
     toneTableHeaders: ["平", "上", "去", "入"],
     toneRowHeaders: ["陰", "陽"],
     alertToneMarks: (
@@ -119,7 +115,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
       </>
     ),
 
-    // referenceId removed
   },
 
   cmn: {
@@ -134,7 +129,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         一節。
       </p>
     ),
-    // onsetHeading removed
     onsetTableHeaders: [
       "雙脣音",
       "脣齒音",
@@ -146,12 +140,10 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
     // Note: Same as Yue, might need specific Cmn phrasing if available
     alertNullInitial: <p>零聲母唔用字母做標記，例如「呀」只拼作 aa。</p>,
-    // syllabicNasalHeading removed
 
 
 
     codaRowHeaders: ["爆發音", "鼻音", "元音"],
-    // finalsChartHeading removed
     finalsChartColHeaders1: [
       "單元音",
       "複元音",
@@ -184,7 +176,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         。
       </p>
     ),
-    // toneHeading removed
     toneTableHeaders: ["平", "上", "去", "入"],
     toneRowHeaders: ["陰", "陽"],
     alertToneMarks: (
@@ -197,7 +188,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
       </>
     ),
 
-    // referenceId removed
   },
   nan: {
     intro: "「香港語言學學會粵語拼音方案」，簡稱「粵拼」。",
@@ -211,7 +201,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         遐。
       </p>
     ),
-    // onsetHeading removed
     onsetTableHeaders: [
       "雙脣音",
       "脣齒音",
@@ -222,12 +211,10 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     ],
     onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
     alertNullInitial: <p>零聲母無用字母做標記，譬如講「呀」干焦拼做 aa。</p>,
-    // syllabicNasalHeading removed
 
 
 
     codaRowHeaders: ["爆發音", "鼻音", "元音"],
-    // finalsChartHeading removed
     finalsChartColHeaders1: [
       "單元音",
       "複元音",
@@ -260,7 +247,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         。
       </p>
     ),
-    // toneHeading removed
     toneTableHeaders: ["平", "上", "去", "入"],
     toneRowHeaders: ["陰", "陽"],
     alertToneMarks: (
@@ -273,7 +259,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
       </>
     ),
 
-    // referenceId removed
   },
   vi: {
     intro:
@@ -298,7 +283,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         .
       </p>
     ),
-    // onsetHeading removed
     onsetTableHeaders: [
       "Âm đôi môi",
       "Âm môi răng",
@@ -321,12 +305,10 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         "aa".
       </p>
     ),
-    // syllabicNasalHeading removed
 
 
 
     codaRowHeaders: ["Âm bật", "Âm mũi", "Nguyên âm"],
-    // finalsChartHeading removed
     finalsChartColHeaders1: [
       "Nguyên âm đơn",
       "Nguyên âm kép",
@@ -360,7 +342,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         .
       </p>
     ),
-    // toneHeading removed
     toneTableHeaders: ["Bằng", "Thượng", "Khứ", "Nhập"],
     toneRowHeaders: ["Âm", "Dương"],
     alertToneMarks: (
@@ -373,7 +354,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
       </>
     ),
 
-    // referenceId removed
   },
   wuu: {
     intro: "「香港語言學學會粵語拼音方案」，略稱「粵拼」。",
@@ -387,7 +367,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         一節。
       </p>
     ),
-    // onsetHeading removed
     onsetTableHeaders: [
       "雙脣音",
       "脣齒音",
@@ -398,12 +377,10 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     ],
     onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
     alertNullInitial: <p>零聲母弗用字母做標記，譬方「呀」單單是 aa。</p>,
-    // syllabicNasalHeading removed
 
 
 
     codaRowHeaders: ["爆發音", "鼻音", "元音"],
-    // finalsChartHeading removed
     finalsChartColHeaders1: [
       "單元音",
       "複元音",
@@ -436,7 +413,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         。
       </p>
     ),
-    // toneHeading removed
     toneTableHeaders: ["平", "上", "去", "入"],
     toneRowHeaders: ["陰", "陽"],
     alertToneMarks: (
@@ -449,7 +425,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
       </>
     ),
 
-    // referenceId removed
   },
   yue: {
     intro: "「香港語言學學會粵語拼音方案」，簡稱「粵拼」。",
@@ -463,7 +438,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         一節。
       </p>
     ),
-    // onsetHeading removed
     onsetTableHeaders: [
       "雙脣音",
       "脣齒音",
@@ -474,12 +448,10 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     ],
     onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
     alertNullInitial: <p>零聲母唔用字母做標記，例如「呀」只拼作 aa。</p>,
-    // syllabicNasalHeading removed
 
 
 
     codaRowHeaders: ["爆發音", "鼻音", "元音"],
-    // finalsChartHeading removed
     finalsChartColHeaders1: [
       "單元音",
       "複元音",
@@ -512,7 +484,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         。
       </p>
     ),
-    // toneHeading removed
     toneTableHeaders: ["平", "上", "去", "入"],
     toneRowHeaders: ["陰", "陽"],
     alertToneMarks: (
@@ -525,7 +496,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
       </>
     ),
 
-    // referenceId removed
   },
   yue_hans: {
     intro: "「香港语言学学会粤语拼音方案」，简称「粤拼」。",
@@ -539,7 +509,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         一节。
       </p>
     ),
-    // onsetHeading removed
     onsetTableHeaders: [
       "双唇音",
       "唇齿音",
@@ -550,12 +519,10 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     ],
     onsetRowHeaders: ["爆发音", "塞擦音", "鼻音", "擦音", "近音", "边近音"],
     alertNullInitial: <p>零声母唔用字母做标记，例如「呀」只拼作 aa。</p>,
-    // syllabicNasalHeading removed
 
 
 
     codaRowHeaders: ["爆发音", "鼻音", "元音"],
-    // finalsChartHeading removed
     finalsChartColHeaders1: [
       "单元音",
       "复元音",
@@ -588,7 +555,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
         。
       </p>
     ),
-    // toneHeading removed
     toneTableHeaders: ["平", "上", "去", "入"],
     toneRowHeaders: ["阴", "阳"],
     alertToneMarks: (
@@ -601,7 +567,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
       </>
     ),
 
-    // referenceId removed
   },
 };
 
