@@ -81,35 +81,35 @@ In summary, Yale's design violates Principles #1, #2, and #4 (Principle #3 is su
 
 The Guangzhou Romanization was announced by the Guangdong Provincial Government in 1960, and later revised in 1980. Because it was revised by Professor Rao Bingcai, it's also known as the Rao Bingcai scheme. We'll use the 1980 revised version here to explain this system's design problems. Apart from tones, the main differences between Guangzhou Romanization and Jyutping are:
 
-1. It uses e, ê, é, ü to represent the vowels /ɐ/, /œː/, /ɛː/, /yː/ respectively
-2. It uses y to represent the consonant /j/, and gu, ku to represent /kʷ/, /kʷʰ/
-3. It uses both z c s and j q x to represent /ts/, /tsʰ/, /s/, with the two sets having no actual difference—they represent the same phonemes
-4. Checked tone finals use -b -d -g
+1. It uses _e_, _ê_, _é_, _ü_ to represent the vowels /ɐ/, /œː/, /ɛː/, /yː/ respectively
+2. It uses _y_ to represent the consonant /j/, and _gu_, _ku_ to represent /kʷ/, /kʷʰ/
+3. It uses both _z c s_ and _j q x_ to represent /ts/, /tsʰ/, /s/, with the two sets having no actual difference—they represent the same phonemes
+4. Checked tone finals use _-b -d -g_
 5. It doesn't distinguish between /ɵ/ and /œ/, and cannot represent the Jyutping sound _oet_
 
 Clearly, point #1 completely violates Principle #2 by using many diacritics for vowels. This seriously hinders computer information processing and makes it impossible to use for input methods. Point #3 violates Principle #1: the same phoneme is represented by different symbols. This design was originally meant to be compatible with Mandarin Pinyin, but it's completely unnecessary and actually increases confusion.
 
 Points #2 and #4 are more subjective symbol choices and can't be considered flaws. Point #5 is the same as Yale—it cannot represent the Jyutping syllables _oet_ and _eu_. Overall, points #1 and #3 are the most serious flaws, and these directly determine that the Guangzhou Romanization cannot be popularized in the information age.
 
-### Education Institute Romanization (Educomp)
+### Institute of Language in Education Romanization (Cantonese Pinyin)
 
-The Educomp romanization is another commonly used Cantonese romanization system besides Yale and Jyutping. Apart from tones, its main differences from Jyutping are:
+The Institute of Language in Education (ILE) romanization, commonly known as Cantonese Pinyin, is another commonly used Cantonese romanization system besides Yale and Jyutping. The ILE's Language Institute published the "List of Cantonese Pronunciation of Commonly-used Chinese Characters" in 1990, using numbers for tone marking. Apart from tones, its main differences from Jyutping are:
 
-1. It uses dz and ts to represent /ts/ and /tsʰ/
-2. It uses y to represent /y/
-3. It doesn't distinguish between /ɵ/ and /œ/, uniformly using oe to represent both
-4. It uses oey to represent what is _eoi_ in Jyutping
+1. It uses _dz_ and _ts_ to represent /ts/ and /tsʰ/
+2. It uses _y_ to represent /y/
+3. It doesn't distinguish between /ɵ/ and /œ/, uniformly using _oe_ to represent both
+4. It uses _oey_ to represent what is _eoi_ in Jyutping
 
-Overall, Educomp is quite close to Jyutping, with a relatively scientific design. Points #2 and #4 are subjective symbol choices, not flaws. Point #3 was already discussed above. Only point #1 is a minor flaw. Using _dz_ and _ts_—besides being unnecessarily long—also affects input method encoding. For example, many input methods have initial consonant abbreviation features. If I type `ts`, should it be recognized as the initial of "此" (this), or the initials of "聽寫" (dictation)? This increases collision rates, raises processing costs, and makes the input method harder to use.
+Overall, Cantonese Pinyin is quite close to Jyutping, with a relatively scientific design. Points #2 and #4 are subjective symbol choices, not flaws. Point #3 was already discussed above. Only point #1 is a minor flaw. Using _dz_ and _ts_—besides being unnecessarily long—also affects input method encoding. For example, many input methods have initial consonant abbreviation features. If I type `ts`, should it be recognized as the initial of "此" (this), or the initials of "聽寫" (dictation)? This increases collision rates, raises processing costs, and makes the input method harder to use.
 
 ### Hong Kong Government Cantonese Romanization / Postal Romanization
 
 The Hong Kong Government Cantonese Romanization (with Postal Romanization inheriting from the Hong Kong Government system) refers generally to the romanization used by the Hong Kong Government for spelling street names and personal names. Because it originated from early Westerners' practices of spelling Cantonese with Latin letters, it uses many diacritics, such as ' for aspiration, ò for /ou/, ü for /y/, etc. However, diacritics cannot be used in English, so Hong Kong Government documents remove all these diacritics, leading to much confusion. Additionally, the government doesn't mandate spelling in standard Guangzhou pronunciation—different people can spell using their own dialectal pronunciations, resulting in "one character having multiple spellings" and "one spelling representing different sounds," for example:
 
-- "蔡" has three spellings: Choi, Choy, Tsoi
-- "葉" has two spellings: yip, ip
-- _chun_ can represent "俊" or "珍"
-- _chai_ can represent "柴" or "仔"
+- "蔡" (coi3) has three spellings: _Choi_, _Choy_, _Tsoi_
+- "葉" (jip6) has two spellings: _Yip_, _Ip_
+- _Chun_ can represent "俊" (zeon3) or "珍" (zan1)
+- _Chai_ can represent "柴" (caai4) or "仔" (zai2)
 
 Strictly speaking, the Hong Kong Government romanization cannot be considered a romanization system because it cannot fulfill the most basic function of a romanization system—accurately and consistently representing the phonological system of a language—which means it completely violates Principle #1. Therefore, this romanization can neither serve as a dictionary system nor as an input method, giving us even more reason not to use it.
 
