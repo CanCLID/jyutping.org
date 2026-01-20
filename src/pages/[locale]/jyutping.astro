@@ -1,5 +1,4 @@
 ---
-// src/pages/[locale]/jyutping.astro
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import JyutpingPage from "@/components/JyutpingPage.tsx";
 import { I18n } from "@/i18n/utils";
@@ -7,9 +6,9 @@ import TableOfContents from "@/components/TableOfContents";
 import {
   jyutpingHeadingsTranslations,
   generateSlug,
-} from "@/i18n/jyutpingHeadings"; // Import translations and slug generator
+} from "@/i18n/jyutpingHeadings";
 
-// Define translations for the page title (can be expanded)
+
 const pageTitles: Record<string, string> = {
   en: "Jyutping Scheme",
   yue: "粵拼方案", // Should technically not be needed here
@@ -22,7 +21,7 @@ const pageTitles: Record<string, string> = {
 
 export function getStaticPaths() {
   return I18n.locales
-    .filter((locale) => locale !== I18n.defaultLocale) // Exclude default locale
+    .filter((locale) => locale !== I18n.defaultLocale)
     .map((locale) => ({
       params: { locale },
     }));
@@ -30,18 +29,15 @@ export function getStaticPaths() {
 
 const { locale } = Astro.params;
 
-// Validate locale and get title
 const validLocale = I18n.locales.includes(locale as string)
   ? locale
   : I18n.defaultLocale;
 const title = pageTitles[validLocale] || pageTitles.yue;
 
-// Get the correct heading translations for the current locale
 const t =
   jyutpingHeadingsTranslations[validLocale] || jyutpingHeadingsTranslations.en;
-const tEn = jyutpingHeadingsTranslations.en; // English for consistent slugs
+const tEn = jyutpingHeadingsTranslations.en;
 
-// Dynamically generate headings for TableOfContents based on locale
 const headings = [
   { text: t.onsetHeading, slug: generateSlug(tEn.onsetHeading), depth: 2 },
   {
@@ -58,13 +54,12 @@ const headings = [
     depth: 3,
   },
   { text: t.toneHeading, slug: generateSlug(tEn.toneHeading), depth: 2 },
-  { text: t.referenceHeading, slug: t.referenceId, depth: 2 }, // Use locale-specific ID for reference slug
+  { text: t.referenceHeading, slug: t.referenceId, depth: 2 },
 ];
 ---
 
 <BaseLayout lang={validLocale} title={title}>
   <div class="bg-[#1678d3] text-white px-4 py-6 mb-8">
-    {/* Responsive H1 with increased line spacing */}
     <h1
       class="font-chiron-hei my-4 text-5xl md:text-6xl leading-relaxed text-center container max-w-8xl mx-auto"
     >

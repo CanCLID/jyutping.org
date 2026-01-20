@@ -1,12 +1,10 @@
 ---
-// src/components/Header.astro
 import { IconMenu2 } from "@tabler/icons-react";
-import LanguageSwitcher from "@/components/LanguageSwitcher.tsx"; // Import the React component (.tsx)
+import LanguageSwitcher from "@/components/LanguageSwitcher.tsx";
 
-// Get current locale and pathname from Astro's global
 const { currentLocale, url } = Astro;
-const pathname = url.pathname; // Get the current pathname
-const locale = currentLocale || "yue"; // Fallback to default if undefined
+const pathname = url.pathname;
+const locale = currentLocale || "yue";
 
 // --- Navigation Translations (copied from Next.js layout) ---
 const navTranslations: Record<string, Record<string, string>> = {
@@ -57,19 +55,16 @@ const navTranslations: Record<string, Record<string, string>> = {
   },
 };
 
-// --- Generate Localized Nav Links ---
 const navLinkKeys = ["learn", "jyutping", "blog", "keyboard", "about"];
 const navLinks = navLinkKeys.map((key) => {
   const baseHref = `/${key}`;
-  // Prepend locale prefix only if it's not the default locale
   const href = locale === "yue" ? baseHref : `/${locale}${baseHref}`;
   return {
     href: href,
-    title: navTranslations[key]?.[locale] || key, // Fallback to key name
+    title: navTranslations[key]?.[locale] || key,
   };
 });
 
-// Determine the correct base path for the logo link
 const logoHref = locale === "yue" ? "/" : `/${locale}`;
 
 const locales = ["en", "vi", "yue", "cmn", "nan", "wuu", "yue_hans"];
@@ -80,10 +75,8 @@ const defaultLocale = "yue";
   <div class="flex justify-between items-center px-4">
     <a href={logoHref} class="text-white hover:opacity-80">
       <span class="text-3xl font-chiron-hei">粵拼</span>
-      {/* Use font class */}
     </a>
 
-    {/* Desktop Navigation */}
     <nav class="hidden md:flex space-x-12">
       {
         navLinks.map((link) => (
@@ -94,9 +87,7 @@ const defaultLocale = "yue";
       }
     </nav>
 
-    {/* Desktop Language Switcher */}
     <div class="hidden md:block">
-      {/* Use client:load to hydrate the React component */}
       <LanguageSwitcher
         locales={locales}
         defaultLocale={defaultLocale}
@@ -105,7 +96,6 @@ const defaultLocale = "yue";
       />
     </div>
 
-    {/* Mobile Menu Button */}
     <button
       type="button"
       class="md:hidden text-white cursor-pointer"

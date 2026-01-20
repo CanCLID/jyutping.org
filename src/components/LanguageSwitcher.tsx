@@ -1,14 +1,12 @@
-import type React from "react"; // Use import type
-import { useState, useEffect } from "react"; // Import hooks
+import type React from "react";
+import { useState, useEffect } from "react";
 
-// Define props interface, adding currentPathname
 interface LanguageSwitcherProps {
   locales: readonly string[];
   defaultLocale: string;
   currentPathname: string; // Passed from Astro component
 }
 
-// Define language names (copied from original)
 const languageNames: Record<string, string> = {
   yue: "粵語",
   yue_hans: "粤语简体",
@@ -22,7 +20,7 @@ const languageNames: Record<string, string> = {
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   locales,
   defaultLocale,
-  currentPathname, // Use prop here
+  currentPathname,
 }) => {
   // State to hold the determined current locale
   const [effectiveCurrentLocale, setEffectiveCurrentLocale] =
@@ -94,8 +92,8 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
     <div className="relative inline-block text-left">
       <select
         onChange={(e) => handleLocaleChange(e.target.value)}
-        value={effectiveCurrentLocale} // Use state variable
-        className="px-2 py-1 border border-white rounded-sm bg-transparent text-white" // Adjusted styling slightly
+        value={effectiveCurrentLocale}
+        className="px-2 py-1 border border-white rounded-sm bg-transparent text-white"
         aria-label="Select language"
       >
         {/* Add styles for options if needed, e.g., text color for dark mode */}

@@ -1,10 +1,9 @@
 "use client"; // This component needs client-side interactivity
 
-import type { MarkdownHeading } from "astro"; // Import Astro's MarkdownHeading type
+import type { MarkdownHeading } from "astro";
 import type React from "react";
 import { useEffect, useState } from "react";
 
-// Define props interface to accept headings from Astro
 interface Props {
   headings: MarkdownHeading[];
 }
@@ -87,9 +86,9 @@ const TableOfContents: React.FC<Props> = ({ headings }) => {
   }, [headings]); // Re-run effect if headings change
 
   const handleScrollTo = (slug: string) => (e: React.MouseEvent) => {
-    // Use slug
+   
     e.preventDefault();
-    const element = document.getElementById(slug); // Use slug
+    const element = document.getElementById(slug);
     if (element) {
       // Calculate offset based on sticky header height if necessary
       const headerOffset = 80; // Adjust based on your actual header height (make this configurable if needed)
@@ -118,17 +117,17 @@ const TableOfContents: React.FC<Props> = ({ headings }) => {
           .filter(({ depth }) => depth > 1 && depth < 4) // Only include h2 and h3
           .map((heading) => (
             <li
-              key={heading.slug} // Use slug as key
-              className={`${heading.depth === 3 ? "ml-3" : ""}`} // Indent h3
+              key={heading.slug}
+              className={`${heading.depth === 3 ? "ml-3" : ""}`}
             >
               <a
-                href={`#${heading.slug}`} // Use slug for href
-                onClick={handleScrollTo(heading.slug)} // Use slug for scroll handler
+                href={`#${heading.slug}`}
+                onClick={handleScrollTo(heading.slug)}
                 className={`block text-sm transition-colors duration-150 ease-in-out border-l-2 border-transparent hover:border-gray-400 ${
-                  activeId === heading.slug // Use slug for active check
-                    ? "font-medium text-sky-600 border-sky-600" // Style for active link
-                    : "text-gray-600 hover:text-gray-900" // Style for inactive links
-                } pl-2`} // Add padding for indentation and border visibility
+                  activeId === heading.slug
+                    ? "font-medium text-sky-600 border-sky-600"
+                    : "text-gray-600 hover:text-gray-900"
+                } pl-2`}
               >
                 {heading.text}
               </a>

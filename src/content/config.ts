@@ -1,6 +1,6 @@
 import { defineCollection, z } from "astro:content";
 
-// Define a schema for the blog collection
+
 const blogCollection = defineCollection({
   type: "content", // 'content' for Markdown/MDX files
   schema: z.object({
@@ -13,7 +13,7 @@ const blogCollection = defineCollection({
   }),
 });
 
-// Define a schema for the learn collection
+
 const learnCollection = defineCollection({
   type: "content",
   schema: z.object({

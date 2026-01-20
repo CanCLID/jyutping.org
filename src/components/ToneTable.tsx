@@ -1,4 +1,4 @@
-import Audio from "./Audio.tsx"; // Import the existing Audio component
+import Audio from "./Audio.tsx";
 
 const ToneTable = () => {
   return (
