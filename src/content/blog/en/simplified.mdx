@@ -1,0 +1,68 @@
+---
+title: Why are Simplified Characters unsuitable for writing Cantonese?
+linkTitle: Why are Simplified Characters unsuitable for writing Cantonese?
+url: /en/blog/simplified
+weight: 4
+description: |
+  The Simplified Chinese Character scheme was designed specifically for Mandarin and is problematic when used to write Cantonese.
+---
+
+import Alert from "@/components/Alert.tsx";
+
+The _Chinese Character Simplification Scheme_ currently in use in mainland China was formulated by the Committee for Research on Chinese Language Reform in the 1950s. Its design inherited from the simplified character tables of the National Language Unification Preparatory Committee. Among these simplified characters, some were simplified based on the principle of [merging homophones](https://en.wikipedia.org/wiki/Merge_of_homophonous_characters_in_simplified_Chinese), serving as a transitional step toward the ultimate goal of [Romanization of Chinese](https://en.wikipedia.org/wiki/Romanization_of_Chinese).
+
+This simplification method has two problems. First, **the merging of homophones is based on Mandarin/Guoyu pronunciation, without considering the pronunciations of non-Mandarin languages**. Therefore, if simplified characters are used to write Cantonese, many characters that have different pronunciations and meanings in Cantonese will be merged into one form, increasing ambiguity and unnecessarily raising communication and learning costs. **The most common examples include:**
+
+- 松鼠 (cung4 syu2, pine squirrel) being misread as 鬆鼠 (sung1 syu2, loose squirrel)
+- 鬍鬚 (wu4 sou1, beard) being misread as 鬍須 (wu4 seoi1, beard must)
+- 錶面 (biu1 min2, watch face) and 表面 (biu2 min6, surface) becoming indistinguishable
+- 船隻進入運河 (syun4 zek3 zeon3 jap6 wan6 ho4, ships enter the canal) becoming ambiguous as 船只进入运河 (syun4 zi2 zeon3 jap6 wan6 ho4, ship only enter canal)
+
+Table 1 below documents all such characters.
+
+The second problem is that the simplified character scheme also includes characters simplified by changing phonetic components, and these phonetic component changes are often based on Mandarin pronunciation. This causes **the phonetic components of simplified characters to conflict with actual Cantonese pronunciation. For example, "warship" 軍艦 (gwan1 laam6) simplified to "军舰" is easily misread by beginners as "军见" (gwan1 gin3)**. Table 2 below summarizes some such characters. Due to the large number, this is an incomplete list, and community contributions are welcome.
+
+## Table 1: Characters merged as homophones in Mandarin in the Simplified Character Scheme but with different pronunciations in Cantonese
+
+| Simplified Character & Pinyin | Traditional Characters & Jyutping | Cantonese Word Distinction Examples                                                                                                                                |
+| ----------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 卜 bó / bǔ                    | 蔔 baak6 卜 buk1                  | Radish <ruby>蔔<rt>baak6</rt></ruby>; Divination <ruby>卜<rt>buk1</rt></ruby>                                                                                      |
+| 斗 dǒu / dòu                  | 鬥 dau3 斗 dau2                   | Fight <ruby>鬥<rt>dau3</rt></ruby>; Bamboo hat <ruby>斗<rt>dau2</rt></ruby>                                                                                        |
+| 复 fù                         | 複 fuk1 復 fuk6                   | Copy <ruby>複<rt>fuk1</rt></ruby>; Recover <ruby>復<rt>fuk6</rt></ruby>                                                                                              |
+| 里 lǐ                         | 里 lei5 裏 leoi5                  | Kilometer <ruby>里<rt>lei5</rt></ruby>; Inside <ruby>裏<rt>leoi5</rt></ruby>                                                                                       |
+| 表 biǎo                       | 表 biu2 錶 biu1                   | Perform <ruby>表<rt>biu2</rt></ruby>; Wristwatch <ruby>錶<rt>biu1</rt></ruby>                                                                                      |
+| 干 gān / gàn                  | 干 gon1 乾 gon1/kin4 幹 gon3      | Shield <ruby>干<rt>gon1</rt></ruby>; Main trunk <ruby>幹<rt>gon3</rt></ruby>; Dry <ruby>乾<rt>gon1</rt></ruby>                                                     |
+| 仆 pū / pú                    | 仆 puk1 僕 buk6                   | Fall down <ruby>仆<rt>puk1</rt></ruby>; Servant <ruby>僕<rt>buk6</rt></ruby>                                                                                       |
+| 松 sōng                       | 鬆 sung1 松 cung4                 | Loose <ruby>鬆<rt>sung1</rt></ruby>; Pine tree <ruby>松<rt>cung4</rt></ruby>                                                                                       |
+| 坛 tán                        | 罈 taam4 壇 taan4                 | Wine jar <ruby>罈<rt>taam4</rt></ruby>; Altar <ruby>壇<rt>taan4</rt></ruby>                                                                                        |
+| 系 xì                         | 係繫系 hai6 喺 hai2               | To be <ruby>係<rt>hai6</rt></ruby>; Connect <ruby>繫<rt>hai6</rt></ruby>; System <ruby>系<rt>hai6</rt></ruby>; Located at <ruby>喺<rt>hai2</rt></ruby>            |
+| 吓 xià                        | 嚇 haak3 吓 haa2/haa5             | Scare <ruby>嚇<rt>haak3</rt></ruby>; Particle <ruby>吓<rt>haa2</rt></ruby>                                                                                         |
+| 须 xū                         | 須 seoi1 鬚 sou1                  | Must <ruby>須<rt>seoi1</rt></ruby>; Beard/whisker <ruby>鬚<rt>sou1</rt></ruby>                                                                                     |
+| 涌 yǒng / chōng               | 涌 cung1 湧 jung2                 | Creek <ruby>涌<rt>cung1</rt></ruby>; Surge <ruby>湧<rt>jung2</rt></ruby>                                                                                           |
+| 郁 yù                         | 鬱 wat1 郁 juk1                   | Melancholy <ruby>鬱<rt>wat1</rt></ruby>; Luxuriant <ruby>郁<rt>juk1</rt></ruby>                                                        |
+| 脏 zāng / zàng                | 髒 zong1 臟 zong6                 | Dirty <ruby>髒<rt>zong1</rt></ruby>; Viscera <ruby>臟<rt>zong6</rt></ruby>                                                                                         |
+| 折 zhé                        | 折 zit3 摺 zip3                   | Bend <ruby>折<rt>zit3</rt></ruby>; Fold <ruby>摺<rt>zip3</rt></ruby>                                                                                               |
+| 症 zhēng / zhèng              | 癥 zing1 症 zing3                 | Mass/obstruction <ruby>癥<rt>zing1</rt></ruby>; Symptom <ruby>症<rt>zing3</rt></ruby>                                                                              |
+| 只 zhī / zhǐ                  | 只 zi2 隻 zek3                    | Only <ruby>只<rt>zi2</rt></ruby>; (classifier) <ruby>隻<rt>zek3</rt></ruby>                                                                                        |
+
+## Table 2: Characters in the Simplified Character Scheme simplified according to Mandarin pronunciation, causing phonetic conflicts with Cantonese
+
+This table is an incomplete list; contributions are welcome.
+
+| Traditional Character & Jyutping | Simplified Character & Pinyin   | Explanation                                                                                             |
+| -------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| 壩 baa3                          | 坝 bà                           | Phonetic component "霸" simplified to "贝," final changed from _aa_ to _ui_                                 |
+| 補 bou2                          | 补 bǔ                           | Phonetic component "甫" simplified to "卜," final changed from _ou_ to _uk_                                 |
+| 殲纖 cim1 懺 caam3               | 纤 xiān 歼 jiān 忏 chàn         | Phonetic component "韱" simplified to "千" based on Mandarin, final changed from _m_ to _n_                 |
+| 擔 daam1 膽 daam2                | 担 dān 胆 dǎn                   | Phonetic component "詹" simplified to "旦," final changed from _m_ to _n_                                   |
+| 燈 dang1                         | 灯 dēng                         | Phonetic component "登" simplified to "丁," final changed from _ang_ to _ing_                               |
+| 櫃 gwai6                         | 柜 guì                          | Phonetic component "貴" simplified to "巨," final changed from _wai_ to _eoi_                               |
+| 嚇 haak3                         | 吓 xià                          | Phonetic component "赫" simplified to "下," final changed from _aak_ to _aa_                                |
+| 艦 laam6                         | 舰 jiàn                         | Phonetic component "監" simplified to "见" based on Mandarin, final changed from _aam_ to _in_              |
+| 鄰 leon4                         | 邻 lín                          | Phonetic component "粦" simplified to "令," final changed from _eon_ to _ing_                               |
+| 撲樸 pok3                        | 扑 pū 朴 pǔ                     | Phonetic component "菐" simplified to "卜," final changed from _ok_ to _uk_                                 |
+| 燭觸 zuk1 獨 duk6                | 烛 zhú 触 chù 独 dú             | Phonetic component "蜀" simplified to "虫," final changed from _uk_ to _ung_                                |
+
+<Alert title="Simplified Chinese version of this site">
+  Although this site provides a [Simplified Chinese Cantonese version](/yue_hans), it is only for beginners' transitional adaptation. Using traditional characters makes it easier to learn Cantonese pronunciation patterns. Learners should aim to ultimately write Cantonese with traditional characters.
+</Alert>
