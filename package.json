@@ -9,23 +9,22 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.9",
-    "@astrojs/mdx": "^4.3.6",
+    "@astrojs/cloudflare": "^12.6.12",
+    "@astrojs/mdx": "^4.3.13",
     "@astrojs/partytown": "^2.1.4",
-    "@astrojs/react": "^4.4.0",
-    "@astrojs/sitemap": "^3.6.0",
-    "@tabler/icons-react": "^3.35.0",
-    "@tailwindcss/vite": "^4.1.13",
-    "@types/react": "^19.1.15",
-    "@types/react-dom": "^19.1.9",
-    "astro": "^5.15.9",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/sitemap": "^3.7.0",
+    "@tabler/icons-react": "^3.36.1",
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/react": "^19.2.9",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.16.15",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "remark-gfm": "^4.0.1",
-    "tailwindcss": "^4.1.13"
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.4",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   }
 }
