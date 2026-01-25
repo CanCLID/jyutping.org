@@ -290,6 +290,32 @@ const translations: Record<string, KeyboardPageTranslation> = {
     googleTranslate: "Google 翻译粤语",
     converter: "粤拼转换器",
   },
+  jp: {
+    introLinks: "粤拼入力方法",
+    sogouTitle: "Sogou IME",
+    sogouAppStoreButton: "App Storeでダウンロード",
+    sogouAppStoreNote: "v10.11以降のバージョンは粤拼をサポートしています",
+    sogouApkButton: "公式サイトからAPKをダウンロード",
+    sogouApkNote: "v10.10以降のバージョンは粤拼をサポートしています",
+    sogouInstructions:
+      "ダウンロード後、「言語設定」で「中国語-広東語」を選択し、T9またはフルキーボードを選択すると、粤拼で入力できます。",
+    typeduckTitle: "TypeDuck IME",
+    typeduckWeb: "ブラウザで今すぐ入力",
+    typeduckDownload: "全プラットフォームダウンロード",
+    appJyutpingTitle: "粤拼アプリ",
+    appJyutpingAppStoreButton: "App Store",
+    appJyutpingGooglePlayButton: "Google Play",
+    appJyutpingWebsiteDownload: "jyutping.app",
+    gboardTitle: "Gboard 粤拼",
+    gboardAppStoreButton: "App Store",
+    gboardGooglePlayButton: "Google Play",
+    cantoboardTitle: "Cantoboard",
+    cantoboardAppStoreButton: "App Store",
+    toolsTitle: "辞書とツール",
+    resourceTitle: "学習リソース",
+    googleTranslate: "Google翻訳 広東語",
+    converter: "粤拼変換ツール",
+  },
 };
 
 interface KeyboardPageProps {

@@ -15,6 +15,7 @@ const languageNames: Record<string, string> = {
   cmn: "普通话/國語",
   nan: "臺灣閩南語",
   wuu: "吳語",
+  jp: "日本語",
 };
 
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({

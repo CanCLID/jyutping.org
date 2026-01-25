@@ -568,6 +568,94 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
     ),
 
   },
+  jp: {
+    intro:
+      "「香港言語学会広東語ローマ字表記法」、略称「粤拼（ユッピン）」。",
+    alertIpaTitle: "IPA 表記について",
+    alertIpaContent: (
+      <p>
+        このページで使用されている国際音声記号（IPA）はすべて音素表記です。音声データは{" "}
+        <a
+          href="https://words.hk/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          粵典 words.hk
+        </a>{" "}
+        から提供されています。詳細は{" "}
+        <a href="#references-jp" className="text-blue-600 hover:underline">
+          参考文献
+        </a>{" "}
+        をご覧ください。
+      </p>
+    ),
+    onsetTableHeaders: [
+      "両唇音",
+      "唇歯音",
+      "歯茎音",
+      "硬口蓋音",
+      "軟口蓋音",
+      "声門音",
+    ],
+    onsetRowHeaders: [
+      "破裂音",
+      "破擦音",
+      "鼻音",
+      "摩擦音",
+      "接近音",
+      "側面接近音",
+    ],
+    alertNullInitial: (
+      <p>
+        ゼロ声母（声母なし）は文字で表記しません。例えば「呀」は aa とだけ表記します。
+      </p>
+    ),
+    codaRowHeaders: ["破裂音", "鼻音", "母音"],
+    finalsChartColHeaders1: [
+      "単母音",
+      "二重母音",
+      "鼻音韻尾",
+      "破裂音韻尾（入声韻）",
+    ],
+    finalsChartColHeaders2: [
+      "-",
+      "-i",
+      "-u",
+      "-m",
+      "-n",
+      "-ng",
+      "-p",
+      "-t",
+      "-k",
+    ],
+    finalsChartRowHeader: "韻腹",
+    alertAddedFinals: (
+      <p>
+        <strong>a</strong> と <strong>oet</strong> は 2018 年に追加されました。詳細は{" "}
+        <a
+          href="https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          こちら
+        </a>{" "}
+        をご覧ください。
+      </p>
+    ),
+    toneTableHeaders: ["平", "上", "去", "入"],
+    toneRowHeaders: ["陰", "陽"],
+    alertToneMarks: (
+      <>
+        <p>声調は音節の末尾に数字で表記します。</p>
+        <p>
+          <strong>例：</strong>
+          fu1（夫）、fu2（虎）、fu3（副）、fu4（扶）、fu5（婦）、fu6（父）
+        </p>
+      </>
+    ),
+  },
 };
 
 interface JyutpingPageProps {
