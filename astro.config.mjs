@@ -18,7 +18,7 @@ export default defineConfig({
   // Add i18n configuration
   i18n: {
     // An array of supported locales
-    locales: ['en', 'vi', 'yue', 'cmn', 'nan', 'wuu', 'yue_hans', 'jp'],
+    locales: ['en', 'vi', 'yue', 'cmn', 'nan', 'wuu', 'yue_hans', 'ja'],
     // The default locale
     defaultLocale: 'yue',
     // Strategy for routing locales

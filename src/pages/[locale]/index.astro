@@ -6,7 +6,7 @@ import { I18n } from "@/i18n/utils";
 
 import CmnIndexPage from "@/components/index-pages/CmnIndexPage.tsx";
 import EnIndexPage from "@/components/index-pages/EnIndexPage.tsx";
-import JpIndexPage from "@/components/index-pages/JpIndexPage.tsx";
+import JaIndexPage from "@/components/index-pages/JaIndexPage.tsx";
 import NanIndexPage from "@/components/index-pages/NanIndexPage.tsx";
 import ViIndexPage from "@/components/index-pages/ViIndexPage.tsx";
 import WuuIndexPage from "@/components/index-pages/WuuIndexPage.tsx";
@@ -37,7 +37,7 @@ const pageTitles: Record<string, string> = {
   vi: "Việt bính - Phiên âm tiếng Quảng Đông",
   wuu: "粤拼 - 粤语拼音方案",
   yue_hans: "粤拼 - 粤语拼音方案",
-  jp: "粤拼 - 広東語ローマ字表記法",
+  ja: "粤拼 - 広東語ローマ字表記法",
 };
 const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English title
 ---
@@ -50,5 +50,5 @@ const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English t
   {validLocale === "vi" && <ViIndexPage client:load />}
   {validLocale === "wuu" && <WuuIndexPage client:load />}
   {validLocale === "yue_hans" && <YueHansIndexPage client:load />}
-  {validLocale === "jp" && <JpIndexPage client:load />}
+  {validLocale === "ja" && <JaIndexPage client:load />}
 </BaseLayout>

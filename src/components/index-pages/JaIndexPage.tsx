@@ -9,7 +9,7 @@ import {
 } from "@tabler/icons-react";
 import type React from "react";
 
-const JpIndexPage: React.FC = () => {
+const JaIndexPage: React.FC = () => {
 	return (
 		<div className="mx-auto px-4 py-8 bg-[#1678d3] text-white">
 			<h1 className="font-chiron-hei text-8xl my-16 mx-auto text-center">
@@ -56,7 +56,7 @@ const JpIndexPage: React.FC = () => {
 			</div>
 			<div className="flex flex-wrap justify-center my-8 gap-4">
 				<a
-					href="/jp/learn"
+					href="/ja/learn"
 					className="text-2xl text-center bg-yellow-300 text-neutral-800 hover:bg-yellow-400 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
 				>
 					粤拼を学ぶ
@@ -66,14 +66,14 @@ const JpIndexPage: React.FC = () => {
 			<span className="text-2xl text-center mx-auto block my-4">または</span>
 			<div className="flex flex-wrap flex-col items-center justify-center my-8 gap-6">
 				<a
-					href="/jp/jyutping"
+					href="/ja/jyutping"
 					className="w-fit text-2xl text-center bg-[#6CAF59] hover:bg-[#CBF2AE] active:bg-[#CBF2AE] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
 				>
 					粤拼方案を見る
 					<IconTable className="ml-2 flex-shrink-0" />
 				</a>
 				<a
-					href="/jp/keyboard"
+					href="/ja/keyboard"
 					className="w-fit text-2xl text-center bg-[#cadd7a] hover:bg-[#e9f1c8] active:bg-[#e9f1c8] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
 				>
 					粤拼リソース
@@ -113,4 +113,4 @@ const JpIndexPage: React.FC = () => {
 	);
 };
 
-export default JpIndexPage;
+export default JaIndexPage;

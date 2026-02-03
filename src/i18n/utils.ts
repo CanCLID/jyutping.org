@@ -2,7 +2,7 @@
 
 
 export const I18n = {
-  locales: ["en", "vi", "yue", "cmn", "nan", "wuu", "yue_hans", "jp"],
+  locales: ["en", "vi", "yue", "cmn", "nan", "wuu", "yue_hans", "ja"],
   defaultLocale: "yue",
 };
 

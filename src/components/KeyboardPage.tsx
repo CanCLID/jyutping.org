@@ -290,7 +290,7 @@ const translations: Record<string, KeyboardPageTranslation> = {
     googleTranslate: "Google 翻译粤语",
     converter: "粤拼转换器",
   },
-  jp: {
+  ja: {
     introLinks: "粤拼入力方法",
     sogouTitle: "Sogou IME",
     sogouAppStoreButton: "App Storeでダウンロード",
