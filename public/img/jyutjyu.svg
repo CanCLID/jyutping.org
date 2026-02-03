@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 64" aria-hidden="true">
+  <style>
+    @font-face {
+      font-family: 'R';
+      src: url('/R.woff2') format('woff2');
+      font-display: swap;
+    }
+  </style>
+  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle"
+        font-family="R" font-size="56" fill="#2563EB">粵語辭叢</text>
+</svg>

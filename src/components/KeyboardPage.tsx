@@ -70,9 +70,7 @@ const DownloadButton: React.FC<{
     >
       <Icon
         className={`mr-2 h-5 w-5 ${
-          variant === "firefox"
-            ? "text-purple-500 group-hover:text-white"
-            : ""
+          variant === "firefox" ? "text-purple-500 group-hover:text-white" : ""
         }`}
       />
       {text}
@@ -105,7 +103,6 @@ interface KeyboardPageTranslation {
   googleTranslate: string;
   converter: string;
 }
-
 
 const translations: Record<string, KeyboardPageTranslation> = {
   en: {
@@ -308,7 +305,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
           </span>
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="p-4 ">
+          <div className="p-4">
             <h2 className="text-2xl font-semibold my-4">{t.sogouTitle}</h2>
             <h3 className="font-semibold my-2">iOS</h3>
             <div className="mb-4">
@@ -330,9 +327,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
                 text={t.sogouApkButton}
                 variant="android"
               />
-              <p className="text-sm text-gray-600 mt-1">
-                {t.sogouApkNote}
-              </p>
+              <p className="text-sm text-gray-600 mt-1">{t.sogouApkNote}</p>
             </div>
             <p className="text-sm text-gray-700">{t.sogouInstructions}</p>
           </div>
@@ -358,7 +353,9 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
             </div>
           </div>
           <div className="p-4 ">
-            <h2 className="text-2xl font-semibold my-4">{t.appJyutpingTitle}</h2>
+            <h2 className="text-2xl font-semibold my-4">
+              {t.appJyutpingTitle}
+            </h2>
             <h3 className="font-semibold my-2">iOS</h3>
             <div className="mb-4">
               <DownloadButton
@@ -424,7 +421,8 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </div>
           </div>
-          <div className="p-4 ">
+          {/* Cantoboard */}
+          <div className="p-4">
             <h2 className="text-2xl font-semibold my-4">{t.cantoboardTitle}</h2>
             <h3 className="font-semibold my-2">iOS</h3>
             <div className="mb-4">
@@ -436,8 +434,49 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </div>
           </div>
+          {/* LearnDuck */}
+          <div className="flex flex-col items-center p-4">
+            <h3 className="my-4 text-2xl font-semibold">
+              LearnDuck 粵拼打字入門
+            </h3>
+            <a
+              href="https://chaaklau.github.io/LearnDuck/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
+            >
+              <img
+                src="/img/learnduck.png"
+                alt="LearnDuck 粵拼打字入門"
+                width={320}
+                height={320}
+                className="rounded-lg shadow-sm max-w-full h-auto hover:shadow-md mx-auto"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          {/* Jyutping.io */}
+          <div className="flex flex-col items-center p-4">
+            <h3 className="my-4 text-2xl font-semibold">粵拼打字練習工具</h3>
+            <a
+              href="https://jyutping.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
+            >
+              <img
+                src="/img/jyutping-io-logo-with-bar.svg"
+                alt="粵拼打字練習工具"
+                width={320}
+                height={320}
+                className="rounded-lg max-w-full h-auto hover:shadow-md mx-auto p-8"
+                loading="lazy"
+              />
+            </a>
+          </div>
         </div>
       </div>
+      {/* Dictionaries and Tools */}
       <div className="my-8 p-8 border border-gray-300 border-dashed rounded-md mx-auto">
         <h2 className="my-4 text-4xl font-semibold mx-auto text-center">
           <span className="inline-flex items-center font-semibold">
@@ -461,6 +500,27 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
                 alt="粵音資料集叢"
                 width={1920}
                 height={1080}
+                className="rounded-lg shadow-sm hover:shadow-md max-w-full h-auto mx-auto"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <div className="flex flex-col items-center p-4 ">
+            <h3 className="my-4 text-2xl font-semibold">
+              粵語辭叢
+            </h3>
+            <a
+              href="https://jyutjyu.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
+            >
+              {/* Use standard img tag */}
+              <img
+                src="/img/jyutjyu.svg"
+                alt="粵語辭叢 jyutjyu.com"
+                width={512}
+                height={512}
                 className="rounded-lg shadow-sm hover:shadow-md max-w-full h-auto mx-auto"
                 loading="lazy"
               />
@@ -643,27 +703,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
-          {/* LearnDuck */}
-          <div className="flex flex-col items-center p-4">
-            <h3 className="my-4 text-2xl font-semibold">
-              LearnDuck 粵拼打字入門
-            </h3>
-            <a
-              href="https://chaaklau.github.io/LearnDuck/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
-            >
-              <img
-                src="/img/learnduck.png"
-                alt="LearnDuck 粵拼打字入門"
-                width={640}
-                height={640}
-                className="rounded-lg shadow-sm max-w-full h-auto hover:shadow-md"
-                loading="lazy"
-              />
-            </a>
-          </div>
+
           <div className="flex flex-col items-center p-4">
             <h3 className="my-4 text-2xl font-semibold">
               粵拼字體 visual-fonts.com
