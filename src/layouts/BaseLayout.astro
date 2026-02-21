@@ -110,16 +110,17 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     font-display: swap; /* Use swap to prevent blocking */
   }
 
-  html {
-    font-family: "Chiron Hei HK WS", system-ui, sans-serif;
-    background-size: 224px;
-  }
-
-  /* Apply Chiron Hei HK as a primary font, similar to original */
-  body {
-    font-family:
-      "Chiron Hei HK WS",
-      /* Added fallback */ system-ui,
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+    --fallback-fonts:
+      system-ui,
       -apple-system,
       BlinkMacSystemFont,
       "Segoe UI",
@@ -132,23 +133,17 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
       sans-serif;
   }
 
-  /* Specific class for Chiron Hei HK if needed */
-  .font-chiron-hei {
-    font-family:
-      "Chiron Hei HK Jyutping",
-      system-ui,
-      -apple-system;
+  html {
+    font-family: var(--fallback-fonts);
+    background-size: 224px;
   }
 
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
+  html:not(:lang(ja)), html :not(:lang(ja)) {
+    font-family: "Chiron Hei HK WS", var(--fallback-fonts);
+  }
+
+  .font-jyutping {
+    font-family: "Chiron Hei HK Jyutping", var(--fallback-fonts);
   }
 
   /* --- Custom Horizontal Slide View Transitions --- */ /* Re-enabled */
