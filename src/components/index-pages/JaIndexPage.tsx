@@ -12,10 +12,10 @@ import type React from "react";
 const JaIndexPage: React.FC = () => {
 	return (
 		<div className="mx-auto px-4 py-8 bg-[#1678d3] text-white">
-			<h1 className="font-chiron-hei text-8xl my-16 mx-auto text-center">
+			<h1 className="font-jyutping text-8xl my-16 mx-auto text-center">
 				粵拼
 			</h1>
-			<p className="font-chiron-hei text-4xl my-8 mx-auto text-center">
+			<p className="font-jyutping text-4xl my-8 mx-auto text-center">
 				広東語の標準ローマ字表記法
 			</p>
 			<div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-16 items-center p-6 max-w-5xl mx-auto">

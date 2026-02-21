@@ -89,14 +89,14 @@ function TextWithAudioAndJyutPing({ children }: { children: string }) {
             )}
             {/* Character */}
             {item.char.length === 2 && /^\d$/.test(item.char[1]) ? (
-              <span className="text-4xl font-chiron-hei my-1">
+              <span className="text-4xl font-jyutping my-1">
                 <span>{item.char[0]}</span>
                 {!isSafari && (
                   <span className="select-none">{item.char[1]}</span>
                 )}
               </span>
             ) : (
-              <span className="text-4xl font-chiron-hei my-1">{item.char}</span>
+              <span className="text-4xl font-jyutping my-1">{item.char}</span>
             )}
           </div>
         ))}
