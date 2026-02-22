@@ -8,6 +8,7 @@ interface AboutPageTranslation {
   acknowledgementsP3: string;
   acknowledgementsP4: string;
   acknowledgementsP5: string;
+  acknowledgementsP6: string;
   developContributeTitle: string;
   developContributeP1: string;
   emailText: React.ReactNode;
@@ -56,6 +57,7 @@ const translations: Record<string, AboutPageTranslation> = {
     acknowledgementsP3: "感谢 Lim Hian-tong 先生提供本站台湾闽南语版本。",
     acknowledgementsP4: "感谢具区句鱼先生提供本站吴语版本。",
     acknowledgementsP5: "感谢以成提供本站越南语版本。",
+    acknowledgementsP6: "感谢 Choco Chu 及 graphemecluster 提供本站日语版本。",
     developContributeTitle: "开发及贡献",
     developContributeP1: "如果你想支持粤拼或参与到我们的事务中，你可以：",
     emailText: (
@@ -142,6 +144,7 @@ const translations: Record<string, AboutPageTranslation> = {
       "Thank Mr. 具區句魚 for providing the Wu version of this site.",
     acknowledgementsP5:
       "Thank 以成 (Wong Yising) for providing the Vietnamese version of this site.",
+    acknowledgementsP6: "Thank Choco Chu and graphemecluster for providing the Japanese version of this site.",
     developContributeTitle: "Develop and Contribute",
     developContributeP1:
       "If you want to get involved or support Jyutping, you can:",
@@ -225,6 +228,7 @@ const translations: Record<string, AboutPageTranslation> = {
       "Lim Hian-tong 氏には台湾閩南語版のご提供に感謝いたします。",
     acknowledgementsP4: "具區句魚氏には呉語版のご提供に感謝いたします。",
     acknowledgementsP5: "以成氏にはベトナム語版のご提供に感謝いたします。",
+    acknowledgementsP6: "Choco Chu 氏とぐらふぃーむ氏には日本語版のご提供に感謝いたします。",
     developContributeTitle: "開発と貢献",
     developContributeP1:
       "粤拼の利用促進や私たちの取り組みへご協力いただける場合は、ぜひ以下をご検討ください：",
@@ -302,6 +306,7 @@ const translations: Record<string, AboutPageTranslation> = {
     acknowledgementsP3: "感謝 Lim Hian-tong 先生提供本站臺灣閩南語版本。",
     acknowledgementsP4: "感謝具區句魚先生提供本站吳語版本。",
     acknowledgementsP5: "感謝以成提供本站越南語版本。",
+    acknowledgementsP6: "感謝 Choco Chu 佮 graphemecluster 提供本站日語版本。",
     developContributeTitle: "開發佮貢獻",
     developContributeP1: "你若想欲支持粵拼抑是參與阮的事務，你會當：",
     emailText: (
@@ -388,6 +393,8 @@ const translations: Record<string, AboutPageTranslation> = {
       "Cảm ơn Ông 具區句魚 đã cung cấp phiên bản tiếng Ngô của trang web này.",
     acknowledgementsP5:
       "Cảm ơn 以成 (Dĩ Thành) đã cung cấp phiên bản tiếng Việt của trang web này.",
+    acknowledgementsP6:
+      "Cảm ơn Choco Chu và graphemecluster đã cung cấp phiên bản tiếng Nhật của trang web này.",
     developContributeTitle: "Phát triển và đóng góp",
     developContributeP1:
       "Nếu bạn muốn tham gia hoặc hỗ trợ Việt bính, bạn có thể:",
@@ -471,6 +478,7 @@ const translations: Record<string, AboutPageTranslation> = {
     acknowledgementsP3: "感謝 Lim Hiantong 先生提供本站臺灣閩南語版本。",
     acknowledgementsP4: "感謝具區句魚先生提供本站吳語版本。",
     acknowledgementsP5: "感謝以成提供本站越南語版本。",
+    acknowledgementsP6: "感謝 Choco Chu 搭 graphemecluster 提供本站日語版本。",
     developContributeTitle: "開發搭貢獻",
     developContributeP1: "假使儂想支持粵拼或參與我伲个事務，好：",
     emailText: (
@@ -553,6 +561,7 @@ const translations: Record<string, AboutPageTranslation> = {
     acknowledgementsP3: "感謝 Lim Hian-tong 先生提供本站臺灣閩南語版本。",
     acknowledgementsP4: "感謝具區句魚先生提供本站吳語版本。",
     acknowledgementsP5: "感謝以成提供本站越南語版本。",
+    acknowledgementsP6: "感謝 Choco Chu 同 graphemecluster 提供本站日語版本。",
     developContributeTitle: "開發同貢獻",
     developContributeP1: "若果閣下想支持粵拼或者參與我哋嘅事務，你可以：",
     emailText: (
@@ -635,6 +644,7 @@ const translations: Record<string, AboutPageTranslation> = {
     acknowledgementsP3: "感谢 Lim Hian-tong 先生提供本站台湾闽南语版本。",
     acknowledgementsP4: "感谢具区句鱼先生提供本站吴语版本。",
     acknowledgementsP5: "感谢以成提供本站越南语版本。",
+    acknowledgementsP6: "感谢 Choco Chu 同 graphemecluster 提供本站日语版本。",
     developContributeTitle: "开发同贡献",
     developContributeP1: "若果阁下想支持粤拼或者参与我哋嘅事务，你可以：",
     emailText: (
@@ -700,6 +710,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ locale }) => {
             <li>{t.acknowledgementsP3}</li>
             <li>{t.acknowledgementsP4}</li>
             <li>{t.acknowledgementsP5}</li>
+            <li>{t.acknowledgementsP6}</li>
           </ul>
         </div>
         {/* Develop & Contribute Column */}
