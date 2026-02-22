@@ -1,0 +1,330 @@
+---
+title: 日本語話者のための広東語発音ガイド
+description: >
+  広東語の発音を身につけるための必要最小限の知識。これだけ覚えて広東語の発音をマスターしましょう！
+---
+
+import Alert from "@/components/Alert.tsx";
+import Audio from "@/components/Audio.tsx";
+import ExampleCharacterGrid from "@/components/ExampleCharacterGrid.tsx";
+import ExampleCharacterItem from "@/components/ExampleCharacterItem.tsx";
+import SampleText from "@/components/SampleText.tsx";
+import ToneTable from "@/components/ToneTable.tsx";
+
+## はじめに
+
+日本語のような漢字で書く言語を学ぶには、発音表記は欠かせないものです。日本語では仮名文字がそれにあたりますが、中国語は特にローマ字表記が向いています。
+
+広東語にはいくつかのローマ字表記法がありますが、特に広く使われているのが<strong><ruby>粤拼<rt>ユーッペン</rt></ruby></strong>です。
+
+この記事は日本語話者を対象とし、日本語のローマ表記との違いや見慣れないかもしれない表記だけ取り上げて、「これさえ学べば広東語が<ruby className="[ruby-align:center] [ruby-position:under]">話せる<rt>＝読み上げられる</rt></ruby>！」分の知識を粤拼を通じてわかりやすく伝えます。
+
+<Alert color="primary">
+  広東語は到底日本語とは異なる言語なので、日本語にない音もやはりありますが、それを身につけるのも言語学習の醍醐味でしょう。
+</Alert>
+
+<Alert color="success">
+  💡 国際音声記号（IPA）の読める方は、直接[粤拼便覧](/ja/jyutping)をご一読の方が速いかもしれません。
+</Alert>
+
+## 鉄則：音の組み合わせ
+
+広東語は多くの漢諸語のように、音声では漢字一文字ごとに１拍を取るので、一文字で一つのまとまりに聞こえます。これを「**音節**」といい、広東語の場合、必ず
+
+<div className="sm:text-xl">
+- 「（<ruby className="text-yellow-600 font-semibold [ruby-align:center] [ruby-position:under]">頭子音<rt>任意</rt></ruby>　＋）　<ruby className="text-cyan-600 font-semibold [ruby-align:center] [ruby-position:under]">母音<rt>必須</rt></ruby>　（＋<ruby className="text-slate-500 font-semibold [ruby-align:center] [ruby-position:under]">末尾子音<rt>任意</rt></ruby>）」
+- 「（<ruby className="text-yellow-600 font-semibold [ruby-align:center] [ruby-position:under]">頭子音<rt>任意</rt></ruby> <small className="text-yellow-600 font-semibold">h</small> ＋）　<ruby className="text-slate-500 font-semibold [ruby-align:center] [ruby-position:under]">末尾子音<rt>必須</rt></ruby> <small className="text-slate-500 font-semibold">m または ng 　　</small>」
+</div>
+
+のいずれかの組み合わせに「<strong className="text-orange-600">声調</strong>」（音の高さ）を全体にかけることで音節を成します。
+
+<table className="[&_td]:!text-center [&_td]:!p-0.5 !border-0">
+  <tbody>
+    <tr>
+      <td colspan="3" lang="yue" className="text-5xl/relaxed">便</td>
+    </tr>
+    <tr>
+      <td colspan="3" className="text-xl">音節</td>
+    </tr>
+    <tr>
+      <td rowspan="2" className="text-xl text-yellow-600 !border-b-0 pb-0">声母</td>
+      <td colspan="2" className="text-xl">韻母</td>
+    </tr>
+    <tr className="[&_td]:!border-b-0 [&_td]:!pb-0">
+      <td className="text-xl text-cyan-600">韻腹</td>
+      <td className="text-xl text-slate-500">韻尾</td>
+    </tr>
+    <tr className="[&_td]:!border-y-0 [&_td]:!pt-0">
+      <td className="text-xs text-yellow-600">（頭子音）</td>
+      <td className="text-xs text-cyan-600">（母音）</td>
+      <td className="text-xs text-slate-500">（末尾子音）</td>
+    </tr>
+    <tr className="[&_td]:!border-t-0 text-3xl">
+      <td lang="yue-Latn-jyutping" className="font-semibold text-yellow-600">b</td>
+      <td lang="yue-Latn-jyutping" className="font-semibold text-cyan-600">i</td>
+      <td lang="yue-Latn-jyutping" className="font-semibold text-slate-500">n</td>
+      <td className="text-sm !border-0 align-bottom"><Audio client:load id="bin6" /></td>
+    </tr>
+    <tr className="[&_td]:!border-b-0">
+      <td colspan="3" lang="yue-Latn-jyutping" className="text-3xl font-semibold text-orange-600">6</td>
+    </tr>
+    <tr className="[&_td]:!border-t-0">
+      <td colspan="3" className="text-xl text-orange-600">声調</td>
+    </tr>
+  </tbody>
+</table>
+
+次に、各要素を一つずつ見ていきましょう。
+
+## 声母（頭子音）
+
+頭子音とは文字通り音節の頭にくる音のこと（任意）。日本語で「～行」は同じ頭子音を共有する音節を指しています。例えば「カ行」というのは「k」から始まる音節のこと。
+
+### 「z」「c」
+
+それぞれ「**ヅァ行**」と「**ツァ行**」に当たります。
+
+{/* 異音について触れると学習者を混乱させる恐れがありますので、敢えて「ヂャ行」「チャ行」とも発音できることは言及しないようにしています。そもそも香港では「ヅァ行」「ツァ行」はすべての環境においても「z」「c」の許容発音ですし、そう発音することがむしろ「正しく」思わらせます。 */}
+
+<ExampleCharacterGrid>
+  <ExampleCharacterItem client:load honzi="支持" jyutping="zi1 ci4" otherTranscription="ヅィー ツィー" />
+  <ExampleCharacterItem client:load honzi="出席" jyutping="ceot1 zik6" otherTranscription="ツョㇳ ヅェㇰ" />
+</ExampleCharacterGrid>
+
+<Alert color="success">
+  💡 「ヅァ行」は日本語共通語では「**ザ行**」と同じ音（地域によって異なる場合があります）。
+</Alert>
+
+<Alert color="secondary">
+  この記事で現れた単語のうち日本語にもあるものは日本語と同じ意味です。
+
+  「z」「c」「s」に続く「i」は特例とならず、「イー」と発音すること。標準中国語の学習者には要注意です。
+</Alert>
+
+### 「s」
+
+「**サ行**」ですが、「si」は「スィー」と発音すること。
+
+<ExampleCharacterGrid>
+  <ExampleCharacterItem client:load honzi="時事" jyutping="si4 si6" otherTranscription="スィー スィー" />
+</ExampleCharacterGrid>
+
+### 「ng」
+
+鼻にかけて「ガ行」を発音します。「かんがえる」「だがしかし」などの「が」の子音。いわゆる鼻濁音の「カ゚行」。
+
+<ExampleCharacterGrid>
+  <ExampleCharacterItem client:load honzi="額外" jyutping="ngaak3 ngoi6" otherTranscription="カ゚ーㇰ コ゚ーイ" />
+</ExampleCharacterGrid>
+
+<Alert color="success">
+  💡 日本で人口のおよそ半分がこの音を日常的に使っていると言われていますが、「カ゚行」と「ア行」は香港広東語の母語話者にとっては**互換**できるものなので、「カ゚行」を使ったことがなければ無理せずに「ア行」で代用しましょう。
+
+  ただし、鼻に抜けない「ガ行」にならないようにご注意を。
+</Alert>
+
+### 「gw」「kw」
+
+口を丸めて「グ」「ク」を発音します。小さい「ヮ行」と素早く滑らかに繋げて発音するとも言えます。
+
+<ExampleCharacterGrid>
+  <ExampleCharacterItem client:load honzi="跨國" jyutping="kwaa1 gwok3" otherTranscription="クヮー グォーㇰ" />
+</ExampleCharacterGrid>
+
+### 「j」
+
+「**ヤ行**」です！日本語ローマ字や英語の「y」に当たります。
+
+<ExampleCharacterGrid>
+  <ExampleCharacterItem client:load honzi="原因" jyutping="jyun4 jan1" otherTranscription="ユーン ヤン" />
+  <ExampleCharacterItem client:load honzi="容易" jyutping="jung4 ji6" otherTranscription="ヨン イー" />
+</ExampleCharacterGrid>
+
+<Alert color="secondary">
+  綴りはドイツ語や国際音声記号に則っていることがわかります。
+
+  なぜ「y」ではなく「j」と書くかと言うと、簡単に言うとすでに母音の「yu」が存在しているからです。詳しい大人の事情にお気になりの方は[この説明](/ja/blog/scheme/#j-と-y-について)をご覧ください。
+</Alert>
+
+## 韻腹（母音）
+
+音節内で自由に長さを伸ばしたり縮めたりできる部分が母音です。日本語で「～段」は同じ母音を共有する音節を指しています。例えば「ア段」とは「a」を含む音節のこと。
+
+広東語は日本語と同じく母音の長さは区別しています。母音の後に何もついていないときも含め、大抵の場合は**長母音**で日本語の「アー」のように母音を長引いて発音するように覚えておいてください。
+
+**短母音**は速く飛ばすように読むだけでなく、**口を少しだけ小さく**して発音するように意識してみましょう。
+
+### 「aa」「a」
+
+「i」「u」「e」「o」は長音ですが、「a」は短い音を表します。その代わりに長い方は「aa」で表しています。
+
+<ExampleCharacterGrid>
+  <ExampleCharacterItem client:load honzi="今晚" jyutping="gam1 maan1" otherTranscription="ガㇺ マーン" />
+  <ExampleCharacterItem client:load honzi="話題" jyutping="waa6 tai4" otherTranscription="ワー タイ" />
+</ExampleCharacterGrid>
+
+### 「oe」「eo」
+
+「oe」（長）・「eo」（短）は丸みを帯びた「エ」。「エ」と「オ」の中間くらいの曖昧な発音。
+
+<ExampleCharacterGrid>
+  <ExampleCharacterItem client:load honzi="香水" jyutping="hoeng1 seoi2" otherTranscription="ホョーン ソュ" />
+  <ExampleCharacterItem client:load honzi="削除" jyutping="soek3 ceoi4" otherTranscription="ソョーㇰ ツォュ" />
+  <ExampleCharacterItem client:load honzi="進出" jyutping="zeon3 ceot1" otherTranscription="ヅョㇴ ツョㇳ" />
+</ExampleCharacterGrid>
+
+<Alert color="secondary">
+  ドイツ語の「ö」、フランス語の「eu」または標準中国語の「yue」における「e」に似ています。
+</Alert>
+
+### 「yu」
+
+丸みを帯びた「イー」。「イー」と声出して舌の位置を動かずに「ユー」に変えてみてください。
+
+<ExampleCharacterGrid>
+  <ExampleCharacterItem client:load honzi="粵語" jyutping="jyut6 jyu5" otherTranscription="ユーㇳ ユー" />
+  <ExampleCharacterItem client:load honzi="完全" jyutping="jyun4 cyun4" otherTranscription="ユーㇴ ツューㇴ" />
+</ExampleCharacterGrid>
+
+<Alert color="secondary">
+  ドイツ語の「ü」、フランス語の「u」または標準中国語の「yu」と同じ発音です。
+</Alert>
+
+### 特例
+
+- 「ei」の「e」は短い音。「ing」「ik」も**同じ母音**を持ち、それぞれ「エイ」「エン」「エㇰ」のように発音します。
+- 「ou」の「o」は短い音。「ung」「uk」も**同じ母音**を持ち、それぞれ「オウ」「オン」「オㇰ」のように発音します。
+
+<ExampleCharacterGrid>
+  <ExampleCharacterItem client:load honzi="成功" jyutping="sing4 gung1" otherTranscription="セン ゴン" />
+  <ExampleCharacterItem client:load honzi="記憶" jyutping="gei3 jik1" otherTranscription="ゲイ イェㇰ" />
+  <ExampleCharacterItem client:load honzi="高速" jyutping="gou1 cuk1" otherTranscription="ゴウ ツォㇰ" />
+</ExampleCharacterGrid>
+
+<Alert color="success">
+  💡 綴りに気を取らないように気をつけましょう。
+</Alert>
+
+## 韻尾（末尾子音）
+
+末尾子音とは音節の最後に付く音のこと（任意）。俗説とは裏腹に日本語にもありますが、日本語とは違い、急に途切れたかのように、途中まで音を出したら切り詰めます。
+
+<Alert color="primary">
+  韓国語や台湾語やベトナム語の学んだことのある方なら、お手のものでしょうから飛ばして構いません。
+</Alert>
+
+### 「-i」「-u」
+
+連続した母音の最後となる「-i」「-u」は前節で述べた韻腹に該当せず、短く「イ」「ウ」と発音します。
+
+<ExampleCharacterGrid>
+  <ExampleCharacterItem client:load honzi="了解" jyutping="liu5 gaai2" otherTranscription="リーウ ガーイ" />
+  <ExampleCharacterItem client:load honzi="回收" jyutping="wui4 sau1" otherTranscription="ウーイ サウ" />
+</ExampleCharacterGrid>
+
+### 「-m」「-n」「-ng」
+
+日本語話者にとってはいずれも「ン」に聞こえる鼻に抜ける音ですが、広東語では違う音として扱われます。
+
+- 「-m」：さんま（秋刀魚）の「ん」。口を完全に閉じること。また、声を出し切るまで口の形を変えないこと。
+- 「-n」：さんた（サンタ）の「ん」。舌を上の歯肉に当てること。また、声を出し切るまで舌の位置を変えないこと。
+- 「-ng」：さんか（参加）の「ん」。舌を喉の奥に当てず軽く持ち上げること。また、声を出し切るまで舌の位置を変えないこと。
+
+<ExampleCharacterGrid>
+  <ExampleCharacterItem client:load honzi="更新" jyutping="gang1 san1" />
+  <ExampleCharacterItem client:load honzi="幸運" jyutping="hang6 wan6" />
+  <ExampleCharacterItem client:load honzi="真心" jyutping="zan1 sam1" />
+  <ExampleCharacterItem client:load honzi="分針" jyutping="fan1 zam1" />
+</ExampleCharacterGrid>
+
+### 「-p」「-t」「-k」
+
+日本語話者にとってはいずれも小さい「っ」に聞こえる詰まった音ですが、広東語では違う音として扱われます。
+
+- 「-p」：かっぱ（河童）の「っ」。口を完全に閉じて息をさえぎること。
+- 「-t」：かった（買った）の「っ」。舌を上の歯肉に当てて息をさえぎること。
+- 「-k」：かっか（閣下）の「っ」。舌を喉の奥に当てず軽く持ち上げて息をさえぎること。
+
+<ExampleCharacterGrid>
+  <ExampleCharacterItem client:load honzi="八百" jyutping="baat3 baak3" />
+  <ExampleCharacterItem client:load honzi="十日" jyutping="sap6 jat6" />
+  <ExampleCharacterItem client:load honzi="一級" jyutping="jat1 kap1" />
+  <ExampleCharacterItem client:load honzi="得失" jyutping="dak1 sat1" />
+</ExampleCharacterGrid>
+
+## 成節子音
+
+末尾子音の「m」「ng」は単体で音節を成すこともできます。発音の仕方は前節に同じです。
+
+- 「m」：口を完全に閉じたまま「ンー」を単独で発音します。
+- 「ng」：舌を喉の奥に当てず軽く持ち上げたまま「ンー」を単独で発音します。
+
+<ExampleCharacterGrid>
+  <ExampleCharacterItem client:load honzi="唔" jyutping="m4" />
+  <ExampleCharacterItem client:load honzi="吳" jyutping="ng4" />
+</ExampleCharacterGrid>
+
+珍しいですが、頭子音「h」を前に付くこともあります。
+
+## 声調
+
+広東語には６種類の音の高さのパターンがあります。それを「声調」といい、「声母」「韻腹」「韻尾」とは同じ位置付けで、それらと同様に、間違うと<small>（ほとんどの場合）</small>まったく違う漢字になり、意味が変わってしまいます。
+
+次の画像に、声調それぞれの高さを示します。
+
+<img
+  src="/img/yue.jpeg"
+  width="870"
+  height="230"
+  loading="lazy"
+  alt="広東語の声調の高さ"
+/>
+
+４つの（真っ直ぐで穏やかな）平板調と２つの（低めから高くなる）上昇調があることがわかります。下降調はありません。
+
+- 第１声は、すごく嬉しいときに発する「やったー！」のように、意識的に高い音を出します。
+- 第２声は、「（です）か？」などの疑問文よりも大げさに、普段出す声の高さから第１声の高さまで上がります。
+- 第３声は、普段出す声の高さ。
+- 第４声は、格段に低い高さ。生きがいを失ったときに発する「はぁ～。」のように、できるだけ声を下がります。
+- 第５声は、低い声から普段出す声の高さまで戻す感じ。
+- 第６声は、普段出す声の高さより少し低い高さ。
+
+<ExampleCharacterGrid>
+  <ExampleCharacterItem client:load honzi="詩" jyutping="si1" />
+  <ExampleCharacterItem client:load honzi="史" jyutping="si2" />
+  <ExampleCharacterItem client:load honzi="試" jyutping="si3" />
+  <ExampleCharacterItem client:load honzi="時" jyutping="si4" />
+  <ExampleCharacterItem client:load honzi="市" jyutping="si5" />
+  <ExampleCharacterItem client:load honzi="事" jyutping="si6" />
+</ExampleCharacterGrid>
+
+次に、上記の６文字が繋がって連続した２文字になるとき、各声調はどのように聞こえるかを確かめることで、相対的にどれだけ高いのかを実感してみましょう。
+
+<ToneTable client:idle />
+
+<Alert color="secondary">
+  第１声と第２声はそれぞれ標準中国語の第１声と第２声と同じ高さ。
+
+  第４声、標準中国語の第３声の前半のような感じ。
+</Alert>
+
+また、声調の感覚を身につけるのに歌はとても有効です。「[広東語の歌で声調を練習する](/ja/blog/song)」ページで香港ポップスを聞きながら歌って練習してみましょう。
+
+## おわりに
+
+以上、粤拼自体と日本語話者が注意すべき粤拼の綴りの紹介を通じて、広東語の発音を解説してみました。これで粤拼を振った文章を読み上げるのも楽勝のはず！次の節で腕試ししてみましょう！
+
+**漢字の読み**がわからないときや**単語の意味**を調べたいときは次の辞書を活用してみましょう。
+
+- [粵音資料集叢](https://jyut.net)：漢字を入力して読みを検索できます。ただし新字体のうち日本独自のものには一部非対応なので、事前に[開放中文轉換](https://opencc.byvoid.com/)で「原文」を「日文新字體」に設定し、入力を新字体から旧字体に変換してください。
+- [粵典](https://words.hk)：単語または粤拼を入力し、粤拼や意味や例文を調べることができます。
+
+また、聞こえた広東語の単語を知りたいときは [TypeDuck](https://typeduck.hk) という入力方式（キーボード）をインストールし、**粤拼で広東語を入力**してみて、さらに粤拼に慣れ親しんでみましょう。
+
+その他のリソースは「[キーボードとツール](/ja/keyboard)」をご覧ください。
+
+## 『北風と太陽』で腕試し
+
+『北風と太陽』という有名（？）なイソップ寓話がありますね。その広東語訳がこちらです。各文字の上の再生ボタンをクリックして、聞いた発音を真似て繰り返して練習してみましょう。
+
+<SampleText client:idle />

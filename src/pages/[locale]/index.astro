@@ -6,6 +6,7 @@ import { I18n } from "@/i18n/utils";
 
 import CmnIndexPage from "@/components/index-pages/CmnIndexPage.tsx";
 import EnIndexPage from "@/components/index-pages/EnIndexPage.tsx";
+import JaIndexPage from "@/components/index-pages/JaIndexPage.tsx";
 import NanIndexPage from "@/components/index-pages/NanIndexPage.tsx";
 import ViIndexPage from "@/components/index-pages/ViIndexPage.tsx";
 import WuuIndexPage from "@/components/index-pages/WuuIndexPage.tsx";
@@ -30,8 +31,9 @@ const validLocale = I18n.locales.includes(locale as string)
 
 
 const pageTitles: Record<string, string> = {
-  en: "Jyutping - Cantonese Romanization",
   cmn: "粵拼 - 粵語拼音方案",
+  en: "Jyutping - Cantonese Romanization",
+  ja: "粤拼 - 広東語ローマ字表記法",
   nan: "粵拼 - 粵語拼音方案",
   vi: "Việt bính - Phiên âm tiếng Quảng Đông",
   wuu: "粤拼 - 粤语拼音方案",
@@ -48,4 +50,5 @@ const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English t
   {validLocale === "vi" && <ViIndexPage client:load />}
   {validLocale === "wuu" && <WuuIndexPage client:load />}
   {validLocale === "yue_hans" && <YueHansIndexPage client:load />}
+  {validLocale === "ja" && <JaIndexPage client:load />}
 </BaseLayout>

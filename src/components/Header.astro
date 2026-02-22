@@ -9,49 +9,54 @@ const locale = currentLocale || "yue";
 // --- Navigation Translations (copied from Next.js layout) ---
 const navTranslations: Record<string, Record<string, string>> = {
   learn: {
+    cmn: "學粵拼",
+    en: "Learn Jyutping",
+    ja: "粤拼を学ぶ",
+    nan: "學粵拼",
+    vi: "Học Việt bính",
+    wuu: "學粵拼",
     yue: "學粵拼",
     yue_hans: "学粤拼",
-    en: "Learn Jyutping",
-    vi: "Học Việt bính",
-    nan: "學粵拼",
-    wuu: "學粵拼",
-    cmn: "學粵拼",
   },
   jyutping: {
+    cmn: "粵拼方案",
+    en: "Jyutping Scheme",
+    ja: "粤拼便覧",
+    nan: "粵拼方案",
+    vi: "Việt bính",
+    wuu: "粵拼方案",
     yue: "粵拼方案",
     yue_hans: "粤拼方案",
-    en: "Jyutping Scheme",
-    vi: "Việt bính",
-    nan: "粵拼方案",
-    wuu: "粵拼方案",
-    cmn: "粵拼方案",
   },
   blog: {
+    cmn: "文章",
+    en: "Blog",
+    ja: "ブログ",
+    nan: "文章",
+    vi: "Tập văn",
+    wuu: "文章",
     yue: "文章",
     yue_hans: "文章",
-    en: "Blog",
-    vi: "Tập văn",
-    nan: "文章",
-    wuu: "文章",
-    cmn: "文章",
   },
   keyboard: {
+    cmn: "資源",
+    en: "Resources",
+    ja: "リソース",
+    nan: "資源",
+    vi: "Tài liệu",
+    wuu: "資源",
     yue: "資源",
     yue_hans: "资源",
-    en: "Resources",
-    vi: "Tài liệu",
-    nan: "資源",
-    wuu: "資源",
-    cmn: "資源",
   },
   about: {
+    cmn: "關於",
+    en: "About",
+    ja: "当サイトについて",
+    nan: "關於",
+    vi: "Liên lạc",
+    wuu: "關於",
     yue: "關於",
     yue_hans: "关于",
-    en: "About",
-    vi: "Liên lạc",
-    nan: "關於",
-    wuu: "關於",
-    cmn: "關於",
   },
 };
 
@@ -67,14 +72,14 @@ const navLinks = navLinkKeys.map((key) => {
 
 const logoHref = locale === "yue" ? "/" : `/${locale}`;
 
-const locales = ["en", "vi", "yue", "cmn", "nan", "wuu", "yue_hans"];
+const locales = ["en", "vi", "yue", "cmn", "nan", "wuu", "yue_hans", "ja"];
 const defaultLocale = "yue";
 ---
 
 <header class="relative p-4 bg-[#1678d3] text-white">
   <div class="flex justify-between items-center px-4">
     <a href={logoHref} class="text-white hover:opacity-80">
-      <span class="text-3xl font-chiron-hei">粵拼</span>
+      <span class="text-3xl font-jyutping">粵拼</span>
     </a>
 
     <nav class="hidden md:flex space-x-12">

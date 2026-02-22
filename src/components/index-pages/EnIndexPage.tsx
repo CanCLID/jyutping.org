@@ -12,10 +12,10 @@ import {
 const EnIndexPage: React.FC = () => {
   return (
     <div className="mx-auto px-4 py-8 bg-[#1678d3] text-white">
-      <h1 className="font-chiron-hei text-8xl my-16 mx-auto text-center">
+      <h1 className="font-jyutping text-8xl my-16 mx-auto text-center">
         粵拼
       </h1>
-      <p className="font-chiron-hei text-4xl my-8 mx-auto text-center">
+      <p className="font-jyutping text-4xl my-8 mx-auto text-center">
         
         The Standard Romanization Scheme for Cantonese
       </p>
