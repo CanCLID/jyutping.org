@@ -6,7 +6,7 @@ const { currentLocale, url } = Astro;
 const pathname = url.pathname;
 const locale = currentLocale || "yue";
 
-// --- Navigation Translations (copied from Next.js layout) ---
+// --- Navigation Translations ---
 const navTranslations: Record<string, Record<string, string>> = {
   learn: {
     cmn: "學粵拼",
@@ -60,9 +60,11 @@ const navTranslations: Record<string, Record<string, string>> = {
   },
 };
 
+// --- Generate Localized Nav Links ---
 const navLinkKeys = ["learn", "jyutping", "blog", "keyboard", "about"];
 const navLinks = navLinkKeys.map((key) => {
   const baseHref = `/${key}`;
+  // Prepend locale prefix only if it's not the default locale
   const href = locale === "yue" ? baseHref : `/${locale}${baseHref}`;
   return {
     href: href,
@@ -70,6 +72,7 @@ const navLinks = navLinkKeys.map((key) => {
   };
 });
 
+// Determine the correct base path for the logo link
 const logoHref = locale === "yue" ? "/" : `/${locale}`;
 
 const locales = ["en", "vi", "yue", "cmn", "nan", "wuu", "yue_hans", "ja"];
@@ -82,6 +85,7 @@ const defaultLocale = "yue";
       <span class="text-3xl font-jyutping">粵拼</span>
     </a>
 
+    {/* Desktop Navigation */}
     <nav class="hidden md:flex space-x-12">
       {
         navLinks.map((link) => (
@@ -92,6 +96,7 @@ const defaultLocale = "yue";
       }
     </nav>
 
+    {/* Desktop Language Switcher */}
     <div class="hidden md:block">
       <LanguageSwitcher
         locales={locales}
@@ -101,6 +106,7 @@ const defaultLocale = "yue";
       />
     </div>
 
+    {/* Mobile Menu Button */}
     <button
       type="button"
       class="md:hidden text-white cursor-pointer"
@@ -148,11 +154,9 @@ const defaultLocale = "yue";
       // (Though astro:page-load should handle this, it's safer)
       // Clone the button to effectively remove old listeners before adding new ones
       const newButton = menuButton.cloneNode(true);
-      // Check if parentNode exists before replacing
       if (menuButton.parentNode) {
         menuButton.parentNode.replaceChild(newButton, menuButton);
       } else {
-        // Fallback or error handling if button has no parent (shouldn't happen here)
         console.error("Menu button has no parent node.");
         return; // Exit if we can't replace the button
       }
@@ -161,16 +165,14 @@ const defaultLocale = "yue";
         menuPanel.classList.toggle("hidden");
       });
 
-      // Optional: Close menu when a link inside it is clicked
+      // Close menu when a link inside it is clicked
       // Re-query links inside the panel each time to ensure they are fresh
       menuPanel.querySelectorAll("a").forEach((link) => {
         // Clone links as well to remove potential old listeners
         const newLink = link.cloneNode(true);
-        // Check if parentNode exists before replacing
         if (link.parentNode) {
           link.parentNode.replaceChild(newLink, link);
         } else {
-          // Handle case where link might not have a parent temporarily during DOM changes
           console.warn("Menu link has no parent node during setup.");
           // Attempt to add listener to original link as fallback, though it might be stale
           link.addEventListener("click", () => {
@@ -182,14 +184,12 @@ const defaultLocale = "yue";
         }
 
         newLink.addEventListener("click", () => {
-          // Check if panel is open before adding hidden class
           if (!menuPanel.classList.contains("hidden")) {
             menuPanel.classList.add("hidden");
           }
         });
       });
     } else {
-      // Add some logging if elements aren't found after navigation
       console.log("Mobile menu button or panel not found after page load.");
     }
   }

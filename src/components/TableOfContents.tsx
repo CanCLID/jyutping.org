@@ -1,4 +1,4 @@
-"use client"; // This component needs client-side interactivity
+"use client";
 
 import type { MarkdownHeading } from "astro";
 import type React from "react";
@@ -9,8 +9,6 @@ interface Props {
 }
 
 const TableOfContents: React.FC<Props> = ({ headings }) => {
-  // Accept headings as props
-  // const [headings, setHeadings] = useState<Heading[]>([]); // Remove state for headings
   const [activeId, setActiveId] = useState<string | null>(null);
 
   useEffect(() => {
@@ -21,22 +19,21 @@ const TableOfContents: React.FC<Props> = ({ headings }) => {
       // Get heading elements using the slugs from the headings prop
       const headingElements = headings
         .map(({ slug }) => document.getElementById(slug))
-        .filter((el): el is HTMLElement => el !== null); // Type guard to filter out nulls
+        .filter((el): el is HTMLElement => el !== null);
 
-      if (headingElements.length === 0) return; // No headings to observe
+      if (headingElements.length === 0) return;
 
       const observerCallback = (entries: IntersectionObserverEntry[]) => {
         // Find the topmost visible heading based on intersection ratio and position
         let currentActiveId: string | null = null;
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            // Prioritize the heading closest to the top of the viewport
             const currentActiveElement = currentActiveId
               ? document.getElementById(currentActiveId)
-              : null; // Check if currentActiveId is not null
+              : null;
             if (
               currentActiveId === null ||
-              (currentActiveElement && // Check if element was found
+              (currentActiveElement &&
                 entry.boundingClientRect.top <
                   currentActiveElement.getBoundingClientRect().top)
             ) {
@@ -50,7 +47,6 @@ const TableOfContents: React.FC<Props> = ({ headings }) => {
         if (currentActiveId === null) {
           const intersectingEntries = entries.filter((e) => e.isIntersecting);
           if (intersectingEntries.length > 0) {
-            // Sort by position on screen
             intersectingEntries.sort(
               (a, b) => a.boundingClientRect.top - b.boundingClientRect.top
             );
@@ -76,22 +72,20 @@ const TableOfContents: React.FC<Props> = ({ headings }) => {
     // Setup observer slightly delayed to ensure elements are in the DOM
     const observerTimeoutId = setTimeout(setupObserver, 100);
 
-    // Cleanup function
     return () => {
       clearTimeout(observerTimeoutId);
       if (observer) {
-        observer.disconnect(); // Disconnect observer on cleanup
+        observer.disconnect();
       }
     };
-  }, [headings]); // Re-run effect if headings change
+  }, [headings]);
 
   const handleScrollTo = (slug: string) => (e: React.MouseEvent) => {
    
     e.preventDefault();
     const element = document.getElementById(slug);
     if (element) {
-      // Calculate offset based on sticky header height if necessary
-      const headerOffset = 80; // Adjust based on your actual header height (make this configurable if needed)
+      const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition =
         elementPosition + window.pageYOffset - headerOffset;
@@ -100,8 +94,6 @@ const TableOfContents: React.FC<Props> = ({ headings }) => {
         top: offsetPosition,
         behavior: "smooth",
       });
-      // Update URL hash without triggering full navigation (optional)
-      // history.pushState(null, '', `#${id}`);
     }
   };
 
@@ -110,7 +102,6 @@ const TableOfContents: React.FC<Props> = ({ headings }) => {
   }
 
   return (
-    // Remove container styling, handled by Astro parent
     <nav className="max-h-[calc(100vh-6rem)] overflow-y-auto p-1">
       <ul className="space-y-1.5">
         {headings

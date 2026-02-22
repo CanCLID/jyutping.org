@@ -18,8 +18,6 @@ const Alert: React.FC<AlertProps> = ({
   color = "primary",
   children,
 }) => {
-  // Map color prop to Tailwind CSS classes
-  // Using basic background/border/text colors - adjust as needed for closer theme match
   const colorClasses = {
     primary: "bg-blue-100 border-blue-500 text-blue-700",
     secondary: "bg-gray-100 border-gray-500 text-gray-700",

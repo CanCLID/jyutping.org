@@ -6,7 +6,6 @@ interface AudioProps {
   id: string;
 }
 
-// Simple SVG Volume Up icon
 const VolumeUpIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +33,7 @@ const Audio: React.FC<AudioProps> = ({ id }) => {
       return;
     }
 
-    const basePath = container.dataset.audioBasePath || "/audio/"; // Default path if attribute is missing
+    const basePath = container.dataset.audioBasePath || "/audio/";
     const audioSrc = `${basePath}${id}.mp3`;
 
     let audioElement = document.getElementById(id) as HTMLAudioElement | null;
@@ -44,27 +43,23 @@ const Audio: React.FC<AudioProps> = ({ id }) => {
       audioElement = document.createElement("audio");
       audioElement.id = id;
       audioElement.src = audioSrc;
-      audioElement.preload = "auto"; // Preload the audio when created
+      audioElement.preload = "auto";
 
-      // Add an empty track for accessibility compliance (though less critical for dynamically added elements)
+      // Add an empty track for accessibility compliance
       const track = document.createElement("track");
       track.kind = "captions";
       audioElement.appendChild(track);
 
       container.appendChild(audioElement);
 
-      // Optional: Add error handling for audio loading itself
       audioElement.onerror = () => {
         console.error(`Error loading audio source: ${audioSrc}`);
-        // Maybe remove the element or display feedback
         audioElement?.remove();
       };
     }
 
-    // Play the audio element (either existing or newly created)
     audioElement.play().catch((error) => {
       console.error(`Error playing audio [${id}] (${audioSrc}):`, error);
-      // Handle potential errors like user interaction required or file not found after creation attempt
     });
   };
 

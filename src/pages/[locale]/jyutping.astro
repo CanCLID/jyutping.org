@@ -8,7 +8,6 @@ import {
   generateSlug,
 } from "@/i18n/jyutpingHeadings";
 
-
 const pageTitles: Record<string, string> = {
   en: "Jyutping Scheme",
   yue: "粵拼方案", // Should technically not be needed here
@@ -29,15 +28,18 @@ export function getStaticPaths() {
 
 const { locale } = Astro.params;
 
+// Validate locale and get title
 const validLocale = I18n.locales.includes(locale as string)
   ? locale
   : I18n.defaultLocale;
 const title = pageTitles[validLocale] || pageTitles.yue;
 
+// Get the correct heading translations for the current locale
 const t =
   jyutpingHeadingsTranslations[validLocale] || jyutpingHeadingsTranslations.en;
 const tEn = jyutpingHeadingsTranslations.en;
 
+// Dynamically generate headings for TableOfContents based on locale
 const headings = [
   { text: t.onsetHeading, slug: generateSlug(tEn.onsetHeading), depth: 2 },
   {
@@ -65,7 +67,6 @@ const headings = [
     >
       粵拼：香港語言學學會粵語拼音方案
     </h1>
-    {/* Responsive H1 with increased line spacing */}
     <h1
       class="chiron-font my-8 text-3xl md:text-4xl text-center container max-w-8xl mx-auto"
     >
@@ -75,10 +76,8 @@ const headings = [
   </div>
   <div class="flex justify-center gap-8 max-w-5xl mx-auto">
     <JyutpingPage locale={validLocale} client:visible />
-    {/* Pass locale, hydrate if needed */}
     <aside class="hidden lg:block w-32 flex-shrink-0">
       <div class="sticky top-32">
-        {/* Adjust top offset as needed */}
         <TableOfContents client:visible headings={headings} />
       </div>
     </aside>

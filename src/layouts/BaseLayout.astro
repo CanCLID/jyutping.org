@@ -1,26 +1,23 @@
 ---
-// src/layouts/BaseLayout.astro
-import { ClientRouter } from "astro:transitions"; // Re-added import for ViewTransitions
-import Header from "@/components/Header.astro"; // Placeholder import
-import Footer from "@/components/Footer.astro"; // Placeholder import
-import "@/styles/global.css"; // Assuming global styles will be here
+import { ClientRouter } from "astro:transitions";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import "@/styles/global.css";
 import Chartaudio from "@/components/Chartaudio.astro";
-
 
 interface Props {
   title?: string;
   description?: string;
-  lang?: string; // Language code for the html tag
+  lang?: string;
 }
 
-// Set default values for props
 const {
   title = "粵拼 Jyutping",
   description = "標準粵語拼音方案 Standard Cantonese Romanization Scheme",
-  lang = "yue", // Default to 'yue' as per original root layout
+  lang = "yue",
 } = Astro.props;
 
-const umamiWebsiteId = "188fdd26-8e55-42b6-ba73-7d2f58adca11"; // From original layout
+const umamiWebsiteId = "188fdd26-8e55-42b6-ba73-7d2f58adca11";
 const umamiScriptSrc = "https://cloud.umami.is/script.js";
 ---
 
@@ -30,7 +27,6 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    {/* Use logo.svg as favicon */}
     <meta name="generator" content={Astro.generator} />
 
     {/* Basic Meta Tags */}
@@ -49,7 +45,6 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     {
       /* <meta property="og:image" content={new URL('/og-image.png', Astro.url.origin).toString()} /> */
     }
-    {/* Add OG image later */}
 
     {/* Twitter */}
     {/* <meta property="twitter:card" content="summary_large_image" /> */}
@@ -59,9 +54,7 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     {
       /* <meta property="twitter:image" content={new URL('/og-image.png', Astro.url.origin).toString()} /> */
     }
-    {/* Add Twitter image later */}
 
-    {/* Preload the Jyutping font */}
     <link
       rel="preload"
       href="/ChironHeiHK-lshk-subset.woff2"
@@ -82,32 +75,25 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     ></script>
 
     <ClientRouter />
-    {/* Re-enabled after identifying font loading as the primary issue */}
   </head>
   <body class="antialiased bg-white text-gray-800 flex flex-col min-h-screen">
     <Header />
-    {/* Include Header component */}
     <main class="flex-grow">
       <slot />
-      {/* Page content will be injected here */}
-      {/* Include Chartaudio component */}
       <Chartaudio />
     </main>
     <Footer />
-    {/* Include Footer component */}
   </body>
 </html>
 
 <style is:global>
   @import url("/chiron-hei-hk/css/vf.css");
-  /* Define font faces */
   @font-face {
     font-family: "Chiron Hei HK Jyutping";
-    /* Prioritize WOFF2, fallback to WOFF */
     src: url("/ChironHeiHK-lshk-subset.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
-    font-display: swap; /* Use swap to prevent blocking */
+    font-display: swap;
   }
 
   :root {
@@ -146,21 +132,21 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     font-family: "Chiron Hei HK Jyutping", var(--fallback-fonts);
   }
 
-  /* --- Custom Horizontal Slide View Transitions --- */ /* Re-enabled */
+  /* --- Custom Horizontal Slide View Transitions --- */
   @keyframes slide-left-out {
     from {
       transform: translateX(0);
       opacity: 1;
     }
     to {
-      transform: translateX(-30px); /* Slide left */
+      transform: translateX(-30px);
       opacity: 0;
     }
   }
 
   @keyframes slide-right-in {
     from {
-      transform: translateX(30px); /* Start from right */
+      transform: translateX(30px);
       opacity: 0;
     }
     to {
@@ -169,7 +155,6 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     }
   }
 
-  /* Apply the custom animations */
   ::view-transition-old(root) {
     animation: slide-left-out 0.2s cubic-bezier(0, 0, 0.2, 1) forwards;
   }

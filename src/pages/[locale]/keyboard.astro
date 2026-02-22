@@ -1,9 +1,7 @@
 ---
-// src/pages/[locale]/keyboard.astro
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import KeyboardPage from "@/components/KeyboardPage.tsx";
 import { I18n } from "@/i18n/utils";
-
 
 const pageTitles: Record<string, string> = {
   en: "Keyboard Tools - Jyutping",
@@ -17,7 +15,7 @@ const pageTitles: Record<string, string> = {
 
 export function getStaticPaths() {
   return I18n.locales
-    .filter((locale) => locale !== I18n.defaultLocale) // Exclude default locale
+    .filter((locale) => locale !== I18n.defaultLocale)
     .map((locale) => ({
       params: { locale },
     }));
@@ -34,5 +32,4 @@ const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English t
 
 <BaseLayout lang={validLocale} title={title}>
   <KeyboardPage locale={validLocale} client:load />
-  {/* Pass locale, hydrate if needed */}
 </BaseLayout>

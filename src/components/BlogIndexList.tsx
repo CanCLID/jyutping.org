@@ -3,7 +3,7 @@ import type React from "react";
 
 interface BlogPost {
   title: string;
-  slug: string;
+  slug: string; // Expecting the final, routed slug (e.g., /en/blog/post-name or /blog/post-name)
   description?: string;
 }
 

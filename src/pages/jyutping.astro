@@ -10,9 +10,11 @@ import {
 const lang = "yue";
 const title = "粵拼方案 - Jyutping";
 
+// Get the correct heading translations for the current locale
 const t = jyutpingHeadingsTranslations[lang];
 const tEn = jyutpingHeadingsTranslations.en;
 
+// Dynamically generate headings for TableOfContents based on locale
 const headings = [
   { text: t.onsetHeading, slug: generateSlug(tEn.onsetHeading), depth: 2 },
   {

@@ -1,14 +1,10 @@
 import type React from "react";
 import Alert from "@/components/Alert.tsx";
 import Audio from "@/components/Audio.tsx";
-import {
-	jyutpingHeadingsTranslations,
-	generateSlug, // Import the slug generator
-} from "@/i18n/jyutpingHeadings";
+import { jyutpingHeadingsTranslations, generateSlug } from "@/i18n/jyutpingHeadings";
 
-// Define an interface for the *rest* of the translation structure (non-heading parts)
 interface JyutpingPageContentTranslation {
-	intro: string; // Optional intro paragraph
+	intro: string;
 	alertIpaTitle: string;
 	alertIpaContent: React.ReactNode;
 	onsetTableHeaders: string[];
@@ -24,7 +20,6 @@ interface JyutpingPageContentTranslation {
 	alertToneMarks: React.ReactNode;
 }
 
-// Define translations for content *other* than headings
 const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 	cmn: {
 		intro: "「香港語言學學會粵語拼音方案」，簡稱「粵拼」。",
@@ -38,7 +33,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				一節。
 			</p>
 		),
-		// onsetHeading removed
 		onsetTableHeaders: [
 			"雙脣音",
 			"脣齒音",
@@ -48,14 +42,8 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 			"喉音",
 		],
 		onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
-		// Note: Same as Yue, might need specific Cmn phrasing if available
 		alertNullInitial: <p>零聲母唔用字母做標記，例如「呀」只拼作 aa。</p>,
-		// syllabicNasalHeading removed
-		// finalHeading removed
-		// nucleiHeading removed
-		// codaHeading removed
 		codaRowHeaders: ["爆發音", "鼻音", "元音"],
-		// finalsChartHeading removed
 		finalsChartColHeaders1: [
 			"單元音",
 			"複元音",
@@ -88,7 +76,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				。
 			</p>
 		),
-		// toneHeading removed
 		toneTableHeaders: ["平", "上", "去", "入"],
 		toneRowHeaders: ["陰", "陽"],
 		alertToneMarks: (
@@ -100,8 +87,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				</p>
 			</>
 		),
-		// referenceHeading removed
-		// referenceId removed
 	},
 	en: {
 		intro:
@@ -126,7 +111,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				.
 			</p>
 		),
-		// onsetHeading removed
 		onsetTableHeaders: [
 			"Bilabial",
 			"Labio-dental",
@@ -146,12 +130,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 		alertNullInitial: (
 			<p>Null initial is not represented, e.g. "呀" is only spelt as "aa".</p>
 		),
-		// syllabicNasalHeading removed
-		// finalHeading removed
-		// nucleiHeading removed
-		// codaHeading removed
 		codaRowHeaders: ["Plosive", "Nasal", "Vowel"],
-		// finalsChartHeading removed
 		finalsChartColHeaders1: [
 			"Monothong",
 			"Diphthong",
@@ -185,7 +164,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				for further information.
 			</p>
 		),
-		// toneHeading removed
 		toneTableHeaders: ["平", "上", "去", "入"],
 		toneRowHeaders: ["陰", "陽"],
 		alertToneMarks: (
@@ -197,8 +175,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				</p>
 			</>
 		),
-		// referenceHeading removed
-		// referenceId removed
 	},
 	ja: {
 		intro: "「香港言語学会広東語ローマ字表記法」、略称「粤拼」。",
@@ -301,7 +277,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				遐。
 			</p>
 		),
-		// onsetHeading removed
 		onsetTableHeaders: [
 			"雙脣音",
 			"脣齒音",
@@ -312,12 +287,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 		],
 		onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
 		alertNullInitial: <p>零聲母無用字母做標記，譬如講「呀」干焦拼做 aa。</p>,
-		// syllabicNasalHeading removed
-		// finalHeading removed
-		// nucleiHeading removed
-		// codaHeading removed
 		codaRowHeaders: ["爆發音", "鼻音", "元音"],
-		// finalsChartHeading removed
 		finalsChartColHeaders1: [
 			"單元音",
 			"複元音",
@@ -350,7 +320,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				。
 			</p>
 		),
-		// toneHeading removed
 		toneTableHeaders: ["平", "上", "去", "入"],
 		toneRowHeaders: ["陰", "陽"],
 		alertToneMarks: (
@@ -362,8 +331,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				</p>
 			</>
 		),
-		// referenceHeading removed
-		// referenceId removed
 	},
 	vi: {
 		intro:
@@ -388,7 +355,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				.
 			</p>
 		),
-		// onsetHeading removed
 		onsetTableHeaders: [
 			"Âm đôi môi",
 			"Âm môi răng",
@@ -411,12 +377,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				"aa".
 			</p>
 		),
-		// syllabicNasalHeading removed
-		// finalHeading removed
-		// nucleiHeading removed
-		// codaHeading removed
 		codaRowHeaders: ["Âm bật", "Âm mũi", "Nguyên âm"],
-		// finalsChartHeading removed
 		finalsChartColHeaders1: [
 			"Nguyên âm đơn",
 			"Nguyên âm kép",
@@ -450,7 +411,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				.
 			</p>
 		),
-		// toneHeading removed
 		toneTableHeaders: ["Bằng", "Thượng", "Khứ", "Nhập"],
 		toneRowHeaders: ["Âm", "Dương"],
 		alertToneMarks: (
@@ -462,8 +422,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				</p>
 			</>
 		),
-		// referenceHeading removed
-		// referenceId removed
 	},
 	wuu: {
 		intro: "「香港語言學學會粵語拼音方案」，略稱「粵拼」。",
@@ -477,7 +435,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				一節。
 			</p>
 		),
-		// onsetHeading removed
 		onsetTableHeaders: [
 			"雙脣音",
 			"脣齒音",
@@ -488,12 +445,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 		],
 		onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
 		alertNullInitial: <p>零聲母弗用字母做標記，譬方「呀」單單是 aa。</p>,
-		// syllabicNasalHeading removed
-		// finalHeading removed
-		// nucleiHeading removed
-		// codaHeading removed
 		codaRowHeaders: ["爆發音", "鼻音", "元音"],
-		// finalsChartHeading removed
 		finalsChartColHeaders1: [
 			"單元音",
 			"複元音",
@@ -526,7 +478,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				。
 			</p>
 		),
-		// toneHeading removed
 		toneTableHeaders: ["平", "上", "去", "入"],
 		toneRowHeaders: ["陰", "陽"],
 		alertToneMarks: (
@@ -538,8 +489,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				</p>
 			</>
 		),
-		// referenceHeading removed
-		// referenceId removed
 	},
 	yue: {
 		intro: "「香港語言學學會粵語拼音方案」，簡稱「粵拼」。",
@@ -553,7 +502,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				一節。
 			</p>
 		),
-		// onsetHeading removed
 		onsetTableHeaders: [
 			"雙脣音",
 			"脣齒音",
@@ -564,12 +512,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 		],
 		onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
 		alertNullInitial: <p>零聲母唔用字母做標記，例如「呀」只拼作 aa。</p>,
-		// syllabicNasalHeading removed
-		// finalHeading removed
-		// nucleiHeading removed
-		// codaHeading removed
 		codaRowHeaders: ["爆發音", "鼻音", "元音"],
-		// finalsChartHeading removed
 		finalsChartColHeaders1: [
 			"單元音",
 			"複元音",
@@ -602,7 +545,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				。
 			</p>
 		),
-		// toneHeading removed
 		toneTableHeaders: ["平", "上", "去", "入"],
 		toneRowHeaders: ["陰", "陽"],
 		alertToneMarks: (
@@ -614,8 +556,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				</p>
 			</>
 		),
-		// referenceHeading removed
-		// referenceId removed
 	},
 	yue_hans: {
 		intro: "「香港语言学学会粤语拼音方案」，简称「粤拼」。",
@@ -629,7 +569,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				一节。
 			</p>
 		),
-		// onsetHeading removed
 		onsetTableHeaders: [
 			"双唇音",
 			"唇齿音",
@@ -640,12 +579,7 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 		],
 		onsetRowHeaders: ["爆发音", "塞擦音", "鼻音", "擦音", "近音", "边近音"],
 		alertNullInitial: <p>零声母唔用字母做标记，例如「呀」只拼作 aa。</p>,
-		// syllabicNasalHeading removed
-		// finalHeading removed
-		// nucleiHeading removed
-		// codaHeading removed
 		codaRowHeaders: ["爆发音", "鼻音", "元音"],
-		// finalsChartHeading removed
 		finalsChartColHeaders1: [
 			"单元音",
 			"复元音",
@@ -678,7 +612,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				。
 			</p>
 		),
-		// toneHeading removed
 		toneTableHeaders: ["平", "上", "去", "入"],
 		toneRowHeaders: ["阴", "阳"],
 		alertToneMarks: (
@@ -690,8 +623,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 				</p>
 			</>
 		),
-		// referenceHeading removed
-		// referenceId removed
 	},
 };
 
@@ -699,17 +630,15 @@ interface JyutpingPageProps {
 	locale: string;
 }
 
-// Add dark mode classes to tables and text
 const tableBaseClass = "my-4 border border-collapse border-gray-300";
 const thClass = "border p-2 bg-gray-100";
 const tdClass = "border p-2";
-const tdHighlightClass = "border p-1 bg-yellow-100"; // Highlight for new finals
+const tdHighlightClass = "border p-1 bg-yellow-100";
 const tdMutedClass = "border p-1 bg-gray-300";
 
 const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
-	// Get translations for headings and content, falling back to English
 	const headingsT =
-		jyutpingHeadingsTranslations[locale] || jyutpingHeadingsTranslations.en;
+		jyutpingHeadingsTranslations[locale] || jyutpingHeadingsTranslations.en; // Falling back to English
 	const contentT = contentTranslations[locale] || contentTranslations.en;
 	const tEn = jyutpingHeadingsTranslations.en; // Get English translations for slug generation
 
@@ -720,9 +649,8 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
 					<p className="text-lg mb-6 font-semibold">{contentT.intro}</p>
 				)}
 				<Alert title={contentT.alertIpaTitle}>{contentT.alertIpaContent}</Alert>
-				{/* Use heading from centralized translations and consistent slug */}
 				<h2
-					id={generateSlug(tEn.onsetHeading)} // Use slug generated from English text
+					id={generateSlug(tEn.onsetHeading)}
 					className="text-3xl font-semibold mt-8 mb-4 scroll-mt-20"
 				>
 					{headingsT.onsetHeading}
@@ -874,9 +802,8 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
 					</table>
 				</div>
 				<Alert>{contentT.alertNullInitial}</Alert>
-				{/* Use heading from centralized translations and consistent slug */}
 				<h2
-					id={generateSlug(tEn.syllabicNasalHeading)} // Use slug generated from English text
+					id={generateSlug(tEn.syllabicNasalHeading)}
 					className="text-3xl font-semibold mt-8 mb-4 scroll-mt-20"
 				>
 					{headingsT.syllabicNasalHeading}
@@ -895,21 +822,19 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
 						</thead>
 					</table>
 				</div>
-				{/* Use heading from centralized translations and consistent slug */}
 				<h2
-					id={generateSlug(tEn.finalHeading)} // Use slug generated from English text
+					id={generateSlug(tEn.finalHeading)}
 					className="text-3xl font-semibold mt-8 mb-4 scroll-mt-20"
 				>
 					{headingsT.finalHeading}
 				</h2>
-				{/* Use heading from centralized translations and consistent slug */}
 				<h3
-					id={generateSlug(tEn.nucleiHeading)} // Use slug generated from English text
+					id={generateSlug(tEn.nucleiHeading)}
 					className="text-2xl font-semibold mt-6 mb-3 scroll-mt-20"
 				>
 					{headingsT.nucleiHeading}
 				</h3>
-				{/* Nuclei Table - Modified */}
+				{/* Nuclei Table */}
 				<div className="overflow-x-auto">
 					<table className={tableBaseClass}>
 						<tbody>
@@ -962,14 +887,13 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
 						</tbody>
 					</table>
 				</div>
-				{/* Use heading from centralized translations and consistent slug */}
 				<h3
-					id={generateSlug(tEn.codaHeading)} // Use slug generated from English text
+					id={generateSlug(tEn.codaHeading)}
 					className="text-2xl font-semibold mt-6 mb-3 scroll-mt-20"
 				>
 					{headingsT.codaHeading}
 				</h3>
-				{/* Coda Table - Modified */}
+				{/* Coda Table */}
 				<div className="overflow-x-auto">
 					<table className={tableBaseClass}>
 						<tbody>
@@ -1010,9 +934,8 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
 						</tbody>
 					</table>
 				</div>
-				{/* Use heading from centralized translations and consistent slug */}
 				<h3
-					id={generateSlug(tEn.finalsChartHeading)} // Use slug generated from English text
+					id={generateSlug(tEn.finalsChartHeading)}
 					className="text-2xl font-semibold mt-6 mb-3 scroll-mt-20"
 				>
 					{headingsT.finalsChartHeading}
@@ -1044,7 +967,6 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
 										className={`${tdClass} font-semibold text-center`}
 									>
 										{" "}
-										{/* Adjusted header cell style */}
 										{header}
 									</td>
 								))}
@@ -1142,13 +1064,11 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
 								<td className={tdClass} />
 								<td className={tdMutedClass} />
 								<td className={tdClass}>um</td>{" "}
-								{/* Assuming this should be a cell like others */}
 								<td className={tdClass} />
 								<td className={tdClass}>
 									ung 風 <Audio id="fung1" />
 								</td>
 								<td className={tdClass}>up</td>{" "}
-								{/* Assuming this should be a cell like others */}
 								<td className={tdClass} />
 								<td className={tdClass}>
 									uk 福 <Audio id="fuk1" />
@@ -1166,7 +1086,6 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
 								<td className={tdClass} />
 								<td className={tdClass} />
 								<td className={tdClass}>en </td>{" "}
-								{/* Assuming this should be a cell like others */}
 								<td className={tdClass} />
 								<td className={tdClass} />
 								<td className={tdClass} />
@@ -1345,9 +1264,8 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
 					</table>
 				</div>
 				<Alert color="secondary">{contentT.alertAddedFinals}</Alert>
-				{/* Use heading from centralized translations and consistent slug */}
 				<h2
-					id={generateSlug(tEn.toneHeading)} // Use slug generated from English text
+					id={generateSlug(tEn.toneHeading)}
 					className="text-3xl font-semibold mt-8 mb-4 scroll-mt-20"
 				>
 					{headingsT.toneHeading}
@@ -1400,9 +1318,8 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
 					</table>
 				</div>
 				<Alert>{contentT.alertToneMarks}</Alert>
-				{/* Use heading and ID from centralized translations */}
 				<h2
-					id={headingsT.referenceId} // Use the locale-specific ID
+					id={headingsT.referenceId}
 					className="text-3xl font-semibold mt-8 mb-4 scroll-mt-20"
 				>
 					{headingsT.referenceHeading}

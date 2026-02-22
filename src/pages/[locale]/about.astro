@@ -1,9 +1,7 @@
 ---
-// src/pages/[locale]/about.astro
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import AboutPage from "@/components/AboutPage.tsx";
 import { I18n } from "@/i18n/utils";
-
 
 const pageTitles: Record<string, string> = {
   en: "About",
@@ -17,7 +15,7 @@ const pageTitles: Record<string, string> = {
 
 export function getStaticPaths() {
   return I18n.locales
-    .filter((locale) => locale !== I18n.defaultLocale) // Exclude default locale
+    .filter((locale) => locale !== I18n.defaultLocale)
     .map((locale) => ({
       params: { locale },
     }));

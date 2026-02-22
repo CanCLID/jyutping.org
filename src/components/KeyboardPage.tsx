@@ -28,7 +28,6 @@ const DownloadButton: React.FC<{
   const baseClasses =
     "inline-flex items-center px-6 py-3 border text-base font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-150 ease-in-out group";
 
-  // Styles for other variants
   let variantClasses = "";
   switch (variant) {
     case "googleplay":
@@ -70,7 +69,9 @@ const DownloadButton: React.FC<{
     >
       <Icon
         className={`mr-2 h-5 w-5 ${
-          variant === "firefox" ? "text-purple-500 group-hover:text-white" : ""
+          variant === "firefox"
+            ? "text-purple-500 group-hover:text-white"
+            : ""
         }`}
       />
       {text}
@@ -320,7 +321,7 @@ interface KeyboardPageProps {
 }
 
 const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
-  const t = translations[locale] || translations.en;
+  const t = translations[locale] || translations.en; // Fallback to English
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-5xl">
@@ -331,6 +332,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
           </span>
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Sogou */}
           <div className="p-4">
             <h2 className="text-2xl font-semibold my-4">{t.sogouTitle}</h2>
             <h3 className="font-semibold my-2">iOS</h3>
@@ -357,6 +359,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
             </div>
             <p className="text-sm text-gray-700">{t.sogouInstructions}</p>
           </div>
+          {/* TypeDuck */}
           <div className="p-4 ">
             <h2 className="text-2xl font-semibold my-4">{t.typeduckTitle}</h2>
             <h3 className="font-semibold my-2">Web</h3>
@@ -378,6 +381,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </div>
           </div>
+          {/* YuetYam Jyutping App */}
           <div className="p-4 ">
             <h2 className="text-2xl font-semibold my-4">
               {t.appJyutpingTitle}
@@ -510,6 +514,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
           </span>
         </h2>
         <div className="my-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Jyut.net */}
           <div className="flex flex-col items-center p-4 ">
             <h3 className="my-4 text-2xl font-semibold">
               粵音資料集叢 jyut.net
@@ -520,7 +525,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               rel="noopener noreferrer"
               className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
             >
-              {/* Use standard img tag */}
               <img
                 src="/img/jyut.jpg"
                 alt="粵音資料集叢"
@@ -531,6 +535,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
+          {/* Words.hk */}
           <div className="flex flex-col items-center p-4 ">
             <h3 className="my-4 text-2xl font-semibold">
               粵語辭叢
@@ -541,7 +546,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               rel="noopener noreferrer"
               className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
             >
-              {/* Use standard img tag */}
               <img
                 src="/img/jyutjyu.svg"
                 alt="粵語辭叢 jyutjyu.com"
@@ -560,7 +564,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               rel="noopener noreferrer"
               className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
             >
-              {/* Use standard img tag */}
               <img
                 src="/img/wordshk.png"
                 alt="粵典"
@@ -571,6 +574,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
+          {/* 羊羊粵語.hk */}
           <div className="flex flex-col items-center p-4 ">
             <h3 className="my-4 text-2xl font-semibold">羊羊粵語 shyyp.net</h3>
             <a
@@ -589,6 +593,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
+          {/* Google Translate */}
           <div className="flex flex-col items-center p-4 ">
             <h3 className="text-2xl my-4 font-semibold">{t.googleTranslate}</h3>
             <a
@@ -607,6 +612,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
+          {/* Converter */}
           <div className="flex flex-col items-center p-4 ">
             <h3 className="text-2xl my-4 font-semibold">{t.converter}</h3>
             <a
@@ -625,6 +631,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
+          {/* Inject Jyutping */}
           <div className="p-4 ">
             <h3 className="text-2xl my-4 text-center font-semibold">
               注入粵拼 inject-jyutping
@@ -673,15 +680,11 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
         <h3 className="my-4 text-2xl font-semibold text-center">
           52 分鐘學識粵拼
         </h3>
-        {/* Centered */}
-        {/* Responsive iframe container */}
         <div className="relative h-0 pb-[56.25%] mx-auto max-w-3xl">
-          {/* Added max-width */}
-          {/* 16:9 Aspect Ratio */}
           <iframe
-            className="absolute top-0 left-0 w-full h-full rounded-lg shadow-md" // Fill container, added styles
+            className="absolute top-0 left-0 w-full h-full rounded-lg shadow-md"
             src="https://www.youtube.com/embed/MOsf0BcLzlc"
-            title="YouTube video player: 52 分鐘學識粵拼" // Improved title
+            title="YouTube video player: 52 分鐘學識粵拼"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
@@ -689,6 +692,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
           />
         </div>
         <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Hambaanglaang */}
           <div className="flex flex-col items-center p-4 ">
             <h3 className="my-4 text-2xl font-semibold">
               冚唪唥粵文 hambaanglaang.hk
@@ -709,6 +713,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
+          {/* 翻轉粵語教室 */}
           <div className="flex flex-col items-center p-4">
             <h3 className="my-4 text-2xl font-semibold">
               香港理工大学 翻轉粵語教室
@@ -729,7 +734,6 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               />
             </a>
           </div>
-
           <div className="flex flex-col items-center p-4">
             <h3 className="my-4 text-2xl font-semibold">
               粵拼字體 visual-fonts.com

@@ -84,6 +84,7 @@ const JaIndexPage: React.FC = () => {
 			<span className="text-2xl text-center mt-32 mb-12 mx-auto block">
 				他の言語をお探しですか？
 			</span>
+      		{/* Links to other locales */}
 			<div className="flex flex-col md:flex-row md:flex-wrap md:justify-around items-center gap-4 my-12 mx-auto max-w-5xl">
 				<a
 					lang="en"

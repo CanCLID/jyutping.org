@@ -23,7 +23,6 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   defaultLocale,
   currentPathname,
 }) => {
-  // State to hold the determined current locale
   const [effectiveCurrentLocale, setEffectiveCurrentLocale] =
     useState(defaultLocale);
 
@@ -56,37 +55,34 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
     }
     // If no prefix, currentPathname is already the base path
 
-    // Construct the target path
+    // Construct the target path: only non-default locales should have the prefix
     let targetPath = "";
     if (newLocale === defaultLocale) {
-      // Target is the default locale, path should have no prefix
       targetPath = basePath;
     } else {
-      // Target is a non-default locale, path should have the prefix
       targetPath = `/${newLocale}${basePath}`;
       // Handle edge case: avoid double slash if basePath is "/"
       if (targetPath.endsWith("//")) {
         targetPath = targetPath.slice(0, -1);
       }
-      // Handle case where target is just /en
+      // Handle case where target is just "/" plus the locale
       if (targetPath === `/${newLocale}/` && basePath === "/") {
         targetPath = `/${newLocale}`;
       }
     }
 
-    // Set the cookie (optional, but kept from original)
+    // Set cookie
     const date = new Date();
     date.setTime(date.getTime() + 365 * 24 * 60 * 60 * 1000); // 1 year
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; expires=${date.toUTCString()}; SameSite=Lax`;
 
-    // Navigate using window.location
+    // Navigate to the new page
     window.location.href = targetPath;
   };
 
-  // Render null or a placeholder if the locale hasn't been determined yet
-  // This prevents rendering with the default before the effect runs
+  // Prevents rendering before locale determination
   if (!effectiveCurrentLocale) {
-    return null; // Or a loading indicator
+    return null;
   }
 
   return (
@@ -97,11 +93,9 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
         className="px-2 py-1 border border-white rounded-sm bg-transparent text-white"
         aria-label="Select language"
       >
-        {/* Add styles for options if needed, e.g., text color for dark mode */}
         {locales.map((locale: string) => (
           <option key={locale} value={locale} className="text-black bg-white">
             {" "}
-            {/* Basic option styling */}
             {languageNames[locale] || locale}
           </option>
         ))}

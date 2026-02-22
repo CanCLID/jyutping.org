@@ -1,13 +1,11 @@
 ---
-// src/pages/keyboard.astro
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import KeyboardPage from "@/components/KeyboardPage.tsx";
 
-const lang = "yue"; // Default locale
+const lang = "yue";
 const title = "輸入法工具 - 粵拼 Jyutping";
 ---
 
 <BaseLayout lang={lang} title={title}>
   <KeyboardPage locale={lang} client:load />
-  {/* Pass locale, hydrate if needed */}
 </BaseLayout>

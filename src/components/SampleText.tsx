@@ -5,12 +5,12 @@ import bakfung from "../texts/bakfung.txt?raw";
 import maanboujansanglou from "../texts/maanboujansanglou.txt?raw";
 import coisandou from "../texts/coisandou.txt?raw";
 
-// Function to parse the text into character/jyutping pairs
+// Parses text into character/jyutping pairs
 const parseText = (
   text: string
 ): { char: string; jyutping: string | null }[] => {
   const result: { char: string; jyutping: string | null }[] = [];
-  const pairs = text.split(/\s+/).filter(Boolean); // Split by one or more spaces and remove empty strings
+  const pairs = text.split(/\s+/).filter(Boolean);
 
   for (const pair of pairs) {
     // Handle cases like '字jyutping' or just '字' or 'punctuation'
@@ -21,13 +21,12 @@ const parseText = (
     // Also handle font variations. 使2si2（2 after 使 means pick another jyutping font） 使sai2
     const match = pair.match(/^(.+?)([\d]{0,1}?)([a-z]+\d)$/); // Assuming one character has not more than ten variations
     if (match) {
-      // Check if the first part is a single character (common case)
+      // Check if the first part is a single character
       if (match[1].length === 1) {
         char = match[1] + match[2];
         jyutping = match[3];
       } else {
-        // If the first part is multiple characters, treat the whole thing as a single unit without jyutping for now
-        // This might need refinement depending on expected input variations
+        // Invalid otherwise
         char = pair;
         jyutping = null;
       }
@@ -54,9 +53,8 @@ interface SampleTextProps {
 const SampleText: React.FC<SampleTextProps> = ({
   sample = "bakfung",
 }) => {
-  let inputText = bakfung; // Default text
+  let inputText = bakfung;
 
-  // Select text based on prop
   if (sample === "maanboujansanglou") {
     inputText = maanboujansanglou;
   } else if (sample === "coisandou") {
@@ -70,11 +68,9 @@ const SampleText: React.FC<SampleTextProps> = ({
 
 function TextWithAudioAndJyutPing({ children }: { children: string }) {
   const parsedItems = parseText(children);
-  // Removed dynamic audio tag generation - relies on Chartaudio.astro in parent
 
   return (
     <div className="my-6 p-4 border border-neutral-800 rounded-md">
-      {/* Display text with audio buttons */}
       <div className="flex flex-wrap items-end leading-loose">
         {parsedItems.map((item, index) => (
           <div
@@ -85,7 +81,7 @@ function TextWithAudioAndJyutPing({ children }: { children: string }) {
             {item.jyutping ? (
               <Audio id={item.jyutping} />
             ) : (
-              <span className="h-[28px] w-6 inline-block" /> // Placeholder for alignment (adjust height if needed)
+              <span className="h-[28px] w-6 inline-block" />
             )}
             {/* Character */}
             {item.char.length === 2 && /^\d$/.test(item.char[1]) ? (

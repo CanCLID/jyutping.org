@@ -1,8 +1,6 @@
 ---
-// src/pages/[locale]/index.astro
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { I18n } from "@/i18n/utils";
-
 
 import CmnIndexPage from "@/components/index-pages/CmnIndexPage.tsx";
 import EnIndexPage from "@/components/index-pages/EnIndexPage.tsx";
@@ -12,11 +10,10 @@ import ViIndexPage from "@/components/index-pages/ViIndexPage.tsx";
 import WuuIndexPage from "@/components/index-pages/WuuIndexPage.tsx";
 import YueHansIndexPage from "@/components/index-pages/YueHansIndexPage.tsx";
 // YueIndexPage is handled by src/pages/index.astro
-// Removed localeComponentMap
 
 export function getStaticPaths() {
   return I18n.locales
-    .filter((locale) => locale !== I18n.defaultLocale) // Exclude default locale
+    .filter((locale) => locale !== I18n.defaultLocale)
     .map((locale) => ({
       params: { locale },
     }));
@@ -28,7 +25,6 @@ const { locale } = Astro.params;
 const validLocale = I18n.locales.includes(locale as string)
   ? locale
   : I18n.defaultLocale;
-
 
 const pageTitles: Record<string, string> = {
   cmn: "粵拼 - 粵語拼音方案",
@@ -43,7 +39,6 @@ const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English t
 ---
 
 <BaseLayout lang={validLocale} title={title}>
-  {/* Conditionally render the correct component */}
   {validLocale === "en" && <EnIndexPage client:load />}
   {validLocale === "cmn" && <CmnIndexPage client:load />}
   {validLocale === "nan" && <NanIndexPage client:load />}

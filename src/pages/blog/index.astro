@@ -1,12 +1,11 @@
 ---
-// src/pages/blog/index.astro
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogIndexList from "@/components/BlogIndexList.tsx";
 
-const lang = "yue"; // Default locale
+const lang = "yue";
 
-// Fetch blog posts for the default locale ('yue')
+// Fetch blog posts for Cantonese
 const postsData = await getCollection("blog", ({ id }) =>
   id.startsWith(`${lang}/`)
 );
@@ -14,14 +13,12 @@ const postsData = await getCollection("blog", ({ id }) =>
 // Prepare posts prop for the component
 const posts = postsData.map((post) => ({
   title: post.data.title,
-  slug: `/blog/${post.slug.substring(4)}`, // Construct URL relative to root
+  slug: `/blog/${post.slug.substring(4)}`,
   description: post.data.description,
 }));
 
-
 const translations = {
   yue: { title: "文章", readMore: "閱讀全文", noPosts: "暫時冇文章。" },
-  // Add other locales if needed for fallback, though this page is only 'yue'
   en: { title: "Blog", readMore: "Read more", noPosts: "No posts found yet." },
 };
 const t = translations[lang] || translations.en;
@@ -31,5 +28,4 @@ const pageTitle = `${t.title} - 粵拼 Jyutping`;
 
 <BaseLayout lang={lang} title={pageTitle}>
   <BlogIndexList posts={posts} translations={t} client:load />
-  {/* Hydrate if needed */}
 </BaseLayout>

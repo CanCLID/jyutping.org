@@ -1,26 +1,24 @@
-/* Import Tailwind base, components, and utilities */
 @import "tailwindcss";
 
-/* Custom styles for MDX content rendered within <article> tags */
 article table {
-  @apply border-collapse border border-gray-300 my-4; /* Adjusted border color, removed w-full */
+  @apply border-collapse border border-gray-300 my-4;
 }
 
 article th,
 article td {
-  @apply border border-gray-300 px-2 xl:px-4 py-2 max-md:text-center text-left; /* Adjusted border color */
+  @apply border border-gray-300 px-2 xl:px-4 py-2 max-md:text-center text-left;
 }
 
 article th {
-  @apply bg-gray-100 font-semibold; /* Adjusted background color */
+  @apply bg-gray-100 font-semibold;
 }
 
 article ul {
-  @apply list-disc list-inside my-4 space-y-1 pl-5; /* Adjusted spacing/padding */
+  @apply list-disc list-inside my-4 space-y-1 pl-5;
 }
 
 article ol {
-  @apply list-decimal list-inside my-4 space-y-1 pl-5; /* Adjusted spacing/padding */
+  @apply list-decimal list-inside my-4 space-y-1 pl-5;
 }
 
 article li {
@@ -28,15 +26,13 @@ article li {
 }
 
 article p {
-  @apply my-4; /* Use Tailwind margin utility */
+  @apply my-4;
 }
 
-/* Style links specifically within article content */
 article a {
-  @apply text-blue-600 hover:text-blue-800 underline; /* Adjusted colors */
+  @apply text-blue-600 hover:text-blue-800 underline;
 }
 
-/* Ensure headings within articles have appropriate margins */
 article h1,
 article h2,
 article h3,
@@ -50,15 +46,13 @@ article h1 {
 }
 article h2 {
   @apply text-3xl border-b pb-1;
-} /* Added border */
+}
 article h3 {
   @apply text-2xl;
 }
 article h4 {
   @apply text-xl;
 }
-
-/* Add other global base styles if needed */
 
 @utility auto-fill-* {
   grid-template-columns: repeat(auto-fill, minmax(min(--spacing(--value(integer)), 100%), 1fr));

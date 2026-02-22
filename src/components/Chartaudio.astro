@@ -1,21 +1,7 @@
 ---
-// src/components/Chartaudio.astro
-// This component now only renders a hidden container.
-// The creation and management of <audio> elements will be handled
-// dynamically by the Audio.tsx component.
+// This component now only renders a hidden container holding dynamically created <audio> elements.
+// It's hidden from users and assistive technologies.
+// The creation and management of <audio> elements will be handled by the Audio.tsx component.
 ---
 
-{
-  /*
-  This container will hold dynamically created <audio> elements.
-  It's hidden from users and assistive technologies.
-*/
-}
-<div
-  id="dynamic-audio-container"
-  style="display: none;"
-  aria-hidden="true"
-  data-audio-base-path="/audio/"
->
-  {/* Audio elements will be added here by Audio.tsx */}
-</div>
+<div id="dynamic-audio-container" class="hidden" aria-hidden data-audio-base-path="/audio/"></div>

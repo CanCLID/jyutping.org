@@ -1,7 +1,6 @@
 import type React from "react";
 import { IconBrandGithub, IconMail, IconKeyboard } from "@tabler/icons-react";
 
-
 interface AboutPageTranslation {
 	acknowledgementsTitle: string;
 	acknowledgementsP1: React.ReactNode;
@@ -13,10 +12,9 @@ interface AboutPageTranslation {
 	developContributeP1: string;
 	emailText: React.ReactNode;
 	githubText: React.ReactNode;
-	keyboardText: React.ReactNode | null; // Can be null if missing
+	keyboardText: React.ReactNode | null;
 	finalParagraph: string;
 }
-
 
 const translations: Record<string, AboutPageTranslation> = {
 	cmn: {
@@ -90,7 +88,7 @@ const translations: Record<string, AboutPageTranslation> = {
 			<>
 				安装使用
 				<a
-					href="/keyboard" // Keep relative link
+					href="/keyboard"
 					className="text-blue-600 hover:underline mx-1"
 				>
 					粤拼输入法
@@ -177,7 +175,7 @@ const translations: Record<string, AboutPageTranslation> = {
 			<>
 				Install and type with
 				<a
-					href="/keyboard" // Keep relative link for internal navigation
+					href="/keyboard"
 					className="text-blue-600 hover:underline mx-1"
 				>
 					Jyutping keyboards
@@ -336,14 +334,14 @@ const translations: Record<string, AboutPageTranslation> = {
 			<>
 				安裝使用
 				<a
-					href="/keyboard" // Keep relative link
+					href="/keyboard"
 					className="text-blue-600 hover:underline mx-1"
 				>
 					粵拼輸入法
 				</a>
 				打字，以及分享本站。
 			</>
-		), // Missing in NAN source
+		),
 		finalParagraph:
 			"你若會曉粵語佮其他語言，而且願意共這个網站翻譯做其他語言，請你著寄批聯絡阮，阮真歡迎你的幫助佮貢獻。",
 	},
@@ -423,7 +421,7 @@ const translations: Record<string, AboutPageTranslation> = {
 			<>
 				Cài đặt và sử dụng{" "}
 				<a
-					href="/keyboard" // Keep relative link
+					href="/keyboard"
 					className="text-blue-600 hover:underline mx-1"
 				>
 					Bàn phím Việt bính
@@ -505,7 +503,7 @@ const translations: Record<string, AboutPageTranslation> = {
 			<>
 				安裝搭使用
 				<a
-					href="/keyboard" // Keep relative link
+					href="/keyboard"
 					className="text-blue-600 hover:underline mx-1"
 				>
 					粵拼輸入法
@@ -587,7 +585,7 @@ const translations: Record<string, AboutPageTranslation> = {
 			<>
 				安裝同使用
 				<a
-					href="/keyboard" // Keep relative link
+					href="/keyboard"
 					className="text-blue-600 hover:underline mx-1"
 				>
 					粵拼輸入法
@@ -669,7 +667,7 @@ const translations: Record<string, AboutPageTranslation> = {
 			<>
 				安装同使用
 				<a
-					href="/keyboard" // Keep relative link
+					href="/keyboard"
 					className="text-blue-600 hover:underline mx-1"
 				>
 					粤拼输入法
@@ -690,7 +688,6 @@ const AboutPage: React.FC<AboutPageProps> = ({ locale }) => {
 	const t = translations[locale] || translations.yue;
 
 	return (
-		// Added container and dark mode text colors
 		<div className="container mx-auto px-4 py-4 text-gray-800">
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-4">
 				<div className="prose max-w-none">
@@ -714,25 +711,21 @@ const AboutPage: React.FC<AboutPageProps> = ({ locale }) => {
 					<ul className="list-none space-y-3">
 						<li className="flex items-start">
 							<IconMail className="mr-3 mt-1 flex-shrink-0 h-5 w-5 text-gray-500" />{" "}
-							{/* Adjusted icon style */}
 							<span>{t.emailText}</span>
 						</li>
 						<li className="flex items-start">
 							<IconBrandGithub className="mr-3 mt-1 flex-shrink-0 h-5 w-5 text-gray-500" />{" "}
-							{/* Adjusted icon style */}
 							<span>{t.githubText}</span>
 						</li>
 						{/* Conditionally render keyboard link if text exists for the locale */}
 						{t.keyboardText && (
 							<li className="flex items-start">
 								<IconKeyboard className="mr-3 mt-1 flex-shrink-0 h-5 w-5 text-gray-500" />{" "}
-								{/* Adjusted icon style */}
 								<span>{t.keyboardText}</span>
 							</li>
 						)}
 					</ul>
 					<p className="mt-6 italic text-sm">{t.finalParagraph}</p>{" "}
-					{/* Adjusted style */}
 				</div>
 			</div>
 		</div>

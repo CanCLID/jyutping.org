@@ -1,9 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-import mdx from '@astrojs/mdx'; // Import MDX integration
+import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
-import remarkGfm from 'remark-gfm'; // Import remark-gfm
+import remarkGfm from 'remark-gfm';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -32,7 +32,6 @@ export default defineConfig({
   },
 
   integrations: [react(), mdx({
-    // Add remark-gfm plugin
     remarkPlugins: [remarkGfm],
   }), sitemap(), partytown()],
 

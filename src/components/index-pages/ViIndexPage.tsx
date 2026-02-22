@@ -15,25 +15,19 @@ const ViIndexPage: React.FC = () => {
       <h1 className="font-jyutping text-8xl my-16 mx-auto text-center">
         粵拼
       </h1>
-      
       <p className="font-jyutping text-4xl my-8 mx-auto text-center">
-        
         Đơn giản, hợp lý, dễ học, dễ dùng
       </p>
       <p className="font-jyutping leading-relaxed text-4xl mx-auto text-center mb-16">
-        
         Phương án phiên âm tiếng Quảng Đông phổ biến
       </p>
       <div className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8 my-16 items-center p-6">
-        
         <p className="text-center text-3xl md:text-right font-semibold">
           Tại sao học Việt bính?
         </p>
         <ul className="text-lg mx-auto md:col-span-2 space-y-3">
-          
           <li className="flex items-start">
             <IconEar className="mr-3 mt-1 flex-shrink-0" />
-            
             <span>
               Việt bính có thể giúp bạn sửa cách phát âm tiếng Quảng Đông của
               mình.
@@ -41,7 +35,6 @@ const ViIndexPage: React.FC = () => {
           </li>
           <li className="flex items-start">
             <IconLanguage className="mr-3 mt-1 flex-shrink-0" />
-            
             <span>
               Các chữ Hán không phải là chữ tượng thanh, chúng ta cần Việt bính
               để đại diện cho các âm của tiếng Quảng Đông.
@@ -49,7 +42,6 @@ const ViIndexPage: React.FC = () => {
           </li>
           <li className="flex items-start">
             <IconKeyboard className="mr-3 mt-1 flex-shrink-0" />
-            
             <span>
               Biết Việt bính, bạn có thể gõ tiếng Quảng Đông thuận tiện với bàn
               phím Việt bính, cách gõ tiếng Quảng Đông tự nhiên và dễ dàng nhất.
@@ -58,21 +50,17 @@ const ViIndexPage: React.FC = () => {
         </ul>
       </div>
       <div className="mx-auto text-center text-3xl my-12 font-semibold">
-        
         <span className="inline-flex items-center">
           <IconBulb className="mr-2" />
-          
           <span>Tôi đang học tiếng Quảng Đông và nói tiếng Việt.</span>
         </span>
       </div>
       <div className="mx-auto text-center text-3xl my-16 block">
         <span className="inline-flex items-center font-semibold animate-bounce">
-          
           <IconArrowDown className="mr-2 h-8 w-8" /> 
         </span>
       </div>
       <div className="flex flex-wrap justify-center my-8 gap-4">
-        
         <a
           href="/vi/learn"
           className="text-2xl text-center bg-yellow-300 text-neutral-800 hover:bg-yellow-400 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
@@ -84,7 +72,6 @@ const ViIndexPage: React.FC = () => {
       <span className="text-2xl text-center mx-auto block my-4">Hoặc</span>
       
       <div className="flex flex-wrap flex-col items-center justify-center my-8 gap-6">
-        
         <a
           href="/vi/jyutping"
           className="w-fit text-2xl text-center bg-[#6CAF59] hover:bg-[#CBF2AE] active:bg-[#CBF2AE] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
@@ -93,7 +80,7 @@ const ViIndexPage: React.FC = () => {
           <IconTable className="ml-2 flex-shrink-0" />
         </a>
         <a
-          href="/vi/keyboard" // Changed link to keyboard page
+          href="/vi/keyboard"
           className="w-fit text-2xl text-center bg-[#cadd7a] hover:bg-[#e9f1c8] active:bg-[#e9f1c8] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
         >
           Tài liệu và Bàn phím

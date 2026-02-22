@@ -1,6 +1,3 @@
-// src/i18n/jyutpingHeadings.ts
-
-
 interface JyutpingHeadingTranslation {
   onsetHeading: string;
   syllabicNasalHeading: string;
@@ -10,11 +7,9 @@ interface JyutpingHeadingTranslation {
   finalsChartHeading: string;
   toneHeading: string;
   referenceHeading: string;
-  referenceId: string; // Keep the ID for slug generation
+  referenceId: string;
 }
 
-
-// Extracted from src/components/JyutpingPage.tsx
 export const jyutpingHeadingsTranslations: Record<
   string,
   JyutpingHeadingTranslation
@@ -109,10 +104,8 @@ export const jyutpingHeadingsTranslations: Record<
   },
 };
 
-// Helper function to generate slugs for non-reference headings
-// Ensures consistency across languages for linking within the page structure
 export const generateSlug = (englishText: string): string => {
-
+  // Use English text as the base for consistent slugs
   // Keep dots for subheadings like 3.1 but drop trailing dots such as "1." in
   // headings like "1. Onset" to avoid generating slugs like "1.-onset".
   return (
