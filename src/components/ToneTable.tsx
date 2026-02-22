@@ -4,7 +4,7 @@ const ToneTable = () => {
   return (
     <table>
       <tr>
-        <th>聲調</th>
+        <th><span className="inline-block -scale-y-100">⤷</span></th>
         <th>1</th>
         <th>2</th>
         <th>3</th>
@@ -13,7 +13,7 @@ const ToneTable = () => {
         <th>6</th>
       </tr>
       <tr>
-        <td>1</td>
+        <th scope="row">1</th>
         <td>
           1￫1 <Audio id="11" />
         </td>
@@ -34,7 +34,7 @@ const ToneTable = () => {
         </td>
       </tr>
       <tr>
-        <td>2</td>
+        <th scope="row">2</th>
         <td>
           2￫1 <Audio id="21" />
         </td>
@@ -55,7 +55,7 @@ const ToneTable = () => {
         </td>
       </tr>
       <tr>
-        <td>3</td>
+        <th scope="row">3</th>
         <td>
           3￫1 <Audio id="31" />
         </td>
@@ -76,7 +76,7 @@ const ToneTable = () => {
         </td>
       </tr>
       <tr>
-        <td>4</td>
+        <th scope="row">4</th>
         <td>
           4￫1 <Audio id="41" />
         </td>
@@ -97,7 +97,7 @@ const ToneTable = () => {
         </td>
       </tr>
       <tr>
-        <td>5</td>
+        <th scope="row">5</th>
         <td>
           5￫1 <Audio id="51" />
         </td>
@@ -118,7 +118,7 @@ const ToneTable = () => {
         </td>
       </tr>
       <tr>
-        <td>6</td>
+        <th scope="row">6</th>
         <td>
           6￫1 <Audio id="61" />
         </td>
