@@ -99,6 +99,7 @@ const YueIndexPage: React.FC = () => {
       {/* Links to other locales */}
       <div className="flex flex-col md:flex-row md:flex-wrap md:justify-around items-center gap-4 my-12 max-w-5xl mx-auto">
         <a
+          lang="cmn"
           href="/cmn"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
@@ -106,6 +107,7 @@ const YueIndexPage: React.FC = () => {
         </a>
 
         <a
+          lang="wuu"
           href="/wuu"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
@@ -113,6 +115,7 @@ const YueIndexPage: React.FC = () => {
         </a>
 
         <a
+          lang="nan"
           href="/nan"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
@@ -120,6 +123,7 @@ const YueIndexPage: React.FC = () => {
         </a>
 
         <a
+          lang="vi"
           href="/vi"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
@@ -127,6 +131,7 @@ const YueIndexPage: React.FC = () => {
         </a>
 
         <a
+          lang="en"
           href="/en"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
