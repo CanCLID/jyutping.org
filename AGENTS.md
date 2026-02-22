@@ -27,3 +27,5 @@
   - ✔️ `{/* Header */}`
   - ✔️ `{/* Main Container */}`
 - When removing code, eliminate entirely. DO NOT comment out code.
+
+- Translation locales should be sorted in alphabetical order.

@@ -17,8 +17,14 @@ const posts = postsData.map((post) => ({
 }));
 
 const translations = {
-  yue: { title: "文章", readMore: "閱讀全文", noPosts: "暫時冇文章。" },
+  cmn: { title: "文章", readMore: "閲讀全文", noPosts: "暂無文章。" },
   en: { title: "Blog", readMore: "Read more", noPosts: "No posts found yet." },
+  ja: { title: "ブログ", readMore: "もっと読む", noPosts: "記事がまだありません。" },
+  nan: { title: "文章", readMore: "讀全文", noPosts: "猶未有文。" },
+  vi: { title: "Tập văn", readMore: "Đọc thêm", noPosts: "Chưa có bài viết nào." },
+  wuu: { title: "博客", readMore: "阅读全文", noPosts: "暂无博文。" },
+  yue: { title: "文章", readMore: "閱讀全文", noPosts: "暂無文章。" },
+  yue_hans: { title: "文章", readMore: "阅读全文", noPosts: "暂无文章。" },
 };
 const t = translations[I18n.defaultLocale] || translations.en; // Fallback to English
 

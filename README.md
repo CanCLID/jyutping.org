@@ -8,7 +8,7 @@ src/content
 src/pages
 ```
 
-目前有`yue`、`cmn`、`wuu`、`nan`、`vi`、`en`六個語言版本，歡迎提交 PR 貢獻內容翻譯。
+目前有 `yue`、`yue-Hans`、`cmn`、`en`、`ja`、`nan`、`vi`、`wuu` 八個語言版本，歡迎提交 PR 貢獻內容翻譯。
 
 網站部署喺 Cloudflare Pages，用 Astro preset。
 
@@ -27,7 +27,7 @@ src/pages
 
 ### 字體取樣
 
-因為個粵拼字體體積太大，本站用咗 font subsetting 嚟縮細個昭源黑體粵拼字體。如果網站有內容更新，可能需要重新跑下面嘅命令嚟重新生成個`ChironHeiHK-lshk-subset.woff2`：
+因為個粵拼字體體積太大，本站用咗 font subsetting 嚟縮細個昭源黑體粵拼字體。如果網站有內容更新，可能需要重新跑下面嘅命令嚟重新生成個 `ChironHeiHK-lshk-subset.woff2`：
 
 ```bash
 glyphhanger ./dist/**/*.html --unicodes > unicodes.txt

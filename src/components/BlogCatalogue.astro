@@ -8,12 +8,14 @@ const locale = currentLocale || I18n.defaultLocale;
 
 // --- Title Translations ---
 const titleTranslations: Record<string, string> = {
-  yue: "文章",
-  en: "Blog",
-  vi: "Tập văn",
-  nan: "文章",
-  wuu: "文章",
   cmn: "文章",
+  en: "Blog",
+  ja: "ブログ",
+  nan: "文章",
+  vi: "Tập văn",
+  wuu: "文章",
+  yue: "文章",
+  yue_hans: "文章",
 };
 
 const title = titleTranslations[locale] || titleTranslations.en; // Fallback to English
