@@ -16,6 +16,7 @@ const YueIndexPage: React.FC = () => {
         粵拼
       </h1>
       <p className="leading-relaxed text-3xl mx-auto text-center">
+        {/* Do not add `font-jyutping` for Simplified Chinese - the jyutping font does not support simplified characters */}
         简单合理&nbsp;&nbsp;易学易用
       </p>
       <p className="leading-relaxed text-3xl mx-auto text-center mb-16">

@@ -15,7 +15,8 @@ const EnIndexPage: React.FC = () => {
       <h1 className="font-jyutping text-8xl my-16 mx-auto text-center">
         粵拼
       </h1>
-      <p className="font-jyutping text-4xl my-8 mx-auto text-center">
+      <p className="text-4xl my-8 mx-auto text-center">
+        {/* Do not add `font-jyutping` for English - nothing to annotate, plus the main font renders Latin characters prettier */}
         The Standard Romanization Scheme for Cantonese
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-16 items-center p-6 max-w-5xl mx-auto">

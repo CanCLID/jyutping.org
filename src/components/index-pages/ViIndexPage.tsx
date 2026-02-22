@@ -15,10 +15,11 @@ const ViIndexPage: React.FC = () => {
       <h1 className="font-jyutping text-8xl my-16 mx-auto text-center">
         粵拼
       </h1>
-      <p className="font-jyutping text-4xl my-8 mx-auto text-center">
+      <p className="text-4xl my-8 mx-auto text-center">
+        {/* Do not add `font-jyutping` for Vietnamese - the jyutping font does not render Vietnamese nicely */}
         Đơn giản, hợp lý, dễ học, dễ dùng
       </p>
-      <p className="font-jyutping leading-relaxed text-4xl mx-auto text-center mb-16">
+      <p className="leading-relaxed text-4xl mx-auto text-center mb-16">
         Phương án phiên âm tiếng Quảng Đông phổ biến
       </p>
       <div className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8 my-16 items-center p-6">
