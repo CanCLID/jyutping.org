@@ -35,7 +35,7 @@ const pageTitles: Record<string, string> = {
   wuu: "粤拼 - 粤语拼音方案",
   yue_hans: "粤拼 - 粤语拼音方案",
 };
-const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English title
+const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English
 ---
 
 <BaseLayout lang={validLocale} title={title}>

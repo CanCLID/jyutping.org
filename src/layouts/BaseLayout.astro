@@ -4,6 +4,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import "@/styles/global.css";
 import Chartaudio from "@/components/Chartaudio.astro";
+import { I18n } from "@/i18n/utils";
 
 interface Props {
   title?: string;
@@ -14,7 +15,7 @@ interface Props {
 const {
   title = "粵拼 Jyutping",
   description = "標準粵語拼音方案 Standard Cantonese Romanization Scheme",
-  lang = "yue",
+  lang = I18n.defaultLocale,
 } = Astro.props;
 
 const umamiWebsiteId = "188fdd26-8e55-42b6-ba73-7d2f58adca11";

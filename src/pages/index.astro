@@ -1,10 +1,9 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import YueIndexPage from "@/components/index-pages/YueIndexPage.tsx";
-
-const lang = "yue";
+import { I18n } from "@/i18n/utils";
 ---
 
-<BaseLayout lang={lang}>
+<BaseLayout lang={I18n.defaultLocale}>
   <YueIndexPage client:load />
 </BaseLayout>

@@ -685,7 +685,7 @@ interface AboutPageProps {
 }
 
 const AboutPage: React.FC<AboutPageProps> = ({ locale }) => {
-  const t = translations[locale] || translations.yue;
+  const t = translations[locale] || translations.en; // Fallback to English
 
   return (
     <div className="container mx-auto px-4 py-4 text-gray-800">

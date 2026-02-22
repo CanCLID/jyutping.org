@@ -9,7 +9,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 export async function getStaticPaths() {
   const learnEntries = await getCollection("learn", ({ id }) => {
     // Filter for entries NOT in the default locale
-    return !id.startsWith("yue/");
+    return !id.startsWith(`${I18n.defaultLocale}/`);
   });
 
   return learnEntries
@@ -37,7 +37,7 @@ const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 
 // Determine language for the layout
-const lang = entry.id.split("/")[0] || "yue";
+const lang = entry.id.split("/")[0] || I18n.defaultLocale;
 ---
 
 <BaseLayout

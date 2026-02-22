@@ -1,10 +1,11 @@
 ---
 import { IconMenu2 } from "@tabler/icons-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher.tsx";
+import { I18n } from "@/i18n/utils";
 
 const { currentLocale, url } = Astro;
 const pathname = url.pathname;
-const locale = currentLocale || "yue";
+const locale = currentLocale || I18n.defaultLocale;
 
 // --- Navigation Translations ---
 const navTranslations: Record<string, Record<string, string>> = {
@@ -65,7 +66,7 @@ const navLinkKeys = ["learn", "jyutping", "blog", "keyboard", "about"];
 const navLinks = navLinkKeys.map((key) => {
   const baseHref = `/${key}`;
   // Prepend locale prefix only if it's not the default locale
-  const href = locale === "yue" ? baseHref : `/${locale}${baseHref}`;
+  const href = locale === I18n.defaultLocale ? baseHref : `/${locale}${baseHref}`;
   return {
     href: href,
     title: navTranslations[key]?.[locale] || key,
@@ -73,10 +74,7 @@ const navLinks = navLinkKeys.map((key) => {
 });
 
 // Determine the correct base path for the logo link
-const logoHref = locale === "yue" ? "/" : `/${locale}`;
-
-const locales = ["en", "vi", "yue", "cmn", "nan", "wuu", "yue_hans", "ja"];
-const defaultLocale = "yue";
+const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
 ---
 
 <header class="relative p-4 bg-[#1678d3] text-white">
@@ -98,12 +96,7 @@ const defaultLocale = "yue";
 
     {/* Desktop Language Switcher */}
     <div class="hidden md:block">
-      <LanguageSwitcher
-        locales={locales}
-        defaultLocale={defaultLocale}
-        currentPathname={pathname}
-        client:load
-      />
+      <LanguageSwitcher currentPathname={pathname} client:load />
     </div>
 
     {/* Mobile Menu Button */}
@@ -133,12 +126,7 @@ const defaultLocale = "yue";
           }
         </nav>
         {/* Mobile Language Switcher */}
-        <LanguageSwitcher
-          locales={locales}
-          defaultLocale={defaultLocale}
-          currentPathname={pathname}
-          client:load
-        />
+        <LanguageSwitcher currentPathname={pathname} client:load />
       </div>
     </div>
   </div>

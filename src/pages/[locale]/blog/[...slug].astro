@@ -9,8 +9,8 @@ import { I18n } from "@/i18n/utils";
 // 1. Generate paths for all non-default locale blog posts
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog", ({ id }) => {
-    // Filter for entries NOT in the default locale ('yue')
-    return !id.startsWith("yue/");
+    // Filter for entries NOT in the default locale
+    return !id.startsWith(`${I18n.defaultLocale}/`);
   });
 
   return blogEntries
@@ -46,7 +46,7 @@ const allBlogEntries = await getCollection("blog", ({ id }) =>
 allBlogEntries.sort((a, b) => (a.data.weight || 0) - (b.data.weight || 0));
 
 // Determine language for the layout
-const lang = entry.id.split("/")[0] || "yue";
+const lang = entry.id.split("/")[0] || I18n.defaultLocale;
 ---
 
 <BaseLayout

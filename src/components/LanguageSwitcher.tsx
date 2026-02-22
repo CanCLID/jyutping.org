@@ -1,10 +1,9 @@
 import type React from "react";
 import { useState, useEffect } from "react";
+import { I18n } from "@/i18n/utils";
 
 interface LanguageSwitcherProps {
-  locales: readonly string[];
-  defaultLocale: string;
-  currentPathname: string; // Passed from Astro component
+  currentPathname: string;
 }
 
 const languageNames: Record<string, string> = {
@@ -18,29 +17,25 @@ const languageNames: Record<string, string> = {
   yue_hans: "粤语简体",
 };
 
-const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
-  locales,
-  defaultLocale,
-  currentPathname,
-}) => {
+const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) => {
   const [effectiveCurrentLocale, setEffectiveCurrentLocale] =
-    useState(defaultLocale);
+    useState<string>(I18n.defaultLocale);
 
   useEffect(() => {
     // Determine the current locale based on the pathname prop
-    const detectedLocale = locales.find(
+    const detectedLocale = I18n.locales.find(
       (locale) =>
         currentPathname.startsWith(`/${locale}/`) ||
         currentPathname === `/${locale}`
     );
-    setEffectiveCurrentLocale(detectedLocale || defaultLocale);
-  }, [currentPathname, locales, defaultLocale]);
+    setEffectiveCurrentLocale(detectedLocale || I18n.defaultLocale);
+  }, [currentPathname]);
 
   const handleLocaleChange = (newLocale: string) => {
     if (!currentPathname) return;
 
     // Determine the current locale prefix (if any) based on the pathname prop
-    const currentLocalePrefix = locales.find(
+    const currentLocalePrefix = I18n.locales.find(
       (locale) =>
         currentPathname.startsWith(`/${locale}/`) ||
         currentPathname === `/${locale}`
@@ -57,7 +52,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
 
     // Construct the target path: only non-default locales should have the prefix
     let targetPath = "";
-    if (newLocale === defaultLocale) {
+    if (newLocale === I18n.defaultLocale) {
       targetPath = basePath;
     } else {
       targetPath = `/${newLocale}${basePath}`;
@@ -93,7 +88,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
         className="px-2 py-1 border border-white rounded-sm bg-transparent text-white"
         aria-label="Select language"
       >
-        {locales.map((locale: string) => (
+        {I18n.locales.map((locale: string) => (
           <option key={locale} value={locale} className="text-black bg-white">
             {" "}
             {languageNames[locale] || locale}

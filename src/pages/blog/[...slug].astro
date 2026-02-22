@@ -4,12 +4,13 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import TableOfContents from "@/components/TableOfContents";
 import BlogCatalogue from "@/components/BlogCatalogue.astro";
+import { I18n } from "@/i18n/utils";
 
-// 1. Generate paths for all 'yue' blog posts
+// 1. Generate paths for all Cantonese blog posts
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog", ({ id }) => {
     // Filter for entries in the default locale
-    return id.startsWith("yue/");
+    return id.startsWith(`${I18n.defaultLocale}/`);
   });
 
   return blogEntries.map((entry) => ({
@@ -25,15 +26,15 @@ interface Props {
 const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 
-// Fetch all 'yue' blog posts for the catalogue
+// Fetch all Cantonese blog posts for the catalogue
 const allBlogEntries = await getCollection("blog", ({ id }) =>
-  id.startsWith("yue/")
+  id.startsWith(`${I18n.defaultLocale}/`)
 );
 
 allBlogEntries.sort((a, b) => (a.data.weight || 0) - (b.data.weight || 0));
 
 // Determine language for the layout
-const lang = entry.id.split("/")[0] || "yue";
+const lang = entry.id.split("/")[0] || I18n.defaultLocale;
 ---
 
 <BaseLayout

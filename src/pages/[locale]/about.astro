@@ -27,7 +27,7 @@ const { locale } = Astro.params;
 const validLocale = I18n.locales.includes(locale as string)
   ? locale
   : I18n.defaultLocale;
-const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English title
+const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English
 ---
 
 <BaseLayout lang={validLocale} title={title}>

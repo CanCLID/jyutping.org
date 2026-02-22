@@ -3,12 +3,13 @@ import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import TableOfContents from "@/components/TableOfContents";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { I18n } from "@/i18n/utils";
 
-// 1. Generate paths for all 'yue' learn posts
+// 1. Generate paths for all Cantonese learn posts
 export async function getStaticPaths() {
   const learnEntries = await getCollection("learn", ({ id }) => {
     // Filter for entries in the default locale
-    return id.startsWith("yue/");
+    return id.startsWith(`${I18n.defaultLocale}/`);
   });
 
   return learnEntries.map((entry) => {
@@ -28,7 +29,7 @@ const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 
 // Determine language for the layout
-const lang = entry.id.split("/")[0] || "yue";
+const lang = entry.id.split("/")[0] || I18n.defaultLocale;
 ---
 
 <BaseLayout

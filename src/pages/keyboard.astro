@@ -1,11 +1,11 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import KeyboardPage from "@/components/KeyboardPage.tsx";
+import { I18n } from "@/i18n/utils";
 
-const lang = "yue";
 const title = "輸入法工具 - 粵拼 Jyutping";
 ---
 
-<BaseLayout lang={lang} title={title}>
-  <KeyboardPage locale={lang} client:load />
+<BaseLayout lang={I18n.defaultLocale} title={title}>
+  <KeyboardPage locale={I18n.defaultLocale} client:load />
 </BaseLayout>

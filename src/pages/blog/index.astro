@@ -2,12 +2,11 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogIndexList from "@/components/BlogIndexList.tsx";
-
-const lang = "yue";
+import { I18n } from "@/i18n/utils";
 
 // Fetch blog posts for Cantonese
 const postsData = await getCollection("blog", ({ id }) =>
-  id.startsWith(`${lang}/`)
+  id.startsWith(`${I18n.defaultLocale}/`)
 );
 
 // Prepare posts prop for the component
@@ -21,11 +20,11 @@ const translations = {
   yue: { title: "文章", readMore: "閱讀全文", noPosts: "暫時冇文章。" },
   en: { title: "Blog", readMore: "Read more", noPosts: "No posts found yet." },
 };
-const t = translations[lang] || translations.en;
+const t = translations[I18n.defaultLocale] || translations.en; // Fallback to English
 
 const pageTitle = `${t.title} - 粵拼 Jyutping`;
 ---
 
-<BaseLayout lang={lang} title={pageTitle}>
+<BaseLayout lang={I18n.defaultLocale} title={pageTitle}>
   <BlogIndexList posts={posts} translations={t} client:load />
 </BaseLayout>

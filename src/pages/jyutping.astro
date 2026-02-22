@@ -2,17 +2,14 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import JyutpingPage from "@/components/JyutpingPage.tsx";
 import TableOfContents from "@/components/TableOfContents";
-import {
-  jyutpingHeadingsTranslations,
-  generateSlug,
-} from "@/i18n/jyutpingHeadings";
+import { jyutpingHeadingsTranslations, generateSlug } from "@/i18n/jyutpingHeadings";
+import { I18n } from "@/i18n/utils";
 
-const lang = "yue";
 const title = "粵拼方案 - Jyutping";
 
 // Get the correct heading translations for the current locale
-const t = jyutpingHeadingsTranslations[lang];
-const tEn = jyutpingHeadingsTranslations.en;
+const t = jyutpingHeadingsTranslations[I18n.defaultLocale];
+const tEn = jyutpingHeadingsTranslations.en; // Get English translations for slug generation
 
 // Dynamically generate headings for TableOfContents based on locale
 const headings = [
@@ -35,7 +32,7 @@ const headings = [
 ];
 ---
 
-<BaseLayout lang={lang} title={title}>
+<BaseLayout lang={I18n.defaultLocale} title={title}>
   <div class="bg-[#1678d3] text-white px-4 py-6 mb-8">
     <h1
       class="font-jyutping my-4 text-5xl md:text-6xl leading-relaxed text-center container max-w-8xl mx-auto"
@@ -50,7 +47,7 @@ const headings = [
     </h1>
   </div>
   <div class="flex justify-center gap-8 max-w-5xl mx-auto">
-    <JyutpingPage locale={lang} client:visible />
+    <JyutpingPage locale={I18n.defaultLocale} client:visible />
     <aside class="hidden lg:block w-32 flex-shrink-0">
       <div class="sticky top-32">
         <TableOfContents client:visible headings={headings} />

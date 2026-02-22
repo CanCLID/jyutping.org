@@ -32,12 +32,12 @@ const { locale } = Astro.params;
 const validLocale = I18n.locales.includes(locale as string)
   ? locale
   : I18n.defaultLocale;
-const title = pageTitles[validLocale] || pageTitles.yue;
+const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English
 
 // Get the correct heading translations for the current locale
 const t =
   jyutpingHeadingsTranslations[validLocale] || jyutpingHeadingsTranslations.en;
-const tEn = jyutpingHeadingsTranslations.en;
+const tEn = jyutpingHeadingsTranslations.en; // Get English translations for slug generation
 
 // Dynamically generate headings for TableOfContents based on locale
 const headings = [
