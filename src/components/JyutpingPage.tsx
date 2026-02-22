@@ -26,6 +26,83 @@ interface JyutpingPageContentTranslation {
 
 // Define translations for content *other* than headings
 const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
+	cmn: {
+		intro: "「香港語言學學會粵語拼音方案」，簡稱「粵拼」。",
+		alertIpaTitle: "關於 IPA 轉寫",
+		alertIpaContent: (
+			<p>
+				本頁面所用國際音標轉寫皆爲寬式轉寫，錄音數據來源爲粵典。詳情請見{" "}
+				<a href="#references-cmn" className="text-blue-600 hover:underline">
+					參考文獻
+				</a>{" "}
+				一節。
+			</p>
+		),
+		// onsetHeading removed
+		onsetTableHeaders: [
+			"雙脣音",
+			"脣齒音",
+			"齒齦音",
+			"硬齶音",
+			"軟齶音",
+			"喉音",
+		],
+		onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
+		// Note: Same as Yue, might need specific Cmn phrasing if available
+		alertNullInitial: <p>零聲母唔用字母做標記，例如「呀」只拼作 aa。</p>,
+		// syllabicNasalHeading removed
+		// finalHeading removed
+		// nucleiHeading removed
+		// codaHeading removed
+		codaRowHeaders: ["爆發音", "鼻音", "元音"],
+		// finalsChartHeading removed
+		finalsChartColHeaders1: [
+			"單元音",
+			"複元音",
+			"鼻音韻尾",
+			"爆發音韻尾（入聲韻）",
+		],
+		finalsChartColHeaders2: [
+			"-",
+			"-i",
+			"-u",
+			"-m",
+			"-n",
+			"-ng",
+			"-p",
+			"-t",
+			"-k",
+		],
+		finalsChartRowHeader: "韻腹",
+		alertAddedFinals: (
+			<p>
+				<strong>a</strong> 和 <strong>oet</strong> 於 2018 年新增。詳情請看{" "}
+				<a
+					href="https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="text-blue-600 hover:underline"
+				>
+					這裏
+				</a>
+				。
+			</p>
+		),
+		// toneHeading removed
+		toneTableHeaders: ["平", "上", "去", "入"],
+		toneRowHeaders: ["陰", "陽"],
+		alertToneMarks: (
+			<>
+				<p>聲調標在音節後。</p>
+				<p>
+					<strong>示例：</strong>
+					fu1 （夫），fu2 （虎）, fu3 （副）, fu4 （扶）, fu5 （婦）, fu6 （父）
+				</p>
+			</>
+		),
+		// referenceHeading removed
+		// referenceId removed
+	},
 	en: {
 		intro:
 			"The Linguistic Society of Hong Kong Cantonese Romanization Scheme, abbreviated as Jyutping.",
@@ -123,42 +200,55 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 		// referenceHeading removed
 		// referenceId removed
 	},
-
-	cmn: {
-		intro: "「香港語言學學會粵語拼音方案」，簡稱「粵拼」。",
-		alertIpaTitle: "關於 IPA 轉寫",
+	ja: {
+		intro: "「香港言語学会広東語ローマ字表記法」、略称「粤拼」。",
+		alertIpaTitle: "IPA 表記について",
 		alertIpaContent: (
 			<p>
-				本頁面所用國際音標轉寫皆爲寬式轉寫，錄音數據來源爲粵典。詳情請見{" "}
-				<a href="#references-cmn" className="text-blue-600 hover:underline">
-					參考文獻
+				このページで使用されている国際音声記号（IPA）はすべて音素表記です。音声データは{" "}
+				<a
+					href="https://words.hk/"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="text-blue-600 hover:underline"
+				>
+					粵典 words.hk
 				</a>{" "}
-				一節。
+				から提供されています。詳細は{" "}
+				<a href="#references-ja" className="text-blue-600 hover:underline">
+					参考文献
+				</a>{" "}
+				をご覧ください。
 			</p>
 		),
-		// onsetHeading removed
 		onsetTableHeaders: [
-			"雙脣音",
-			"脣齒音",
-			"齒齦音",
-			"硬齶音",
-			"軟齶音",
-			"喉音",
+			"両唇音",
+			"唇歯音",
+			"歯茎音",
+			"硬口蓋音",
+			"軟口蓋音",
+			"声門音",
 		],
-		onsetRowHeaders: ["爆發音", "塞擦音", "鼻音", "擦音", "近音", "邊近音"],
-		// Note: Same as Yue, might need specific Cmn phrasing if available
-		alertNullInitial: <p>零聲母唔用字母做標記，例如「呀」只拼作 aa。</p>,
-		// syllabicNasalHeading removed
-		// finalHeading removed
-		// nucleiHeading removed
-		// codaHeading removed
-		codaRowHeaders: ["爆發音", "鼻音", "元音"],
-		// finalsChartHeading removed
+		onsetRowHeaders: [
+			"破裂音",
+			"破擦音",
+			"鼻音",
+			"摩擦音",
+			"接近音",
+			"側面接近音",
+		],
+		alertNullInitial: (
+			<p>
+				ゼロ声母（声母なし）は文字で表記しません。例えば「呀」は aa
+				とだけ表記します。
+			</p>
+		),
+		codaRowHeaders: ["破裂音", "鼻音", "母音"],
 		finalsChartColHeaders1: [
-			"單元音",
-			"複元音",
+			"単母音",
+			"二重母音",
 			"鼻音韻尾",
-			"爆發音韻尾（入聲韻）",
+			"破裂音韻尾（入声韻）",
 		],
 		finalsChartColHeaders2: [
 			"-",
@@ -174,32 +264,30 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 		finalsChartRowHeader: "韻腹",
 		alertAddedFinals: (
 			<p>
-				<strong>a</strong> 和 <strong>oet</strong> 於 2018 年新增。詳情請看{" "}
+				<strong>a</strong> と <strong>oet</strong> は 2018
+				年に追加されました。詳細は{" "}
 				<a
 					href="https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="text-blue-600 hover:underline"
 				>
-					這裏
-				</a>
-				。
+					こちら
+				</a>{" "}
+				をご覧ください。
 			</p>
 		),
-		// toneHeading removed
 		toneTableHeaders: ["平", "上", "去", "入"],
 		toneRowHeaders: ["陰", "陽"],
 		alertToneMarks: (
 			<>
-				<p>聲調標在音節後。</p>
+				<p>声調は音節の末尾に数字で表記します。</p>
 				<p>
-					<strong>示例：</strong>
-					fu1 （夫），fu2 （虎）, fu3 （副）, fu4 （扶）, fu5 （婦）, fu6 （父）
+					<strong>例：</strong>
+					fu1（夫）、fu2（虎）、fu3（副）、fu4（扶）、fu5（婦）、fu6（父）
 				</p>
 			</>
 		),
-		// referenceHeading removed
-		// referenceId removed
 	},
 	nan: {
 		intro: "「香港語言學學會粵語拼音方案」，簡稱「粵拼」。",
@@ -604,95 +692,6 @@ const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
 		),
 		// referenceHeading removed
 		// referenceId removed
-	},
-	ja: {
-		intro: "「香港言語学会広東語ローマ字表記法」、略称「粤拼」。",
-		alertIpaTitle: "IPA 表記について",
-		alertIpaContent: (
-			<p>
-				このページで使用されている国際音声記号（IPA）はすべて音素表記です。音声データは{" "}
-				<a
-					href="https://words.hk/"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="text-blue-600 hover:underline"
-				>
-					粵典 words.hk
-				</a>{" "}
-				から提供されています。詳細は{" "}
-				<a href="#references-ja" className="text-blue-600 hover:underline">
-					参考文献
-				</a>{" "}
-				をご覧ください。
-			</p>
-		),
-		onsetTableHeaders: [
-			"両唇音",
-			"唇歯音",
-			"歯茎音",
-			"硬口蓋音",
-			"軟口蓋音",
-			"声門音",
-		],
-		onsetRowHeaders: [
-			"破裂音",
-			"破擦音",
-			"鼻音",
-			"摩擦音",
-			"接近音",
-			"側面接近音",
-		],
-		alertNullInitial: (
-			<p>
-				ゼロ声母（声母なし）は文字で表記しません。例えば「呀」は aa
-				とだけ表記します。
-			</p>
-		),
-		codaRowHeaders: ["破裂音", "鼻音", "母音"],
-		finalsChartColHeaders1: [
-			"単母音",
-			"二重母音",
-			"鼻音韻尾",
-			"破裂音韻尾（入声韻）",
-		],
-		finalsChartColHeaders2: [
-			"-",
-			"-i",
-			"-u",
-			"-m",
-			"-n",
-			"-ng",
-			"-p",
-			"-t",
-			"-k",
-		],
-		finalsChartRowHeader: "韻腹",
-		alertAddedFinals: (
-			<p>
-				<strong>a</strong> と <strong>oet</strong> は 2018
-				年に追加されました。詳細は{" "}
-				<a
-					href="https://e40058f5-5f04-4db7-8d70-4650bee22b88.filesusr.com/ugd/508b98_8bead2fef24f46e79eba9bc86faf3075.pdf"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="text-blue-600 hover:underline"
-				>
-					こちら
-				</a>{" "}
-				をご覧ください。
-			</p>
-		),
-		toneTableHeaders: ["平", "上", "去", "入"],
-		toneRowHeaders: ["陰", "陽"],
-		alertToneMarks: (
-			<>
-				<p>声調は音節の末尾に数字で表記します。</p>
-				<p>
-					<strong>例：</strong>
-					fu1（夫）、fu2（虎）、fu3（副）、fu4（扶）、fu5（婦）、fu6（父）
-				</p>
-			</>
-		),
 	},
 };
 

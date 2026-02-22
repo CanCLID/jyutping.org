@@ -19,6 +19,88 @@ interface AboutPageTranslation {
 
 
 const translations: Record<string, AboutPageTranslation> = {
+	cmn: {
+		acknowledgementsTitle: "鸣谢",
+		acknowledgementsP1: (
+			<>
+				本站由
+				<a
+					href="https://github.com/orgs/CanCLID"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="text-blue-600 hover:underline mx-1"
+				>
+					粤语计算语言学基础建设组
+				</a>
+				建成，并得到
+				<a
+					href="https://www.lshk.org"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="text-blue-600 hover:underline mx-1"
+				>
+					香港语言学学会 (LSHK)
+				</a>
+				的协助。网站源码全部开源在
+				<a
+					href="https://github.com/CanCLID/jyutping.org"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="text-blue-600 hover:underline mx-1"
+				>
+					GitHub
+				</a>
+				，欢迎外界贡献。
+			</>
+		),
+		acknowledgementsP2:
+			"感谢 LSHK 粤拼小组和粤典对本站的支持。特别鸣谢 Chaak-ming Lau 博士，Kwan-hin Cheung 博士，Andy Chin 博士，Raymond Tze 先生和 Zungman Ceoi 先生为建设本站提供的帮助。",
+		acknowledgementsP3: "感谢 Lim Hian-tong 先生提供本站台湾闽南语版本。",
+		acknowledgementsP4: "感谢具区句鱼先生提供本站吴语版本。",
+		acknowledgementsP5: "感谢以成提供本站越南语版本。",
+		developContributeTitle: "开发及贡献",
+		developContributeP1: "如果你想支持粤拼或参与到我们的事务中，你可以：",
+		emailText: (
+			<>
+				发邮件到
+				<a
+					href="mailto:support@jyutping.org"
+					className="text-blue-600 hover:underline mx-1"
+				>
+					support@jyutping.org
+				</a>
+				告诉我们你的想法或者反馈意见。
+			</>
+		),
+		githubText: (
+			<>
+				在
+				<a
+					href="https://github.com/CanCLID/jyutping.org"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="text-blue-600 hover:underline mx-1"
+				>
+					GitHub
+				</a>
+				上面新开一个 issue 讨论或者代码 pull request。
+			</>
+		),
+		keyboardText: (
+			<>
+				安装使用
+				<a
+					href="/keyboard" // Keep relative link
+					className="text-blue-600 hover:underline mx-1"
+				>
+					粤拼输入法
+				</a>
+				打字，以及同人分享本网站。
+			</>
+		),
+		finalParagraph:
+			"如果你熟习粤语和其他语言，并愿意把本网站翻译成其他语言，请务必邮件联系我们，我们非常欢迎你的帮助和贡献。",
+	},
 	en: {
 		acknowledgementsTitle: "Acknowledgements",
 		acknowledgementsP1: (
@@ -105,30 +187,29 @@ const translations: Record<string, AboutPageTranslation> = {
 		),
 		finalParagraph: "Your help and contribution is always appreciated.",
 	},
-
-	cmn: {
-		acknowledgementsTitle: "鸣谢",
+	ja: {
+		acknowledgementsTitle: "謝辞",
 		acknowledgementsP1: (
 			<>
-				本站由
+				このウェブサイトは
 				<a
 					href="https://github.com/orgs/CanCLID"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="text-blue-600 hover:underline mx-1"
 				>
-					粤语计算语言学基础建设组
+					広東語計算言語学基盤開発グループ (CanCLID)
 				</a>
-				建成，并得到
+				によって開発され、
 				<a
 					href="https://www.lshk.org"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="text-blue-600 hover:underline mx-1"
 				>
-					香港语言学学会 (LSHK)
+					香港言語学会 (LSHK)
 				</a>
-				的协助。网站源码全部开源在
+				の協力を得ています。すべてのコードは
 				<a
 					href="https://github.com/CanCLID/jyutping.org"
 					target="_blank"
@@ -137,56 +218,52 @@ const translations: Record<string, AboutPageTranslation> = {
 				>
 					GitHub
 				</a>
-				，欢迎外界贡献。
+				でオープンソースとして公開されており、貢献を歓迎しています。
 			</>
 		),
 		acknowledgementsP2:
-			"感谢 LSHK 粤拼小组和粤典对本站的支持。特别鸣谢 Chaak-ming Lau 博士，Kwan-hin Cheung 博士，Andy Chin 博士，Raymond Tze 先生和 Zungman Ceoi 先生为建设本站提供的帮助。",
-		acknowledgementsP3: "感谢 Lim Hian-tong 先生提供本站台湾闽南语版本。",
-		acknowledgementsP4: "感谢具区句鱼先生提供本站吴语版本。",
-		acknowledgementsP5: "感谢以成提供本站越南语版本。",
-		developContributeTitle: "开发及贡献",
-		developContributeP1: "如果你想支持粤拼或参与到我们的事务中，你可以：",
+			"LSHK 粤拼ワーキンググループと粤典のご支援に感謝いたします。特に Chaak-ming Lau 博士、Andy Chin 博士、Kwan-hin Cheung 博士、Raymond Tze 氏、Zungman Ceoi 氏のご協力に感謝いたします。",
+		acknowledgementsP3:
+			"Lim Hian-tong 氏には台湾閩南語版のご提供に感謝いたします。",
+		acknowledgementsP4: "具區句魚氏には呉語版のご提供に感謝いたします。",
+		acknowledgementsP5: "以成氏にはベトナム語版のご提供に感謝いたします。",
+		developContributeTitle: "開発と貢献",
+		developContributeP1:
+			"粤拼の利用促進や私たちの取り組みへご協力いただける場合は、ぜひ以下をご検討ください：",
 		emailText: (
 			<>
-				发邮件到
 				<a
 					href="mailto:support@jyutping.org"
-					className="text-blue-600 hover:underline mx-1"
+					className="text-blue-600 hover:underline"
 				>
 					support@jyutping.org
-				</a>
-				告诉我们你的想法或者反馈意见。
+				</a>{" "}
+				にメールを送って、ご意見やフィードバックをお聞かせください。
 			</>
 		),
 		githubText: (
 			<>
-				在
 				<a
 					href="https://github.com/CanCLID/jyutping.org"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-blue-600 hover:underline mx-1"
+					className="text-blue-600 hover:underline"
 				>
 					GitHub
-				</a>
-				上面新开一个 issue 讨论或者代码 pull request。
+				</a>{" "}
+				で新しい issue を作成するか、プルリクエストを送信してください。
 			</>
 		),
 		keyboardText: (
 			<>
-				安装使用
-				<a
-					href="/keyboard" // Keep relative link
-					className="text-blue-600 hover:underline mx-1"
-				>
-					粤拼输入法
+				<a href="/keyboard" className="text-blue-600 hover:underline mr-1">
+					粤拼キーボード
 				</a>
-				打字，以及同人分享本网站。
+				をインストールして使用し、このサイトを他の人と共有してください。
 			</>
 		),
 		finalParagraph:
-			"如果你熟习粤语和其他语言，并愿意把本网站翻译成其他语言，请务必邮件联系我们，我们非常欢迎你的帮助和贡献。",
+			"広東語と他の言語に精通しており、このウェブサイトを他の言語に翻訳していただける方は、ぜひメールでご連絡ください。皆様のご協力と貢献を心よりお待ちしております。",
 	},
 	nan: {
 		acknowledgementsTitle: "鳴謝",
@@ -602,84 +679,6 @@ const translations: Record<string, AboutPageTranslation> = {
 		),
 		finalParagraph:
 			"若果阁下识得粤语，并且愿意将本网站翻译成其他语言，请务必以电邮联络我哋，我哋非常欢迎你嘅帮助同贡献。",
-	},
-	ja: {
-		acknowledgementsTitle: "謝辞",
-		acknowledgementsP1: (
-			<>
-				このウェブサイトは
-				<a
-					href="https://github.com/orgs/CanCLID"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="text-blue-600 hover:underline mx-1"
-				>
-					広東語計算言語学基盤開発グループ (CanCLID)
-				</a>
-				によって開発され、
-				<a
-					href="https://www.lshk.org"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="text-blue-600 hover:underline mx-1"
-				>
-					香港言語学会 (LSHK)
-				</a>
-				の協力を得ています。すべてのコードは
-				<a
-					href="https://github.com/CanCLID/jyutping.org"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="text-blue-600 hover:underline mx-1"
-				>
-					GitHub
-				</a>
-				でオープンソースとして公開されており、貢献を歓迎しています。
-			</>
-		),
-		acknowledgementsP2:
-			"LSHK 粤拼ワーキンググループと粤典のご支援に感謝いたします。特に Chaak-ming Lau 博士、Andy Chin 博士、Kwan-hin Cheung 博士、Raymond Tze 氏、Zungman Ceoi 氏のご協力に感謝いたします。",
-		acknowledgementsP3:
-			"Lim Hian-tong 氏には台湾閩南語版のご提供に感謝いたします。",
-		acknowledgementsP4: "具區句魚氏には呉語版のご提供に感謝いたします。",
-		acknowledgementsP5: "以成氏にはベトナム語版のご提供に感謝いたします。",
-		developContributeTitle: "開発と貢献",
-		developContributeP1:
-			"粤拼の利用促進や私たちの取り組みへご協力いただける場合は、ぜひ以下をご検討ください：",
-		emailText: (
-			<>
-				<a
-					href="mailto:support@jyutping.org"
-					className="text-blue-600 hover:underline"
-				>
-					support@jyutping.org
-				</a>{" "}
-				にメールを送って、ご意見やフィードバックをお聞かせください。
-			</>
-		),
-		githubText: (
-			<>
-				<a
-					href="https://github.com/CanCLID/jyutping.org"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="text-blue-600 hover:underline"
-				>
-					GitHub
-				</a>{" "}
-				で新しい issue を作成するか、プルリクエストを送信してください。
-			</>
-		),
-		keyboardText: (
-			<>
-				<a href="/keyboard" className="text-blue-600 hover:underline mr-1">
-					粤拼キーボード
-				</a>
-				をインストールして使用し、このサイトを他の人と共有してください。
-			</>
-		),
-		finalParagraph:
-			"広東語と他の言語に精通しており、このウェブサイトを他の言語に翻訳していただける方は、ぜひメールでご連絡ください。皆様のご協力と貢献を心よりお待ちしております。",
 	},
 };
 
