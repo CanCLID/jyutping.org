@@ -58,7 +58,7 @@ function TextWithAudioAndJyutPing({ children: text }: { children: string }) {
               {item.jyutping ? (
                 <Audio id={item.jyutping} />
               ) : (
-                <span className="h-[28px] w-6 inline-block" />
+                <span className="size-6 inline-block" />
               )}
               {/* Character */}
               {item.char.length === 2 && /^\d$/.test(item.char[1]) ? (
