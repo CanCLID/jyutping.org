@@ -1,0 +1,29 @@
+- Add comments sparsely. Comments should be added solely for explaining code.
+  - ✔️ `// Do not split at fullwidth spaces, which are useful in lyrics`
+  - ✔️ `// Find the topmost visible heading based on intersection ratio and position`
+  - ✔️ `// Setup observer slightly delayed to ensure elements are in the DOM`
+  - ✔️ `// Handle edge case: ...`
+- DO NOT add meta-commentary, i.e. comments about the action you have just performed.
+  - ❌ `// Added ...`
+  - ❌ `// Modified ...`
+  - ❌ `// Adjusted ...`
+  - ❌ `// Changed ...`
+  - ❌ `// Removed ...`
+  - ❌ `// Copied from ...`
+  - ❌ `// Replaced ... with ...`
+  - ❌ `// Use ... instead of ...`
+  - ❌ `// Define ...`
+- DO NOT add comments hinting next steps. Recommendations should stay in the conversation.
+  - ❌ `{/* Adjust styles as needed */}`
+  - ❌ `{/* Add other props if necessary */}`
+- DO NOT add file names to the top of a file.
+  - ❌ `// src/utils.ts`
+  - ❌ `// src/index.astro`
+- Avoid self-explanatory comments. Only add comments if the code is not obvious.
+  - ❌ `import React from "react"; // Import React`
+  - ❌ `return I18n.locales.filter((locale) => locale !== I18n.defaultLocale) // Exclude default locale`
+  - ❌ `observer.disconnect(); // Disconnect observer on cleanup`
+- Within a large block of JSX, add labels sparsely.
+  - ✔️ `{/* Header */}`
+  - ✔️ `{/* Main Container */}`
+- When removing code, eliminate entirely. DO NOT comment out code.
