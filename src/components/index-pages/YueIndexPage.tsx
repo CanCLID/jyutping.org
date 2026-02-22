@@ -74,7 +74,7 @@ const YueIndexPage: React.FC = () => {
         </a>
         <a
           href="/keyboard"
-          className="w-fit text-2xl text-center bg-[#cadd7a] hover:bg-[#e9f1c8] active:bg-[#e9f1c8] active:bg-[#e9f1c8] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
+          className="w-fit text-2xl text-center bg-[#cadd7a] hover:bg-[#e9f1c8] active:bg-[#e9f1c8] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
         >
           粵拼資源輸入法
           <IconKeyboard className="ml-2 flex-shrink-0" />
@@ -88,7 +88,7 @@ const YueIndexPage: React.FC = () => {
         <a
           lang="cmn"
           href="/cmn"
-          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           切到普通話 / 國語版
         </a>
@@ -96,7 +96,7 @@ const YueIndexPage: React.FC = () => {
         <a
           lang="wuu"
           href="/wuu"
-          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           換到吳語版
         </a>
@@ -104,7 +104,7 @@ const YueIndexPage: React.FC = () => {
         <a
           lang="nan"
           href="/nan"
-          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           換到台灣閩南語版
         </a>
@@ -112,7 +112,7 @@ const YueIndexPage: React.FC = () => {
         <a
           lang="vi"
           href="/vi"
-          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           Chuyển sang tiếng Việt
         </a>
@@ -120,7 +120,7 @@ const YueIndexPage: React.FC = () => {
         <a
           lang="en"
           href="/en"
-          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           Switch to English
         </a>

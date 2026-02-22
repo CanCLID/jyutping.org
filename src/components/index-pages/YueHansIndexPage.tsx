@@ -74,7 +74,7 @@ const YueIndexPage: React.FC = () => {
         </a>
         <a
           href="/yue_hans/keyboard"
-          className="w-fit text-2xl text-center bg-[#cadd7a] hover:bg-[#e9f1c8] active:bg-[#e9f1c8] active:bg-[#e9f1c8] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
+          className="w-fit text-2xl text-center bg-[#cadd7a] hover:bg-[#e9f1c8] active:bg-[#e9f1c8] text-neutral-800 px-8 py-4 rounded-md inline-flex items-center transition-colors duration-150"
         >
           粤拼资源输入法
           <IconKeyboard className="ml-2 flex-shrink-0" />
