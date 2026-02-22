@@ -263,7 +263,7 @@ const translations: Record<string, AboutPageTranslation> = {
 			</>
 		),
 		finalParagraph:
-			"広東語と他の言語に精通しており、このウェブサイトを他の言語に翻訳していただける方は、ぜひメールでご連絡ください。皆様のご協力と貢献を心よりお待ちしております。",
+			"広東語を理解でき、このウェブサイトを他の言語に翻訳していただける方は、ぜひメールでご連絡ください。皆様のご協力と貢献を心よりお待ちしております。",
 	},
 	nan: {
 		acknowledgementsTitle: "鳴謝",
