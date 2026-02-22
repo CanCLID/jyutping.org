@@ -2,8 +2,11 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import YueIndexPage from "@/components/index-pages/YueIndexPage.tsx";
 import { I18n } from "@/i18n/utils";
+import { getTitle } from "@/i18n/pageHeadings";
+
+const title = getTitle("index", I18n.defaultLocale);
 ---
 
-<BaseLayout lang={I18n.defaultLocale}>
-  <YueIndexPage client:load />
+<BaseLayout lang={I18n.defaultLocale} title={title} flipTitle>
+	<YueIndexPage client:load />
 </BaseLayout>

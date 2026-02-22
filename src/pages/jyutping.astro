@@ -4,8 +4,9 @@ import JyutpingPage from "@/components/JyutpingPage.tsx";
 import TableOfContents from "@/components/TableOfContents";
 import { jyutpingHeadingsTranslations, generateSlug } from "@/i18n/jyutpingHeadings";
 import { I18n } from "@/i18n/utils";
+import { getTitle } from "@/i18n/pageHeadings";
 
-const title = "粵拼方案 - Jyutping";
+const title = getTitle("jyutping", I18n.defaultLocale);
 
 // Get the correct heading translations for the current locale
 const t = jyutpingHeadingsTranslations[I18n.defaultLocale];

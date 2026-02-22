@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { I18n } from "@/i18n/utils";
+import { getTitle } from "@/i18n/pageHeadings";
 
 import CmnIndexPage from "@/components/index-pages/CmnIndexPage.tsx";
 import EnIndexPage from "@/components/index-pages/EnIndexPage.tsx";
@@ -26,19 +27,10 @@ const validLocale = I18n.locales.includes(locale as string)
   ? locale
   : I18n.defaultLocale;
 
-const pageTitles: Record<string, string> = {
-  cmn: "粵拼 - 粵語拼音方案",
-  en: "Jyutping - Cantonese Romanization",
-  ja: "粤拼 - 広東語ローマ字表記法",
-  nan: "粵拼 - 粵語拼音方案",
-  vi: "Việt bính - Phiên âm tiếng Quảng Đông",
-  wuu: "粤拼 - 粤语拼音方案",
-  yue_hans: "粤拼 - 粤语拼音方案",
-};
-const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English
+const title = getTitle("index", validLocale);
 ---
 
-<BaseLayout lang={validLocale} title={title}>
+<BaseLayout lang={validLocale} title={title} flipTitle>
   {validLocale === "en" && <EnIndexPage client:load />}
   {validLocale === "cmn" && <CmnIndexPage client:load />}
   {validLocale === "nan" && <NanIndexPage client:load />}

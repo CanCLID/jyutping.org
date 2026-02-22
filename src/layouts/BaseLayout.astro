@@ -5,18 +5,23 @@ import Footer from "@/components/Footer.astro";
 import "@/styles/global.css";
 import Chartaudio from "@/components/Chartaudio.astro";
 import { I18n } from "@/i18n/utils";
+import { makeTitle } from "@/i18n/pageHeadings";
 
 interface Props {
   title?: string;
   description?: string;
   lang?: string;
+  flipTitle?: boolean;
 }
 
 const {
-  title = "粵拼 Jyutping",
+  title: originalTitle = "", // Will be filled by `makeTitle` if empty
   description = "標準粵語拼音方案 Standard Cantonese Romanization Scheme",
   lang = I18n.defaultLocale,
+  flipTitle = false,
 } = Astro.props;
+
+const title = makeTitle(originalTitle, lang, flipTitle);
 
 const umamiWebsiteId = "188fdd26-8e55-42b6-ba73-7d2f58adca11";
 const umamiScriptSrc = "https://cloud.umami.is/script.js";

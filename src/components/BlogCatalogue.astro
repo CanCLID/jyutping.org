@@ -1,24 +1,13 @@
 ---
 import { I18n } from "@/i18n/utils";
 import type { CollectionEntry } from "astro:content";
+import { getTitle } from "@/i18n/pageHeadings";
 
 // Get current locale from Astro's global
 const { currentLocale } = Astro;
 const locale = currentLocale || I18n.defaultLocale;
 
-// --- Title Translations ---
-const titleTranslations: Record<string, string> = {
-  cmn: "文章",
-  en: "Blog",
-  ja: "ブログ",
-  nan: "文章",
-  vi: "Tập văn",
-  wuu: "文章",
-  yue: "文章",
-  yue_hans: "文章",
-};
-
-const title = titleTranslations[locale] || titleTranslations.en; // Fallback to English
+const title = getTitle("blog", locale);
 
 interface Props {
   posts: CollectionEntry<"blog">[];

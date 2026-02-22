@@ -3,6 +3,8 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogIndexList from "@/components/BlogIndexList.tsx";
 import { I18n } from "@/i18n/utils";
+import { getTitle } from "@/i18n/pageHeadings";
+import { getBlogLabels } from "@/i18n/blogLabels";
 
 // Fetch blog posts for Cantonese
 const postsData = await getCollection("blog", ({ id }) =>
@@ -16,21 +18,11 @@ const posts = postsData.map((post) => ({
   description: post.data.description,
 }));
 
-const translations = {
-  cmn: { title: "文章", readMore: "閲讀全文", noPosts: "暂無文章。" },
-  en: { title: "Blog", readMore: "Read more", noPosts: "No posts found yet." },
-  ja: { title: "ブログ", readMore: "もっと読む", noPosts: "記事がまだありません。" },
-  nan: { title: "文章", readMore: "讀全文", noPosts: "猶未有文。" },
-  vi: { title: "Tập văn", readMore: "Đọc thêm", noPosts: "Chưa có bài viết nào." },
-  wuu: { title: "博客", readMore: "阅读全文", noPosts: "暂无博文。" },
-  yue: { title: "文章", readMore: "閱讀全文", noPosts: "暂無文章。" },
-  yue_hans: { title: "文章", readMore: "阅读全文", noPosts: "暂无文章。" },
-};
-const t = translations[I18n.defaultLocale] || translations.en; // Fallback to English
-
-const pageTitle = `${t.title} - 粵拼 Jyutping`;
+// Get translations for Cantonese
+const title = getTitle("blog", I18n.defaultLocale);
+const blogLabels = getBlogLabels(I18n.defaultLocale);
 ---
 
-<BaseLayout lang={I18n.defaultLocale} title={pageTitle}>
-  <BlogIndexList posts={posts} translations={t} client:load />
+<BaseLayout lang={I18n.defaultLocale} title={title}>
+  <BlogIndexList posts={posts} translations={{ title, ...blogLabels }} client:load />
 </BaseLayout>

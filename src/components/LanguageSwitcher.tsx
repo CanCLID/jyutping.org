@@ -1,21 +1,11 @@
 import type React from "react";
 import { useState, useEffect } from "react";
 import { I18n } from "@/i18n/utils";
+import { languageNames } from "@/i18n/languageNames";
 
 interface LanguageSwitcherProps {
   currentPathname: string;
 }
-
-const languageNames: Record<string, string> = {
-  cmn: "普通话/國語",
-  en: "English",
-  ja: "日本語",
-  nan: "臺灣閩南語",
-  vi: "Tiếng Việt",
-  wuu: "吳語",
-  yue: "粵語",
-  yue_hans: "粤语简体",
-};
 
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) => {
   const [effectiveCurrentLocale, setEffectiveCurrentLocale] =

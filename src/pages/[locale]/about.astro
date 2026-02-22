@@ -2,17 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import AboutPage from "@/components/AboutPage.tsx";
 import { I18n } from "@/i18n/utils";
-
-const pageTitles: Record<string, string> = {
-  cmn: "關於",
-  en: "About",
-  ja: "当サイトについて",
-  nan: "關於",
-  vi: "Liên lạc",
-  wuu: "關於",
-  yue: "關於", // Should technically not be needed here
-  yue_hans: "关于",
-};
+import { getTitle } from "@/i18n/pageHeadings";
 
 export function getStaticPaths() {
   return I18n.locales
@@ -28,7 +18,7 @@ const { locale } = Astro.params;
 const validLocale = I18n.locales.includes(locale as string)
   ? locale
   : I18n.defaultLocale;
-const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English
+const title = getTitle("about", validLocale);
 ---
 
 <BaseLayout lang={validLocale} title={title}>

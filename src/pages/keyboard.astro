@@ -2,8 +2,9 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import KeyboardPage from "@/components/KeyboardPage.tsx";
 import { I18n } from "@/i18n/utils";
+import { getTitle } from "@/i18n/pageHeadings";
 
-const title = "輸入法工具 - 粵拼 Jyutping";
+const title = getTitle("keyboard", I18n.defaultLocale);
 ---
 
 <BaseLayout lang={I18n.defaultLocale} title={title}>

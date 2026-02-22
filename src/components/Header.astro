@@ -2,64 +2,11 @@
 import { IconMenu2 } from "@tabler/icons-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher.tsx";
 import { I18n } from "@/i18n/utils";
+import { getNavTranslation } from "@/i18n/pageHeadings";
 
 const { currentLocale, url } = Astro;
 const pathname = url.pathname;
 const locale = currentLocale || I18n.defaultLocale;
-
-// --- Navigation Translations ---
-const navTranslations: Record<string, Record<string, string>> = {
-  learn: {
-    cmn: "學粵拼",
-    en: "Learn Jyutping",
-    ja: "粤拼を学ぶ",
-    nan: "學粵拼",
-    vi: "Học Việt bính",
-    wuu: "學粵拼",
-    yue: "學粵拼",
-    yue_hans: "学粤拼",
-  },
-  jyutping: {
-    cmn: "粵拼方案",
-    en: "Jyutping Scheme",
-    ja: "粤拼便覧",
-    nan: "粵拼方案",
-    vi: "Việt bính",
-    wuu: "粵拼方案",
-    yue: "粵拼方案",
-    yue_hans: "粤拼方案",
-  },
-  blog: {
-    cmn: "文章",
-    en: "Blog",
-    ja: "ブログ",
-    nan: "文章",
-    vi: "Tập văn",
-    wuu: "文章",
-    yue: "文章",
-    yue_hans: "文章",
-  },
-  keyboard: {
-    cmn: "資源",
-    en: "Resources",
-    ja: "リソース",
-    nan: "資源",
-    vi: "Tài liệu",
-    wuu: "資源",
-    yue: "資源",
-    yue_hans: "资源",
-  },
-  about: {
-    cmn: "關於",
-    en: "About",
-    ja: "当サイトについて",
-    nan: "關於",
-    vi: "Liên lạc",
-    wuu: "關於",
-    yue: "關於",
-    yue_hans: "关于",
-  },
-};
 
 // --- Generate Localized Nav Links ---
 const navLinkKeys = ["learn", "jyutping", "blog", "keyboard", "about"];
@@ -69,7 +16,7 @@ const navLinks = navLinkKeys.map((key) => {
   const href = locale === I18n.defaultLocale ? baseHref : `/${locale}${baseHref}`;
   return {
     href: href,
-    title: navTranslations[key]?.[locale] || key,
+    title: getNavTranslation(key, locale),
   };
 });
 

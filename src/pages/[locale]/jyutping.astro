@@ -1,23 +1,10 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import JyutpingPage from "@/components/JyutpingPage.tsx";
-import { I18n } from "@/i18n/utils";
 import TableOfContents from "@/components/TableOfContents";
-import {
-  jyutpingHeadingsTranslations,
-  generateSlug,
-} from "@/i18n/jyutpingHeadings";
-
-const pageTitles: Record<string, string> = {
-  cmn: "粵拼方案",
-  en: "Jyutping Scheme",
-  ja: "粤拼便覧",
-  nan: "粵拼方案",
-  vi: "Việt bính",
-  wuu: "粵拼方案",
-  yue: "粵拼方案", // Should technically not be needed here
-  yue_hans: "粤拼方案",
-};
+import { jyutpingHeadingsTranslations, generateSlug } from "@/i18n/jyutpingHeadings";
+import { I18n } from "@/i18n/utils";
+import { getTitle } from "@/i18n/pageHeadings";
 
 export function getStaticPaths() {
   return I18n.locales
@@ -33,7 +20,7 @@ const { locale } = Astro.params;
 const validLocale = I18n.locales.includes(locale as string)
   ? locale
   : I18n.defaultLocale;
-const title = pageTitles[validLocale] || pageTitles.en; // Fallback to English
+const title = getTitle("jyutping", validLocale);
 
 // Get the correct heading translations for the current locale
 const t =
