@@ -90,7 +90,7 @@ const EnIndexPage: React.FC = () => {
       {/* Links to other locales */}
       <div className="flex flex-col md:flex-row md:flex-wrap md:justify-around items-center gap-4 my-12 mx-auto max-w-5xl">
         <a
-					lang="cmn"
+          lang="cmn"
           href="/cmn"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
@@ -98,7 +98,7 @@ const EnIndexPage: React.FC = () => {
         </a>
 
         <a
-					lang="wuu"
+          lang="wuu"
           href="/wuu"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
@@ -106,7 +106,7 @@ const EnIndexPage: React.FC = () => {
         </a>
 
         <a
-					lang="yue"
+          lang="yue"
           href="/"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
@@ -114,7 +114,7 @@ const EnIndexPage: React.FC = () => {
         </a>
 
         <a
-					lang="nan"
+          lang="nan"
           href="/nan"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
@@ -122,7 +122,7 @@ const EnIndexPage: React.FC = () => {
         </a>
 
         <a
-					lang="vi"
+          lang="vi"
           href="/vi"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
