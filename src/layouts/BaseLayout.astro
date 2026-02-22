@@ -76,6 +76,14 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
       crossorigin="anonymous"
     />
 
+    {lang === "ja" && (
+      <>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" />
+      </>
+    )}
+
     {/* Umami Analytics */}
     <script is:inline defer src={umamiScriptSrc} data-website-id={umamiWebsiteId}
     ></script>
@@ -132,6 +140,10 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
 
   html:not(:lang(ja)), html :not(:lang(ja)) {
     font-family: "Chiron Hei HK WS", var(--fallback-fonts);
+  }
+
+  html:lang(ja), html :lang(ja) {
+    font-family: "Noto Sans JP", var(--fallback-fonts);
   }
 
   html .font-jyutping {
