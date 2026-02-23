@@ -1,3 +1,10 @@
+## Code Styles
+
+### Localization
+- All translation strings must be placed inside the `src/i18n` directory.
+- Translation locales should be sorted in alphabetical order.
+
+### Comments
 - Add comments sparsely. Comments should be added solely for explaining code.
   - ✔️ `// Do not split at fullwidth spaces, which are useful in lyrics`
   - ✔️ `// Find the topmost visible heading based on intersection ratio and position`
@@ -27,5 +34,3 @@
   - ✔️ `{/* Header */}`
   - ✔️ `{/* Main Container */}`
 - When removing code, eliminate entirely. DO NOT comment out code.
-
-- Translation locales should be sorted in alphabetical order.

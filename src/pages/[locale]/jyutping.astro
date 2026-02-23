@@ -2,7 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import JyutpingPage from "@/components/JyutpingPage.tsx";
 import TableOfContents from "@/components/TableOfContents";
-import { jyutpingHeadingsTranslations, generateSlug } from "@/i18n/jyutpingHeadings";
+import { headingTranslations, generateSlug } from "@/i18n/pages/jyutping";
 import { I18n } from "@/i18n/utils";
 import { getTitle } from "@/i18n/pageHeadings";
 
@@ -24,8 +24,8 @@ const title = getTitle("jyutping", validLocale);
 
 // Get the correct heading translations for the current locale
 const t =
-  jyutpingHeadingsTranslations[validLocale] || jyutpingHeadingsTranslations.en;
-const tEn = jyutpingHeadingsTranslations.en; // Get English translations for slug generation
+  headingTranslations[validLocale] || headingTranslations.en;
+const tEn = headingTranslations.en; // Get English translations for slug generation
 
 // Dynamically generate headings for TableOfContents based on locale
 const headings = [
