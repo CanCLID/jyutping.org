@@ -2,7 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import TableOfContents from "@/components/TableOfContents";
-import { I18n } from "@/i18n/utils";
+import { I18n, type Locale } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 // 1. Generate paths for all non-default locale learn posts
@@ -15,7 +15,7 @@ export async function getStaticPaths() {
   return learnEntries
     .map((entry) => {
       const [locale, ...slugParts] = entry.slug.split("/");
-      if (!I18n.locales.includes(locale)) {
+      if (!I18n.locales.includes(locale as Locale)) {
         console.warn(
           `Invalid locale "${locale}" found in learn entry slug: ${entry.slug}. Skipping.`
         );

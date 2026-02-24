@@ -1,4 +1,6 @@
-interface HeadingTranslation {
+import { I18n, makeResource } from "../utils";
+
+type HeadingTranslation = {
   onsetHeading: string;
   syllabicNasalHeading: string;
   finalHeading: string;
@@ -10,7 +12,7 @@ interface HeadingTranslation {
   referenceId: string;
 }
 
-export const headingTranslations: Record<string, HeadingTranslation> = {
+export const getHeadingTranslations = makeResource<HeadingTranslation>({
   cmn: {
     onsetHeading: "1. 聲母表",
     syllabicNasalHeading: "2. 鼻音單獨成韻",
@@ -99,26 +101,26 @@ export const headingTranslations: Record<string, HeadingTranslation> = {
     referenceHeading: "参考文献",
     referenceId: "references-yue",
   },
-};
+});
 
-interface JyutpingPageContentTranslation {
+type JyutpingPageContentTranslation = {
   intro: string;
   alertIpaTitle: string;
-  alertIpaContent: React.ReactNode;
+  alertIpaContent: React.ReactElement;
   onsetTableHeaders: string[];
   onsetRowHeaders: string[];
-  alertNullInitial: React.ReactNode;
+  alertNullInitial: React.ReactElement;
   codaRowHeaders: string[];
   finalsChartColHeaders1: string[];
   finalsChartColHeaders2: string[];
   finalsChartRowHeader: string;
-  alertAddedFinals: React.ReactNode;
+  alertAddedFinals: React.ReactElement;
   toneTableHeaders: string[];
   toneRowHeaders: string[];
-  alertToneMarks: React.ReactNode;
+  alertToneMarks: React.ReactElement;
 }
 
-export const contentTranslations: Record<string, JyutpingPageContentTranslation> = {
+export const getContentTranslations = makeResource<JyutpingPageContentTranslation>({
   cmn: {
     intro: "「香港語言學學會粵語拼音方案」，簡稱「粵拼」。",
     alertIpaTitle: "關於 IPA 轉寫",
@@ -722,7 +724,7 @@ export const contentTranslations: Record<string, JyutpingPageContentTranslation>
       </>
     ),
   },
-};
+});
 
 export function generateSlug(englishText: string): string {
   // Use English text as the base for consistent slugs
@@ -736,3 +738,28 @@ export function generateSlug(englishText: string): string {
       .replace(/[^\w.-]+/g, "")
   ); // Allow word characters, dots, and hyphens
 };
+
+// Dynamically generate headings for TableOfContents based on locale
+export function getTOCHeadings(locale: string) {
+  const t = getHeadingTranslations(locale);
+  const tSlug = getHeadingTranslations(I18n.slugGenerationLocale);
+
+  return [
+    { text: t.onsetHeading, slug: generateSlug(tSlug.onsetHeading), depth: 2 },
+    {
+      text: t.syllabicNasalHeading,
+      slug: generateSlug(tSlug.syllabicNasalHeading),
+      depth: 2,
+    },
+    { text: t.finalHeading, slug: generateSlug(tSlug.finalHeading), depth: 2 },
+    { text: t.nucleiHeading, slug: generateSlug(tSlug.nucleiHeading), depth: 3 },
+    { text: t.codaHeading, slug: generateSlug(tSlug.codaHeading), depth: 3 },
+    {
+      text: t.finalsChartHeading,
+      slug: generateSlug(tSlug.finalsChartHeading),
+      depth: 3,
+    },
+    { text: t.toneHeading, slug: generateSlug(tSlug.toneHeading), depth: 2 },
+    { text: t.referenceHeading, slug: t.referenceId, depth: 2 },
+  ];
+}

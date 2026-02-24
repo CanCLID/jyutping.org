@@ -17,28 +17,23 @@ export function getStaticPaths() {
 
 const { locale } = Astro.params;
 
-// Validate locale
-const validLocale = I18n.locales.includes(locale as string)
-  ? locale
-  : I18n.defaultLocale;
-
 // Fetch blog posts for the current locale
 const postsData = await getCollection("blog", ({ id }) =>
-  id.startsWith(`${validLocale}/`)
+  id.startsWith(`${locale}/`)
 );
 
 // Prepare posts prop for the component
 const posts = postsData.map((post) => ({
   title: post.data.title,
-  slug: `/${validLocale}/blog/${post.slug.substring(validLocale.length + 1)}`,
+  slug: `/${locale}/blog/${post.slug.substring(locale.length + 1)}`,
   description: post.data.description,
 }));
 
 // Get translations for the current locale
-const title = getTitle("blog", validLocale);
-const blogLabels = getBlogLabels(validLocale);
+const title = getTitle("blog", locale);
+const blogLabels = getBlogLabels(locale);
 ---
 
-<BaseLayout lang={validLocale} title={title}>
+<BaseLayout lang={locale} title={title}>
   <BlogIndexList posts={posts} translations={{ title, ...blogLabels }} client:load />
 </BaseLayout>

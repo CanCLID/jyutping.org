@@ -1,5 +1,7 @@
-const navTranslations: Record<string, Record<string, string>> = {
-  learn: {
+import { makeResource } from "./utils";
+
+const navTranslations = {
+  learn: makeResource({
     cmn: "學粵拼",
     en: "Learn Jyutping",
     ja: "粤拼を学ぶ",
@@ -8,8 +10,8 @@ const navTranslations: Record<string, Record<string, string>> = {
     wuu: "學粵拼",
     yue: "學粵拼",
     yue_hans: "学粤拼",
-  },
-  jyutping: {
+  }),
+  jyutping: makeResource({
     cmn: "粵拼方案",
     en: "Jyutping Scheme",
     ja: "粤拼便覧",
@@ -18,8 +20,8 @@ const navTranslations: Record<string, Record<string, string>> = {
     wuu: "粵拼方案",
     yue: "粵拼方案",
     yue_hans: "粤拼方案",
-  },
-  blog: {
+  }),
+  blog: makeResource({
     cmn: "文章",
     en: "Blog",
     ja: "ブログ",
@@ -28,8 +30,8 @@ const navTranslations: Record<string, Record<string, string>> = {
     wuu: "文章",
     yue: "文章",
     yue_hans: "文章",
-  },
-  keyboard: {
+  }),
+  keyboard: makeResource({
     cmn: "資源",
     en: "Resources",
     ja: "リソース",
@@ -38,8 +40,8 @@ const navTranslations: Record<string, Record<string, string>> = {
     wuu: "資源",
     yue: "資源",
     yue_hans: "资源",
-  },
-  about: {
+  }),
+  about: makeResource({
     cmn: "關於",
     en: "About",
     ja: "当サイトについて",
@@ -48,16 +50,16 @@ const navTranslations: Record<string, Record<string, string>> = {
     wuu: "關於",
     yue: "關於",
     yue_hans: "关于",
-  },
+  }),
 };
 
-export function getNavTranslation(page: string, locale: string) {
-  return navTranslations[page][locale] || navTranslations[page].en;
+export function getNavTranslation(page: keyof typeof navTranslations, locale: string) {
+  return navTranslations[page](locale);
 }
 
-const pageHeadings: Record<string, Record<string, string>> = {
+const pageTitles = {
   ...navTranslations,
-  index: {
+  index: makeResource({
     cmn: "粵語拼音方案",
     en: "Cantonese Romanization Scheme",
     ja: "広東語ローマ字表記法",
@@ -66,8 +68,8 @@ const pageHeadings: Record<string, Record<string, string>> = {
     wuu: "粵語拼音方案",
     yue: "粵語拼音方案",
     yue_hans: "粤语拼音方案",
-  },
-  keyboard: {
+  }),
+  keyboard: makeResource({
     cmn: "輸入法及工具",
     en: "Keyboards & Tools",
     ja: "キーボードとツール",
@@ -76,14 +78,14 @@ const pageHeadings: Record<string, Record<string, string>> = {
     wuu: "輸入法搭工具",
     yue: "輸入法及工具",
     yue_hans: "输入法及工具",
-  }
+  })
 };
 
-export function getTitle(page: string, locale: string) {
-  return pageHeadings[page][locale] || pageHeadings[page].en;
+export function getTitle(page: keyof typeof pageTitles, locale: string) {
+  return pageTitles[page](locale);
 }
 
-const pageTitleTemplate: Record<string, string> = {
+const pageTitleTemplate = makeResource({
   cmn: "粵拼 Jyutping",
   en: "Jyutping",
   ja: "粤拼 Jyutping",
@@ -92,10 +94,10 @@ const pageTitleTemplate: Record<string, string> = {
   wuu: "粵拼 Jyutping",
   yue: "粵拼 Jyutping",
   yue_hans: "粤拼 Jyutping",
-};
+});
 
 export function makeTitle(originalTitle: string, locale: string, flipped = false) {
-  const template = pageTitleTemplate[locale] || pageTitleTemplate.en;
+  const template = pageTitleTemplate(locale);
   if (!originalTitle) return template;
   const title = [originalTitle, " – ", template];
   if (flipped) {

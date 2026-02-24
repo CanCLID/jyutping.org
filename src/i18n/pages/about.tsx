@@ -1,6 +1,8 @@
-interface AboutPageTranslation {
+import { makeResource } from "../utils";
+
+type AboutPageTranslation = {
   acknowledgementsTitle: string;
-  acknowledgementsP1: React.ReactNode;
+  acknowledgementsP1: React.ReactElement;
   acknowledgementsP2: string;
   acknowledgementsP3: string;
   acknowledgementsP4: string;
@@ -8,13 +10,13 @@ interface AboutPageTranslation {
   acknowledgementsP6: string;
   developContributeTitle: string;
   developContributeP1: string;
-  emailText: React.ReactNode;
-  githubText: React.ReactNode;
-  keyboardText: React.ReactNode | null;
+  emailText: React.ReactElement;
+  githubText: React.ReactElement;
+  keyboardText: React.ReactElement;
   finalParagraph: string;
 }
 
-export const translations: Record<string, AboutPageTranslation> = {
+export const getTranslations = makeResource<AboutPageTranslation>({
   cmn: {
     acknowledgementsTitle: "鸣谢",
     acknowledgementsP1: (
@@ -685,4 +687,4 @@ export const translations: Record<string, AboutPageTranslation> = {
     finalParagraph:
       "若果阁下识得粤语，并且愿意将本网站翻译成其他语言，请务必以电邮联络我哋，我哋非常欢迎你嘅帮助同贡献。",
   },
-};
+});

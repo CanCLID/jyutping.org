@@ -1,6 +1,7 @@
 import Alert from "@/components/Alert.tsx";
 import Audio from "@/components/Audio.tsx";
-import { headingTranslations, contentTranslations, generateSlug } from "@/i18n/pages/jyutping";
+import { I18n } from "@/i18n/utils";
+import { getHeadingTranslations, getContentTranslations, generateSlug } from "@/i18n/pages/jyutping";
 
 interface JyutpingPageProps {
   locale: string;
@@ -13,10 +14,9 @@ const tdHighlightClass = "border border-gray-300 p-1 bg-yellow-100";
 const tdMutedClass = "border border-gray-300 p-1 bg-gray-200";
 
 const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
-  const headingsT =
-    headingTranslations[locale] || headingTranslations.en; // Falling back to English
-  const contentT = contentTranslations[locale] || contentTranslations.en;
-  const tEn = headingTranslations.en; // Get English translations for slug generation
+  const headingsT = getHeadingTranslations(locale);
+  const contentT = getContentTranslations(locale);
+  const tSlug = getHeadingTranslations(I18n.slugGenerationLocale);
 
   // lang="yue" is added for every <td> below such as to distinguish between Cantonese and Japanese content and ensure that
   // the Chinese font is correctly applied to those cells and the Japanese font is applied to the rest of the Japanese page
@@ -29,7 +29,7 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
         )}
         <Alert title={contentT.alertIpaTitle}>{contentT.alertIpaContent}</Alert>
         <h2
-          id={generateSlug(tEn.onsetHeading)}
+          id={generateSlug(tSlug.onsetHeading)}
           className="text-3xl font-semibold mt-8 mb-4 scroll-mt-20"
         >
           {headingsT.onsetHeading}
@@ -182,7 +182,7 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
         </div>
         <Alert>{contentT.alertNullInitial}</Alert>
         <h2
-          id={generateSlug(tEn.syllabicNasalHeading)}
+          id={generateSlug(tSlug.syllabicNasalHeading)}
           className="text-3xl font-semibold mt-8 mb-4 scroll-mt-20"
         >
           {headingsT.syllabicNasalHeading}
@@ -202,13 +202,13 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
           </table>
         </div>
         <h2
-          id={generateSlug(tEn.finalHeading)}
+          id={generateSlug(tSlug.finalHeading)}
           className="text-3xl font-semibold mt-8 mb-4 scroll-mt-20"
         >
           {headingsT.finalHeading}
         </h2>
         <h3
-          id={generateSlug(tEn.nucleiHeading)}
+          id={generateSlug(tSlug.nucleiHeading)}
           className="text-2xl font-semibold mt-6 mb-3 scroll-mt-20"
         >
           {headingsT.nucleiHeading}
@@ -267,7 +267,7 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
           </table>
         </div>
         <h3
-          id={generateSlug(tEn.codaHeading)}
+          id={generateSlug(tSlug.codaHeading)}
           className="text-2xl font-semibold mt-6 mb-3 scroll-mt-20"
         >
           {headingsT.codaHeading}
@@ -314,7 +314,7 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
           </table>
         </div>
         <h3
-          id={generateSlug(tEn.finalsChartHeading)}
+          id={generateSlug(tSlug.finalsChartHeading)}
           className="text-2xl font-semibold mt-6 mb-3 scroll-mt-20"
         >
           {headingsT.finalsChartHeading}
@@ -640,7 +640,7 @@ const JyutpingPage: React.FC<JyutpingPageProps> = ({ locale }) => {
         </div>
         <Alert color="secondary">{contentT.alertAddedFinals}</Alert>
         <h2
-          id={generateSlug(tEn.toneHeading)}
+          id={generateSlug(tSlug.toneHeading)}
           className="text-3xl font-semibold mt-8 mb-4 scroll-mt-20"
         >
           {headingsT.toneHeading}

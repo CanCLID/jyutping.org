@@ -1,8 +1,18 @@
 ## Code Styles
 
+- Don't repeat yourself. Avoid copy-and-paste. Constantly move code and extract to constants/functions.
+
+### React
+- Avoid using `useEffect` for pure state transformations.
+  - BAD ❌: `useEffect(() => { const result = somePureComputation(someState); setTransformedState(result); }, [someState]);`
+  - Good ✔️: `const transformedResult = somePureComputation(someState);`
+
 ### Localization
 - All translation strings must be placed inside the `src/i18n` directory.
 - Translation locales should be sorted in alphabetical order.
+- When defining translations, wrap a locale-keyed object with the `makeResource` method from `@/i18n/utils`. If you supply an object to the generic type parameter of `makeResource`, it must be a `type`, not an `interface`. WARNING: Supplying an `interface` will result in a TypeScript error.
+- Use `I18n.locales` from `@/i18n/utils` to get a list of all locales.
+- DO NOT inline "yue". Use `I18n.defaultLocale` from `@/i18n/utils`.
 
 ### Imports
 - `React` is implicitly imported as type. Directly use types like `React.FC` and etc. Only import individual named exports as values.
@@ -10,6 +20,9 @@
   - BAD ❌: `import type { FC } from "react";`
   - BAD ❌: `import React from "react";`
   - Good ✔️: `import { useState } from "react";`
+- Type-only imports MUST be prefixed by `type`.
+  - BAD ❌: `import { Locale } from "@/i18n/utils";`
+  - Good ✔️: `import type { Locale } from "@/i18n/utils";`
 
 ### Comments
 - Add comments sparsely. Comments should be added solely for explaining code.
@@ -40,4 +53,7 @@
 - Within a large block of JSX, add labels sparsely.
   - GOOD ✔️: `{/* Header */}`
   - GOOD ✔️: `{/* Main Container */}`
+- If variable names can explain code, avoid commenting.
+  - BAD ❌: `const translationEn = headingTranslations.en; // Get English translations for slug generation`
+  - GOOD ✔️: `const translationForSlugGeneration = headingTranslations.en;`
 - When removing code, eliminate entirely. DO NOT comment out code.

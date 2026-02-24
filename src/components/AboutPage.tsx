@@ -1,12 +1,12 @@
 import { IconBrandGithub, IconMail, IconKeyboard } from "@tabler/icons-react";
-import { translations } from "@/i18n/pages/about";
+import { getTranslations } from "@/i18n/pages/about";
 
 interface AboutPageProps {
   locale: string;
 }
 
 const AboutPage: React.FC<AboutPageProps> = ({ locale }) => {
-  const t = translations[locale] || translations.en; // Fallback to English
+  const t = getTranslations(locale);
 
   return (
     <div className="container mx-auto px-4 py-4 text-gray-800">

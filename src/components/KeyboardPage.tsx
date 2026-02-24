@@ -1,4 +1,4 @@
-import { translations } from "@/i18n/pages/keyboard";
+import { getTranslations } from "@/i18n/pages/keyboard";
 import {
   IconBook2,
   IconBooks,
@@ -84,7 +84,7 @@ interface KeyboardPageProps {
 }
 
 const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
-  const t = translations[locale] || translations.en; // Fallback to English
+  const t = getTranslations(locale);
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-5xl">

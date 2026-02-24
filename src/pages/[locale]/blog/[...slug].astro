@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import TableOfContents from "@/components/TableOfContents";
 import BlogCatalogue from "@/components/BlogCatalogue.astro";
-import { I18n } from "@/i18n/utils";
+import { I18n, type Locale } from "@/i18n/utils";
 
 // 1. Generate paths for all non-default locale blog posts
 export async function getStaticPaths() {
@@ -16,7 +16,7 @@ export async function getStaticPaths() {
   return blogEntries
     .map((entry) => {
       const [locale, ...slugParts] = entry.slug.split("/");
-      if (!I18n.locales.includes(locale)) {
+      if (!I18n.locales.includes(locale as Locale)) {
         console.warn(
           `Invalid locale "${locale}" found in blog entry slug: ${entry.slug}. Skipping.`
         );

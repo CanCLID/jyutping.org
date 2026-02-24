@@ -14,13 +14,9 @@ export function getStaticPaths() {
 
 const { locale } = Astro.params;
 
-// Validate locale and get title
-const validLocale = I18n.locales.includes(locale as string)
-  ? locale
-  : I18n.defaultLocale;
-const title = getTitle("keyboard", validLocale);
+const title = getTitle("keyboard", locale);
 ---
 
-<BaseLayout lang={validLocale} title={title}>
-  <KeyboardPage locale={validLocale} client:load />
+<BaseLayout lang={locale} title={title}>
+  <KeyboardPage locale={locale} client:load />
 </BaseLayout>

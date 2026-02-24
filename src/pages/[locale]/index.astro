@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { I18n } from "@/i18n/utils";
+import { I18n, negotiateLocale } from "@/i18n/utils";
 import { getTitle } from "@/i18n/pageHeadings";
 
 import CmnIndexPage from "@/components/index-pages/CmnIndexPage.tsx";
@@ -22,20 +22,16 @@ export function getStaticPaths() {
 
 const { locale } = Astro.params;
 
-// Validate locale for safety, though getStaticPaths should handle it
-const validLocale = I18n.locales.includes(locale as string)
-  ? locale
-  : I18n.defaultLocale;
-
-const title = getTitle("index", validLocale);
+const title = getTitle("index", locale);
+const negotiatedLocale = negotiateLocale(locale);
 ---
 
-<BaseLayout lang={validLocale} title={title} flipTitle>
-  {validLocale === "en" && <EnIndexPage client:load />}
-  {validLocale === "cmn" && <CmnIndexPage client:load />}
-  {validLocale === "nan" && <NanIndexPage client:load />}
-  {validLocale === "vi" && <ViIndexPage client:load />}
-  {validLocale === "wuu" && <WuuIndexPage client:load />}
-  {validLocale === "yue_hans" && <YueHansIndexPage client:load />}
-  {validLocale === "ja" && <JaIndexPage client:load />}
+<BaseLayout lang={locale} title={title} flipTitle>
+  {negotiatedLocale === "en" && <EnIndexPage client:load />}
+  {negotiatedLocale === "cmn" && <CmnIndexPage client:load />}
+  {negotiatedLocale === "nan" && <NanIndexPage client:load />}
+  {negotiatedLocale === "vi" && <ViIndexPage client:load />}
+  {negotiatedLocale === "wuu" && <WuuIndexPage client:load />}
+  {negotiatedLocale === "yue_hans" && <YueHansIndexPage client:load />}
+  {negotiatedLocale === "ja" && <JaIndexPage client:load />}
 </BaseLayout>

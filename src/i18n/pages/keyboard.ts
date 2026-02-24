@@ -1,5 +1,7 @@
-interface KeyboardPageTranslation {
-  introLinks: React.ReactNode;
+import { makeResource } from "../utils";
+
+type KeyboardPageTranslation = {
+  introLinks: string;
   sogouTitle: string;
   sogouAppStoreButton: string;
   sogouAppStoreNote: string;
@@ -24,7 +26,7 @@ interface KeyboardPageTranslation {
   converter: string;
 }
 
-export const translations: Record<string, KeyboardPageTranslation> = {
+export const getTranslations = makeResource<KeyboardPageTranslation>({
   cmn: {
     introLinks: "粵拼輸入法",
     sogouTitle: "搜狗輸入法",
@@ -233,4 +235,4 @@ export const translations: Record<string, KeyboardPageTranslation> = {
     googleTranslate: "Google 翻译粤语",
     converter: "粤拼转换器",
   },
-};
+});
