@@ -18,7 +18,7 @@ interface KeyboardPageTranslation {
   gboardGooglePlayButton: string;
   cantoboardTitle: string;
   cantoboardAppStoreButton: string;
-  toolsTitle?: string;
+  toolsTitle: string;
   resourceTitle: string;
   googleTranslate: string;
   converter: string;
