@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { I18n } from "@/i18n/utils";
+import { I18n, getLocalePath } from "@/i18n/utils";
 import { languageNames } from "@/i18n/languageNames";
 
 interface LanguageSwitcherProps {
@@ -7,84 +6,30 @@ interface LanguageSwitcherProps {
 }
 
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) => {
-  const [effectiveCurrentLocale, setEffectiveCurrentLocale] =
-    useState<string>(I18n.defaultLocale);
-
-  useEffect(() => {
-    // Determine the current locale based on the pathname prop
-    const detectedLocale = I18n.locales.find(
+  const currentLocale =
+    I18n.locales.find(
       (locale) =>
         currentPathname.startsWith(`/${locale}/`) ||
         currentPathname === `/${locale}`
-    );
-    setEffectiveCurrentLocale(detectedLocale || I18n.defaultLocale);
-  }, [currentPathname]);
-
-  const handleLocaleChange = (newLocale: string) => {
-    if (!currentPathname) return;
-
-    // Determine the current locale prefix (if any) based on the pathname prop
-    const currentLocalePrefix = I18n.locales.find(
-      (locale) =>
-        currentPathname.startsWith(`/${locale}/`) ||
-        currentPathname === `/${locale}`
-    );
-
-    // Determine the base path (without any locale prefix)
-    let basePath = currentPathname;
-    if (currentLocalePrefix) {
-      basePath = currentPathname.replace(`/${currentLocalePrefix}`, "");
-      if (!basePath.startsWith("/")) basePath = `/${basePath}`;
-      if (basePath === "") basePath = "/"; // Handle case like /en -> /
-    }
-    // If no prefix, currentPathname is already the base path
-
-    // Construct the target path: only non-default locales should have the prefix
-    let targetPath = "";
-    if (newLocale === I18n.defaultLocale) {
-      targetPath = basePath;
-    } else {
-      targetPath = `/${newLocale}${basePath}`;
-      // Handle edge case: avoid double slash if basePath is "/"
-      if (targetPath.endsWith("//")) {
-        targetPath = targetPath.slice(0, -1);
-      }
-      // Handle case where target is just "/" plus the locale
-      if (targetPath === `/${newLocale}/` && basePath === "/") {
-        targetPath = `/${newLocale}`;
-      }
-    }
-
-    // Set cookie
-    const date = new Date();
-    date.setTime(date.getTime() + 365 * 24 * 60 * 60 * 1000); // 1 year
-    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; expires=${date.toUTCString()}; SameSite=Lax`;
-
-    // Navigate to the new page
-    window.location.href = targetPath;
-  };
-
-  // Prevents rendering before locale determination
-  if (!effectiveCurrentLocale) {
-    return null;
-  }
+    ) ?? I18n.defaultLocale;
 
   return (
-    <div className="relative inline-block text-left">
-      <select
-        onChange={(e) => handleLocaleChange(e.target.value)}
-        value={effectiveCurrentLocale}
-        className="px-2 py-1 border border-white rounded-sm bg-transparent text-white"
-        aria-label="Select language"
-      >
-        {I18n.locales.map((locale: string) => (
-          <option key={locale} value={locale} className="text-black bg-white">
-            {" "}
-            {languageNames[locale] || locale}
-          </option>
-        ))}
-      </select>
-    </div>
+    <nav aria-label="Language switcher" className="flex items-center gap-1 flex-wrap">
+      <img src="/globe.svg" alt="" aria-hidden="true" className="w-4 h-4 opacity-60 shrink-0" />
+      {I18n.locales.map((locale, i) => (
+        <span key={locale} className="flex items-center">
+          {i > 0 && <span aria-hidden="true" className="mr-1 opacity-60 select-none">|</span>}
+          <a
+            href={getLocalePath(currentPathname, locale)}
+            lang={locale.replace("_", "-")}
+            aria-current={locale === currentLocale ? "page" : undefined}
+            className={`text-white text-sm ${locale === currentLocale ? "font-semibold" : "opacity-70 hover:opacity-100"}`}
+          >
+            {languageNames[locale] ?? locale}
+          </a>
+        </span>
+      ))}
+    </nav>
   );
 };
 

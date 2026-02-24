@@ -32,6 +32,24 @@ export function makeResource<T extends TranslationResource>(translations: Partia
   }
 }
 
+// Computes the path for a given locale based on the current pathname.
+export function getLocalePath(currentPathname: string, targetLocale: string): string {
+  const currentLocalePrefix = I18n.locales.find(
+    (locale) =>
+      currentPathname.startsWith(`/${locale}/`) ||
+      currentPathname === `/${locale}`
+  );
+
+  const basePath = currentLocalePrefix
+    ? currentPathname.slice(`/${currentLocalePrefix}`.length) || "/"
+    : currentPathname;
+
+  if (targetLocale === I18n.defaultLocale) {
+    return basePath;
+  }
+  return basePath === "/" ? `/${targetLocale}` : `/${targetLocale}${basePath}`;
+}
+
 // Performs language negotiation resource-agonistically.
 // This method should only be used if the translations cannot be defined with `makeResource`, e.g. for page components differing by locale.
 export function negotiateLocale(locale: string): Locale {
