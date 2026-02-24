@@ -1,57 +1,59 @@
 @import "tailwindcss";
 
-article table {
-  @apply border-collapse border border-gray-300 my-4;
-}
+article {
+  table {
+    @apply border-collapse border border-gray-300 my-4;
+  }
 
-article th,
-article td {
-  @apply border border-gray-300 px-2 xl:px-4 py-2 max-md:text-center text-left;
-}
+  th,
+  td {
+    @apply border border-gray-300 px-2 xl:px-4 py-2 max-md:text-center text-left;
+  }
 
-article th {
-  @apply bg-gray-100 font-semibold;
-}
+  th {
+    @apply bg-gray-100 font-semibold;
+  }
 
-article ul {
-  @apply list-disc list-inside my-4 space-y-1 pl-5;
-}
+  ul {
+    @apply list-disc list-inside my-4 space-y-1 pl-5;
+  }
 
-article ol {
-  @apply list-decimal list-inside my-4 space-y-1 pl-5;
-}
+  ol {
+    @apply list-decimal list-inside my-4 space-y-1 pl-5;
+  }
 
-article li {
-  @apply mb-1;
-}
+  li {
+    @apply mb-1;
+  }
 
-article p {
-  @apply my-4;
-}
+  p {
+    @apply my-4;
+  }
 
-article a {
-  @apply text-blue-600 hover:text-blue-800 underline;
-}
+  a {
+    @apply text-blue-600 hover:text-blue-800 underline;
+  }
 
-article h1,
-article h2,
-article h3,
-article h4,
-article h5,
-article h6 {
-  @apply mt-6 mb-3 font-semibold;
-}
-article h1 {
-  @apply text-4xl;
-}
-article h2 {
-  @apply text-3xl border-b pb-1;
-}
-article h3 {
-  @apply text-2xl;
-}
-article h4 {
-  @apply text-xl;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mt-6 mb-3 font-semibold;
+  }
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl border-b pb-1;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
 }
 
 @utility auto-fill-* {
