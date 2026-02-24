@@ -1,4 +1,3 @@
-import type React from "react";
 import { IconBrandGithub, IconMail, IconKeyboard } from "@tabler/icons-react";
 import { translations } from "@/i18n/pages/about";
 

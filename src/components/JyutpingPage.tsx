@@ -1,4 +1,3 @@
-import type React from "react";
 import Alert from "@/components/Alert.tsx";
 import Audio from "@/components/Audio.tsx";
 import { headingTranslations, contentTranslations, generateSlug } from "@/i18n/pages/jyutping";

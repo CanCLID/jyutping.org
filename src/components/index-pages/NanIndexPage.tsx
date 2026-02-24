@@ -7,7 +7,6 @@ import {
   IconTable,
   IconVocabulary,
 } from "@tabler/icons-react";
-import type React from "react";
 
 const NanIndexPage: React.FC = () => {
   return (

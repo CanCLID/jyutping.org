@@ -11,7 +11,6 @@ import {
   IconKeyboard,
   IconWorld,
 } from "@tabler/icons-react";
-import type React from "react";
 
 const DownloadButton: React.FC<{
   href: string;

@@ -1,5 +1,4 @@
 import { IconArrowRight } from "@tabler/icons-react";
-import type React from "react";
 
 interface BlogPost {
   title: string;

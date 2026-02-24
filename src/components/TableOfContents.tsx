@@ -1,7 +1,6 @@
 "use client";
 
 import type { MarkdownHeading } from "astro";
-import type React from "react";
 import { useEffect, useState } from "react";
 
 interface Props {

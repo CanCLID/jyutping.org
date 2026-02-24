@@ -1,4 +1,3 @@
-import type React from "react";
 import Audio from "./Audio.tsx";
 import fusisaanhaa from "../texts/fusisaanhaa.txt?raw";
 import bakfung from "../texts/bakfung.txt?raw";

@@ -1,4 +1,3 @@
-import type React from "react";
 import { useState, useEffect } from "react";
 import { I18n } from "@/i18n/utils";
 import { languageNames } from "@/i18n/languageNames";
