@@ -84,21 +84,21 @@ const JaIndexPage: React.FC = () => {
         他の言語をお探しですか？
       </span>
       {/* Links to other locales */}
-      <div className="flex flex-col md:flex-row md:flex-wrap md:justify-around items-center gap-4 my-12 mx-auto max-w-5xl">
-        <a
-          lang="en"
-          href="/en"
-          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
-        >
-          Switch to English
-        </a>
-
+      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center items-center gap-5 my-12 max-w-6xl mx-auto">
         <a
           lang="cmn"
           href="/cmn"
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           切到普通話 / 國語版
+        </a>
+
+        <a
+          lang="wuu"
+          href="/wuu"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
+        >
+          換到吳語版
         </a>
 
         <a
@@ -123,6 +123,14 @@ const JaIndexPage: React.FC = () => {
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           Chuyển sang tiếng Việt
+        </a>
+
+        <a
+          lang="en"
+          href="/en"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
+        >
+          Switch to English
         </a>
       </div>
     </div>

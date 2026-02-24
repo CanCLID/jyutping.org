@@ -85,7 +85,7 @@ const NanIndexPage: React.FC = () => {
         毋𧧸粵語？
       </span>
       {/* Links to other locales */}
-      <div className="flex flex-col md:flex-row md:flex-wrap md:justify-around items-center gap-4 my-12 mx-auto max-w-5xl">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center items-center gap-5 my-12 max-w-6xl mx-auto">
         <a
           lang="cmn"
           href="/cmn"
@@ -124,6 +124,14 @@ const NanIndexPage: React.FC = () => {
           className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200  px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
         >
           Switch to English
+        </a>
+
+        <a
+          lang="ja"
+          href="/ja"
+          className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
+        >
+          日本語版に切り替える
         </a>
       </div>
     </div>
