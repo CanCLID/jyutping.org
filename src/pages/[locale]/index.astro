@@ -3,14 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { I18n, negotiateLocale } from "@/i18n/utils";
 import { getTitle } from "@/i18n/pageHeadings";
 
-import CmnIndexPage from "@/components/index-pages/CmnIndexPage.tsx";
-import EnIndexPage from "@/components/index-pages/EnIndexPage.tsx";
-import JaIndexPage from "@/components/index-pages/JaIndexPage.tsx";
-import NanIndexPage from "@/components/index-pages/NanIndexPage.tsx";
-import ViIndexPage from "@/components/index-pages/ViIndexPage.tsx";
-import WuuIndexPage from "@/components/index-pages/WuuIndexPage.tsx";
-import YueHansIndexPage from "@/components/index-pages/YueHansIndexPage.tsx";
-// YueIndexPage is handled by src/pages/index.astro
+import IndexPage from "@/components/index-pages/IndexPage.tsx";
 
 export function getStaticPaths() {
   return I18n.locales
@@ -27,11 +20,5 @@ const negotiatedLocale = negotiateLocale(locale);
 ---
 
 <BaseLayout lang={locale} title={title} flipTitle>
-  {negotiatedLocale === "en" && <EnIndexPage client:load />}
-  {negotiatedLocale === "cmn" && <CmnIndexPage client:load />}
-  {negotiatedLocale === "nan" && <NanIndexPage client:load />}
-  {negotiatedLocale === "vi" && <ViIndexPage client:load />}
-  {negotiatedLocale === "wuu" && <WuuIndexPage client:load />}
-  {negotiatedLocale === "yue_hans" && <YueHansIndexPage client:load />}
-  {negotiatedLocale === "ja" && <JaIndexPage client:load />}
+  <IndexPage locale={negotiatedLocale} client:load />
 </BaseLayout>
