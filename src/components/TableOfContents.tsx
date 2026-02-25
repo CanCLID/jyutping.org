@@ -80,19 +80,11 @@ const TableOfContents: React.FC<Props> = ({ headings }) => {
   }, [headings]);
 
   const handleScrollTo = (slug: string) => (e: React.MouseEvent) => {
-   
     e.preventDefault();
     const element = document.getElementById(slug);
     if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+      // Offset is added by CSS `scroll-margin-top`
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 

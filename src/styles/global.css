@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+  scroll-margin-top: 5rem;
+}
+
 article {
   table {
     @apply border-collapse border border-gray-300 my-4;
