@@ -8,6 +8,9 @@
   - Good ✔️: `const transformedResult = somePureComputation(someState);`
 
 ### Element Styles
+- DO NOT add `<style>` elements or `style` property. Inline Tailwind classes instead.
+- DO NOT write `@media (max-width: 767px) { ... }`. Use Tailwind breakpoint prefixes like `md` or `max-md` instead.
+- Only modify `src/styles/global.css` to define utilities or add generic, widely used styles like those for prose. Use variant rules like `@variant md { ... }` or `@variant max-md { ... }` for media width queries.
 - Always use responsive units. Specify size in `rem` to icons, e.g. `<IconWorld size="1.25rem" />`.
 
 ### Localization
