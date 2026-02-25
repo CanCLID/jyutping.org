@@ -48,7 +48,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) 
           <ul
             role="listbox"
             aria-label="Select language"
-            className="absolute right-0 mt-1 bg-white text-gray-800 rounded shadow-lg py-1 z-50 min-w-max"
+            className="absolute max-md:left-0 md:right-0 mt-1 bg-white text-gray-800 rounded shadow-lg py-1 z-50 min-w-max"
           >
             {I18n.locales.map((locale) => (
               <li key={locale} role="option" aria-selected={locale === currentLocale}>
