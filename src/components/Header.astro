@@ -61,7 +61,7 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
     {/* Mobile Menu Panel (hidden by default) */}
     <div
       id="mobile-menu-panel"
-      class="bg-[#1678d3] text-white absolute top-full left-0 right-0 z-50 md:hidden max-md:grid max-md:grid-rows-[0fr] max-md:transition-[grid-template-rows] max-md:duration-300 max-md:[.open]:grid-rows-1"
+      class="bg-[#1678d3] text-white absolute top-full left-0 right-0 z-50 md:hidden max-md:grid max-md:grid-rows-[0fr] max-md:transition-[grid-template-rows] max-md:duration-300 max-md:[.open]:grid-rows-[1fr]"
     >
       <div class="overflow-hidden">
         <div class="px-8 py-4 flex flex-col space-y-4">
@@ -98,8 +98,8 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
       const toggleMenu = () => {
         const isOpen = menuPanel.classList.toggle("open");
         menuPanel.classList.toggle("shadow-md", isOpen);
-        backdrop.classList.toggle("opacity-0");
-        backdrop.classList.toggle("pointer-events-none");
+        backdrop.classList.toggle("opacity-0", !isOpen);
+        backdrop.classList.toggle("pointer-events-none", !isOpen);
       };
 
       // Remove potential old listener to prevent duplicates if script runs multiple times
