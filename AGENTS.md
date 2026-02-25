@@ -7,6 +7,9 @@
   - BAD ❌: `useEffect(() => { const result = somePureComputation(someState); setTransformedState(result); }, [someState]);`
   - Good ✔️: `const transformedResult = somePureComputation(someState);`
 
+### Element Styles
+- Always use responsive units. Specify size in `rem` to icons, e.g. `<IconWorld size="1.25rem" />`.
+
 ### Localization
 - All translation strings must be placed inside the `src/i18n` directory.
 - Translation locales should be sorted in alphabetical order.
