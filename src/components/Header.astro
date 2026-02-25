@@ -24,6 +24,8 @@ const navLinks = navLinkKeys.map((key) => {
 const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
 ---
 
+<div id="mobile-menu-backdrop" class="fixed inset-0 z-40 bg-black/50 md:hidden hidden"></div>
+
 <header class="relative p-4 bg-[#1678d3] text-white">
   <div class="flex justify-between items-center px-4">
     <a href={logoHref} class="text-white hover:opacity-80">
@@ -83,8 +85,19 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
   function setupMobileMenu() {
     const menuButton = document.getElementById("mobile-menu-button");
     const menuPanel = document.getElementById("mobile-menu-panel");
+    const backdrop = document.getElementById("mobile-menu-backdrop");
 
-    if (menuButton && menuPanel) {
+    if (menuButton && menuPanel && backdrop) {
+      const closeMenu = () => {
+        menuPanel.classList.add("hidden");
+        backdrop.classList.add("hidden");
+      };
+
+      const toggleMenu = () => {
+        menuPanel.classList.toggle("hidden");
+        backdrop.classList.toggle("hidden");
+      };
+
       // Remove potential old listener to prevent duplicates if script runs multiple times
       // (Though astro:page-load should handle this, it's safer)
       // Clone the button to effectively remove old listeners before adding new ones
@@ -96,9 +109,8 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
         return; // Exit if we can't replace the button
       }
 
-      newButton.addEventListener("click", () => {
-        menuPanel.classList.toggle("hidden");
-      });
+      newButton.addEventListener("click", toggleMenu);
+      backdrop.addEventListener("click", closeMenu);
 
       // Close menu when a link inside it is clicked
       // Re-query links inside the panel each time to ensure they are fresh
@@ -110,19 +122,11 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
         } else {
           console.warn("Menu link has no parent node during setup.");
           // Attempt to add listener to original link as fallback, though it might be stale
-          link.addEventListener("click", () => {
-            if (!menuPanel.classList.contains("hidden")) {
-              menuPanel.classList.add("hidden");
-            }
-          });
+          link.addEventListener("click", closeMenu);
           return; // Continue to next link
         }
 
-        newLink.addEventListener("click", () => {
-          if (!menuPanel.classList.contains("hidden")) {
-            menuPanel.classList.add("hidden");
-          }
-        });
+        newLink.addEventListener("click", closeMenu);
       });
     } else {
       console.log("Mobile menu button or panel not found after page load.");
