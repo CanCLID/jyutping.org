@@ -9,7 +9,7 @@ const pathname = url.pathname;
 const locale = currentLocale || I18n.defaultLocale;
 
 // --- Generate Localized Nav Links ---
-const navLinkKeys = ["learn", "jyutping", "blog", "keyboard", "about"];
+const navLinkKeys = ["learn", "jyutping", "blog", "keyboard", "about"] as const;
 const navLinks = navLinkKeys.map((key) => {
   const baseHref = `/${key}`;
   // Prepend locale prefix only if it's not the default locale
