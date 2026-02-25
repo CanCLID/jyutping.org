@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { IconChevronDown } from "@tabler/icons-react";
+import { IconChevronDown, IconWorld } from "@tabler/icons-react";
 import { I18n, getLocalePath } from "@/i18n/utils";
 import { languageNames } from "@/i18n/languageNames";
 
@@ -29,6 +29,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) 
   }, []);
 
   return (
+    <div className="flex">
     <div className="relative" ref={containerRef}>
       <button
         type="button"
@@ -37,7 +38,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) 
         aria-haspopup="listbox"
         className="flex items-center gap-1.5 text-white opacity-80 hover:opacity-100"
       >
-        <img src="/globe.svg" alt="" aria-hidden="true" className="w-4 h-4" />
+        <IconWorld size={16} aria-hidden="true" />
         <span lang={currentLocale.replaceAll("_", "-")} className="text-sm">
           {languageNames[currentLocale] ?? currentLocale}
         </span>
@@ -64,6 +65,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) 
           ))}
         </ul>
       )}
+    </div>
     </div>
   );
 };
