@@ -24,7 +24,7 @@ const navLinks = navLinkKeys.map((key) => {
 const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
 ---
 
-<div id="mobile-menu-backdrop" class="fixed inset-0 z-40 bg-black/50 md:hidden hidden"></div>
+<div id="mobile-menu-backdrop" class="fixed inset-0 z-40 bg-black/50 md:hidden opacity-0 pointer-events-none transition-opacity duration-300"></div>
 
 <header class="relative z-50 p-4 bg-[#1678d3] text-white">
   <div class="flex justify-between items-center px-4">
@@ -61,7 +61,7 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
     {/* Mobile Menu Panel (hidden by default) */}
     <div
       id="mobile-menu-panel"
-      class="bg-[#1678d3] text-white absolute top-full left-0 right-0 z-50 md:hidden"
+      class="bg-[#1678d3] text-white absolute top-full left-0 right-0 z-50 md:hidden max-md:grid max-md:grid-rows-[0fr] max-md:transition-[grid-template-rows] max-md:duration-300 max-md:[.open]:grid-rows-1"
     >
       <div class="overflow-hidden">
         <div class="px-8 py-4 flex flex-col space-y-4">
@@ -83,19 +83,6 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
   </div>
 </header>
 
-<style>
-  @media (max-width: 767px) {
-    #mobile-menu-panel {
-      display: grid;
-      grid-template-rows: 0fr;
-      transition: grid-template-rows 300ms ease-in-out;
-    }
-    #mobile-menu-panel.open {
-      grid-template-rows: 1fr;
-    }
-  }
-</style>
-
 <script>
   function setupMobileMenu() {
     const menuButton = document.getElementById("mobile-menu-button");
@@ -105,13 +92,14 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
     if (menuButton && menuPanel && backdrop) {
       const closeMenu = () => {
         menuPanel.classList.remove("open", "shadow-md");
-        backdrop.classList.add("hidden");
+        backdrop.classList.add("opacity-0", "pointer-events-none");
       };
 
       const toggleMenu = () => {
         const isOpen = menuPanel.classList.toggle("open");
         menuPanel.classList.toggle("shadow-md", isOpen);
-        backdrop.classList.toggle("hidden");
+        backdrop.classList.toggle("opacity-0");
+        backdrop.classList.toggle("pointer-events-none");
       };
 
       // Remove potential old listener to prevent duplicates if script runs multiple times
