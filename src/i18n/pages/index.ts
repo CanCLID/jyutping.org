@@ -82,7 +82,7 @@ export const getTranslations = makeResource<IndexPageTranslation>({
   },
   wuu: {
     subheading: ["便當合理 易學易用", "通行粵語拼音方案"],
-    whyLearnHeading: "为啥要學粤拼？",
+    whyLearnHeading: "為啥要學粵拼？",
     reasonEar: "掌握粵拼好相幫糾正差誤讀音，規範自家个粵語發音。",
     reasonLanguage: "漢字弗是拼音文字，有得一隻拼音方案，表達粵語發音再會得準足。",
     reasonKeyboard: "會得粵拼，就好用粵拼輸入法錄粵語，打字頂便當頂省力。",
