@@ -38,11 +38,11 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) 
           aria-haspopup="listbox"
           className="flex items-center gap-1.5 text-white opacity-80 hover:opacity-100"
         >
-          <IconWorld size={16} aria-hidden="true" />
-          <span lang={currentLocale.replaceAll("_", "-")} className="text-sm">
+          <IconWorld size="1.125rem" />
+          <span lang={currentLocale.replaceAll("_", "-")} className="mb-px">
             {languageNames[currentLocale] ?? currentLocale}
           </span>
-          <IconChevronDown size={14} aria-hidden="true" />
+          <IconChevronDown size="1rem" />
         </button>
         {isOpen && (
           <ul
@@ -57,7 +57,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) 
                   lang={locale.replaceAll("_", "-")}
                   aria-current={locale === currentLocale ? "page" : undefined}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-4 py-1.5 text-sm hover:bg-gray-100 ${locale === currentLocale ? "font-semibold" : ""}`}
+                  className={`block px-4 py-1.5 hover:bg-gray-100 ${locale === currentLocale ? "font-semibold" : ""}`}
                 >
                   {languageNames[locale] ?? locale}
                 </a>
