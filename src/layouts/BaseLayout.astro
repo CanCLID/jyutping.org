@@ -35,20 +35,6 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    {/* Alternate language links */}
-    {I18n.locales.map((locale) => (
-      <link
-        rel="alternate"
-        hreflang={locale.replace("_", "-")}
-        href={new URL(getLocalePath(Astro.url.pathname, locale), Astro.url.origin).toString()}
-      />
-    ))}
-    <link
-      rel="alternate"
-      hreflang="x-default"
-      href={new URL(getLocalePath(Astro.url.pathname, I18n.defaultLocale), Astro.url.origin).toString()}
-    />
-
     {/* Basic Meta Tags */}
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -74,6 +60,20 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     {
       /* <meta property="twitter:image" content={new URL('/og-image.png', Astro.url.origin).toString()} /> */
     }
+
+    {/* Alternate language links */}
+    {I18n.locales.map((locale) => (
+      <link
+        rel="alternate"
+        hreflang={locale.replaceAll("_", "-")}
+        href={new URL(getLocalePath(Astro.url.pathname, locale), Astro.url.origin).toString()}
+      />
+    ))}
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(getLocalePath(Astro.url.pathname, I18n.defaultLocale), Astro.url.origin).toString()}
+    />
 
     <link
       rel="preload"

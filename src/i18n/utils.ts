@@ -32,6 +32,21 @@ export function makeResource<T extends TranslationResource>(translations: Partia
   }
 }
 
+// Performs language negotiation resource-agonistically.
+// This method should only be used if the translations cannot be defined with `makeResource`, e.g. for page components differing by locale.
+export function negotiateLocale(locale: string): Locale {
+  if (I18n.locales.includes(locale as Locale)) {
+    // If the locale is one of the valid locales, return it
+    return locale as Locale;
+  } else if (fallbackToYueRegex.test(locale)) {
+    // If the locale is one of the Chinese varieties (the user seems to know Chinese), return Cantonese
+    return I18n.defaultLocale;
+  } else {
+    // Fallback to English
+    return fallbackLocale;
+  }
+}
+
 // Computes the path for a given locale based on the current pathname.
 export function getLocalePath(currentPathname: string, targetLocale: string): string {
   const currentLocalePrefix = I18n.locales.find(
@@ -48,19 +63,4 @@ export function getLocalePath(currentPathname: string, targetLocale: string): st
     return basePath;
   }
   return basePath === "/" ? `/${targetLocale}` : `/${targetLocale}${basePath}`;
-}
-
-// Performs language negotiation resource-agonistically.
-// This method should only be used if the translations cannot be defined with `makeResource`, e.g. for page components differing by locale.
-export function negotiateLocale(locale: string): Locale {
-  if (I18n.locales.includes(locale as Locale)) {
-    // If the locale is one of the valid locales, return it
-    return locale as Locale;
-  } else if (fallbackToYueRegex.test(locale)) {
-    // If the locale is one of the Chinese varieties (the user seems to know Chinese), return Cantonese
-    return I18n.defaultLocale;
-  } else {
-    // Fallback to English
-    return fallbackLocale;
-  }
 }

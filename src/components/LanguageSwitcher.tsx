@@ -1,3 +1,5 @@
+import { useState, useEffect, useRef } from "react";
+import { IconChevronDown } from "@tabler/icons-react";
 import { I18n, getLocalePath } from "@/i18n/utils";
 import { languageNames } from "@/i18n/languageNames";
 
@@ -13,23 +15,56 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) 
         currentPathname === `/${locale}`
     ) ?? I18n.defaultLocale;
 
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <nav aria-label="Language switcher" className="flex items-center gap-1 flex-wrap">
-      <img src="/globe.svg" alt="" aria-hidden="true" className="w-4 h-4 opacity-60 shrink-0" />
-      {I18n.locales.map((locale, i) => (
-        <span key={locale} className="flex items-center">
-          {i > 0 && <span aria-hidden="true" className="mr-1 opacity-60 select-none">|</span>}
-          <a
-            href={getLocalePath(currentPathname, locale)}
-            lang={locale.replace("_", "-")}
-            aria-current={locale === currentLocale ? "page" : undefined}
-            className={`text-white text-sm ${locale === currentLocale ? "font-semibold" : "opacity-70 hover:opacity-100"}`}
-          >
-            {languageNames[locale] ?? locale}
-          </a>
+    <div className="relative" ref={containerRef}>
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-haspopup="listbox"
+        className="flex items-center gap-1.5 text-white opacity-80 hover:opacity-100"
+      >
+        <img src="/globe.svg" alt="" aria-hidden="true" className="w-4 h-4" />
+        <span lang={currentLocale.replaceAll("_", "-")} className="text-sm">
+          {languageNames[currentLocale] ?? currentLocale}
         </span>
-      ))}
-    </nav>
+        <IconChevronDown size={14} aria-hidden="true" />
+      </button>
+      {isOpen && (
+        <ul
+          role="listbox"
+          aria-label="Select language"
+          className="absolute right-0 mt-1 bg-white text-gray-800 rounded shadow-lg py-1 z-50 min-w-max"
+        >
+          {I18n.locales.map((locale) => (
+            <li key={locale} role="option" aria-selected={locale === currentLocale}>
+              <a
+                href={getLocalePath(currentPathname, locale)}
+                lang={locale.replaceAll("_", "-")}
+                aria-current={locale === currentLocale ? "page" : undefined}
+                onClick={() => setIsOpen(false)}
+                className={`block px-4 py-1.5 text-sm hover:bg-gray-100 ${locale === currentLocale ? "font-semibold" : ""}`}
+              >
+                {languageNames[locale] ?? locale}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 };
 
