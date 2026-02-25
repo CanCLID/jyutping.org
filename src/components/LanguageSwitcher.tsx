@@ -44,12 +44,12 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) 
           </span>
           <IconChevronDown size="1rem" />
         </button>
-        <div className={`md:absolute md:right-0 mt-2 z-50 min-w-max grid ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"} transition-[grid-template-rows] duration-300`}>
+        <div className={`md:absolute md:right-0 mt-2 z-50 bg-white text-gray-800 rounded shadow-lg min-w-max grid ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"} transition-[grid-template-rows] duration-300`}>
           <div className="overflow-hidden">
             <ul
               role="listbox"
               aria-label="Select language"
-              className="bg-white text-gray-800 rounded shadow-lg py-1"
+              className="py-1"
             >
               {I18n.locales.map((locale) => (
                 <li key={locale} role="option" aria-selected={locale === currentLocale}>
