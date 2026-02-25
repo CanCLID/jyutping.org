@@ -36,7 +36,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) 
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen}
           aria-haspopup="listbox"
-          className="flex items-center gap-1.5 text-white opacity-80 hover:opacity-100"
+          className="flex items-center gap-1.5 text-white opacity-80 hover:opacity-100 transition-opacity"
         >
           <IconWorld size="1.125rem" />
           <span lang={currentLocale.replaceAll("_", "-")} className="mb-px">
@@ -44,27 +44,29 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) 
           </span>
           <IconChevronDown size="1rem" />
         </button>
-        {isOpen && (
-          <ul
-            role="listbox"
-            aria-label="Select language"
-            className="absolute max-md:left-0 md:right-0 mt-1 bg-white text-gray-800 rounded shadow-lg py-1 z-50 min-w-max"
-          >
-            {I18n.locales.map((locale) => (
-              <li key={locale} role="option" aria-selected={locale === currentLocale}>
-                <a
-                  href={getLocalePath(currentPathname, locale)}
-                  lang={locale.replaceAll("_", "-")}
-                  aria-current={locale === currentLocale ? "page" : undefined}
-                  onClick={() => setIsOpen(false)}
-                  className={`block px-4 py-1.5 hover:bg-gray-100 ${locale === currentLocale ? "font-semibold" : ""}`}
-                >
-                  {languageNames[locale] ?? locale}
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
+        <div className={`md:absolute md:right-0 mt-2 z-50 min-w-max grid ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"} transition-[grid-template-rows] duration-300`}>
+          <div className="overflow-hidden">
+            <ul
+              role="listbox"
+              aria-label="Select language"
+              className="bg-white text-gray-800 rounded shadow-lg py-1"
+            >
+              {I18n.locales.map((locale) => (
+                <li key={locale} role="option" aria-selected={locale === currentLocale}>
+                  <a
+                    href={getLocalePath(currentPathname, locale)}
+                    lang={locale.replaceAll("_", "-")}
+                    aria-current={locale === currentLocale ? "page" : undefined}
+                    onClick={() => setIsOpen(false)}
+                    className={`block px-4 py-1.5 hover:bg-gray-200 transition-colors ${locale === currentLocale ? "font-semibold" : ""}`}
+                  >
+                    {languageNames[locale] ?? locale}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
