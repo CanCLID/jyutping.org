@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
-import { I18n } from "@/i18n/utils";
+import { useState, useEffect, useRef } from "react";
+import { IconChevronDown, IconWorld } from "@tabler/icons-react";
+import { I18n, getLocalePath } from "@/i18n/utils";
 import { languageNames } from "@/i18n/languageNames";
 
 interface LanguageSwitcherProps {
@@ -7,83 +8,64 @@ interface LanguageSwitcherProps {
 }
 
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) => {
-  const [effectiveCurrentLocale, setEffectiveCurrentLocale] =
-    useState<string>(I18n.defaultLocale);
+  const currentLocale =
+    I18n.locales.find(
+      (locale) =>
+        currentPathname.startsWith(`/${locale}/`) ||
+        currentPathname === `/${locale}`
+    ) ?? I18n.defaultLocale;
+
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Determine the current locale based on the pathname prop
-    const detectedLocale = I18n.locales.find(
-      (locale) =>
-        currentPathname.startsWith(`/${locale}/`) ||
-        currentPathname === `/${locale}`
-    );
-    setEffectiveCurrentLocale(detectedLocale || I18n.defaultLocale);
-  }, [currentPathname]);
-
-  const handleLocaleChange = (newLocale: string) => {
-    if (!currentPathname) return;
-
-    // Determine the current locale prefix (if any) based on the pathname prop
-    const currentLocalePrefix = I18n.locales.find(
-      (locale) =>
-        currentPathname.startsWith(`/${locale}/`) ||
-        currentPathname === `/${locale}`
-    );
-
-    // Determine the base path (without any locale prefix)
-    let basePath = currentPathname;
-    if (currentLocalePrefix) {
-      basePath = currentPathname.replace(`/${currentLocalePrefix}`, "");
-      if (!basePath.startsWith("/")) basePath = `/${basePath}`;
-      if (basePath === "") basePath = "/"; // Handle case like /en -> /
-    }
-    // If no prefix, currentPathname is already the base path
-
-    // Construct the target path: only non-default locales should have the prefix
-    let targetPath = "";
-    if (newLocale === I18n.defaultLocale) {
-      targetPath = basePath;
-    } else {
-      targetPath = `/${newLocale}${basePath}`;
-      // Handle edge case: avoid double slash if basePath is "/"
-      if (targetPath.endsWith("//")) {
-        targetPath = targetPath.slice(0, -1);
+    const handleClickOutside = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
       }
-      // Handle case where target is just "/" plus the locale
-      if (targetPath === `/${newLocale}/` && basePath === "/") {
-        targetPath = `/${newLocale}`;
-      }
-    }
-
-    // Set cookie
-    const date = new Date();
-    date.setTime(date.getTime() + 365 * 24 * 60 * 60 * 1000); // 1 year
-    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; expires=${date.toUTCString()}; SameSite=Lax`;
-
-    // Navigate to the new page
-    window.location.href = targetPath;
-  };
-
-  // Prevents rendering before locale determination
-  if (!effectiveCurrentLocale) {
-    return null;
-  }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-    <div className="relative inline-block text-left">
-      <select
-        onChange={(e) => handleLocaleChange(e.target.value)}
-        value={effectiveCurrentLocale}
-        className="px-2 py-1 border border-white rounded-sm bg-transparent text-white"
-        aria-label="Select language"
+    <div className="flex">
+    <div className="relative" ref={containerRef}>
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-haspopup="listbox"
+        className="flex items-center gap-1.5 text-white opacity-80 hover:opacity-100"
       >
-        {I18n.locales.map((locale: string) => (
-          <option key={locale} value={locale} className="text-black bg-white">
-            {" "}
-            {languageNames[locale] || locale}
-          </option>
-        ))}
-      </select>
+        <IconWorld size={16} aria-hidden="true" />
+        <span lang={currentLocale.replaceAll("_", "-")} className="text-sm">
+          {languageNames[currentLocale] ?? currentLocale}
+        </span>
+        <IconChevronDown size={14} aria-hidden="true" />
+      </button>
+      {isOpen && (
+        <ul
+          role="listbox"
+          aria-label="Select language"
+          className="absolute right-0 mt-1 bg-white text-gray-800 rounded shadow-lg py-1 z-50 min-w-max"
+        >
+          {I18n.locales.map((locale) => (
+            <li key={locale} role="option" aria-selected={locale === currentLocale}>
+              <a
+                href={getLocalePath(currentPathname, locale)}
+                lang={locale.replaceAll("_", "-")}
+                aria-current={locale === currentLocale ? "page" : undefined}
+                onClick={() => setIsOpen(false)}
+                className={`block px-4 py-1.5 text-sm hover:bg-gray-100 ${locale === currentLocale ? "font-semibold" : ""}`}
+              >
+                {languageNames[locale] ?? locale}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import "@/styles/global.css";
 import Chartaudio from "@/components/Chartaudio.astro";
-import { I18n } from "@/i18n/utils";
+import { I18n, getLocalePath } from "@/i18n/utils";
 import { makeTitle } from "@/i18n/pageHeadings";
 
 interface Props {
@@ -60,6 +60,20 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     {
       /* <meta property="twitter:image" content={new URL('/og-image.png', Astro.url.origin).toString()} /> */
     }
+
+    {/* Alternate language links */}
+    {I18n.locales.map((locale) => (
+      <link
+        rel="alternate"
+        hreflang={locale.replaceAll("_", "-")}
+        href={new URL(getLocalePath(Astro.url.pathname, locale), Astro.url.origin).toString()}
+      />
+    ))}
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(getLocalePath(Astro.url.pathname, I18n.defaultLocale), Astro.url.origin).toString()}
+    />
 
     <link
       rel="preload"

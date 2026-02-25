@@ -46,3 +46,21 @@ export function negotiateLocale(locale: string): Locale {
     return fallbackLocale;
   }
 }
+
+// Computes the path for a given locale based on the current pathname.
+export function getLocalePath(currentPathname: string, targetLocale: string): string {
+  const currentLocalePrefix = I18n.locales.find(
+    (locale) =>
+      currentPathname.startsWith(`/${locale}/`) ||
+      currentPathname === `/${locale}`
+  );
+
+  const basePath = currentLocalePrefix
+    ? currentPathname.slice(`/${currentLocalePrefix}`.length) || "/"
+    : currentPathname;
+
+  if (targetLocale === I18n.defaultLocale) {
+    return basePath;
+  }
+  return basePath === "/" ? `/${targetLocale}` : `/${targetLocale}${basePath}`;
+}
