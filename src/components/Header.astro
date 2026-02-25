@@ -26,7 +26,7 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
 
 <div id="mobile-menu-backdrop" class="fixed inset-0 z-40 bg-black/50 md:hidden hidden"></div>
 
-<header class="relative p-4 bg-[#1678d3] text-white">
+<header class="relative z-50 p-4 bg-[#1678d3] text-white">
   <div class="flex justify-between items-center px-4">
     <a href={logoHref} class="text-white hover:opacity-80">
       <span class="text-3xl font-jyutping">粵拼</span>
@@ -61,25 +61,40 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
     {/* Mobile Menu Panel (hidden by default) */}
     <div
       id="mobile-menu-panel"
-      class="bg-[#1678d3] text-white absolute top-full left-0 right-0 z-50 shadow-md md:hidden hidden"
+      class="bg-[#1678d3] text-white absolute top-full left-0 right-0 z-50 md:hidden"
     >
-      <div class="px-8 py-4 flex flex-col space-y-4">
-        {/* Mobile Navigation Links */}
-        <nav class="flex flex-col space-y-2">
-          {
-            navLinks.map((link) => (
-              <a href={link.href} class="text-white text-lg hover:opacity-80">
-                {link.title}
-              </a>
-            ))
-          }
-        </nav>
-        {/* Mobile Language Switcher */}
-        <LanguageSwitcher currentPathname={pathname} client:load />
+      <div class="overflow-hidden">
+        <div class="px-8 py-4 flex flex-col space-y-4">
+          {/* Mobile Navigation Links */}
+          <nav class="flex flex-col space-y-2">
+            {
+              navLinks.map((link) => (
+                <a href={link.href} class="text-white text-lg hover:opacity-80">
+                  {link.title}
+                </a>
+              ))
+            }
+          </nav>
+          {/* Mobile Language Switcher */}
+          <LanguageSwitcher currentPathname={pathname} client:load />
+        </div>
       </div>
     </div>
   </div>
 </header>
+
+<style>
+  @media (max-width: 767px) {
+    #mobile-menu-panel {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 300ms ease-in-out;
+    }
+    #mobile-menu-panel.open {
+      grid-template-rows: 1fr;
+    }
+  }
+</style>
 
 <script>
   function setupMobileMenu() {
@@ -89,12 +104,13 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
 
     if (menuButton && menuPanel && backdrop) {
       const closeMenu = () => {
-        menuPanel.classList.add("hidden");
+        menuPanel.classList.remove("open", "shadow-md");
         backdrop.classList.add("hidden");
       };
 
       const toggleMenu = () => {
-        menuPanel.classList.toggle("hidden");
+        const isOpen = menuPanel.classList.toggle("open");
+        menuPanel.classList.toggle("shadow-md", isOpen);
         backdrop.classList.toggle("hidden");
       };
 
