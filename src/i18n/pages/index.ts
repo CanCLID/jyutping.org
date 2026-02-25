@@ -65,7 +65,7 @@ export const getTranslations = makeResource<IndexPageTranslation>({
     or: "或者",
     viewSchemeButton: "看粵拼方案表",
     resourcesButton: "粵拼資源輸入法",
-    otherLanguagesHeading: "毋𧧸粵語？",
+    otherLanguagesHeading: "毋捌台語？",
   },
   vi: {
     subheading: ["Đơn giản, hợp lý, dễ học, dễ dùng", "Phương án phiên âm tiếng Quảng Đông phổ biến"],
@@ -91,7 +91,7 @@ export const getTranslations = makeResource<IndexPageTranslation>({
     or: "或者",
     viewSchemeButton: "看粵拼方案表",
     resourcesButton: "粵拼資源輸入法",
-    otherLanguagesHeading: "弗識講粵語？",
+    otherLanguagesHeading: "弗識吳語？",
   },
   yue: {
     subheading: ["簡單合理 易學易用", "通行粵語拼音方案"],

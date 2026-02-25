@@ -11,14 +11,14 @@ import type { Locale } from "@/i18n/utils";
 import { I18n } from "@/i18n/utils";
 import { getTranslations } from "@/i18n/pages/index";
 
-const localeLinks: ReadonlyArray<{ locale: Exclude<Locale, "yue_hans">; href: string; label: string }> = [
-  { locale: "yue", href: "/", label: "返去粵語版" },
-  { locale: "cmn", href: "/cmn", label: "切到普通話 / 國語版" },
-  { locale: "nan", href: "/nan", label: "換到台灣閩南語版" },
-  { locale: "wuu", href: "/wuu", label: "換到吳語版" },
-  { locale: "vi", href: "/vi", label: "Chuyển sang tiếng Việt" },
-  { locale: "en", href: "/en", label: "Switch to English" },
-  { locale: "ja", href: "/ja", label: "日本語版に切り替える" },
+const localeLinks: ReadonlyArray<{ locale: Exclude<Locale, "yue_hans">; label: string }> = [
+  { locale: "yue", label: "返去粵語版" },
+  { locale: "cmn", label: "切到普通話 / 國語版" },
+  { locale: "nan", label: "換到台灣閩南語版" },
+  { locale: "wuu", label: "換到吳語版" },
+  { locale: "vi", label: "Chuyển sang tiếng Việt" },
+  { locale: "en", label: "Switch to English" },
+  { locale: "ja", label: "日本語版に切り替える" },
 ];
 
 interface Props {
@@ -28,26 +28,18 @@ interface Props {
 const IndexPage: React.FC<Props> = ({ locale }) => {
   const t = getTranslations(locale);
   const prefix = locale === I18n.defaultLocale ? "" : `/${locale}`;
-  const useJyutpingFont = (["cmn", "nan", "wuu", "yue"] as string[]).includes(locale);
+  const useJyutpingFont = ["cmn", "nan", "wuu", "yue"].includes(locale);
 
   return (
     <div className="mx-auto px-4 py-8 bg-[#1678d3] text-white">
       <h1 className="font-jyutping text-8xl my-16 mx-auto text-center">
         粵拼
       </h1>
-      {t.subheading.map((line, i) => {
-        const isLast = i === t.subheading.length - 1;
-        const classes = [
-          "leading-relaxed text-4xl mx-auto text-center",
-          useJyutpingFont && "font-jyutping",
-          t.subheading.length === 1 ? "my-8" : isLast ? "mb-16" : "",
-        ].filter(Boolean).join(" ");
-        return (
-          <p key={i} className={classes}>
-            {line}
-          </p>
-        );
-      })}
+      {t.subheading.map((line, i) => (
+        <p key={i} className={`${useJyutpingFont ? "font-jyutping " : ""}leading-relaxed text-4xl mx-auto text-center`}>
+          {line}
+        </p>
+      ))}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-16 items-center p-6 max-w-5xl mx-auto">
         <p className="text-center text-3xl md:text-right font-semibold">
           {t.whyLearnHeading}
@@ -109,12 +101,12 @@ const IndexPage: React.FC<Props> = ({ locale }) => {
       </span>
       <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center items-center gap-5 my-12 max-w-6xl mx-auto">
         {localeLinks
-          .filter((link) => link.locale !== locale)
+          .filter((link) => link.locale !== locale.replace(/_.*/, ""))
           .map((link) => (
             <a
               key={link.locale}
               lang={link.locale}
-              href={link.href}
+              href={link.locale === I18n.defaultLocale ? "/" : `/${link.locale}`}
               className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
             >
               {link.label}

@@ -1,9 +1,10 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { I18n, negotiateLocale } from "@/i18n/utils";
+import { I18n } from "@/i18n/utils";
+import type { Locale } from "@/i18n/utils";
 import { getTitle } from "@/i18n/pageHeadings";
 
-import IndexPage from "@/components/index-pages/IndexPage.tsx";
+import IndexPage from "@/components/IndexPage.tsx";
 
 export function getStaticPaths() {
   return I18n.locales
@@ -16,9 +17,8 @@ export function getStaticPaths() {
 const { locale } = Astro.params;
 
 const title = getTitle("index", locale);
-const negotiatedLocale = negotiateLocale(locale);
 ---
 
 <BaseLayout lang={locale} title={title} flipTitle>
-  <IndexPage locale={negotiatedLocale} client:load />
+  <IndexPage locale={locale as Locale} client:load />
 </BaseLayout>

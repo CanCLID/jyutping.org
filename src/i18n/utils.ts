@@ -10,7 +10,7 @@ export type Locale = typeof I18n["locales"][number];
 type TranslationResource = string | React.ReactElement | (string | React.ReactElement)[] | { [key: string]: TranslationResource };
 
 const fallbackLocale = "en" as const;
-export const fallbackToYueRegex = /^(zh|chi|ltc|zho|zhx|(zh-)?(cdo|cjy|cmn|cnp|cpx|csp|czh|czo|gan|hak|hnm|hsn|luh|lzh|mnp|nan|och|sjc|wuu|yue))\b/i;
+const fallbackToYueRegex = /^(zh|chi|ltc|zho|zhx|(zh-)?(cdo|cjy|cmn|cnp|cpx|csp|czh|czo|gan|hak|hnm|hsn|luh|lzh|mnp|nan|och|sjc|wuu|yue))\b/i;
 
 // Polyfill
 Object.hasOwn ||= Function.prototype.call.bind(Object.prototype.hasOwnProperty);
