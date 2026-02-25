@@ -32,7 +32,7 @@ export const getTranslations = makeResource<AboutPageTranslation>({
         </a>
         建成，并得到
         <a
-          href="https://www.lshk.org"
+          href="https://lshk.org"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline mx-1"
@@ -116,7 +116,7 @@ export const getTranslations = makeResource<AboutPageTranslation>({
         </a>
         , with the assistance from{" "}
         <a
-          href="https://www.lshk.org"
+          href="https://lshk.org"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline"
@@ -202,7 +202,7 @@ export const getTranslations = makeResource<AboutPageTranslation>({
         </a>
         によって開発され、
         <a
-          href="https://www.lshk.org"
+          href="https://lshk.org"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline mx-1"
@@ -281,7 +281,7 @@ export const getTranslations = makeResource<AboutPageTranslation>({
         </a>
         建成，並得到
         <a
-          href="https://www.lshk.org"
+          href="https://lshk.org"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline mx-1"
@@ -365,7 +365,7 @@ export const getTranslations = makeResource<AboutPageTranslation>({
         </a>
         , với sự hỗ trợ của{" "}
         <a
-          href="https://www.lshk.org"
+          href="https://lshk.org"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline mx-1"
@@ -453,7 +453,7 @@ export const getTranslations = makeResource<AboutPageTranslation>({
         </a>
         建成，並得到
         <a
-          href="https://www.lshk.org"
+          href="https://lshk.org"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline mx-1"
@@ -536,7 +536,7 @@ export const getTranslations = makeResource<AboutPageTranslation>({
         </a>
         建成，並得到
         <a
-          href="https://www.lshk.org"
+          href="https://lshk.org"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline mx-1"
@@ -619,7 +619,7 @@ export const getTranslations = makeResource<AboutPageTranslation>({
         </a>
         建成，并得到
         <a
-          href="https://www.lshk.org"
+          href="https://lshk.org"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline mx-1"
