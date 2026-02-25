@@ -63,17 +63,19 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
       id="mobile-menu-panel"
       class="bg-[#1678d3] text-white absolute top-full left-0 right-0 z-50 md:hidden max-md:grid max-md:grid-rows-[0fr] max-md:transition-[grid-template-rows] max-md:duration-300 max-md:[.open]:grid-rows-[1fr]"
     >
-      <div class="px-8 py-4 flex flex-col space-y-4">
-        {/* Mobile Navigation Links */}
-        <nav class="flex flex-col space-y-2">
-          {navLinks.map((link) => (
-            <a href={link.href} class="text-white text-lg hover:opacity-80">
-              {link.title}
-            </a>
-          ))}
-        </nav>
-        {/* Mobile Language Switcher */}
-        <LanguageSwitcher currentPathname={pathname} client:load />
+      <div class="overflow-hidden">
+        <div class="px-8 py-4 flex flex-col space-y-4">
+          {/* Mobile Navigation Links */}
+          <nav class="flex flex-col space-y-2">
+            {navLinks.map((link) => (
+              <a href={link.href} class="text-white text-lg hover:opacity-80">
+                {link.title}
+              </a>
+            ))}
+          </nav>
+          {/* Mobile Language Switcher */}
+          <LanguageSwitcher currentPathname={pathname} client:load />
+        </div>
       </div>
     </div>
   </div>
