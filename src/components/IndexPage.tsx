@@ -22,7 +22,7 @@ const localeLinks: ReadonlyArray<{ locale: Exclude<Locale, "yue_hans">; label: s
 ];
 
 interface Props {
-  locale: Locale;
+  locale: string;
 }
 
 const IndexPage: React.FC<Props> = ({ locale }) => {
@@ -105,7 +105,7 @@ const IndexPage: React.FC<Props> = ({ locale }) => {
           .map((link) => (
             <a
               key={link.locale}
-              lang={link.locale}
+              lang={link.locale.replaceAll("_", "-")}
               href={link.locale === I18n.defaultLocale ? "/" : `/${link.locale}`}
               className="bg-neutral-50 text-neutral-800 hover:bg-neutral-200 active:bg-neutral-200 px-4 py-2 rounded-md w-full md:w-auto text-center transition-colors duration-150"
             >
