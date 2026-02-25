@@ -61,7 +61,7 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
     {/* Mobile Menu Panel (hidden by default) */}
     <div
       id="mobile-menu-panel"
-      class="bg-[#1678d3] text-white absolute top-full left-0 right-0 z-50 md:hidden max-md:grid max-md:grid-rows-[0fr] max-md:transition-[grid-template-rows] max-md:duration-300 max-md:[.open]:grid-rows-[1fr]"
+      class="bg-[#1678d3] text-white absolute top-full left-0 right-0 z-50 [.open]:shadow-md md:hidden max-md:grid max-md:grid-rows-[0fr] max-md:transition-[grid-template-rows] max-md:duration-300 max-md:[.open]:grid-rows-[1fr]"
     >
       <div class="overflow-hidden">
         <div class="px-8 py-4 flex flex-col space-y-4">
@@ -89,13 +89,12 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
 
     if (menuButton && menuPanel && backdrop) {
       const closeMenu = () => {
-        menuPanel.classList.remove("open", "shadow-md");
+        menuPanel.classList.remove("open");
         backdrop.classList.add("opacity-0", "pointer-events-none");
       };
 
       const toggleMenu = () => {
         const isOpen = menuPanel.classList.toggle("open");
-        menuPanel.classList.toggle("shadow-md", isOpen);
         backdrop.classList.toggle("opacity-0", !isOpen);
         backdrop.classList.toggle("pointer-events-none", !isOpen);
       };
