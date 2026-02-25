@@ -30,42 +30,42 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentPathname }) 
 
   return (
     <div className="flex">
-    <div className="relative" ref={containerRef}>
-      <button
-        type="button"
-        onClick={() => setIsOpen(!isOpen)}
-        aria-expanded={isOpen}
-        aria-haspopup="listbox"
-        className="flex items-center gap-1.5 text-white opacity-80 hover:opacity-100"
-      >
-        <IconWorld size={16} aria-hidden="true" />
-        <span lang={currentLocale.replaceAll("_", "-")} className="text-sm">
-          {languageNames[currentLocale] ?? currentLocale}
-        </span>
-        <IconChevronDown size={14} aria-hidden="true" />
-      </button>
-      {isOpen && (
-        <ul
-          role="listbox"
-          aria-label="Select language"
-          className="absolute right-0 mt-1 bg-white text-gray-800 rounded shadow-lg py-1 z-50 min-w-max"
+      <div className="relative" ref={containerRef}>
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          aria-haspopup="listbox"
+          className="flex items-center gap-1.5 text-white opacity-80 hover:opacity-100"
         >
-          {I18n.locales.map((locale) => (
-            <li key={locale} role="option" aria-selected={locale === currentLocale}>
-              <a
-                href={getLocalePath(currentPathname, locale)}
-                lang={locale.replaceAll("_", "-")}
-                aria-current={locale === currentLocale ? "page" : undefined}
-                onClick={() => setIsOpen(false)}
-                className={`block px-4 py-1.5 text-sm hover:bg-gray-100 ${locale === currentLocale ? "font-semibold" : ""}`}
-              >
-                {languageNames[locale] ?? locale}
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+          <IconWorld size={16} aria-hidden="true" />
+          <span lang={currentLocale.replaceAll("_", "-")} className="text-sm">
+            {languageNames[currentLocale] ?? currentLocale}
+          </span>
+          <IconChevronDown size={14} aria-hidden="true" />
+        </button>
+        {isOpen && (
+          <ul
+            role="listbox"
+            aria-label="Select language"
+            className="absolute right-0 mt-1 bg-white text-gray-800 rounded shadow-lg py-1 z-50 min-w-max"
+          >
+            {I18n.locales.map((locale) => (
+              <li key={locale} role="option" aria-selected={locale === currentLocale}>
+                <a
+                  href={getLocalePath(currentPathname, locale)}
+                  lang={locale.replaceAll("_", "-")}
+                  aria-current={locale === currentLocale ? "page" : undefined}
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-4 py-1.5 text-sm hover:bg-gray-100 ${locale === currentLocale ? "font-semibold" : ""}`}
+                >
+                  {languageNames[locale] ?? locale}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 };
