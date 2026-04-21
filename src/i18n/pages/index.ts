@@ -16,7 +16,6 @@ type IndexPageTranslation = {
   whatIsHeading: string;
   whatIsBody: string[];
   pinyinLabel: string;
-  jyutpingLabel: string;
   everythingHeading: string;
   typeItHeading: string;
   lookItUpHeading: string;
@@ -40,7 +39,6 @@ export const getTranslations = makeResource<IndexPageTranslation>({
     whatIsHeading: "什麼是粵拼？",
     whatIsBody: ["粵拼是粵語的標準拼音方案"],
     pinyinLabel: "普通話 · 漢語拼音",
-    jyutpingLabel: "粵語 · 粵拼",
     everythingHeading: "粵拼生態",
     typeItHeading: "打字輸入",
     lookItUpHeading: "查詢辭典",
@@ -62,7 +60,6 @@ export const getTranslations = makeResource<IndexPageTranslation>({
     whatIsHeading: "What is Jyutping?",
     whatIsBody: ["Jyutping is the standard romanization scheme for Cantonese"],
     pinyinLabel: "Mandarin · Pinyin",
-    jyutpingLabel: "Cantonese · Jyutping",
     everythingHeading: "Jyutping ecosystem",
     typeItHeading: "Type it",
     lookItUpHeading: "Look it up",
@@ -84,7 +81,6 @@ export const getTranslations = makeResource<IndexPageTranslation>({
     whatIsHeading: "粤拼とは？",
     whatIsBody: ["粤拼は広東語の標準ローマ字表記です"],
     pinyinLabel: "普通話 · ピンイン",
-    jyutpingLabel: "広東語 · 粤拼",
     everythingHeading: "粤拼エコシステム",
     typeItHeading: "入力する",
     lookItUpHeading: "調べる",
@@ -106,7 +102,6 @@ export const getTranslations = makeResource<IndexPageTranslation>({
     whatIsHeading: "粵拼是啥？",
     whatIsBody: ["粵拼是粵語的標準拼音方案"],
     pinyinLabel: "華語 · 漢語拼音",
-    jyutpingLabel: "粵語 · 粵拼",
     everythingHeading: "粵拼生態",
     typeItHeading: "拍字",
     lookItUpHeading: "查字",
@@ -128,7 +123,6 @@ export const getTranslations = makeResource<IndexPageTranslation>({
     whatIsHeading: "Việt bính là gì?",
     whatIsBody: ["Việt bính là phương án phiên âm tiêu chuẩn của tiếng Quảng Đông"],
     pinyinLabel: "Tiếng Phổ thông · Bính âm",
-    jyutpingLabel: "Tiếng Quảng Đông · Việt bính",
     everythingHeading: "Hệ sinh thái Việt bính",
     typeItHeading: "Gõ chữ",
     lookItUpHeading: "Tra cứu",
@@ -150,7 +144,6 @@ export const getTranslations = makeResource<IndexPageTranslation>({
     whatIsHeading: "粵拼是啥？",
     whatIsBody: ["粵拼是粵語个標準拼音方案"],
     pinyinLabel: "官話 · 漢語拼音",
-    jyutpingLabel: "粵語 · 粵拼",
     everythingHeading: "粵拼生態",
     typeItHeading: "打字",
     lookItUpHeading: "查字",
@@ -172,7 +165,6 @@ export const getTranslations = makeResource<IndexPageTranslation>({
     whatIsHeading: "粵拼係乜？",
     whatIsBody: ["粵拼係粵語嘅標準拼音方案"],
     pinyinLabel: "普通話 · 漢語拼音",
-    jyutpingLabel: "粵語 · 粵拼",
     everythingHeading: "粵拼生態",
     typeItHeading: "打字",
     lookItUpHeading: "查字",
@@ -194,7 +186,6 @@ export const getTranslations = makeResource<IndexPageTranslation>({
     whatIsHeading: "粤拼係乜？",
     whatIsBody: ["粤拼係粤语嘅标准拼音方案"],
     pinyinLabel: "普通话 · 汉语拼音",
-    jyutpingLabel: "粤语 · 粤拼",
     everythingHeading: "粤拼生态",
     typeItHeading: "打字",
     lookItUpHeading: "查字",

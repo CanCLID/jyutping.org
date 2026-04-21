@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import cmnToneChart from "@/assets/images/content/learn/cmn.png";
+import yueToneChart from "@/assets/images/content/learn/yue.jpeg";
+
+interface Props {
+  src: string;
+  alt?: string;
+  width?: number | string;
+  height?: number | string;
+  loading?: "eager" | "lazy";
+}
+
+const {
+  src,
+  alt = "",
+  width,
+  height,
+  loading = "lazy",
+  ...rest
+} = Astro.props;
+
+const localImages: Record<string, ImageMetadata> = {
+  "/img/cmn.png": cmnToneChart,
+  "/img/yue.jpeg": yueToneChart,
+};
+
+const resolvedWidth =
+  typeof width === "string" ? Number.parseInt(width, 10) : width;
+const resolvedHeight =
+  typeof height === "string" ? Number.parseInt(height, 10) : height;
+const localImage = localImages[src];
+---
+
+{
+  localImage ? (
+    <Image
+      src={localImage}
+      alt={alt}
+      width={resolvedWidth ?? localImage.width}
+      height={resolvedHeight ?? localImage.height}
+      loading={loading}
+      {...rest}
+    />
+  ) : (
+    <img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      loading={loading}
+      {...rest}
+    />
+  )
+}

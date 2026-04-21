@@ -1,7 +1,47 @@
 @import "tailwindcss";
 
+:root {
+  --fallback-fonts:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
 * {
   scroll-margin-top: 5rem;
+}
+
+html {
+  background-size: 224px;
+  font-family: var(--fallback-fonts);
+}
+
+html:not(:lang(ja)),
+html :not(:lang(ja)) {
+  font-family: var(--font-chiron-hei-hk-ws), var(--fallback-fonts);
+}
+
+html:lang(ja),
+html :lang(ja) {
+  font-family:
+    var(--font-noto-sans-jp),
+    var(--font-chiron-hei-hk-ws),
+    var(--fallback-fonts);
+}
+
+html .font-jyutping {
+  font-family:
+    var(--font-chiron-hei-hk-jyutping),
+    var(--font-chiron-hei-hk-ws),
+    var(--fallback-fonts);
 }
 
 article {
@@ -58,6 +98,38 @@ article {
   h4 {
     @apply text-xl;
   }
+}
+
+@keyframes slide-left-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-right-in {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+::view-transition-old(root) {
+  animation: slide-left-out 0.2s cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+::view-transition-new(root) {
+  animation: slide-right-in 0.2s cubic-bezier(0, 0, 0.2, 1) forwards;
 }
 
 @utility auto-fill-* {

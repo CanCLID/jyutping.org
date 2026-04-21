@@ -12,6 +12,17 @@ src/pages
 
 網站部署喺 Cloudflare Pages，用 Astro preset。
 
+## Cloudflare Pages
+
+目前線上專案係 `jyutping-org`，維持靜態 Cloudflare Pages 部署：
+
+- Build command: `npm run build`
+- Build output: `dist`
+- Node.js: `22`（跟 `.nvmrc`）
+- 唔用 SSR
+- 唔用 Pages Functions
+- 唔用 `@astrojs/cloudflare` adapter
+
 ## 開發
 
 用下面嘅指令開發本站：
@@ -27,12 +38,12 @@ src/pages
 
 ### 字體取樣
 
-因為個粵拼字體體積太大，本站用咗 font subsetting 嚟縮細個昭源黑體粵拼字體。如果網站有內容更新，可能需要重新跑下面嘅命令嚟重新生成個 `ChironHeiHK-lshk-subset.woff2`：
+因為個粵拼字體體積太大，本站用咗 font subsetting 嚟縮細個昭源黑體粵拼字體。如果網站有內容更新，可能需要重新跑下面嘅命令嚟重新生成個 `src/assets/fonts/chiron-hei-hk-jyutping-subset.woff2`：
 
 ```bash
 glyphhanger ./dist/**/*.html --unicodes > unicodes.txt
 pyftsubset ./public/ChironHeiHK-lshk.woff \
-           --output-file=./public/ChironHeiHK-lshk-subset.woff2 \
+           --output-file=./src/assets/fonts/chiron-hei-hk-jyutping-subset.woff2 \
            --unicodes-file=unicodes.txt \
            --layout-features='*,!liga,!dlig,!rlig' \
            --flavor=woff2 \

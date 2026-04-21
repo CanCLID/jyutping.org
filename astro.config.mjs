@@ -1,41 +1,100 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from "astro/config";
 
-import mdx from '@astrojs/mdx';
-import react from '@astrojs/react';
-import remarkGfm from 'remark-gfm';
+import mdx from "@astrojs/mdx";
+import react from "@astrojs/react";
+import remarkGfm from "remark-gfm";
 
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
 
-
-import sitemap from '@astrojs/sitemap';
-
-import partytown from '@astrojs/partytown';
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jyutping.org',
-  // Add i18n configuration
+  site: "https://jyutping.org",
+  markdown: {
+    syntaxHighlight: false,
+  },
+  fonts: [
+    {
+      provider: fontProviders.local(),
+      name: "Chiron Hei HK WS",
+      cssVariable: "--font-chiron-hei-hk-ws",
+      options: {
+        variants: [
+          {
+            src: ["./src/assets/fonts/chiron-hei-hk-ws-variable.woff2"],
+            weight: "100 900",
+            style: "normal",
+          },
+        ],
+      },
+    },
+    {
+      provider: fontProviders.local(),
+      name: "Chiron Hei HK Jyutping",
+      cssVariable: "--font-chiron-hei-hk-jyutping",
+      options: {
+        variants: [
+          {
+            src: ["./src/assets/fonts/chiron-hei-hk-jyutping-subset.woff2"],
+            weight: "normal",
+            style: "normal",
+          },
+        ],
+      },
+    },
+    {
+      provider: fontProviders.google(),
+      name: "Noto Sans JP",
+      cssVariable: "--font-noto-sans-jp",
+      weights: ["100 900"],
+      styles: ["normal"],
+    },
+  ],
   i18n: {
-    // An array of supported locales
-    locales: ['en', 'vi', 'yue', 'cmn', 'nan', 'wuu', 'yue_hans', 'ja'],
-    // The default locale
-    defaultLocale: 'yue',
-    // Strategy for routing locales
+    locales: ["en", "vi", "yue", "cmn", "nan", "wuu", "yue_hans", "ja"],
+    defaultLocale: "yue",
     routing: {
-      // The default locale will not have a prefix (e.g. `/blog`)
       prefixDefaultLocale: false,
-      // Redirect /en/ to /en automatically
-      // Not strictly needed based on middleware, but good practice
       redirectToDefaultLocale: false,
     },
   },
-
-  integrations: [react(), mdx({
-    remarkPlugins: [remarkGfm],
-  }), sitemap(), partytown()],
-
+  security: {
+    csp: {
+      directives: [
+        "base-uri 'self'",
+        "connect-src 'self' https://cloud.umami.is https://*.umami.is",
+        "default-src 'self'",
+        "font-src 'self'",
+        "frame-src 'self' https://www.youtube.com https://youtube.com",
+        "img-src 'self' data:",
+        "media-src 'self'",
+        "object-src 'none'",
+      ],
+      scriptDirective: {
+        resources: ["'self'", "https://cloud.umami.is"],
+      },
+    },
+  },
+  image: {
+    service: {
+      config: {
+        jpeg: { mozjpeg: true },
+        webp: { effort: 6, alphaQuality: 80 },
+        avif: { effort: 4, chromaSubsampling: "4:2:0" },
+        png: { compressionLevel: 9 },
+      },
+    },
+  },
+  integrations: [
+    react(),
+    mdx({
+      remarkPlugins: [remarkGfm],
+    }),
+    sitemap(),
+  ],
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
 });

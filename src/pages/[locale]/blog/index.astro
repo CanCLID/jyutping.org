@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import BlogIndexList from "@/components/BlogIndexList.tsx";
+import BlogIndexList from "@/components/BlogIndexList.astro";
 import { I18n } from "@/i18n/utils";
 import { getTitle } from "@/i18n/pageHeadings";
 import { getBlogLabels } from "@/i18n/blogLabels";
@@ -36,5 +36,5 @@ const blogLabels = getBlogLabels(locale);
 ---
 
 <BaseLayout lang={locale} title={title}>
-  <BlogIndexList posts={posts} translations={{ title, ...blogLabels }} client:load />
+  <BlogIndexList posts={posts} translations={{ title, ...blogLabels }} />
 </BaseLayout>

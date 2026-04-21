@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection, render } from "astro:content";
+import ContentImage from "@/components/ContentImage.astro";
 import TableOfContents from "@/components/TableOfContents";
 import { I18n } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
@@ -60,7 +61,7 @@ const lang = getEntryLocale(entry.id) || I18n.defaultLocale;
       <h1>{entry.data.title}</h1>
       {entry.data.description && <p class="lead">{entry.data.description}</p>}
       <hr class="my-4" />
-      <Content />
+      <Content components={{ img: ContentImage }} />
     </article>
 
     <aside class="hidden lg:block w-64 flex-shrink-0">

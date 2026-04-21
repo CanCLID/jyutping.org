@@ -1,0 +1,59 @@
+---
+import { renderToStaticMarkup } from "react-dom/server";
+import { IconBrandGithub, IconKeyboard, IconMail } from "@tabler/icons-react";
+import { getTranslations } from "@/i18n/pages/about";
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+
+const renderRichContent = (content) =>
+  typeof content === "string" ? content : renderToStaticMarkup(content);
+---
+
+<div class="container mx-auto px-4 py-4 text-gray-800">
+  <div class="my-4 grid grid-cols-1 gap-12 md:grid-cols-2">
+    <div class="prose max-w-none">
+      <h2 class="mb-4 border-b pb-2 text-3xl font-semibold">
+        {t.acknowledgementsTitle}
+      </h2>
+      <p class="mb-4" set:html={renderRichContent(t.acknowledgementsP1)} />
+      <ul class="list-disc space-y-2 pl-5 text-sm">
+        <li>{t.acknowledgementsP2}</li>
+        <li>{t.acknowledgementsP3}</li>
+        <li>{t.acknowledgementsP4}</li>
+        <li>{t.acknowledgementsP5}</li>
+        <li>{t.acknowledgementsP6}</li>
+      </ul>
+    </div>
+
+    <div class="prose max-w-none">
+      <h2 class="mb-4 border-b pb-2 text-3xl font-semibold">
+        {t.developContributeTitle}
+      </h2>
+      <p class="mb-4">{t.developContributeP1}</p>
+      <ul class="list-none space-y-3">
+        <li class="flex items-start">
+          <IconMail class="mt-1 mr-3 h-5 w-5 flex-shrink-0 text-gray-500" />
+          <span set:html={renderRichContent(t.emailText)} />
+        </li>
+        <li class="flex items-start">
+          <IconBrandGithub class="mt-1 mr-3 h-5 w-5 flex-shrink-0 text-gray-500" />
+          <span set:html={renderRichContent(t.githubText)} />
+        </li>
+        {
+          t.keyboardText && (
+            <li class="flex items-start">
+              <IconKeyboard class="mt-1 mr-3 h-5 w-5 flex-shrink-0 text-gray-500" />
+              <span set:html={renderRichContent(t.keyboardText)} />
+            </li>
+          )
+        }
+      </ul>
+      <p class="mt-6 text-sm italic">{t.finalParagraph}</p>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import KeyboardPage from "@/components/KeyboardPage.tsx";
+import KeyboardPage from "@/components/KeyboardPage.astro";
 import { I18n } from "@/i18n/utils";
 import { getTitle } from "@/i18n/pageHeadings";
 
@@ -18,5 +18,5 @@ const title = getTitle("keyboard", locale);
 ---
 
 <BaseLayout lang={locale} title={title}>
-  <KeyboardPage locale={locale} client:load />
+  <KeyboardPage locale={locale} />
 </BaseLayout>

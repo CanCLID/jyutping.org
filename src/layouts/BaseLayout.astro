@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
+import { Font } from "astro:assets";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import "@/styles/global.css";
@@ -15,7 +16,7 @@ interface Props {
 }
 
 const {
-  title: originalTitle = "", // Will be filled by `makeTitle` if empty
+  title: originalTitle = "",
   description = "標準粵語拼音方案 Standard Cantonese Romanization Scheme",
   lang = I18n.defaultLocale,
   flipTitle = false,
@@ -25,6 +26,7 @@ const title = makeTitle(originalTitle, lang, flipTitle);
 
 const umamiWebsiteId = "188fdd26-8e55-42b6-ba73-7d2f58adca11";
 const umamiScriptSrc = "https://cloud.umami.is/script.js";
+const isJapanesePage = lang === "ja";
 ---
 
 <!doctype html>
@@ -75,30 +77,10 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
       href={new URL(getLocalePath(Astro.url.pathname, I18n.defaultLocale), Astro.url.origin).toString()}
     />
 
-    <link
-      rel="preload"
-      href="/ChironHeiHK-lshk-subset.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="/chiron-hei-hk/woff2/chironheihkvf.A_LGC.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
+    <Font cssVariable="--font-chiron-hei-hk-ws" preload />
+    <Font cssVariable="--font-chiron-hei-hk-jyutping" preload />
+    {isJapanesePage && <Font cssVariable="--font-noto-sans-jp" preload />}
 
-    {lang === "ja" && (
-      <>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" />
-      </>
-    )}
-
-    {/* Umami Analytics */}
     <script is:inline defer src={umamiScriptSrc} data-website-id={umamiWebsiteId}
     ></script>
 
@@ -113,86 +95,3 @@ const umamiScriptSrc = "https://cloud.umami.is/script.js";
     <Footer />
   </body>
 </html>
-
-<style is:global>
-  @import url("/chiron-hei-hk/css/vf.css");
-  @font-face {
-    font-family: "Chiron Hei HK Jyutping";
-    src: url("/ChironHeiHK-lshk-subset.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-    --fallback-fonts:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      "Open Sans",
-      "Helvetica Neue",
-      sans-serif;
-  }
-
-  html {
-    font-family: var(--fallback-fonts);
-    background-size: 224px;
-  }
-
-  html:not(:lang(ja)), html :not(:lang(ja)) {
-    font-family: "Chiron Hei HK WS", var(--fallback-fonts);
-  }
-
-  html:lang(ja), html :lang(ja) {
-    font-family: "Noto Sans JP", "Chiron Hei HK WS", var(--fallback-fonts);
-  }
-
-  html .font-jyutping {
-    font-family: "Chiron Hei HK Jyutping", var(--fallback-fonts);
-  }
-
-  /* --- Custom Horizontal Slide View Transitions --- */
-  @keyframes slide-left-out {
-    from {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    to {
-      transform: translateX(-30px);
-      opacity: 0;
-    }
-  }
-
-  @keyframes slide-right-in {
-    from {
-      transform: translateX(30px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  ::view-transition-old(root) {
-    animation: slide-left-out 0.2s cubic-bezier(0, 0, 0.2, 1) forwards;
-  }
-
-  ::view-transition-new(root) {
-    animation: slide-right-in 0.2s cubic-bezier(0, 0, 0.2, 1) forwards;
-  }
-  /* --- End Custom Horizontal Slide View Transitions --- */
-</style>

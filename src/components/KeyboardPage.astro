@@ -1,0 +1,325 @@
+---
+import { Image } from "astro:assets";
+import {
+  IconBook2,
+  IconBooks,
+  IconBrandAndroid,
+  IconBrandApple,
+  IconBrandChrome,
+  IconBrandFirefox,
+  IconBrandGooglePlay,
+  IconDownload,
+  IconKeyboard,
+  IconWorld,
+} from "@tabler/icons-react";
+import DownloadButton from "@/components/DownloadButton.astro";
+import LinkedImageCard from "@/components/LinkedImageCard.astro";
+import { getTranslations } from "@/i18n/pages/keyboard";
+import converterImage from "@/assets/images/keyboard/converter.png";
+import flippedImage from "@/assets/images/keyboard/flipped.png";
+import googleTranslateImage from "@/assets/images/keyboard/google-translate-hero.png";
+import hambaanglaangImage from "@/assets/images/keyboard/hambaanglaang.png";
+import injectImage from "@/assets/images/keyboard/inject.png";
+import jyutjyuImage from "@/assets/images/keyboard/jyutjyu-og.png";
+import jyutNetImage from "@/assets/images/keyboard/jyut-net-hero.jpg";
+import learnduckImage from "@/assets/images/keyboard/learnduck.png";
+import wingImage from "@/assets/images/keyboard/wing.png";
+import wordsHkImage from "@/assets/images/keyboard/wordshk.png";
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+---
+
+<div class="container mx-auto max-w-5xl px-4 py-8">
+  <div
+    id="input-methods"
+    class="mx-auto mb-8 rounded-md border border-dashed border-gray-300 p-8"
+  >
+    <h1 class="mx-auto text-center text-4xl">
+      <span class="inline-flex items-center font-semibold">
+        <IconKeyboard class="mr-2" /> {t.introLinks}
+      </span>
+    </h1>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <div class="p-4">
+        <h2 class="my-4 text-2xl font-semibold">{t.sogouTitle}</h2>
+        <h3 class="my-2 font-semibold">iOS</h3>
+        <div class="mb-4">
+          <DownloadButton
+            href="https://apps.apple.com/app/id917670924"
+            icon={IconBrandApple}
+            text={t.sogouAppStoreButton}
+            variant="apple"
+          />
+          <p class="mt-1 text-sm text-gray-600">{t.sogouAppStoreNote}</p>
+        </div>
+        <h3 class="my-2 font-semibold">Android</h3>
+        <div class="mb-4">
+          <DownloadButton
+            href="https://shouji.sogou.com/interface/multilingual.php?language=3"
+            icon={IconBrandAndroid}
+            text={t.sogouApkButton}
+            variant="android"
+          />
+          <p class="mt-1 text-sm text-gray-600">{t.sogouApkNote}</p>
+        </div>
+        <p class="text-sm text-gray-700">{t.sogouInstructions}</p>
+      </div>
+      <div class="p-4">
+        <h2 class="my-4 text-2xl font-semibold">{t.typeduckTitle}</h2>
+        <h3 class="my-2 font-semibold">Web</h3>
+        <div class="my-4">
+          <DownloadButton
+            href="https://www.typeduck.hk/web/"
+            icon={IconWorld}
+            text={t.typeduckWeb}
+            variant="web"
+          />
+        </div>
+        <h3 class="my-2 font-semibold">Windows, macOS, iOS, Android</h3>
+        <div class="my-4">
+          <DownloadButton
+            href="https://www.typeduck.hk/"
+            icon={IconDownload}
+            text={t.typeduckDownload}
+            variant="typeduck"
+          />
+        </div>
+      </div>
+      <div class="p-4">
+        <h2 class="my-4 text-2xl font-semibold">{t.appJyutpingTitle}</h2>
+        <h3 class="my-2 font-semibold">iOS</h3>
+        <div class="mb-4">
+          <DownloadButton
+            href="https://apps.apple.com/app/id1509367629"
+            icon={IconBrandApple}
+            text={t.appJyutpingAppStoreButton}
+            variant="apple"
+          />
+        </div>
+        <h3 class="my-2 font-semibold">Android</h3>
+        <div class="mb-4">
+          <DownloadButton
+            href="https://play.google.com/store/apps/details?id=org.jyutping.jyutping&hl=zh-HK&gl=HK"
+            icon={IconBrandGooglePlay}
+            text={t.appJyutpingGooglePlayButton}
+            variant="googleplay"
+          />
+        </div>
+        <h3 class="my-2 font-semibold">macOS, Android</h3>
+        <div class="mb-4">
+          <DownloadButton
+            href="https://jyutping.app"
+            icon={IconDownload}
+            text={t.appJyutpingWebsiteDownload}
+            variant="web"
+          />
+        </div>
+      </div>
+      <div class="p-4">
+        <h2 class="my-4 text-2xl font-semibold">rime-cantonese</h2>
+        <h3 class="my-2 font-semibold">
+          Windows, macOS, Linux, iOS, Android
+        </h3>
+        <div class="mb-4">
+          <DownloadButton
+            href="https://jyutping.net/"
+            icon={IconDownload}
+            text="jyutping.net"
+            variant="web"
+          />
+        </div>
+      </div>
+      <div class="p-4">
+        <h2 class="my-4 text-2xl font-semibold">{t.gboardTitle}</h2>
+        <h3 class="my-2 font-semibold">iOS</h3>
+        <div class="mb-4">
+          <DownloadButton
+            href="https://apps.apple.com/app/id1091700242"
+            icon={IconBrandApple}
+            text={t.gboardAppStoreButton}
+            variant="apple"
+          />
+        </div>
+        <h3 class="my-2 font-semibold">Android</h3>
+        <div class="mb-4">
+          <DownloadButton
+            href="https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin&hl=en_US"
+            icon={IconBrandGooglePlay}
+            text={t.gboardGooglePlayButton}
+            variant="googleplay"
+          />
+        </div>
+      </div>
+      <div class="p-4">
+        <h2 class="my-4 text-2xl font-semibold">{t.cantoboardTitle}</h2>
+        <h3 class="my-2 font-semibold">iOS</h3>
+        <div class="mb-4">
+          <DownloadButton
+            href="https://apps.apple.com/app/id6752963850"
+            icon={IconBrandApple}
+            text={t.cantoboardAppStoreButton}
+            variant="apple"
+          />
+        </div>
+      </div>
+      <LinkedImageCard
+        heading="LearnDuck 粵拼打字入門"
+        href="https://chaaklau.github.io/LearnDuck/"
+        alt="LearnDuck 粵拼打字入門"
+        image={learnduckImage}
+      />
+      <LinkedImageCard
+        heading="粵拼打字練習工具"
+        href="https://jyutping.io/"
+        alt="粵拼打字練習工具"
+        publicSrc="/img/jyutping-io-logo-with-bar.svg"
+        publicWidth={599}
+        publicHeight={247}
+        imageClassName="mx-auto h-auto max-w-full rounded-lg p-8"
+      />
+    </div>
+  </div>
+
+  <div
+    id="dictionaries"
+    class="mx-auto my-8 rounded-md border border-dashed border-gray-300 p-8"
+  >
+    <h2 class="mx-auto my-4 text-center text-4xl font-semibold">
+      <span class="inline-flex items-center font-semibold">
+        <IconBook2 class="mr-2" /> {t.toolsTitle}
+      </span>
+    </h2>
+    <div class="my-4 grid grid-cols-1 gap-8 md:grid-cols-2">
+      <LinkedImageCard
+        heading="粵音資料集叢 jyut.net"
+        href="https://jyut.net/"
+        alt="粵音資料集叢"
+        image={jyutNetImage}
+      />
+      <LinkedImageCard
+        heading="粵語辭叢"
+        href="https://jyutjyu.com/"
+        alt="粵語辭叢 jyutjyu.com"
+        image={jyutjyuImage}
+      />
+      <LinkedImageCard
+        heading="粵典 words.hk"
+        href="https://words.hk/"
+        alt="粵典"
+        image={wordsHkImage}
+      />
+      <LinkedImageCard
+        heading="羊羊粵語 shyyp.net"
+        href="https://shyyp.net/hant"
+        alt="羊羊粵語"
+        publicSrc="/img/shyyp.svg"
+        publicWidth={256}
+        publicHeight={256}
+      />
+      <LinkedImageCard
+        heading={t.googleTranslate}
+        href="https://translate.google.com/?hl=yue&sl=auto&tl=en&op=translate"
+        alt="Google Translate Cantonese"
+        image={googleTranslateImage}
+      />
+      <LinkedImageCard
+        heading={t.converter}
+        href="https://jyutping.net/converter/"
+        alt="Jyutping Converter"
+        image={converterImage}
+      />
+      <div class="p-4">
+        <h3 class="my-4 text-center text-2xl font-semibold">
+          注入粵拼 inject-jyutping
+        </h3>
+        <div class="flex flex-col items-center justify-center gap-8 md:flex-row">
+          <a
+            href="https://github.com/CanCLID/inject-jyutping"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex-shrink-0 transition-opacity duration-200 hover:opacity-80"
+          >
+            <Image
+              src={injectImage}
+              alt="Inject Jyutping Logo"
+              width={64}
+              height={64}
+              class="mx-auto h-auto max-w-full"
+              loading="lazy"
+            />
+          </a>
+          <div class="my-4 flex flex-col gap-4">
+            <DownloadButton
+              href="https://chromewebstore.google.com/detail/inject-jyutping/lfgpgjkjglogbndlkikjgbbfoiofbdjp"
+              icon={IconBrandChrome}
+              text="Chrome Web Store"
+              variant="chrome"
+            />
+            <DownloadButton
+              href="https://addons.mozilla.org/en-US/firefox/addon/inject-jyutping/"
+              icon={IconBrandFirefox}
+              text="Firefox Add-ons"
+              variant="firefox"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="learning"
+    class="mx-auto my-8 rounded-md border border-dashed border-gray-300 p-8"
+  >
+    <h2 class="mx-auto my-4 text-center text-4xl">
+      <span class="inline-flex items-center font-semibold">
+        <IconBooks class="mr-2" /> {t.resourceTitle}
+      </span>
+    </h2>
+    <h3 class="my-4 text-center text-2xl font-semibold">52 分鐘學識粵拼</h3>
+    <div class="relative mx-auto h-0 max-w-3xl pb-[56.25%]">
+      <iframe
+        class="absolute left-0 top-0 h-full w-full rounded-lg shadow-md"
+        src="https://www.youtube.com/embed/MOsf0BcLzlc"
+        title="YouTube video player: 52 分鐘學識粵拼"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        loading="lazy"
+      />
+    </div>
+    <div class="my-8 grid grid-cols-1 gap-8 md:grid-cols-2">
+      <LinkedImageCard
+        heading="冚唪唥粵文 hambaanglaang.hk"
+        href="https://hambaanglaang.hk/"
+        alt="冚唪唥粵文 Hambaanglaang"
+        image={hambaanglaangImage}
+      />
+      <LinkedImageCard
+        heading="香港理工大学 翻轉粵語教室"
+        href="https://www.polyu.edu.hk/clc/cantonese/home/"
+        alt="翻轉粵語教室 Flipped Classroom"
+        image={flippedImage}
+      />
+      <LinkedImageCard
+        heading="粵拼字體 visual-fonts.com"
+        href="https://visual-fonts.com/"
+        alt="Visual Fonts Jyutping"
+        publicSrc="/img/visualfont.svg"
+        publicWidth={254}
+        publicHeight={50}
+      />
+      <LinkedImageCard
+        heading="Wing Font"
+        href="https://wing-fonts.chunlaw.io/"
+        alt="Wing Font"
+        image={wingImage}
+      />
+    </div>
+  </div>
+</div>

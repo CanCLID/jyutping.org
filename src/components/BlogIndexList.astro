@@ -1,0 +1,51 @@
+---
+import { IconArrowRight } from "@tabler/icons-react";
+
+interface BlogPost {
+  title: string;
+  slug: string;
+  description?: string;
+}
+
+interface BlogTranslations {
+  title: string;
+  readMore: string;
+  noPosts: string;
+}
+
+interface Props {
+  posts: BlogPost[];
+  translations: BlogTranslations;
+}
+
+const { posts, translations } = Astro.props;
+---
+
+<div class="container mx-auto max-w-4xl px-4 py-8">
+  <h1 class="my-4 text-4xl font-bold text-gray-900">{translations.title}</h1>
+  {
+    posts.length > 0 ? (
+      <div class="my-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+        {posts.map((post) => (
+          <div class="block rounded-sm border p-6">
+            <h2 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900">
+              {post.title}
+            </h2>
+            {post.description && (
+              <p class="mb-4 font-normal text-gray-600">{post.description}</p>
+            )}
+            <a
+              href={post.slug}
+              class="inline-flex items-center rounded-sm bg-[#1678d3] px-4 py-2 text-center text-sm font-medium text-white hover:bg-yellow-300 hover:text-neutral-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            >
+              {translations.readMore}
+              <IconArrowRight class="ml-2 h-4 w-4" />
+            </a>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <p class="text-gray-600">{translations.noPosts}</p>
+    )
+  }
+</div>

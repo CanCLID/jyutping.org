@@ -1,0 +1,75 @@
+---
+interface Props {
+  href: string;
+  icon: unknown;
+  text: string;
+  variant?:
+    | "googleplay"
+    | "android"
+    | "apple"
+    | "web"
+    | "typeduck"
+    | "firefox"
+    | "chrome";
+}
+
+const {
+  href,
+  icon,
+  text,
+  variant = "web",
+} = Astro.props;
+
+const Icon = icon as any;
+
+const baseClasses =
+  "group inline-flex items-center rounded-md border px-6 py-3 text-base font-medium transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2";
+
+let variantClasses = "";
+
+switch (variant) {
+  case "googleplay":
+    variantClasses =
+      "border-[#01875f] bg-transparent text-[#01875f] hover:bg-[#01875f] hover:text-white";
+    break;
+  case "android":
+    variantClasses =
+      "border-[#34a853] bg-transparent text-[#34a853] hover:bg-[#34a853] hover:text-white";
+    break;
+  case "apple":
+    variantClasses =
+      "border-black bg-transparent text-black hover:bg-black hover:text-white";
+    break;
+  case "typeduck":
+    variantClasses =
+      "border-amber-500 bg-transparent text-amber-500 hover:bg-amber-500 hover:text-white";
+    break;
+  case "chrome":
+    variantClasses =
+      "border-[#1967d2] bg-transparent text-[#1967d2] hover:bg-[#1967d2] hover:text-[#e8f0fe]";
+    break;
+  case "firefox":
+    variantClasses =
+      "border-purple-500 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent hover:border-transparent hover:bg-clip-padding hover:text-white";
+    break;
+  default:
+    variantClasses =
+      "border-blue-600 bg-transparent text-blue-600 hover:bg-blue-600 hover:text-white";
+    break;
+}
+
+const iconClasses =
+  variant === "firefox"
+    ? "mr-2 h-5 w-5 text-purple-500 group-hover:text-white"
+    : "mr-2 h-5 w-5";
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class={`${baseClasses} ${variantClasses}`}
+>
+  <Icon class={iconClasses} />
+  {text}
+</a>

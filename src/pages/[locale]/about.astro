@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import AboutPage from "@/components/AboutPage.tsx";
+import AboutPage from "@/components/AboutPage.astro";
 import { I18n } from "@/i18n/utils";
 import { getTitle } from "@/i18n/pageHeadings";
 
@@ -25,5 +25,5 @@ const title = getTitle("about", locale);
       jyutping.org
     </h1>
   </div>
-  <AboutPage locale={locale} client:load />
+  <AboutPage locale={locale} />
 </BaseLayout>

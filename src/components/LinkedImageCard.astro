@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  heading: string;
+  href: string;
+  alt: string;
+  image?: ImageMetadata;
+  publicSrc?: string;
+  publicWidth?: number;
+  publicHeight?: number;
+  containerClassName?: string;
+  headingClassName?: string;
+  linkClassName?: string;
+  imageClassName?: string;
+}
+
+const {
+  heading,
+  href,
+  alt,
+  image,
+  publicSrc,
+  publicWidth,
+  publicHeight,
+  containerClassName = "flex flex-col items-center p-4",
+  headingClassName = "my-4 text-2xl font-semibold",
+  linkClassName = "block w-full max-w-md transition-opacity duration-200 hover:opacity-80",
+  imageClassName = "mx-auto h-auto max-w-full rounded-lg shadow-sm hover:shadow-md",
+} = Astro.props;
+---
+
+<div class={containerClassName}>
+  <h3 class={headingClassName}>{heading}</h3>
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    class={linkClassName}
+  >
+    {image ? (
+      <Image
+        src={image}
+        alt={alt}
+        width={image.width}
+        height={image.height}
+        class={imageClassName}
+        loading="lazy"
+      />
+    ) : (
+      <img
+        src={publicSrc}
+        alt={alt}
+        width={publicWidth}
+        height={publicHeight}
+        class={imageClassName}
+        loading="lazy"
+      />
+    )}
+  </a>
+</div>

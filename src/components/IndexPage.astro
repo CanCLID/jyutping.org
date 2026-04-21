@@ -1,0 +1,388 @@
+---
+import { Image } from "astro:assets";
+import {
+  IconArrowDown,
+  IconArrowRight,
+  IconEar,
+  IconKeyboard,
+  IconLanguage,
+  IconPlayerPlayFilled,
+  IconSparkles,
+  IconTable,
+  IconVocabulary,
+  IconWorld,
+} from "@tabler/icons-react";
+import type { Locale } from "@/i18n/utils";
+import { I18n } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/pages/index";
+import cantoboardLogo from "@/assets/images/home/cantoboard.png";
+import flippedLogo from "@/assets/images/home/flipped.png";
+import googleTranslateLogo from "@/assets/images/home/google-translate.png";
+import hambaanglaangLogo from "@/assets/images/home/hambaanglaang-logo-neon.png";
+import jyutnetLogo from "@/assets/images/home/jyutnet-icon.webp";
+import jyutpingAppLogo from "@/assets/images/home/jyutping-app.png";
+import learnduckLogo from "@/assets/images/home/learnduck.png";
+import typeduckLogo from "@/assets/images/home/typeduck-app-icon.jpg";
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const t = getTranslations(locale);
+const prefix = locale === I18n.defaultLocale ? "" : `/${locale}`;
+const bodyFontClass = ["cmn", "nan", "wuu", "yue"].includes(locale)
+  ? "font-jyutping"
+  : "";
+const toolLogoClassName =
+  "h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg ring-1 ring-neutral-200";
+const linkedToolRowClassName =
+  "flex items-center gap-3 rounded-xl bg-neutral-50 px-4 py-3 !text-neutral-900 !no-underline transition-colors hover:bg-[#1678d3]/8 hover:!text-neutral-900 hover:!no-underline visited:!text-neutral-900";
+
+const localeLinks: ReadonlyArray<{
+  locale: Exclude<Locale, "yue_hans">;
+  label: string;
+}> = [
+  { locale: "yue", label: "返去粵語版" },
+  { locale: "cmn", label: "切到普通話 / 國語版" },
+  { locale: "nan", label: "換到台灣閩南語版" },
+  { locale: "wuu", label: "換到吳語版" },
+  { locale: "vi", label: "Chuyển sang tiếng Việt" },
+  { locale: "en", label: "Switch to English" },
+  { locale: "ja", label: "日本語版に切り替える" },
+];
+
+const whyLearnItems = [
+  { icon: IconEar, text: t.reasonEar, tint: "text-yellow-300" },
+  { icon: IconLanguage, text: t.reasonLanguage, tint: "text-[#CBF2AE]" },
+  { icon: IconKeyboard, text: t.reasonKeyboard, tint: "text-white" },
+];
+
+const toolCards = [
+  {
+    badgeHref: `${prefix}/keyboard#input-methods`,
+    badgeClassName:
+      "mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-[#1678d3]/10 px-3 py-1 text-sm font-semibold !text-[#1678d3] !no-underline transition-colors hover:bg-[#1678d3]/15 hover:!text-[#1678d3] hover:!no-underline visited:!text-[#1678d3]",
+    badgeIcon: IconKeyboard,
+    badgeLabel: t.typeItHeading,
+    tools: [
+      {
+        name: "TypeDuck",
+        sub: "typeduck.hk",
+        href: "https://www.typeduck.hk/web/",
+        image: typeduckLogo,
+      },
+      {
+        name: "粵拼輸入法",
+        sub: "jyutping.app",
+        href: "https://jyutping.app/",
+        image: jyutpingAppLogo,
+      },
+      {
+        name: "Cantoboard",
+        sub: "App Store",
+        href: "https://apps.apple.com/us/app/cantoboard-%E6%99%BA%E8%83%BD%E5%BB%A3%E6%9D%B1%E8%A9%B1%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E9%8D%B5%E7%9B%A4/id6752963850",
+        image: cantoboardLogo,
+      },
+    ],
+  },
+  {
+    badgeHref: `${prefix}/keyboard#dictionaries`,
+    badgeClassName:
+      "mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-[#6CAF59]/15 px-3 py-1 text-sm font-semibold !text-[#4a8f3d] !no-underline transition-colors hover:bg-[#6CAF59]/20 hover:!text-[#4a8f3d] hover:!no-underline visited:!text-[#4a8f3d]",
+    badgeIcon: IconVocabulary,
+    badgeLabel: t.lookItUpHeading,
+    tools: [
+      {
+        name: "粵音資料集叢",
+        sub: "jyut.net",
+        href: "https://jyut.net/",
+        image: jyutnetLogo,
+        backgroundClassName: "bg-[#647d8a]",
+      },
+      {
+        name: "粵語辭叢",
+        sub: "jyutjyu.com",
+        href: "https://jyutjyu.com/",
+        publicSrc: "/img/jyutjyu.svg",
+        backgroundClassName: "bg-white",
+      },
+      {
+        name: "Google Translate",
+        sub: "translate.google.com",
+        href: "https://translate.google.com/?hl=yue&sl=auto&tl=en&op=translate",
+        image: googleTranslateLogo,
+        backgroundClassName: "bg-white",
+      },
+    ],
+  },
+  {
+    badgeHref: `${prefix}/keyboard#learning`,
+    badgeClassName:
+      "mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-yellow-300/30 px-3 py-1 text-sm font-semibold !text-yellow-800 !no-underline transition-colors hover:bg-yellow-300/40 hover:!text-yellow-800 hover:!no-underline visited:!text-yellow-800",
+    badgeIcon: IconPlayerPlayFilled,
+    badgeLabel: t.learnItHeading,
+    tools: [
+      {
+        name: "LearnDuck",
+        sub: "learnduck.app",
+        href: "https://chaaklau.github.io/LearnDuck/",
+        image: learnduckLogo,
+      },
+      {
+        name: "冚唪唥粵文",
+        sub: "hambaanglaang.hk",
+        href: "https://hambaanglaang.hk/",
+        image: hambaanglaangLogo,
+      },
+      {
+        name: "翻轉粵語教室",
+        sub: "polyu.edu.hk",
+        href: "https://www.polyu.edu.hk/clc/cantonese/home/",
+        image: flippedLogo,
+      },
+    ],
+  },
+];
+---
+
+<section class="relative isolate overflow-hidden bg-[#1678d3] text-white">
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#3fa0ee_0%,_#1678d3_45%,_#0c4f8c_100%)]"
+  >
+  </div>
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,.7)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.7)_1px,transparent_1px)] [background-size:48px_48px]"
+  >
+  </div>
+  <div
+    class="relative mx-auto max-w-5xl px-6 pb-20 pt-32 text-center md:pb-28 md:pt-40"
+  >
+    <div class="flex flex-col items-center">
+      <h1
+        class="font-jyutping text-7xl leading-none tracking-wide drop-shadow-[0_8px_24px_rgba(0,0,0,0.25)] md:text-9xl"
+      >
+        粵拼
+      </h1>
+    </div>
+    <div class="mt-10 space-y-2">
+      {
+        t.subheading.map((line) => (
+          <p
+            class:list={[
+              bodyFontClass,
+              "text-2xl leading-relaxed font-medium text-white/95 md:text-4xl",
+            ]}
+          >
+            {line}
+          </p>
+        ))
+      }
+    </div>
+    <div
+      class="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
+    >
+      <a
+        href={`${prefix}/learn`}
+        class="inline-flex items-center gap-2 rounded-full bg-yellow-300 px-8 py-4 text-lg font-semibold text-neutral-900 shadow-[0_12px_32px_-12px_rgba(0,0,0,0.5)] transition-all hover:-translate-y-0.5 hover:bg-yellow-400 active:translate-y-0"
+      >
+        {t.learnButton}
+        <IconVocabulary class="h-5 w-5" />
+      </a>
+      <a
+        href={`${prefix}/keyboard`}
+        class="inline-flex items-center gap-2 rounded-full border-2 border-white/60 bg-white/10 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-colors hover:border-white hover:bg-white/20"
+      >
+        {t.tryKeyboardButton}
+        <IconKeyboard class="h-5 w-5" />
+      </a>
+    </div>
+    <div class="mt-16 flex justify-center text-white/50">
+      <IconArrowDown class="h-6 w-6 motion-safe:animate-bounce" />
+    </div>
+  </div>
+</section>
+
+<section class="bg-neutral-50 text-neutral-900">
+  <div class="mx-auto max-w-6xl px-6 py-20 md:py-24">
+    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <div>
+        <div
+          class="mb-5 inline-flex items-center gap-2 rounded-full bg-[#1678d3]/10 px-3 py-1 text-sm font-semibold text-[#1678d3]"
+        >
+          <IconSparkles class="h-4 w-4" />
+          {t.whatIsHeading}
+        </div>
+        <div
+          class:list={[
+            bodyFontClass,
+            "space-y-4 text-xl leading-relaxed text-neutral-800 md:text-2xl",
+          ]}
+        >
+          {t.whatIsBody.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+      </div>
+      <div
+        class="rounded-3xl bg-white p-8 shadow-xl shadow-neutral-900/5 ring-1 ring-[#1678d3] md:p-10"
+      >
+        <div class="space-y-4">
+          <div>
+            <p
+              class="font-jyutping text-3xl font-medium text-[#1678d3] md:text-4xl"
+            >
+              粵語拼音
+            </p>
+          </div>
+          <div>
+            <p
+              class="inline-flex items-center gap-3 text-xl md:text-3xl text-[#1678d3]"
+            >
+              <span class="">ping3 jam1</span>
+              <IconArrowRight />
+              <span class="">拼音</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#1678d3] text-white">
+  <div class="mx-auto max-w-6xl px-6 py-20 md:py-24">
+    <h2 class="mb-4 text-center text-3xl font-bold md:text-5xl">
+      {t.whyLearnHeading}
+    </h2>
+    <div class="mx-auto mb-14 h-1 w-16 rounded-full bg-yellow-300"></div>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      {
+        whyLearnItems.map(({ icon: Icon, text, tint }) => (
+          <div class="rounded-3xl bg-white/10 p-8 ring-1 ring-white/15 backdrop-blur-sm transition-all hover:-translate-y-1 hover:bg-white/15">
+            <Icon class={`mb-6 h-12 w-12 ${tint}`} stroke={1.5} />
+            <p class="text-xl leading-relaxed text-white/95">{text}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="bg-neutral-50 text-neutral-900">
+  <div class="mx-auto max-w-6xl px-6 py-20 md:py-24">
+    <h2 class="mb-12 text-center text-3xl font-bold md:mb-14 md:text-5xl">
+      {t.everythingHeading}
+    </h2>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      {
+        toolCards.map((card) => {
+          const BadgeIcon = card.badgeIcon;
+
+          return (
+            <article class="flex flex-col rounded-3xl bg-white p-8 transition-all">
+              <a href={card.badgeHref} class={card.badgeClassName}>
+                <BadgeIcon class="h-4 w-4" />
+                {card.badgeLabel}
+              </a>
+              <div class="mt-auto space-y-2">
+                {card.tools.map((tool) => (
+                  <a
+                    href={tool.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class={linkedToolRowClassName}
+                  >
+                    <div
+                      class={`${toolLogoClassName} ${
+                        tool.backgroundClassName ?? "bg-white"
+                      }`}
+                    >
+                      {tool.image ? (
+                        <Image
+                          src={tool.image}
+                          alt={tool.name}
+                          width={48}
+                          height={48}
+                          class="h-full w-full object-cover"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <img
+                          src={tool.publicSrc}
+                          alt={tool.name}
+                          class="h-full w-full object-cover"
+                          loading="lazy"
+                        />
+                      )}
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <p class="truncate text-sm font-semibold">{tool.name}</p>
+                      <p class="truncate text-xs text-neutral-500">
+                        {tool.sub}
+                      </p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#1678d3] text-white">
+  <div class="mx-auto max-w-4xl px-6 py-20 text-center">
+    <p class:list={[bodyFontClass, "mb-10 text-4xl leading-tight md:text-5xl"]}>
+      {t.tagline}
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a
+        href={`${prefix}/jyutping`}
+        class="inline-flex items-center gap-2 rounded-full bg-[#F4E6A6] px-7 py-3.5 text-lg font-semibold text-[#0C4F8C] transition-colors hover:bg-[#F8EDBF]"
+      >
+        {t.viewSchemeButton}
+        <IconTable class="h-5 w-5" />
+      </a>
+      <a
+        href={`${prefix}/keyboard`}
+        class="inline-flex items-center gap-2 rounded-full bg-[#E6F0FF] px-7 py-3.5 text-lg font-semibold text-[#0C4F8C] transition-colors hover:bg-[#F0F6FF]"
+      >
+        {t.resourcesButton}
+        <IconKeyboard class="h-5 w-5" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-neutral-100 text-neutral-900">
+  <div class="mx-auto max-w-5xl px-6 py-14">
+    <p
+      class="mb-8 flex items-center justify-center gap-2 text-center text-lg font-semibold text-neutral-700"
+    >
+      <IconWorld class="h-5 w-5" />
+      {t.otherLanguagesHeading}
+    </p>
+    <div class="flex flex-wrap justify-center gap-3">
+      {
+        localeLinks
+          .filter((link) => link.locale !== locale.replace(/_.*/, ""))
+          .map((link) => (
+            <a
+              key={link.locale}
+              lang={link.locale.replaceAll("_", "-")}
+              href={
+                link.locale === I18n.defaultLocale ? "/" : `/${link.locale}`
+              }
+              class="rounded-full border border-[#1678d3] bg-white px-5 py-2.5 text-sm font-medium text-neutral-800 transition-all hover:text-[#1678d3]"
+            >
+              {link.label}
+            </a>
+          ))
+      }
+    </div>
+  </div>
+</section>
