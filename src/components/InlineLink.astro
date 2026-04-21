@@ -1,0 +1,26 @@
+---
+interface Props {
+  href: string;
+  className?: string;
+  label?: string;
+  newTab?: boolean;
+  rel?: string;
+}
+
+const {
+  href,
+  className,
+  label,
+  newTab = /^https?:\/\//.test(Astro.props.href),
+  rel: relOverride,
+} = Astro.props;
+
+const rel = newTab ? relOverride ?? "noopener noreferrer" : relOverride;
+const linkClassName = ["text-blue-600 hover:underline", className]
+  .filter(Boolean)
+  .join(" ");
+---
+
+<a href={href} target={newTab ? "_blank" : undefined} rel={rel} class={linkClassName}>
+  {label ?? <slot />}
+</a>

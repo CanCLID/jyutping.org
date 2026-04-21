@@ -2,12 +2,15 @@
 export const I18n = {
   locales: ["en", "vi", "yue", "cmn", "nan", "wuu", "yue_hans", "ja"],
   defaultLocale: "yue",
-  slugGenerationLocale: "en",
 } as const;
 
 export type Locale = typeof I18n["locales"][number];
 
-type TranslationResource = string | React.ReactElement | (string | React.ReactElement)[] | { [key: string]: TranslationResource };
+type TranslationPrimitive = string | number | boolean | null;
+type TranslationResource =
+  | TranslationPrimitive
+  | TranslationResource[]
+  | { [key: string]: TranslationResource };
 
 const fallbackLocale = "en" as const;
 const fallbackToYueRegex = /^(zh|chi|ltc|zho|zhx|(zh-)?(cdo|cjy|cmn|cnp|cpx|csp|czh|czo|gan|hak|hnm|hsn|luh|lzh|mnp|nan|och|sjc|wuu|yue))\b/i;
@@ -63,4 +66,12 @@ export function getLocalePath(currentPathname: string, targetLocale: string): st
     return basePath;
   }
   return basePath === "/" ? `/${targetLocale}` : `/${targetLocale}${basePath}`;
+}
+
+export function getNonDefaultLocaleStaticPaths() {
+  return I18n.locales
+    .filter((locale) => locale !== I18n.defaultLocale)
+    .map((locale) => ({
+      params: { locale },
+    }));
 }

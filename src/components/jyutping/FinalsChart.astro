@@ -1,0 +1,206 @@
+---
+import Audio from "@/components/Audio.tsx";
+import { getJyutpingTableLabels } from "@/data/jyutping";
+import {
+  finalsChartHighlightCellClass,
+  finalsChartMutedCellClass,
+  finalsChartTableClass,
+  tableHeadCellClass,
+  codaCellClass,
+} from "@/components/jyutping/tableStyles";
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const labels = getJyutpingTableLabels(locale);
+---
+
+<div class="overflow-x-auto">
+  <table class={finalsChartTableClass}>
+    <thead>
+      <tr>
+        <th class={tableHeadCellClass} colspan={2} rowspan={2}>
+          {labels.finalsChartRowHeader}
+        </th>
+        <th class={tableHeadCellClass}>{labels.finalsChartColHeaders1[0]}</th>
+        <th class={tableHeadCellClass} colspan={2}>{labels.finalsChartColHeaders1[1]}</th>
+        <th class={tableHeadCellClass} colspan={3}>{labels.finalsChartColHeaders1[2]}</th>
+        <th class={tableHeadCellClass} colspan={3}>{labels.finalsChartColHeaders1[3]}</th>
+      </tr>
+      <tr>
+        {labels.finalsChartColHeaders2.map((header) => (
+          <th class={tableHeadCellClass}>{header}</th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class={tableHeadCellClass} rowspan={2} scope="row">i</th>
+        <th class={tableHeadCellClass} scope="row">[iː]</th>
+        <td class={codaCellClass} lang="yue">i 思 <Audio client:load id="si1" /></td>
+        <td class={finalsChartMutedCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">iu 消 <Audio client:load id="siu1" /></td>
+        <td class={codaCellClass} lang="yue">im 閃 <Audio client:load id="sim2" /></td>
+        <td class={codaCellClass} lang="yue">in 先 <Audio client:load id="sin1" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">ip 攝 <Audio client:load id="sip3" /></td>
+        <td class={codaCellClass} lang="yue">it 泄 <Audio client:load id="sit3" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} scope="row">[e]</th>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={finalsChartMutedCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">ing 升 <Audio client:load id="sing1" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">ik 識 <Audio client:load id="sik1" /></td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} scope="row">yu</th>
+        <th class={tableHeadCellClass} scope="row">[yː]</th>
+        <td class={codaCellClass} lang="yue">yu 書 <Audio client:load id="syu1" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">yun 孫 <Audio client:load id="syun1" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">yut 雪 <Audio client:load id="syut3" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} rowspan={2} scope="row">u</th>
+        <th class={tableHeadCellClass} scope="row">[uː]</th>
+        <td class={codaCellClass} lang="yue">u 夫 <Audio client:load id="fu1" /></td>
+        <td class={codaCellClass} lang="yue">ui 灰 <Audio client:load id="fui1" /></td>
+        <td class={finalsChartMutedCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">un 歡 <Audio client:load id="fun1" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">ut 闊 <Audio client:load id="fut3" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} scope="row">[o]</th>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={finalsChartMutedCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">um</td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">ung 風 <Audio client:load id="fung1" /></td>
+        <td class={codaCellClass} lang="yue">up</td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">uk 福 <Audio client:load id="fuk1" /></td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} rowspan={2} scope="row">e</th>
+        <th class={tableHeadCellClass} scope="row">[e]</th>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">ei 四 <Audio client:load id="sei3" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">en</td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} scope="row">[ɛː]</th>
+        <td class={codaCellClass} lang="yue">e 些 <Audio client:load id="se1" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">eu 掉 <Audio client:load id="deu6" /></td>
+        <td class={codaCellClass} lang="yue">em 𦧷 <Audio client:load id="lem2" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">eng 鄭 <Audio client:load id="zeng6" /></td>
+        <td class={codaCellClass} lang="yue">ep 夾 <Audio client:load id="gep6" /></td>
+        <td class={codaCellClass} lang="yue">et 坺 <Audio client:load id="pet6" /></td>
+        <td class={codaCellClass} lang="yue">ek 石 <Audio client:load id="sek6" /></td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} scope="row">eo</th>
+        <th class={tableHeadCellClass} scope="row">[ɵ]</th>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">eoi 需 <Audio client:load id="seoi1" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">eon 詢 <Audio client:load id="seon1" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">eot 摔 <Audio client:load id="seot1" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} scope="row">oe</th>
+        <th class={tableHeadCellClass} scope="row">[œː]</th>
+        <td class={codaCellClass} lang="yue">oe 鋸 <Audio client:load id="goe3" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">oeng 疆 <Audio client:load id="goeng1" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={finalsChartHighlightCellClass} lang="yue">oet <Audio client:load id="oet6" /></td>
+        <td class={codaCellClass} lang="yue">oek 腳 <Audio client:load id="goek3" /></td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} rowspan={2} scope="row">o</th>
+        <th class={tableHeadCellClass} scope="row">[o]</th>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">ou 好 <Audio client:load id="hou2" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} scope="row">[ɔː]</th>
+        <td class={codaCellClass} lang="yue">o 可 <Audio client:load id="ho2" /></td>
+        <td class={codaCellClass} lang="yue">oi 開 <Audio client:load id="hoi1" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">on 看 <Audio client:load id="hon3" /></td>
+        <td class={codaCellClass} lang="yue">ong 康 <Audio client:load id="hong1" /></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">ot 喝 <Audio client:load id="hot3" /></td>
+        <td class={codaCellClass} lang="yue">ok 學 <Audio client:load id="hok6" /></td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} scope="row">a</th>
+        <th class={tableHeadCellClass} scope="row">[ɐ]</th>
+        <td class={finalsChartHighlightCellClass} lang="yue">a 嘞 <Audio client:load id="la3" /></td>
+        <td class={codaCellClass} lang="yue">ai 擠 <Audio client:load id="zai1" /></td>
+        <td class={codaCellClass} lang="yue">au 周 <Audio client:load id="zau1" /></td>
+        <td class={codaCellClass} lang="yue">am 斟 <Audio client:load id="zam1" /></td>
+        <td class={codaCellClass} lang="yue">an 珍 <Audio client:load id="zan1" /></td>
+        <td class={codaCellClass} lang="yue">ang 增 <Audio client:load id="zang1" /></td>
+        <td class={codaCellClass} lang="yue">ap 汁 <Audio client:load id="zap1" /></td>
+        <td class={codaCellClass} lang="yue">at 侄 <Audio client:load id="zat6" /></td>
+        <td class={codaCellClass} lang="yue">ak 則 <Audio client:load id="zak1" /></td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} scope="row">aa</th>
+        <th class={tableHeadCellClass} scope="row">[aː]</th>
+        <td class={codaCellClass} lang="yue">aa 渣 <Audio client:load id="zaa1" /></td>
+        <td class={codaCellClass} lang="yue">aai 齋 <Audio client:load id="zaai1" /></td>
+        <td class={codaCellClass} lang="yue">aau 嘲 <Audio client:load id="zaau1" /></td>
+        <td class={codaCellClass} lang="yue">aam 站 <Audio client:load id="zaam6" /></td>
+        <td class={codaCellClass} lang="yue">aan 讚 <Audio client:load id="zaan3" /></td>
+        <td class={codaCellClass} lang="yue">aang 掙 <Audio client:load id="zaang6" /></td>
+        <td class={codaCellClass} lang="yue">aap 集 <Audio client:load id="zaap6" /></td>
+        <td class={codaCellClass} lang="yue">aat 扎 <Audio client:load id="zaat3" /></td>
+        <td class={codaCellClass} lang="yue">aak 責 <Audio client:load id="zaak6" /></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

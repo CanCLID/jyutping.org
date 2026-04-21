@@ -1,0 +1,148 @@
+---
+import Audio from "@/components/Audio.tsx";
+import { getJyutpingTableLabels } from "@/data/jyutping";
+import { tableBaseClass, tableHeadCellClass, codaCellClass } from "@/components/jyutping/tableStyles";
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const labels = getJyutpingTableLabels(locale);
+---
+
+<div class="overflow-x-auto">
+  <table class={tableBaseClass}>
+    <thead>
+      <tr>
+        <th class={tableHeadCellClass}></th>
+        {labels.onsetTableHeaders.map((header) => (
+          <th class={tableHeadCellClass}>{header}</th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.plosive}</th>
+        <td class={codaCellClass} lang="yue">
+          b [p] 巴 <Audio client:load id="baa1" />
+          <br />p [pʰ] 怕 <Audio client:load id="paa3" />
+        </td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">
+          d [t] 打 <Audio client:load id="daa2" />
+          <br />t [tʰ] 他 <Audio client:load id="taa1" />
+        </td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">
+          g [k] 家 <Audio client:load id="gaa1" />
+          <br />k [kʰ] 卡 <Audio client:load id="kaa1" />
+          <br />
+          gw [kʷ] 瓜 <Audio client:load id="gwaa1" />
+          <br />
+          kw [kʷʰ] 夸 <Audio client:load id="kwaa1" />
+        </td>
+        <td class={codaCellClass} lang="yue"></td>
+      </tr>
+      {labels.onsetRowOrder[1] === "affricate" ? (
+        <tr>
+          <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.affricate}</th>
+          <td class={codaCellClass} lang="yue"></td>
+          <td class={codaCellClass} lang="yue"></td>
+          <td class={codaCellClass} lang="yue">
+            z [t͡s~t͡ʃ] 渣 <Audio client:load id="zaa1" />
+            <br />c [t͡sʰ~t͡ʃʰ] 叉 <Audio client:load id="caa1" />
+          </td>
+          <td class={codaCellClass} lang="yue"></td>
+          <td class={codaCellClass} lang="yue"></td>
+          <td class={codaCellClass} lang="yue"></td>
+        </tr>
+      ) : (
+        <tr>
+          <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.nasal}</th>
+          <td class={codaCellClass} lang="yue">
+            m [m] 媽 <Audio client:load id="maa1" />
+          </td>
+          <td class={codaCellClass} lang="yue"></td>
+          <td class={codaCellClass} lang="yue">
+            n [n] 那 <Audio client:load id="naa5" />
+          </td>
+          <td class={codaCellClass} lang="yue"></td>
+          <td class={codaCellClass} lang="yue">
+            ng [ŋ] 牙 <Audio client:load id="ngaa4" />
+          </td>
+          <td class={codaCellClass} lang="yue"></td>
+        </tr>
+      )}
+      {labels.onsetRowOrder[2] === "nasal" ? (
+        <tr>
+          <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.nasal}</th>
+          <td class={codaCellClass} lang="yue">
+            m [m] 媽 <Audio client:load id="maa1" />
+          </td>
+          <td class={codaCellClass} lang="yue"></td>
+          <td class={codaCellClass} lang="yue">
+            n [n] 那 <Audio client:load id="naa5" />
+          </td>
+          <td class={codaCellClass} lang="yue"></td>
+          <td class={codaCellClass} lang="yue">
+            ng [ŋ] 牙 <Audio client:load id="ngaa4" />
+          </td>
+          <td class={codaCellClass} lang="yue"></td>
+        </tr>
+      ) : (
+        <tr>
+          <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.affricate}</th>
+          <td class={codaCellClass} lang="yue"></td>
+          <td class={codaCellClass} lang="yue"></td>
+          <td class={codaCellClass} lang="yue">
+            z [t͡s~t͡ʃ] 渣 <Audio client:load id="zaa1" />
+            <br />c [t͡sʰ~t͡ʃʰ] 叉 <Audio client:load id="caa1" />
+          </td>
+          <td class={codaCellClass} lang="yue"></td>
+          <td class={codaCellClass} lang="yue"></td>
+          <td class={codaCellClass} lang="yue"></td>
+        </tr>
+      )}
+      <tr>
+        <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.fricative}</th>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">
+          f [f] 花 <Audio client:load id="faa1" />
+        </td>
+        <td class={codaCellClass} lang="yue">
+          s [s] 沙 <Audio client:load id="saa1" />
+        </td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">
+          h [h] 蝦 <Audio client:load id="haa1" />
+        </td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.approximant}</th>
+        <td class={codaCellClass} lang="yue">
+          w [w] 蛙 <Audio client:load id="waa1" />
+        </td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">
+          j [j] 也 <Audio client:load id="jaa5" />
+        </td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.lateral}</th>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue">
+          l [l] 啦 <Audio client:load id="laa1" />
+        </td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+        <td class={codaCellClass} lang="yue"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,19 @@
+---
+import Audio from "@/components/Audio.tsx";
+import { tableBaseClass, codaCellClass } from "@/components/jyutping/tableStyles";
+---
+
+<div class="overflow-x-auto">
+  <table class={tableBaseClass}>
+    <tbody>
+      <tr>
+        <td class={codaCellClass} lang="yue">
+          m [m̩] 唔 <Audio client:load id="m4" />
+        </td>
+        <td class={codaCellClass} lang="yue">
+          ng [ŋ̩] 吳 <Audio client:load id="ng4" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

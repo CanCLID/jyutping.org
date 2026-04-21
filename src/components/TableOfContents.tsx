@@ -3,8 +3,10 @@
 import type { MarkdownHeading } from "astro";
 import { useEffect, useState } from "react";
 
+type TableOfContentsHeading = Pick<MarkdownHeading, "depth" | "slug" | "text">;
+
 interface Props {
-  headings: MarkdownHeading[];
+  headings: TableOfContentsHeading[];
 }
 
 const TableOfContents: React.FC<Props> = ({ headings }) => {

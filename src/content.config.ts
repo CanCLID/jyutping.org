@@ -19,7 +19,32 @@ const learnCollection = defineCollection({
   }),
 });
 
+const aboutCollection = defineCollection({
+  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content/about" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+  }),
+});
+
+const jyutpingCollection = defineCollection({
+  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content/jyutping" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    tableOfContents: z.array(
+      z.object({
+        text: z.string(),
+        slug: z.string(),
+        depth: z.number().int().min(2).max(3),
+      }),
+    ),
+  }),
+});
+
 export const collections = {
+  about: aboutCollection,
   blog: blogCollection,
+  jyutping: jyutpingCollection,
   learn: learnCollection,
 };

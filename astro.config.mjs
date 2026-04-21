@@ -79,6 +79,7 @@ export default defineConfig({
   },
   image: {
     service: {
+      entrypoint: "astro/assets/services/sharp",
       config: {
         jpeg: { mozjpeg: true },
         webp: { effort: 6, alphaQuality: 80 },

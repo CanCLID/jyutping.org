@@ -1,15 +1,11 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import KeyboardPage from "@/components/KeyboardPage.astro";
-import { I18n } from "@/i18n/utils";
+import { getNonDefaultLocaleStaticPaths } from "@/i18n/utils";
 import { getTitle } from "@/i18n/pageHeadings";
 
 export function getStaticPaths() {
-  return I18n.locales
-    .filter((locale) => locale !== I18n.defaultLocale)
-    .map((locale) => ({
-      params: { locale },
-    }));
+  return getNonDefaultLocaleStaticPaths();
 }
 
 const { locale } = Astro.params;

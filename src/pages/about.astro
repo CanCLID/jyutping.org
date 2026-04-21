@@ -1,13 +1,22 @@
 ---
+import { render } from "astro:content";
+import AboutGrid from "@/components/about/AboutGrid.astro";
+import AboutLinkItem from "@/components/about/AboutLinkItem.astro";
+import InlineLink from "@/components/InlineLink.astro";
+import Paragraph from "@/components/Paragraph.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import AboutPage from "@/components/AboutPage.astro";
 import { I18n } from "@/i18n/utils";
-import { getTitle } from "@/i18n/pageHeadings";
+import { getLocalizedSingletonEntry } from "@/utils/content";
 
-const title = getTitle("about", I18n.defaultLocale)
+const entry = await getLocalizedSingletonEntry("about", I18n.defaultLocale);
+const { Content } = await render(entry);
 ---
 
-<BaseLayout lang={I18n.defaultLocale} title={title}>
+<BaseLayout
+  lang={I18n.defaultLocale}
+  title={entry.data.title}
+  description={entry.data.description}
+>
   <div class="bg-[#1678d3] text-white py-16 mb-8">
     <h1
       class="my-16 font-semibold text-5xl md:text-6xl text-center container max-w-8xl mx-auto"
@@ -16,5 +25,7 @@ const title = getTitle("about", I18n.defaultLocale)
     </h1>
   </div>
 
-  <AboutPage locale={I18n.defaultLocale} />
+  <div class="container mx-auto px-4 py-4 text-gray-800">
+    <Content components={{ AboutGrid, AboutLinkItem, InlineLink, Paragraph }} />
+  </div>
 </BaseLayout>

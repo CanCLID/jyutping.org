@@ -1,0 +1,44 @@
+---
+import Audio from "@/components/Audio.tsx";
+import { getJyutpingTableLabels } from "@/data/jyutping";
+import { tableBaseClass, tableHeadCellClass, codaCellClass } from "@/components/jyutping/tableStyles";
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const labels = getJyutpingTableLabels(locale);
+---
+
+<div class="overflow-x-auto [&_th]:px-4">
+  <table class={tableBaseClass}>
+    <thead>
+      <tr>
+        <th class={tableHeadCellClass}></th>
+        {labels.toneTableHeaders.map((header) => (
+          <th class={tableHeadCellClass}>{header}</th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class={tableHeadCellClass} scope="row">{labels.toneRowHeaders[0]}</th>
+        <td class={codaCellClass} lang="yue">1 [˥] 詩 <Audio client:load id="si1" /></td>
+        <td class={codaCellClass} lang="yue">2 [˧˥] 史 <Audio client:load id="si2" /></td>
+        <td class={codaCellClass} lang="yue">3 [˧] 試 <Audio client:load id="si3" /></td>
+        <td class={codaCellClass} lang="yue">
+          1 [˥] 識 <Audio client:load id="sik1" />
+          <br />3 [˧] 洩 <Audio client:load id="sit3" />
+        </td>
+      </tr>
+      <tr>
+        <th class={tableHeadCellClass} scope="row">{labels.toneRowHeaders[1]}</th>
+        <td class={codaCellClass} lang="yue">4 [˨˩] 時 <Audio client:load id="si4" /></td>
+        <td class={codaCellClass} lang="yue">5 [˩˧] 市 <Audio client:load id="si5" /></td>
+        <td class={codaCellClass} lang="yue">6 [˨] 事 <Audio client:load id="si6" /></td>
+        <td class={codaCellClass} lang="yue">6 [˨] 蝕 <Audio client:load id="sit6" /></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

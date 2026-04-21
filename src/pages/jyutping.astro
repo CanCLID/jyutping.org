@@ -1,16 +1,31 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import JyutpingPage from "@/components/JyutpingPage.tsx";
+import { render } from "astro:content";
+import Alert from "@/components/Alert.tsx";
+import InlineLink from "@/components/InlineLink.astro";
+import Paragraph from "@/components/Paragraph.astro";
 import TableOfContents from "@/components/TableOfContents";
-import { getTOCHeadings } from "@/i18n/pages/jyutping";
+import CodaTable from "@/components/jyutping/CodaTable.astro";
+import FinalsChart from "@/components/jyutping/FinalsChart.astro";
+import NucleiTable from "@/components/jyutping/NucleiTable.astro";
+import OnsetTable from "@/components/jyutping/OnsetTable.astro";
+import ReferenceList from "@/components/jyutping/ReferenceList.astro";
+import SectionHeading from "@/components/jyutping/SectionHeading.astro";
+import SubsectionHeading from "@/components/jyutping/SubsectionHeading.astro";
+import SyllabicNasalTable from "@/components/jyutping/SyllabicNasalTable.astro";
+import ToneTable from "@/components/jyutping/ToneTable.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import { I18n } from "@/i18n/utils";
-import { getTitle } from "@/i18n/pageHeadings";
+import { getLocalizedSingletonEntry } from "@/utils/content";
 
-const title = getTitle("jyutping", I18n.defaultLocale);
-const headings = getTOCHeadings(I18n.defaultLocale);
+const entry = await getLocalizedSingletonEntry("jyutping", I18n.defaultLocale);
+const { Content } = await render(entry);
 ---
 
-<BaseLayout lang={I18n.defaultLocale} title={title}>
+<BaseLayout
+  lang={I18n.defaultLocale}
+  title={entry.data.title}
+  description={entry.data.description}
+>
   <div class="bg-[#1678d3] text-white px-4 py-6 mb-8">
     <h1
       class="font-jyutping my-4 text-5xl md:text-6xl leading-relaxed text-center container max-w-8xl mx-auto"
@@ -25,10 +40,27 @@ const headings = getTOCHeadings(I18n.defaultLocale);
     </h1>
   </div>
   <div class="flex justify-center gap-8 max-w-5xl mx-auto">
-    <JyutpingPage locale={I18n.defaultLocale} client:visible />
-    <aside class="hidden lg:block w-32 flex-shrink-0">
+    <article class="container max-w-4xl mx-auto p-4">
+      <Content
+        components={{
+          Alert,
+          CodaTable,
+          FinalsChart,
+          InlineLink,
+          NucleiTable,
+          OnsetTable,
+          Paragraph,
+          ReferenceList,
+          SectionHeading,
+          SubsectionHeading,
+          SyllabicNasalTable,
+          ToneTable,
+        }}
+      />
+    </article>
+    <aside class="hidden lg:block w-32 shrink-0">
       <div class="sticky top-32">
-        <TableOfContents client:visible headings={headings} />
+        <TableOfContents client:load headings={entry.data.tableOfContents} />
       </div>
     </aside>
   </div>

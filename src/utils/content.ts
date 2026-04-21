@@ -1,3 +1,4 @@
+import { getCollection, type CollectionEntry, type CollectionKey } from "astro:content";
 import { I18n, type Locale } from "@/i18n/utils";
 
 function normalizeEntrySlug(slug: string): string {
@@ -34,7 +35,7 @@ export function isSupportedLocale(locale: string): locale is Locale {
 }
 
 export function getLocalizedContentPath(
-  collection: "blog" | "learn",
+  collection: "about" | "blog" | "jyutping" | "learn",
   id: string,
 ): string {
   const locale = getEntryLocale(id);
@@ -43,4 +44,19 @@ export function getLocalizedContentPath(
   const slugSuffix = slug ? `/${slug}` : "";
 
   return `${localePrefix}/${collection}${slugSuffix}`;
+}
+
+export async function getLocalizedSingletonEntry<C extends CollectionKey>(
+  collection: C,
+  locale: Locale,
+): Promise<CollectionEntry<C>> {
+  const [entry] = await getCollection(collection, ({ id }) =>
+    getEntryLocale(id) === locale && getEntrySlug(id) === ""
+  );
+
+  if (!entry) {
+    throw new Error(`Missing ${collection} entry for locale: ${locale}.`);
+  }
+
+  return entry;
 }
