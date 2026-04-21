@@ -1,36 +1,33 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogIndexList from "@/components/BlogIndexList.astro";
-import { I18n } from "@/i18n/utils";
+import { getNonDefaultLocaleStaticPaths } from "@/i18n/utils";
 import { getTitle } from "@/i18n/pageHeadings";
 import { getBlogLabels } from "@/i18n/blogLabels";
-import { getLocalizedContentPath, getEntryLocale } from "@/utils/content";
+import {
+  getLocalizedCollectionEntries,
+  getLocalizedContentPath,
+  isSupportedLocale,
+} from "@/utils/content";
 
 export function getStaticPaths() {
-  const result = I18n.locales
-    .filter((locale) => locale !== I18n.defaultLocale)
-    .map((locale) => ({
-      params: { locale },
-    }));
-  return result;
+  return getNonDefaultLocaleStaticPaths();
 }
 
 const { locale } = Astro.params;
 
-// Fetch blog posts for the current locale
-const postsData = await getCollection("blog", ({ id }) =>
-  getEntryLocale(id) === locale
-);
+if (!locale || !isSupportedLocale(locale)) {
+  throw new Error(`Invalid locale parameter for blog index page: ${locale ?? "undefined"}.`);
+}
 
-// Prepare posts prop for the component
+const postsData = await getLocalizedCollectionEntries("blog", locale);
+
 const posts = postsData.map((post) => ({
   title: post.data.title,
   slug: getLocalizedContentPath("blog", post.id),
   description: post.data.description,
 }));
 
-// Get translations for the current locale
 const title = getTitle("blog", locale);
 const blogLabels = getBlogLabels(locale);
 ---

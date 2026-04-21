@@ -1,62 +1,39 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { getCollection, render } from "astro:content";
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import TableOfContents from "@/components/TableOfContents";
+import { render } from "astro:content";
 import BlogCatalogue from "@/components/BlogCatalogue.astro";
-import ContentImage from "@/components/ContentImage.astro";
-import { I18n } from "@/i18n/utils";
+import TableOfContents from "@/components/TableOfContents";
+import CatalogueContentShell from "@/components/content/CatalogueContentShell.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import {
   getEntryLocale,
   getEntrySlug,
-  isLocaleEntry,
+  getLocalizedCollectionEntries,
+  getNonDefaultLocaleCollectionEntryStaticPaths,
   isSupportedLocale,
 } from "@/utils/content";
+import { sharedMdxComponents } from "@/utils/mdx";
 
-// 1. Generate paths for all non-default locale blog posts
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("blog", ({ id }) => {
-    // Filter for entries NOT in the default locale
-    return !isLocaleEntry(id, I18n.defaultLocale);
-  });
-
-  return blogEntries
-    .map((entry) => {
-      const locale = getEntryLocale(entry.id);
-      if (!isSupportedLocale(locale)) {
-        console.warn(
-          `Invalid locale "${locale}" found in blog entry id: ${entry.id}. Skipping.`
-        );
-        return null;
-      }
-
-      const slug = getEntrySlug(entry.id);
-
-      return {
-        params: { locale, slug: slug || undefined },
-        props: { entry },
-      };
-    })
-    .filter((path) => path !== null);
+  return getNonDefaultLocaleCollectionEntryStaticPaths("blog");
 }
 
-// 2. Get the entry for the current page
 interface Props {
   entry: CollectionEntry<"blog">;
 }
+
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
+const { locale } = Astro.params;
 
-// Fetch all blog posts for the current locale
-const locale = Astro.params.locale;
-const allBlogEntries = await getCollection("blog", ({ id }) =>
-  getEntryLocale(id) === locale
-);
+if (!locale || !isSupportedLocale(locale)) {
+  throw new Error(`Invalid locale parameter for blog page: ${locale ?? "undefined"}.`);
+}
 
+const allBlogEntries = await getLocalizedCollectionEntries("blog", locale);
 allBlogEntries.sort((a, b) => (a.data.weight || 0) - (b.data.weight || 0));
 
-// Determine language for the layout
-const lang = getEntryLocale(entry.id) || I18n.defaultLocale;
+const lang = getEntryLocale(entry.id) || locale;
 ---
 
 <BaseLayout
@@ -64,31 +41,16 @@ const lang = getEntryLocale(entry.id) || I18n.defaultLocale;
   description={entry.data.description}
   lang={lang}
 >
-  <div class="flex justify-center mx-auto max-w-6xl">
-    {/* Header */}
-    <aside class="hidden w-48 lg:block flex-shrink-0 float-end">
-      <div class="sticky top-32">
-        <BlogCatalogue
-          posts={allBlogEntries}
-          currentSlug={getEntrySlug(entry.id)}
-        />
-      </div>
-    </aside>
-
-    <div class="flex justify-center gap-4 px-4 py-8 mx-auto">
-      {/* Main content area */}
-      <article class="prose flex-grow">
-        <h1>{entry.data.title}</h1>
-        {entry.data.description && <p class="lead">{entry.data.description}</p>}
-        <hr class="my-4" />
-        <Content components={{ img: ContentImage }} />
-      </article>
-
-      <aside class="hidden lg:block w-64 flex-shrink-0">
-        <div class="sticky top-32">
-          <TableOfContents client:load headings={headings} />
-        </div>
-      </aside>
-    </div>
-  </div>
+  <CatalogueContentShell
+    title={entry.data.title}
+    description={entry.data.description}
+  >
+    <BlogCatalogue
+      slot="catalogue"
+      posts={allBlogEntries}
+      currentSlug={getEntrySlug(entry.id)}
+    />
+    <Content components={sharedMdxComponents} />
+    <TableOfContents slot="toc" client:load headings={headings} />
+  </CatalogueContentShell>
 </BaseLayout>

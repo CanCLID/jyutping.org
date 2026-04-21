@@ -1,53 +1,33 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { getCollection, render } from "astro:content";
-import ContentImage from "@/components/ContentImage.astro";
+import { render } from "astro:content";
 import TableOfContents from "@/components/TableOfContents";
-import { I18n } from "@/i18n/utils";
+import ContentWithTocShell from "@/components/content/ContentWithTocShell.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import {
   getEntryLocale,
-  getEntrySlug,
-  isLocaleEntry,
+  getNonDefaultLocaleCollectionEntryStaticPaths,
   isSupportedLocale,
 } from "@/utils/content";
+import { sharedMdxComponents } from "@/utils/mdx";
 
-// 1. Generate paths for all non-default locale learn posts
 export async function getStaticPaths() {
-  const learnEntries = await getCollection("learn", ({ id }) => {
-    // Filter for entries NOT in the default locale
-    return !isLocaleEntry(id, I18n.defaultLocale);
-  });
-
-  return learnEntries
-    .map((entry) => {
-      const locale = getEntryLocale(entry.id);
-      if (!isSupportedLocale(locale)) {
-        console.warn(
-          `Invalid locale "${locale}" found in learn entry id: ${entry.id}. Skipping.`
-        );
-        return null;
-      }
-
-      const slug = getEntrySlug(entry.id);
-
-      return {
-        params: { locale, slug: slug || undefined },
-        props: { entry },
-      };
-    })
-    .filter((path) => path !== null);
+  return getNonDefaultLocaleCollectionEntryStaticPaths("learn");
 }
 
-// 2. Get the entry for the current page
 interface Props {
   entry: CollectionEntry<"learn">;
 }
+
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
+const { locale } = Astro.params;
 
-// Determine language for the layout
-const lang = getEntryLocale(entry.id) || I18n.defaultLocale;
+if (!locale || !isSupportedLocale(locale)) {
+  throw new Error(`Invalid locale parameter for learn page: ${locale ?? "undefined"}.`);
+}
+
+const lang = getEntryLocale(entry.id) || locale;
 ---
 
 <BaseLayout
@@ -55,19 +35,11 @@ const lang = getEntryLocale(entry.id) || I18n.defaultLocale;
   description={entry.data.description}
   lang={lang}
 >
-  <div class="flex justify-center gap-8 px-4 py-8 max-w-5xl mx-auto">
-    {/* Main content area */}
-    <article class="prose flex-grow">
-      <h1>{entry.data.title}</h1>
-      {entry.data.description && <p class="lead">{entry.data.description}</p>}
-      <hr class="my-4" />
-      <Content components={{ img: ContentImage }} />
-    </article>
-
-    <aside class="hidden lg:block w-64 flex-shrink-0">
-      <div class="sticky top-16">
-        <TableOfContents client:load headings={headings} />
-      </div>
-    </aside>
-  </div>
+  <ContentWithTocShell
+    title={entry.data.title}
+    description={entry.data.description}
+  >
+    <Content components={sharedMdxComponents} />
+    <TableOfContents slot="toc" client:load headings={headings} />
+  </ContentWithTocShell>
 </BaseLayout>

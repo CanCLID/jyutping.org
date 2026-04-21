@@ -1,35 +1,26 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { getCollection, render } from "astro:content";
-import ContentImage from "@/components/ContentImage.astro";
+import { render } from "astro:content";
 import TableOfContents from "@/components/TableOfContents";
+import ContentWithTocShell from "@/components/content/ContentWithTocShell.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { I18n } from "@/i18n/utils";
-import { getEntryLocale, getEntrySlug, isLocaleEntry } from "@/utils/content";
+import {
+  getDefaultLocaleCollectionEntryStaticPaths,
+  getEntryLocale,
+} from "@/utils/content";
+import { sharedMdxComponents } from "@/utils/mdx";
 
-// 1. Generate paths for all Cantonese learn posts
 export async function getStaticPaths() {
-  const learnEntries = await getCollection("learn", ({ id }) =>
-    isLocaleEntry(id, I18n.defaultLocale)
-  );
-
-  return learnEntries.map((entry) => {
-    const slugParam = getEntrySlug(entry.id);
-    return {
-      params: { slug: slugParam || undefined },
-      props: { entry },
-    };
-  });
+  return getDefaultLocaleCollectionEntryStaticPaths("learn");
 }
 
-// 2. Get the entry for the current page
 interface Props {
   entry: CollectionEntry<"learn">;
 }
+
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
-
-// Determine language for the layout
 const lang = getEntryLocale(entry.id) || I18n.defaultLocale;
 ---
 
@@ -38,19 +29,11 @@ const lang = getEntryLocale(entry.id) || I18n.defaultLocale;
   description={entry.data.description}
   lang={lang}
 >
-  <div class="flex justify-center gap-8 px-4 py-8 max-w-5xl mx-auto">
-    {/* Main content area */}
-    <article class="prose flex-grow">
-      <h1>{entry.data.title}</h1>
-      {entry.data.description && <p class="lead">{entry.data.description}</p>}
-      <hr class="my-4" />
-      <Content components={{ img: ContentImage }} />
-    </article>
-
-    <aside class="hidden lg:block w-64 flex-shrink-0">
-      <div class="sticky top-16">
-        <TableOfContents client:load headings={headings} />
-      </div>
-    </aside>
-  </div>
+  <ContentWithTocShell
+    title={entry.data.title}
+    description={entry.data.description}
+  >
+    <Content components={sharedMdxComponents} />
+    <TableOfContents slot="toc" client:load headings={headings} />
+  </ContentWithTocShell>
 </BaseLayout>

@@ -60,3 +60,41 @@ export async function getLocalizedSingletonEntry<C extends CollectionKey>(
 
   return entry;
 }
+
+export async function getLocalizedCollectionEntries<C extends CollectionKey>(
+  collection: C,
+  locale: Locale,
+): Promise<CollectionEntry<C>[]> {
+  return getCollection(collection, ({ id }) => getEntryLocale(id) === locale);
+}
+
+export async function getDefaultLocaleCollectionEntryStaticPaths<C extends CollectionKey>(
+  collection: C,
+) {
+  const entries = await getLocalizedCollectionEntries(collection, I18n.defaultLocale);
+
+  return entries.map((entry) => ({
+    params: { slug: getEntrySlug(entry.id) || undefined },
+    props: { entry },
+  }));
+}
+
+export async function getNonDefaultLocaleCollectionEntryStaticPaths<C extends CollectionKey>(
+  collection: C,
+) {
+  const entries = await getCollection(collection, ({ id }) => !isLocaleEntry(id, I18n.defaultLocale));
+
+  return entries.flatMap((entry) => {
+    const locale = getEntryLocale(entry.id);
+    if (!isSupportedLocale(locale) || locale === I18n.defaultLocale) {
+      return [];
+    }
+
+    return [
+      {
+        params: { locale, slug: getEntrySlug(entry.id) || undefined },
+        props: { entry },
+      },
+    ];
+  });
+}

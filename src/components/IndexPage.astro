@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 import {
   IconArrowDown,
   IconArrowRight,
@@ -28,6 +29,32 @@ interface Props {
   locale: string;
 }
 
+type TablerIcon = typeof IconEar;
+
+type ToolCardTool = {
+  backgroundClassName?: string;
+  href: string;
+  name: string;
+  sub: string;
+} & (
+  | {
+      image: ImageMetadata;
+      publicSrc?: never;
+    }
+  | {
+      image?: never;
+      publicSrc: string;
+    }
+);
+
+type ToolCard = {
+  badgeClassName: string;
+  badgeHref: string;
+  badgeIcon: TablerIcon;
+  badgeLabel: string;
+  tools: ToolCardTool[];
+};
+
 const { locale } = Astro.props;
 
 const t = getTranslations(locale);
@@ -53,13 +80,13 @@ const localeLinks: ReadonlyArray<{
   { locale: "ja", label: "日本語版に切り替える" },
 ];
 
-const whyLearnItems = [
+const whyLearnItems: Array<{ icon: TablerIcon; text: string; tint: string }> = [
   { icon: IconEar, text: t.reasonEar, tint: "text-yellow-300" },
   { icon: IconLanguage, text: t.reasonLanguage, tint: "text-[#CBF2AE]" },
   { icon: IconKeyboard, text: t.reasonKeyboard, tint: "text-white" },
 ];
 
-const toolCards = [
+const toolCards: ToolCard[] = [
   {
     badgeHref: `${prefix}/keyboard#input-methods`,
     badgeClassName:
@@ -190,18 +217,18 @@ const toolCards = [
         class="inline-flex items-center gap-2 rounded-full bg-yellow-300 px-8 py-4 text-lg font-semibold text-neutral-900 shadow-[0_12px_32px_-12px_rgba(0,0,0,0.5)] transition-all hover:-translate-y-0.5 hover:bg-yellow-400 active:translate-y-0"
       >
         {t.learnButton}
-        <IconVocabulary class="h-5 w-5" />
+        <IconVocabulary className="h-5 w-5" />
       </a>
       <a
         href={`${prefix}/keyboard`}
         class="inline-flex items-center gap-2 rounded-full border-2 border-white/60 bg-white/10 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-colors hover:border-white hover:bg-white/20"
       >
         {t.tryKeyboardButton}
-        <IconKeyboard class="h-5 w-5" />
+        <IconKeyboard className="h-5 w-5" />
       </a>
     </div>
     <div class="mt-16 flex justify-center text-white/50">
-      <IconArrowDown class="h-6 w-6 motion-safe:animate-bounce" />
+      <IconArrowDown className="h-6 w-6 motion-safe:animate-bounce" />
     </div>
   </div>
 </section>
@@ -213,7 +240,7 @@ const toolCards = [
         <div
           class="mb-5 inline-flex items-center gap-2 rounded-full bg-[#1678d3]/10 px-3 py-1 text-sm font-semibold text-[#1678d3]"
         >
-          <IconSparkles class="h-4 w-4" />
+          <IconSparkles className="h-4 w-4" />
           {t.whatIsHeading}
         </div>
         <div
@@ -261,7 +288,7 @@ const toolCards = [
       {
         whyLearnItems.map(({ icon: Icon, text, tint }) => (
           <div class="rounded-3xl bg-white/10 p-8 ring-1 ring-white/15 backdrop-blur-sm transition-all hover:-translate-y-1 hover:bg-white/15">
-            <Icon class={`mb-6 h-12 w-12 ${tint}`} stroke={1.5} />
+            <Icon className={`mb-6 h-12 w-12 ${tint}`} stroke={1.5} />
             <p class="text-xl leading-relaxed text-white/95">{text}</p>
           </div>
         ))
@@ -283,7 +310,7 @@ const toolCards = [
           return (
             <article class="flex flex-col rounded-3xl bg-white p-8 transition-all">
               <a href={card.badgeHref} class={card.badgeClassName}>
-                <BadgeIcon class="h-4 w-4" />
+                <BadgeIcon className="h-4 w-4" />
                 {card.badgeLabel}
               </a>
               <div class="mt-auto space-y-2">
@@ -345,14 +372,14 @@ const toolCards = [
         class="inline-flex items-center gap-2 rounded-full bg-[#F4E6A6] px-7 py-3.5 text-lg font-semibold text-[#0C4F8C] transition-colors hover:bg-[#F8EDBF]"
       >
         {t.viewSchemeButton}
-        <IconTable class="h-5 w-5" />
+        <IconTable className="h-5 w-5" />
       </a>
       <a
         href={`${prefix}/keyboard`}
         class="inline-flex items-center gap-2 rounded-full bg-[#E6F0FF] px-7 py-3.5 text-lg font-semibold text-[#0C4F8C] transition-colors hover:bg-[#F0F6FF]"
       >
         {t.resourcesButton}
-        <IconKeyboard class="h-5 w-5" />
+        <IconKeyboard className="h-5 w-5" />
       </a>
     </div>
   </div>
@@ -363,7 +390,7 @@ const toolCards = [
     <p
       class="mb-8 flex items-center justify-center gap-2 text-center text-lg font-semibold text-neutral-700"
     >
-      <IconWorld class="h-5 w-5" />
+      <IconWorld className="h-5 w-5" />
       {t.otherLanguagesHeading}
     </p>
     <div class="flex flex-wrap justify-center gap-3">
@@ -372,7 +399,6 @@ const toolCards = [
           .filter((link) => link.locale !== locale.replace(/_.*/, ""))
           .map((link) => (
             <a
-              key={link.locale}
               lang={link.locale.replaceAll("_", "-")}
               href={
                 link.locale === I18n.defaultLocale ? "/" : `/${link.locale}`

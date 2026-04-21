@@ -32,13 +32,6 @@ const jyutpingCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
-    tableOfContents: z.array(
-      z.object({
-        text: z.string(),
-        slug: z.string(),
-        depth: z.number().int().min(2).max(3),
-      }),
-    ),
   }),
 });
 

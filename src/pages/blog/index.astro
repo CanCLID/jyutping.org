@@ -1,25 +1,19 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogIndexList from "@/components/BlogIndexList.astro";
 import { I18n } from "@/i18n/utils";
 import { getTitle } from "@/i18n/pageHeadings";
 import { getBlogLabels } from "@/i18n/blogLabels";
-import { getLocalizedContentPath, isLocaleEntry } from "@/utils/content";
+import { getLocalizedCollectionEntries, getLocalizedContentPath } from "@/utils/content";
 
-// Fetch blog posts for Cantonese
-const postsData = await getCollection("blog", ({ id }) =>
-  isLocaleEntry(id, I18n.defaultLocale)
-);
+const postsData = await getLocalizedCollectionEntries("blog", I18n.defaultLocale);
 
-// Prepare posts prop for the component
 const posts = postsData.map((post) => ({
   title: post.data.title,
   slug: getLocalizedContentPath("blog", post.id),
   description: post.data.description,
 }));
 
-// Get translations for Cantonese
 const title = getTitle("blog", I18n.defaultLocale);
 const blogLabels = getBlogLabels(I18n.defaultLocale);
 ---

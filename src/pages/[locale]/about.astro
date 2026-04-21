@@ -2,11 +2,10 @@
 import { render } from "astro:content";
 import AboutGrid from "@/components/about/AboutGrid.astro";
 import AboutLinkItem from "@/components/about/AboutLinkItem.astro";
-import InlineLink from "@/components/InlineLink.astro";
-import Paragraph from "@/components/Paragraph.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getNonDefaultLocaleStaticPaths } from "@/i18n/utils";
 import { getLocalizedSingletonEntry, isSupportedLocale } from "@/utils/content";
+import { sharedMdxComponents } from "@/utils/mdx";
 
 export function getStaticPaths() {
   return getNonDefaultLocaleStaticPaths();
@@ -35,6 +34,6 @@ const { Content } = await render(entry);
     </h1>
   </div>
   <div class="container mx-auto px-4 py-4 text-gray-800">
-    <Content components={{ AboutGrid, AboutLinkItem, InlineLink, Paragraph }} />
+    <Content components={{ ...sharedMdxComponents, AboutGrid, AboutLinkItem }} />
   </div>
 </BaseLayout>

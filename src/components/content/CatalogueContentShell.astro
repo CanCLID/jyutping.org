@@ -1,0 +1,31 @@
+---
+interface Props {
+  description?: string;
+  title: string;
+}
+
+const { description, title } = Astro.props;
+---
+
+<div class="mx-auto flex max-w-6xl justify-center">
+  <aside class="float-end hidden w-48 shrink-0 lg:block">
+    <div class="sticky top-32">
+      <slot name="catalogue" />
+    </div>
+  </aside>
+
+  <div class="mx-auto flex justify-center gap-4 px-4 py-8">
+    <article class="prose flex-grow">
+      <h1>{title}</h1>
+      {description && <p class="lead">{description}</p>}
+      <hr class="my-4" />
+      <slot />
+    </article>
+
+    <aside class="hidden w-64 shrink-0 lg:block">
+      <div class="sticky top-32">
+        <slot name="toc" />
+      </div>
+    </aside>
+  </div>
+</div>

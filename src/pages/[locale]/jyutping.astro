@@ -1,8 +1,5 @@
 ---
 import { render } from "astro:content";
-import Alert from "@/components/Alert.tsx";
-import InlineLink from "@/components/InlineLink.astro";
-import Paragraph from "@/components/Paragraph.astro";
 import TableOfContents from "@/components/TableOfContents";
 import CodaTable from "@/components/jyutping/CodaTable.astro";
 import FinalsChart from "@/components/jyutping/FinalsChart.astro";
@@ -14,8 +11,10 @@ import SubsectionHeading from "@/components/jyutping/SubsectionHeading.astro";
 import SyllabicNasalTable from "@/components/jyutping/SyllabicNasalTable.astro";
 import ToneTable from "@/components/jyutping/ToneTable.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getJyutpingSections } from "@/data/jyutping";
 import { getNonDefaultLocaleStaticPaths } from "@/i18n/utils";
 import { getLocalizedSingletonEntry, isSupportedLocale } from "@/utils/content";
+import { sharedMdxComponents } from "@/utils/mdx";
 
 export function getStaticPaths() {
   return getNonDefaultLocaleStaticPaths();
@@ -29,6 +28,7 @@ if (!locale || !isSupportedLocale(locale)) {
 
 const entry = await getLocalizedSingletonEntry("jyutping", locale);
 const { Content } = await render(entry);
+const headings = getJyutpingSections(locale);
 ---
 
 <BaseLayout
@@ -53,13 +53,11 @@ const { Content } = await render(entry);
     <article class="container max-w-4xl mx-auto p-4">
       <Content
         components={{
-          Alert,
+          ...sharedMdxComponents,
           CodaTable,
           FinalsChart,
-          InlineLink,
           NucleiTable,
           OnsetTable,
-          Paragraph,
           ReferenceList,
           SectionHeading,
           SubsectionHeading,
@@ -70,7 +68,7 @@ const { Content } = await render(entry);
     </article>
     <aside class="hidden lg:block w-32 flex-shrink-0">
       <div class="sticky top-32">
-        <TableOfContents client:load headings={entry.data.tableOfContents} />
+        <TableOfContents client:load headings={headings} />
       </div>
     </aside>
   </div>

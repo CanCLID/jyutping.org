@@ -1,11 +1,19 @@
 ---
+import { getJyutpingSection, type JyutpingSectionKey } from "@/data/jyutping";
+
 interface Props {
-  id: string;
+  locale: string;
+  section: JyutpingSectionKey;
 }
 
-const { id } = Astro.props;
+const { locale, section } = Astro.props;
+const heading = getJyutpingSection(locale, section);
+
+if (heading.depth !== 3) {
+  throw new Error(`SubsectionHeading received non-h3 Jyutping section: ${section}`);
+}
 ---
 
-<h3 id={id} class="mt-6 mb-3 scroll-mt-20 text-2xl font-semibold">
-  <slot />
+<h3 id={heading.id} class="mt-6 mb-3 scroll-mt-20 text-2xl font-semibold">
+  {heading.text}
 </h3>

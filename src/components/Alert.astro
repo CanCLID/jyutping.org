@@ -1,0 +1,34 @@
+---
+type AlertColor =
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "warning"
+  | "info"
+  | "light";
+
+interface Props {
+  color?: AlertColor;
+  title?: string;
+}
+
+const { color = "primary", title } = Astro.props;
+
+const colorClasses: Record<AlertColor, string> = {
+  primary: "bg-blue-100 border-blue-500 text-blue-700",
+  secondary: "bg-gray-100 border-gray-500 text-gray-700",
+  success: "bg-green-100 border-green-500 text-green-700",
+  danger: "bg-red-100 border-red-500 text-red-700",
+  warning: "bg-yellow-100 border-yellow-500 text-yellow-700",
+  info: "bg-cyan-100 border-cyan-500 text-cyan-700",
+  light: "bg-gray-50 border-gray-300 text-gray-600",
+};
+---
+
+<div class={`border-l-4 px-4 py-2 my-4 ${colorClasses[color]}`} role="alert">
+  {title && <h4 class="mb-2 font-bold">{title}</h4>}
+  <div>
+    <slot />
+  </div>
+</div>
