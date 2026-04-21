@@ -5,16 +5,17 @@ import BlogIndexList from "@/components/BlogIndexList.tsx";
 import { I18n } from "@/i18n/utils";
 import { getTitle } from "@/i18n/pageHeadings";
 import { getBlogLabels } from "@/i18n/blogLabels";
+import { getLocalizedContentPath, isLocaleEntry } from "@/utils/content";
 
 // Fetch blog posts for Cantonese
 const postsData = await getCollection("blog", ({ id }) =>
-  id.startsWith(`${I18n.defaultLocale}/`)
+  isLocaleEntry(id, I18n.defaultLocale)
 );
 
 // Prepare posts prop for the component
 const posts = postsData.map((post) => ({
   title: post.data.title,
-  slug: `/blog/${post.slug.substring(4)}`,
+  slug: getLocalizedContentPath("blog", post.id),
   description: post.data.description,
 }));
 

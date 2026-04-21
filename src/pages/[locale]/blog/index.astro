@@ -5,6 +5,7 @@ import BlogIndexList from "@/components/BlogIndexList.tsx";
 import { I18n } from "@/i18n/utils";
 import { getTitle } from "@/i18n/pageHeadings";
 import { getBlogLabels } from "@/i18n/blogLabels";
+import { getLocalizedContentPath, getEntryLocale } from "@/utils/content";
 
 export function getStaticPaths() {
   const result = I18n.locales
@@ -19,13 +20,13 @@ const { locale } = Astro.params;
 
 // Fetch blog posts for the current locale
 const postsData = await getCollection("blog", ({ id }) =>
-  id.startsWith(`${locale}/`)
+  getEntryLocale(id) === locale
 );
 
 // Prepare posts prop for the component
 const posts = postsData.map((post) => ({
   title: post.data.title,
-  slug: `/${locale}/blog/${post.slug.substring(locale.length + 1)}`,
+  slug: getLocalizedContentPath("blog", post.id),
   description: post.data.description,
 }));
 

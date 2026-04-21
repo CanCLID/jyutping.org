@@ -7,6 +7,12 @@ import { getNavTranslation } from "@/i18n/pageHeadings";
 const { currentLocale, url } = Astro;
 const pathname = url.pathname;
 const locale = currentLocale || I18n.defaultLocale;
+const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
+const isHomepage =
+  normalizedPathname === "/" ||
+  I18n.locales
+    .filter((candidate) => candidate !== I18n.defaultLocale)
+    .some((candidate) => normalizedPathname === `/${candidate}`);
 
 // --- Generate Localized Nav Links ---
 const navLinkKeys = ["learn", "jyutping", "blog", "keyboard", "about"] as const;
@@ -26,7 +32,12 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
 
 <div id="mobile-menu-backdrop" class="fixed inset-0 z-40 bg-black/50 md:hidden opacity-0 pointer-events-none transition-opacity duration-300"></div>
 
-<header class="relative z-50 p-4 bg-[#1678d3] text-white">
+<header class:list={[
+  "z-50 p-4 text-white",
+  isHomepage
+    ? "absolute inset-x-0 top-0 bg-transparent"
+    : "relative bg-[#1678d3]",
+]}>
   <div class="flex justify-between items-center px-4">
     <a href={logoHref} class="text-white hover:opacity-80">
       <span class="text-3xl font-jyutping">粵拼</span>

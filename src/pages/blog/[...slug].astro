@@ -1,20 +1,20 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import TableOfContents from "@/components/TableOfContents";
 import BlogCatalogue from "@/components/BlogCatalogue.astro";
 import { I18n } from "@/i18n/utils";
+import { getEntryLocale, getEntrySlug, isLocaleEntry } from "@/utils/content";
 
 // 1. Generate paths for all Cantonese blog posts
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("blog", ({ id }) => {
-    // Filter for entries in the default locale
-    return id.startsWith(`${I18n.defaultLocale}/`);
-  });
+  const blogEntries = await getCollection("blog", ({ id }) =>
+    isLocaleEntry(id, I18n.defaultLocale)
+  );
 
   return blogEntries.map((entry) => ({
-    params: { slug: entry.slug.substring(4) }, // Remove 'yue/' prefix
+    params: { slug: getEntrySlug(entry.id) },
     props: { entry },
   }));
 }
@@ -24,17 +24,17 @@ interface Props {
   entry: CollectionEntry<"blog">;
 }
 const { entry } = Astro.props;
-const { Content, headings } = await entry.render();
+const { Content, headings } = await render(entry);
 
 // Fetch all Cantonese blog posts for the catalogue
 const allBlogEntries = await getCollection("blog", ({ id }) =>
-  id.startsWith(`${I18n.defaultLocale}/`)
+  isLocaleEntry(id, I18n.defaultLocale)
 );
 
 allBlogEntries.sort((a, b) => (a.data.weight || 0) - (b.data.weight || 0));
 
 // Determine language for the layout
-const lang = entry.id.split("/")[0] || I18n.defaultLocale;
+const lang = getEntryLocale(entry.id) || I18n.defaultLocale;
 ---
 
 <BaseLayout
@@ -48,7 +48,7 @@ const lang = entry.id.split("/")[0] || I18n.defaultLocale;
       <div class="sticky top-32">
         <BlogCatalogue
           posts={allBlogEntries}
-          currentSlug={entry.slug.substring(4)}
+          currentSlug={getEntrySlug(entry.id)}
         />
       </div>
     </aside>

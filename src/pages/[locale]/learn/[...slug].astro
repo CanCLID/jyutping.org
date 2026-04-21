@@ -1,32 +1,41 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import TableOfContents from "@/components/TableOfContents";
-import { I18n, type Locale } from "@/i18n/utils";
+import { I18n } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import {
+  getEntryLocale,
+  getEntrySlug,
+  isLocaleEntry,
+  isSupportedLocale,
+} from "@/utils/content";
 
 // 1. Generate paths for all non-default locale learn posts
 export async function getStaticPaths() {
   const learnEntries = await getCollection("learn", ({ id }) => {
     // Filter for entries NOT in the default locale
-    return !id.startsWith(`${I18n.defaultLocale}/`);
+    return !isLocaleEntry(id, I18n.defaultLocale);
   });
 
   return learnEntries
     .map((entry) => {
-      const [locale, ...slugParts] = entry.slug.split("/");
-      if (!I18n.locales.includes(locale as Locale)) {
+      const locale = getEntryLocale(entry.id);
+      if (!isSupportedLocale(locale)) {
         console.warn(
-          `Invalid locale "${locale}" found in learn entry slug: ${entry.slug}. Skipping.`
+          `Invalid locale "${locale}" found in learn entry id: ${entry.id}. Skipping.`
         );
-        return null; // Skip generating path for invalid locale
+        return null;
       }
+
+      const slug = getEntrySlug(entry.id);
+
       return {
-        params: { locale: locale, slug: slugParts.join("/") || undefined }, // Handle slugs like /en/learn/
+        params: { locale, slug: slug || undefined },
         props: { entry },
       };
     })
-    .filter((path) => path !== null); // Filter out skipped entries
+    .filter((path) => path !== null);
 }
 
 // 2. Get the entry for the current page
@@ -34,10 +43,10 @@ interface Props {
   entry: CollectionEntry<"learn">;
 }
 const { entry } = Astro.props;
-const { Content, headings } = await entry.render();
+const { Content, headings } = await render(entry);
 
 // Determine language for the layout
-const lang = entry.id.split("/")[0] || I18n.defaultLocale;
+const lang = getEntryLocale(entry.id) || I18n.defaultLocale;
 ---
 
 <BaseLayout

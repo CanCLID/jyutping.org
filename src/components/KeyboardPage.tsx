@@ -88,7 +88,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-5xl">
-      <div className="border border-gray-300 border-dashed rounded-md mx-auto p-8 mb-8">
+      <div id="input-methods" className="border border-gray-300 border-dashed rounded-md mx-auto p-8 mb-8">
         <h1 className="text-center text-4xl mx-auto">
           <span className="inline-flex items-center font-semibold">
             <IconKeyboard className="mr-2" /> {t.introLinks}
@@ -270,7 +270,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
         </div>
       </div>
       {/* Dictionaries and Tools */}
-      <div className="my-8 p-8 border border-gray-300 border-dashed rounded-md mx-auto">
+      <div id="dictionaries" className="my-8 p-8 border border-gray-300 border-dashed rounded-md mx-auto">
         <h2 className="my-4 text-4xl font-semibold mx-auto text-center">
           <span className="inline-flex items-center font-semibold">
             <IconBook2 className="mr-2" /> {t.toolsTitle}
@@ -310,10 +310,10 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
               className="block max-w-md w-full hover:opacity-80 transition-opacity duration-200"
             >
               <img
-                src="/img/jyutjyu.svg"
+                src="/img/jyutjyu-og.png"
                 alt="粵語辭叢 jyutjyu.com"
-                width={512}
-                height={512}
+                width={2400}
+                height={1260}
                 className="rounded-lg shadow-sm hover:shadow-md max-w-full h-auto mx-auto"
                 loading="lazy"
               />
@@ -434,7 +434,7 @@ const KeyboardPage: React.FC<KeyboardPageProps> = ({ locale }) => {
         </div>
       </div>
       {/* Learning resources section */}
-      <div className="my-8 p-8 border border-gray-300 border-dashed rounded-md mx-auto">
+      <div id="learning" className="my-8 p-8 border border-gray-300 border-dashed rounded-md mx-auto">
         <h2 className="my-4 text-center text-4xl mx-auto">
           <span className="inline-flex items-center font-semibold">
             <IconBooks className="mr-2" /> {t.resourceTitle}

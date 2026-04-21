@@ -1,33 +1,42 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import TableOfContents from "@/components/TableOfContents";
 import BlogCatalogue from "@/components/BlogCatalogue.astro";
-import { I18n, type Locale } from "@/i18n/utils";
+import { I18n } from "@/i18n/utils";
+import {
+  getEntryLocale,
+  getEntrySlug,
+  isLocaleEntry,
+  isSupportedLocale,
+} from "@/utils/content";
 
 // 1. Generate paths for all non-default locale blog posts
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog", ({ id }) => {
     // Filter for entries NOT in the default locale
-    return !id.startsWith(`${I18n.defaultLocale}/`);
+    return !isLocaleEntry(id, I18n.defaultLocale);
   });
 
   return blogEntries
     .map((entry) => {
-      const [locale, ...slugParts] = entry.slug.split("/");
-      if (!I18n.locales.includes(locale as Locale)) {
+      const locale = getEntryLocale(entry.id);
+      if (!isSupportedLocale(locale)) {
         console.warn(
-          `Invalid locale "${locale}" found in blog entry slug: ${entry.slug}. Skipping.`
+          `Invalid locale "${locale}" found in blog entry id: ${entry.id}. Skipping.`
         );
-        return null; // Skip generating path for invalid locale
+        return null;
       }
+
+      const slug = getEntrySlug(entry.id);
+
       return {
-        params: { locale: locale, slug: slugParts.join("/") || undefined }, // Handle slugs like /en/blog/
+        params: { locale, slug: slug || undefined },
         props: { entry },
       };
     })
-    .filter((path) => path !== null); // Filter out skipped entries
+    .filter((path) => path !== null);
 }
 
 // 2. Get the entry for the current page
@@ -35,18 +44,18 @@ interface Props {
   entry: CollectionEntry<"blog">;
 }
 const { entry } = Astro.props;
-const { Content, headings } = await entry.render();
+const { Content, headings } = await render(entry);
 
 // Fetch all blog posts for the current locale
 const locale = Astro.params.locale;
 const allBlogEntries = await getCollection("blog", ({ id }) =>
-  id.startsWith(`${locale}/`)
+  getEntryLocale(id) === locale
 );
 
 allBlogEntries.sort((a, b) => (a.data.weight || 0) - (b.data.weight || 0));
 
 // Determine language for the layout
-const lang = entry.id.split("/")[0] || I18n.defaultLocale;
+const lang = getEntryLocale(entry.id) || I18n.defaultLocale;
 ---
 
 <BaseLayout
@@ -60,7 +69,7 @@ const lang = entry.id.split("/")[0] || I18n.defaultLocale;
       <div class="sticky top-32">
         <BlogCatalogue
           posts={allBlogEntries}
-          currentSlug={entry.slug.substring(entry.slug.indexOf("/") + 1)}
+          currentSlug={getEntrySlug(entry.id)}
         />
       </div>
     </aside>
