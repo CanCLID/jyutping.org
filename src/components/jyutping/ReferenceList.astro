@@ -1,4 +1,6 @@
 ---
+import InlineLink from "@/components/InlineLink.astro";
+
 interface Props {
   aliases?: string[];
 }
@@ -26,24 +28,11 @@ const { aliases = [] } = Astro.props;
   </li>
   <li>
     Stephen, Matthews. 1992.
-    <cite>Jyutping 粵拼 - Cantonese Romanization Scheme</cite>. The Linguistic
-    Society of Hong Kong. Available:
-    <a
-      href="https://lshk.org/jyutping-scheme/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="text-blue-600 hover:underline"
-    >
-      https://lshk.org/jyutping-scheme/
-    </a>
+    <cite>Jyutping 粵拼 - Cantonese Romanization Scheme</cite>. The Linguistic Society of Hong Kong. Available:
+    <InlineLink href="https://lshk.org/jyutping-scheme/">https://lshk.org/jyutping-scheme/</InlineLink>
   </li>
   <li>
     香港中文大學人文電算硏究中心（2018）：<cite class="not-italic">《漢語多功能字庫》</cite>，檢自
-    <a
-      href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="text-blue-600 hover:underline"
-    >https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/</a>。
+    <InlineLink href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/">https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/</InlineLink>。
   </li>
 </ol>
