@@ -59,15 +59,15 @@ article {
   }
 
   ul {
-    @apply list-disc list-inside my-4 space-y-1 pl-5;
+    @apply list-disc my-4 space-y-1 pl-9;
   }
 
   ol {
-    @apply list-decimal list-inside my-4 space-y-1 pl-5;
+    @apply list-decimal my-4 space-y-1 pl-9;
   }
 
   li {
-    @apply mb-1;
+    @apply mb-1 pl-1;
   }
 
   p {
