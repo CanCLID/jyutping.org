@@ -1,7 +1,7 @@
 ---
 import Audio from "@/components/Audio.tsx";
 import { getJyutpingTableLabels } from "@/data/jyutping";
-import { tableBaseClass, tableHeadCellClass, codaCellClass } from "@/components/jyutping/tableStyles";
+import { tableClass, tableDataCellClass, tableHeadCellClass } from "@/components/jyutping/tableStyles";
 
 interface Props {
   locale: string;
@@ -12,39 +12,39 @@ const labels = getJyutpingTableLabels(locale);
 ---
 
 <div class="overflow-x-auto">
-  <table class={tableBaseClass}>
+  <table class={tableClass}>
     <tbody>
       <tr>
         <th class={tableHeadCellClass} scope="row">{labels.codaRowHeaders[0]}</th>
-        <td class={codaCellClass} lang="yue">
+        <td class={tableDataCellClass} lang="yue">
           p [p̚] 溼 <Audio client:load id="sap1" />
         </td>
-        <td class={codaCellClass} lang="yue">
+        <td class={tableDataCellClass} lang="yue">
           t [t̚] 失 <Audio client:load id="sat1" />
         </td>
-        <td class={codaCellClass} lang="yue">
+        <td class={tableDataCellClass} lang="yue">
           k [k̚] 塞 <Audio client:load id="sak1" />
         </td>
       </tr>
       <tr>
         <th class={tableHeadCellClass} scope="row">{labels.codaRowHeaders[1]}</th>
-        <td class={codaCellClass} lang="yue">
+        <td class={tableDataCellClass} lang="yue">
           m [m] 心 <Audio client:load id="sam1" />
         </td>
-        <td class={codaCellClass} lang="yue">
+        <td class={tableDataCellClass} lang="yue">
           n [n] 身 <Audio client:load id="san1" />
         </td>
-        <td class={codaCellClass} lang="yue">
+        <td class={tableDataCellClass} lang="yue">
           ng [ŋ] 生 <Audio client:load id="sang1" />
         </td>
       </tr>
       <tr>
         <th class={tableHeadCellClass} scope="row">{labels.codaRowHeaders[2]}</th>
-        <td class={codaCellClass} lang="yue"></td>
-        <td class={codaCellClass} lang="yue">
+        <td class={tableDataCellClass} lang="yue"></td>
+        <td class={tableDataCellClass} lang="yue">
           i [i] 西 <Audio client:load id="sai1" /> 需 <Audio client:load id="seoi1" />
         </td>
-        <td class={codaCellClass} lang="yue">
+        <td class={tableDataCellClass} lang="yue">
           u [u] 收 <Audio client:load id="sau1" />
         </td>
       </tr>
