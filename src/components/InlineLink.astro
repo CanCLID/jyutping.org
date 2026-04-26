@@ -16,11 +16,11 @@ const {
 } = Astro.props;
 
 const rel = newTab ? relOverride ?? "noopener noreferrer" : relOverride;
-const linkClassName = ["text-blue-600 hover:underline", className]
-  .filter(Boolean)
-  .join(" ");
 ---
 
-<a href={href} target={newTab ? "_blank" : undefined} rel={rel} class={linkClassName}>
-  {label ?? <slot />}
-</a>
+<a
+  href={href}
+  target={newTab ? "_blank" : undefined}
+  rel={rel}
+  class:list={["text-blue-600 hover:text-blue-800 underline", className]}
+>{label ?? <slot />}</a>
