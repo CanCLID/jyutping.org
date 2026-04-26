@@ -37,7 +37,7 @@ import ToneTable from "@/components/ToneTable.tsx";
 
 のいずれかの組み合わせに「<strong className="text-orange-600">声調</strong>」（音の高さ）を全体にかけることで音節を成します。
 
-<table className="[&_td]:!text-center [&_td]:!p-0.5 !border-0">
+<table className="[&_td]:text-center [&_td]:p-0.5 border-0">
   <tbody>
     <tr>
       <td colspan="3" lang="yue" className="text-5xl/relaxed">便</td>
@@ -46,28 +46,28 @@ import ToneTable from "@/components/ToneTable.tsx";
       <td colspan="3" className="text-xl">音節</td>
     </tr>
     <tr>
-      <td rowspan="2" className="text-xl text-yellow-600 !border-b-0 pb-0">声母</td>
+      <td rowspan="2" className="text-xl text-yellow-600 border-b-0 pb-0">声母</td>
       <td colspan="2" className="text-xl">韻母</td>
     </tr>
-    <tr className="[&_td]:!border-b-0 [&_td]:!pb-0">
+    <tr className="[&_td]:border-b-0 [&_td]:pb-0">
       <td className="text-xl text-cyan-600">韻腹</td>
       <td className="text-xl text-slate-500">韻尾</td>
     </tr>
-    <tr className="[&_td]:!border-y-0 [&_td]:!pt-0">
+    <tr className="[&_td]:border-y-0 [&_td]:pt-0">
       <td className="text-xs text-yellow-600">（頭子音）</td>
       <td className="text-xs text-cyan-600">（母音）</td>
       <td className="text-xs text-slate-500">（末尾子音）</td>
     </tr>
-    <tr className="[&_td]:!border-t-0 text-3xl">
+    <tr className="[&_td]:border-t-0 text-3xl">
       <td lang="yue-Latn-jyutping" className="font-semibold text-yellow-600">b</td>
       <td lang="yue-Latn-jyutping" className="font-semibold text-cyan-600">i</td>
       <td lang="yue-Latn-jyutping" className="font-semibold text-slate-500">n</td>
-      <td className="text-sm !border-0 align-bottom"><Audio client:load id="bin6" /></td>
+      <td className="text-sm border-0 align-bottom"><Audio client:load id="bin6" /></td>
     </tr>
-    <tr className="[&_td]:!border-b-0">
+    <tr className="[&_td]:border-b-0">
       <td colspan="3" lang="yue-Latn-jyutping" className="text-3xl font-semibold text-orange-600">6</td>
     </tr>
-    <tr className="[&_td]:!border-t-0">
+    <tr className="[&_td]:border-t-0">
       <td colspan="3" className="text-xl text-orange-600">声調</td>
     </tr>
   </tbody>

@@ -65,7 +65,7 @@ const bodyFontClass = ["cmn", "nan", "wuu", "yue"].includes(locale)
 const toolLogoClassName =
   "h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg ring-1 ring-neutral-200";
 const linkedToolRowClassName =
-  "flex items-center gap-3 rounded-xl bg-neutral-50 px-4 py-3 !text-neutral-900 !no-underline transition-colors hover:bg-[#1678d3]/8 hover:!text-neutral-900 hover:!no-underline visited:!text-neutral-900";
+  "flex items-center gap-3 rounded-xl bg-neutral-50 px-4 py-3 text-neutral-900 no-underline transition-colors hover:bg-[#1678d3]/8 hover:text-neutral-900 hover:no-underline visited:text-neutral-900";
 
 const localeLinks: ReadonlyArray<{
   locale: Exclude<Locale, "yue_hans">;
@@ -90,7 +90,7 @@ const toolCards: ToolCard[] = [
   {
     badgeHref: `${prefix}/keyboard#input-methods`,
     badgeClassName:
-      "mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-[#1678d3]/10 px-3 py-1 text-sm font-semibold !text-[#1678d3] !no-underline transition-colors hover:bg-[#1678d3]/15 hover:!text-[#1678d3] hover:!no-underline visited:!text-[#1678d3]",
+      "mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-[#1678d3]/10 px-3 py-1 text-sm font-semibold text-[#1678d3] no-underline transition-colors hover:bg-[#1678d3]/15 hover:text-[#1678d3] hover:no-underline visited:text-[#1678d3]",
     badgeIcon: IconKeyboard,
     badgeLabel: t.typeItHeading,
     tools: [
@@ -117,7 +117,7 @@ const toolCards: ToolCard[] = [
   {
     badgeHref: `${prefix}/keyboard#dictionaries`,
     badgeClassName:
-      "mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-[#6CAF59]/15 px-3 py-1 text-sm font-semibold !text-[#4a8f3d] !no-underline transition-colors hover:bg-[#6CAF59]/20 hover:!text-[#4a8f3d] hover:!no-underline visited:!text-[#4a8f3d]",
+      "mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-[#6CAF59]/15 px-3 py-1 text-sm font-semibold text-[#4a8f3d] no-underline transition-colors hover:bg-[#6CAF59]/20 hover:text-[#4a8f3d] hover:no-underline visited:text-[#4a8f3d]",
     badgeIcon: IconVocabulary,
     badgeLabel: t.lookItUpHeading,
     tools: [
@@ -147,7 +147,7 @@ const toolCards: ToolCard[] = [
   {
     badgeHref: `${prefix}/keyboard#learning`,
     badgeClassName:
-      "mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-yellow-300/30 px-3 py-1 text-sm font-semibold !text-yellow-800 !no-underline transition-colors hover:bg-yellow-300/40 hover:!text-yellow-800 hover:!no-underline visited:!text-yellow-800",
+      "mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-yellow-300/30 px-3 py-1 text-sm font-semibold text-yellow-800 no-underline transition-colors hover:bg-yellow-300/40 hover:text-yellow-800 hover:no-underline visited:text-yellow-800",
     badgeIcon: IconPlayerPlayFilled,
     badgeLabel: t.learnItHeading,
     tools: [

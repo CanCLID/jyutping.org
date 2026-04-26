@@ -28,7 +28,7 @@ const colorClasses: Record<AlertColor, string> = {
 
 <!-- Decorative box, not an actual alert - role="alert" is inappropriate -->
 <div class={`border-l-4 px-4 py-2 my-4 ${colorClasses[color]}`} role="note">
-  {title && <h4 class="!mt-4 font-bold">{title}</h4>}
+  {title && <h4 class="mt-4 font-bold">{title}</h4>}
   <div>
     <slot />
   </div>
