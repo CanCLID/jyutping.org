@@ -27,7 +27,7 @@ const colorClasses: Record<AlertColor, string> = {
 ---
 
 <div class={`border-l-4 px-4 py-2 my-4 ${colorClasses[color]}`} role="alert">
-  {title && <h4 class="mb-2 font-bold">{title}</h4>}
+  {title && <h4 class="!mt-4 font-bold">{title}</h4>}
   <div>
     <slot />
   </div>
