@@ -32,6 +32,18 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = getTranslations(locale);
+const iosOnlyApps = [
+  {
+    title: t.cantoboardTitle,
+    href: "https://apps.apple.com/app/id6752963850",
+    buttonText: t.cantoboardAppStoreButton,
+  },
+  {
+    title: t.otterboardTitle,
+    href: "https://apps.apple.com/app/id6803947273",
+    buttonText: t.otterboardAppStoreButton,
+  },
+];
 ---
 
 <div class="container mx-auto max-w-5xl px-4 py-8">
@@ -155,18 +167,22 @@ const t = getTranslations(locale);
           />
         </div>
       </div>
-      <div class="p-4">
-        <h2 class="my-4 text-2xl font-semibold">{t.cantoboardTitle}</h2>
-        <h3 class="my-2 font-semibold">iOS</h3>
-        <div class="mb-4">
-          <DownloadButton
-            href="https://apps.apple.com/app/id6752963850"
-            icon={IconBrandApple}
-            text={t.cantoboardAppStoreButton}
-            variant="apple"
-          />
-        </div>
-      </div>
+      {
+        iosOnlyApps.map((app) => (
+          <div class="p-4">
+            <h2 class="my-4 text-2xl font-semibold">{app.title}</h2>
+            <h3 class="my-2 font-semibold">iOS</h3>
+            <div class="mb-4">
+              <DownloadButton
+                href={app.href}
+                icon={IconBrandApple}
+                text={app.buttonText}
+                variant="apple"
+              />
+            </div>
+          </div>
+        ))
+      }
       <LinkedImageCard
         heading="LearnDuck 粵拼打字入門"
         href="https://chaaklau.github.io/LearnDuck/"
