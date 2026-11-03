@@ -23,6 +23,7 @@ import injectImage from "@/assets/images/keyboard/inject.png";
 import jyutjyuImage from "@/assets/images/keyboard/jyutjyu-og.png";
 import jyutNetImage from "@/assets/images/keyboard/jyut-net-hero.jpg";
 import learnduckImage from "@/assets/images/keyboard/learnduck.png";
+import otterboardImage from "@/assets/images/keyboard/otterboard.png";
 import wingImage from "@/assets/images/keyboard/wing.png";
 import wordsHkImage from "@/assets/images/keyboard/wordshk.png";
 
@@ -32,18 +33,6 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = getTranslations(locale);
-const iosOnlyApps = [
-  {
-    title: t.cantoboardTitle,
-    href: "https://apps.apple.com/app/id6752963850",
-    buttonText: t.cantoboardAppStoreButton,
-  },
-  {
-    title: t.otterboardTitle,
-    href: "https://apps.apple.com/app/id6803947273",
-    buttonText: t.otterboardAppStoreButton,
-  },
-];
 ---
 
 <div class="container mx-auto max-w-5xl px-4 py-8">
@@ -167,22 +156,39 @@ const iosOnlyApps = [
           />
         </div>
       </div>
-      {
-        iosOnlyApps.map((app) => (
-          <div class="p-4">
-            <h2 class="my-4 text-2xl font-semibold">{app.title}</h2>
-            <h3 class="my-2 font-semibold">iOS</h3>
-            <div class="mb-4">
-              <DownloadButton
-                href={app.href}
-                icon={IconBrandApple}
-                text={app.buttonText}
-                variant="apple"
-              />
-            </div>
-          </div>
-        ))
-      }
+      <div class="p-4">
+        <h2 class="my-4 text-2xl font-semibold">{t.cantoboardTitle}</h2>
+        <h3 class="my-2 font-semibold">iOS</h3>
+        <div class="mb-4">
+          <DownloadButton
+            href="https://apps.apple.com/app/id6752963850"
+            icon={IconBrandApple}
+            text={t.cantoboardAppStoreButton}
+            variant="apple"
+          />
+        </div>
+      </div>
+      <div class="p-4">
+        <h2 class="my-4 text-2xl font-semibold">{t.otterboardTitle}</h2>
+        <h3 class="my-2 font-semibold">iOS</h3>
+        <div class="mb-4">
+          <a
+            href="https://apps.apple.com/app/id6803947273"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block transition-opacity duration-200 hover:opacity-80"
+          >
+            <Image
+              src={otterboardImage}
+              alt={t.otterboardTitle}
+              width={256}
+              height={256}
+              class="size-16"
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </div>
       <LinkedImageCard
         heading="LearnDuck 粵拼打字入門"
         href="https://chaaklau.github.io/LearnDuck/"
