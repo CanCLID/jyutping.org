@@ -21,7 +21,6 @@ type KeyboardPageTranslation = {
   cantoboardTitle: string;
   cantoboardAppStoreButton: string;
   otterboardTitle: string;
-  otterboardAppStoreButton: string;
   toolsTitle: string;
   resourceTitle: string;
   googleTranslate: string;
@@ -51,7 +50,6 @@ export const getTranslations = makeResource<KeyboardPageTranslation>({
     cantoboardTitle: "Cantoboard",
     cantoboardAppStoreButton: "App Store 下載",
     otterboardTitle: "Otterboard",
-    otterboardAppStoreButton: "App Store 下載",
     toolsTitle: "辭典工具",
     resourceTitle: "學習資源",
     googleTranslate: "谷歌翻譯粵語",
@@ -79,7 +77,6 @@ export const getTranslations = makeResource<KeyboardPageTranslation>({
     cantoboardTitle: "Cantoboard",
     cantoboardAppStoreButton: "App Store",
     otterboardTitle: "Otterboard",
-    otterboardAppStoreButton: "App Store",
     toolsTitle: "Dictionaries and Tools",
     resourceTitle: "Learning Resources",
     googleTranslate: "Google Translate Cantonese",
@@ -107,7 +104,6 @@ export const getTranslations = makeResource<KeyboardPageTranslation>({
     cantoboardTitle: "Cantoboard",
     cantoboardAppStoreButton: "App Store",
     otterboardTitle: "Otterboard",
-    otterboardAppStoreButton: "App Store",
     toolsTitle: "辞書とツール",
     resourceTitle: "学習リソース",
     googleTranslate: "Google翻訳 広東語",
@@ -135,7 +131,6 @@ export const getTranslations = makeResource<KeyboardPageTranslation>({
     cantoboardTitle: "Cantoboard",
     cantoboardAppStoreButton: "App Store 下載",
     otterboardTitle: "Otterboard",
-    otterboardAppStoreButton: "App Store 下載",
     toolsTitle: "辭典工具",
     resourceTitle: "學習資源",
     googleTranslate: "Google 翻譯粵語",
@@ -163,7 +158,6 @@ export const getTranslations = makeResource<KeyboardPageTranslation>({
     cantoboardTitle: "Cantoboard",
     cantoboardAppStoreButton: "Tải trên App Store",
     otterboardTitle: "Otterboard",
-    otterboardAppStoreButton: "Tải trên App Store",
     toolsTitle: "Công cụ từ điển",
     resourceTitle: "Tài liệu học tập",
     googleTranslate: "Google Dịch tiếng Quảng Đông",
@@ -191,7 +185,6 @@ export const getTranslations = makeResource<KeyboardPageTranslation>({
     cantoboardTitle: "Cantoboard",
     cantoboardAppStoreButton: "App Store 下載",
     otterboardTitle: "Otterboard",
-    otterboardAppStoreButton: "App Store 下載",
     toolsTitle: "辭典工具",
     resourceTitle: "學習資源",
     googleTranslate: "谷歌翻譯粵語",
@@ -219,7 +212,6 @@ export const getTranslations = makeResource<KeyboardPageTranslation>({
     cantoboardTitle: "Cantoboard",
     cantoboardAppStoreButton: "App Store 下載",
     otterboardTitle: "Otterboard",
-    otterboardAppStoreButton: "App Store 下載",
     toolsTitle: "辭典工具",
     resourceTitle: "學習資源",
     googleTranslate: "Google 翻譯粵語",
@@ -247,7 +239,6 @@ export const getTranslations = makeResource<KeyboardPageTranslation>({
     cantoboardTitle: "Cantoboard",
     cantoboardAppStoreButton: "App Store 下载",
     otterboardTitle: "Otterboard",
-    otterboardAppStoreButton: "App Store 下载",
     toolsTitle: "辞典工具",
     resourceTitle: "学习资源",
     googleTranslate: "Google 翻译粤语",
