@@ -18,6 +18,7 @@ interface Props {
   unavailableLocaleFallbackPath?: string;
   ogType?: "website" | "article";
   jsonLd?: Record<string, unknown>;
+  noindex?: boolean;
 }
 
 const {
@@ -29,6 +30,7 @@ const {
   unavailableLocaleFallbackPath,
   ogType = "website",
   jsonLd,
+  noindex = false,
 } = Astro.props;
 
 const resolvedLocale = I18n.locales.includes(lang as Locale)
@@ -103,7 +105,8 @@ const speculationRulesJson = JSON.stringify({
     <meta name="text-scale" content="scale" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex" />}
+    {!noindex && <link rel="canonical" href={canonicalUrl} />}
     <meta name="generator" content={Astro.generator} />
 
     <title>{title}</title>
@@ -115,37 +118,41 @@ const speculationRulesJson = JSON.stringify({
 
     <meta property="og:site_name" content={meta.siteName} />
     <meta property="og:type" content={ogType} />
-    <meta property="og:url" content={canonicalUrl} />
+    {!noindex && <meta property="og:url" content={canonicalUrl} />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:locale" content={meta.ogLocale} />
-    {alternateOgLocales.map((ogLocale) => (
-      <meta property="og:locale:alternate" content={ogLocale} />
-    ))}
+    {!noindex &&
+      alternateOgLocales.map((ogLocale) => (
+        <meta property="og:locale:alternate" content={ogLocale} />
+      ))}
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={meta.ogImageAlt} />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content={canonicalUrl} />
+    {!noindex && <meta name="twitter:url" content={canonicalUrl} />}
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
     <meta name="twitter:image:alt" content={meta.ogImageAlt} />
 
-    {availableLocales.map((locale) => (
+    {!noindex &&
+      availableLocales.map((locale) => (
+        <link
+          rel="alternate"
+          hreflang={formatBcp47Locale(locale)}
+          href={toCanonicalUrl(getLocalePath(Astro.url.pathname, locale), siteUrl)}
+        />
+      ))}
+    {!noindex && (
       <link
         rel="alternate"
-        hreflang={formatBcp47Locale(locale)}
-        href={toCanonicalUrl(getLocalePath(Astro.url.pathname, locale), siteUrl)}
+        hreflang="x-default"
+        href={toCanonicalUrl(getLocalePath(Astro.url.pathname, xDefaultLocale), siteUrl)}
       />
-    ))}
-    <link
-      rel="alternate"
-      hreflang="x-default"
-      href={toCanonicalUrl(getLocalePath(Astro.url.pathname, xDefaultLocale), siteUrl)}
-    />
+    )}
     <link
       rel="alternate"
       type="application/rss+xml"
