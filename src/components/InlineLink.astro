@@ -22,5 +22,8 @@ const rel = newTab ? relOverride ?? "noopener noreferrer" : relOverride;
   href={href}
   target={newTab ? "_blank" : undefined}
   rel={rel}
-  class:list={["text-blue-600 hover:text-blue-800 underline", className]}
+  class:list={[
+    "text-[#0e5394] hover:text-[#0b467e] underline decoration-[#dbeafa] hover:decoration-current underline-offset-[0.2em] transition-colors",
+    className,
+  ]}
 >{label ?? <slot />}</a>

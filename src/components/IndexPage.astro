@@ -1,7 +1,9 @@
 ---
 import { Image, Picture } from "astro:assets";
 import type { ImageMetadata } from "astro";
+import Audio from "@/components/Audio.astro";
 import Icon from "@/components/Icon.astro";
+import JyutpingTypingDemo from "@/components/JyutpingTypingDemo.astro";
 import type { IconName } from "@/components/icons/iconPaths";
 import type { Locale } from "@/i18n/utils";
 import { I18n, formatBcp47Locale } from "@/i18n/utils";
@@ -36,10 +38,11 @@ type ToolCardTool = {
 );
 
 type ToolCard = {
-  badgeClassName: string;
+  accentClassName: string;
   badgeHref: string;
   badgeIcon: IconName;
   badgeLabel: string;
+  badgeIconClassName: string;
   tools: ToolCardTool[];
 };
 
@@ -47,13 +50,19 @@ const { locale } = Astro.props;
 
 const t = getTranslations(locale);
 const prefix = locale === I18n.defaultLocale ? "" : `/${locale}`;
-const bodyFontClass = ["cmn", "nan", "wuu", "yue"].includes(locale)
-  ? "font-jyutping"
-  : "";
+const hasRubyBodyFont = ["cmn", "nan", "wuu", "yue"].includes(locale);
+const bodyFontClass = hasRubyBodyFont ? "font-jyutping" : "";
 const toolLogoClassName =
-  "size-12 shrink-0 overflow-hidden rounded-lg ring-1 ring-neutral-200";
+  "size-11 shrink-0 overflow-hidden rounded-xl ring-1 ring-slate-900/6";
 const linkedToolRowClassName =
-  "target-control flex items-center gap-3 rounded-xl bg-neutral-50 px-4 py-3 text-neutral-900 no-underline transition-colors hover:bg-[#1678d3]/8 hover:text-neutral-900 hover:no-underline visited:text-neutral-900";
+  "group target-control flex items-center gap-3.5 rounded-xl px-3 py-3 -mx-3 text-slate-900 no-underline transition-colors hover:bg-[#f6f9fc] hover:text-[#0b467e] hover:no-underline visited:text-slate-900";
+
+const specimenSyllables = [
+  { char: "粵", jyutping: "jyut6" },
+  { char: "語", jyutping: "jyu5" },
+  { char: "拼", jyutping: "ping3" },
+  { char: "音", jyutping: "jam1" },
+] as const;
 
 const localeLinks: ReadonlyArray<{
   locale: Exclude<Locale, "yue_hans">;
@@ -68,18 +77,18 @@ const localeLinks: ReadonlyArray<{
   { locale: "ja", label: "日本語版に切り替える" },
 ];
 
-const whyLearnItems: Array<{ icon: IconName; text: string; tint: string }> = [
-  { icon: "ear", text: t.reasonEar, tint: "text-yellow-300" },
-  { icon: "language", text: t.reasonLanguage, tint: "text-[#CBF2AE]" },
-  { icon: "keyboard", text: t.reasonKeyboard, tint: "text-white" },
+const whyLearnItems: Array<{ icon: IconName; text: string }> = [
+  { icon: "ear", text: t.reasonEar },
+  { icon: "language", text: t.reasonLanguage },
+  { icon: "keyboard", text: t.reasonKeyboard },
 ];
 
 const toolCards: ToolCard[] = [
   {
+    accentClassName: "border-[#1678d3]",
     badgeHref: `${prefix}/keyboard#input-methods`,
-    badgeClassName:
-      "target-control mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-[#1678d3]/10 px-3 py-1 text-sm font-semibold text-[#0c4f8c] no-underline transition-colors hover:bg-[#1678d3]/15 hover:text-[#0c4f8c] hover:no-underline visited:text-[#0c4f8c]",
     badgeIcon: "keyboard",
+    badgeIconClassName: "text-[#1678d3]",
     badgeLabel: t.typeItHeading,
     tools: [
       {
@@ -103,10 +112,10 @@ const toolCards: ToolCard[] = [
     ],
   },
   {
+    accentClassName: "border-[#4d8f3f]",
     badgeHref: `${prefix}/keyboard#dictionaries`,
-    badgeClassName:
-      "target-control mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-[#6CAF59]/20 px-3 py-1 text-sm font-semibold text-[#2f6626] no-underline transition-colors hover:bg-[#6CAF59]/25 hover:text-[#2f6626] hover:no-underline visited:text-[#2f6626]",
     badgeIcon: "vocabulary",
+    badgeIconClassName: "text-[#4d8f3f]",
     badgeLabel: t.lookItUpHeading,
     tools: [
       {
@@ -133,10 +142,10 @@ const toolCards: ToolCard[] = [
     ],
   },
   {
+    accentClassName: "border-[#d4a21c]",
     badgeHref: `${prefix}/keyboard#learning`,
-    badgeClassName:
-      "target-control mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-yellow-300/35 px-3 py-1 text-sm font-semibold text-yellow-900 no-underline transition-colors hover:bg-yellow-300/45 hover:text-yellow-900 hover:no-underline visited:text-yellow-900",
     badgeIcon: "player-play-filled",
+    badgeIconClassName: "text-[#b8860b]",
     badgeLabel: t.learnItHeading,
     tools: [
       {
@@ -162,131 +171,169 @@ const toolCards: ToolCard[] = [
 ];
 ---
 
-<section class="bg-[#1678d3] text-white">
-  <div class="mx-auto max-w-5xl px-6 pb-20 pt-32 text-center md:pb-28 md:pt-40">
-    <div class="flex flex-col items-center">
-      <h1
-        class="font-jyutping text-7xl leading-none tracking-wide drop-shadow-[0_8px_24px_rgba(0,0,0,0.25)] md:text-9xl"
-      >
-        粵拼
-      </h1>
-    </div>
-    <div class="mt-10 space-y-2">
-      {
-        t.subheading.map((line) => (
-          <p
-            class:list={[
-              bodyFontClass,
-              "text-2xl leading-relaxed font-medium text-white/95 md:text-4xl",
-            ]}
+<section class="brand-hero text-white">
+  <div class="mx-auto max-w-7xl px-6 pb-14 pt-24 md:pb-16 md:pt-28">
+    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-12">
+      <div class="lg:col-span-6 text-center lg:text-left">
+        <h1 class="font-jyutping text-7xl leading-[1.3] tracking-wide md:text-8xl lg:text-9xl">
+          粵拼
+        </h1>
+        <div class="mt-6 space-y-2">
+          {
+            t.subheading.map((line) => (
+              <p
+                class:list={[
+                  hasRubyBodyFont
+                    ? "font-jyutping text-3xl leading-[1.45] text-white/95 sm:text-4xl lg:text-[2.625rem]"
+                    : "text-2xl leading-[1.5] font-medium text-white/95 md:text-3xl",
+                ]}
+              >
+                {line}
+              </p>
+            ))
+          }
+        </div>
+        <div class="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
+          <a
+            href={`${prefix}/learn`}
+            class="target-control inline-flex items-center gap-2.5 rounded-full bg-[#f8df6c] px-7 py-3.5 text-lg font-semibold text-slate-900 shadow-sm transition-all hover:-translate-y-0.5 hover:bg-[#fae688] active:translate-y-0"
           >
-            {line}
-          </p>
-        ))
-      }
-    </div>
-    <div
-      class="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
-    >
-      <a
-        href={`${prefix}/learn`}
-        class="inline-flex items-center gap-2 rounded-full bg-yellow-300 px-8 py-4 text-lg font-semibold text-neutral-900 shadow-[0_12px_32px_-12px_rgba(0,0,0,0.5)] transition-[background-color,transform] hover:-translate-y-0.5 hover:bg-yellow-400 active:translate-y-0"
-      >
-        {t.learnButton}
-        <Icon name="vocabulary" size="1.25rem" />
-      </a>
-      <a
-        href={`${prefix}/keyboard`}
-        class="inline-flex items-center gap-2 rounded-full border-2 border-white/70 bg-white/10 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-colors hover:border-white hover:bg-white/20"
-      >
-        {t.tryKeyboardButton}
-        <Icon name="keyboard" size="1.25rem" />
-      </a>
-    </div>
-    <div class="mt-16 flex justify-center text-white/80">
-      <Icon name="arrow-down" size="1.5rem" class="motion-safe:animate-bounce" />
+            {t.learnButton}
+            <Icon name="vocabulary" size="1.25rem" />
+          </a>
+          <a
+            href={`${prefix}/keyboard`}
+            class="target-control inline-flex items-center gap-2.5 rounded-full border border-white/30 bg-[#0b467e]/30 px-7 py-3.5 text-lg font-semibold text-white transition-colors hover:border-white/60 hover:bg-[#0b467e]/45"
+          >
+            {t.tryKeyboardButton}
+            <Icon name="keyboard" size="1.25rem" />
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6">
+        <JyutpingTypingDemo locale={locale} />
+      </div>
     </div>
   </div>
 </section>
 
-<section class="bg-neutral-50 text-neutral-900">
-  <div class="mx-auto max-w-6xl px-6 py-20 md:py-24">
+<section class="defer-section bg-white text-slate-900">
+  <div class="mx-auto max-w-7xl px-6 py-12 md:py-16">
+    <h2 class="mb-10 text-center text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+      {t.whyLearnHeading}
+    </h2>
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-12">
+      {
+        whyLearnItems.map(({ icon, text }, idx) => (
+          <div class="flex flex-col items-start border-t border-[#dce6f0] pt-6">
+            <div class="flex w-full items-center justify-between gap-3">
+              <div class="inline-flex size-10 items-center justify-center rounded-xl bg-[#eef5fc] text-[#1678d3]">
+                <Icon name={icon} size="1.5rem" stroke={1.65} />
+              </div>
+              <span class="text-xs font-semibold tabular-nums tracking-widest text-[#0e5394]">
+                {String(idx + 1).padStart(2, "0")}
+              </span>
+            </div>
+            <p class="mt-4 text-lg leading-relaxed text-slate-700">{text}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#f6f9fc] text-slate-900">
+  <div class="mx-auto max-w-7xl px-6 py-12 md:py-16">
     <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
       <div>
         <h2
-          class="mb-5 inline-flex items-center gap-2 rounded-full bg-[#1678d3]/10 px-3 py-1 text-sm font-semibold text-[#0c4f8c]"
+          class="mb-4 inline-flex items-center gap-2 rounded-full bg-[#eef5fc] px-3.5 py-1 text-sm font-semibold text-[#0b467e]"
         >
           <Icon name="sparkles" size="1rem" />
           {t.whatIsHeading}
         </h2>
         <div
           class:list={[
-            bodyFontClass,
-            "space-y-4 text-xl leading-relaxed text-neutral-800 md:text-2xl",
+            hasRubyBodyFont
+              ? "font-jyutping space-y-4 text-3xl leading-[1.45] text-slate-900 sm:text-4xl lg:text-5xl"
+              : "space-y-4 text-2xl leading-[1.55] font-medium text-slate-900 md:text-3xl",
           ]}
         >
           {t.whatIsBody.map((paragraph) => <p>{paragraph}</p>)}
         </div>
+        <a
+          href={`${prefix}/jyutping`}
+          class="target-control group mt-6 inline-flex items-center gap-2 text-base font-semibold text-[#0e5394] no-underline transition-colors hover:text-[#0b467e]"
+        >
+          <span>{t.viewSchemeButton}</span>
+          <Icon name="arrow-right" size="1.125rem" class="transition-transform group-hover:translate-x-0.5" />
+        </a>
       </div>
-      <div
-        class="rounded-3xl bg-white p-8 shadow-xl shadow-neutral-900/5 ring-1 ring-[#1678d3] md:p-10"
-      >
-        <div class="space-y-4">
-          <div>
-            <p
-              class="font-jyutping text-3xl font-medium text-[#1678d3] md:text-4xl"
-            >
-              粵語拼音
-            </p>
-          </div>
-          <div>
-            <p
-              class="inline-flex items-center gap-3 text-xl md:text-3xl text-[#1678d3]"
-            >
-              <span>ping3 jam1</span>
-              <Icon name="arrow-right" size="1.5rem" />
-              <span>拼音</span>
-            </p>
-          </div>
+      <div class="surface-card ring-1 ring-[#dce6f0]/80 p-8 md:p-10">
+        <div>
+          <p
+            lang="yue"
+            class="font-jyutping text-4xl leading-[1.45] font-medium text-[#0b467e] sm:text-5xl"
+          >
+            粵語拼音
+          </p>
+        </div>
+
+        <div class="mt-6 grid grid-cols-4 gap-2 sm:gap-3">
+          {
+            specimenSyllables.map((syllable) => (
+              <div class="flex flex-col items-center rounded-2xl bg-[#eef5fc] px-2 py-3 text-center">
+                <div class="flex items-center gap-0.5">
+                  <span lang="yue" class="text-2xl font-semibold text-slate-900">
+                    {syllable.char}
+                  </span>
+                  <Audio id={syllable.jyutping} locale={locale} />
+                </div>
+                <span lang="yue-Latn-jyutping" class="mt-1 font-mono text-sm font-semibold text-[#0b467e]">
+                  {syllable.jyutping}
+                </span>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="mt-6 flex items-center justify-between gap-3 border-t border-[#dce6f0] pt-5">
+          <p
+            class="inline-flex items-center gap-3 text-xl font-medium text-[#0e5394] md:text-2xl"
+          >
+            <span lang="yue-Latn-jyutping">ping3 jam1</span>
+            <Icon name="arrow-right" size="1.25rem" />
+            <span lang="yue">拼音</span>
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="defer-section bg-[#1678d3] text-white">
-  <div class="mx-auto max-w-6xl px-6 py-20 md:py-24">
-    <h2 class="mb-4 text-center text-3xl font-bold md:text-5xl">
-      {t.whyLearnHeading}
-    </h2>
-    <div class="mx-auto mb-14 h-1 w-16 rounded-full bg-yellow-300"></div>
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-      {
-        whyLearnItems.map(({ icon, text, tint }) => (
-          <div class="rounded-3xl bg-white/10 p-8 ring-1 ring-white/15 backdrop-blur-sm transition-[background-color,transform] hover:-translate-y-1 hover:bg-white/15">
-            <Icon name={icon} size="3rem" stroke={1.5} class={`mb-6 ${tint}`} />
-            <p class="text-xl leading-relaxed text-white/95">{text}</p>
-          </div>
-        ))
-      }
-    </div>
-  </div>
-</section>
-
-<section class="defer-section bg-neutral-50 text-neutral-900">
-  <div class="mx-auto max-w-6xl px-6 py-20 md:py-24">
-    <h2 class="mb-12 text-center text-3xl font-bold md:mb-14 md:text-5xl">
+<section class="defer-section bg-white text-slate-900">
+  <div class="mx-auto max-w-7xl px-6 py-12 md:py-16">
+    <h2 class="mb-10 text-center text-3xl font-bold tracking-tight md:text-4xl">
       {t.everythingHeading}
     </h2>
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
       {
         toolCards.map((card) => (
-          <article class="flex flex-col rounded-3xl bg-white p-8">
-            <a href={card.badgeHref} class={card.badgeClassName}>
-              <Icon name={card.badgeIcon} size="1rem" />
-              {card.badgeLabel}
+          <div class:list={["flex flex-col border-t-2 pt-5", card.accentClassName]}>
+            <a
+              href={card.badgeHref}
+              class="target-control group mb-5 inline-flex w-fit items-center gap-2 text-xl font-bold tracking-tight text-slate-900 no-underline transition-colors hover:text-[#0b467e]"
+            >
+              <Icon name={card.badgeIcon} size="1.25rem" class={card.badgeIconClassName} />
+              <span>{card.badgeLabel}</span>
+              <Icon
+                name="arrow-right"
+                size="1rem"
+                class="text-slate-400 transition-all group-hover:translate-x-0.5 group-hover:text-[#0b467e]"
+              />
             </a>
-            <div class="mt-auto space-y-2">
+            <div class="space-y-1">
               {card.tools.map((tool) => (
                 <a
                   href={tool.href}
@@ -305,8 +352,8 @@ const toolCards: ToolCard[] = [
                           src={tool.image}
                           alt={tool.name}
                           format="svg"
-                          width={48}
-                          height={48}
+                          width={44}
+                          height={44}
                           class="h-full w-full object-cover"
                           loading="lazy"
                         />
@@ -316,7 +363,7 @@ const toolCards: ToolCard[] = [
                           alt={tool.name}
                           formats={["avif", "webp"]}
                           widths={[48, 96]}
-                          sizes="3rem"
+                          sizes="2.75rem"
                           class="h-full w-full object-cover"
                           loading="lazy"
                         />
@@ -325,45 +372,52 @@ const toolCards: ToolCard[] = [
                       <img
                         src={tool.publicSrc}
                         alt={tool.name}
-                        width={48}
-                        height={48}
+                        width={44}
+                        height={44}
                         class="h-full w-full object-cover"
                         loading="lazy"
                       />
                     )}
                   </div>
                   <div class="min-w-0 flex-1">
-                    <p class="truncate text-sm font-semibold">{tool.name}</p>
-                    <p class="truncate text-xs text-neutral-600">
+                    <p class="truncate text-base font-semibold text-slate-900 group-hover:text-[#0b467e]">
+                      {tool.name}
+                    </p>
+                    <p class="truncate text-sm text-slate-500">
                       {tool.sub}
                     </p>
                   </div>
+                  <Icon
+                    name="arrow-up-right"
+                    size="1rem"
+                    class="shrink-0 text-slate-400 transition-colors group-hover:text-[#1678d3]"
+                  />
                 </a>
               ))}
             </div>
-          </article>
+          </div>
         ))
       }
     </div>
   </div>
 </section>
 
-<section class="defer-section bg-[#1678d3] text-white">
-  <div class="mx-auto max-w-4xl px-6 py-20 text-center">
-    <p class:list={[bodyFontClass, "mb-10 text-4xl leading-tight md:text-5xl"]}>
+<section class="defer-section brand-hero text-white">
+  <div class="mx-auto max-w-5xl px-6 py-12 md:py-16 text-center">
+    <p class:list={[bodyFontClass, "mb-8 text-3xl leading-[1.4] font-medium md:text-5xl"]}>
       {t.tagline}
     </p>
     <div class="flex flex-wrap justify-center gap-4">
       <a
         href={`${prefix}/jyutping`}
-        class="inline-flex items-center gap-2 rounded-full bg-[#F4E6A6] px-7 py-3.5 text-lg font-semibold text-[#0C4F8C] transition-colors hover:bg-[#F8EDBF]"
+        class="target-control inline-flex items-center gap-2 rounded-full bg-[#f8df6c] px-7 py-3.5 text-lg font-semibold text-slate-900 shadow-sm transition-all hover:-translate-y-0.5 hover:bg-[#fae688]"
       >
         {t.viewSchemeButton}
         <Icon name="table" size="1.25rem" />
       </a>
       <a
         href={`${prefix}/keyboard`}
-        class="inline-flex items-center gap-2 rounded-full bg-[#E6F0FF] px-7 py-3.5 text-lg font-semibold text-[#0C4F8C] transition-colors hover:bg-[#F0F6FF]"
+        class="target-control inline-flex items-center gap-2 rounded-full border border-white/30 bg-[#0b467e]/30 px-7 py-3.5 text-lg font-semibold text-white transition-colors hover:border-white/60 hover:bg-[#0b467e]/45"
       >
         {t.resourcesButton}
         <Icon name="keyboard" size="1.25rem" />
@@ -372,15 +426,15 @@ const toolCards: ToolCard[] = [
   </div>
 </section>
 
-<section class="defer-section bg-neutral-100 text-neutral-900">
-  <div class="mx-auto max-w-5xl px-6 py-14">
+<section class="defer-section border-t border-[#dce6f0] bg-[#f6f9fc] text-slate-900">
+  <div class="mx-auto max-w-6xl px-6 py-8">
     <h2
-      class="mb-8 flex items-center justify-center gap-2 text-center text-lg font-semibold text-neutral-700"
+      class="mb-6 flex items-center justify-center gap-2 text-center text-lg font-semibold text-slate-700"
     >
-      <Icon name="world" size="1.25rem" />
+      <Icon name="world" size="1.25rem" class="text-[#1678d3]" />
       {t.otherLanguagesHeading}
     </h2>
-    <div class="flex flex-wrap-balance justify-center gap-3">
+    <div class="flex flex-wrap-balance justify-center gap-2.5">
       {
         localeLinks
           .filter((link) => link.locale !== locale.replace(/_.*/, ""))
@@ -390,7 +444,7 @@ const toolCards: ToolCard[] = [
               href={
                 link.locale === I18n.defaultLocale ? "/" : `/${link.locale}`
               }
-              class="target-control inline-flex items-center rounded-full border border-gray-600 bg-white px-5 py-2.5 text-sm font-medium text-neutral-800 transition-colors hover:border-[#1678d3] hover:text-[#1678d3]"
+              class="target-control inline-flex items-center rounded-full bg-white px-5 py-2 text-sm sm:text-base font-medium text-slate-800 shadow-[0_1px_2px_rgb(15_41_66/0.06)] ring-1 ring-[#dce6f0] transition-all hover:bg-[#eef5fc] hover:text-[#0b467e] hover:ring-[#1678d3]"
             >
               {link.label}
             </a>

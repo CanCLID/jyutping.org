@@ -1,0 +1,142 @@
+---
+import Icon from "@/components/Icon.astro";
+import { getUiLabels } from "@/i18n/uiLabels";
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const ui = getUiLabels(locale);
+
+const initialCandidates = [
+  { num: 1, word: "半個鐘就學得識", reading: "bun3 go3 zung1 zau6 hok6 dak1 sik1" },
+  { num: 2, word: "半個鐘", reading: "bun3 go3 zung1" },
+  { num: 3, word: "半個", reading: "bun3 go3" },
+  { num: 4, word: "捧", reading: "bung2" },
+  { num: 5, word: "甭", reading: "bung2" },
+];
+
+const steps = ["粵語拼音", "好易學", "半個鐘就學得識"];
+---
+
+<jyutping-typing-demo
+  data-playing="false"
+  role="region"
+  aria-label={ui.typingDemoLabel}
+  class="surface-card block w-full max-w-md lg:max-w-lg mx-auto p-5 sm:p-6 text-left text-slate-900"
+>
+  <div class="flex items-center justify-between gap-3 pb-3 border-b border-[#dce6f0]">
+    <span class="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-[#0b467e]">
+      <Icon name="keyboard" size="1.25rem" class="text-[#1678d3]" />
+      <span>{ui.typingDemoBadge}</span>
+    </span>
+    <div class="inline-flex items-center gap-1">
+      <button
+        type="button"
+        data-typing-toggle
+        data-label-play={ui.typingDemoPlay}
+        data-label-pause={ui.typingDemoPause}
+        aria-label={ui.typingDemoPlay}
+        aria-pressed="false"
+        class="target-control inline-flex items-center justify-center rounded-full p-1.5 text-slate-600 hover:bg-[#eef5fc] hover:text-[#0b467e] transition-colors cursor-pointer"
+      >
+        <span data-icon-play>
+          <Icon name="player-play" size="1.125rem" />
+        </span>
+        <span data-icon-pause hidden>
+          <Icon name="player-pause" size="1.125rem" />
+        </span>
+      </button>
+      <button
+        type="button"
+        data-typing-replay
+        aria-label={ui.typingDemoReplay}
+        class="target-control inline-flex items-center justify-center rounded-full p-1.5 text-slate-600 hover:bg-[#eef5fc] hover:text-[#0b467e] transition-colors cursor-pointer"
+      >
+        <Icon name="rotate-clockwise" size="1.125rem" />
+      </button>
+    </div>
+  </div>
+
+  <div class="mt-4 min-h-[4.25rem] font-sans text-xl sm:text-2xl leading-relaxed text-slate-900">
+    <div data-typing-row1 class="min-h-[1.6em]">
+      <span data-typing-line1 lang="yue">粵語拼音好易學</span>
+    </div>
+    <div data-typing-row2 class="min-h-[1.6em]">
+      <span data-typing-line2 lang="yue"></span><span
+        data-typing-preedit
+        lang="yue-Latn-jyutping"
+        class="text-lg sm:text-xl underline decoration-2 decoration-[#1678d3] underline-offset-4 text-[#0e5394] font-medium"
+      >bun go zung zau hok dak sik</span><span data-typing-caret class="typing-caret" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div
+    data-typing-candidates
+    class="mt-3 w-fit min-w-[11rem] max-w-full rounded-xl bg-white shadow-[var(--shadow-popover)] ring-1 ring-[#dce6f0] overflow-hidden transition-opacity duration-150 min-h-[12.25rem]"
+  >
+    <ol class="m-0 list-none p-1.5 space-y-0.5 text-sm sm:text-base tabular-nums">
+      {initialCandidates.map((item, idx) => (
+        <li
+          data-candidate-row
+          class:list={[
+            "flex items-center justify-between gap-4 rounded-lg px-3 py-1.5",
+            idx === 0
+              ? "bg-[#1678d3] text-white"
+              : "text-slate-800",
+          ]}
+        >
+          <span class="inline-flex shrink-0 items-baseline gap-2">
+            <span class={idx === 0 ? "text-white font-medium" : "text-slate-500 font-medium"}>
+              {item.num}.
+            </span>
+            <span data-candidate-word lang="yue" class="font-medium">
+              {item.word}
+            </span>
+          </span>
+          <span
+            data-candidate-reading
+            lang="yue-Latn-jyutping"
+            class:list={[
+              "min-w-0 truncate text-xs sm:text-sm font-medium",
+              idx === 0 ? "text-white" : "text-slate-500",
+            ]}
+          >
+            {item.reading}
+          </span>
+        </li>
+      ))}
+    </ol>
+  </div>
+
+  <div class="mt-4 pt-3 border-t border-[#dce6f0] flex items-center justify-between gap-2">
+    <div class="flex flex-wrap items-center gap-1" lang="yue">
+      {steps.map((label, stepIdx) => (
+        <button
+          type="button"
+          data-typing-step={stepIdx}
+          aria-current={stepIdx === 2 ? "step" : "false"}
+          class:list={[
+            "target-control rounded-full px-2.5 py-1 text-xs sm:text-sm transition-colors cursor-pointer hover:bg-[#eef5fc] hover:text-[#0b467e]",
+            stepIdx === 2
+              ? "bg-[#eef5fc] font-semibold text-[#0b467e]"
+              : "text-slate-600",
+          ]}
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+    <kbd
+      data-typing-keycap
+      class="inline-flex min-w-[2.5rem] items-center justify-center rounded-md bg-[#f6f9fc] px-2 py-1 text-xs sm:text-sm font-mono font-semibold text-[#0b467e] ring-1 ring-[#dce6f0]"
+    >
+      k
+    </kbd>
+  </div>
+</jyutping-typing-demo>
+
+<script>
+  import "@/scripts/jyutpingTypingDemo";
+</script>

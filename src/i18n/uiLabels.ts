@@ -21,6 +21,11 @@ type UiLabels = {
   finalsChartCaption: string;
   toneTableCaption: string;
   tonePracticeTableCaption: string;
+  typingDemoLabel: string;
+  typingDemoBadge: string;
+  typingDemoPlay: string;
+  typingDemoPause: string;
+  typingDemoReplay: string;
 };
 
 export const getUiLabels = makeResource<UiLabels>({
@@ -45,6 +50,11 @@ export const getUiLabels = makeResource<UiLabels>({
     finalsChartCaption: "粵拼韻母總表",
     toneTableCaption: "粵拼字調表",
     tonePracticeTableCaption: "粵語六個聲調兩兩組合練習表",
+    typingDemoLabel: "粵拼輸入法動態打字示範",
+    typingDemoBadge: "粵拼輸入法示範",
+    typingDemoPlay: "繼續示範",
+    typingDemoPause: "暫停示範",
+    typingDemoReplay: "重播打字示範",
   },
   en: {
     skipToContent: "Skip to main content",
@@ -67,6 +77,11 @@ export const getUiLabels = makeResource<UiLabels>({
     finalsChartCaption: "Jyutping Finals Chart",
     toneTableCaption: "Jyutping Tones Table",
     tonePracticeTableCaption: "Cantonese Six-Tone Pair Practice Table",
+    typingDemoLabel: "Interactive Jyutping typing demonstration",
+    typingDemoBadge: "Live Jyutping IME",
+    typingDemoPlay: "Play typing demo",
+    typingDemoPause: "Pause typing demo",
+    typingDemoReplay: "Replay typing demo",
   },
   ja: {
     skipToContent: "本文へスキップ",
@@ -89,6 +104,11 @@ export const getUiLabels = makeResource<UiLabels>({
     finalsChartCaption: "粤拼 韻母一覧表",
     toneTableCaption: "粤拼 声調表",
     tonePracticeTableCaption: "広東語6声調の組み合わせ練習表",
+    typingDemoLabel: "粤拼入力のインタラクティブデモ",
+    typingDemoBadge: "粤拼 入力デモ",
+    typingDemoPlay: "入力デモを再生",
+    typingDemoPause: "入力デモを一時停止",
+    typingDemoReplay: "入力デモをやり直す",
   },
   nan: {
     skipToContent: "跳到主要內容",
@@ -111,6 +131,11 @@ export const getUiLabels = makeResource<UiLabels>({
     finalsChartCaption: "粵拼韻母總表",
     toneTableCaption: "粵拼字調表",
     tonePracticeTableCaption: "粵語六個聲調兩兩組合練習表",
+    typingDemoLabel: "粵拼輸入法動態拍字示範",
+    typingDemoBadge: "粵拼輸入法示範",
+    typingDemoPlay: "繼續示範",
+    typingDemoPause: "暫停示範",
+    typingDemoReplay: "重播拍字示範",
   },
   vi: {
     skipToContent: "Chuyển đến nội dung chính",
@@ -133,6 +158,11 @@ export const getUiLabels = makeResource<UiLabels>({
     finalsChartCaption: "Bảng tổng hợp vận mẫu Việt bính",
     toneTableCaption: "Bảng thanh điệu Việt bính",
     tonePracticeTableCaption: "Bảng luyện tập ghép đôi 6 thanh điệu tiếng Quảng Đông",
+    typingDemoLabel: "Minh họa gõ bộ gõ Việt bính tương tác",
+    typingDemoBadge: "Minh họa bộ gõ Việt bính",
+    typingDemoPlay: "Phát minh họa gõ",
+    typingDemoPause: "Tạm dừng minh họa",
+    typingDemoReplay: "Phát lại minh họa",
   },
   wuu: {
     skipToContent: "跳到主要內容",
@@ -155,6 +185,11 @@ export const getUiLabels = makeResource<UiLabels>({
     finalsChartCaption: "粵拼韻母總表",
     toneTableCaption: "粵拼字調表",
     tonePracticeTableCaption: "粵語六個聲調兩兩組合練習表",
+    typingDemoLabel: "粵拼輸入法動態打字示範",
+    typingDemoBadge: "粵拼輸入法示範",
+    typingDemoPlay: "繼續示範",
+    typingDemoPause: "暫停示範",
+    typingDemoReplay: "重播打字示範",
   },
   yue: {
     skipToContent: "跳到主要內容",
@@ -177,6 +212,11 @@ export const getUiLabels = makeResource<UiLabels>({
     finalsChartCaption: "粵拼韻母總表",
     toneTableCaption: "粵拼字調表",
     tonePracticeTableCaption: "粵語六個聲調兩兩組合練習表",
+    typingDemoLabel: "粵拼輸入法動態打字示範",
+    typingDemoBadge: "粵拼輸入法示範",
+    typingDemoPlay: "繼續示範",
+    typingDemoPause: "暫停示範",
+    typingDemoReplay: "重播打字示範",
   },
   yue_hans: {
     skipToContent: "跳到主要内容",
@@ -199,6 +239,11 @@ export const getUiLabels = makeResource<UiLabels>({
     finalsChartCaption: "粤拼韵母总表",
     toneTableCaption: "粤拼字调表",
     tonePracticeTableCaption: "粤语六个声调两两组合练习表",
+    typingDemoLabel: "粤拼输入法动态打字示范",
+    typingDemoBadge: "粤拼输入法示范",
+    typingDemoPlay: "继续示范",
+    typingDemoPause: "暂停示范",
+    typingDemoReplay: "重播打字示范",
   },
 });
 

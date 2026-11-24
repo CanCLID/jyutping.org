@@ -1,5 +1,5 @@
 ---
-import Audio from "@/components/Audio.astro";
+import PhoneticToken from "@/components/jyutping/PhoneticToken.astro";
 import ScrollableTable from "@/components/ScrollableTable.astro";
 import { getJyutpingTableLabels } from "@/data/jyutping";
 import { getUiLabels } from "@/i18n/uiLabels";
@@ -33,20 +33,35 @@ const ui = getUiLabels(locale);
   <tbody>
     <tr>
       <th class:list={[toneTableHeadCellClass, "sticky-row-header"]} scope="row">{labels.toneRowHeaders[0]}</th>
-      <td class={tableDataCellClass} lang="yue">1 [˥] 詩 <Audio id="si1" locale={locale} /></td>
-      <td class={tableDataCellClass} lang="yue">2 [˧˥] 史 <Audio id="si2" locale={locale} /></td>
-      <td class={tableDataCellClass} lang="yue">3 [˧] 試 <Audio id="si3" locale={locale} /></td>
       <td class={tableDataCellClass} lang="yue">
-        1 [˥] 識 <Audio id="sik1" locale={locale} />
-        <br />3 [˧] 洩 <Audio id="sit3" locale={locale} />
+        <PhoneticToken jyutping="1" ipa="[˥]" example="詩" audioId="si1" locale={locale} />
+      </td>
+      <td class={tableDataCellClass} lang="yue">
+        <PhoneticToken jyutping="2" ipa="[˧˥]" example="史" audioId="si2" locale={locale} />
+      </td>
+      <td class={tableDataCellClass} lang="yue">
+        <PhoneticToken jyutping="3" ipa="[˧]" example="試" audioId="si3" locale={locale} />
+      </td>
+      <td class={tableDataCellClass} lang="yue">
+        <PhoneticToken jyutping="1" ipa="[˥]" example="識" audioId="sik1" locale={locale} />
+        <br />
+        <PhoneticToken jyutping="3" ipa="[˧]" example="洩" audioId="sit3" locale={locale} />
       </td>
     </tr>
     <tr>
       <th class:list={[toneTableHeadCellClass, "sticky-row-header"]} scope="row">{labels.toneRowHeaders[1]}</th>
-      <td class={tableDataCellClass} lang="yue">4 [˨˩] 時 <Audio id="si4" locale={locale} /></td>
-      <td class={tableDataCellClass} lang="yue">5 [˩˧] 市 <Audio id="si5" locale={locale} /></td>
-      <td class={tableDataCellClass} lang="yue">6 [˨] 事 <Audio id="si6" locale={locale} /></td>
-      <td class={tableDataCellClass} lang="yue">6 [˨] 蝕 <Audio id="sit6" locale={locale} /></td>
+      <td class={tableDataCellClass} lang="yue">
+        <PhoneticToken jyutping="4" ipa="[˨˩]" example="時" audioId="si4" locale={locale} />
+      </td>
+      <td class={tableDataCellClass} lang="yue">
+        <PhoneticToken jyutping="5" ipa="[˩˧]" example="市" audioId="si5" locale={locale} />
+      </td>
+      <td class={tableDataCellClass} lang="yue">
+        <PhoneticToken jyutping="6" ipa="[˨]" example="事" audioId="si6" locale={locale} />
+      </td>
+      <td class={tableDataCellClass} lang="yue">
+        <PhoneticToken jyutping="6" ipa="[˨]" example="蝕" audioId="sit6" locale={locale} />
+      </td>
     </tr>
   </tbody>
 </ScrollableTable>

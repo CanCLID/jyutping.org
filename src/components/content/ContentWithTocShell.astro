@@ -1,22 +1,24 @@
 ---
+import PageBanner from "@/components/PageBanner.astro";
+
 interface Props {
   description?: string;
+  eyebrow?: string;
   title: string;
 }
 
-const { description, title } = Astro.props;
+const { description, eyebrow, title } = Astro.props;
 ---
 
-<div class="mx-auto flex max-w-5xl justify-center gap-8 px-4 py-8">
+<PageBanner eyebrow={eyebrow} title={title} subtitle={description} maxWidth="7xl" />
+
+<div class="mx-auto flex max-w-7xl justify-center gap-8 px-5 sm:px-6 py-8 md:py-10">
   <article class="prose min-w-0 grow">
-    <h1>{title}</h1>
-    {description && <p class="lead">{description}</p>}
-    <hr class="my-4" />
     <slot />
   </article>
 
-  <aside class="hidden w-64 shrink-0 lg:block">
-    <div class="sticky top-16">
+  <aside class="hidden w-52 shrink-0 lg:block">
+    <div class="sticky top-24">
       <slot name="toc" />
     </div>
   </aside>

@@ -37,6 +37,10 @@ const jsonLd = buildBlogIndexJsonLd({
 });
 ---
 
-<BaseLayout lang={locale} title={title} description={description} jsonLd={jsonLd}>
-  <BlogIndexList posts={posts} translations={{ title, ...blogLabels }} />
+<BaseLayout lang={locale} title={title} description={description} jsonLd={jsonLd} hasHero>
+  <BlogIndexList
+    description={description}
+    posts={posts}
+    translations={{ title, ...blogLabels }}
+  />
 </BaseLayout>

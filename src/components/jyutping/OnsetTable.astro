@@ -1,5 +1,5 @@
 ---
-import Audio from "@/components/Audio.astro";
+import PhoneticToken from "@/components/jyutping/PhoneticToken.astro";
 import ScrollableTable from "@/components/ScrollableTable.astro";
 import { getJyutpingTableLabels } from "@/data/jyutping";
 import { getUiLabels } from "@/i18n/uiLabels";
@@ -13,7 +13,13 @@ interface Props {
   locale: string;
 }
 
-type CellEntry = { label: string; audioId: string };
+type CellEntry = {
+  jyutping: string;
+  ipa: string;
+  example: string;
+  audioId: string;
+};
+
 type OnsetRowKey =
   | "plosive"
   | "affricate"
@@ -29,20 +35,20 @@ const ui = getUiLabels(locale);
 const onsetCellsByRow: Record<OnsetRowKey, CellEntry[][]> = {
   plosive: [
     [
-      { label: "b [p] 巴", audioId: "baa1" },
-      { label: "p [pʰ] 怕", audioId: "paa3" },
+      { jyutping: "b", ipa: "[p]", example: "巴", audioId: "baa1" },
+      { jyutping: "p", ipa: "[pʰ]", example: "怕", audioId: "paa3" },
     ],
     [],
     [
-      { label: "d [t] 打", audioId: "daa2" },
-      { label: "t [tʰ] 他", audioId: "taa1" },
+      { jyutping: "d", ipa: "[t]", example: "打", audioId: "daa2" },
+      { jyutping: "t", ipa: "[tʰ]", example: "他", audioId: "taa1" },
     ],
     [],
     [
-      { label: "g [k] 家", audioId: "gaa1" },
-      { label: "k [kʰ] 卡", audioId: "kaa1" },
-      { label: "gw [kʷ] 瓜", audioId: "gwaa1" },
-      { label: "kw [kʷʰ] 夸", audioId: "kwaa1" },
+      { jyutping: "g", ipa: "[k]", example: "家", audioId: "gaa1" },
+      { jyutping: "k", ipa: "[kʰ]", example: "卡", audioId: "kaa1" },
+      { jyutping: "gw", ipa: "[kʷ]", example: "瓜", audioId: "gwaa1" },
+      { jyutping: "kw", ipa: "[kʷʰ]", example: "夸", audioId: "kwaa1" },
     ],
     [],
   ],
@@ -50,41 +56,41 @@ const onsetCellsByRow: Record<OnsetRowKey, CellEntry[][]> = {
     [],
     [],
     [
-      { label: "z [t͡s~t͡ʃ] 渣", audioId: "zaa1" },
-      { label: "c [t͡sʰ~t͡ʃʰ] 叉", audioId: "caa1" },
+      { jyutping: "z", ipa: "[t͡s~t͡ʃ]", example: "渣", audioId: "zaa1" },
+      { jyutping: "c", ipa: "[t͡sʰ~t͡ʃʰ]", example: "叉", audioId: "caa1" },
     ],
     [],
     [],
     [],
   ],
   nasal: [
-    [{ label: "m [m] 媽", audioId: "maa1" }],
+    [{ jyutping: "m", ipa: "[m]", example: "媽", audioId: "maa1" }],
     [],
-    [{ label: "n [n] 那", audioId: "naa5" }],
+    [{ jyutping: "n", ipa: "[n]", example: "那", audioId: "naa5" }],
     [],
-    [{ label: "ng [ŋ] 牙", audioId: "ngaa4" }],
+    [{ jyutping: "ng", ipa: "[ŋ]", example: "牙", audioId: "ngaa4" }],
     [],
   ],
   fricative: [
     [],
-    [{ label: "f [f] 花", audioId: "faa1" }],
-    [{ label: "s [s] 沙", audioId: "saa1" }],
+    [{ jyutping: "f", ipa: "[f]", example: "花", audioId: "faa1" }],
+    [{ jyutping: "s", ipa: "[s]", example: "沙", audioId: "saa1" }],
     [],
     [],
-    [{ label: "h [h] 蝦", audioId: "haa1" }],
+    [{ jyutping: "h", ipa: "[h]", example: "蝦", audioId: "haa1" }],
   ],
   approximant: [
-    [{ label: "w [w] 蛙", audioId: "waa1" }],
+    [{ jyutping: "w", ipa: "[w]", example: "蛙", audioId: "waa1" }],
     [],
     [],
-    [{ label: "j [j] 也", audioId: "jaa5" }],
+    [{ jyutping: "j", ipa: "[j]", example: "也", audioId: "jaa5" }],
     [],
     [],
   ],
   lateral: [
     [],
     [],
-    [{ label: "l [l] 啦", audioId: "laa1" }],
+    [{ jyutping: "l", ipa: "[l]", example: "啦", audioId: "laa1" }],
     [],
     [],
     [],
@@ -119,9 +125,13 @@ const onsetCellsByRow: Record<OnsetRowKey, CellEntry[][]> = {
             {entries.map((entry, idx) => (
               <>
                 {idx > 0 && <br />}
-                <span class="whitespace-nowrap">
-                  {entry.label} <Audio id={entry.audioId} locale={locale} />
-                </span>
+                <PhoneticToken
+                  jyutping={entry.jyutping}
+                  ipa={entry.ipa}
+                  example={entry.example}
+                  audioId={entry.audioId}
+                  locale={locale}
+                />
               </>
             ))}
           </td>

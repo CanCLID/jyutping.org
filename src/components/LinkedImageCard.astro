@@ -1,6 +1,7 @@
 ---
 import { Image, Picture } from "astro:assets";
 import type { ImageMetadata } from "astro";
+import Icon from "@/components/Icon.astro";
 
 interface Props {
   heading: string;
@@ -11,9 +12,7 @@ interface Props {
   publicSrc?: string;
   publicWidth?: number;
   publicHeight?: number;
-  containerClassName?: string;
-  headingClassName?: string;
-  linkClassName?: string;
+  mediaFit?: "cover" | "contain";
   imageClassName?: string;
 }
 
@@ -26,54 +25,77 @@ const {
   publicSrc,
   publicWidth,
   publicHeight,
-  containerClassName = "flex flex-col items-center p-4",
-  headingClassName = "my-4 text-2xl font-semibold",
-  linkClassName = "block w-full max-w-md transition-opacity duration-200 hover:opacity-80",
-  imageClassName = "mx-auto h-auto max-w-full rounded-lg shadow-sm hover:shadow-md",
+  mediaFit = "cover",
+  imageClassName,
 } = Astro.props;
 
 const HeadingTag = headingLevel;
+const hostname = new URL(href).hostname.replace(/^www\./, "");
+const isContain = mediaFit === "contain";
+const resolvedImageClassName =
+  imageClassName ??
+  "h-full w-full " + (isContain ? "object-contain" : "object-cover");
 ---
 
-<div class={containerClassName}>
-  <HeadingTag class={headingClassName}>{heading}</HeadingTag>
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    class={linkClassName}
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="group surface-card surface-card-interactive ring-1 ring-[#dce6f0]/80 flex flex-col overflow-hidden no-underline"
+>
+  <div
+    class:list={[
+      "aspect-[16/10] w-full overflow-hidden bg-[#f6f9fc] flex items-center justify-center border-b border-[#dce6f0]/60",
+      isContain && "p-6",
+    ]}
   >
-    {image ? (
-      image.format === "svg" ? (
-        <Image
-          src={image}
-          alt={alt}
-          format="svg"
-          width={image.width}
-          height={image.height}
-          class={imageClassName}
-          loading="lazy"
-        />
+    {
+      image ? (
+        image.format === "svg" ? (
+          <Image
+            src={image}
+            alt={alt}
+            format="svg"
+            width={image.width}
+            height={image.height}
+            class={resolvedImageClassName}
+            loading="lazy"
+          />
+        ) : (
+          <Picture
+            src={image}
+            alt={alt}
+            formats={["avif", "webp"]}
+            widths={[320, 640, 960]}
+            sizes="(max-width: 768px) 100vw, 28rem"
+            class={resolvedImageClassName}
+            loading="lazy"
+          />
+        )
       ) : (
-        <Picture
-          src={image}
+        <img
+          src={publicSrc}
           alt={alt}
-          formats={["avif", "webp"]}
-          widths={[320, 640, 960]}
-          sizes="(max-width: 768px) 100vw, 28rem"
-          class={imageClassName}
+          width={publicWidth}
+          height={publicHeight}
+          class={resolvedImageClassName}
           loading="lazy"
         />
       )
-    ) : (
-      <img
-        src={publicSrc}
-        alt={alt}
-        width={publicWidth}
-        height={publicHeight}
-        class={imageClassName}
-        loading="lazy"
-      />
-    )}
-  </a>
-</div>
+    }
+  </div>
+
+  <div class="flex items-center justify-between gap-3 bg-white px-5 py-4">
+    <div class="min-w-0">
+      <HeadingTag class="truncate text-lg font-semibold text-slate-900 transition-colors group-hover:text-[#0b467e]">
+        {heading}
+      </HeadingTag>
+      <p class="mt-0.5 truncate text-sm text-slate-500">{hostname}</p>
+    </div>
+    <Icon
+      name="arrow-up-right"
+      size="1.125rem"
+      class="shrink-0 text-slate-400 transition-colors group-hover:text-[#1678d3]"
+    />
+  </div>
+</a>

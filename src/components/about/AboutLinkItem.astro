@@ -15,9 +15,11 @@ const iconByKind: Record<Props["kind"], IconName> = {
 };
 ---
 
-<li class="flex items-start">
-  <Icon name={iconByKind[kind]} size="1.25rem" class="mt-1 me-3 text-gray-500" />
-  <div class="min-w-0">
+<li class="flex items-start gap-3.5">
+  <span class="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-[#eef5fc] text-[#1678d3]">
+    <Icon name={iconByKind[kind]} size="1.25rem" />
+  </span>
+  <div class="min-w-0 pt-1">
     <slot />
   </div>
 </li>

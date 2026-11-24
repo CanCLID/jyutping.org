@@ -1,5 +1,5 @@
 ---
-import Audio from "@/components/Audio.astro";
+import PhoneticToken from "@/components/jyutping/PhoneticToken.astro";
 import ScrollableTable from "@/components/ScrollableTable.astro";
 import { I18n } from "@/i18n/utils";
 import { getUiLabels } from "@/i18n/uiLabels";
@@ -21,10 +21,10 @@ const ui = getUiLabels(locale);
   <tbody>
     <tr>
       <td class={tableDataCellClass} lang="yue">
-        m [m̩] 唔 <Audio id="m4" locale={locale} />
+        <PhoneticToken jyutping="m" ipa="[m̩]" example="唔" audioId="m4" locale={locale} />
       </td>
       <td class={tableDataCellClass} lang="yue">
-        ng [ŋ̩] 吳 <Audio id="ng4" locale={locale} />
+        <PhoneticToken jyutping="ng" ipa="[ŋ̩]" example="吳" audioId="ng4" locale={locale} />
       </td>
     </tr>
   </tbody>

@@ -20,6 +20,6 @@ const jsonLd = buildResourcesJsonLd({
 });
 ---
 
-<BaseLayout lang={locale} title={title} description={description} jsonLd={jsonLd}>
-  <KeyboardPage locale={locale} />
+<BaseLayout lang={locale} title={title} description={description} jsonLd={jsonLd} hasHero>
+  <KeyboardPage locale={locale} title={title} description={description} />
 </BaseLayout>

@@ -41,11 +41,11 @@ const { sample = "bakfung" } = Astro.props;
 const lines = samples[sample].trim().split(/\r\n?|\n/);
 ---
 
-<div class="my-6 p-4 border border-neutral-800 rounded-md">
+<div class="my-6 space-y-2 rounded-2xl bg-[#f6f9fc] p-6 sm:p-8 ring-1 ring-[#dce6f0]/80">
   {lines.map((line) => (
     <div class="flex flex-wrap items-end leading-loose">
       {parseText(line).map((item) => (
-        <div class="inline-flex flex-col items-center mx-1">
+        <div class="inline-flex flex-col items-center rounded-xl px-1 py-0.5 transition-colors hover:bg-white">
           {item.jyutping ? (
             <Audio id={item.jyutping} />
           ) : (

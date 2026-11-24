@@ -19,12 +19,15 @@ const tocHeadings = headings.filter(({ depth }) => depth > 1 && depth < 4);
     aria-label={ui.tocNav}
     class="toc-nav max-h-[calc(100dvh-6rem)] overflow-y-auto overscroll-y-contain p-1"
   >
-    <ul class="space-y-1.5">
+    <h2 class="mb-3 ps-3 text-xs font-semibold uppercase tracking-wider text-slate-500">
+      {ui.tocNav}
+    </h2>
+    <ul class="space-y-1 border-s border-[#dce6f0] ps-2">
       {tocHeadings.map((heading) => (
         <li class={heading.depth === 3 ? "ms-3" : undefined}>
           <a
             href={`#${heading.slug}`}
-            class="block text-sm text-gray-600 hover:text-gray-900 border-s-2 border-transparent hover:border-gray-400 ps-2 py-0.5 transition-colors duration-150"
+            class="block rounded-lg px-2.5 py-1.5 text-[0.9375rem] leading-snug text-slate-600 hover:bg-[#f6f9fc] hover:text-[#0e5394] transition-colors duration-150"
           >
             {heading.text}
           </a>

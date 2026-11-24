@@ -1,0 +1,50 @@
+---
+import Audio from "@/components/Audio.astro";
+
+interface Props {
+  jyutping?: string;
+  sub?: string;
+  ipa?: string;
+  example?: string;
+  audioId?: string;
+  locale: string;
+  extraExample?: {
+    char: string;
+    audioId: string;
+  };
+  compact?: boolean;
+}
+
+const {
+  jyutping,
+  sub,
+  ipa,
+  example,
+  audioId,
+  locale,
+  extraExample,
+  compact = false,
+} = Astro.props;
+---
+
+<span class:list={["inline-flex items-center whitespace-nowrap", compact ? "gap-0.5" : "gap-1.5"]}>
+  {
+    jyutping && (
+      <strong class="font-semibold text-[#0b467e]">
+        {jyutping}
+        {sub && <sub class="ms-0.5 font-normal text-slate-500">{sub}</sub>}
+      </strong>
+    )
+  }
+  {ipa && <span class="font-mono text-[0.9em] text-slate-500">{ipa}</span>}
+  {example && <span class="font-medium text-slate-900">{example}</span>}
+  {audioId && <Audio id={audioId} locale={locale} />}
+  {
+    extraExample && (
+      <>
+        <span class="font-medium text-slate-900">{extraExample.char}</span>
+        <Audio id={extraExample.audioId} locale={locale} />
+      </>
+    )
+  }
+</span>

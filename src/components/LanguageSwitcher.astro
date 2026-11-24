@@ -36,7 +36,7 @@ const ui = getUiLabels(locale);
     aria-controls="lang-popover"
     aria-expanded="false"
     aria-label={ui.languageSelector}
-    class="target-control inline-flex items-center gap-1.5 text-white/90 hover:text-white transition-colors cursor-pointer"
+    class="target-control inline-flex items-center gap-1.5 rounded-full bg-white/12 px-3.5 py-1.5 text-sm font-medium text-white hover:bg-white/20 transition-colors cursor-pointer"
   >
     <Icon name="world" size="1.125rem" />
     <span lang={formatBcp47Locale(currentLocale)} class="mb-px">
@@ -46,7 +46,7 @@ const ui = getUiLabels(locale);
   </button>
 
   <div id="lang-popover" popover="auto" class="lang-popover">
-    <ul class="py-1 min-w-max">
+    <ul class="p-1.5 min-w-max space-y-0.5">
       {I18n.locales.map((targetLocale) => {
         const isCurrent = targetLocale === currentLocale;
         const isTranslated = !availableLocales || availableLocales.includes(targetLocale);
@@ -60,7 +60,7 @@ const ui = getUiLabels(locale);
               href={targetHref}
               lang={formatBcp47Locale(targetLocale)}
               aria-current={isCurrent ? "page" : undefined}
-              class="target-control flex items-center px-4 py-1.5 text-sm text-gray-800 hover:bg-gray-100 transition-colors"
+              class="target-control flex items-center rounded-md px-3.5 py-1.5 text-sm text-slate-800 hover:bg-[#eef5fc] hover:text-[#0b467e] transition-colors"
             >
               {languageNames[targetLocale] ?? targetLocale}
             </a>

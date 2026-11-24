@@ -25,24 +25,24 @@ const recoveryLinks = [
   unavailableLocaleFallbackPath="/"
   noindex
 >
-  <section class="container mx-auto max-w-3xl px-6 py-16 md:py-24 text-center">
-    <p class="inline-block rounded-full bg-blue-50 px-4 py-1 text-sm font-semibold text-[#1678d3] border border-blue-200">
-      HTTP 404
-    </p>
-    <h1 class="mt-6 text-4xl md:text-5xl font-semibold text-gray-900">
-      {copy.heading}
+  <section class="mx-auto max-w-3xl px-6 py-16 md:py-24 text-center">
+    <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-[#1678d3]">
+      404
     </h1>
-    <p class="mt-4 text-lg text-gray-700">
+    <h2 class="mt-4 text-2xl md:text-3xl font-semibold text-slate-900">
+      {copy.heading}
+    </h2>
+    <p class="mt-4 text-lg text-slate-700">
       {copy.message}
     </p>
-    <p lang="en" class="mt-2 text-base text-gray-600">
+    <p lang="en" class="mt-1.5 text-base text-slate-600">
       {enCopy.message}
     </p>
 
     <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
       <a
         href="/"
-        class="target-control inline-flex items-center gap-2 rounded-lg bg-[#1678d3] px-6 py-3 font-medium text-white shadow-sm hover:bg-[#1262ad] transition-colors"
+        class="target-control inline-flex items-center gap-2 rounded-full bg-[#1678d3] px-6 py-3 font-medium text-white shadow-sm hover:bg-[#1263b0] transition-colors"
       >
         {copy.backHome}
         <span lang="en" class="text-white/90">/ {enCopy.backHome}</span>
@@ -51,10 +51,10 @@ const recoveryLinks = [
 
     <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
       {recoveryLinks.map((item) => (
-        <div class="rounded-lg border border-gray-200 bg-white p-4 flex items-center justify-between gap-4 hover:border-blue-300 transition-colors">
+        <div class="surface-card surface-card-interactive bg-white ring-1 ring-[#dce6f0]/80 p-5 flex items-center justify-between gap-4">
           <a
             href={item.href}
-            class="target-control inline-flex items-center gap-2.5 font-medium text-gray-900 hover:text-[#1678d3] transition-colors"
+            class="target-control inline-flex items-center gap-2.5 font-medium text-slate-900 hover:text-[#1678d3] transition-colors"
           >
             <Icon name={item.icon} size="1.25rem" class="text-[#1678d3] shrink-0" />
             <span>{item.label}</span>
@@ -62,7 +62,7 @@ const recoveryLinks = [
           <a
             href={item.enHref}
             lang="en"
-            class="target-control text-sm font-medium text-[#0c569c] hover:underline shrink-0"
+            class="target-control text-sm font-medium text-[#0e5394] hover:underline shrink-0"
           >
             {item.enLabel}
           </a>

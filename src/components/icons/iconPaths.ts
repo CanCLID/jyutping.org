@@ -11,6 +11,9 @@ export const iconDefinitions = {
   "arrow-right": {
     paths: ["M5 12l14 0", "M13 18l6 -6", "M13 6l6 6"],
   },
+  "arrow-up-right": {
+    paths: ["M17 7l-10 10", "M8 7l9 0l0 9"],
+  },
   "book-2": {
     paths: [
       "M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12",
@@ -136,10 +139,24 @@ export const iconDefinitions = {
   "menu-2": {
     paths: ["M4 6l16 0", "M4 12l16 0", "M4 18l16 0"],
   },
+  "player-pause": {
+    paths: [
+      "M6 5m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z",
+      "M14 5m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z",
+    ],
+  },
+  "player-play": {
+    paths: ["M7 4v16l13 -8z"],
+  },
   "player-play-filled": {
     filled: true,
     paths: [
       "M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z",
+    ],
+  },
+  "rotate-clockwise": {
+    paths: [
+      "M4.05 11a8 8 0 1 1 .5 4m-.5 5v-5h5",
     ],
   },
   sparkles: {

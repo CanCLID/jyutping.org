@@ -20,22 +20,22 @@ const tones = [1, 2, 3, 4, 5, 6] as const;
 >
   <thead>
     <tr>
-      <th scope="col">
+      <th class="text-center" scope="col">
         <span class="inline-block -scale-y-100" aria-hidden="true">⤷</span>
       </th>
       {tones.map((colTone) => (
-        <th scope="col">{colTone}</th>
+        <th class="text-center" scope="col">{colTone}</th>
       ))}
     </tr>
   </thead>
   <tbody>
     {tones.map((rowTone) => (
       <tr>
-        <th class="sticky-row-header" scope="row">{rowTone}</th>
+        <th class="sticky-row-header text-center font-semibold" scope="row">{rowTone}</th>
         {tones.map((colTone) => (
-          <td>
-            <span class="whitespace-nowrap">
-              {`${rowTone}￫${colTone}`}{" "}
+          <td class={rowTone === colTone ? "bg-[#eef5fc]/50 text-center" : "text-center"}>
+            <span class="inline-flex items-center gap-0.5 whitespace-nowrap font-mono text-base font-medium text-slate-700">
+              <span>{`${rowTone}￫${colTone}`}</span>
               <Audio id={`${rowTone}${colTone}`} locale={locale} />
             </span>
           </td>

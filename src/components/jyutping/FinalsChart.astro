@@ -1,5 +1,5 @@
 ---
-import Audio from "@/components/Audio.astro";
+import PhoneticToken from "@/components/jyutping/PhoneticToken.astro";
 import ScrollableTable from "@/components/ScrollableTable.astro";
 import { getJyutpingTableLabels } from "@/data/jyutping";
 import { getUiLabels } from "@/i18n/uiLabels";
@@ -46,14 +46,14 @@ const ui = getUiLabels(locale);
     <tr>
       <th class:list={[finalsChartTableHeadCellClass, "sticky-row-header"]} rowspan={2} scope="row">i</th>
       <th class={finalsChartTableHeadCellClass} scope="row">[iː]</th>
-      <td class={finalsChartTableDataCellClass} lang="yue">i 思 <Audio id="si1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="i" example="思" audioId="si1" locale={locale} /></td>
       <td class={finalsChartMutedCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">iu 消 <Audio id="siu1" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">im 閃 <Audio id="sim2" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">in 先 <Audio id="sin1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="iu" example="消" audioId="siu1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="im" example="閃" audioId="sim2" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="in" example="先" audioId="sin1" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ip 攝 <Audio id="sip3" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">it 泄 <Audio id="sit3" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ip" example="攝" audioId="sip3" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="it" example="泄" audioId="sit3" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
     </tr>
     <tr>
@@ -63,35 +63,35 @@ const ui = getUiLabels(locale);
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ing 升 <Audio id="sing1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ing" example="升" audioId="sing1" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ik 識 <Audio id="sik1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ik" example="識" audioId="sik1" locale={locale} /></td>
     </tr>
     <tr>
       <th class:list={[finalsChartTableHeadCellClass, "sticky-row-header"]} scope="row">yu</th>
       <th class={finalsChartTableHeadCellClass} scope="row">[yː]</th>
-      <td class={finalsChartTableDataCellClass} lang="yue">yu 書 <Audio id="syu1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="yu" example="書" audioId="syu1" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">yun 孫 <Audio id="syun1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="yun" example="孫" audioId="syun1" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">yut 雪 <Audio id="syut3" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="yut" example="雪" audioId="syut3" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
     </tr>
     <tr>
       <th class:list={[finalsChartTableHeadCellClass, "sticky-row-header"]} rowspan={2} scope="row">u</th>
       <th class={finalsChartTableHeadCellClass} scope="row">[uː]</th>
-      <td class={finalsChartTableDataCellClass} lang="yue">u 夫 <Audio id="fu1" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ui 灰 <Audio id="fui1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="u" example="夫" audioId="fu1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ui" example="灰" audioId="fui1" locale={locale} /></td>
       <td class={finalsChartMutedCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">un 歡 <Audio id="fun1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="un" example="歡" audioId="fun1" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ut 闊 <Audio id="fut3" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ut" example="闊" audioId="fut3" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
     </tr>
     <tr>
@@ -99,21 +99,21 @@ const ui = getUiLabels(locale);
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartMutedCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">um</td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="um" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ung 風 <Audio id="fung1" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">up</td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ung" example="風" audioId="fung1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="up" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">uk 福 <Audio id="fuk1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="uk" example="福" audioId="fuk1" locale={locale} /></td>
     </tr>
     <tr>
       <th class:list={[finalsChartTableHeadCellClass, "sticky-row-header"]} rowspan={2} scope="row">e</th>
       <th class={finalsChartTableHeadCellClass} scope="row">[e]</th>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ei 四 <Audio id="sei3" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ei" example="四" audioId="sei3" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">en</td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="en" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
@@ -121,48 +121,48 @@ const ui = getUiLabels(locale);
     </tr>
     <tr>
       <th class={finalsChartTableHeadCellClass} scope="row">[ɛː]</th>
-      <td class={finalsChartTableDataCellClass} lang="yue">e 些 <Audio id="se1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="e" example="些" audioId="se1" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">eu 掉 <Audio id="deu6" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">em 𦧷 <Audio id="lem2" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="eu" example="掉" audioId="deu6" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="em" example="𦧷" audioId="lem2" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">eng 鄭 <Audio id="zeng6" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ep 夾 <Audio id="gep6" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">et 坺 <Audio id="pet6" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ek 石 <Audio id="sek6" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="eng" example="鄭" audioId="zeng6" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ep" example="夾" audioId="gep6" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="et" example="坺" audioId="pet6" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ek" example="石" audioId="sek6" locale={locale} /></td>
     </tr>
     <tr>
       <th class:list={[finalsChartTableHeadCellClass, "sticky-row-header"]} scope="row">eo</th>
       <th class={finalsChartTableHeadCellClass} scope="row">[ɵ]</th>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">eoi 需 <Audio id="seoi1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="eoi" example="需" audioId="seoi1" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">eon 詢 <Audio id="seon1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="eon" example="詢" audioId="seon1" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">eot 摔 <Audio id="seot1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="eot" example="摔" audioId="seot1" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
     </tr>
     <tr>
       <th class:list={[finalsChartTableHeadCellClass, "sticky-row-header"]} scope="row">oe</th>
       <th class={finalsChartTableHeadCellClass} scope="row">[œː]</th>
-      <td class={finalsChartTableDataCellClass} lang="yue">oe 鋸 <Audio id="goe3" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="oe" example="鋸" audioId="goe3" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">oeng 疆 <Audio id="goeng1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="oeng" example="疆" audioId="goeng1" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartHighlightCellClass} lang="yue">oet <Audio id="oet6" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">oek 腳 <Audio id="goek3" locale={locale} /></td>
+      <td class={finalsChartHighlightCellClass} lang="yue"><PhoneticToken compact jyutping="oet" audioId="oet6" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="oek" example="腳" audioId="goek3" locale={locale} /></td>
     </tr>
     <tr>
       <th class:list={[finalsChartTableHeadCellClass, "sticky-row-header"]} rowspan={2} scope="row">o</th>
       <th class={finalsChartTableHeadCellClass} scope="row">[o]</th>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ou 好 <Audio id="hou2" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ou" example="好" audioId="hou2" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
@@ -172,41 +172,41 @@ const ui = getUiLabels(locale);
     </tr>
     <tr>
       <th class={finalsChartTableHeadCellClass} scope="row">[ɔː]</th>
-      <td class={finalsChartTableDataCellClass} lang="yue">o 可 <Audio id="ho2" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">oi 開 <Audio id="hoi1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="o" example="可" audioId="ho2" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="oi" example="開" audioId="hoi1" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">on 看 <Audio id="hon3" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ong 康 <Audio id="hong1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="on" example="看" audioId="hon3" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ong" example="康" audioId="hong1" locale={locale} /></td>
       <td class={finalsChartTableDataCellClass} lang="yue"></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ot 喝 <Audio id="hot3" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ok 學 <Audio id="hok6" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ot" example="喝" audioId="hot3" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ok" example="學" audioId="hok6" locale={locale} /></td>
     </tr>
     <tr>
       <th class:list={[finalsChartTableHeadCellClass, "sticky-row-header"]} scope="row">a</th>
       <th class={finalsChartTableHeadCellClass} scope="row">[ɐ]</th>
-      <td class={finalsChartHighlightCellClass} lang="yue">a 嘞 <Audio id="la3" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ai 擠 <Audio id="zai1" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">au 周 <Audio id="zau1" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">am 斟 <Audio id="zam1" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">an 珍 <Audio id="zan1" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ang 增 <Audio id="zang1" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ap 汁 <Audio id="zap1" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">at 侄 <Audio id="zat6" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">ak 則 <Audio id="zak1" locale={locale} /></td>
+      <td class={finalsChartHighlightCellClass} lang="yue"><PhoneticToken compact jyutping="a" example="嘞" audioId="la3" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ai" example="擠" audioId="zai1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="au" example="周" audioId="zau1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="am" example="斟" audioId="zam1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="an" example="珍" audioId="zan1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ang" example="增" audioId="zang1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ap" example="汁" audioId="zap1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="at" example="侄" audioId="zat6" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="ak" example="則" audioId="zak1" locale={locale} /></td>
     </tr>
     <tr>
       <th class:list={[finalsChartTableHeadCellClass, "sticky-row-header"]} scope="row">aa</th>
       <th class={finalsChartTableHeadCellClass} scope="row">[aː]</th>
-      <td class={finalsChartTableDataCellClass} lang="yue">aa 渣 <Audio id="zaa1" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">aai 齋 <Audio id="zaai1" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">aau 嘲 <Audio id="zaau1" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">aam 站 <Audio id="zaam6" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">aan 讚 <Audio id="zaan3" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">aang 掙 <Audio id="zaang6" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">aap 集 <Audio id="zaap6" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">aat 扎 <Audio id="zaat3" locale={locale} /></td>
-      <td class={finalsChartTableDataCellClass} lang="yue">aak 責 <Audio id="zaak6" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="aa" example="渣" audioId="zaa1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="aai" example="齋" audioId="zaai1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="aau" example="嘲" audioId="zaau1" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="aam" example="站" audioId="zaam6" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="aan" example="讚" audioId="zaan3" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="aang" example="掙" audioId="zaang6" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="aap" example="集" audioId="zaap6" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="aat" example="扎" audioId="zaat3" locale={locale} /></td>
+      <td class={finalsChartTableDataCellClass} lang="yue"><PhoneticToken compact jyutping="aak" example="責" audioId="zaak6" locale={locale} /></td>
     </tr>
   </tbody>
 </ScrollableTable>

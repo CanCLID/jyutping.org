@@ -1,5 +1,5 @@
 ---
-import Audio from "@/components/Audio.astro";
+import PhoneticToken from "@/components/jyutping/PhoneticToken.astro";
 import ScrollableTable from "@/components/ScrollableTable.astro";
 import { I18n } from "@/i18n/utils";
 import { getUiLabels } from "@/i18n/uiLabels";
@@ -21,47 +21,63 @@ const ui = getUiLabels(locale);
   <tbody>
     <tr>
       <td class={tableDataCellClass} lang="yue">
-        i [iː] 詩 <Audio id="si1" locale={locale} />
-        <br />i<sub>後接 -ng, -k</sub> [e] 星 <Audio id="sing1" locale={locale} /> 識
-        <Audio id="sik1" locale={locale} />
+        <PhoneticToken jyutping="i" ipa="[iː]" example="詩" audioId="si1" locale={locale} />
         <br />
-        yu [y] 書 <Audio id="syu1" locale={locale} />
+        <PhoneticToken
+          jyutping="i"
+          sub="後接 -ng, -k"
+          ipa="[e]"
+          example="星"
+          audioId="sing1"
+          extraExample={{ char: "識", audioId: "sik1" }}
+          locale={locale}
+        />
+        <br />
+        <PhoneticToken jyutping="yu" ipa="[y]" example="書" audioId="syu1" locale={locale} />
       </td>
       <td class={tableDataCellClass} lang="yue"></td>
       <td class={tableDataCellClass} lang="yue">
-        u [uː] 夫 <Audio id="fu1" locale={locale} />
-        <br />u<sub>後接 -ng, -k</sub> [o] 風 <Audio id="fung1" locale={locale} /> 福
-        <Audio id="fuk1" locale={locale} />
+        <PhoneticToken jyutping="u" ipa="[uː]" example="夫" audioId="fu1" locale={locale} />
+        <br />
+        <PhoneticToken
+          jyutping="u"
+          sub="後接 -ng, -k"
+          ipa="[o]"
+          example="風"
+          audioId="fung1"
+          extraExample={{ char: "福", audioId: "fuk1" }}
+          locale={locale}
+        />
       </td>
     </tr>
     <tr>
       <td class={tableDataCellClass} lang="yue">
-        e<sub>後接 -i</sub> [e] 四 <Audio id="sei3" locale={locale} />
+        <PhoneticToken jyutping="e" sub="後接 -i" ipa="[e]" example="四" audioId="sei3" locale={locale} />
         <br />
-        eo [ɵ] 詢 <Audio id="seon1" locale={locale} />
+        <PhoneticToken jyutping="eo" ipa="[ɵ]" example="詢" audioId="seon1" locale={locale} />
       </td>
       <td class={tableDataCellClass} lang="yue"></td>
       <td class={tableDataCellClass} lang="yue">
-        o<sub>後接 -u</sub> [o] 蘇 <Audio id="sou1" locale={locale} />
+        <PhoneticToken jyutping="o" sub="後接 -u" ipa="[o]" example="蘇" audioId="sou1" locale={locale} />
       </td>
     </tr>
     <tr>
       <td class={tableDataCellClass} lang="yue">
-        e [ɛː] 些 <Audio id="se1" locale={locale} />
+        <PhoneticToken jyutping="e" ipa="[ɛː]" example="些" audioId="se1" locale={locale} />
         <br />
-        oe [œː] 鋸 <Audio id="goe3" locale={locale} />
+        <PhoneticToken jyutping="oe" ipa="[œː]" example="鋸" audioId="goe3" locale={locale} />
       </td>
       <td class={tableDataCellClass} lang="yue">
-        a [ɐ] 新 <Audio id="san1" locale={locale} />
+        <PhoneticToken jyutping="a" ipa="[ɐ]" example="新" audioId="san1" locale={locale} />
       </td>
       <td class={tableDataCellClass} lang="yue">
-        o [ɔː] 疏 <Audio id="so1" locale={locale} />
+        <PhoneticToken jyutping="o" ipa="[ɔː]" example="疏" audioId="so1" locale={locale} />
       </td>
     </tr>
     <tr>
       <td class={tableDataCellClass} lang="yue"></td>
       <td class={tableDataCellClass} lang="yue">
-        aa [aː] 沙 <Audio id="saa1" locale={locale} />
+        <PhoneticToken jyutping="aa" ipa="[aː]" example="沙" audioId="saa1" locale={locale} />
       </td>
       <td class={tableDataCellClass} lang="yue"></td>
     </tr>

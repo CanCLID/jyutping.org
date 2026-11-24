@@ -8,9 +8,14 @@ import { getUiLabels } from "@/i18n/uiLabels";
 interface Props {
   availableLocales?: readonly Locale[];
   unavailableLocaleFallbackPath?: string;
+  hasHero?: boolean;
 }
 
-const { availableLocales, unavailableLocaleFallbackPath } = Astro.props;
+const {
+  availableLocales,
+  unavailableLocaleFallbackPath,
+  hasHero = false,
+} = Astro.props;
 const { currentLocale, url } = Astro;
 const pathname = url.pathname;
 const locale = currentLocale || I18n.defaultLocale;
@@ -21,6 +26,7 @@ const isHomepage =
   I18n.locales
     .filter((candidate) => candidate !== I18n.defaultLocale)
     .some((candidate) => normalizedPathname === `/${candidate}`);
+const overlaysHero = isHomepage || hasHero;
 
 const navLinkKeys = ["learn", "jyutping", "blog", "keyboard", "about"] as const;
 const navLinks = navLinkKeys.map((key) => {
@@ -41,26 +47,26 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
 <header
   id="site-header"
   class:list={[
-    "site-header z-50 p-4 text-white",
-    isHomepage
+    "site-header z-50 px-4 py-3.5 text-white",
+    overlaysHero
       ? "absolute inset-x-0 top-0 bg-transparent"
       : "relative bg-[#1678d3]",
   ]}
 >
-  <div class="header-inner flex items-center justify-between gap-6 px-4">
+  <div class="header-inner mx-auto flex max-w-7xl items-center justify-between gap-6 px-2 sm:px-4">
     <a
       href={logoHref}
       aria-current={isHomepage ? "page" : undefined}
       class="target-control inline-flex items-center text-white hover:opacity-85 transition-opacity"
     >
-      <span class="text-3xl font-jyutping">粵拼</span>
+      <span class="text-4xl leading-[1.25] font-jyutping">粵拼</span>
     </a>
 
     <nav class="site-nav flex items-center" aria-label={ui.primaryNav}>
       <button
         type="button"
         id="menu-button"
-        class="menu-button inline-flex items-center justify-center rounded-md text-white hover:bg-white/10 transition-colors cursor-pointer"
+        class="menu-button inline-flex items-center justify-center rounded-lg text-white hover:bg-white/12 transition-colors cursor-pointer"
         popovertarget="site-menu"
         popovertargetaction="toggle"
         aria-controls="site-menu"
@@ -76,7 +82,7 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
             <a
               href={link.href}
               aria-current={link.isCurrent ? "page" : undefined}
-              class="text-white text-lg hover:opacity-90 transition-opacity"
+              class="rounded-full px-3 py-1.5 text-sm sm:text-base font-medium text-white/90 hover:bg-white/12 hover:text-white transition-colors"
             >
               {link.title}
             </a>

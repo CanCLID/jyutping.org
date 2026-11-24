@@ -2,6 +2,7 @@
 import { render } from "astro:content";
 import AboutGrid from "@/components/about/AboutGrid.astro";
 import AboutLinkItem from "@/components/about/AboutLinkItem.astro";
+import PageBanner from "@/components/PageBanner.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { I18n } from "@/i18n/utils";
 import { makeTitle } from "@/i18n/pageHeadings";
@@ -29,16 +30,17 @@ const jsonLd = buildAboutJsonLd({
   title={entry.data.title}
   description={description}
   jsonLd={jsonLd}
+  hasHero
 >
-  <div class="bg-[#1678d3] text-white py-16 mb-8">
-    <h1
-      class="my-16 font-semibold text-5xl md:text-6xl text-center container max-w-8xl mx-auto"
-    >
-      jyutping.org
-    </h1>
-  </div>
+  <PageBanner
+    eyebrow={entry.data.title}
+    title="jyutping.org"
+    subtitle={description}
+    align="center"
+    maxWidth="6xl"
+  />
 
-  <div class="container mx-auto px-4 py-4 text-gray-800">
+  <div class="about-content mx-auto max-w-6xl px-6 py-10 md:py-12 text-slate-700">
     <Content components={{ ...sharedMdxComponents, AboutGrid, AboutLinkItem }} />
   </div>
 </BaseLayout>

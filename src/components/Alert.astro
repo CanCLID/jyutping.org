@@ -16,19 +16,19 @@ interface Props {
 const { color = "primary", title } = Astro.props;
 
 const colorClasses: Record<AlertColor, string> = {
-  primary: "bg-blue-50 border-blue-600 text-blue-900",
-  secondary: "bg-gray-100 border-gray-500 text-gray-800",
-  success: "bg-green-50 border-green-700 text-green-900",
-  danger: "bg-red-50 border-red-600 text-red-900",
-  warning: "bg-yellow-50 border-yellow-600 text-yellow-900",
-  info: "bg-cyan-50 border-cyan-700 text-cyan-900",
-  light: "bg-gray-50 border-gray-400 text-gray-700",
+  primary: "bg-[#eef5fc] border-[#dbeafa] text-[#0b467e]",
+  secondary: "bg-[#f6f9fc] border-[#dce6f0] text-slate-800",
+  success: "bg-emerald-50/80 border-emerald-200 text-emerald-950",
+  danger: "bg-rose-50/80 border-rose-200 text-rose-950",
+  warning: "bg-amber-50/85 border-amber-200 text-amber-950",
+  info: "bg-sky-50/85 border-sky-200 text-sky-950",
+  light: "bg-[#f6f9fc] border-[#dce6f0] text-slate-700",
 };
 ---
 
 <!-- Decorative callout box, not a live alert -->
-<div class={`border-s-4 px-4 py-2 my-4 ${colorClasses[color]}`} role="note">
-  {title && <p class="mt-2 mb-1 font-bold text-lg">{title}</p>}
+<div class={`rounded-2xl border px-5 py-4 my-6 text-base leading-relaxed [&>div>p:first-child]:mt-0 [&>div>p:last-child]:mb-0 ${colorClasses[color]}`} role="note">
+  {title && <p class="mt-0 mb-1.5 font-semibold text-base">{title}</p>}
   <div>
     <slot />
   </div>

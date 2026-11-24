@@ -1,0 +1,75 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  eyebrow?: string;
+  rubyTitle?: boolean;
+  align?: "left" | "center";
+  maxWidth?: "5xl" | "6xl" | "7xl" | "wide";
+}
+
+const {
+  title,
+  subtitle,
+  eyebrow,
+  rubyTitle = false,
+  align = "left",
+  maxWidth = "7xl",
+} = Astro.props;
+
+const maxWidthClasses: Record<NonNullable<Props["maxWidth"]>, string> = {
+  "5xl": "max-w-5xl",
+  "6xl": "max-w-6xl",
+  "7xl": "max-w-7xl",
+  wide: "max-w-[88rem]",
+};
+
+const hasTitle = Boolean(title) || Astro.slots.has("title");
+const hasSubtitle = Boolean(subtitle) || Astro.slots.has("subtitle");
+---
+
+<section class="brand-hero text-white">
+  <div
+    class:list={[
+      "mx-auto px-6 pt-22 pb-8 md:pt-24 md:pb-10",
+      maxWidthClasses[maxWidth],
+      align === "center" ? "text-center" : "text-left",
+    ]}
+  >
+    {
+      eyebrow && (
+        <p class="mb-3 inline-flex items-center gap-2 rounded-full bg-[#0b467e]/40 px-3.5 py-1 text-xs sm:text-sm font-semibold tracking-wider uppercase text-white">
+          {eyebrow}
+        </p>
+      )
+    }
+    {
+      hasTitle && (
+        <h1
+          class:list={[
+            "tracking-tight text-white",
+            rubyTitle
+              ? "text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-jyutping font-normal leading-[1.35]"
+              : "text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.2]",
+          ]}
+        >
+          <slot name="title">{title}</slot>
+        </h1>
+      )
+    }
+    {
+      hasSubtitle && (
+        <p
+          class:list={[
+            "mt-3 max-w-4xl leading-relaxed text-white",
+            rubyTitle ? "text-xl sm:text-2xl" : "text-lg sm:text-xl",
+            align === "center" && "mx-auto",
+          ]}
+        >
+          <slot name="subtitle">{subtitle}</slot>
+        </p>
+      )
+    }
+    <slot />
+  </div>
+</section>

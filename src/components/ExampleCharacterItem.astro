@@ -20,33 +20,33 @@ const items = Array.from(honzi, (char, i) => ({
 }));
 ---
 
-<li class="whitespace-nowrap">
+<li class="flex flex-col items-center justify-center rounded-2xl bg-[#f6f9fc] px-3.5 py-3.5 ring-1 ring-[#dce6f0]/75 transition-all hover:bg-white hover:shadow-[var(--shadow-card)] whitespace-nowrap mb-0">
   {items.map(({ char, rom, trans: other }) =>
     otherTranscription ? (
       <ruby class="[ruby-align:center] [ruby-position:under]">
         <ruby class="[ruby-align:center] [ruby-position:over]">
-          <ruby lang="yue" class="text-3xl [ruby-align:center] [ruby-position:over]">
+          <ruby lang="yue" class="text-3xl font-medium text-slate-900 [ruby-align:center] [ruby-position:over]">
             {char}
-            <rt lang="yue-Latn-jyutping" class="text-xl font-semibold mx-0.5">
-              <span class="text-amber-700">{rom[1]}</span>
-              <span class="text-cyan-700">{rom[3]}</span>
+            <rt lang="yue-Latn-jyutping" class="text-lg font-semibold mx-0.5">
+              <span class="text-[#0b467e]">{rom[1]}</span>
+              <span class="text-[#0284c7]">{rom[3]}</span>
               <span class="text-slate-600">{rom[4]}</span>
-              <span class="text-orange-700">{rom[5]}</span>
+              <span class="text-amber-700">{rom[5]}</span>
             </rt>
           </ruby>
           <rt><Audio id={rom[0]} /></rt>
         </ruby>
-        <rt>{other}</rt>
+        <rt class="text-xs text-slate-500">{other}</rt>
       </ruby>
     ) : (
       <ruby class="[ruby-align:center] [ruby-position:over]">
-        <ruby lang="yue" class="text-3xl [ruby-align:center] [ruby-position:over]">
+        <ruby lang="yue" class="text-3xl font-medium text-slate-900 [ruby-align:center] [ruby-position:over]">
           {char}
-          <rt lang="yue-Latn-jyutping" class="text-xl font-semibold mx-0.5">
-            <span class="text-amber-700">{rom[1]}</span>
-            <span class="text-cyan-700">{rom[3]}</span>
+          <rt lang="yue-Latn-jyutping" class="text-lg font-semibold mx-0.5">
+            <span class="text-[#0b467e]">{rom[1]}</span>
+            <span class="text-[#0284c7]">{rom[3]}</span>
             <span class="text-slate-600">{rom[4]}</span>
-            <span class="text-orange-700">{rom[5]}</span>
+            <span class="text-amber-700">{rom[5]}</span>
           </rt>
         </ruby>
         <rt><Audio id={rom[0]} /></rt>

@@ -1,5 +1,6 @@
 ---
 import Icon from "@/components/Icon.astro";
+import PageBanner from "@/components/PageBanner.astro";
 
 interface BlogPost {
   title: string;
@@ -14,39 +15,50 @@ interface BlogTranslations {
 }
 
 interface Props {
+  description?: string;
   posts: BlogPost[];
   translations: BlogTranslations;
 }
 
-const { posts, translations } = Astro.props;
+const { description, posts, translations } = Astro.props;
 ---
 
-<div class="container mx-auto max-w-4xl px-4 py-8">
-  <h1 class="my-4 text-4xl font-bold text-gray-900">{translations.title}</h1>
+<PageBanner title={translations.title} subtitle={description} maxWidth="7xl" />
+
+<div class="mx-auto max-w-7xl px-6 py-10 md:py-12">
   {
     posts.length > 0 ? (
-      <div class="my-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
         {posts.map((post) => (
-          <div class="block rounded-sm border p-6">
-            <h2 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900">
-              {post.title}
-            </h2>
-            {post.description && (
-              <p class="mb-4 font-normal text-gray-600">{post.description}</p>
-            )}
+          <article class="surface-card surface-card-interactive ring-1 ring-[#dce6f0]/80">
             <a
               href={post.slug}
-              class="target-control inline-flex items-center rounded-sm bg-[#1678d3] px-4 py-2 text-center text-sm font-medium text-white transition-colors hover:bg-yellow-300 hover:text-neutral-900"
+              class="group flex h-full flex-col justify-between p-7 no-underline"
             >
-              {translations.readMore}
-              <span class="visually-hidden">: {post.title}</span>
-              <Icon name="arrow-right" size="1rem" class="ms-2" />
+              <div>
+                <h2 class="text-xl sm:text-2xl font-semibold tracking-tight text-slate-900 transition-colors group-hover:text-[#0b467e]">
+                  {post.title}
+                </h2>
+                {post.description && (
+                  <p class="mt-2.5 text-base sm:text-[1.0625rem] leading-relaxed text-slate-600">
+                    {post.description}
+                  </p>
+                )}
+              </div>
+              <span class="mt-6 inline-flex items-center gap-1.5 text-base font-semibold text-[#1678d3] transition-colors group-hover:text-[#0b467e]">
+                {translations.readMore}
+                <Icon
+                  name="arrow-right"
+                  size="1.125rem"
+                  class="transition-transform group-hover:translate-x-0.5"
+                />
+              </span>
             </a>
-          </div>
+          </article>
         ))}
       </div>
     ) : (
-      <p class="text-gray-600">{translations.noPosts}</p>
+      <p class="text-slate-600">{translations.noPosts}</p>
     )
   }
 </div>

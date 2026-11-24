@@ -19,6 +19,7 @@ interface Props {
   ogType?: "website" | "article";
   jsonLd?: Record<string, unknown>;
   noindex?: boolean;
+  hasHero?: boolean;
 }
 
 const {
@@ -31,6 +32,7 @@ const {
   ogType = "website",
   jsonLd,
   noindex = false,
+  hasHero = false,
 } = Astro.props;
 
 const resolvedLocale = I18n.locales.includes(lang as Locale)
@@ -175,6 +177,7 @@ const speculationRulesJson = JSON.stringify({
     <Header
       availableLocales={availableLocales}
       unavailableLocaleFallbackPath={unavailableLocaleFallbackPath}
+      hasHero={hasHero}
     />
     <main id="main-content" tabindex="-1" class="grow">
       <slot />
