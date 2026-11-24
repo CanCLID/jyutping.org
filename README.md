@@ -1,6 +1,6 @@
 # jyutping.org
 
-本站使用 [Astro](https://astro.build/) 、React、TailwindCSS 開發，所有頁面內容都喺下面幾個路經中：
+本站使用 [Astro](https://astro.build/)、TailwindCSS 開發，所有頁面內容都喺下面幾個路經中：
 
 ```text
 src/components
@@ -42,7 +42,7 @@ src/pages
 
 ```bash
 glyphhanger ./dist/**/*.html --unicodes > unicodes.txt
-pyftsubset ./public/ChironHeiHK-lshk.woff \
+pyftsubset ./fonts-source/ChironHeiHK-lshk.woff \
            --output-file=./src/assets/fonts/chiron-hei-hk-jyutping-subset.woff2 \
            --unicodes-file=unicodes.txt \
            --layout-features='*,!liga,!dlig,!rlig' \

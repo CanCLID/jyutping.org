@@ -2,7 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { render } from "astro:content";
 import BlogCatalogue from "@/components/BlogCatalogue.astro";
-import TableOfContents from "@/components/TableOfContents";
+import TableOfContents from "@/components/TableOfContents.astro";
 import CatalogueContentShell from "@/components/content/CatalogueContentShell.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import {
@@ -30,8 +30,9 @@ if (!locale || !isSupportedLocale(locale)) {
   throw new Error(`Invalid locale parameter for blog page: ${locale ?? "undefined"}.`);
 }
 
-const allBlogEntries = await getLocalizedCollectionEntries("blog", locale);
-allBlogEntries.sort((a, b) => (a.data.weight || 0) - (b.data.weight || 0));
+const allBlogEntries = (
+  await getLocalizedCollectionEntries("blog", locale)
+).toSorted((a, b) => (a.data.weight || 0) - (b.data.weight || 0));
 
 const lang = getEntryLocale(entry.id) || locale;
 ---
@@ -51,6 +52,6 @@ const lang = getEntryLocale(entry.id) || locale;
       currentSlug={getEntrySlug(entry.id)}
     />
     <Content components={sharedMdxComponents} />
-    <TableOfContents slot="toc" client:load headings={headings} />
+    <TableOfContents slot="toc" headings={headings} locale={lang} />
   </CatalogueContentShell>
 </BaseLayout>

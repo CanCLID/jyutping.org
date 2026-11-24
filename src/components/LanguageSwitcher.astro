@@ -1,0 +1,95 @@
+---
+import Icon from "@/components/Icon.astro";
+import { I18n, formatBcp47Locale, getLocalePath } from "@/i18n/utils";
+import { languageNames } from "@/i18n/languageNames";
+import { getUiLabels } from "@/i18n/uiLabels";
+
+interface Props {
+  currentPathname: string;
+  locale: string;
+}
+
+const { currentPathname, locale } = Astro.props;
+const currentLocale =
+  I18n.locales.find(
+    (candidate) =>
+      currentPathname.startsWith(`/${candidate}/`) ||
+      currentPathname === `/${candidate}`,
+  ) ?? I18n.defaultLocale;
+
+const ui = getUiLabels(locale);
+---
+
+<div class="relative inline-flex items-center">
+  <button
+    type="button"
+    id="lang-trigger"
+    popovertarget="lang-popover"
+    popovertargetaction="toggle"
+    aria-controls="lang-popover"
+    aria-expanded="false"
+    aria-label={ui.languageSelector}
+    class="target-control inline-flex items-center gap-1.5 text-white/90 hover:text-white transition-colors cursor-pointer"
+  >
+    <Icon name="world" size="1.125rem" />
+    <span lang={formatBcp47Locale(currentLocale)} class="mb-px">
+      {languageNames[currentLocale] ?? currentLocale}
+    </span>
+    <Icon name="chevron-down" size="1rem" />
+  </button>
+
+  <div id="lang-popover" popover="auto" class="lang-popover">
+    <ul class="py-1 min-w-max">
+      {I18n.locales.map((targetLocale) => {
+        const isCurrent = targetLocale === currentLocale;
+        return (
+          <li>
+            <a
+              href={getLocalePath(currentPathname, targetLocale)}
+              lang={formatBcp47Locale(targetLocale)}
+              aria-current={isCurrent ? "page" : undefined}
+              class="target-control flex items-center px-4 py-1.5 text-sm text-gray-800 hover:bg-gray-100 transition-colors"
+            >
+              {languageNames[targetLocale] ?? targetLocale}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</div>
+
+<script>
+  const trigger = document.getElementById("lang-trigger");
+  const popover = document.getElementById("lang-popover");
+
+  if (trigger && popover) {
+    const positionFallback = () => {
+      if (CSS.supports("position-area", "block-end")) return;
+
+      const triggerRect = trigger.getBoundingClientRect();
+      const popRect = popover.getBoundingClientRect();
+      const margin = 8;
+
+      let top = triggerRect.bottom + margin;
+      if (top + popRect.height > window.innerHeight - margin) {
+        top = Math.max(margin, triggerRect.top - popRect.height - margin);
+      }
+
+      let left = triggerRect.right - popRect.width;
+      left = Math.min(Math.max(margin, left), window.innerWidth - popRect.width - margin);
+
+      popover.style.setProperty("--lang-top", `${top}px`);
+      popover.style.setProperty("--lang-left", `${left}px`);
+    };
+
+    popover.addEventListener("toggle", (event) => {
+      const toggleEvent = event as ToggleEvent;
+      const isOpen = toggleEvent.newState === "open";
+      trigger.setAttribute("aria-expanded", String(isOpen));
+      if (isOpen) {
+        positionFallback();
+      }
+    });
+  }
+</script>

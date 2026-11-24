@@ -2,12 +2,12 @@
 import { defineConfig, fontProviders } from "astro/config";
 
 import mdx from "@astrojs/mdx";
-import react from "@astrojs/react";
 import remarkGfm from "remark-gfm";
 
 import tailwindcss from "@tailwindcss/vite";
 
 import sitemap from "@astrojs/sitemap";
+import { rehypeAccessibleContent } from "./src/utils/rehypeAccessibleContent";
 
 // https://astro.build/config
 export default defineConfig({
@@ -63,11 +63,11 @@ export default defineConfig({
   security: {
     csp: {
       directives: [
-        "base-uri 'self'",
+        "base-uri 'none'",
         "connect-src 'self' https://cloud.umami.is https://*.umami.is",
         "default-src 'self'",
         "font-src 'self'",
-        "frame-src 'self' https://www.youtube.com https://youtube.com",
+        "frame-src 'self' https://www.youtube-nocookie.com",
         "img-src 'self' data:",
         "media-src 'self'",
         "object-src 'none'",
@@ -89,9 +89,9 @@ export default defineConfig({
     },
   },
   integrations: [
-    react(),
     mdx({
       remarkPlugins: [remarkGfm],
+      rehypePlugins: [rehypeAccessibleContent],
     }),
     sitemap(),
   ],

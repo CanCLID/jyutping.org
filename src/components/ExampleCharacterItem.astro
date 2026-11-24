@@ -1,0 +1,56 @@
+---
+import Audio from "@/components/Audio.astro";
+
+interface Props {
+  honzi: string;
+  jyutping: string;
+  otherTranscription?: string;
+}
+
+const { honzi, jyutping, otherTranscription } = Astro.props;
+const jyutpingRegex =
+  /^([gk]w?|ng|[bpmfdtnlhwzcsj]?)(?![1-6]?$)((aa?|oe?|eo?|y?u|i?)(ng|[iumnptk]?))([1-6]?)$/;
+
+const roms = jyutping.split(" ");
+const trans = (otherTranscription ?? "").split(" ");
+const items = Array.from(honzi, (char, i) => ({
+  char,
+  rom: jyutpingRegex.exec(roms[i])!,
+  trans: trans[i] || "\xa0",
+}));
+---
+
+<li class="whitespace-nowrap">
+  {items.map(({ char, rom, trans: other }) =>
+    otherTranscription ? (
+      <ruby class="[ruby-align:center] [ruby-position:under]">
+        <ruby class="[ruby-align:center] [ruby-position:over]">
+          <ruby lang="yue" class="text-3xl [ruby-align:center] [ruby-position:over]">
+            {char}
+            <rt lang="yue-Latn-jyutping" class="text-xl font-semibold mx-0.5">
+              <span class="text-amber-700">{rom[1]}</span>
+              <span class="text-cyan-700">{rom[3]}</span>
+              <span class="text-slate-600">{rom[4]}</span>
+              <span class="text-orange-700">{rom[5]}</span>
+            </rt>
+          </ruby>
+          <rt><Audio id={rom[0]} /></rt>
+        </ruby>
+        <rt>{other}</rt>
+      </ruby>
+    ) : (
+      <ruby class="[ruby-align:center] [ruby-position:over]">
+        <ruby lang="yue" class="text-3xl [ruby-align:center] [ruby-position:over]">
+          {char}
+          <rt lang="yue-Latn-jyutping" class="text-xl font-semibold mx-0.5">
+            <span class="text-amber-700">{rom[1]}</span>
+            <span class="text-cyan-700">{rom[3]}</span>
+            <span class="text-slate-600">{rom[4]}</span>
+            <span class="text-orange-700">{rom[5]}</span>
+          </rt>
+        </ruby>
+        <rt><Audio id={rom[0]} /></rt>
+      </ruby>
+    ),
+  )}
+</li>

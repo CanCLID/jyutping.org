@@ -1,12 +1,11 @@
 ---
-import { ClientRouter } from "astro:transitions";
 import { Font } from "astro:assets";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import "@/styles/global.css";
-import Chartaudio from "@/components/Chartaudio.astro";
-import { I18n, getLocalePath } from "@/i18n/utils";
+import { I18n, formatBcp47Locale, getLocalePath } from "@/i18n/utils";
 import { makeTitle } from "@/i18n/pageHeadings";
+import { getUiLabels } from "@/i18n/uiLabels";
 
 interface Props {
   title?: string;
@@ -22,22 +21,55 @@ const {
   flipTitle = false,
 } = Astro.props;
 
+const htmlLang = formatBcp47Locale(lang);
 const title = makeTitle(originalTitle, lang, flipTitle);
+const ui = getUiLabels(lang);
 
 const umamiWebsiteId = "188fdd26-8e55-42b6-ba73-7d2f58adca11";
 const umamiScriptSrc = "https://cloud.umami.is/script.js";
 const isJapanesePage = lang === "ja";
+
+const speculationRulesJson = JSON.stringify({
+  prefetch: [
+    {
+      source: "document",
+      where: {
+        and: [
+          { href_matches: "/*" },
+          { not: { href_matches: "/audio/*" } },
+          { not: { selector_matches: "[rel~=nofollow]" } },
+        ],
+      },
+      eagerness: "eager",
+    },
+  ],
+  prerender: [
+    {
+      source: "document",
+      where: {
+        and: [
+          { href_matches: "/*" },
+          { not: { href_matches: "/audio/*" } },
+          { not: { selector_matches: "[rel~=nofollow]" } },
+        ],
+      },
+      eagerness: "moderate",
+    },
+  ],
+});
 ---
 
 <!doctype html>
-<html lang={lang} class="scroll-smooth">
+<html lang={htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <meta name="text-scale" content="scale" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    {/* Basic Meta Tags */}
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta
@@ -45,29 +77,19 @@ const isJapanesePage = lang === "ja";
       content="Jyutping, 粵拼, Cantonese, Romanization, language, learning, transcription, input method, cantonese keyboard, jyutping input method, jyutping keyboard"
     />
 
-    {/* Open Graph / Facebook */}
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url.origin} />
+    <meta property="og:url" content={Astro.url.href} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    {
-      /* <meta property="og:image" content={new URL('/og-image.png', Astro.url.origin).toString()} /> */
-    }
 
-    {/* Twitter */}
-    {/* <meta property="twitter:card" content="summary_large_image" /> */}
-    <meta property="twitter:url" content={Astro.url.origin} />
+    <meta property="twitter:url" content={Astro.url.href} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    {
-      /* <meta property="twitter:image" content={new URL('/og-image.png', Astro.url.origin).toString()} /> */
-    }
 
-    {/* Alternate language links */}
     {I18n.locales.map((locale) => (
       <link
         rel="alternate"
-        hreflang={locale.replaceAll("_", "-")}
+        hreflang={formatBcp47Locale(locale)}
         href={new URL(getLocalePath(Astro.url.pathname, locale), Astro.url.origin).toString()}
       />
     ))}
@@ -81,17 +103,29 @@ const isJapanesePage = lang === "ja";
     <Font cssVariable="--font-chiron-hei-hk-jyutping" preload />
     {isJapanesePage && <Font cssVariable="--font-noto-sans-jp" preload />}
 
-    <script is:inline defer src={umamiScriptSrc} data-website-id={umamiWebsiteId}
-    ></script>
-
-    <ClientRouter />
+    <link rel="expect" href="#site-header" blocking="render" />
+    <script type="speculationrules" is:inline set:html={speculationRulesJson} />
   </head>
-  <body class="antialiased bg-white text-gray-800 flex flex-col min-h-screen">
+  <body class="antialiased flex flex-col min-h-dvh">
+    <a href="#main-content" class="skip-link visually-hidden">
+      {ui.skipToContent}
+    </a>
     <Header />
-    <main class="flex-grow">
+    <main id="main-content" tabindex="-1" class="grow">
       <slot />
-      <Chartaudio />
     </main>
     <Footer />
+    <script>
+      import "@/scripts/polyfills";
+      import "@/scripts/audioPlayer";
+    </script>
+    <script
+      is:inline
+      defer
+      fetchpriority="low"
+      referrerpolicy="strict-origin-when-cross-origin"
+      src={umamiScriptSrc}
+      data-website-id={umamiWebsiteId}
+    ></script>
   </body>
 </html>

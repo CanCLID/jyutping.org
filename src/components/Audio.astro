@@ -1,0 +1,22 @@
+---
+import Icon from "@/components/Icon.astro";
+import { I18n } from "@/i18n/utils";
+import { formatPlayAudioLabel } from "@/i18n/uiLabels";
+
+interface Props {
+  id: string;
+  locale?: string;
+}
+
+const { id, locale = Astro.currentLocale || I18n.defaultLocale } = Astro.props;
+const label = formatPlayAudioLabel(locale, id);
+---
+
+<button
+  type="button"
+  data-audio-id={id}
+  class="hit-target-expand inline-flex items-center justify-center p-1 rounded-md text-[#1678d3] hover:bg-blue-100 active:scale-95 transition-[background-color,transform] duration-150 mx-1 align-middle cursor-pointer data-[playing=true]:bg-blue-100"
+  aria-label={label}
+>
+  <Icon name="volume" size="1rem" />
+</button>

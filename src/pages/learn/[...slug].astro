@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { render } from "astro:content";
-import TableOfContents from "@/components/TableOfContents";
+import TableOfContents from "@/components/TableOfContents.astro";
 import ContentWithTocShell from "@/components/content/ContentWithTocShell.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { I18n } from "@/i18n/utils";
@@ -34,6 +34,6 @@ const lang = getEntryLocale(entry.id) || I18n.defaultLocale;
     description={entry.data.description}
   >
     <Content components={sharedMdxComponents} />
-    <TableOfContents slot="toc" client:load headings={headings} />
+    <TableOfContents slot="toc" headings={headings} locale={lang} />
   </ContentWithTocShell>
 </BaseLayout>

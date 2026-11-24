@@ -4,11 +4,11 @@ description: >
   広東語の発音を身につけるための必要最小限の知識。これだけ覚えて広東語の発音をマスターしましょう！
 ---
 
-import Audio from "@/components/Audio.tsx";
-import ExampleCharacterGrid from "@/components/ExampleCharacterGrid.tsx";
-import ExampleCharacterItem from "@/components/ExampleCharacterItem.tsx";
-import SampleText from "@/components/SampleText.tsx";
-import ToneTable from "@/components/ToneTable.tsx";
+import Audio from "@/components/Audio.astro";
+import ExampleCharacterGrid from "@/components/ExampleCharacterGrid.astro";
+import ExampleCharacterItem from "@/components/ExampleCharacterItem.astro";
+import SampleText from "@/components/SampleText.astro";
+import ToneTable from "@/components/ToneTable.astro";
 
 ## はじめに
 
@@ -16,7 +16,7 @@ import ToneTable from "@/components/ToneTable.tsx";
 
 広東語にはいくつかのローマ字表記法がありますが、特に広く使われているのが<strong><ruby>粤拼<rt>ユーッペン</rt></ruby></strong>です。
 
-この記事は日本語話者を対象とし、日本語のローマ表記との違いや見慣れないかもしれない表記だけ取り上げて、「これさえ学べば広東語が<ruby className="[ruby-align:center] [ruby-position:under]">話せる<rt>＝読み上げられる</rt></ruby>！」分の知識を粤拼を通じてわかりやすく伝えます。
+この記事は日本語話者を対象とし、日本語のローマ表記との違いや見慣れないかもしれない表記だけ取り上げて、「これさえ学べば広東語が<ruby class="[ruby-align:center] [ruby-position:under]">話せる<rt>＝読み上げられる</rt></ruby>！」分の知識を粤拼を通じてわかりやすく伝えます。
 
 <Alert color="primary">
   広東語は到底日本語とは異なる言語なので、日本語にない音もやはりありますが、それを身につけるのも言語学習の醍醐味でしょう。
@@ -30,45 +30,45 @@ import ToneTable from "@/components/ToneTable.tsx";
 
 広東語は多くの漢諸語のように、音声では漢字一文字ごとに１拍を取るので、一文字で一つのまとまりに聞こえます。これを「**音節**」といい、広東語の場合、必ず
 
-<div className="sm:text-xl">
-- 「（<ruby className="text-yellow-600 font-semibold [ruby-align:center] [ruby-position:under]">頭子音<rt>任意</rt></ruby>　＋）　<ruby className="text-cyan-600 font-semibold [ruby-align:center] [ruby-position:under]">母音<rt>必須</rt></ruby>　（＋<ruby className="text-slate-500 font-semibold [ruby-align:center] [ruby-position:under]">末尾子音<rt>任意</rt></ruby>）」
-- 「（<ruby className="text-yellow-600 font-semibold [ruby-align:center] [ruby-position:under]">頭子音<rt>任意</rt></ruby> <small className="text-yellow-600 font-semibold">h</small> ＋）　<ruby className="text-slate-500 font-semibold [ruby-align:center] [ruby-position:under]">末尾子音<rt>必須</rt></ruby> <small className="text-slate-500 font-semibold">m または ng</small> 」
+<div class="sm:text-xl">
+- 「（<ruby class="text-amber-700 font-semibold [ruby-align:center] [ruby-position:under]">頭子音<rt>任意</rt></ruby>　＋）　<ruby class="text-cyan-700 font-semibold [ruby-align:center] [ruby-position:under]">母音<rt>必須</rt></ruby>　（＋<ruby class="text-slate-600 font-semibold [ruby-align:center] [ruby-position:under]">末尾子音<rt>任意</rt></ruby>）」
+- 「（<ruby class="text-amber-700 font-semibold [ruby-align:center] [ruby-position:under]">頭子音<rt>任意</rt></ruby> <small class="text-amber-700 font-semibold">h</small> ＋）　<ruby class="text-slate-600 font-semibold [ruby-align:center] [ruby-position:under]">末尾子音<rt>必須</rt></ruby> <small class="text-slate-600 font-semibold">m または ng</small> 」
 </div>
 
-のいずれかの組み合わせに「<strong className="text-orange-600">声調</strong>」（音の高さ）を全体にかけることで音節を成します。
+のいずれかの組み合わせに「<strong class="text-orange-700">声調</strong>」（音の高さ）を全体にかけることで音節を成します。
 
-<table className="[&_td]:text-center [&_td]:p-0.5 border-0">
+<table class="[&_td]:text-center [&_td]:p-0.5 border-0">
   <tbody>
     <tr>
-      <td colspan="3" lang="yue" className="text-5xl/relaxed">便</td>
+      <td colspan="3" lang="yue" class="text-5xl/relaxed">便</td>
     </tr>
     <tr>
-      <td colspan="3" className="text-xl">音節</td>
+      <td colspan="3" class="text-xl">音節</td>
     </tr>
     <tr>
-      <td rowspan="2" className="text-xl text-yellow-600 border-b-0 pb-0">声母</td>
-      <td colspan="2" className="text-xl">韻母</td>
+      <td rowspan="2" class="text-xl text-amber-700 border-b-0 pb-0">声母</td>
+      <td colspan="2" class="text-xl">韻母</td>
     </tr>
-    <tr className="[&_td]:border-b-0 [&_td]:pb-0">
-      <td className="text-xl text-cyan-600">韻腹</td>
-      <td className="text-xl text-slate-500">韻尾</td>
+    <tr class="[&_td]:border-b-0 [&_td]:pb-0">
+      <td class="text-xl text-cyan-700">韻腹</td>
+      <td class="text-xl text-slate-600">韻尾</td>
     </tr>
-    <tr className="[&_td]:border-y-0 [&_td]:pt-0">
-      <td className="text-xs text-yellow-600">（頭子音）</td>
-      <td className="text-xs text-cyan-600">（母音）</td>
-      <td className="text-xs text-slate-500">（末尾子音）</td>
+    <tr class="[&_td]:border-y-0 [&_td]:pt-0">
+      <td class="text-xs text-amber-700">（頭子音）</td>
+      <td class="text-xs text-cyan-700">（母音）</td>
+      <td class="text-xs text-slate-600">（末尾子音）</td>
     </tr>
-    <tr className="[&_td]:border-t-0 text-3xl">
-      <td lang="yue-Latn-jyutping" className="font-semibold text-yellow-600">b</td>
-      <td lang="yue-Latn-jyutping" className="font-semibold text-cyan-600">i</td>
-      <td lang="yue-Latn-jyutping" className="font-semibold text-slate-500">n</td>
-      <td className="text-sm border-0 align-bottom"><Audio client:load id="bin6" /></td>
+    <tr class="[&_td]:border-t-0 text-3xl">
+      <td lang="yue-Latn-jyutping" class="font-semibold text-amber-700">b</td>
+      <td lang="yue-Latn-jyutping" class="font-semibold text-cyan-700">i</td>
+      <td lang="yue-Latn-jyutping" class="font-semibold text-slate-600">n</td>
+      <td class="text-sm border-0 align-bottom"><Audio id="bin6" /></td>
     </tr>
-    <tr className="[&_td]:border-b-0">
-      <td colspan="3" lang="yue-Latn-jyutping" className="text-3xl font-semibold text-orange-600">6</td>
+    <tr class="[&_td]:border-b-0">
+      <td colspan="3" lang="yue-Latn-jyutping" class="text-3xl font-semibold text-orange-700">6</td>
     </tr>
-    <tr className="[&_td]:border-t-0">
-      <td colspan="3" className="text-xl text-orange-600">声調</td>
+    <tr class="[&_td]:border-t-0">
+      <td colspan="3" class="text-xl text-orange-700">声調</td>
     </tr>
   </tbody>
 </table>
@@ -86,8 +86,8 @@ import ToneTable from "@/components/ToneTable.tsx";
 {/* 異音について触れると学習者を混乱させる恐れがありますので、敢えて「ヂャ行」「チャ行」とも発音できることは言及しないようにしています。そもそも香港では「ヅァ行」「ツァ行」はすべての環境においても「z」「c」の許容発音ですし、そう発音することがむしろ「正しく」思わらせます。 */}
 
 <ExampleCharacterGrid>
-  <ExampleCharacterItem client:load honzi="支持" jyutping="zi1 ci4" otherTranscription="ヅィー ツィー" />
-  <ExampleCharacterItem client:load honzi="出席" jyutping="ceot1 zik6" otherTranscription="ツョㇳ ヅェㇰ" />
+  <ExampleCharacterItem honzi="支持" jyutping="zi1 ci4" otherTranscription="ヅィー ツィー" />
+  <ExampleCharacterItem honzi="出席" jyutping="ceot1 zik6" otherTranscription="ツョㇳ ヅェㇰ" />
 </ExampleCharacterGrid>
 
 <Alert color="success">
@@ -105,8 +105,8 @@ import ToneTable from "@/components/ToneTable.tsx";
 「**サ行**」ですが、「si」は「スィー」と発音すること。
 
 <ExampleCharacterGrid>
-  <ExampleCharacterItem client:load honzi="時事" jyutping="si4 si6" otherTranscription="スィー スィー" />
-  <ExampleCharacterItem client:load honzi="視線" jyutping="si6 sin3" otherTranscription="スィー スィーㇴ" />
+  <ExampleCharacterItem honzi="時事" jyutping="si4 si6" otherTranscription="スィー スィー" />
+  <ExampleCharacterItem honzi="視線" jyutping="si6 sin3" otherTranscription="スィー スィーㇴ" />
 </ExampleCharacterGrid>
 
 <Alert color="success">
@@ -118,7 +118,7 @@ import ToneTable from "@/components/ToneTable.tsx";
 鼻にかけて「ガ行」を発音します。「かんがえる」「だがしかし」などの「が」の子音。いわゆる鼻濁音の「カ゚行」。
 
 <ExampleCharacterGrid>
-  <ExampleCharacterItem client:load honzi="額外" jyutping="ngaak6 ngoi6" otherTranscription="カ゚ーㇰ コ゚ーイ" />
+  <ExampleCharacterItem honzi="額外" jyutping="ngaak6 ngoi6" otherTranscription="カ゚ーㇰ コ゚ーイ" />
 </ExampleCharacterGrid>
 
 <Alert color="success">
@@ -132,7 +132,7 @@ import ToneTable from "@/components/ToneTable.tsx";
 口を丸めて「グ」「ク」を発音します。小さい「ヮ行」と素早く滑らかに繋げて発音するとも言えます。
 
 <ExampleCharacterGrid>
-  <ExampleCharacterItem client:load honzi="跨國" jyutping="kwaa1 gwok3" otherTranscription="クヮー グォーㇰ" />
+  <ExampleCharacterItem honzi="跨國" jyutping="kwaa1 gwok3" otherTranscription="クヮー グォーㇰ" />
 </ExampleCharacterGrid>
 
 ### 「j」
@@ -140,8 +140,8 @@ import ToneTable from "@/components/ToneTable.tsx";
 「**ヤ行**」です！日本語ローマ字や英語の「y」に当たります。
 
 <ExampleCharacterGrid>
-  <ExampleCharacterItem client:load honzi="原因" jyutping="jyun4 jan1" otherTranscription="ユーン ヤン" />
-  <ExampleCharacterItem client:load honzi="容易" jyutping="jung4 ji6" otherTranscription="ヨン イー" />
+  <ExampleCharacterItem honzi="原因" jyutping="jyun4 jan1" otherTranscription="ユーン ヤン" />
+  <ExampleCharacterItem honzi="容易" jyutping="jung4 ji6" otherTranscription="ヨン イー" />
 </ExampleCharacterGrid>
 
 <Alert color="secondary">
@@ -163,8 +163,8 @@ import ToneTable from "@/components/ToneTable.tsx";
 「i」「u」「e」「o」は長音ですが、「a」は短い音を表します。その代わりに長い方は「aa」で表しています。
 
 <ExampleCharacterGrid>
-  <ExampleCharacterItem client:load honzi="今晚" jyutping="gam1 maan1" otherTranscription="ガㇺ マーン" />
-  <ExampleCharacterItem client:load honzi="話題" jyutping="waa6 tai4" otherTranscription="ワー タイ" />
+  <ExampleCharacterItem honzi="今晚" jyutping="gam1 maan1" otherTranscription="ガㇺ マーン" />
+  <ExampleCharacterItem honzi="話題" jyutping="waa6 tai4" otherTranscription="ワー タイ" />
 </ExampleCharacterGrid>
 
 ### 「oe」「eo」
@@ -172,9 +172,9 @@ import ToneTable from "@/components/ToneTable.tsx";
 「oe」（長）・「eo」（短）は丸みを帯びた「エ」。「エ」と「オ」の中間くらいの曖昧な発音。
 
 <ExampleCharacterGrid>
-  <ExampleCharacterItem client:load honzi="香水" jyutping="hoeng1 seoi2" otherTranscription="ホョーン ソュ" />
-  <ExampleCharacterItem client:load honzi="削除" jyutping="soek3 ceoi4" otherTranscription="ソョーㇰ ツォュ" />
-  <ExampleCharacterItem client:load honzi="進出" jyutping="zeon3 ceot1" otherTranscription="ヅョㇴ ツョㇳ" />
+  <ExampleCharacterItem honzi="香水" jyutping="hoeng1 seoi2" otherTranscription="ホョーン ソュ" />
+  <ExampleCharacterItem honzi="削除" jyutping="soek3 ceoi4" otherTranscription="ソョーㇰ ツォュ" />
+  <ExampleCharacterItem honzi="進出" jyutping="zeon3 ceot1" otherTranscription="ヅョㇴ ツョㇳ" />
 </ExampleCharacterGrid>
 
 <Alert color="secondary">
@@ -186,8 +186,8 @@ import ToneTable from "@/components/ToneTable.tsx";
 丸みを帯びた「イー」。「イー」と声出して舌の位置を動かずに「ユー」に変えてみてください。
 
 <ExampleCharacterGrid>
-  <ExampleCharacterItem client:load honzi="粵語" jyutping="jyut6 jyu5" otherTranscription="ユーㇳ ユー" />
-  <ExampleCharacterItem client:load honzi="完全" jyutping="jyun4 cyun4" otherTranscription="ユーㇴ ツューㇴ" />
+  <ExampleCharacterItem honzi="粵語" jyutping="jyut6 jyu5" otherTranscription="ユーㇳ ユー" />
+  <ExampleCharacterItem honzi="完全" jyutping="jyun4 cyun4" otherTranscription="ユーㇴ ツューㇴ" />
 </ExampleCharacterGrid>
 
 <Alert color="secondary">
@@ -200,9 +200,9 @@ import ToneTable from "@/components/ToneTable.tsx";
 - 「ou」の「o」は短い音。「ung」「uk」も**同じ母音**を持ち、それぞれ「オウ」「オン」「オㇰ」のように発音します。
 
 <ExampleCharacterGrid>
-  <ExampleCharacterItem client:load honzi="成功" jyutping="sing4 gung1" otherTranscription="セン ゴン" />
-  <ExampleCharacterItem client:load honzi="記憶" jyutping="gei3 jik1" otherTranscription="ゲイ イェㇰ" />
-  <ExampleCharacterItem client:load honzi="高速" jyutping="gou1 cuk1" otherTranscription="ゴウ ツォㇰ" />
+  <ExampleCharacterItem honzi="成功" jyutping="sing4 gung1" otherTranscription="セン ゴン" />
+  <ExampleCharacterItem honzi="記憶" jyutping="gei3 jik1" otherTranscription="ゲイ イェㇰ" />
+  <ExampleCharacterItem honzi="高速" jyutping="gou1 cuk1" otherTranscription="ゴウ ツォㇰ" />
 </ExampleCharacterGrid>
 
 <Alert color="success">
@@ -222,8 +222,8 @@ import ToneTable from "@/components/ToneTable.tsx";
 連続した母音の最後となる「-i」「-u」は前節で述べた韻腹に該当せず、短く「イ」「ウ」と発音します。
 
 <ExampleCharacterGrid>
-  <ExampleCharacterItem client:load honzi="了解" jyutping="liu5 gaai2" otherTranscription="リーウ ガーイ" />
-  <ExampleCharacterItem client:load honzi="回收" jyutping="wui4 sau1" otherTranscription="ウーイ サウ" />
+  <ExampleCharacterItem honzi="了解" jyutping="liu5 gaai2" otherTranscription="リーウ ガーイ" />
+  <ExampleCharacterItem honzi="回收" jyutping="wui4 sau1" otherTranscription="ウーイ サウ" />
 </ExampleCharacterGrid>
 
 ### 「-m」「-n」「-ng」
@@ -235,10 +235,10 @@ import ToneTable from "@/components/ToneTable.tsx";
 - 「-ng」：さんか（参加）の「ん」。舌を喉の奥に当てず軽く持ち上げること。また、声を出し切るまで舌の位置を変えないこと。
 
 <ExampleCharacterGrid>
-  <ExampleCharacterItem client:load honzi="更新" jyutping="gang1 san1" />
-  <ExampleCharacterItem client:load honzi="幸運" jyutping="hang6 wan6" />
-  <ExampleCharacterItem client:load honzi="真心" jyutping="zan1 sam1" />
-  <ExampleCharacterItem client:load honzi="分針" jyutping="fan1 zam1" />
+  <ExampleCharacterItem honzi="更新" jyutping="gang1 san1" />
+  <ExampleCharacterItem honzi="幸運" jyutping="hang6 wan6" />
+  <ExampleCharacterItem honzi="真心" jyutping="zan1 sam1" />
+  <ExampleCharacterItem honzi="分針" jyutping="fan1 zam1" />
 </ExampleCharacterGrid>
 
 ### 「-p」「-t」「-k」
@@ -250,10 +250,10 @@ import ToneTable from "@/components/ToneTable.tsx";
 - 「-k」：かっか（閣下）の「っ」。舌を喉の奥に当てず軽く持ち上げて息をさえぎること。
 
 <ExampleCharacterGrid>
-  <ExampleCharacterItem client:load honzi="八百" jyutping="baat3 baak3" />
-  <ExampleCharacterItem client:load honzi="十日" jyutping="sap6 jat6" />
-  <ExampleCharacterItem client:load honzi="一級" jyutping="jat1 kap1" />
-  <ExampleCharacterItem client:load honzi="得失" jyutping="dak1 sat1" />
+  <ExampleCharacterItem honzi="八百" jyutping="baat3 baak3" />
+  <ExampleCharacterItem honzi="十日" jyutping="sap6 jat6" />
+  <ExampleCharacterItem honzi="一級" jyutping="jat1 kap1" />
+  <ExampleCharacterItem honzi="得失" jyutping="dak1 sat1" />
 </ExampleCharacterGrid>
 
 ## 成節子音
@@ -264,8 +264,8 @@ import ToneTable from "@/components/ToneTable.tsx";
 - 「ng」：舌を喉の奥に当てず軽く持ち上げたまま「ンー」を単独で発音します。
 
 <ExampleCharacterGrid>
-  <ExampleCharacterItem client:load honzi="唔" jyutping="m4" />
-  <ExampleCharacterItem client:load honzi="吳" jyutping="ng4" />
+  <ExampleCharacterItem honzi="唔" jyutping="m4" />
+  <ExampleCharacterItem honzi="吳" jyutping="ng4" />
 </ExampleCharacterGrid>
 
 珍しいですが、頭子音「h」を前に付くこともあります。
@@ -294,17 +294,17 @@ import ToneTable from "@/components/ToneTable.tsx";
 - 第６声は、普段出す声の高さより少し低い高さ。
 
 <ExampleCharacterGrid>
-  <ExampleCharacterItem client:load honzi="詩" jyutping="si1" />
-  <ExampleCharacterItem client:load honzi="史" jyutping="si2" />
-  <ExampleCharacterItem client:load honzi="試" jyutping="si3" />
-  <ExampleCharacterItem client:load honzi="時" jyutping="si4" />
-  <ExampleCharacterItem client:load honzi="市" jyutping="si5" />
-  <ExampleCharacterItem client:load honzi="事" jyutping="si6" />
+  <ExampleCharacterItem honzi="詩" jyutping="si1" />
+  <ExampleCharacterItem honzi="史" jyutping="si2" />
+  <ExampleCharacterItem honzi="試" jyutping="si3" />
+  <ExampleCharacterItem honzi="時" jyutping="si4" />
+  <ExampleCharacterItem honzi="市" jyutping="si5" />
+  <ExampleCharacterItem honzi="事" jyutping="si6" />
 </ExampleCharacterGrid>
 
 次に、上記の６文字が繋がって連続した２文字になるとき、各声調はどのように聞こえるかを確かめることで、相対的にどれだけ高いのかを実感してみましょう。
 
-<ToneTable client:idle />
+<ToneTable />
 
 <Alert color="secondary">
   第１声と第２声はそれぞれ標準中国語の第１声と第２声と同じ高さ。
@@ -331,4 +331,4 @@ import ToneTable from "@/components/ToneTable.tsx";
 
 『北風と太陽』という有名（？）なイソップ寓話がありますね。その広東語訳がこちらです。各文字の上の再生ボタンをクリックして、聞いた発音を真似て繰り返して練習してみましょう。
 
-<SampleText client:idle />
+<SampleText />

@@ -1,0 +1,68 @@
+---
+import Audio from "@/components/Audio.astro";
+import fusisaanhaa from "@/texts/fusisaanhaa.txt?raw";
+import bakfung from "@/texts/bakfung.txt?raw";
+import maanboujansanglou from "@/texts/maanboujansanglou.txt?raw";
+import coisandou from "@/texts/coisandou.txt?raw";
+
+const parseText = (text: string): { char: string; jyutping: string | null }[] => {
+  const result: { char: string; jyutping: string | null }[] = [];
+  // Do not split at fullwidth spaces, which are useful in lyrics
+  const glyphons = text.trim().split(/(?:(?!\u3000)\s)+/);
+
+  for (const glyphon of glyphons) {
+    let char = glyphon;
+    let jyutping: string | null = null;
+
+    // Also handle font variations. 使2si2 (2 after 使 picks an alternate glyph)
+    const match = glyphon.match(/^(.[\d]??)([a-z]+\d)$/);
+    if (match) {
+      [, char, jyutping] = match;
+    }
+
+    result.push({ char, jyutping });
+  }
+
+  return result;
+};
+
+const samples = {
+  bakfung,
+  maanboujansanglou,
+  coisandou,
+  fusisaanhaa,
+};
+
+interface Props {
+  sample?: keyof typeof samples;
+}
+
+const { sample = "bakfung" } = Astro.props;
+const lines = samples[sample].trim().split(/\r\n?|\n/);
+---
+
+<div class="my-6 p-4 border border-neutral-800 rounded-md">
+  {lines.map((line) => (
+    <div class="flex flex-wrap items-end leading-loose">
+      {parseText(line).map((item) => (
+        <div class="inline-flex flex-col items-center mx-1">
+          {item.jyutping ? (
+            <Audio id={item.jyutping} />
+          ) : (
+            <span class="size-6 inline-block" aria-hidden="true" />
+          )}
+          {item.char.length === 2 && /^\d$/.test(item.char[1]) ? (
+            <span class="text-4xl font-jyutping my-1">
+              <span>{item.char[0]}</span>
+              <span class="jyutping-variant select-none" aria-hidden="true">
+                {item.char[1]}
+              </span>
+            </span>
+          ) : (
+            <span class="text-4xl font-jyutping my-1">{item.char}</span>
+          )}
+        </div>
+      ))}
+    </div>
+  ))}
+</div>

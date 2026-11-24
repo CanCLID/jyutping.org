@@ -11,15 +11,10 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^7.0.3",
-    "@astrojs/react": "^5.0.3",
     "@astrojs/sitemap": "^3.7.2",
-    "@tabler/icons-react": "^3.41.1",
+    "@oddbird/popover-polyfill": "^0.7.3",
     "@tailwindcss/vite": "^4.2.3",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
     "astro": "^7.4.12",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
     "remark-gfm": "^4.0.1",
     "tailwindcss": "^4.2.3"
   },

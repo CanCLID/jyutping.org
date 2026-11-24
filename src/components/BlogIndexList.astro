@@ -1,5 +1,5 @@
 ---
-import { IconArrowRight } from "@tabler/icons-react";
+import Icon from "@/components/Icon.astro";
 
 interface BlogPost {
   title: string;
@@ -36,10 +36,11 @@ const { posts, translations } = Astro.props;
             )}
             <a
               href={post.slug}
-              class="inline-flex items-center rounded-sm bg-[#1678d3] px-4 py-2 text-center text-sm font-medium text-white hover:bg-yellow-300 hover:text-neutral-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+              class="target-control inline-flex items-center rounded-sm bg-[#1678d3] px-4 py-2 text-center text-sm font-medium text-white transition-colors hover:bg-yellow-300 hover:text-neutral-900"
             >
               {translations.readMore}
-              <IconArrowRight className="ml-2 h-4 w-4" />
+              <span class="visually-hidden">: {post.title}</span>
+              <Icon name="arrow-right" size="1rem" class="ms-2" />
             </a>
           </div>
         ))}

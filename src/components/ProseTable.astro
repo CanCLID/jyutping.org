@@ -1,0 +1,19 @@
+---
+import { I18n } from "@/i18n/utils";
+import { getUiLabels } from "@/i18n/uiLabels";
+
+const locale = Astro.currentLocale || I18n.defaultLocale;
+const ui = getUiLabels(locale);
+const props = Astro.props;
+---
+
+<div
+  tabindex="0"
+  role="region"
+  aria-label={ui.proseTableRegionLabel}
+  class="table-scroll-region"
+>
+  <table {...props}>
+    <slot />
+  </table>
+</div>

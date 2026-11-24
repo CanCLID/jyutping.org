@@ -8,7 +8,7 @@ description: >
   mà không dùng Phiên âm Yale, Hệ thống phiên âm Học viện Giáo dục, Hệ thống phiên âm Quảng Châu (phương án Nhiêu Bỉnh Tài), Hệ thống phiên âm tiếng Quảng Đông của chính phủ Hồng Kông, v.v.? Bài viết này giải thích chi tiết tại sao chúng tôi chọn Việt bính, thay vì các phương án phiên âm tiếng Quảng Đông khác.
 ---
 
-import Audio from "@/components/Audio.tsx";
+import Audio from "@/components/Audio.astro";
 
 ## Nguyên tắc thiết kế phương án phiên âm
 
@@ -22,7 +22,7 @@ Một ví dụ phản diện quen thuộc nhất là phiên âm tiếng Phổ th
 
 Nguyên tắc này còn có một ý nghĩa khác, đó là một ký hiệu biểu thị âm thanh cụ thể nào, **không nên phụ thuộc vào môi trường** (tức là các ký hiệu bên trái và bên phải) để xác định. Ví dụ trong phiên âm Yale, chữ cái a vừa có thể biểu thị nguyên âm dài a, vừa có thể biểu thị nguyên âm ngắn a. Bảng dưới đây là cách phiên âm của Yale đối với ba chữ "花", "翻", "分" Chúng ta có thể thấy trong âm tiết mở (không có âm cuối mũi hoặc âm cuối tắc) thì a đại diện cho /a/, trong âm tiết đóng (có âm cuối mũi hoặc âm cuối tắc) thì đại diện cho /ɐ/, điều này chính là "một ký hiệu a đại diện cho hai âm vị /a/ và /ɐ/". Tương tự, nguyên âm của "花" và "翻" đều là /a/, nhưng một cái được phiên âm thành fa, một cái được phiên âm thành faan, tức là "một âm vị /a/ được biểu thị bằng hai ký hiệu a và aa".
 
-| 花 /a/ <Audio client:load id="faa1" /> | 翻 /a/ <Audio client:load id="faan1" /> | 分 /ɐ/ <Audio client:load id="fan1" /> |
+| 花 /a/ <Audio id="faa1" /> | 翻 /a/ <Audio id="faan1" /> | 分 /ɐ/ <Audio id="fan1" /> |
 | -------------------------- | --------------------------- | -------------------------- |
 | fa                         | faan                        | fan                        |
 
@@ -40,7 +40,7 @@ Mặt khác, chúng ta biết rằng phương án phiên âm còn có một mụ
 
 Ý nghĩa của nguyên tắc này là, khi chọn chữ cái để tương ứng với âm thanh, nên cố gắng phù hợp với nhận thức hiện có của mọi người, ví dụ như các chữ cái a o e thường được dùng để biểu thị nguyên âm, b p m f biểu thị âm môi, v.v. Một ví dụ phản diện nổi tiếng là hệ thống viết của tiếng Cherokee, nó dùng chữ cái Ꭰ để biểu thị âm /a/, chữ cái Ꮃ để biểu thị âm /la/, điều này rất phản trực giác. Hoặc chẳng hạn như q trong phiên âm tiếng Phổ thông đại diện cho âm /t͡ɕʰ/, điều này không phù hợp với thói quen của người nói tiếng Anh. Vì trong tiếng Anh, q thường biểu thị /k/, nên người phương Tây khi học phiên âm tiếng Phổ thông, lần đầu tiên nhìn thấy q dễ vô thức phát âm thành /k/, phải mất một thời gian mới có thể thích ứng được.
 
-Việt bính thường bị phê bình vì dùng chữ cái j để biểu thị âm /j/ <Audio client:load id="jaa1" />, chính là vì vi phạm nguyên tắc này, bởi vì mọi người đã quen với việc dùng chữ cái y để đại diện cho âm /j/, dùng j để biểu thị thì rất không quen. Về điểm này, [phía dưới](#về-j-và-y) sẽ giải thích chi tiết.
+Việt bính thường bị phê bình vì dùng chữ cái j để biểu thị âm /j/ <Audio id="jaa1" />, chính là vì vi phạm nguyên tắc này, bởi vì mọi người đã quen với việc dùng chữ cái y để đại diện cho âm /j/, dùng j để biểu thị thì rất không quen. Về điểm này, [phía dưới](#về-j-và-y) sẽ giải thích chi tiết.
 
 ### Nguyên tắc 4: Phản ánh chính xác hệ thống âm vị của ngôn ngữ
 
@@ -67,7 +67,7 @@ Yale có thể được coi là phương án phiên âm tiếng Quảng Đông k
 
 Điểm thứ ba, Yale dùng eu để đại diện cho /ɵ/ và /œ/, điều này chính là vấn đề phân tích âm vị ở trên. Điều này trực tiếp dẫn đến việc Yale không thể biểu thị /œ/ và /ɛːu/, ảnh hưởng đến khả năng biểu thị của phương án phiên âm, như bảng dưới đây: 
 
-|          | 睡 /sɵi˨/ <Audio client:load id="seoi6" /> | 掉 /tɛːu˨/ <Audio client:load id="deu6" /> | 𠰲 /œt˨/ <Audio client:load id="oet6" /> |
+|          | 睡 /sɵi˨/ <Audio id="seoi6" /> | 掉 /tɛːu˨/ <Audio id="deu6" /> | 𠰲 /œt˨/ <Audio id="oet6" /> |
 | -------- | ------------------------------ | ------------------------------ | ---------------------------- |
 | Yale     | seuih                          | Không thể biểu thị                       | Không thể biểu thị                     |
 | Việt bính | seoi6                          | deu6                           | oet6                         |

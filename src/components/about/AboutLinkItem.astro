@@ -1,5 +1,6 @@
 ---
-import { IconBrandGithub, IconKeyboard, IconMail } from "@tabler/icons-react";
+import Icon from "@/components/Icon.astro";
+import type { IconName } from "@/components/icons/iconPaths";
 
 interface Props {
   kind: "github" | "keyboard" | "mail";
@@ -7,17 +8,15 @@ interface Props {
 
 const { kind } = Astro.props;
 
-const iconByKind = {
-  github: IconBrandGithub,
-  keyboard: IconKeyboard,
-  mail: IconMail,
+const iconByKind: Record<Props["kind"], IconName> = {
+  github: "brand-github",
+  keyboard: "keyboard",
+  mail: "mail",
 };
-
-const Icon = iconByKind[kind];
 ---
 
 <li class="flex items-start">
-  <Icon size="1.25rem" className="mt-1 mr-3 flex-shrink-0 text-gray-500" />
+  <Icon name={iconByKind[kind]} size="1.25rem" class="mt-1 me-3 text-gray-500" />
   <div class="min-w-0">
     <slot />
   </div>

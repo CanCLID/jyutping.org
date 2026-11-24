@@ -1,0 +1,98 @@
+---
+import type { MarkdownHeading } from "astro";
+import { getUiLabels } from "@/i18n/uiLabels";
+
+type TableOfContentsHeading = Pick<MarkdownHeading, "depth" | "slug" | "text">;
+
+interface Props {
+  headings: TableOfContentsHeading[];
+  locale: string;
+}
+
+const { headings, locale } = Astro.props;
+const ui = getUiLabels(locale);
+const tocHeadings = headings.filter(({ depth }) => depth > 1 && depth < 4);
+---
+
+{tocHeadings.length > 0 && (
+  <nav
+    aria-label={ui.tocNav}
+    class="toc-nav max-h-[calc(100dvh-6rem)] overflow-y-auto overscroll-y-contain p-1"
+  >
+    <ul class="space-y-1.5">
+      {tocHeadings.map((heading) => (
+        <li class={heading.depth === 3 ? "ms-3" : undefined}>
+          <a
+            href={`#${heading.slug}`}
+            class="block text-sm text-gray-600 hover:text-gray-900 border-s-2 border-transparent hover:border-gray-400 ps-2 py-0.5 transition-colors duration-150"
+          >
+            {heading.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<script>
+  const tocNav = document.querySelector<HTMLElement>(".toc-nav");
+  if (tocNav) {
+    const links = Array.from(tocNav.querySelectorAll<HTMLAnchorElement>("a[href^='#']"));
+
+    if (CSS.supports("scroll-target-group: auto")) {
+      const syncAriaCurrent = () => {
+        const currentLink = tocNav.querySelector("a:target-current");
+        for (const link of links) {
+          link.setAttribute("aria-current", link === currentLink ? "true" : "false");
+        }
+      };
+
+      syncAriaCurrent();
+      document.addEventListener("scrollend", syncAriaCurrent);
+      window.addEventListener("hashchange", syncAriaCurrent);
+    } else {
+      const sectionIds = links
+        .map((link) => decodeURIComponent(link.getAttribute("href")?.slice(1) ?? ""))
+        .filter(Boolean);
+      const targets = sectionIds
+        .map((id) => document.getElementById(id))
+        .filter((el): el is HTMLElement => el !== null);
+
+      const setActive = (activeId: string | null) => {
+        for (const link of links) {
+          const hrefId = decodeURIComponent(link.getAttribute("href")?.slice(1) ?? "");
+          const isActive = activeId !== null && hrefId === activeId;
+          link.classList.toggle("target-current", isActive);
+          link.setAttribute("aria-current", String(isActive));
+        }
+      };
+
+      if (targets.length > 0) {
+        const visibleSet = new Set<string>();
+        const observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                visibleSet.add(entry.target.id);
+              } else {
+                visibleSet.delete(entry.target.id);
+              }
+            }
+
+            if (visibleSet.size > 0) {
+              const firstVisible = targets.find((el) => visibleSet.has(el.id));
+              if (firstVisible) {
+                setActive(firstVisible.id);
+              }
+            }
+          },
+          { rootMargin: "0px 0px -75% 0px", threshold: 0 },
+        );
+
+        for (const target of targets) {
+          observer.observe(target);
+        }
+      }
+    }
+  }
+</script>

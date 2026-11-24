@@ -1,0 +1,24 @@
+---
+interface Props {
+  caption: string;
+  captionId: string;
+  tableClass?: string;
+  sticky?: boolean;
+}
+
+const { caption, captionId, tableClass, sticky = false } = Astro.props;
+---
+
+<div
+  tabindex="0"
+  role="region"
+  aria-labelledby={captionId}
+  class="table-scroll-region"
+>
+  <table class:list={[sticky && "sticky-table", tableClass]}>
+    <caption id={captionId} class="visually-hidden">
+      {caption}
+    </caption>
+    <slot />
+  </table>
+</div>

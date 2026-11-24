@@ -1,20 +1,11 @@
 ---
-import { Image } from "astro:assets";
-import {
-  IconBook2,
-  IconBooks,
-  IconBrandAndroid,
-  IconBrandApple,
-  IconBrandChrome,
-  IconBrandFirefox,
-  IconBrandGooglePlay,
-  IconDownload,
-  IconKeyboard,
-  IconWorld,
-} from "@tabler/icons-react";
+import { Picture } from "astro:assets";
 import DownloadButton from "@/components/DownloadButton.astro";
+import Icon from "@/components/Icon.astro";
 import LinkedImageCard from "@/components/LinkedImageCard.astro";
+import YouTubeFacade from "@/components/YouTubeFacade.astro";
 import { getTranslations } from "@/i18n/pages/keyboard";
+import { getUiLabels } from "@/i18n/uiLabels";
 import converterImage from "@/assets/images/keyboard/converter.png";
 import flippedImage from "@/assets/images/keyboard/flipped.png";
 import googleTranslateImage from "@/assets/images/keyboard/google-translate-hero.png";
@@ -26,6 +17,7 @@ import learnduckImage from "@/assets/images/keyboard/learnduck.png";
 import otterboardImage from "@/assets/images/keyboard/otterboard.png";
 import wingImage from "@/assets/images/keyboard/wing.png";
 import wordsHkImage from "@/assets/images/keyboard/wordshk.png";
+import youtubePoster from "@/assets/images/keyboard/youtube-52min.jpg";
 
 interface Props {
   locale: string;
@@ -33,16 +25,17 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = getTranslations(locale);
+const ui = getUiLabels(locale);
 ---
 
 <div class="container mx-auto max-w-5xl px-4 py-8">
-  <div
+  <section
     id="input-methods"
     class="mx-auto mb-8 rounded-md border border-dashed border-gray-300 p-8"
   >
     <h1 class="mx-auto text-center text-4xl">
       <span class="inline-flex items-center font-semibold">
-        <IconKeyboard className="mr-2" /> {t.introLinks}
+        <Icon name="keyboard" size="2rem" class="me-2" /> {t.introLinks}
       </span>
     </h1>
     <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -52,7 +45,7 @@ const t = getTranslations(locale);
         <div class="mb-4">
           <DownloadButton
             href="https://apps.apple.com/app/id917670924"
-            icon={IconBrandApple}
+            icon="brand-apple"
             text={t.sogouAppStoreButton}
             variant="apple"
           />
@@ -62,7 +55,7 @@ const t = getTranslations(locale);
         <div class="mb-4">
           <DownloadButton
             href="https://shouji.sogou.com/interface/multilingual.php?language=3"
-            icon={IconBrandAndroid}
+            icon="brand-android"
             text={t.sogouApkButton}
             variant="android"
           />
@@ -76,7 +69,7 @@ const t = getTranslations(locale);
         <div class="my-4">
           <DownloadButton
             href="https://www.typeduck.hk/web/"
-            icon={IconWorld}
+            icon="world"
             text={t.typeduckWeb}
             variant="web"
           />
@@ -85,7 +78,7 @@ const t = getTranslations(locale);
         <div class="my-4">
           <DownloadButton
             href="https://www.typeduck.hk/"
-            icon={IconDownload}
+            icon="download"
             text={t.typeduckDownload}
             variant="typeduck"
           />
@@ -97,7 +90,7 @@ const t = getTranslations(locale);
         <div class="mb-4">
           <DownloadButton
             href="https://apps.apple.com/app/id1509367629"
-            icon={IconBrandApple}
+            icon="brand-apple"
             text={t.appJyutpingAppStoreButton}
             variant="apple"
           />
@@ -106,7 +99,7 @@ const t = getTranslations(locale);
         <div class="mb-4">
           <DownloadButton
             href="https://play.google.com/store/apps/details?id=org.jyutping.jyutping&hl=zh-HK&gl=HK"
-            icon={IconBrandGooglePlay}
+            icon="brand-google-play"
             text={t.appJyutpingGooglePlayButton}
             variant="googleplay"
           />
@@ -115,7 +108,7 @@ const t = getTranslations(locale);
         <div class="mb-4">
           <DownloadButton
             href="https://jyutping.app"
-            icon={IconDownload}
+            icon="download"
             text={t.appJyutpingWebsiteDownload}
             variant="web"
           />
@@ -129,7 +122,7 @@ const t = getTranslations(locale);
         <div class="mb-4">
           <DownloadButton
             href="https://jyutping.net/"
-            icon={IconDownload}
+            icon="download"
             text="jyutping.net"
             variant="web"
           />
@@ -141,7 +134,7 @@ const t = getTranslations(locale);
         <div class="mb-4">
           <DownloadButton
             href="https://apps.apple.com/app/id1091700242"
-            icon={IconBrandApple}
+            icon="brand-apple"
             text={t.gboardAppStoreButton}
             variant="apple"
           />
@@ -150,7 +143,7 @@ const t = getTranslations(locale);
         <div class="mb-4">
           <DownloadButton
             href="https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin&hl=en_US"
-            icon={IconBrandGooglePlay}
+            icon="brand-google-play"
             text={t.gboardGooglePlayButton}
             variant="googleplay"
           />
@@ -162,7 +155,7 @@ const t = getTranslations(locale);
         <div class="mb-4">
           <DownloadButton
             href="https://apps.apple.com/app/id6752963850"
-            icon={IconBrandApple}
+            icon="brand-apple"
             text={t.cantoboardAppStoreButton}
             variant="apple"
           />
@@ -176,13 +169,14 @@ const t = getTranslations(locale);
             href="https://apps.apple.com/app/id6803947273"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-block transition-opacity duration-200 hover:opacity-80"
+            class="target-control inline-block transition-opacity duration-200 hover:opacity-80"
           >
-            <Image
+            <Picture
               src={otterboardImage}
               alt={t.otterboardTitle}
-              width={256}
-              height={256}
+              formats={["avif", "webp"]}
+              widths={[128, 256]}
+              sizes="4rem"
               class="size-16"
               loading="lazy"
             />
@@ -191,12 +185,14 @@ const t = getTranslations(locale);
       </div>
       <LinkedImageCard
         heading="LearnDuck 粵拼打字入門"
+        headingLevel="h2"
         href="https://chaaklau.github.io/LearnDuck/"
         alt="LearnDuck 粵拼打字入門"
         image={learnduckImage}
       />
       <LinkedImageCard
         heading="粵拼打字練習工具"
+        headingLevel="h2"
         href="https://jyutping.io/"
         alt="粵拼打字練習工具"
         publicSrc="/img/jyutping-io-logo-with-bar.svg"
@@ -205,15 +201,15 @@ const t = getTranslations(locale);
         imageClassName="mx-auto h-auto max-w-full rounded-lg p-8"
       />
     </div>
-  </div>
+  </section>
 
-  <div
+  <section
     id="dictionaries"
-    class="mx-auto my-8 rounded-md border border-dashed border-gray-300 p-8"
+    class="defer-section mx-auto my-8 rounded-md border border-dashed border-gray-300 p-8"
   >
-    <h2 class="mx-auto my-4 text-center text-4xl font-semibold">
+    <h2 class="mx-auto my-4 text-center text-4xl">
       <span class="inline-flex items-center font-semibold">
-        <IconBook2 className="mr-2" /> {t.toolsTitle}
+        <Icon name="book-2" size="2rem" class="me-2" /> {t.toolsTitle}
       </span>
     </h2>
     <div class="my-4 grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -264,13 +260,14 @@ const t = getTranslations(locale);
             href="https://github.com/CanCLID/inject-jyutping"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex-shrink-0 transition-opacity duration-200 hover:opacity-80"
+            class="shrink-0 transition-opacity duration-200 hover:opacity-80"
           >
-            <Image
+            <Picture
               src={injectImage}
               alt="Inject Jyutping Logo"
-              width={64}
-              height={64}
+              formats={["avif", "webp"]}
+              widths={[64, 128]}
+              sizes="4rem"
               class="mx-auto h-auto max-w-full"
               loading="lazy"
             />
@@ -278,13 +275,13 @@ const t = getTranslations(locale);
           <div class="my-4 flex flex-col gap-4">
             <DownloadButton
               href="https://chromewebstore.google.com/detail/inject-jyutping/lfgpgjkjglogbndlkikjgbbfoiofbdjp"
-              icon={IconBrandChrome}
+              icon="brand-chrome"
               text="Chrome Web Store"
               variant="chrome"
             />
             <DownloadButton
               href="https://addons.mozilla.org/en-US/firefox/addon/inject-jyutping/"
-              icon={IconBrandFirefox}
+              icon="brand-firefox"
               text="Firefox Add-ons"
               variant="firefox"
             />
@@ -292,29 +289,24 @@ const t = getTranslations(locale);
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div
+  <section
     id="learning"
-    class="mx-auto my-8 rounded-md border border-dashed border-gray-300 p-8"
+    class="defer-section mx-auto my-8 rounded-md border border-dashed border-gray-300 p-8"
   >
     <h2 class="mx-auto my-4 text-center text-4xl">
       <span class="inline-flex items-center font-semibold">
-        <IconBooks className="mr-2" /> {t.resourceTitle}
+        <Icon name="books" size="2rem" class="me-2" /> {t.resourceTitle}
       </span>
     </h2>
     <h3 class="my-4 text-center text-2xl font-semibold">52 分鐘學識粵拼</h3>
-    <div class="relative mx-auto h-0 max-w-3xl pb-[56.25%]">
-      <iframe
-        class="absolute left-0 top-0 h-full w-full rounded-lg shadow-md"
-        src="https://www.youtube.com/embed/MOsf0BcLzlc"
-        title="YouTube video player: 52 分鐘學識粵拼"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-        loading="lazy"
-      />
-    </div>
+    <YouTubeFacade
+      videoId="MOsf0BcLzlc"
+      title="YouTube video player: 52 分鐘學識粵拼"
+      playLabel={ui.playVideo}
+      poster={youtubePoster}
+    />
     <div class="my-8 grid grid-cols-1 gap-8 md:grid-cols-2">
       <LinkedImageCard
         heading="冚唪唥粵文 hambaanglaang.hk"
@@ -343,5 +335,5 @@ const t = getTranslations(locale);
         image={wingImage}
       />
     </div>
-  </div>
+  </section>
 </div>

@@ -1,0 +1,208 @@
+import { makeResource } from "./utils";
+
+type UiLabels = {
+  skipToContent: string;
+  primaryNav: string;
+  tocNav: string;
+  blogCatalogue: string;
+  openMenu: string;
+  languageSelector: string;
+  playAudioPrefix: string;
+  playVideo: string;
+  githubLabel: string;
+  emailLabel: string;
+  huggingFaceLabel: string;
+  xLabel: string;
+  proseTableRegionLabel: string;
+  onsetTableCaption: string;
+  syllabicNasalTableCaption: string;
+  nucleiTableCaption: string;
+  codaTableCaption: string;
+  finalsChartCaption: string;
+  toneTableCaption: string;
+  tonePracticeTableCaption: string;
+};
+
+export const getUiLabels = makeResource<UiLabels>({
+  cmn: {
+    skipToContent: "跳到主要內容",
+    primaryNav: "主導覽",
+    tocNav: "本頁目錄",
+    blogCatalogue: "文章目錄",
+    openMenu: "打開選單",
+    languageSelector: "切換語言",
+    playAudioPrefix: "播放讀音",
+    playVideo: "播放影片",
+    githubLabel: "GitHub 倉庫",
+    emailLabel: "發送電郵",
+    huggingFaceLabel: "Hugging Face 主頁",
+    xLabel: "X（前身為 Twitter）主頁",
+    proseTableRegionLabel: "資料表格",
+    onsetTableCaption: "粵拼聲母表",
+    syllabicNasalTableCaption: "粵拼鼻音單獨成韻表",
+    nucleiTableCaption: "粵拼韻腹表",
+    codaTableCaption: "粵拼韻尾表",
+    finalsChartCaption: "粵拼韻母總表",
+    toneTableCaption: "粵拼字調表",
+    tonePracticeTableCaption: "粵語六個聲調兩兩組合練習表",
+  },
+  en: {
+    skipToContent: "Skip to main content",
+    primaryNav: "Primary",
+    tocNav: "Table of contents",
+    blogCatalogue: "Blog articles",
+    openMenu: "Menu",
+    languageSelector: "Select language",
+    playAudioPrefix: "Play audio",
+    playVideo: "Play video",
+    githubLabel: "GitHub Repository",
+    emailLabel: "Email Support",
+    huggingFaceLabel: "Hugging Face Profile",
+    xLabel: "X (formerly Twitter) Profile",
+    proseTableRegionLabel: "Data table",
+    onsetTableCaption: "Jyutping Onsets Table",
+    syllabicNasalTableCaption: "Jyutping Syllabic Nasals Table",
+    nucleiTableCaption: "Jyutping Nuclei Table",
+    codaTableCaption: "Jyutping Codas Table",
+    finalsChartCaption: "Jyutping Finals Chart",
+    toneTableCaption: "Jyutping Tones Table",
+    tonePracticeTableCaption: "Cantonese Six-Tone Pair Practice Table",
+  },
+  ja: {
+    skipToContent: "本文へスキップ",
+    primaryNav: "メインナビゲーション",
+    tocNav: "目次",
+    blogCatalogue: "記事一覧",
+    openMenu: "メニュー",
+    languageSelector: "言語を選択",
+    playAudioPrefix: "音声を再生",
+    playVideo: "動画を再生",
+    githubLabel: "GitHub リポジトリ",
+    emailLabel: "メールで問い合わせ",
+    huggingFaceLabel: "Hugging Face プロフィール",
+    xLabel: "X（旧 Twitter）プロフィール",
+    proseTableRegionLabel: "データ表",
+    onsetTableCaption: "粤拼 声母表",
+    syllabicNasalTableCaption: "粤拼 成節鼻音表",
+    nucleiTableCaption: "粤拼 韻腹（母音）表",
+    codaTableCaption: "粤拼 韻尾表",
+    finalsChartCaption: "粤拼 韻母一覧表",
+    toneTableCaption: "粤拼 声調表",
+    tonePracticeTableCaption: "広東語6声調の組み合わせ練習表",
+  },
+  nan: {
+    skipToContent: "跳到主要內容",
+    primaryNav: "主導覽",
+    tocNav: "本頁目錄",
+    blogCatalogue: "文章目錄",
+    openMenu: "開選單",
+    languageSelector: "切換語言",
+    playAudioPrefix: "放送讀音",
+    playVideo: "放送影片",
+    githubLabel: "GitHub 倉庫",
+    emailLabel: "寄電子批",
+    huggingFaceLabel: "Hugging Face 主頁",
+    xLabel: "X（進前號做 Twitter）主頁",
+    proseTableRegionLabel: "資料表格",
+    onsetTableCaption: "粵拼聲母表",
+    syllabicNasalTableCaption: "粵拼鼻音單獨成韻表",
+    nucleiTableCaption: "粵拼韻腹表",
+    codaTableCaption: "粵拼韻尾表",
+    finalsChartCaption: "粵拼韻母總表",
+    toneTableCaption: "粵拼字調表",
+    tonePracticeTableCaption: "粵語六個聲調兩兩組合練習表",
+  },
+  vi: {
+    skipToContent: "Chuyển đến nội dung chính",
+    primaryNav: "Điều hướng chính",
+    tocNav: "Mục lục",
+    blogCatalogue: "Danh sách bài viết",
+    openMenu: "Menu",
+    languageSelector: "Chọn ngôn ngữ",
+    playAudioPrefix: "Phát âm thanh",
+    playVideo: "Phát video",
+    githubLabel: "Kho lưu trữ GitHub",
+    emailLabel: "Gửi email hỗ trợ",
+    huggingFaceLabel: "Trang Hugging Face",
+    xLabel: "Trang X (Twitter trước đây)",
+    proseTableRegionLabel: "Bảng dữ liệu",
+    onsetTableCaption: "Bảng thanh mẫu Việt bính",
+    syllabicNasalTableCaption: "Bảng âm tiết mũi Việt bính",
+    nucleiTableCaption: "Bảng nguyên âm trong vận mẫu Việt bính",
+    codaTableCaption: "Bảng âm cuối vận mẫu Việt bính",
+    finalsChartCaption: "Bảng tổng hợp vận mẫu Việt bính",
+    toneTableCaption: "Bảng thanh điệu Việt bính",
+    tonePracticeTableCaption: "Bảng luyện tập ghép đôi 6 thanh điệu tiếng Quảng Đông",
+  },
+  wuu: {
+    skipToContent: "跳到主要內容",
+    primaryNav: "主導覽",
+    tocNav: "本頁目錄",
+    blogCatalogue: "文章目錄",
+    openMenu: "打開菜單",
+    languageSelector: "切換語言",
+    playAudioPrefix: "播放讀音",
+    playVideo: "播放視頻",
+    githubLabel: "GitHub 倉庫",
+    emailLabel: "發送郵件",
+    huggingFaceLabel: "Hugging Face 主頁",
+    xLabel: "X（前身爲 Twitter）主頁",
+    proseTableRegionLabel: "資料表格",
+    onsetTableCaption: "粵拼聲母表",
+    syllabicNasalTableCaption: "粵拼鼻音單獨成韻表",
+    nucleiTableCaption: "粵拼韻腹表",
+    codaTableCaption: "粵拼韻尾表",
+    finalsChartCaption: "粵拼韻母總表",
+    toneTableCaption: "粵拼字調表",
+    tonePracticeTableCaption: "粵語六個聲調兩兩組合練習表",
+  },
+  yue: {
+    skipToContent: "跳到主要內容",
+    primaryNav: "主導覽",
+    tocNav: "本頁目錄",
+    blogCatalogue: "文章目錄",
+    openMenu: "打開選單",
+    languageSelector: "切換語言",
+    playAudioPrefix: "播放讀音",
+    playVideo: "播放影片",
+    githubLabel: "GitHub 儲存庫",
+    emailLabel: "傳送電郵",
+    huggingFaceLabel: "Hugging Face 主頁",
+    xLabel: "X（前身為 Twitter）主頁",
+    proseTableRegionLabel: "資料表格",
+    onsetTableCaption: "粵拼聲母表",
+    syllabicNasalTableCaption: "粵拼鼻音單獨成韻表",
+    nucleiTableCaption: "粵拼韻腹表",
+    codaTableCaption: "粵拼韻尾表",
+    finalsChartCaption: "粵拼韻母總表",
+    toneTableCaption: "粵拼字調表",
+    tonePracticeTableCaption: "粵語六個聲調兩兩組合練習表",
+  },
+  yue_hans: {
+    skipToContent: "跳到主要内容",
+    primaryNav: "主导航",
+    tocNav: "本页目录",
+    blogCatalogue: "文章目录",
+    openMenu: "打开菜单",
+    languageSelector: "切换语言",
+    playAudioPrefix: "播放读音",
+    playVideo: "播放影片",
+    githubLabel: "GitHub 仓库",
+    emailLabel: "发送电邮",
+    huggingFaceLabel: "Hugging Face 主页",
+    xLabel: "X（前身为 Twitter）主页",
+    proseTableRegionLabel: "资料表格",
+    onsetTableCaption: "粤拼声母表",
+    syllabicNasalTableCaption: "粤拼鼻音单独成韵表",
+    nucleiTableCaption: "粤拼韵腹表",
+    codaTableCaption: "粤拼韵尾表",
+    finalsChartCaption: "粤拼韵母总表",
+    toneTableCaption: "粤拼字调表",
+    tonePracticeTableCaption: "粤语六个声调两两组合练习表",
+  },
+});
+
+export function formatPlayAudioLabel(locale: string, id: string): string {
+  const { playAudioPrefix } = getUiLabels(locale);
+  return `${playAudioPrefix} ${id}`;
+}

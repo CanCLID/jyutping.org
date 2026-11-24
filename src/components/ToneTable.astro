@@ -1,0 +1,46 @@
+---
+import Audio from "@/components/Audio.astro";
+import ScrollableTable from "@/components/ScrollableTable.astro";
+import { I18n } from "@/i18n/utils";
+import { getUiLabels } from "@/i18n/uiLabels";
+
+interface Props {
+  locale?: string;
+}
+
+const { locale = Astro.currentLocale || I18n.defaultLocale } = Astro.props;
+const ui = getUiLabels(locale);
+const tones = [1, 2, 3, 4, 5, 6] as const;
+---
+
+<ScrollableTable
+  caption={ui.tonePracticeTableCaption}
+  captionId="tone-practice-table-caption"
+  sticky
+>
+  <thead>
+    <tr>
+      <th scope="col">
+        <span class="inline-block -scale-y-100" aria-hidden="true">⤷</span>
+      </th>
+      {tones.map((colTone) => (
+        <th scope="col">{colTone}</th>
+      ))}
+    </tr>
+  </thead>
+  <tbody>
+    {tones.map((rowTone) => (
+      <tr>
+        <th class="sticky-row-header" scope="row">{rowTone}</th>
+        {tones.map((colTone) => (
+          <td>
+            <span class="whitespace-nowrap">
+              {`${rowTone}￫${colTone}`}{" "}
+              <Audio id={`${rowTone}${colTone}`} locale={locale} />
+            </span>
+          </td>
+        ))}
+      </tr>
+    ))}
+  </tbody>
+</ScrollableTable>

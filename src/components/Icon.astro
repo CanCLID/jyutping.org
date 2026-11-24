@@ -1,0 +1,48 @@
+---
+import { iconDefinitions, type IconName } from "@/components/icons/iconPaths";
+
+interface Props {
+  name: IconName;
+  size?: string;
+  stroke?: number;
+  class?: string;
+  label?: string;
+}
+
+const {
+  name,
+  size = "1.25rem",
+  stroke,
+  class: className,
+  label,
+} = Astro.props;
+
+const def = iconDefinitions[name] as {
+  filled?: boolean;
+  paths: readonly string[];
+  strokeWidth?: number;
+};
+const isFilled = Boolean(def.filled);
+const strokeWidth = stroke ?? def.strokeWidth ?? 2;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill={isFilled ? "currentColor" : "none"}
+  stroke={isFilled ? "none" : "currentColor"}
+  stroke-width={isFilled ? undefined : strokeWidth}
+  stroke-linecap={isFilled ? undefined : "round"}
+  stroke-linejoin={isFilled ? undefined : "round"}
+  class:list={["shrink-0", className]}
+  role={label ? "img" : undefined}
+  aria-label={label}
+  aria-hidden={label ? undefined : "true"}
+  focusable="false"
+>
+  {def.paths.map((d) => (
+    <path d={d} />
+  ))}
+</svg>

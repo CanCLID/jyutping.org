@@ -2,7 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { render } from "astro:content";
 import BlogCatalogue from "@/components/BlogCatalogue.astro";
-import TableOfContents from "@/components/TableOfContents";
+import TableOfContents from "@/components/TableOfContents.astro";
 import CatalogueContentShell from "@/components/content/CatalogueContentShell.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { I18n } from "@/i18n/utils";
@@ -24,9 +24,9 @@ interface Props {
 
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
-const allBlogEntries = await getLocalizedCollectionEntries("blog", I18n.defaultLocale);
-
-allBlogEntries.sort((a, b) => (a.data.weight || 0) - (b.data.weight || 0));
+const allBlogEntries = (
+  await getLocalizedCollectionEntries("blog", I18n.defaultLocale)
+).toSorted((a, b) => (a.data.weight || 0) - (b.data.weight || 0));
 
 const lang = getEntryLocale(entry.id) || I18n.defaultLocale;
 ---
@@ -46,6 +46,6 @@ const lang = getEntryLocale(entry.id) || I18n.defaultLocale;
       currentSlug={getEntrySlug(entry.id)}
     />
     <Content components={sharedMdxComponents} />
-    <TableOfContents slot="toc" client:load headings={headings} />
+    <TableOfContents slot="toc" headings={headings} locale={lang} />
   </CatalogueContentShell>
 </BaseLayout>

@@ -1,57 +1,69 @@
 ---
-import Audio from "@/components/Audio.tsx";
+import Audio from "@/components/Audio.astro";
+import ScrollableTable from "@/components/ScrollableTable.astro";
+import { I18n } from "@/i18n/utils";
+import { getUiLabels } from "@/i18n/uiLabels";
 import { tableClass, tableDataCellClass } from "@/components/jyutping/tableStyles";
+
+interface Props {
+  locale?: string;
+}
+
+const { locale = Astro.currentLocale || I18n.defaultLocale } = Astro.props;
+const ui = getUiLabels(locale);
 ---
 
-<div class="overflow-x-auto">
-  <table class={tableClass}>
-    <tbody>
-      <tr>
-        <td class={tableDataCellClass} lang="yue">
-          i [iː] 詩 <Audio client:load id="si1" />
-          <br />i<sub>後接 -ng, -k</sub> [e] 星 <Audio client:load id="sing1" /> 識
-          <Audio client:load id="sik1" />
-          <br />
-          yu [y] 書 <Audio client:load id="syu1" />
-        </td>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue">
-          u [uː] 夫 <Audio client:load id="fu1" />
-          <br />u<sub>後接 -ng, -k</sub> [o] 風 <Audio client:load id="fung1" /> 福
-          <Audio client:load id="fuk1" />
-        </td>
-      </tr>
-      <tr>
-        <td class={tableDataCellClass} lang="yue">
-          e<sub>後接 -i</sub> [e] 四 <Audio client:load id="sei3" />
-          <br />
-          eo [ɵ] 詢 <Audio client:load id="seon1" />
-        </td>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue">
-          o<sub>後接 -u</sub> [o] 蘇 <Audio client:load id="sou1" />
-        </td>
-      </tr>
-      <tr>
-        <td class={tableDataCellClass} lang="yue">
-          e [ɛː] 些 <Audio client:load id="se1" />
-          <br />
-          oe [œː] 鋸 <Audio client:load id="goe3" />
-        </td>
-        <td class={tableDataCellClass} lang="yue">
-          a [ɐ] 新 <Audio client:load id="san1" />
-        </td>
-        <td class={tableDataCellClass} lang="yue">
-          o [ɔː] 疏 <Audio client:load id="so1" />
-        </td>
-      </tr>
-      <tr>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue">
-          aa [aː] 沙 <Audio client:load id="saa1" />
-        </td>
-        <td class={tableDataCellClass} lang="yue"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<ScrollableTable
+  caption={ui.nucleiTableCaption}
+  captionId="nuclei-table-caption"
+  tableClass={tableClass}
+>
+  <tbody>
+    <tr>
+      <td class={tableDataCellClass} lang="yue">
+        i [iː] 詩 <Audio id="si1" locale={locale} />
+        <br />i<sub>後接 -ng, -k</sub> [e] 星 <Audio id="sing1" locale={locale} /> 識
+        <Audio id="sik1" locale={locale} />
+        <br />
+        yu [y] 書 <Audio id="syu1" locale={locale} />
+      </td>
+      <td class={tableDataCellClass} lang="yue"></td>
+      <td class={tableDataCellClass} lang="yue">
+        u [uː] 夫 <Audio id="fu1" locale={locale} />
+        <br />u<sub>後接 -ng, -k</sub> [o] 風 <Audio id="fung1" locale={locale} /> 福
+        <Audio id="fuk1" locale={locale} />
+      </td>
+    </tr>
+    <tr>
+      <td class={tableDataCellClass} lang="yue">
+        e<sub>後接 -i</sub> [e] 四 <Audio id="sei3" locale={locale} />
+        <br />
+        eo [ɵ] 詢 <Audio id="seon1" locale={locale} />
+      </td>
+      <td class={tableDataCellClass} lang="yue"></td>
+      <td class={tableDataCellClass} lang="yue">
+        o<sub>後接 -u</sub> [o] 蘇 <Audio id="sou1" locale={locale} />
+      </td>
+    </tr>
+    <tr>
+      <td class={tableDataCellClass} lang="yue">
+        e [ɛː] 些 <Audio id="se1" locale={locale} />
+        <br />
+        oe [œː] 鋸 <Audio id="goe3" locale={locale} />
+      </td>
+      <td class={tableDataCellClass} lang="yue">
+        a [ɐ] 新 <Audio id="san1" locale={locale} />
+      </td>
+      <td class={tableDataCellClass} lang="yue">
+        o [ɔː] 疏 <Audio id="so1" locale={locale} />
+      </td>
+    </tr>
+    <tr>
+      <td class={tableDataCellClass} lang="yue"></td>
+      <td class={tableDataCellClass} lang="yue">
+        aa [aː] 沙 <Audio id="saa1" locale={locale} />
+      </td>
+      <td class={tableDataCellClass} lang="yue"></td>
+    </tr>
+  </tbody>
+</ScrollableTable>

@@ -15,9 +15,6 @@ type TranslationResource =
 const fallbackLocale = "en" as const;
 const fallbackToYueRegex = /^(zh|chi|ltc|zho|zhx|(zh-)?(cdo|cjy|cmn|cnp|cpx|csp|czh|czo|gan|hak|hnm|hsn|luh|lzh|mnp|nan|och|sjc|wuu|yue))\b/i;
 
-// Polyfill
-Object.hasOwn ||= Function.prototype.call.bind(Object.prototype.hasOwnProperty);
-
 // Returns a function that performs language negotiation and returns the resolved resource.
 // Currently the logic is simplified and it only falls back to either Cantonese or English.
 export function makeResource<T extends TranslationResource>(translations: Partial<Record<Locale, T>>) {
@@ -66,6 +63,14 @@ export function getLocalePath(currentPathname: string, targetLocale: string): st
     return basePath;
   }
   return basePath === "/" ? `/${targetLocale}` : `/${targetLocale}${basePath}`;
+}
+
+export function formatBcp47Locale(locale: string): string {
+  try {
+    return new Intl.Locale(locale.replaceAll("_", "-")).toString();
+  } catch {
+    return locale.replaceAll("_", "-");
+  }
 }
 
 export function getNonDefaultLocaleStaticPaths() {

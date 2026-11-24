@@ -2,13 +2,14 @@
 import { I18n } from "@/i18n/utils";
 import type { CollectionEntry } from "astro:content";
 import { getTitle } from "@/i18n/pageHeadings";
+import { getUiLabels } from "@/i18n/uiLabels";
 import { getEntrySlug } from "@/utils/content";
 
-// Get current locale from Astro's global
 const { currentLocale } = Astro;
 const locale = currentLocale || I18n.defaultLocale;
 
 const title = getTitle("blog", locale);
+const ui = getUiLabels(locale);
 
 interface Props {
   posts: CollectionEntry<"blog">[];
@@ -16,11 +17,9 @@ interface Props {
 }
 
 const { posts, currentSlug } = Astro.props;
-
-// Posts are pre-sorted by weight in the parent page
 ---
 
-<nav aria-label="Blog Catalogue">
+<nav aria-label={ui.blogCatalogue}>
   <h2 class="text-2xl px-4 font-bold mb-4">{title}</h2>
   <ul class="space-y-2 px-4">
     {
@@ -28,18 +27,16 @@ const { posts, currentSlug } = Astro.props;
         const postSlug = getEntrySlug(post.id);
         const localePrefix = locale === I18n.defaultLocale ? "" : `/${locale}`;
         const postLink = `${localePrefix}/blog/${postSlug}/`;
-        const isActive =
-          postSlug === currentSlug &&
-          (localePrefix === "" || localePrefix === `/${locale}`);
+        const isActive = postSlug === currentSlug;
         return (
           <li>
             <a
               href={postLink}
               class:list={[
-                "block text-lg hover:text-blue-500",
-                { "font-bold": isActive },
+                "target-control inline-flex items-center text-lg hover:text-blue-700",
+                { "font-bold underline underline-offset-4": isActive },
               ]}
-              aria-current={isActive ? "page" : false}
+              aria-current={isActive ? "page" : undefined}
             >
               {post.data.title}
             </a>

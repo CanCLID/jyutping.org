@@ -1,0 +1,66 @@
+---
+import { Picture } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import Icon from "@/components/Icon.astro";
+
+interface Props {
+  videoId: string;
+  title: string;
+  playLabel: string;
+  poster: ImageMetadata;
+}
+
+const { videoId, title, playLabel, poster } = Astro.props;
+---
+
+<div
+  class="youtube-facade relative mx-auto aspect-video w-full max-w-3xl overflow-hidden rounded-lg bg-neutral-900 shadow-md"
+  data-youtube-id={videoId}
+  data-youtube-title={title}
+>
+  <Picture
+    src={poster}
+    alt={title}
+    formats={["avif", "webp"]}
+    widths={[480, 768, 1280]}
+    sizes="(max-width: 768px) 100vw, 48rem"
+    loading="lazy"
+    class="h-full w-full object-cover"
+  />
+  <button
+    type="button"
+    data-youtube-play
+    aria-label={`${playLabel}: ${title}`}
+    class="absolute inset-0 flex items-center justify-center bg-black/25 transition-colors hover:bg-black/40 cursor-pointer"
+  >
+    <span class="flex size-16 items-center justify-center rounded-full bg-red-600 text-white shadow-lg transition-transform hover:scale-105">
+      <Icon name="player-play-filled" size="1.75rem" />
+    </span>
+  </button>
+</div>
+
+<script>
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+
+    const button = target.closest<HTMLButtonElement>("button[data-youtube-play]");
+    if (!button) return;
+
+    const container = button.closest<HTMLElement>(".youtube-facade");
+    const videoId = container?.dataset.youtubeId;
+    const title = container?.dataset.youtubeTitle || "YouTube video player";
+    if (!container || !videoId) return;
+
+    const iframe = document.createElement("iframe");
+    iframe.className = "h-full w-full border-0";
+    iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?autoplay=1`;
+    iframe.title = title;
+    iframe.allow =
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.referrerPolicy = "strict-origin-when-cross-origin";
+    iframe.allowFullscreen = true;
+
+    container.replaceChildren(iframe);
+  });
+</script>

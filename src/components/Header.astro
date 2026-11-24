@@ -1,12 +1,14 @@
 ---
-import { IconMenu2 } from "@tabler/icons-react";
-import LanguageSwitcher from "@/components/LanguageSwitcher.tsx";
+import Icon from "@/components/Icon.astro";
+import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
 import { I18n } from "@/i18n/utils";
 import { getNavTranslation } from "@/i18n/pageHeadings";
+import { getUiLabels } from "@/i18n/uiLabels";
 
 const { currentLocale, url } = Astro;
 const pathname = url.pathname;
 const locale = currentLocale || I18n.defaultLocale;
+const ui = getUiLabels(locale);
 const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
 const isHomepage =
   normalizedPathname === "/" ||
@@ -14,140 +16,136 @@ const isHomepage =
     .filter((candidate) => candidate !== I18n.defaultLocale)
     .some((candidate) => normalizedPathname === `/${candidate}`);
 
-// --- Generate Localized Nav Links ---
 const navLinkKeys = ["learn", "jyutping", "blog", "keyboard", "about"] as const;
 const navLinks = navLinkKeys.map((key) => {
   const baseHref = `/${key}`;
-  // Prepend locale prefix only if it's not the default locale
   const href = locale === I18n.defaultLocale ? baseHref : `/${locale}${baseHref}`;
+  const isCurrent =
+    normalizedPathname === href || normalizedPathname.startsWith(`${href}/`);
   return {
-    href: href,
+    href,
+    isCurrent,
     title: getNavTranslation(key, locale),
   };
 });
 
-// Determine the correct base path for the logo link
 const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
 ---
 
-<div id="mobile-menu-backdrop" class="fixed inset-0 z-40 bg-black/50 md:hidden opacity-0 pointer-events-none transition-opacity duration-300"></div>
-
-<header class:list={[
-  "z-50 p-4 text-white",
-  isHomepage
-    ? "absolute inset-x-0 top-0 bg-transparent"
-    : "relative bg-[#1678d3]",
-]}>
-  <div class="flex justify-between items-center px-4">
-    <a href={logoHref} class="text-white hover:opacity-80">
+<header
+  id="site-header"
+  class:list={[
+    "site-header z-50 p-4 text-white",
+    isHomepage
+      ? "absolute inset-x-0 top-0 bg-transparent"
+      : "relative bg-[#1678d3]",
+  ]}
+>
+  <div class="header-inner flex items-center justify-between gap-6 px-4">
+    <a
+      href={logoHref}
+      aria-current={isHomepage ? "page" : undefined}
+      class="target-control inline-flex items-center text-white hover:opacity-85 transition-opacity"
+    >
       <span class="text-3xl font-jyutping">粵拼</span>
     </a>
 
-    {/* Desktop Navigation */}
-    <nav class="hidden md:flex space-x-12">
-      {
-        navLinks.map((link) => (
-          <a href={link.href} class="text-white text-lg hover:opacity-90">
-            {link.title}
-          </a>
-        ))
-      }
+    <nav class="site-nav flex items-center" aria-label={ui.primaryNav}>
+      <button
+        type="button"
+        id="menu-button"
+        class="menu-button inline-flex items-center justify-center rounded-md text-white hover:bg-white/10 transition-colors cursor-pointer"
+        popovertarget="site-menu"
+        popovertargetaction="toggle"
+        aria-controls="site-menu"
+        aria-expanded="false"
+        aria-label={ui.openMenu}
+      >
+        <Icon name="menu-2" size="1.5rem" />
+      </button>
+
+      <ul id="site-menu" class="site-menu" popover="auto">
+        {navLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              aria-current={link.isCurrent ? "page" : undefined}
+              class="text-white text-lg hover:opacity-90 transition-opacity"
+            >
+              {link.title}
+            </a>
+          </li>
+        ))}
+        <li>
+          <LanguageSwitcher currentPathname={pathname} locale={locale} />
+        </li>
+      </ul>
     </nav>
-
-    {/* Desktop Language Switcher */}
-    <div class="hidden md:block">
-      <LanguageSwitcher currentPathname={pathname} client:load />
-    </div>
-
-    {/* Mobile Menu Button */}
-    <button
-      type="button"
-      class="md:hidden text-white cursor-pointer"
-      aria-label="Toggle menu"
-      id="mobile-menu-button"
-    >
-      <IconMenu2 size="1.5rem" />
-    </button>
-
-    {/* Mobile Menu Panel (hidden by default) */}
-    <div
-      id="mobile-menu-panel"
-      class="bg-[#1678d3] text-white absolute top-full left-0 right-0 z-50 [.open]:shadow-md md:hidden max-md:grid max-md:grid-rows-[0fr] max-md:transition-[grid-template-rows] max-md:duration-300 max-md:[.open]:grid-rows-[1fr]"
-    >
-      <div class="overflow-hidden">
-        <div class="px-8 py-4 flex flex-col space-y-4">
-          {/* Mobile Navigation Links */}
-          <nav class="flex flex-col space-y-2">
-            {navLinks.map((link) => (
-              <a href={link.href} class="text-white text-lg hover:opacity-80">
-                {link.title}
-              </a>
-            ))}
-          </nav>
-          {/* Mobile Language Switcher */}
-          <LanguageSwitcher currentPathname={pathname} client:load />
-        </div>
-      </div>
-    </div>
   </div>
 </header>
 
 <script>
-  function setupMobileMenu() {
-    const menuButton = document.getElementById("mobile-menu-button");
-    const menuPanel = document.getElementById("mobile-menu-panel");
-    const backdrop = document.getElementById("mobile-menu-backdrop");
+  const header = document.getElementById("site-header");
+  const inner = header?.querySelector<HTMLElement>(".header-inner");
+  const menuButton = document.getElementById("menu-button");
+  const siteMenu = document.getElementById("site-menu");
 
-    if (menuButton && menuPanel && backdrop) {
-      const closeMenu = () => {
-        menuPanel.classList.remove("open");
-        backdrop.classList.add("opacity-0", "pointer-events-none");
-      };
+  if (header && inner && menuButton && siteMenu) {
+    let lastWidth = 0;
 
-      const toggleMenu = () => {
-        const isOpen = menuPanel.classList.toggle("open");
-        backdrop.classList.toggle("opacity-0", !isOpen);
-        backdrop.classList.toggle("pointer-events-none", !isOpen);
-      };
+    const syncLayout = () => {
+      const currentWidth = header.getBoundingClientRect().width;
+      const wasWide = header.classList.contains("is-wide");
 
-      // Remove potential old listener to prevent duplicates if script runs multiple times
-      // (Though astro:page-load should handle this, it's safer)
-      // Clone the button to effectively remove old listeners before adding new ones
-      const newButton = menuButton.cloneNode(true);
-      if (menuButton.parentNode) {
-        menuButton.parentNode.replaceChild(newButton, menuButton);
-      } else {
-        console.error("Menu button has no parent node.");
-        return; // Exit if we can't replace the button
+      // Only remeasure when already wide or when the header has grown
+      if (!wasWide && currentWidth <= lastWidth) {
+        lastWidth = currentWidth;
+        return;
+      }
+      lastWidth = currentWidth;
+
+      const wasOpen = !wasWide && siteMenu.matches(":popover-open, .\\:popover-open");
+
+      header.classList.add("is-measuring");
+      header.classList.add("is-wide");
+      siteMenu.removeAttribute("popover");
+
+      const fits = inner.scrollWidth <= inner.clientWidth;
+
+      if (!fits) {
+        header.classList.remove("is-wide");
+        siteMenu.setAttribute("popover", "auto");
+        if (wasOpen) {
+          siteMenu.showPopover?.();
+        }
       }
 
-      newButton.addEventListener("click", toggleMenu);
-      backdrop.addEventListener("click", closeMenu);
+      menuButton.setAttribute("aria-expanded", String(!fits && wasOpen));
 
-      // Close menu when a link inside it is clicked
-      // Re-query links inside the panel each time to ensure they are fresh
-      menuPanel.querySelectorAll("a").forEach((link) => {
-        // Clone links as well to remove potential old listeners
-        const newLink = link.cloneNode(true);
-        if (link.parentNode) {
-          link.parentNode.replaceChild(newLink, link);
-        } else {
-          console.warn("Menu link has no parent node during setup.");
-          // Attempt to add listener to original link as fallback, though it might be stale
-          link.addEventListener("click", closeMenu);
-          return; // Continue to next link
-        }
-
-        newLink.addEventListener("click", closeMenu);
+      requestAnimationFrame(() => {
+        header.classList.remove("is-measuring");
       });
-    } else {
-      console.log("Mobile menu button or panel not found after page load.");
-    }
+    };
+
+    siteMenu.addEventListener("toggle", (event) => {
+      const toggleEvent = event as ToggleEvent;
+      if (!header.classList.contains("is-wide")) {
+        menuButton.setAttribute("aria-expanded", String(toggleEvent.newState === "open"));
+      }
+    });
+
+    siteMenu.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      if (!header.classList.contains("is-wide") && target.closest("a[href]")) {
+        siteMenu.hidePopover?.();
+      }
+    });
+
+    syncLayout();
+
+    const resizeObserver = new ResizeObserver(syncLayout);
+    resizeObserver.observe(header);
+    resizeObserver.observe(siteMenu);
   }
-
-  // Run on initial page load
-  setupMobileMenu();
-
-  // Run after Astro navigations
-  document.addEventListener("astro:page-load", setupMobileMenu);
 </script>

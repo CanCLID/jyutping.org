@@ -2,6 +2,18 @@
 
 @layer base {
   :root {
+    color-scheme: light;
+    --color-brand: #1678d3;
+    --color-brand-hover: #1263b0;
+    --color-brand-ink: #0c4f8c;
+    --color-surface: #ffffff;
+    --color-surface-subtle: #f9fafb;
+    --color-text: #1f2937;
+    --color-text-muted: #4b5563;
+    --color-border: #d1d5db;
+    --color-focus: #1678d3;
+    --target-size: 1.5rem;
+    --hit-expand: -0.25rem;
     --fallback-fonts:
       system-ui,
       -apple-system,
@@ -14,35 +26,63 @@
       "Open Sans",
       "Helvetica Neue",
       sans-serif;
+    --font-body: var(--font-chiron-hei-hk-ws), var(--fallback-fonts);
   }
 
-  * {
-    scroll-margin-top: 5rem;
+  @media (pointer: coarse) {
+    :root {
+      --target-size: 2.75rem;
+      --hit-expand: -0.75rem;
+    }
   }
 
   html {
-    background-size: 224px;
-    font-family: var(--fallback-fonts);
+    scroll-padding-block-start: 5rem;
+    font-family: var(--font-body);
   }
 
-  html:not(:lang(ja)),
-  html :not(:lang(ja)) {
-    font-family: var(--font-chiron-hei-hk-ws), var(--fallback-fonts);
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    text-align: start;
   }
 
-  html:lang(ja),
-  html :lang(ja) {
-    font-family:
+  :lang(ja) {
+    --font-body:
       var(--font-noto-sans-jp),
       var(--font-chiron-hei-hk-ws),
       var(--fallback-fonts);
+    font-family: var(--font-body);
   }
 
-  html .font-jyutping {
+  .font-jyutping {
     font-family:
       var(--font-chiron-hei-hk-jyutping),
       var(--font-chiron-hei-hk-ws),
       var(--fallback-fonts);
+  }
+
+  :where(h1, h2, h3, h4, h5, h6, [id]) {
+    scroll-margin-block-start: 5rem;
+  }
+
+  :where(h1, h2, h3, h4, th) {
+    text-wrap: balance;
+  }
+
+  :where(a, code) {
+    overflow-wrap: anywhere;
+  }
+
+  :where(a:any-link, button, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  :where(header, footer, .bg-\[\#1678d3\]) :where(a:any-link, button):focus-visible {
+    outline-color: currentColor;
   }
 
   article {
@@ -75,8 +115,13 @@
       @apply my-4;
     }
 
+    :where(p, li, blockquote) {
+      text-wrap: pretty;
+      max-inline-size: 65ch;
+    }
+
     a {
-      @apply text-blue-600 hover:text-blue-800 underline;
+      @apply text-blue-700 hover:text-blue-900 underline;
     }
 
     h1,
@@ -102,36 +147,439 @@
   }
 }
 
-@keyframes slide-left-out {
-  from {
-    transform: translateX(0);
-    opacity: 1;
+.visually-hidden:where(:not(:focus-within, :active)) {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+.skip-link:focus-visible {
+  position: fixed;
+  inset-block-start: 0.75rem;
+  inset-inline-start: 0.75rem;
+  z-index: 100;
+  padding: 0.625rem 1rem;
+  border-radius: 0.375rem;
+  background-color: var(--color-brand-ink);
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Extend touch hit area without distorting inline table row height */
+.hit-target-expand {
+  position: relative;
+  min-inline-size: 1.5rem;
+  min-block-size: 1.5rem;
+}
+
+.hit-target-expand::after {
+  content: "";
+  position: absolute;
+  inset: var(--hit-expand);
+}
+
+.target-control {
+  min-inline-size: var(--target-size);
+  min-block-size: var(--target-size);
+}
+
+/* Popover polyfill hidden guard before script loads */
+@supports not selector(:popover-open) {
+  [popover]:not(.\:popover-open) {
+    display: none;
+  }
+}
+
+/* Header & Responsive Navigation Popover */
+.site-header {
+  .header-inner > * {
+    flex-shrink: 0;
   }
 
-  to {
-    transform: translateX(-30px);
+  .menu-button {
+    anchor-name: --menu-button;
+    min-inline-size: var(--target-size);
+    min-block-size: var(--target-size);
+  }
+
+  .site-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-menu[popover] {
+    position: fixed;
+    inset: auto;
+    inset-block-start: 4.5rem;
+    inset-block-start: anchor(--menu-button bottom);
+    inset-inline-end: 1rem;
+    inline-size: min(80dvw, 22rem);
+    max-inline-size: calc(100dvw - 2rem);
+    block-size: fit-content;
+    max-block-size: calc(100dvh - 5.5rem);
+    margin-block-start: 0.5rem;
+    padding: 1rem 1.25rem;
+    overflow: auto;
+    border-radius: 0.75rem;
+    border: 1px solid rgb(255 255 255 / 0.2);
+    background-color: var(--color-brand);
+    color: #ffffff;
+    box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.25);
+    opacity: 0;
+    transition-property: opacity, translate, display, overlay;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    transition-behavior: allow-discrete;
+  }
+
+  .site-menu[popover]:is(:popover-open, .\:popover-open) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 1;
+
+    @starting-style {
+      opacity: 0;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      translate: 0 0;
+
+      @starting-style {
+        translate: 0 -0.5rem;
+      }
+    }
+  }
+
+  .site-menu a {
+    display: inline-flex;
+    align-items: center;
+    min-block-size: var(--target-size);
+    white-space: nowrap;
+  }
+
+  .site-menu a[aria-current="page"] {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.35em;
+    text-decoration-thickness: 2px;
+  }
+}
+
+.site-header.is-measuring * {
+  transition: none !important;
+}
+
+.site-header.is-wide {
+  .menu-button {
+    display: none;
+  }
+
+  .site-menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.25rem;
+    inline-size: auto;
+    max-inline-size: none;
+    block-size: auto;
+    max-block-size: none;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    translate: none;
+  }
+
+  .site-menu::backdrop {
+    display: none;
+  }
+}
+
+/* Language Switcher Popover */
+.lang-popover[popover] {
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.2);
+  max-block-size: calc(100dvh - 5rem);
+  max-inline-size: calc(100dvw - 2rem);
+  overflow: auto;
+  opacity: 0;
+  transition-property: opacity, translate, display, overlay;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  transition-behavior: allow-discrete;
+}
+
+.lang-popover[popover]:is(:popover-open, .\:popover-open) {
+  display: block;
+  opacity: 1;
+
+  @starting-style {
     opacity: 0;
   }
+
+  @media (prefers-reduced-motion: no-preference) {
+    translate: 0 0;
+
+    @starting-style {
+      translate: 0 -0.25rem;
+    }
+  }
 }
 
-@keyframes slide-right-in {
-  from {
-    transform: translateX(30px);
-    opacity: 0;
+@supports (position-area: block-end) {
+  .lang-popover[popover] {
+    inset: auto;
+    margin: 0;
+    margin-block-start: 0.5rem;
+    position-area: block-end span-inline-start;
+    position-try-fallbacks: flip-block, flip-inline, flip-block flip-inline;
   }
+}
 
-  to {
-    transform: translateX(0);
+@supports not (position-area: block-end) {
+  .lang-popover[popover] {
+    position: fixed;
+    top: var(--lang-top, 4rem);
+    left: var(--lang-left, 1rem);
+    margin: 0;
+  }
+}
+
+.lang-popover a[aria-current="page"] {
+  font-weight: 700;
+  background-color: #eff6ff;
+  color: var(--color-brand-ink);
+}
+
+/* Scrollspy Table of Contents */
+.toc-nav {
+  scroll-target-group: auto;
+  scrollbar-gutter: stable;
+}
+
+.toc-nav a:is(:target-current, .target-current) {
+  font-weight: 600;
+  color: #0369a1;
+  border-inline-start-color: currentColor;
+}
+
+/* Scrollable Data Tables & Scrollability Affordance Shadows */
+.table-scroll-region {
+  display: grid;
+  grid-template-columns: 0 auto 0;
+  align-items: stretch;
+  overflow-x: auto;
+  max-inline-size: 100%;
+  overscroll-behavior-x: contain;
+  container-type: scroll-state;
+}
+
+.table-scroll-region > table {
+  grid-column: 2;
+}
+
+.table-scroll-region::before,
+.table-scroll-region::after {
+  content: "";
+  display: block;
+  position: sticky;
+  grid-row: 1;
+  inline-size: 0.75rem;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.table-scroll-region::before {
+  grid-column: 1;
+  inset-inline-start: 0;
+  margin-inline-end: -0.75rem;
+  background: radial-gradient(farthest-side at 0 50%, rgb(0 0 0 / 0.16), transparent);
+}
+
+.table-scroll-region::after {
+  grid-column: 3;
+  inset-inline-end: 0;
+  margin-inline-start: -0.75rem;
+  background: radial-gradient(farthest-side at 100% 50%, rgb(0 0 0 / 0.16), transparent);
+}
+
+@container scroll-state(scrollable: inline-start) {
+  .table-scroll-region::before {
     opacity: 1;
   }
 }
 
-::view-transition-old(root) {
-  animation: slide-left-out 0.2s cubic-bezier(0, 0, 0.2, 1) forwards;
+@container scroll-state(scrollable: inline-end) {
+  .table-scroll-region::after {
+    opacity: 1;
+  }
 }
 
-::view-transition-new(root) {
-  animation: slide-right-in 0.2s cubic-bezier(0, 0, 0.2, 1) forwards;
+@supports not (container-type: scroll-state) {
+  @keyframes reveal-inline-shadow {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @supports (animation-timeline: scroll()) {
+    .table-scroll-region::before,
+    .table-scroll-region::after {
+      animation: reveal-inline-shadow linear both;
+      animation-timeline: scroll(inline);
+    }
+
+    .table-scroll-region::before {
+      animation-range: 0 2rem;
+    }
+
+    .table-scroll-region::after {
+      animation-direction: reverse;
+      animation-range: calc(100% - 2rem) 100%;
+    }
+  }
+}
+
+.sticky-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-inline-start: 1px solid var(--color-border);
+  border-block-start: 1px solid var(--color-border);
+}
+
+.sticky-table th,
+.sticky-table td {
+  border-inline-start-width: 0;
+  border-block-start-width: 0;
+  border-inline-end: 1px solid var(--color-border);
+  border-block-end: 1px solid var(--color-border);
+}
+
+.sticky-table tbody .sticky-row-header {
+  position: sticky;
+  inset-inline-start: 0;
+  z-index: 2;
+  background-color: #f3f4f6;
+}
+
+/* Safari renders Chiron Hei HK Jyutping variants natively without digit hints */
+@supports (font: -apple-system-body) {
+  .jyutping-variant {
+    display: none;
+  }
+}
+
+.defer-section {
+  content-visibility: auto;
+  contain-intrinsic-block-size: auto 32rem;
+}
+
+/* Reduced Motion & Cross-Document MPA View Transitions */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @view-transition {
+    navigation: auto;
+  }
+
+  @keyframes slide-left-out {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    to {
+      transform: translateX(-30px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-right-in {
+    from {
+      transform: translateX(30px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  ::view-transition-old(root) {
+    animation: slide-left-out 0.2s cubic-bezier(0, 0, 0.2, 1) forwards;
+  }
+
+  ::view-transition-new(root) {
+    animation: slide-right-in 0.2s cubic-bezier(0, 0, 0.2, 1) forwards;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+
+  .site-header .site-menu[popover],
+  .lang-popover[popover] {
+    transition-duration: 0.1s;
+  }
+}
+
+/* Forced Colors Mode (Windows High Contrast) */
+@media (forced-colors: active) {
+  :where(a:any-link, button, summary, [tabindex]):focus-visible {
+    outline: 2px solid Highlight;
+    outline-offset: 2px;
+  }
+
+  .site-header .site-menu[popover],
+  .lang-popover[popover] {
+    border: 2px solid CanvasText;
+  }
+
+  .site-header .site-menu a[aria-current="page"],
+  .lang-popover a[aria-current="page"],
+  .toc-nav a:is(:target-current, .target-current) {
+    outline: 2px solid Highlight;
+    outline-offset: -2px;
+  }
+
+  .download-btn-firefox {
+    background: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    color: LinkText !important;
+    border-color: ButtonBorder !important;
+  }
+}
+
+@utility flex-wrap-balance {
+  flex-wrap: wrap;
+  flex-wrap: balance;
 }
 
 @utility auto-fill-* {

@@ -8,7 +8,7 @@ const { description, title } = Astro.props;
 ---
 
 <div class="mx-auto flex max-w-5xl justify-center gap-8 px-4 py-8">
-  <article class="prose flex-grow">
+  <article class="prose min-w-0 grow">
     <h1>{title}</h1>
     {description && <p class="lead">{description}</p>}
     <hr class="my-4" />

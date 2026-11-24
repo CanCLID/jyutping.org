@@ -1,148 +1,132 @@
 ---
-import Audio from "@/components/Audio.tsx";
+import Audio from "@/components/Audio.astro";
+import ScrollableTable from "@/components/ScrollableTable.astro";
 import { getJyutpingTableLabels } from "@/data/jyutping";
-import { tableClass, tableDataCellClass, tableHeadCellClass } from "@/components/jyutping/tableStyles";
+import { getUiLabels } from "@/i18n/uiLabels";
+import {
+  tableClass,
+  tableDataCellClass,
+  tableHeadCellClass,
+} from "@/components/jyutping/tableStyles";
 
 interface Props {
   locale: string;
 }
 
+type CellEntry = { label: string; audioId: string };
+type OnsetRowKey =
+  | "plosive"
+  | "affricate"
+  | "nasal"
+  | "fricative"
+  | "approximant"
+  | "lateral";
+
 const { locale } = Astro.props;
 const labels = getJyutpingTableLabels(locale);
+const ui = getUiLabels(locale);
+
+const onsetCellsByRow: Record<OnsetRowKey, CellEntry[][]> = {
+  plosive: [
+    [
+      { label: "b [p] 巴", audioId: "baa1" },
+      { label: "p [pʰ] 怕", audioId: "paa3" },
+    ],
+    [],
+    [
+      { label: "d [t] 打", audioId: "daa2" },
+      { label: "t [tʰ] 他", audioId: "taa1" },
+    ],
+    [],
+    [
+      { label: "g [k] 家", audioId: "gaa1" },
+      { label: "k [kʰ] 卡", audioId: "kaa1" },
+      { label: "gw [kʷ] 瓜", audioId: "gwaa1" },
+      { label: "kw [kʷʰ] 夸", audioId: "kwaa1" },
+    ],
+    [],
+  ],
+  affricate: [
+    [],
+    [],
+    [
+      { label: "z [t͡s~t͡ʃ] 渣", audioId: "zaa1" },
+      { label: "c [t͡sʰ~t͡ʃʰ] 叉", audioId: "caa1" },
+    ],
+    [],
+    [],
+    [],
+  ],
+  nasal: [
+    [{ label: "m [m] 媽", audioId: "maa1" }],
+    [],
+    [{ label: "n [n] 那", audioId: "naa5" }],
+    [],
+    [{ label: "ng [ŋ] 牙", audioId: "ngaa4" }],
+    [],
+  ],
+  fricative: [
+    [],
+    [{ label: "f [f] 花", audioId: "faa1" }],
+    [{ label: "s [s] 沙", audioId: "saa1" }],
+    [],
+    [],
+    [{ label: "h [h] 蝦", audioId: "haa1" }],
+  ],
+  approximant: [
+    [{ label: "w [w] 蛙", audioId: "waa1" }],
+    [],
+    [],
+    [{ label: "j [j] 也", audioId: "jaa5" }],
+    [],
+    [],
+  ],
+  lateral: [
+    [],
+    [],
+    [{ label: "l [l] 啦", audioId: "laa1" }],
+    [],
+    [],
+    [],
+  ],
+};
 ---
 
-<div class="overflow-x-auto">
-  <table class={tableClass}>
-    <thead>
+<ScrollableTable
+  caption={ui.onsetTableCaption}
+  captionId="onset-table-caption"
+  tableClass={tableClass}
+  sticky
+>
+  <thead>
+    <tr>
+      <th class={tableHeadCellClass} scope="col">
+        <span class="visually-hidden">{ui.onsetTableCaption}</span>
+      </th>
+      {labels.onsetTableHeaders.map((header) => (
+        <th class={tableHeadCellClass} scope="col">{header}</th>
+      ))}
+    </tr>
+  </thead>
+  <tbody>
+    {labels.onsetRowOrder.map((rowKey) => (
       <tr>
-        <th class={tableHeadCellClass}></th>
-        {labels.onsetTableHeaders.map((header) => (
-          <th class={tableHeadCellClass}>{header}</th>
+        <th class:list={[tableHeadCellClass, "sticky-row-header"]} scope="row">
+          {labels.onsetTableRowLabels[rowKey]}
+        </th>
+        {onsetCellsByRow[rowKey].map((entries) => (
+          <td class={tableDataCellClass} lang="yue">
+            {entries.map((entry, idx) => (
+              <>
+                {idx > 0 && <br />}
+                <span class="whitespace-nowrap">
+                  {entry.label} <Audio id={entry.audioId} locale={locale} />
+                </span>
+              </>
+            ))}
+          </td>
         ))}
       </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.plosive}</th>
-        <td class={tableDataCellClass} lang="yue">
-          b [p] 巴 <Audio client:load id="baa1" />
-          <br />p [pʰ] 怕 <Audio client:load id="paa3" />
-        </td>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue">
-          d [t] 打 <Audio client:load id="daa2" />
-          <br />t [tʰ] 他 <Audio client:load id="taa1" />
-        </td>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue">
-          g [k] 家 <Audio client:load id="gaa1" />
-          <br />k [kʰ] 卡 <Audio client:load id="kaa1" />
-          <br />
-          gw [kʷ] 瓜 <Audio client:load id="gwaa1" />
-          <br />
-          kw [kʷʰ] 夸 <Audio client:load id="kwaa1" />
-        </td>
-        <td class={tableDataCellClass} lang="yue"></td>
-      </tr>
-      {labels.onsetRowOrder[1] === "affricate" ? (
-        <tr>
-          <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.affricate}</th>
-          <td class={tableDataCellClass} lang="yue"></td>
-          <td class={tableDataCellClass} lang="yue"></td>
-          <td class={tableDataCellClass} lang="yue">
-            z [t͡s~t͡ʃ] 渣 <Audio client:load id="zaa1" />
-            <br />c [t͡sʰ~t͡ʃʰ] 叉 <Audio client:load id="caa1" />
-          </td>
-          <td class={tableDataCellClass} lang="yue"></td>
-          <td class={tableDataCellClass} lang="yue"></td>
-          <td class={tableDataCellClass} lang="yue"></td>
-        </tr>
-      ) : (
-        <tr>
-          <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.nasal}</th>
-          <td class={tableDataCellClass} lang="yue">
-            m [m] 媽 <Audio client:load id="maa1" />
-          </td>
-          <td class={tableDataCellClass} lang="yue"></td>
-          <td class={tableDataCellClass} lang="yue">
-            n [n] 那 <Audio client:load id="naa5" />
-          </td>
-          <td class={tableDataCellClass} lang="yue"></td>
-          <td class={tableDataCellClass} lang="yue">
-            ng [ŋ] 牙 <Audio client:load id="ngaa4" />
-          </td>
-          <td class={tableDataCellClass} lang="yue"></td>
-        </tr>
-      )}
-      {labels.onsetRowOrder[2] === "nasal" ? (
-        <tr>
-          <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.nasal}</th>
-          <td class={tableDataCellClass} lang="yue">
-            m [m] 媽 <Audio client:load id="maa1" />
-          </td>
-          <td class={tableDataCellClass} lang="yue"></td>
-          <td class={tableDataCellClass} lang="yue">
-            n [n] 那 <Audio client:load id="naa5" />
-          </td>
-          <td class={tableDataCellClass} lang="yue"></td>
-          <td class={tableDataCellClass} lang="yue">
-            ng [ŋ] 牙 <Audio client:load id="ngaa4" />
-          </td>
-          <td class={tableDataCellClass} lang="yue"></td>
-        </tr>
-      ) : (
-        <tr>
-          <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.affricate}</th>
-          <td class={tableDataCellClass} lang="yue"></td>
-          <td class={tableDataCellClass} lang="yue"></td>
-          <td class={tableDataCellClass} lang="yue">
-            z [t͡s~t͡ʃ] 渣 <Audio client:load id="zaa1" />
-            <br />c [t͡sʰ~t͡ʃʰ] 叉 <Audio client:load id="caa1" />
-          </td>
-          <td class={tableDataCellClass} lang="yue"></td>
-          <td class={tableDataCellClass} lang="yue"></td>
-          <td class={tableDataCellClass} lang="yue"></td>
-        </tr>
-      )}
-      <tr>
-        <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.fricative}</th>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue">
-          f [f] 花 <Audio client:load id="faa1" />
-        </td>
-        <td class={tableDataCellClass} lang="yue">
-          s [s] 沙 <Audio client:load id="saa1" />
-        </td>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue">
-          h [h] 蝦 <Audio client:load id="haa1" />
-        </td>
-      </tr>
-      <tr>
-        <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.approximant}</th>
-        <td class={tableDataCellClass} lang="yue">
-          w [w] 蛙 <Audio client:load id="waa1" />
-        </td>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue">
-          j [j] 也 <Audio client:load id="jaa5" />
-        </td>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue"></td>
-      </tr>
-      <tr>
-        <th class={tableHeadCellClass} scope="row">{labels.onsetTableRowLabels.lateral}</th>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue">
-          l [l] 啦 <Audio client:load id="laa1" />
-        </td>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue"></td>
-        <td class={tableDataCellClass} lang="yue"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    ))}
+  </tbody>
+</ScrollableTable>
