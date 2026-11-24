@@ -1,10 +1,16 @@
 ---
 import Icon from "@/components/Icon.astro";
 import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
-import { I18n } from "@/i18n/utils";
+import { I18n, type Locale } from "@/i18n/utils";
 import { getNavTranslation } from "@/i18n/pageHeadings";
 import { getUiLabels } from "@/i18n/uiLabels";
 
+interface Props {
+  availableLocales?: readonly Locale[];
+  unavailableLocaleFallbackPath?: string;
+}
+
+const { availableLocales, unavailableLocaleFallbackPath } = Astro.props;
 const { currentLocale, url } = Astro;
 const pathname = url.pathname;
 const locale = currentLocale || I18n.defaultLocale;
@@ -77,7 +83,12 @@ const logoHref = locale === I18n.defaultLocale ? "/" : `/${locale}`;
           </li>
         ))}
         <li>
-          <LanguageSwitcher currentPathname={pathname} locale={locale} />
+          <LanguageSwitcher
+            availableLocales={availableLocales}
+            currentPathname={pathname}
+            locale={locale}
+            unavailableLocaleFallbackPath={unavailableLocaleFallbackPath}
+          />
         </li>
       </ul>
     </nav>

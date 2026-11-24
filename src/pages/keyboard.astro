@@ -2,11 +2,24 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import KeyboardPage from "@/components/KeyboardPage.astro";
 import { I18n } from "@/i18n/utils";
-import { getTitle } from "@/i18n/pageHeadings";
+import { getTitle, makeTitle } from "@/i18n/pageHeadings";
+import { getPageMeta } from "@/i18n/pageMeta";
+import { toCanonicalUrl } from "@/utils/content";
+import { buildResourcesJsonLd, getCanonicalSiteUrl } from "@/utils/jsonLd";
 
-const title = getTitle("keyboard", I18n.defaultLocale);
+const locale = I18n.defaultLocale;
+const title = getTitle("keyboard", locale);
+const description = getPageMeta(locale).descriptions.keyboard;
+const siteUrl = getCanonicalSiteUrl(Astro.site);
+const jsonLd = buildResourcesJsonLd({
+  siteUrl,
+  locale,
+  title: makeTitle(title, locale),
+  description,
+  canonicalUrl: toCanonicalUrl(Astro.url.pathname, siteUrl),
+});
 ---
 
-<BaseLayout lang={I18n.defaultLocale} title={title}>
-  <KeyboardPage locale={I18n.defaultLocale} />
+<BaseLayout lang={locale} title={title} description={description} jsonLd={jsonLd}>
+  <KeyboardPage locale={locale} />
 </BaseLayout>

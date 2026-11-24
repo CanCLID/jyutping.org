@@ -2,7 +2,10 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import KeyboardPage from "@/components/KeyboardPage.astro";
 import { getNonDefaultLocaleStaticPaths } from "@/i18n/utils";
-import { getTitle } from "@/i18n/pageHeadings";
+import { getTitle, makeTitle } from "@/i18n/pageHeadings";
+import { getPageMeta } from "@/i18n/pageMeta";
+import { isSupportedLocale, toCanonicalUrl } from "@/utils/content";
+import { buildResourcesJsonLd, getCanonicalSiteUrl } from "@/utils/jsonLd";
 
 export function getStaticPaths() {
   return getNonDefaultLocaleStaticPaths();
@@ -10,9 +13,22 @@ export function getStaticPaths() {
 
 const { locale } = Astro.params;
 
+if (!locale || !isSupportedLocale(locale)) {
+  throw new Error(`Invalid locale parameter for keyboard page: ${locale ?? "undefined"}.`);
+}
+
 const title = getTitle("keyboard", locale);
+const description = getPageMeta(locale).descriptions.keyboard;
+const siteUrl = getCanonicalSiteUrl(Astro.site);
+const jsonLd = buildResourcesJsonLd({
+  siteUrl,
+  locale,
+  title: makeTitle(title, locale),
+  description,
+  canonicalUrl: toCanonicalUrl(Astro.url.pathname, siteUrl),
+});
 ---
 
-<BaseLayout lang={locale} title={title}>
+<BaseLayout lang={locale} title={title} description={description} jsonLd={jsonLd}>
   <KeyboardPage locale={locale} />
 </BaseLayout>

@@ -2,11 +2,20 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogIndexList from "@/components/BlogIndexList.astro";
 import { I18n } from "@/i18n/utils";
-import { getTitle } from "@/i18n/pageHeadings";
+import { getTitle, makeTitle } from "@/i18n/pageHeadings";
+import { getPageMeta } from "@/i18n/pageMeta";
 import { getBlogLabels } from "@/i18n/blogLabels";
-import { getLocalizedCollectionEntries, getLocalizedContentPath } from "@/utils/content";
+import {
+  getLocalizedCollectionEntries,
+  getLocalizedContentPath,
+  toCanonicalUrl,
+} from "@/utils/content";
+import { buildBlogIndexJsonLd, getCanonicalSiteUrl } from "@/utils/jsonLd";
 
-const postsData = await getLocalizedCollectionEntries("blog", I18n.defaultLocale);
+const locale = I18n.defaultLocale;
+const postsData = (await getLocalizedCollectionEntries("blog", locale)).toSorted(
+  (a, b) => (a.data.weight || 0) - (b.data.weight || 0),
+);
 
 const posts = postsData.map((post) => ({
   title: post.data.title,
@@ -14,10 +23,20 @@ const posts = postsData.map((post) => ({
   description: post.data.description,
 }));
 
-const title = getTitle("blog", I18n.defaultLocale);
-const blogLabels = getBlogLabels(I18n.defaultLocale);
+const title = getTitle("blog", locale);
+const description = getPageMeta(locale).descriptions.blog;
+const blogLabels = getBlogLabels(locale);
+const siteUrl = getCanonicalSiteUrl(Astro.site);
+const jsonLd = buildBlogIndexJsonLd({
+  siteUrl,
+  locale,
+  title: makeTitle(title, locale),
+  description,
+  canonicalUrl: toCanonicalUrl(Astro.url.pathname, siteUrl),
+  posts,
+});
 ---
 
-<BaseLayout lang={I18n.defaultLocale} title={title}>
+<BaseLayout lang={locale} title={title} description={description} jsonLd={jsonLd}>
   <BlogIndexList posts={posts} translations={{ title, ...blogLabels }} />
 </BaseLayout>

@@ -46,6 +46,40 @@ export function getLocalizedContentPath(
   return `${localePrefix}/${collection}${slugSuffix}`;
 }
 
+export function normalizeCanonicalPathname(pathname: string): string {
+  const [cleanPath = "/"] = pathname.split(/[?#]/);
+  if (cleanPath === "/") {
+    return "/";
+  }
+  const hasFileExtension = /\/[^/]+\.[a-z0-9]+$/i.test(cleanPath);
+  if (hasFileExtension || cleanPath.endsWith("/")) {
+    return cleanPath;
+  }
+  return `${cleanPath}/`;
+}
+
+export function toCanonicalUrl(pathname: string, site: URL | string): string {
+  return new URL(normalizeCanonicalPathname(pathname), site).toString();
+}
+
+export function getRssPath(locale: Locale): string {
+  return locale === I18n.defaultLocale ? "/rss.xml" : `/${locale}/rss.xml`;
+}
+
+export async function getAvailableLocalesForCollectionSlug(
+  collection: "blog" | "learn",
+  slug: string,
+): Promise<Locale[]> {
+  const entries = await getCollection(collection, ({ id }) => getEntrySlug(id) === slug);
+  const availableSet = new Set(
+    entries
+      .map((entry) => getEntryLocale(entry.id))
+      .filter((locale): locale is Locale => isSupportedLocale(locale)),
+  );
+
+  return I18n.locales.filter((locale) => availableSet.has(locale));
+}
+
 export async function getLocalizedSingletonEntry<C extends CollectionKey>(
   collection: C,
   locale: Locale,

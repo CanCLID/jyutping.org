@@ -2,11 +2,24 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import IndexPage from "@/components/IndexPage.astro";
 import { I18n } from "@/i18n/utils";
-import { getTitle } from "@/i18n/pageHeadings";
+import { getTitle, makeTitle } from "@/i18n/pageHeadings";
+import { getPageMeta } from "@/i18n/pageMeta";
+import { toCanonicalUrl } from "@/utils/content";
+import { buildHomeJsonLd, getCanonicalSiteUrl } from "@/utils/jsonLd";
 
-const title = getTitle("index", I18n.defaultLocale);
+const locale = I18n.defaultLocale;
+const title = getTitle("index", locale);
+const description = getPageMeta(locale).descriptions.index;
+const siteUrl = getCanonicalSiteUrl(Astro.site);
+const jsonLd = buildHomeJsonLd({
+  siteUrl,
+  locale,
+  title: makeTitle(title, locale, true),
+  description,
+  canonicalUrl: toCanonicalUrl(Astro.url.pathname, siteUrl),
+});
 ---
 
-<BaseLayout lang={I18n.defaultLocale} title={title} flipTitle>
-  <IndexPage locale={I18n.defaultLocale} />
+<BaseLayout lang={locale} title={title} description={description} jsonLd={jsonLd} flipTitle>
+  <IndexPage locale={locale} />
 </BaseLayout>

@@ -2,13 +2,16 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogIndexList from "@/components/BlogIndexList.astro";
 import { getNonDefaultLocaleStaticPaths } from "@/i18n/utils";
-import { getTitle } from "@/i18n/pageHeadings";
+import { getTitle, makeTitle } from "@/i18n/pageHeadings";
+import { getPageMeta } from "@/i18n/pageMeta";
 import { getBlogLabels } from "@/i18n/blogLabels";
 import {
   getLocalizedCollectionEntries,
   getLocalizedContentPath,
   isSupportedLocale,
+  toCanonicalUrl,
 } from "@/utils/content";
+import { buildBlogIndexJsonLd, getCanonicalSiteUrl } from "@/utils/jsonLd";
 
 export function getStaticPaths() {
   return getNonDefaultLocaleStaticPaths();
@@ -20,7 +23,9 @@ if (!locale || !isSupportedLocale(locale)) {
   throw new Error(`Invalid locale parameter for blog index page: ${locale ?? "undefined"}.`);
 }
 
-const postsData = await getLocalizedCollectionEntries("blog", locale);
+const postsData = (await getLocalizedCollectionEntries("blog", locale)).toSorted(
+  (a, b) => (a.data.weight || 0) - (b.data.weight || 0),
+);
 
 const posts = postsData.map((post) => ({
   title: post.data.title,
@@ -29,9 +34,19 @@ const posts = postsData.map((post) => ({
 }));
 
 const title = getTitle("blog", locale);
+const description = getPageMeta(locale).descriptions.blog;
 const blogLabels = getBlogLabels(locale);
+const siteUrl = getCanonicalSiteUrl(Astro.site);
+const jsonLd = buildBlogIndexJsonLd({
+  siteUrl,
+  locale,
+  title: makeTitle(title, locale),
+  description,
+  canonicalUrl: toCanonicalUrl(Astro.url.pathname, siteUrl),
+  posts,
+});
 ---
 
-<BaseLayout lang={locale} title={title}>
+<BaseLayout lang={locale} title={title} description={description} jsonLd={jsonLd}>
   <BlogIndexList posts={posts} translations={{ title, ...blogLabels }} />
 </BaseLayout>

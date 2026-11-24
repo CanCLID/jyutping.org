@@ -5,13 +5,18 @@ import BlogCatalogue from "@/components/BlogCatalogue.astro";
 import TableOfContents from "@/components/TableOfContents.astro";
 import CatalogueContentShell from "@/components/content/CatalogueContentShell.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { makeTitle } from "@/i18n/pageHeadings";
+import { getPageMeta } from "@/i18n/pageMeta";
 import {
+  getAvailableLocalesForCollectionSlug,
   getEntryLocale,
   getEntrySlug,
   getLocalizedCollectionEntries,
   getNonDefaultLocaleCollectionEntryStaticPaths,
   isSupportedLocale,
+  toCanonicalUrl,
 } from "@/utils/content";
+import { buildBlogPostJsonLd, getCanonicalSiteUrl } from "@/utils/jsonLd";
 import { sharedMdxComponents } from "@/utils/mdx";
 
 export async function getStaticPaths() {
@@ -30,17 +35,32 @@ if (!locale || !isSupportedLocale(locale)) {
   throw new Error(`Invalid locale parameter for blog page: ${locale ?? "undefined"}.`);
 }
 
+const slug = getEntrySlug(entry.id);
 const allBlogEntries = (
   await getLocalizedCollectionEntries("blog", locale)
 ).toSorted((a, b) => (a.data.weight || 0) - (b.data.weight || 0));
 
 const lang = getEntryLocale(entry.id) || locale;
+const availableLocales = await getAvailableLocalesForCollectionSlug("blog", slug);
+const description = entry.data.description ?? getPageMeta(lang).descriptions.blog;
+const siteUrl = getCanonicalSiteUrl(Astro.site);
+const jsonLd = buildBlogPostJsonLd({
+  siteUrl,
+  locale: lang,
+  title: makeTitle(entry.data.title, lang),
+  description,
+  canonicalUrl: toCanonicalUrl(Astro.url.pathname, siteUrl),
+});
 ---
 
 <BaseLayout
   title={entry.data.title}
-  description={entry.data.description}
+  description={description}
   lang={lang}
+  availableLocales={availableLocales}
+  unavailableLocaleFallbackPath="/blog"
+  ogType="article"
+  jsonLd={jsonLd}
 >
   <CatalogueContentShell
     title={entry.data.title}

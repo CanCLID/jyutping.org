@@ -3,27 +3,58 @@ import { Font } from "astro:assets";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import "@/styles/global.css";
-import { I18n, formatBcp47Locale, getLocalePath } from "@/i18n/utils";
+import { I18n, formatBcp47Locale, getLocalePath, type Locale } from "@/i18n/utils";
 import { makeTitle } from "@/i18n/pageHeadings";
+import { getPageMeta } from "@/i18n/pageMeta";
 import { getUiLabels } from "@/i18n/uiLabels";
+import { getRssPath, toCanonicalUrl } from "@/utils/content";
 
 interface Props {
   title?: string;
   description?: string;
   lang?: string;
   flipTitle?: boolean;
+  availableLocales?: readonly Locale[];
+  unavailableLocaleFallbackPath?: string;
+  ogType?: "website" | "article";
+  jsonLd?: Record<string, unknown>;
 }
 
 const {
   title: originalTitle = "",
-  description = "標準粵語拼音方案 Standard Cantonese Romanization Scheme",
+  description: providedDescription,
   lang = I18n.defaultLocale,
   flipTitle = false,
+  availableLocales = I18n.locales,
+  unavailableLocaleFallbackPath,
+  ogType = "website",
+  jsonLd,
 } = Astro.props;
 
+const resolvedLocale = I18n.locales.includes(lang as Locale)
+  ? (lang as Locale)
+  : I18n.defaultLocale;
+const meta = getPageMeta(resolvedLocale);
+const description = providedDescription ?? meta.descriptions.index;
 const htmlLang = formatBcp47Locale(lang);
 const title = makeTitle(originalTitle, lang, flipTitle);
 const ui = getUiLabels(lang);
+
+const siteUrl = Astro.site ?? new URL("https://jyutping.org");
+const canonicalUrl = toCanonicalUrl(Astro.url.pathname, siteUrl);
+const ogImageUrl = new URL("/og-image.png", siteUrl).toString();
+const rssHref = toCanonicalUrl(getRssPath(resolvedLocale), siteUrl);
+const xDefaultLocale = availableLocales.includes(I18n.defaultLocale)
+  ? I18n.defaultLocale
+  : (availableLocales[0] ?? I18n.defaultLocale);
+const alternateOgLocales = Array.from(
+  new Set(
+    availableLocales
+      .filter((locale) => locale !== resolvedLocale)
+      .map((locale) => getPageMeta(locale).ogLocale)
+      .filter((candidate) => candidate !== meta.ogLocale),
+  ),
+);
 
 const umamiWebsiteId = "188fdd26-8e55-42b6-ba73-7d2f58adca11";
 const umamiScriptSrc = "https://cloud.umami.is/script.js";
@@ -37,6 +68,8 @@ const speculationRulesJson = JSON.stringify({
         and: [
           { href_matches: "/*" },
           { not: { href_matches: "/audio/*" } },
+          { not: { href_matches: "/*.xml" } },
+          { not: { href_matches: "/*.txt" } },
           { not: { selector_matches: "[rel~=nofollow]" } },
         ],
       },
@@ -50,6 +83,8 @@ const speculationRulesJson = JSON.stringify({
         and: [
           { href_matches: "/*" },
           { not: { href_matches: "/audio/*" } },
+          { not: { href_matches: "/*.xml" } },
+          { not: { href_matches: "/*.txt" } },
           { not: { selector_matches: "[rel~=nofollow]" } },
         ],
       },
@@ -68,6 +103,7 @@ const speculationRulesJson = JSON.stringify({
     <meta name="text-scale" content="scale" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="canonical" href={canonicalUrl} />
     <meta name="generator" content={Astro.generator} />
 
     <title>{title}</title>
@@ -77,26 +113,44 @@ const speculationRulesJson = JSON.stringify({
       content="Jyutping, 粵拼, Cantonese, Romanization, language, learning, transcription, input method, cantonese keyboard, jyutping input method, jyutping keyboard"
     />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:site_name" content={meta.siteName} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:locale" content={meta.ogLocale} />
+    {alternateOgLocales.map((ogLocale) => (
+      <meta property="og:locale:alternate" content={ogLocale} />
+    ))}
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={meta.ogImageAlt} />
 
-    <meta property="twitter:url" content={Astro.url.href} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content={meta.ogImageAlt} />
 
-    {I18n.locales.map((locale) => (
+    {availableLocales.map((locale) => (
       <link
         rel="alternate"
         hreflang={formatBcp47Locale(locale)}
-        href={new URL(getLocalePath(Astro.url.pathname, locale), Astro.url.origin).toString()}
+        href={toCanonicalUrl(getLocalePath(Astro.url.pathname, locale), siteUrl)}
       />
     ))}
     <link
       rel="alternate"
       hreflang="x-default"
-      href={new URL(getLocalePath(Astro.url.pathname, I18n.defaultLocale), Astro.url.origin).toString()}
+      href={toCanonicalUrl(getLocalePath(Astro.url.pathname, xDefaultLocale), siteUrl)}
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={meta.rssTitle}
+      href={rssHref}
     />
 
     <Font cssVariable="--font-chiron-hei-hk-ws" preload />
@@ -105,12 +159,16 @@ const speculationRulesJson = JSON.stringify({
 
     <link rel="expect" href="#site-header" blocking="render" />
     <script type="speculationrules" is:inline set:html={speculationRulesJson} />
+    {jsonLd && <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />}
   </head>
   <body class="antialiased flex flex-col min-h-dvh">
     <a href="#main-content" class="skip-link visually-hidden">
       {ui.skipToContent}
     </a>
-    <Header />
+    <Header
+      availableLocales={availableLocales}
+      unavailableLocaleFallbackPath={unavailableLocaleFallbackPath}
+    />
     <main id="main-content" tabindex="-1" class="grow">
       <slot />
     </main>

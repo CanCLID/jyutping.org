@@ -16,3 +16,18 @@
 
 /logo.svg
   Cross-Origin-Resource-Policy: cross-origin
+
+/og-image.png
+  Cross-Origin-Resource-Policy: cross-origin
+
+/llms.txt
+  Cross-Origin-Resource-Policy: cross-origin
+
+/llms-full.txt
+  Cross-Origin-Resource-Policy: cross-origin
+
+/rss.xml
+  Cross-Origin-Resource-Policy: cross-origin
+
+/*/rss.xml
+  Cross-Origin-Resource-Policy: cross-origin

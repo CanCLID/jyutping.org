@@ -2,5 +2,5 @@
 User-agent: *
 Allow: /
 
-# Sitemap (Optional - Add your sitemap URL if you have one)
-# Sitemap: https://jyutping.org/sitemap-index.xml
+# Sitemap
+Sitemap: https://jyutping.org/sitemap-index.xml

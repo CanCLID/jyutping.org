@@ -1,4 +1,6 @@
 // @ts-check
+import { existsSync } from "node:fs";
+import path from "node:path";
 import { defineConfig, fontProviders } from "astro/config";
 
 import mdx from "@astrojs/mdx";
@@ -9,9 +11,48 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import { rehypeAccessibleContent } from "./src/utils/rehypeAccessibleContent";
 
+const siteUrl = "https://jyutping.org";
+const sitemapLocales = {
+  cmn: "zh",
+  en: "en",
+  ja: "ja",
+  nan: "nan",
+  vi: "vi",
+  wuu: "wuu",
+  yue: "yue",
+  yue_hans: "yue-Hans",
+};
+const nonDefaultLocales = Object.keys(sitemapLocales).filter((locale) => locale !== "yue");
+
+/** @param {string} url */
+function hasBlogPostForUrl(url) {
+  const pathname = new URL(url).pathname.replace(/\/+$/, "");
+  const segments = pathname.split("/").filter(Boolean);
+  let locale = "yue";
+  let rest = segments;
+
+  if (segments.length > 0 && nonDefaultLocales.includes(segments[0])) {
+    locale = segments[0];
+    rest = segments.slice(1);
+  }
+
+  if (rest[0] !== "blog" || rest.length < 2) {
+    return true;
+  }
+
+  const slug = rest.slice(1).join("/");
+  const baseDir = path.join(process.cwd(), "src/content/blog", locale);
+  return (
+    existsSync(path.join(baseDir, `${slug}.mdx`)) ||
+    existsSync(path.join(baseDir, `${slug}.md`)) ||
+    existsSync(path.join(baseDir, slug, "index.mdx")) ||
+    existsSync(path.join(baseDir, slug, "index.md"))
+  );
+}
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://jyutping.org",
+  site: siteUrl,
   markdown: {
     syntaxHighlight: false,
   },
@@ -93,7 +134,21 @@ export default defineConfig({
       remarkPlugins: [remarkGfm],
       rehypePlugins: [rehypeAccessibleContent],
     }),
-    sitemap(),
+    sitemap({
+      i18n: {
+        defaultLocale: "yue",
+        locales: sitemapLocales,
+      },
+      serialize(item) {
+        if (!item.links) {
+          return item;
+        }
+        return {
+          ...item,
+          links: item.links.filter((link) => hasBlogPostForUrl(link.url)),
+        };
+      },
+    }),
   ],
   vite: {
     plugins: [tailwindcss()],
